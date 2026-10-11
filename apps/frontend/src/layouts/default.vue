@@ -83,8 +83,9 @@
 					:aria-label="formatMessage(messages.modrinthHomePage)"
 					class="group hover:brightness-[--hover-brightness] focus-visible:brightness-[--hover-brightness]"
 				>
-					<TextLogo
-						aria-hidden="true"
+					<img
+						:src="TextLogo"
+						alt="Text Logo"
 						class="h-7 w-auto text-contrast transition-transform group-active:scale-[0.98]"
 					/>
 				</NuxtLink>
@@ -887,7 +888,7 @@ import { isAdmin, isStaff, UserBadge } from '@modrinth/utils'
 import { useQuery } from '@tanstack/vue-query'
 
 import { getTaxThreshold } from '@/providers/creator-withdraw.ts'
-import TextLogo from '~/components/brand/TextLogo.vue'
+import TextLogo from '~/assets/images/logo_text.webp'
 import BatchCreditModal from '~/components/ui/admin/BatchCreditModal.vue'
 import GeneratedStateErrorsBanner from '~/components/ui/banner/GeneratedStateErrorsBanner.vue'
 import PreviewBanner from '~/components/ui/banner/PreviewBanner.vue'
@@ -1201,25 +1202,24 @@ useHead({
 	],
 })
 useSeoMeta({
-	title: 'Modrinth',
+	title: 'Vanilla Tyme SMP',
 	description: () =>
 		formatMessage({
 			id: 'layout.meta.description',
 			defaultMessage:
-				'Download Minecraft mods, plugins, datapacks, shaders, resourcepacks, and modpacks on Modrinth. ' +
-				'Discover and publish projects on Modrinth with a modern, easy to use interface and API.',
+				'Vanilla Tyme SMP is a Minecraft server that is focused on providing a vanilla experience with a few quality of life plugins.',
 		}),
-	publisher: 'Modrinth',
+	publisher: 'Vanilla Tyme SMP',
 	themeColor: '#1bd96a',
 	colorScheme: 'dark light',
 
 	// OpenGraph
-	ogTitle: 'Modrinth',
-	ogSiteName: 'Modrinth',
+	ogTitle: 'Vanilla Tyme',
+	ogSiteName: 'Vanilla Tyme SMP',
 	ogDescription: () =>
 		formatMessage({
 			id: 'layout.meta.og-description',
-			defaultMessage: 'Discover and publish Minecraft content!',
+			defaultMessage: 'Vanilla Tyme SMP is a Minecraft server that is focused on providing a vanilla experience with a few quality of life plugins.',
 		}),
 	ogType: 'website',
 	ogImage: 'https://cdn.modrinth.com/modrinth-new.png',
@@ -1227,7 +1227,7 @@ useSeoMeta({
 
 	// Twitter
 	twitterCard: 'summary',
-	twitterSite: '@modrinth',
+	twitterSite: '@VanillaTyme',
 })
 
 const isMobileMenuOpen = ref(false)

@@ -12,6 +12,7 @@ import {
 	MonitorCogIcon,
 	RadioTowerIcon,
 	ServerIcon,
+	SHOP_CATEGORY_ICON_MAP,
 	SparklesIcon,
 } from '@modrinth/assets'
 import { sortedCategories } from '@modrinth/utils'
@@ -190,6 +191,7 @@ export type ProjectType =
 	| 'datapack'
 	| 'plugin'
 	| 'server'
+	| 'shop'
 	| 'project'
 
 const ALL_PROJECT_TYPES: ProjectType[] = [
@@ -438,7 +440,11 @@ export function useSearch(
 			categoryFilters[filterTypeId].options.push({
 				id: category.name,
 				formatted_name: formatCategory(formatMessage, category.name),
-				icon: getCategoryIcon(category.name),
+				icon: getCategoryIcon(
+					category.project_type === 'shop'
+						? (SHOP_CATEGORY_ICON_MAP[category.name] ?? category.name)
+						: category.name,
+				),
 				value: `categories:${category.name}`,
 				method: category.header === 'resolutions' ? 'or' : 'and',
 			})

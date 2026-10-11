@@ -11,7 +11,7 @@ use crate::{
             component::{
                 self, Component, ComponentEdit, ComponentKind, ComponentQuery,
             },
-            minecraft,
+            minecraft, vt,
         },
         ids::{ProjectId, VersionId},
     },
@@ -163,11 +163,14 @@ define_project_components![
     (minecraft_server, MinecraftServer): minecraft::ServerProject,
     (minecraft_java_server, MinecraftJavaServer): minecraft::JavaServerProject,
     (minecraft_bedrock_server, MinecraftBedrockServer): minecraft::BedrockServerProject,
+    (shop, Shop): vt::ShopProject,
 ];
 
 component::relations! {
     pub static PROJECT_COMPONENT_RELATIONS: ProjectComponentKind = {
-        minecraft::PROJECT_COMPONENT_RELATIONS.clone()
+        let mut relations = minecraft::PROJECT_COMPONENT_RELATIONS.clone();
+        relations.extend(vt::PROJECT_COMPONENT_RELATIONS.iter().cloned());
+        relations
     }
 }
 

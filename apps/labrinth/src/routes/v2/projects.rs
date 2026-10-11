@@ -676,6 +676,7 @@ pub async fn project_edit(
         minecraft_server: None,
         minecraft_java_server: None,
         minecraft_bedrock_server: None,
+        shop: None,
     };
 
     // This returns 204 or failure so we don't need to do anything with it

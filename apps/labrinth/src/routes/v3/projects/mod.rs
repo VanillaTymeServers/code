@@ -410,6 +410,12 @@ pub struct EditProject {
     )]
     pub minecraft_bedrock_server:
         Option<Option<exp::minecraft::BedrockServerProjectEdit>>,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        with = "serde_with::rust::double_option"
+    )]
+    pub shop: Option<Option<exp::vt::ShopProjectEdit>>,
 }
 
 #[allow(clippy::too_many_arguments)]
@@ -1322,6 +1328,16 @@ pub async fn project_edit_internal(
     )
     .await
     .wrap_api_err("updating Minecraft Bedrock server component")?;
+
+    reindex_versions |= update(
+        &mut transaction,
+        id,
+        new_project.shop,
+        &mut project_item.inner.components.shop,
+        perms,
+    )
+    .await
+    .wrap_api_err("updating shop component")?;
 
     let components_serial = project_item.inner.components.clone();
 

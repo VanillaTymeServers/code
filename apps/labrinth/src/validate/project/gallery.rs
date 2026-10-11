@@ -97,7 +97,10 @@ pub(super) fn validate(
     }
 
     let is_minecraft_server = project.components.minecraft_server.is_some();
-    if !is_minecraft_server && !project.gallery.iter().any(|item| item.featured)
+    let is_shop = project.components.shop.is_some();
+    if !is_minecraft_server
+        && !is_shop
+        && !project.gallery.iter().any(|item| item.featured)
     {
         nags.push(ProjectNag::new(
             ProjectNagKind::FeatureGalleryImage,

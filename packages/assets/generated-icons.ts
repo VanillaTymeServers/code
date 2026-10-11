@@ -48,6 +48,7 @@ import _PrideBadge from './icons/badges/pride.svg?component'
 import _StaffBadge from './icons/badges/staff.svg?component'
 import _BanIcon from './icons/ban.svg?component'
 import _BellIcon from './icons/bell.svg?component'
+import _BellOffIcon from './icons/bell-off.svg?component'
 import _BellRingIcon from './icons/bell-ring.svg?component'
 import _BinaryIcon from './icons/binary.svg?component'
 import _BlendIcon from './icons/blend.svg?component'
@@ -205,6 +206,7 @@ import _MaximizeIcon from './icons/maximize.svg?component'
 import _MegaphoneIcon from './icons/megaphone.svg?component'
 import _MemoryStickIcon from './icons/memory-stick.svg?component'
 import _MessageIcon from './icons/message.svg?component'
+import _MessageSquareWarningIcon from './icons/message-square-warning.svg?component'
 import _MessagesSquareIcon from './icons/messages-square.svg?component'
 import _MicrochipIcon from './icons/microchip.svg?component'
 import _MicrophoneIcon from './icons/microphone.svg?component'
@@ -271,6 +273,7 @@ import _Settings2Icon from './icons/settings-2.svg?component'
 import _ShareIcon from './icons/share.svg?component'
 import _ShieldIcon from './icons/shield.svg?component'
 import _ShieldAlertIcon from './icons/shield-alert.svg?component'
+import _ShieldBanIcon from './icons/shield-ban.svg?component'
 import _ShieldCheckIcon from './icons/shield-check.svg?component'
 import _ShirtIcon from './icons/shirt.svg?component'
 import _ShredderIcon from './icons/shredder.svg?component'
@@ -374,6 +377,24 @@ import _TagCategoryScrollTextIcon from './icons/tags/categories/scroll-text.svg?
 import _TagCategorySemiRealisticIcon from './icons/tags/categories/semi-realistic.svg?component'
 import _TagCategoryShadowsIcon from './icons/tags/categories/shadows.svg?component'
 import _TagCategoryShieldIcon from './icons/tags/categories/shield.svg?component'
+import _TagCategoryShopAnimalsIcon from './icons/tags/categories/shop-animals.svg?component'
+import _TagCategoryShopArmorIcon from './icons/tags/categories/shop-armor.svg?component'
+import _TagCategoryShopBlocksIcon from './icons/tags/categories/shop-blocks.svg?component'
+import _TagCategoryShopBooksIcon from './icons/tags/categories/shop-books.svg?component'
+import _TagCategoryShopBulkIcon from './icons/tags/categories/shop-bulk.svg?component'
+import _TagCategoryShopDecorationIcon from './icons/tags/categories/shop-decoration.svg?component'
+import _TagCategoryShopEndIcon from './icons/tags/categories/shop-end.svg?component'
+import _TagCategoryShopFoodIcon from './icons/tags/categories/shop-food.svg?component'
+import _TagCategoryShopGreeneryIcon from './icons/tags/categories/shop-greenery.svg?component'
+import _TagCategoryShopMapArtIcon from './icons/tags/categories/shop-map-art.svg?component'
+import _TagCategoryShopMineralsIcon from './icons/tags/categories/shop-minerals.svg?component'
+import _TagCategoryShopMobsIcon from './icons/tags/categories/shop-mobs.svg?component'
+import _TagCategoryShopNetherIcon from './icons/tags/categories/shop-nether.svg?component'
+import _TagCategoryShopPotionsIcon from './icons/tags/categories/shop-potions.svg?component'
+import _TagCategoryShopRedstoneIcon from './icons/tags/categories/shop-redstone.svg?component'
+import _TagCategoryShopToolsIcon from './icons/tags/categories/shop-tools.svg?component'
+import _TagCategoryShopWeaponsIcon from './icons/tags/categories/shop-weapons.svg?component'
+import _TagCategoryShopWoodIcon from './icons/tags/categories/shop-wood.svg?component'
 import _TagCategorySimplisticIcon from './icons/tags/categories/simplistic.svg?component'
 import _TagCategorySkullIcon from './icons/tags/categories/skull.svg?component'
 import _TagCategorySocialIcon from './icons/tags/categories/social.svg?component'
@@ -461,6 +482,7 @@ import _UserXIcon from './icons/user-x.svg?component'
 import _UsersIcon from './icons/users.svg?component'
 import _VersionIcon from './icons/version.svg?component'
 import _VideoIcon from './icons/video.svg?component'
+import _Volume2Icon from './icons/volume-2.svg?component'
 import _WikiIcon from './icons/wiki.svg?component'
 import _WindowIcon from './icons/window.svg?component'
 import _WorldIcon from './icons/world.svg?component'
@@ -514,6 +536,7 @@ export const PrideBadge = _PrideBadge
 export const StaffBadge = _StaffBadge
 export const BanIcon = _BanIcon
 export const BellIcon = _BellIcon
+export const BellOffIcon = _BellOffIcon
 export const BellRingIcon = _BellRingIcon
 export const BinaryIcon = _BinaryIcon
 export const BlendIcon = _BlendIcon
@@ -671,6 +694,7 @@ export const MaximizeIcon = _MaximizeIcon
 export const MegaphoneIcon = _MegaphoneIcon
 export const MemoryStickIcon = _MemoryStickIcon
 export const MessageIcon = _MessageIcon
+export const MessageSquareWarningIcon = _MessageSquareWarningIcon
 export const MessagesSquareIcon = _MessagesSquareIcon
 export const MicrochipIcon = _MicrochipIcon
 export const MicrophoneIcon = _MicrophoneIcon
@@ -737,6 +761,7 @@ export const Settings2Icon = _Settings2Icon
 export const ShareIcon = _ShareIcon
 export const ShieldIcon = _ShieldIcon
 export const ShieldAlertIcon = _ShieldAlertIcon
+export const ShieldBanIcon = _ShieldBanIcon
 export const ShieldCheckIcon = _ShieldCheckIcon
 export const ShirtIcon = _ShirtIcon
 export const ShredderIcon = _ShredderIcon
@@ -840,6 +865,24 @@ export const TagCategoryScrollTextIcon = _TagCategoryScrollTextIcon
 export const TagCategorySemiRealisticIcon = _TagCategorySemiRealisticIcon
 export const TagCategoryShadowsIcon = _TagCategoryShadowsIcon
 export const TagCategoryShieldIcon = _TagCategoryShieldIcon
+export const TagCategoryShopAnimalsIcon = _TagCategoryShopAnimalsIcon
+export const TagCategoryShopArmorIcon = _TagCategoryShopArmorIcon
+export const TagCategoryShopBlocksIcon = _TagCategoryShopBlocksIcon
+export const TagCategoryShopBooksIcon = _TagCategoryShopBooksIcon
+export const TagCategoryShopBulkIcon = _TagCategoryShopBulkIcon
+export const TagCategoryShopDecorationIcon = _TagCategoryShopDecorationIcon
+export const TagCategoryShopEndIcon = _TagCategoryShopEndIcon
+export const TagCategoryShopFoodIcon = _TagCategoryShopFoodIcon
+export const TagCategoryShopGreeneryIcon = _TagCategoryShopGreeneryIcon
+export const TagCategoryShopMapArtIcon = _TagCategoryShopMapArtIcon
+export const TagCategoryShopMineralsIcon = _TagCategoryShopMineralsIcon
+export const TagCategoryShopMobsIcon = _TagCategoryShopMobsIcon
+export const TagCategoryShopNetherIcon = _TagCategoryShopNetherIcon
+export const TagCategoryShopPotionsIcon = _TagCategoryShopPotionsIcon
+export const TagCategoryShopRedstoneIcon = _TagCategoryShopRedstoneIcon
+export const TagCategoryShopToolsIcon = _TagCategoryShopToolsIcon
+export const TagCategoryShopWeaponsIcon = _TagCategoryShopWeaponsIcon
+export const TagCategoryShopWoodIcon = _TagCategoryShopWoodIcon
 export const TagCategorySimplisticIcon = _TagCategorySimplisticIcon
 export const TagCategorySkullIcon = _TagCategorySkullIcon
 export const TagCategorySocialIcon = _TagCategorySocialIcon
@@ -927,6 +970,7 @@ export const UserXIcon = _UserXIcon
 export const UsersIcon = _UsersIcon
 export const VersionIcon = _VersionIcon
 export const VideoIcon = _VideoIcon
+export const Volume2Icon = _Volume2Icon
 export const WikiIcon = _WikiIcon
 export const WindowIcon = _WindowIcon
 export const WorldIcon = _WorldIcon
@@ -1017,6 +1061,24 @@ export const categoryIconMap: Record<string, IconComponent> = {
 	'semi-realistic': TagCategorySemiRealisticIcon,
 	shadows: TagCategoryShadowsIcon,
 	shield: TagCategoryShieldIcon,
+	'shop-animals': TagCategoryShopAnimalsIcon,
+	'shop-armor': TagCategoryShopArmorIcon,
+	'shop-blocks': TagCategoryShopBlocksIcon,
+	'shop-books': TagCategoryShopBooksIcon,
+	'shop-bulk': TagCategoryShopBulkIcon,
+	'shop-decoration': TagCategoryShopDecorationIcon,
+	'shop-end': TagCategoryShopEndIcon,
+	'shop-food': TagCategoryShopFoodIcon,
+	'shop-greenery': TagCategoryShopGreeneryIcon,
+	'shop-map-art': TagCategoryShopMapArtIcon,
+	'shop-minerals': TagCategoryShopMineralsIcon,
+	'shop-mobs': TagCategoryShopMobsIcon,
+	'shop-nether': TagCategoryShopNetherIcon,
+	'shop-potions': TagCategoryShopPotionsIcon,
+	'shop-redstone': TagCategoryShopRedstoneIcon,
+	'shop-tools': TagCategoryShopToolsIcon,
+	'shop-weapons': TagCategoryShopWeaponsIcon,
+	'shop-wood': TagCategoryShopWoodIcon,
 	simplistic: TagCategorySimplisticIcon,
 	skull: TagCategorySkullIcon,
 	social: TagCategorySocialIcon,

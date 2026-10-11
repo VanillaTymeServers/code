@@ -1,0 +1,11 @@
+services:
+  elasticsearch0:
+    environment:
+      discovery.seed_hosts: elasticsearch0
+      cluster.initial_master_nodes: elasticsearch0
+  elasticsearch1:
+    profiles: ['es-cluster']
+  elasticsearch2:
+    profiles: ['es-cluster']
+  meilisearch0:
+    profiles: ['meilisearch']

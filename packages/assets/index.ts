@@ -228,3 +228,23 @@ export const SERVER_CATEGORY_ICON_MAP: Record<string, string> = {
 	whitelisted: 'badge-check',
 	'world-resets': 'refresh-ccw',
 }
+export const SHOP_CATEGORY_ICON_MAP: Record<string, string> = {
+	animals: 'shop-animals',
+	armor: 'shop-armor',
+	blocks: 'shop-blocks',
+	books: 'shop-books',
+	bulk: 'shop-bulk',
+	decoration: 'shop-decoration',
+	end: 'shop-end',
+	food: 'shop-food',
+	greenery: 'shop-greenery',
+	'map art': 'shop-map-art',
+	minerals: 'shop-minerals',
+	mobs: 'shop-mobs',
+	nether: 'shop-nether',
+	potions: 'shop-potions',
+	redstone: 'shop-redstone',
+	tools: 'shop-tools',
+	weapons: 'shop-weapons',
+	wood: 'shop-wood',
+}

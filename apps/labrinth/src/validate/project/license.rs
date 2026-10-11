@@ -61,6 +61,7 @@ pub(super) fn validate(
 ) -> Vec<super::ProjectNag> {
     let mut nags = Vec::new();
     let is_minecraft_server = project.components.minecraft_server.is_some();
+    let is_shop = project.components.shop.is_some();
     let (project_type, _) =
         LegacyProject::get_project_type(&project.project_types);
     let license = &project.license;
@@ -69,7 +70,7 @@ pub(super) fn validate(
         "LicenseRef-Unknown" | "NOASSERTION" | "LicenseRef-NOASSERTION"
     );
 
-    if has_unknown_license && !is_minecraft_server {
+    if has_unknown_license && !is_minecraft_server && !is_shop {
         nags.push(
             ProjectNag::new(
                 ProjectNagKind::SelectLicense,
@@ -86,7 +87,7 @@ pub(super) fn validate(
             && !has_license_url
             && license.id != "LicenseRef-Unknown"
             && license.id != "LicenseRef-All-Rights-Reserved");
-    if missing_custom_license_details && !is_minecraft_server {
+    if missing_custom_license_details && !is_minecraft_server && !is_shop {
         nags.push(ProjectNag::new(
             ProjectNagKind::AddCustomLicenseDetails,
             ProjectNagSeverity::Required,

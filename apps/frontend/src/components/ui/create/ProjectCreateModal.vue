@@ -1,30 +1,11 @@
 <template>
 	<NewModal
 		ref="modal"
-		:header="
-			projectType === 'server'
-				? formatMessage(messages.serverProjectTitle)
-				: formatMessage(messages.title)
-		"
+		:header="formatMessage(messages.title)"
 		:max-width="'550px'"
 	>
 		<div class="flex w-full flex-col gap-6">
 			<CreateLimitAlert v-model="hasHitLimit" type="project" />
-
-			<div class="flex flex-col gap-2.5">
-				<label for="project-type">
-					<span class="text-md font-semibold text-contrast">
-						{{ formatMessage(messages.typeLabel) }}
-					</span>
-				</label>
-				<Combobox
-					id="project-type"
-					v-model="projectType"
-					name="project-type"
-					:options="projectTypeOptions"
-					:disabled="hasHitLimit"
-				/>
-			</div>
 
 			<div class="flex flex-col gap-2.5">
 				<label for="name">
@@ -153,7 +134,6 @@ import {
 	Input,
 	NewModal,
 	Textarea,
-	useDebugLogger,
 	useVIntl,
 } from '@modrinth/ui'
 import { computed, defineAsyncComponent, h } from 'vue'
@@ -167,19 +147,14 @@ import {
 
 import CreateLimitAlert from './CreateLimitAlert.vue'
 
-type ProjectTypes = 'server' | 'project'
 interface VisibilityOption {
 	actual: Labrinth.Projects.v2.ProjectStatus
 	display: string
-}
-interface ShowOptions {
-	type?: 'server' | 'project'
 }
 
 const { addNotification } = injectNotificationManager()
 const { formatMessage } = useVIntl()
 const router = useRouter()
-const debug = useDebugLogger('ProjectCreateModal')
 
 defineExpose({
 	show,
@@ -189,24 +164,8 @@ const auth = await useAuth()
 
 const messages = defineMessages({
 	title: {
-		id: 'create.project.title',
-		defaultMessage: 'Creating a project',
-	},
-	serverProjectTitle: {
-		id: 'create.project.server-project-title',
-		defaultMessage: 'Creating a server project',
-	},
-	typeLabel: {
-		id: 'create.project.type-label',
-		defaultMessage: 'Type',
-	},
-	typeProject: {
-		id: 'create.project.type-project',
-		defaultMessage: 'Project',
-	},
-	typeServer: {
-		id: 'create.project.type-server',
-		defaultMessage: 'Server',
+		id: 'create.project.shop-title',
+		defaultMessage: 'Creating a shop',
 	},
 	ownerLabel: {
 		id: 'create.project.owner-label',
@@ -299,17 +258,6 @@ const { checking: checkingSlugSuggestions, suggestions: slugSuggestions } =
 		title: name,
 		username: () => auth.value.user?.username,
 	})
-const projectType = ref<ProjectTypes>('project')
-const projectTypeOptions = computed<ComboboxOption<ProjectTypes>[]>(() => [
-	{
-		value: 'project',
-		label: formatMessage(messages.typeProject),
-	},
-	{
-		value: 'server',
-		label: formatMessage(messages.typeServer),
-	},
-])
 const ownerOptions = ref<ComboboxOption<string>[]>([])
 const owner = ref<string | undefined>('self')
 const organizations = ref<Labrinth.Projects.v3.Organization[]>([])

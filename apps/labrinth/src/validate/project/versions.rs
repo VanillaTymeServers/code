@@ -10,6 +10,7 @@ pub(super) fn validate(
 
     if project.versions.is_empty()
         && project.components.minecraft_server.is_none()
+        && project.components.shop.is_none()
     {
         nags.push(ProjectNag::new(
             ProjectNagKind::UploadVersion,

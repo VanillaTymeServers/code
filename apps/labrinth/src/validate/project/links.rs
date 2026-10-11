@@ -81,8 +81,9 @@ pub(super) fn validate(
 ) -> Vec<super::ProjectNag> {
     let mut nags = Vec::new();
     let is_minecraft_server = project.components.minecraft_server.is_some();
+    let is_shop = project.components.shop.is_some();
 
-    if !is_minecraft_server && project.link_urls.is_empty() {
+    if !is_minecraft_server && !is_shop && project.link_urls.is_empty() {
         nags.push(super::ProjectNag::new(
             ProjectNagKind::AddLinks,
             ProjectNagSeverity::Suggestion,

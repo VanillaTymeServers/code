@@ -176,6 +176,17 @@ export class LabrinthProjectsV3Module extends AbstractModule {
 		})
 	}
 
+	public async createShopProject(
+		data: Labrinth.Projects.v3.CreateShopProjectRequest,
+	): Promise<Labrinth.Projects.v3.Project> {
+		return this.client.request<Labrinth.Projects.v3.Project>(`/project`, {
+			api: 'labrinth',
+			version: 3,
+			method: 'PUT',
+			body: data,
+		})
+	}
+
 	/**
 	 * Delete a project
 	 *

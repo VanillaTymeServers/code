@@ -1,9 +1,9 @@
 <template>
 	<div>
 		<div class="landing-hero">
-			<ModrinthIcon class="modrinth-icon text-brand" />
+			<img :src="VTLogo" alt="VT Logo" class="modrinth-icon text-brand" />
 			<h1 class="main-header">
-				<IntlFormatted :message-id="messages.thePlaceForMinecraft">
+				<IntlFormatted :message-id="messages.aMinecraftServerFor">
 					<template #~content>
 						<div class="animate-strong">
 							<span>
@@ -15,7 +15,7 @@
 									{{ formatMessage(message) }} <br />
 								</strong>
 								<strong class="main-header-strong">
-									{{ formatMessage(contentTypeMessages.mods) }}
+									{{ formatMessage(contentTypeMessages.builders) }}
 								</strong>
 							</span>
 						</div>
@@ -463,6 +463,7 @@ import { ref } from 'vue'
 
 import ATLauncherLogo from '~/assets/images/external/atlauncher.svg?component'
 import PrismLauncherLogo from '~/assets/images/external/prism.svg?component'
+import VTLogo from '~/assets/images/logo.webp'
 import LatestNewsRow from '~/components/ui/news/LatestNewsRow.vue'
 import { homePageNotifs, homePageProjects, homePageSearch } from '~/generated/state.json'
 
@@ -517,14 +518,14 @@ if (searchProjects.value.length === 0) {
 }
 
 const messages = defineMessages({
-	thePlaceForMinecraft: {
-		id: 'landing.heading.the-place-for-minecraft',
-		defaultMessage: 'The place for Minecraft {content}',
+	aMinecraftServerFor: {
+		id: 'landing.heading.a-minecraft-server-for',
+		defaultMessage: 'A Minecraft server for {content}',
 	},
 	discoverHeading: {
 		id: 'landing.subheading',
 		defaultMessage:
-			'Discover, play, and share Minecraft content through our open-source platform built for the community.',
+			'Build, explore, and hang out in a vanilla-like world shaped by players — not paywalls.',
 	},
 	discoverMods: {
 		id: 'landing.button.discover-mods',
@@ -626,33 +627,29 @@ const messages = defineMessages({
 })
 
 const contentTypeMessages = defineMessages({
-	mods: {
-		id: 'landing.heading.the-place-for-minecraft.mods',
-		defaultMessage: 'mods',
+	builders: {
+		id: 'landing.heading.a-minecraft-server-for.builders',
+		defaultMessage: 'builders',
 	},
-	resourcePacks: {
-		id: 'landing.heading.the-place-for-minecraft.resource-packs',
-		defaultMessage: 'resource packs',
+	explorers: {
+		id: 'landing.heading.a-minecraft-server-for.explorers',
+		defaultMessage: 'explorers',
 	},
-	dataPacks: {
-		id: 'landing.heading.the-place-for-minecraft.data-packs',
-		defaultMessage: 'data packs',
+	redstoners: {
+		id: 'landing.heading.a-minecraft-server-for.redstoners',
+		defaultMessage: 'redstoners',
 	},
-	shaders: {
-		id: 'landing.heading.the-place-for-minecraft.shaders',
-		defaultMessage: 'shaders',
+	friends: {
+		id: 'landing.heading.a-minecraft-server-for.friends',
+		defaultMessage: 'friends',
 	},
-	modpacks: {
-		id: 'landing.heading.the-place-for-minecraft.modpacks',
-		defaultMessage: 'modpacks',
+	dreamers: {
+		id: 'landing.heading.a-minecraft-server-for.dreamers',
+		defaultMessage: 'dreamers',
 	},
-	plugins: {
-		id: 'landing.heading.the-place-for-minecraft.plugins',
-		defaultMessage: 'plugins',
-	},
-	servers: {
-		id: 'landing.heading.the-place-for-minecraft.servers',
-		defaultMessage: 'servers',
+	you: {
+		id: 'landing.heading.a-minecraft-server-for.you',
+		defaultMessage: 'you',
 	},
 })
 
@@ -727,7 +724,7 @@ const creatorFeatureMessages = defineMessages({
 
 	.modrinth-icon {
 		width: 13rem;
-		height: 13rem;
+		height: auto;
 		margin-bottom: 2.5rem;
 	}
 

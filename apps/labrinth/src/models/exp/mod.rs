@@ -27,3 +27,5 @@ pub use version::{
     VersionComponentKind, VersionCreate, VersionEdit, VersionQuery,
     VersionSerial,
 };
+
+pub mod vt;

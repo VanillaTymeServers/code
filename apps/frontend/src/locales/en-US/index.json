@@ -2682,7 +2682,7 @@
     "message": "Discover over {count, number} creations"
   },
   "landing.subheading": {
-    "message": "Discover, play, and share Minecraft content through our open-source platform built for the community."
+    "message": "Build, explore, and hang out in a vanilla-like world shaped by players — not paywalls."
   },
   "layout.action.analytics-events": {
     "message": "Analytics events"
@@ -5650,5 +5650,6 @@
   },
   "version.unknown-embedded-content.title": {
     "message": "Withheld due to unknown embedded content"
-  }
+  },
+  "landing.heading.a-minecraft-server-for": {"message": "A Minecraft server for {content}"}
 }

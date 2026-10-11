@@ -1239,6 +1239,7 @@ export namespace Labrinth {
 				minecraft_server?: MinecraftServer | null
 				minecraft_java_server?: MinecraftJavaServer | null
 				minecraft_bedrock_server?: MinecraftBedrockServer | null
+				shop?: ShopProject | null
 				minecraft_mod?: unknown | null
 
 				/**
@@ -1309,6 +1310,40 @@ export namespace Labrinth {
 				address?: string
 			}
 
+			export type StallColor =
+				| 'pink'
+				| 'green'
+				| 'white'
+				| 'blue'
+				| 'lime'
+				| 'light_blue'
+				| 'cyan'
+				| 'purple'
+				| 'magenta'
+				| 'light_gray'
+				| 'brown'
+				| 'orange'
+				| 'yellow'
+				| 'gray'
+				| 'black'
+				| 'red'
+
+			export interface Coordinates {
+				x: number
+				z: number
+			}
+
+			export interface ShopProject {
+				stall: boolean
+				stall_color?: StallColor | null
+				coordinates?: Coordinates | null
+			}
+
+			export interface CreateShopProjectRequest {
+				base: CreateProjectBase
+				shop: ShopProject
+			}
+
 			export interface CreateServerProjectRequest {
 				base: CreateProjectBase
 				minecraft_server?: MinecraftServer
@@ -1337,6 +1372,7 @@ export namespace Labrinth {
 				minecraft_server?: MinecraftServer
 				minecraft_java_server?: MinecraftJavaServer
 				minecraft_bedrock_server?: MinecraftBedrockServer
+				shop?: Partial<ShopProject>
 				[key: string]: unknown
 			}
 
@@ -2089,6 +2125,7 @@ export namespace Labrinth {
 				minecraft_server?: Projects.v3.MinecraftServer | null
 				minecraft_java_server?: Projects.v3.MinecraftJavaServer | null
 				minecraft_bedrock_server?: Projects.v3.MinecraftBedrockServer | null
+				shop?: Projects.v3.ShopProject | null
 				minecraft_mod?: unknown | null
 				disclosure_types: string[]
 			}

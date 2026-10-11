@@ -121,6 +121,11 @@ const generatedState = shallowRef<GeneratedState>(
 				id: 'server',
 				display: 'server',
 			},
+			{
+				actual: 'shop',
+				id: 'shop',
+				display: 'shop',
+			},
 		],
 		loaderData: {
 			pluginLoaders: ['bukkit', 'spigot', 'paper', 'purpur', 'sponge', 'folia'],

@@ -4,6 +4,7 @@ use crate::models::exp::ProjectSerial;
 
 const MODPACK: &str = "modpack";
 const MINECRAFT_JAVA_SERVER: &str = "minecraft_java_server";
+const SHOP: &str = "shop";
 
 /// Adjusts V3 project types based on a project's components.
 ///
@@ -19,6 +20,9 @@ pub fn correct_project_types(
         // remove modpack type to reduce burden on frontend
         project_types.retain(|t| t != MODPACK);
         project_types.push(MINECRAFT_JAVA_SERVER.into());
+    }
+    if components.shop.is_some() {
+        project_types.push(SHOP.into());
     }
 }
 
