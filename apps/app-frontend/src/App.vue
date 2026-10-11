@@ -99,11 +99,6 @@ import QuickInstanceSwitcher from '@/components/ui/QuickInstanceSwitcher.vue'
 import SharedInstanceInviteHandler from '@/components/ui/shared-instances/shared-instance-invite-handler/index.vue'
 import SplashScreen from '@/components/ui/SplashScreen.vue'
 import SurveyPopup from '@/components/ui/SurveyPopup.vue'
-import SyncInstancesUpdateModal from '@/components/ui/sync-instances-update-modal/index.vue'
-import {
-	markSyncInstancesUpdateNotificationShown,
-	shouldShowSyncInstancesUpdateNotification,
-} from '@/components/ui/sync-instances-update-modal/show-notification'
 import WindowControls from '@/components/ui/WindowControls.vue'
 import { useCheckDisableMouseover } from '@/composables/macCssFix.js'
 import { useAppEvent } from '@/composables/use-app-event'
@@ -113,6 +108,7 @@ import { useInstanceMetadataRefresh } from '@/composables/use-instance-metadata-
 import { useQuickInstanceLimit } from '@/composables/use-quick-instance-limit.ts'
 import { isDarkTheme, useTheme } from '@/composables/use-theme.ts'
 import { config } from '@/config'
+import NewUpdateModal from '@/features/updates/new-update-modal/index.vue'
 import { getAccountAppearance, rememberAccountAppearance } from '@/helpers/account-appearance.ts'
 import {
 	hide_ads_window,
@@ -579,23 +575,6 @@ const { formatMessage } = useVIntl()
 const formatBytes = useFormatBytes()
 
 const messages = defineMessages({
-	syncUpdateTitle: {
-		id: 'app.sync-instances-update.notification.title',
-		defaultMessage: 'Sync your instances',
-	},
-	syncUpdateDescription: {
-		id: 'app.sync-instances-update.notification.description',
-		defaultMessage:
-			'Keep game settings, servers, resource packs, and more in sync across your instances.',
-	},
-	syncUpdateView: {
-		id: 'app.sync-instances-update.notification.view-update',
-		defaultMessage: 'View update',
-	},
-	syncUpdateDismiss: {
-		id: 'app.sync-instances-update.notification.dismiss',
-		defaultMessage: 'Dismiss',
-	},
 	warning: { id: 'app.notification.warning', defaultMessage: 'Warning' },
 	goBack: { id: 'app.navigation.go-back', defaultMessage: 'Go back' },
 	goForward: { id: 'app.navigation.go-forward', defaultMessage: 'Go forward' },
@@ -780,6 +759,20 @@ async function setupApp() {
 		show_worlds_tab_in_instances,
 		show_screenshots_tab_in_instances,
 		show_skin_selector_in_sidebar,
+		refocus_on_game_close,
+		compact_instance_cards,
+		show_play_time,
+		warn_on_unknown_modpacks,
+		skip_non_essential_warnings,
+		show_jump_in,
+		always_show_copy_details,
+		hide_installed_modpacks,
+		advanced_filters_collapsed,
+		dismissed_photosensitivity_filter_warning,
+		friends_active_collapsed,
+		friends_online_collapsed,
+		friends_offline_collapsed,
+		friends_pending_collapsed,
 		developer_mode,
 		feature_flags,
 		pending_update_toast_for_version,
@@ -819,26 +812,25 @@ async function setupApp() {
 	appSettings.showWorldsTabInInstances = show_worlds_tab_in_instances
 	appSettings.showScreenshotsTabInInstances = show_screenshots_tab_in_instances
 	appSettings.showSkinSelectorInSidebar = show_skin_selector_in_sidebar
+	appSettings.refocusOnGameClose = refocus_on_game_close
+	appSettings.compactInstanceCards = compact_instance_cards
+	appSettings.showPlayTime = show_play_time
+	appSettings.warnOnUnknownModpacks = warn_on_unknown_modpacks
+	appSettings.skipNonEssentialWarnings = skip_non_essential_warnings
+	appSettings.showJumpIn = show_jump_in
+	appSettings.alwaysShowCopyDetails = always_show_copy_details
+	appSettings.hideInstalledModpacks = hide_installed_modpacks
+	appSettings.advancedFiltersCollapsed = advanced_filters_collapsed
+	appSettings.dismissedPhotosensitivityFilterWarning = dismissed_photosensitivity_filter_warning
+	appSettings.friendsActiveCollapsed = friends_active_collapsed
+	appSettings.friendsOnlineCollapsed = friends_online_collapsed
+	appSettings.friendsOfflineCollapsed = friends_offline_collapsed
+	appSettings.friendsPendingCollapsed = friends_pending_collapsed
 	appSettings.devMode = developer_mode
 	stateInitialized.value = true
 	debugStartup('App state initialized')
 	await traceStartupStep('Render initialized app', nextTick)
-	const isSyncUpdateVersion = version.startsWith('0.20.')
-	if (isSyncUpdateVersion && pending_update_toast_for_version !== version) {
-		markSyncInstancesUpdateNotificationShown()
-	}
-	if (
-		appSettings.getFeatureFlag('show_sync_instances_update_modal') ||
-		(isSyncUpdateVersion &&
-			pending_update_toast_for_version === version &&
-			(
-				await traceStartupStep('Load instances for update notification', () =>
-					queryClient.fetchQuery(instanceListQueryOptions()),
-				)
-			).length > 0)
-	) {
-		showSyncInstancesUpdateNotification()
-	}
+	await newUpdateModal.value?.notifyForVersion(version, pending_update_toast_for_version)
 
 	await traceStartupStep('Register window resize listener', () =>
 		getCurrentWindow().onResized(async () => {
@@ -956,7 +948,7 @@ router.afterEach((to, from, failure) => {
 	trackEvent('PageView', {
 		path: to.path,
 		fromPath: from.path,
-		failed: failure,
+		failed: !!failure,
 	})
 	setTimeout(() => {
 		debugStartup('Route loading release check', {
@@ -1138,54 +1130,10 @@ const updateToPlayModal = ref()
 
 const modrinthLoginModal = ref()
 const appSettingsModal = ref()
-const syncInstancesUpdateModal = ref()
-let syncInstancesUpdateNotificationId = null
-
-function showSyncInstancesUpdateNotification() {
-	if (
-		popupNotificationManager
-			.getNotifications()
-			.some((notification) => notification.id === syncInstancesUpdateNotificationId)
-	) {
-		return
-	}
-
-	if (!shouldShowSyncInstancesUpdateNotification()) return
-
-	const notification = addPopupNotification({
-		contentType: 'standard',
-		title: formatMessage(messages.syncUpdateTitle),
-		text: formatMessage(messages.syncUpdateDescription),
-		type: 'info',
-		hideIcon: true,
-		autoCloseMs: null,
-		buttons: [
-			{
-				label: formatMessage(messages.syncUpdateDismiss),
-				color: 'standard',
-				action: () => popupNotificationManager.removeNotification(notification.id),
-			},
-			{
-				label: formatMessage(messages.syncUpdateView),
-				color: 'brand',
-				action: () => syncInstancesUpdateModal.value?.show(),
-			},
-		],
-	})
-	syncInstancesUpdateNotificationId = notification.id
-}
+const newUpdateModal = ref()
 
 provide(appSettingsModalOpenProfileKey, () => appSettingsModal.value?.showProfile())
 provide(appSettingsModalOpenSyncedOptionsKey, () => appSettingsModal.value?.showSyncedOptions())
-
-watch(
-	() => appSettings.getFeatureFlag('show_sync_instances_update_modal'),
-	(enabled) => {
-		if (enabled && stateInitialized.value) {
-			showSyncInstancesUpdateNotification()
-		}
-	},
-)
 
 watch(incompatibilityWarningModal, (modal) => {
 	if (modal) {
@@ -1241,16 +1189,24 @@ watch(
 				}
 
 				if (behavior && appSettings.syncBehaviorAcrossDevices) {
-					const behaviorFeatureFlags = {
-						compact_instance_cards: behavior.compact_instance_cards,
-						show_instance_play_time: behavior.show_play_time,
-						skip_unknown_pack_warning: !behavior.warn_on_unknown_modpacks,
-						skip_non_essential_warnings: behavior.skip_non_essential_warnings,
+					const behaviorSettings = {
+						refocus_on_game_close: 'refocusOnGameClose',
+						compact_instance_cards: 'compactInstanceCards',
+						show_play_time: 'showPlayTime',
+						warn_on_unknown_modpacks: 'warnOnUnknownModpacks',
+						skip_non_essential_warnings: 'skipNonEssentialWarnings',
+					}
+					for (const [key, stateKey] of Object.entries(behaviorSettings)) {
+						const value = behavior[key] ?? settings[key]
+						appSettings[stateKey] = value
+						if (settings[key] !== value) {
+							settings[key] = value
+							settingsChanged = true
+						}
 					}
 
 					appSettings.toggleSidebar = behavior.hide_right_sidebar
 					appSettings.hideNametagSkinsPage = behavior.hide_nametag
-					Object.assign(appSettings.featureFlags, behaviorFeatureFlags)
 
 					if (settings.hide_on_process_start !== behavior.minimize_app) {
 						settings.hide_on_process_start = behavior.minimize_app
@@ -1264,20 +1220,11 @@ watch(
 						settings.hide_nametag_skins_page = behavior.hide_nametag
 						settingsChanged = true
 					}
-
-					for (const [flag, value] of Object.entries(behaviorFeatureFlags)) {
-						if (settings.feature_flags[flag] !== value) {
-							settings.feature_flags[flag] = value
-							settingsChanged = true
-						}
-					}
 				}
 
 				if (behavior && appSettings.syncFeaturesAcrossDevices) {
-					const featureFlags = {
-						worlds_in_home: behavior.show_jump_in,
-					}
 					const featureSettings = {
+						show_jump_in: 'showJumpIn',
 						show_files_tab_in_instances: 'showFilesTabInInstances',
 						show_worlds_tab_in_instances: 'showWorldsTabInInstances',
 						show_screenshots_tab_in_instances: 'showScreenshotsTabInInstances',
@@ -1291,7 +1238,6 @@ watch(
 							settingsChanged = true
 						}
 					}
-					Object.assign(appSettings.featureFlags, featureFlags)
 					if (typeof behavior.quick_instance_count === 'number') {
 						quickInstances.setLimit(behavior.quick_instance_count)
 					}
@@ -1308,13 +1254,6 @@ watch(
 							)
 							queryClient.setQueryData(syncedOptionsKeys.global, updatedGlobalSyncedOptions)
 							await queryClient.invalidateQueries({ queryKey: screenshotKeys.all })
-						}
-					}
-
-					for (const [flag, value] of Object.entries(featureFlags)) {
-						if (settings.feature_flags[flag] !== value) {
-							settings.feature_flags[flag] = value
-							settingsChanged = true
 						}
 					}
 				}
@@ -2215,7 +2154,7 @@ provideAppUpdateDownloadProgress(appUpdateDownload)
 			</div>
 		</Transition>
 		<AppSettingsModal ref="appSettingsModal" />
-		<SyncInstancesUpdateModal ref="syncInstancesUpdateModal" />
+		<NewUpdateModal ref="newUpdateModal" />
 		<Suspense>
 			<ModrinthAccountRequiredModal ref="modrinthLoginModal" :request-auth="requestModrinthAuth" />
 		</Suspense>

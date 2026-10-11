@@ -123,28 +123,15 @@ async fn update_tax_amounts(
                                 "parsing user Stripe customer ID",
                             )?;
 
-                        let customer = stripe::Customer::retrieve(
+                        let payment_method = get_default_payment_method(
                             &stripe_client,
                             &stripe_customer_id,
-                            &["invoice_settings.default_payment_method"],
                         )
-                        .await
-                        .wrap_failed_dependency_err(
-                            "communicating with payment provider",
-                        )?;
-
-                        // A customer should have a default payment method if they have an active subscription.
-
-                        let payment_method = customer
-                            .invoice_settings
-                            .and_then(|x| {
-                                x.default_payment_method
-                                    .and_then(|x| x.into_object())
-                            })
-                            .wrap_request_err_with(|| {
-                                "customer has no default payment method!"
-                                    .to_string()
-                            })?;
+                        .await?
+                        .wrap_request_err_with(|| {
+                            "customer has no default payment method"
+                                .to_string()
+                        })?;
 
                         let stripe_address =
                             payment_method.billing_details.address;
@@ -156,6 +143,16 @@ async fn update_tax_amounts(
                                 warn!("PaymentMethod had no address");
                             }
                         };
+
+                        let customer = stripe::Customer::retrieve(
+                            &stripe_client,
+                            &stripe_customer_id,
+                            &[],
+                        )
+                        .await
+                        .wrap_failed_dependency_err(
+                            "communicating with payment provider",
+                        )?;
 
                         customer.address.wrap_request_err_with(|| {
                             "couldn't get an address for the Stripe customer"
@@ -771,8 +768,8 @@ pub async fn process_chargeable_charges(
             Currency::from_str(&product_price.currency_code.to_lowercase())
         else {
             warn!(
-                "Could not find currency for {}",
-                product_price.currency_code
+                charge.id = charge.id.0,
+                "Could not find currency for {}", product_price.currency_code
             );
             continue;
         };
@@ -817,6 +814,7 @@ pub async fn process_chargeable_charges(
                     charge.payment_platform = PaymentPlatform::Stripe;
                 } else {
                     error!(
+                        charge.id = charge.id.0,
                         "Payment bootstrap succeeded but no payment intent was created"
                     );
                     failure = true;
@@ -824,7 +822,11 @@ pub async fn process_chargeable_charges(
             }
 
             Err(error) => {
-                error!(%error, "Failed to bootstrap payment for renewal");
+                error!(
+                    ?error,
+                    charge.id = charge.id.0,
+                    "Failed to bootstrap payment for renewal"
+                );
                 failure = true;
             }
         };

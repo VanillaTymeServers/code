@@ -14,6 +14,7 @@ use crate::models::error::ApiError;
 use crate::models::exp;
 use crate::models::ids::{ImageId, OrganizationId, ProjectId, VersionId};
 use crate::models::images::{Image, ImageContext};
+use crate::models::link_platform::LinkPlatform;
 use crate::models::pats::Scopes;
 use crate::models::projects::{
     License, Link, MonetizationStatus, Project, ProjectStatus,
@@ -56,6 +57,8 @@ pub fn config(cfg: &mut actix_web::web::ServiceConfig) {
 
 #[derive(Error, Debug)]
 pub enum CreateError {
+    #[error(transparent)]
+    Request(crate::routes::ApiError),
     #[error(transparent)]
     InternalError(#[from] eyre::Report),
     #[error("An unknown database error occurred")]
@@ -105,11 +108,19 @@ pub enum CreateError {
 impl From<crate::routes::ApiError> for CreateError {
     fn from(value: crate::routes::ApiError) -> Self {
         match value {
+            err if err.is_account_locked() => Self::Request(err),
             crate::routes::ApiError::Auth(err) => {
                 Self::CustomAuthenticationError(format!("{err:#}"))
             }
             crate::routes::ApiError::Request(err) => {
+              if err
+                .downcast_ref::<super::projects::validate::ProjectValidationError>()
+                .is_some()
+              {
+                Self::Request(crate::routes::ApiError::Request(err))
+              } else {
                 Self::InvalidInput(format!("{err:#}"))
+              }
             }
             err => Self::InternalError(eyre::eyre!("{err:#}")),
         }
@@ -120,6 +131,7 @@ impl actix_web::ResponseError for CreateError {
     fn status_code(&self) -> StatusCode {
         match self {
             CreateError::InternalError(..) => StatusCode::INTERNAL_SERVER_ERROR,
+            CreateError::Request(error) => error.status_code(),
             CreateError::SqlxDatabaseError(..) => {
                 StatusCode::INTERNAL_SERVER_ERROR
             }
@@ -135,7 +147,7 @@ impl actix_web::ResponseError for CreateError {
             CreateError::InvalidLoader(..) => StatusCode::BAD_REQUEST,
             CreateError::InvalidCategory(..) => StatusCode::BAD_REQUEST,
             CreateError::InvalidFileType(..) => StatusCode::BAD_REQUEST,
-            CreateError::Unauthorized(..) => StatusCode::UNAUTHORIZED,
+            CreateError::Unauthorized(err) => err.status_code(),
             CreateError::CustomAuthenticationError(..) => {
                 StatusCode::UNAUTHORIZED
             }
@@ -151,9 +163,13 @@ impl actix_web::ResponseError for CreateError {
     }
 
     fn error_response(&self) -> HttpResponse {
+        if let Self::Request(error) = self {
+            return error.error_response();
+        }
         HttpResponse::build(self.status_code()).json(ApiError {
             error: match self {
                 CreateError::InternalError(..) => "database_error",
+                CreateError::Request(..) => "request_error",
                 CreateError::SqlxDatabaseError(..) => "database_error",
                 CreateError::FileHostingError(..) => "file_hosting_error",
                 CreateError::SerDeError(..) => "invalid_input",
@@ -165,7 +181,7 @@ impl actix_web::ResponseError for CreateError {
                 CreateError::InvalidLoader(..) => "invalid_input",
                 CreateError::InvalidCategory(..) => "invalid_input",
                 CreateError::InvalidFileType(..) => "invalid_input",
-                CreateError::Unauthorized(..) => "unauthorized",
+                CreateError::Unauthorized(err) => err.error_name(),
                 CreateError::CustomAuthenticationError(..) => "unauthorized",
                 CreateError::SlugCollision => "invalid_input",
                 CreateError::ValidationError(..) => "invalid_input",
@@ -176,7 +192,10 @@ impl actix_web::ResponseError for CreateError {
                 | CreateError::ProjectVersionLimitReached
                 | CreateError::DailyVersionLimitReached => "limit_reached",
             },
-            description: self.to_string(),
+            description: match self {
+                Self::InternalError(error) => format!("{error:#}"),
+                _ => self.to_string(),
+            },
             details: None,
         })
     }
@@ -229,9 +248,6 @@ pub struct ProjectCreateData {
     /// An optional link to the project's license page
     pub license_url: Option<String>,
     /// An optional list of all donation links the project has
-    #[validate(custom(
-        function = "crate::util::validate::validate_url_hashmap_values"
-    ))]
     #[serde(default)]
     pub link_urls: HashMap<String, String>,
 
@@ -361,11 +377,15 @@ pub async fn project_create_internal(
         }
     } else {
         transaction.commit().await?;
+        let slug =
+            models::DBProject::get_id(project_id.into(), &**client, &redis)
+                .await?
+                .and_then(|project| project.inner.slug);
         super::projects::clear_project_cache_and_queue_search(
             &redis,
             &search_state,
             project_id.into(),
-            None,
+            slug,
             None,
         )
         .await?;
@@ -427,11 +447,15 @@ pub async fn project_create_with_id(
         }
     } else {
         transaction.commit().await?;
+        let slug =
+            models::DBProject::get_id(project_id.into(), &**client, &redis)
+                .await?
+                .and_then(|project| project.inner.slug);
         super::projects::clear_project_cache_and_queue_search(
             &redis,
             &search_state,
             project_id.into(),
-            None,
+            slug,
             None,
         )
         .await?;
@@ -550,6 +574,15 @@ async fn project_create_inner(
         create_data.validate().map_err(|err| {
             CreateError::InvalidInput(validation_errors_to_string(err, None))
         })?;
+
+        super::projects::validate::require_valid_project(
+            crate::validate::project::validate_link_input(
+                &create_data.link_urls,
+                &create_data.license_id,
+                create_data.license_url.as_deref(),
+                &create_data.description,
+            ),
+        )?;
 
         let versions_to_create = create_data.initial_versions.len() as u64;
         if versions_to_create > 0 {
@@ -673,7 +706,7 @@ async fn project_create_inner(
             })?;
 
             let (file_name, file_extension) =
-                super::version_creation::get_name_ext(&content_disposition)?;
+                super::version_creation::get_name_and_extension(&content_disposition)?;
 
             if name == "icon" {
                 if icon_data.is_some() {
@@ -709,7 +742,7 @@ async fn project_create_inner(
                     .await?;
 
                     let (_, file_extension) =
-                        super::version_creation::get_name_ext(&content_disposition)?;
+                        super::version_creation::get_name_and_extension(&content_disposition)?;
 
                     let url = format!("data/{project_id}/images");
                     let upload_result = upload_image_optimized(
@@ -915,35 +948,15 @@ async fn project_create_inner(
 
         let mut link_urls = vec![];
 
-        let link_platforms =
-            models::categories::LinkPlatform::list(&mut *transaction, redis)
-                .await?;
         for (platform, url) in &project_create_data.link_urls {
-            let platform_id = models::categories::LinkPlatform::get_id(
-                platform,
-                &mut *transaction,
-            )
-            .await?
-            .ok_or_else(|| {
+            let platform = platform.parse::<LinkPlatform>().map_err(|_| {
                 CreateError::InvalidInput(format!(
-                    "Link platform {} does not exist.",
-                    platform.clone()
+                    "Link platform {platform} does not exist."
                 ))
             })?;
-            let link_platform = link_platforms
-                .iter()
-                .find(|x| x.id == platform_id)
-                .ok_or_else(|| {
-                    CreateError::InvalidInput(format!(
-                        "Link platform {} does not exist.",
-                        platform.clone()
-                    ))
-                })?;
             link_urls.push(models::project_item::LinkUrl {
-                platform_id,
-                platform_name: link_platform.name.clone(),
+                platform,
                 url: url.clone(),
-                donation: link_platform.donation,
             })
         }
 
@@ -1098,7 +1111,7 @@ async fn project_create_inner(
                 .link_urls
                 .clone()
                 .into_iter()
-                .map(|x| (x.platform_name.clone(), Link::from(x)))
+                .map(|x| (x.platform.to_string(), Link::from(x)))
                 .collect(),
             gallery: gallery_urls,
             color: project_builder.color,
@@ -1208,8 +1221,8 @@ async fn process_icon_upload(
 ) -> Result<(String, String, Option<u32>), CreateError> {
     let data = read_from_field(
         &mut field,
-        262144,
-        "Icons must be smaller than 256KiB",
+        524288,
+        "Icons must be smaller than 512KiB",
     )
     .await?;
     let upload_result = crate::util::img::upload_image_optimized(

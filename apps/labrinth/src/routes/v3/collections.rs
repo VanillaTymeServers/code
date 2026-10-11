@@ -66,7 +66,7 @@ pub async fn collection_create(
     redis: Data<RedisPool>,
     session_queue: Data<AuthQueue>,
 ) -> Result<HttpResponse, CreateError> {
-    let collection_create_data = collection_create_data.into_inner();
+    let mut collection_create_data = collection_create_data.into_inner();
 
     // The currently logged in user
     let current_user = get_user_from_headers(
@@ -90,6 +90,14 @@ pub async fn collection_create(
     collection_create_data.validate().map_err(|err| {
         CreateError::InvalidInput(validation_errors_to_string(err, None))
     })?;
+
+    crate::routes::resolve_body_refs(
+        collection_create_data.projects.iter_mut().collect(),
+        &Some(current_user.clone()),
+        &client,
+        &redis,
+    )
+    .await?;
 
     let mut transaction = client.begin().await?;
 
@@ -132,6 +140,7 @@ pub async fn collection_create(
         created: now,
         updated: now,
         icon_url: None,
+        raw_icon_url: None,
         color: None,
         status: collection_builder.status,
         projects: initial_project_ids,
@@ -261,6 +270,7 @@ pub async fn collection_edit(
     redis: web::Data<RedisPool>,
     session_queue: web::Data<AuthQueue>,
 ) -> Result<HttpResponse, ApiError> {
+    let mut new_collection = new_collection.into_inner();
     let user = get_user_from_headers(
         &req,
         &**pool,
@@ -276,6 +286,16 @@ pub async fn collection_edit(
         .validate()
         .map_err(|err| eyre::eyre!(err))
         .wrap_request_err("validating request")?;
+
+    if let Some(projects) = &mut new_collection.new_projects {
+        crate::routes::resolve_body_refs(
+            projects.iter_mut().collect(),
+            &Some(user.clone()),
+            &pool,
+            &redis,
+        )
+        .await?;
+    }
 
     let string = info.into_inner().0;
     let id = database::models::DBCollectionId(
@@ -482,8 +502,8 @@ pub async fn collection_icon_edit(
 
     let bytes = read_limited_from_payload(
         &mut payload,
-        262144,
-        "Icons must be smaller than 256KiB",
+        524288,
+        "Icons must be smaller than 512KiB",
     )
     .await?;
 

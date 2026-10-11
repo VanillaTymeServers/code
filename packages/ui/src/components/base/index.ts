@@ -67,11 +67,13 @@ export { default as FilterPills } from './FilterPills.vue'
 export { default as FloatingActionBar } from './FloatingActionBar.vue'
 export { default as FloatingPanel } from './FloatingPanel.vue'
 export { default as FormattedTag } from './FormattedTag.vue'
+export { default as FullImage } from './FullImage.vue'
 export { default as HeadingLink } from './HeadingLink.vue'
 export { default as HorizontalRule } from './HorizontalRule.vue'
 export { default as I18nDebugPanel } from './I18nDebugPanel.vue'
 export { default as IconSelect } from './IconSelect.vue'
 export { default as InlineEditableText } from './InlineEditableText.vue'
+export { default as InlineValidationMessage } from './InlineValidationMessage.vue'
 export type { InputAppearance, InputSize } from './inputs'
 export {
 	ColorPicker,
