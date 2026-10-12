@@ -358,6 +358,7 @@ function getProjectCardTags(result: Labrinth.Search.v3.ResultSearchProject, disp
 						ctx.effectiveCurrentSortType.value.name === 'newest' ? 'published' : 'updated'
 					"
 					:downloads="result.downloads"
+					:shop="result.shop ?? undefined"
 					:summary="result.summary"
 					:tags="getProjectCardTags(result, true)"
 					:all-tags="getProjectCardTags(result, false)"

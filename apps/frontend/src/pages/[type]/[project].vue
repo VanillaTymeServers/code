@@ -502,9 +502,17 @@
 						:status-online="projectV3?.minecraft_java_server?.ping?.data != null"
 						class="card flex-card"
 					/>
+					<ShopSidebarInfo
+						v-if="projectV3?.shop"
+						:shop="projectV3.shop"
+						class="card flex-card"
+					/>
 					<ProjectSidebarCompatibility
 						v-if="
-							projectV3Loaded && !isServerProject && route.name !== 'type-project-version-version'
+							projectV3Loaded &&
+							!isServerProject &&
+							!projectV3.shop &&
+							route.name !== 'type-project-version-version'
 						"
 						:project="project"
 						:tags="tags"
@@ -530,7 +538,7 @@
 					<ProjectSidebarDetails
 						:project="project"
 						:link-target="$external()"
-						:hide-license="isServerProject"
+						:hide-license="isServerProject || !!projectV3?.shop"
 						:show-followers="isServerProject"
 						class="card flex-card"
 					/>
@@ -636,6 +644,7 @@ import ModpackScanModal from '~/components/ui/moderation/ModpackScanModal.vue'
 import ProjectCollectionSaveButton from '~/components/ui/ProjectCollectionSaveButton.vue'
 import ProjectDownloadModal from '~/components/ui/ProjectDownloadModal/index.vue'
 import ProjectMemberHeader from '~/components/ui/ProjectMemberHeader.vue'
+import ShopSidebarInfo from '~/components/ui/ShopSidebarInfo.vue'
 import { getSignInRouteObj } from '~/composables/auth.ts'
 import { saveFeatureFlags } from '~/composables/featureFlags.ts'
 import { useProjectLinkValidation } from '~/composables/link-network-validation'

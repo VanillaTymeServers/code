@@ -29,7 +29,15 @@
 					/>
 				</template>
 				<template v-else>
+					<PageHeaderMetadataItem
+						v-if="projectV3?.shop?.coordinates"
+						:icon="CompassIcon"
+						:tooltip="formatMessage(shopMessages.coordinatesLabel)"
+					>
+						<span>{{ projectV3.shop.coordinates.x }}, {{ projectV3.shop.coordinates.z }}</span>
+					</PageHeaderMetadataItem>
 					<PageHeaderMetadataNumberItem
+						v-else-if="!projectV3?.shop"
 						:icon="DownloadIcon"
 						:value="project.downloads"
 						:label="formatMessage(messages.downloadsStat, { count: project.downloads })"
@@ -64,7 +72,7 @@
 
 <script setup lang="ts">
 import type { Labrinth } from '@modrinth/api-client'
-import { DownloadIcon, HeartIcon } from '@modrinth/assets'
+import { CompassIcon, DownloadIcon, HeartIcon } from '@modrinth/assets'
 
 import { defineMessages, useFormatNumber, useVIntl } from '../../composables'
 import Avatar from '../base/Avatar.vue'
@@ -72,9 +80,11 @@ import FormattedTag from '../base/FormattedTag.vue'
 import PageHeader from '../base/page-header/index.vue'
 import PageHeaderMetadata from '../base/page-header/metadata/index.vue'
 import PageHeaderMetadataNumberItem from '../base/page-header/metadata/page-header-metadata-number-item.vue'
+import PageHeaderMetadataItem from '../base/page-header/metadata/page-header-metadata-item.vue'
 import PageHeaderMetadataTagsItem from '../base/page-header/metadata/page-header-metadata-tags-item.vue'
 import PageHeaderActions from '../base/page-header/page-header-actions.vue'
 import TagItem from '../base/TagItem.vue'
+import { shopMessages } from '../../utils/shop'
 import ProjectStatusBadge from './ProjectStatusBadge.vue'
 import ServerDetails from './server/ServerDetails.vue'
 
@@ -88,7 +98,7 @@ type HeaderProject = Pick<
 
 type HeaderProjectV3 = Pick<
 	Labrinth.Projects.v3.Project,
-	'status' | 'minecraft_server' | 'minecraft_java_server'
+	'status' | 'minecraft_server' | 'minecraft_java_server' | 'shop'
 >
 
 withDefaults(

@@ -527,13 +527,6 @@
 							action: (event) => requireVerifiedEmail(() => $refs.modal_creation.show(event)),
 						},
 						{
-							id: 'new-server-project',
-							label: formatMessage(messages.newServerProject),
-							icon: ServerPlusIcon,
-							action: (event) =>
-								requireVerifiedEmail(() => $refs.modal_creation.show(event, { type: 'server' })),
-						},
-						{
 							id: 'new-collection',
 							label: formatMessage(messages.newCollection),
 							icon: CollectionPlusIcon,
@@ -852,7 +845,6 @@ import {
 	ScaleIcon,
 	SearchIcon,
 	ServerIcon,
-	ServerPlusIcon,
 	ServerSearchIcon,
 	ServerStackIcon,
 	SettingsIcon,
@@ -1119,12 +1111,8 @@ const messages = defineMessages({
 		defaultMessage: 'Analytics events',
 	},
 	newProject: {
-		id: 'layout.action.new-project',
-		defaultMessage: 'New project',
-	},
-	newServerProject: {
-		id: 'layout.action.new-server-project',
-		defaultMessage: 'New server project',
+		id: 'layout.action.new-shop',
+		defaultMessage: 'New shop',
 	},
 	newCollection: {
 		id: 'layout.action.new-collection',

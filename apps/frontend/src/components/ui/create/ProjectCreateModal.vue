@@ -1,11 +1,22 @@
 <template>
-	<NewModal
-		ref="modal"
-		:header="formatMessage(messages.title)"
-		:max-width="'550px'"
-	>
+	<NewModal ref="modal" :header="formatMessage(messages.title)" :max-width="'550px'">
 		<div class="flex w-full flex-col gap-6">
 			<CreateLimitAlert v-model="hasHitLimit" type="project" />
+			<div class="flex flex-col gap-2.5">
+				<label for="shop-type">
+					<span class="text-md font-semibold text-contrast">
+						{{ formatMessage(messages.typeLabel) }}
+					</span>
+				</label>
+				<Chips
+					id="shop-type"
+					v-model="shopType"
+					:items="shopTypes"
+					:format-label="(x) => x.display"
+					:capitalize="false"
+					:disabled="hasHitLimit"
+				/>
+			</div>
 
 			<div class="flex flex-col gap-2.5">
 				<label for="name">
@@ -41,7 +52,7 @@
 					:disabled="hasHitLimit"
 					@update:model-value="manualSlug = true"
 				>
-					<template #prefix>https://modrinth.com/project/</template>
+					<template #prefix>https://vanillatyme.com/shop/</template>
 				</Input>
 				<SlugSuggestions
 					:selected="slug"
@@ -146,7 +157,10 @@ import {
 } from '~/composables/project-slug-suggestions'
 
 import CreateLimitAlert from './CreateLimitAlert.vue'
-
+interface ShopTypeOption {
+	stall: boolean
+	display: string
+}
 interface VisibilityOption {
 	actual: Labrinth.Projects.v2.ProjectStatus
 	display: string
@@ -167,45 +181,57 @@ const messages = defineMessages({
 		id: 'create.project.shop-title',
 		defaultMessage: 'Creating a shop',
 	},
+	typeLabel: {
+		id: 'create.shop.type-label',
+		defaultMessage: 'Type',
+	},
+	typeShop: {
+		id: 'create.shop.type-shop',
+		defaultMessage: 'Shop',
+	},
+	typeStall: {
+		id: 'create.shop.type-stall',
+		defaultMessage: 'Stall',
+	},
 	ownerLabel: {
 		id: 'create.project.owner-label',
 		defaultMessage: 'Owner',
 	},
 	ownerDescription: {
-		id: 'create.project.owner-description',
-		defaultMessage: `Set the project owner as yourself or an organization you're a member of.`,
+		id: 'create.shop.owner-description',
+		defaultMessage: `Set the shop owner as yourself or an organization you're a member of.`,
 	},
 	nameLabel: {
 		id: 'create.project.name-label',
 		defaultMessage: 'Name',
 	},
 	namePlaceholder: {
-		id: 'create.project.name-placeholder',
-		defaultMessage: 'Enter project name...',
+		id: 'create.shop.name-placeholder',
+		defaultMessage: 'Enter shop name...',
 	},
 	urlLabel: {
 		id: 'create.project.url-label',
 		defaultMessage: 'URL',
 	},
 	visibilityDescription: {
-		id: 'create.project.visibility-description',
-		defaultMessage: 'The visibility of your project after it has been approved.',
+		id: 'create.shop.visibility-description',
+		defaultMessage: 'The visibility of your shop after it has been approved.',
 	},
 	summaryLabel: {
 		id: 'create.project.summary-label',
 		defaultMessage: 'Summary',
 	},
 	summaryDescription: {
-		id: 'create.project.summary-description',
-		defaultMessage: 'A sentence or two that describes your project.',
+		id: 'create.shop.summary-description',
+		defaultMessage: 'A sentence or two that describes your shop.',
 	},
 	summaryPlaceholder: {
-		id: 'create.project.summary-placeholder',
-		defaultMessage: 'This project adds...',
+		id: 'create.shop.summary-placeholder',
+		defaultMessage: 'This shop adds...',
 	},
 	createProject: {
-		id: 'create.project.create-project',
-		defaultMessage: 'Create project',
+		id: 'create.shop.create-project',
+		defaultMessage: 'Create shop',
 	},
 	visibilityPublic: {
 		id: 'create.project.visibility-public',
@@ -276,6 +302,18 @@ const visibilities = ref<VisibilityOption[]>([
 	},
 ])
 const visibility = ref<VisibilityOption>(visibilities.value[0])
+
+const shopTypes = ref<ShopTypeOption[]>([
+	{
+		stall: false,
+		display: formatMessage(messages.typeShop),
+	},
+	{
+		stall: true,
+		display: formatMessage(messages.typeStall),
+	},
+])
+const shopType = ref<ShopTypeOption>(shopTypes.value[0])
 
 const disableCreate = computed(() => {
 	if (hasHitLimit.value) return true
@@ -366,73 +404,24 @@ async function fetchOrganizations() {
 		console.error('Failed to fetch organizations:', err)
 	}
 }
-
 async function createProject() {
 	if (disableCreate.value) return
 	startLoading()
 
-	const formData = new FormData()
-
-	const projectData: Labrinth.Projects.v2.CreateProjectBase = {
-		title: name.value.trim(),
-		project_type: 'mod',
-		slug: slug.value,
-		description: description.value.trim(),
-		body: '',
-		requested_status: visibility.value.actual,
-		initial_versions: [],
-		team_members: [
-			{
-				user_id: auth.value.user?.id,
-				name: auth.value.user?.username,
-				role: 'Owner',
-			},
-		],
-		categories: [],
-		client_side: 'required',
-		server_side: 'required',
-		license_id: 'LicenseRef-Unknown',
-		is_draft: true,
-		organization_id: owner.value !== 'self' ? owner.value : undefined,
-	}
-
-	formData.append('data', JSON.stringify(projectData))
-
 	try {
-		let createdProjectId: string | undefined
-
-		if (projectType.value === 'server') {
-			const result = await labrinth.projects_v3.createServerProject({
-				base: {
-					name: projectData.title,
-					slug: projectData.slug,
-					summary: projectData.description,
-					description: '',
-					requested_status: projectData.requested_status,
-					organization_id: owner.value !== 'self' ? owner.value : undefined,
-				},
-				minecraft_server: {
-					// empty component
-				},
-				minecraft_java_server: {
-					address: '',
-				},
-				minecraft_bedrock_server: {
-					address: '',
-				},
-			})
-			createdProjectId = result.id
-		} else {
-			const result = (await useBaseFetch('project', {
-				method: 'POST',
-				body: formData,
-				headers: {
-					'Content-Disposition': formData as unknown as string,
-				},
-			})) as Labrinth.Projects.v3.Project
-			createdProjectId = result.id
-			debug(createdProjectId)
-		}
+		await labrinth.projects_v3.createShopProject({
+			base: {
+				name: name.value.trim(),
+				slug: slug.value,
+				summary: description.value.trim(),
+				description: '',
+				requested_status: visibility.value.actual,
+				organization_id: owner.value !== 'self' ? owner.value : undefined,
+			},
+			shop: {
+				stall: shopType.value.stall,
+			},
+		})
 
 		modal.value?.hide()
 		await router.push(`/project/${slug.value}/settings`)
@@ -447,14 +436,14 @@ async function createProject() {
 	stopLoading()
 }
 
-async function show(event?: MouseEvent, options?: ShowOptions) {
+async function show(event?: MouseEvent) {
 	name.value = ''
 	slug.value = ''
 	description.value = ''
 	manualSlug.value = false
 	showSlugSuggestions.value = false
 	owner.value = 'self'
-	projectType.value = options?.type ?? 'project'
+	shopType.value = shopTypes.value[0]
 	await fetchOrganizations()
 	modal.value?.show(event)
 }

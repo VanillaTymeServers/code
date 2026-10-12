@@ -90,7 +90,7 @@
 						class="flex items-center gap-3 justify-between flex-wrap"
 					>
 						<div class="flex items-center gap-3 no-wrap flex-wrap">
-							<ProjectCardStats :downloads="downloads" :followers="followers" />
+							<ProjectCardStats :downloads="downloads" :followers="followers" :shop="shop" />
 						</div>
 						<ProjectCardDate v-if="date && autoDisplayDate" :type="autoDisplayDate" :date="date" />
 					</div>
@@ -136,7 +136,7 @@
 					v-if="downloads !== undefined || followers !== undefined"
 					class="flex items-center gap-3"
 				>
-					<ProjectCardStats :downloads="downloads" :followers="followers" />
+					<ProjectCardStats :downloads="downloads" :followers="followers" :shop="shop" />
 				</div>
 				<ProjectCardDate v-if="date && autoDisplayDate" :type="autoDisplayDate" :date="date" />
 			</div>
@@ -190,6 +190,7 @@
 
 <script setup lang="ts">
 import type { ProjectStatus } from '@modrinth/utils'
+import type { Labrinth } from '@modrinth/api-client'
 import dayjs from 'dayjs'
 import { computed } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'
@@ -231,6 +232,7 @@ const props = defineProps<{
 	deprioritizedTags?: string[]
 	excludeLoaders?: boolean
 	downloads?: number
+	shop?: Labrinth.Projects.v3.ShopProject | null
 	followers?: number
 	dateUpdated?: string
 	datePublished?: string

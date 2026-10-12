@@ -410,6 +410,18 @@ export function useSearch(
 		id: 'search.filter_type.compatible_dependency_project_ids',
 		defaultMessage: 'Depends on',
 	})
+	const shopTypeFilterName = defineMessage({
+		id: 'search.filter_type.shop_type',
+		defaultMessage: 'Type',
+	})
+	const shopTypeShopOption = defineMessage({
+		id: 'search.filter.shop_type.shop',
+		defaultMessage: 'Shop',
+	})
+	const shopTypeStallOption = defineMessage({
+		id: 'search.filter.shop_type.stall',
+		defaultMessage: 'Stall',
+	})
 	const includedContentFilterName = defineMessage({
 		id: 'search.filter_type.included_content',
 		defaultMessage: 'Included content',
@@ -460,6 +472,30 @@ export function useSearch(
 		}
 
 		const filterTypes: FilterType[] = [
+			{
+				id: 'shop_type',
+				formatted_name: formatMessage(shopTypeFilterName),
+				supported_project_types: ['shop'],
+				display: 'all',
+				query_param: 'st',
+				supports: ['include'],
+				searchable: false,
+				ordering: 1,
+				options: [
+					{
+						id: 'shop',
+						formatted_name: formatMessage(shopTypeShopOption),
+						value: 'shop.stall:false',
+						method: 'or',
+					},
+					{
+						id: 'stall',
+						formatted_name: formatMessage(shopTypeStallOption),
+						value: 'shop.stall:true',
+						method: 'or',
+					},
+				],
+			},
 			...Object.values(categoryFilters),
 			{
 				id: 'compatible_dependency_project_ids',

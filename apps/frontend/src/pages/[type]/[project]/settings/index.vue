@@ -229,7 +229,7 @@
 				{{ formatMessage(messages.dangerZone) }}
 			</h2>
 			<SettingsToggleCard
-				v-if="!isServerProject"
+				v-if="!isServerProject && !isShopProject"
 				v-model="monetizationEnabled"
 				:disabled="monetizationToggleDisabled"
 				:title="formatMessage(messages.monetizationTitle)"
@@ -434,6 +434,7 @@ const isForceDemonetized = computed(() => project.value.monetization_status === 
 // Server project specific refs
 const MC_SERVER_BANNER_NAME = '__mc_server_banner__'
 const isServerProject = computed(() => project.value?.minecraft_server != null)
+const isShopProject = computed(() => project.value?.shop != null)
 const projectTypeForUrl = computed(() => {
 	if (isServerProject.value) return 'server'
 	const type = project.value.project_types?.[0] ?? 'mod'
