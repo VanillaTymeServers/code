@@ -2531,7 +2531,10 @@ const navLinks = computed(() => {
 			label: formatMessage(messages.changelogTab),
 			href: withInstallContextQuery(`${projectUrl}/changelog`),
 			shown:
-				hasVersions.value && projectV3Loaded.value && projectV3.value?.minecraft_server == null,
+				hasVersions.value &&
+				projectV3Loaded.value &&
+				projectV3.value?.minecraft_server == null &&
+				projectV3.value?.shop == null,
 			onHover: loadVersions,
 		},
 		{
@@ -2540,7 +2543,8 @@ const navLinks = computed(() => {
 			shown:
 				(hasVersions.value || !!currentMember.value) &&
 				projectV3Loaded.value &&
-				projectV3.value?.minecraft_server == null,
+				projectV3.value?.minecraft_server == null &&
+				projectV3.value?.shop == null,
 			subpages: [`${projectUrl}/version/`],
 			onHover: loadVersions,
 		},
