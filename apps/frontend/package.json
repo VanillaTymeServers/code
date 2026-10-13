@@ -50,6 +50,7 @@
 		"@modrinth/utils": "workspace:*",
 		"@tanstack/vue-query": "5.101.4",
 		"@types/three": "^0.172.0",
+		"@vanillatyme/mc-items": "github:VanillaTymeServers/mc-items#v26.3.0",
 		"@vitejs/plugin-vue": "^6.0.3",
 		"@vue-email/components": "^0.0.21",
 		"@vue-email/render": "^0.0.9",

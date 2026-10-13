@@ -13,10 +13,12 @@ import {
 	TagsIcon,
 	UsersIcon,
 	VersionIcon,
+	StoreIcon,
 } from '@modrinth/assets'
 import {
 	commonMessages,
 	commonProjectSettingsMessages,
+	defineMessages,
 	injectProjectPageContext,
 	Toggle,
 	useVIntl,
@@ -45,6 +47,12 @@ const flags = useFeatureFlags()
 
 const isServerProject = computed(() => projectV3.value?.minecraft_server != null)
 
+const isShopProject = computed(() => projectV3.value?.shop != null)
+
+const messages = defineMessages({
+	shop: { id: 'project.settings.shop.title', defaultMessage: 'Shop' },
+})
+	
 const navItems = computed(() => {
 	const base = `${project.value.project_type}/${project.value.slug ? project.value.slug : project.value.id}`
 
@@ -75,6 +83,11 @@ const navItems = computed(() => {
 			label: formatMessage(commonProjectSettingsMessages.server),
 			icon: ServerIcon,
 		},
+		isShopProject.value && {
+			link: `/${base}/settings/shop`,
+			label: formatMessage(messages.shop),
+			icon: StoreIcon,
+		},
 		{
 			link: `/${base}/settings/disclosures`,
 			label: formatMessage(commonProjectSettingsMessages.disclosures),
@@ -90,7 +103,7 @@ const navItems = computed(() => {
 			label: formatMessage(commonProjectSettingsMessages.description),
 			icon: AlignLeftIcon,
 		},
-		!isServerProject.value && {
+		!isServerProject.value && !isShopProject.value && {
 			link: `/${base}/settings/versions`,
 			label: formatMessage(commonProjectSettingsMessages.versions),
 			icon: VersionIcon,
@@ -100,7 +113,7 @@ const navItems = computed(() => {
 			label: formatMessage(commonProjectSettingsMessages.permissions),
 			icon: SignatureIcon,
 		},
-		!isServerProject.value && {
+		!isServerProject.value && !isShopProject.value && {
 			link: `/${base}/settings/license`,
 			label: formatMessage(commonProjectSettingsMessages.license),
 			icon: BookTextIcon,
@@ -115,7 +128,7 @@ const navItems = computed(() => {
 			label: formatMessage(commonProjectSettingsMessages.gallery),
 			icon: ImageIcon,
 		},
-		{
+		!isShopProject.value && {
 			link: `/${base}/settings/links`,
 			label: formatMessage(commonProjectSettingsMessages.links),
 			icon: LinkIcon,

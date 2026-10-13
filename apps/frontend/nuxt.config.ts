@@ -11,6 +11,9 @@ const STAGING_SHARED_INSTANCES_API_URL = 'https://staging-shared-instances.modri
 const API_CLIENT_SOURCE = fileURLToPath(
 	new URL('../../packages/api-client/src/index.ts', import.meta.url),
 )
+const MC_ITEM_ICONS_DIR = fileURLToPath(
+	new URL('./node_modules/@vanillatyme/mc-items/icons', import.meta.url),
+)
 
 const preloadedFonts = [
 	'inter/Inter-Regular.woff2',
@@ -247,6 +250,13 @@ export default defineNuxtConfig({
 		},
 	},
 	nitro: {
+		publicAssets: [
+			{
+				dir: MC_ITEM_ICONS_DIR,
+				baseURL: '/items',
+				maxAge: 60 * 60 * 24 * 7,
+			},
+		],
 		rollupConfig: {
 			// @ts-expect-error because of rolldown-vite - completely fine though
 			plugins: [serverSidedVue()],
