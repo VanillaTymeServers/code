@@ -87,6 +87,7 @@ import _CircleAlertIcon from './icons/circle-alert.svg?component'
 import _CircleArrowRightIcon from './icons/circle-arrow-right.svg?component'
 import _CircleDashedIcon from './icons/circle-dashed.svg?component'
 import _CircleDollarSignIcon from './icons/circle-dollar-sign.svg?component'
+import _CircleHelpIcon from './icons/circle-help.svg?component'
 import _CircleSlashIcon from './icons/circle-slash.svg?component'
 import _CircleUserIcon from './icons/circle-user.svg?component'
 import _CircuitBoardIcon from './icons/circuit-board.svg?component'
@@ -146,6 +147,7 @@ import _FolderUpIcon from './icons/folder-up.svg?component'
 import _GameIcon from './icons/game.svg?component'
 import _GapIcon from './icons/gap.svg?component'
 import _GaugeIcon from './icons/gauge.svg?component'
+import _GavelIcon from './icons/gavel.svg?component'
 import _GenericListIcon from './icons/generic-list.svg?component'
 import _GiftIcon from './icons/gift.svg?component'
 import _GitForkIcon from './icons/git-fork.svg?component'
@@ -164,6 +166,7 @@ import _Heading3Icon from './icons/heading-3.svg?component'
 import _HeartIcon from './icons/heart.svg?component'
 import _HeartHandshakeIcon from './icons/heart-handshake.svg?component'
 import _HeartMinusIcon from './icons/heart-minus.svg?component'
+import _HeartPulseIcon from './icons/heart-pulse.svg?component'
 import _HighlighterIcon from './icons/highlighter.svg?component'
 import _HistoryIcon from './icons/history.svg?component'
 import _HomeIcon from './icons/home.svg?component'
@@ -245,6 +248,7 @@ import _PinIcon from './icons/pin.svg?component'
 import _PlayIcon from './icons/play.svg?component'
 import _PlugIcon from './icons/plug.svg?component'
 import _PlusIcon from './icons/plus.svg?component'
+import _PointerIcon from './icons/pointer.svg?component'
 import _PowerIcon from './icons/power.svg?component'
 import _PowerOffIcon from './icons/power-off.svg?component'
 import _RadioButtonIcon from './icons/radio-button.svg?component'
@@ -264,6 +268,7 @@ import _RssIcon from './icons/rss.svg?component'
 import _SaveIcon from './icons/save.svg?component'
 import _ScaleIcon from './icons/scale.svg?component'
 import _ScanEyeIcon from './icons/scan-eye.svg?component'
+import _ScrollTextIcon from './icons/scroll-text.svg?component'
 import _SearchIcon from './icons/search.svg?component'
 import _SendIcon from './icons/send.svg?component'
 import _ServerIcon from './icons/server.svg?component'
@@ -278,6 +283,7 @@ import _ShieldAlertIcon from './icons/shield-alert.svg?component'
 import _ShieldBanIcon from './icons/shield-ban.svg?component'
 import _ShieldCheckIcon from './icons/shield-check.svg?component'
 import _ShirtIcon from './icons/shirt.svg?component'
+import _ShoppingCartIcon from './icons/shopping-cart.svg?component'
 import _ShredderIcon from './icons/shredder.svg?component'
 import _SignalIcon from './icons/signal.svg?component'
 import _SignatureIcon from './icons/signature.svg?component'
@@ -457,9 +463,11 @@ import _TextQuoteIcon from './icons/text-quote.svg?component'
 import _TimerIcon from './icons/timer.svg?component'
 import _ToggleLeftIcon from './icons/toggle-left.svg?component'
 import _ToggleRightIcon from './icons/toggle-right.svg?component'
+import _TornadoIcon from './icons/tornado.svg?component'
 import _TransferIcon from './icons/transfer.svg?component'
 import _TrashIcon from './icons/trash.svg?component'
 import _TrashExclamationIcon from './icons/trash-exclamation.svg?component'
+import _TreePalmIcon from './icons/tree-palm.svg?component'
 import _TrendingDownIcon from './icons/trending-down.svg?component'
 import _TrendingUpIcon from './icons/trending-up.svg?component'
 import _TriangleAlertIcon from './icons/triangle-alert.svg?component'
@@ -577,6 +585,7 @@ export const CircleAlertIcon = _CircleAlertIcon
 export const CircleArrowRightIcon = _CircleArrowRightIcon
 export const CircleDashedIcon = _CircleDashedIcon
 export const CircleDollarSignIcon = _CircleDollarSignIcon
+export const CircleHelpIcon = _CircleHelpIcon
 export const CircleSlashIcon = _CircleSlashIcon
 export const CircleUserIcon = _CircleUserIcon
 export const CircuitBoardIcon = _CircuitBoardIcon
@@ -636,6 +645,7 @@ export const FolderUpIcon = _FolderUpIcon
 export const GameIcon = _GameIcon
 export const GapIcon = _GapIcon
 export const GaugeIcon = _GaugeIcon
+export const GavelIcon = _GavelIcon
 export const GenericListIcon = _GenericListIcon
 export const GiftIcon = _GiftIcon
 export const GitForkIcon = _GitForkIcon
@@ -654,6 +664,7 @@ export const Heading3Icon = _Heading3Icon
 export const HeartIcon = _HeartIcon
 export const HeartHandshakeIcon = _HeartHandshakeIcon
 export const HeartMinusIcon = _HeartMinusIcon
+export const HeartPulseIcon = _HeartPulseIcon
 export const HighlighterIcon = _HighlighterIcon
 export const HistoryIcon = _HistoryIcon
 export const HomeIcon = _HomeIcon
@@ -735,6 +746,7 @@ export const PinIcon = _PinIcon
 export const PlayIcon = _PlayIcon
 export const PlugIcon = _PlugIcon
 export const PlusIcon = _PlusIcon
+export const PointerIcon = _PointerIcon
 export const PowerIcon = _PowerIcon
 export const PowerOffIcon = _PowerOffIcon
 export const RadioButtonIcon = _RadioButtonIcon
@@ -754,6 +766,7 @@ export const RssIcon = _RssIcon
 export const SaveIcon = _SaveIcon
 export const ScaleIcon = _ScaleIcon
 export const ScanEyeIcon = _ScanEyeIcon
+export const ScrollTextIcon = _ScrollTextIcon
 export const SearchIcon = _SearchIcon
 export const SendIcon = _SendIcon
 export const ServerIcon = _ServerIcon
@@ -768,6 +781,7 @@ export const ShieldAlertIcon = _ShieldAlertIcon
 export const ShieldBanIcon = _ShieldBanIcon
 export const ShieldCheckIcon = _ShieldCheckIcon
 export const ShirtIcon = _ShirtIcon
+export const ShoppingCartIcon = _ShoppingCartIcon
 export const ShredderIcon = _ShredderIcon
 export const SignalIcon = _SignalIcon
 export const SignatureIcon = _SignatureIcon
@@ -947,9 +961,11 @@ export const TextQuoteIcon = _TextQuoteIcon
 export const TimerIcon = _TimerIcon
 export const ToggleLeftIcon = _ToggleLeftIcon
 export const ToggleRightIcon = _ToggleRightIcon
+export const TornadoIcon = _TornadoIcon
 export const TransferIcon = _TransferIcon
 export const TrashIcon = _TrashIcon
 export const TrashExclamationIcon = _TrashExclamationIcon
+export const TreePalmIcon = _TreePalmIcon
 export const TrendingDownIcon = _TrendingDownIcon
 export const TrendingUpIcon = _TrendingUpIcon
 export const TriangleAlertIcon = _TriangleAlertIcon

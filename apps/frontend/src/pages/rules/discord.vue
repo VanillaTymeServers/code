@@ -5,46 +5,46 @@
 				:items="[
 					{
 						type: 'heading',
-						label: 'On this page',
+						label: formatMessage(messages.onThisPage),
 					},
 					{
-						label: 'Scope',
+						label: formatMessage(messages.scopeTitle),
 						action: () => scrollToSection('scope'),
 					},
 					{
-						label: 'Respect & Conduct',
+						label: formatMessage(messages.respectTitle),
 						action: () => scrollToSection('respect'),
 					},
 					{
-						label: 'Drama & Disputes',
+						label: formatMessage(messages.dramaTitle),
 						action: () => scrollToSection('drama'),
 					},
 					{
-						label: 'Discrimination',
+						label: formatMessage(messages.discriminationTitle),
 						action: () => scrollToSection('discrimination'),
 					},
 					{
-						label: 'Illegal Activity',
+						label: formatMessage(messages.illegalTitle),
 						action: () => scrollToSection('illegal'),
 					},
 					{
-						label: 'Spam & Abuse',
+						label: formatMessage(messages.spamTitle),
 						action: () => scrollToSection('spam'),
 					},
 					{
-						label: 'Harassment & Threats',
+						label: formatMessage(messages.harassmentTitle),
 						action: () => scrollToSection('harassment'),
 					},
 					{
-						label: 'Advertising',
+						label: formatMessage(messages.advertisingNavLabel),
 						action: () => scrollToSection('advertising'),
 					},
 					{
-						label: 'Ban Evasion',
+						label: formatMessage(messages.banEvasionTitle),
 						action: () => scrollToSection('ban-evasion'),
 					},
 					{
-						label: 'Disclaimer',
+						label: formatMessage(messages.disclaimerTitle),
 						action: () => scrollToSection('disclaimer'),
 					},
 				]"
@@ -65,28 +65,32 @@
 				<template #title>
 					<div class="flex w-full items-center gap-4">
 						<div class="icon-section">
-							<IconWorld />
+							<WorldIcon />
 						</div>
 						<div class="title-wrap-section flex min-w-0 flex-col items-start justify-start">
 							<span
 								class="title-section mb-0.5 text-lg font-bold"
 								style="color: var(--landing-color-heading)"
 							>
-								Scope
+								{{ formatMessage(messages.scopeTitle) }}
 							</span>
-							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)"
-								>These rules apply server-wide</span
-							>
+							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)">
+								{{ formatMessage(messages.scopeSubtitle) }}
+							</span>
 						</div>
 					</div>
 				</template>
-				<MessageBanner class="mx-4">
-					<strong class="text-brand">Change your nickname to your Minecraft in-game name.</strong>
-					This prevents confusion and keeps the community organized.
-				</MessageBanner>
+				<Admonition type="info" class="mx-4 mb-3">
+					<IntlFormatted :message-id="messages.scopeNickname">
+						<template #strong="{ children }">
+							<strong class="text-brand">
+								<component :is="() => normalizeChildren(children)" />
+							</strong>
+						</template>
+					</IntlFormatted>
+				</Admonition>
 				<div class="mx-4">
-					These guidelines apply to all usernames, nicknames, avatars, statuses, and emotes used
-					within the Vanilla Tyme Discord server.
+					{{ formatMessage(messages.scopeApplies) }}
 				</div>
 			</Accordion>
 			<Accordion
@@ -101,54 +105,47 @@
 				<template #title>
 					<div class="flex w-full items-center gap-4">
 						<div class="icon-section">
-							<IconHeart />
+							<HeartIcon />
 						</div>
 						<div class="title-wrap-section flex min-w-0 flex-col items-start justify-start">
 							<span
 								class="title-section mb-0.5 text-lg font-bold"
 								style="color: var(--landing-color-heading)"
 							>
-								Respect & Conduct
+								{{ formatMessage(messages.respectTitle) }}
 							</span>
 							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)">
-								Be thoughtful, civil, and inclusive
+								{{ formatMessage(messages.respectSubtitle) }}
 							</span>
 						</div>
 					</div>
 				</template>
 				<ol class="mx-4">
-					<li>
-						Everyone has the right to express their opinion — but remain thoughtful and respectful.
-						Do not post anything offensive, abusive, or that constitutes hate speech of any kind.
-					</li>
-					<li>
-						Excessive offensive language is prohibited. Cursing is allowed, but keep it tasteful.
-					</li>
+					<li>{{ formatMessage(messages.respectOpinions) }}</li>
+					<li>{{ formatMessage(messages.respectLanguage) }}</li>
 				</ol>
-				<MessageBanner class="mx-4" message-type="alert">
-					<strong class="text-orange">Prohibited topics</strong> — heated/hot-button discussions or
-					posting images/GIFs of the following is not allowed:
+				<Admonition type="warning" class="mx-4 mb-3">
+					<IntlFormatted :message-id="messages.respectProhibitedTopics">
+						<template #strong="{ children }">
+							<strong class="text-orange">
+								<component :is="() => normalizeChildren(children)" />
+							</strong>
+						</template>
+					</IntlFormatted>
 					<div class="topic-tags">
-						<span class="topic-tag">Religion</span>
-						<span class="topic-tag">Politics</span>
-						<span
-							v-tooltip="
-								'Includes adult themed things, general obscenities or sexually explicit images'
-							"
-							class="topic-tag"
-							>NSFW <IconInfoCircle
+						<span class="topic-tag">{{ formatMessage(messages.topicReligion) }}</span>
+						<span class="topic-tag">{{ formatMessage(messages.topicPolitics) }}</span>
+						<span v-tooltip="formatMessage(messages.topicNsfwTooltip)" class="topic-tag"
+							>{{ formatMessage(messages.topicNsfw) }} <InfoIcon
 						/></span>
-						<span class="topic-tag">Gore / Self-harm</span>
-						<span class="topic-tag">Open wounds / Blood</span>
-						<span class="topic-tag">Any Extremism</span>
-						<span class="topic-tag">Animal Cruelty</span>
-						<span class="topic-tag">Anti-LGBTQIA+</span>
+						<span class="topic-tag">{{ formatMessage(messages.topicGore) }}</span>
+						<span class="topic-tag">{{ formatMessage(messages.topicBlood) }}</span>
+						<span class="topic-tag">{{ formatMessage(messages.topicExtremism) }}</span>
+						<span class="topic-tag">{{ formatMessage(messages.topicAnimalCruelty) }}</span>
+						<span class="topic-tag">{{ formatMessage(messages.topicAntiLgbtqia) }}</span>
 					</div>
-					<span
-						>Discussion of these topics will be immediately removed and administrative action will
-						be taken against all participants.</span
-					>
-				</MessageBanner>
+					<span>{{ formatMessage(messages.respectTopicsRemoved) }}</span>
+				</Admonition>
 			</Accordion>
 			<Accordion
 				id="drama"
@@ -162,31 +159,25 @@
 				<template #title>
 					<div class="flex w-full items-center gap-4">
 						<div class="icon-section">
-							<IconMessageReport />
+							<MessageSquareWarningIcon />
 						</div>
 						<div class="title-wrap-section flex min-w-0 flex-col items-start justify-start">
 							<span
 								class="title-section mb-0.5 text-lg font-bold"
 								style="color: var(--landing-color-heading)"
 							>
-								Drama & Disputes
+								{{ formatMessage(messages.dramaTitle) }}
 							</span>
 							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)">
-								Handle conflicts privately, not in public channels
+								{{ formatMessage(messages.dramaSubtitle) }}
 							</span>
 						</div>
 					</div>
 				</template>
 				<ol class="mx-4">
-					<li>
-						Be kind and strive to keep negativity and drama out of all server chat channels,
-						including in-game.
-					</li>
-					<li>
-						All disputes must be handled privately. If you are caught arguing disrespectfully with
-						another person, you may face consequences for inciting drama..
-					</li>
-					<li>Toxicity and animosity in public chat channels will not be tolerated.</li>
+					<li>{{ formatMessage(messages.dramaBeKind) }}</li>
+					<li>{{ formatMessage(messages.dramaPrivateDisputes) }}</li>
+					<li>{{ formatMessage(messages.dramaNoToxicity) }}</li>
 				</ol>
 			</Accordion>
 			<Accordion
@@ -201,31 +192,28 @@
 				<template #title>
 					<div class="flex w-full items-center gap-4">
 						<div class="icon-section">
-							<IconBan />
+							<BanIcon />
 						</div>
 						<div class="title-wrap-section flex min-w-0 flex-col items-start justify-start">
 							<span
 								class="title-section mb-0.5 text-lg font-bold"
 								style="color: var(--landing-color-heading)"
 							>
-								Discrimination
+								{{ formatMessage(messages.discriminationTitle) }}
 							</span>
 							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)">
-								No "-isms" of any kind
+								{{ formatMessage(messages.discriminationSubtitle) }}
 							</span>
 						</div>
 					</div>
 				</template>
 				<div class="mx-4">
-					<span
-						>We do not condone or support any acts of "-isms." If you are found perpetrating any of
-						these, you will face administrative action.</span
-					>
+					<span>{{ formatMessage(messages.discriminationNotCondoned) }}</span>
 					<div class="topic-tags">
-						<span class="topic-tag">Racism</span>
-						<span class="topic-tag">Ableism</span>
-						<span class="topic-tag">Sexism</span>
-						<span class="topic-tag">Ageism</span>
+						<span class="topic-tag">{{ formatMessage(messages.ismRacism) }}</span>
+						<span class="topic-tag">{{ formatMessage(messages.ismAbleism) }}</span>
+						<span class="topic-tag">{{ formatMessage(messages.ismSexism) }}</span>
+						<span class="topic-tag">{{ formatMessage(messages.ismAgeism) }}</span>
 					</div>
 				</div>
 			</Accordion>
@@ -241,28 +229,30 @@
 				<template #title>
 					<div class="flex w-full items-center gap-4">
 						<div class="icon-section">
-							<IconPrison />
+							<ShieldBanIcon />
 						</div>
 						<div class="title-wrap-section flex min-w-0 flex-col items-start justify-start">
 							<span
 								class="title-section mb-0.5 text-lg font-bold"
 								style="color: var(--landing-color-heading)"
 							>
-								Illegal Activity
+								{{ formatMessage(messages.illegalTitle) }}
 							</span>
 							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)">
-								Promotion of illegal acts may result in removal from the platform.
+								{{ formatMessage(messages.illegalSubtitle) }}
 							</span>
 						</div>
 					</div>
 				</template>
-				<MessageBanner class="mx-4" message-type="danger">
-					<strong class="text-red"
-						>Promotion, encouragement, or engagement in any illegal behavior</strong
-					>
-					is unlawful and prohibited. Topics will be reported to Discord'a Trust & Safety team. You
-					may be removed from the platform and potentially reported to local law enforcement.
-				</MessageBanner>
+				<Admonition type="critical" class="mx-4 mb-3">
+					<IntlFormatted :message-id="messages.illegalBehavior">
+						<template #strong="{ children }">
+							<strong class="text-red">
+								<component :is="() => normalizeChildren(children)" />
+							</strong>
+						</template>
+					</IntlFormatted>
+				</Admonition>
 			</Accordion>
 			<Accordion
 				id="spam"
@@ -276,30 +266,24 @@
 				<template #title>
 					<div class="flex w-full items-center gap-4">
 						<div class="icon-section">
-							<IconBellOff />
+							<BellOffIcon />
 						</div>
 						<div class="title-wrap-section flex min-w-0 flex-col items-start justify-start">
 							<span
 								class="title-section mb-0.5 text-lg font-bold"
 								style="color: var(--landing-color-heading)"
 							>
-								Spam & Abuse
+								{{ formatMessage(messages.spamTitle) }}
 							</span>
 							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)">
-								Don't flood channels or abuse mentions
+								{{ formatMessage(messages.spamSubtitle) }}
 							</span>
 						</div>
 					</div>
 				</template>
 				<ol class="mx-4">
-					<li>
-						Spamming messages, mass-pinging, spam-pinging staff, and abuse of the mentions system is
-						prohibited.
-					</li>
-					<li>
-						Abuse and disrespect towards other players and staff members is prohibited. If you are
-						caught doing these things, you may receive a warning.
-					</li>
+					<li>{{ formatMessage(messages.spamMentions) }}</li>
+					<li>{{ formatMessage(messages.spamDisrespect) }}</li>
 				</ol>
 			</Accordion>
 			<Accordion
@@ -314,33 +298,36 @@
 				<template #title>
 					<div class="flex w-full items-center gap-4">
 						<div class="icon-section">
-							<IconAlertTriangle />
+							<TriangleAlertIcon />
 						</div>
 						<div class="title-wrap-section flex min-w-0 flex-col items-start justify-start">
 							<span
 								class="title-section mb-0.5 text-lg font-bold"
 								style="color: var(--landing-color-heading)"
 							>
-								Harassment & Threats
+								{{ formatMessage(messages.harassmentTitle) }}
 							</span>
 							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)">
-								Doxxing, threats, and impersonations
+								{{ formatMessage(messages.harassmentSubtitle) }}
 							</span>
 						</div>
 					</div>
 				</template>
-				<MessageBanner class="mx-4" message-type="danger">
-					<strong class="text-red">
-						If you are caught doing any of the following, you will be banned immediately
-					</strong>
-					and reported directly to Discord support.
-				</MessageBanner>
+				<Admonition type="critical" class="mx-4 mb-3">
+					<IntlFormatted :message-id="messages.harassmentImmediateBan">
+						<template #strong="{ children }">
+							<strong class="text-red">
+								<component :is="() => normalizeChildren(children)" />
+							</strong>
+						</template>
+					</IntlFormatted>
+				</Admonition>
 				<ul class="mx-4">
-					<li>Doxxing (sharing another person's private or personal information)</li>
-					<li>Harassment of any kind</li>
-					<li>Making threats against other members</li>
-					<li>Impersonating another player or staff member</li>
-					<li>Soliciting private information about another person</li>
+					<li>{{ formatMessage(messages.harassmentDoxxing) }}</li>
+					<li>{{ formatMessage(messages.harassmentAnyKind) }}</li>
+					<li>{{ formatMessage(messages.harassmentThreats) }}</li>
+					<li>{{ formatMessage(messages.harassmentImpersonation) }}</li>
+					<li>{{ formatMessage(messages.harassmentSoliciting) }}</li>
 				</ul>
 			</Accordion>
 			<Accordion
@@ -355,33 +342,30 @@
 				<template #title>
 					<div class="flex w-full items-center gap-4">
 						<div class="icon-section">
-							<IconVolume3 />
+							<Volume2Icon />
 						</div>
 						<div class="title-wrap-section flex min-w-0 flex-col items-start justify-start">
 							<span
 								class="title-section mb-0.5 text-lg font-bold"
 								style="color: var(--landing-color-heading)"
 							>
-								Advertising & Promotions
+								{{ formatMessage(messages.advertisingTitle) }}
 							</span>
 							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)">
-								No unsolicited promotion in any channel
+								{{ formatMessage(messages.advertisingSubtitle) }}
 							</span>
 						</div>
 					</div>
 				</template>
 				<ol class="mx-4">
-					<li>
-						Advertisement of other Discord servers, Minecraft servers, or self-promotion of any
-						social media in any chat channel is prohibited.
-					</li>
-					<li>The only exception is content directly related to Vanilla Tyme Servers.</li>
-					<li>Vandalization of the server in any way will result in administrative action.</li>
+					<li>{{ formatMessage(messages.advertisingProhibited) }}</li>
+					<li>{{ formatMessage(messages.advertisingException) }}</li>
+					<li>{{ formatMessage(messages.advertisingVandalization) }}</li>
 				</ol>
 			</Accordion>
 			<Accordion
 				id="ban-evasion"
-				:ref="accordionRefs.ban_evasion"
+				:ref="accordionRefs['ban-evasion']"
 				button-class="button-animation flex flex-col gap-1 px-6 py-5 w-full bg-transparent cursor-pointer border-none"
 				title-wrapper-class="flex flex-col gap-2 justify-start items-start"
 				content-class="mb-4 mx-3"
@@ -391,27 +375,24 @@
 				<template #title>
 					<div class="flex w-full items-center gap-4">
 						<div class="icon-section">
-							<IconUserX />
+							<UserXIcon />
 						</div>
 						<div class="title-wrap-section flex min-w-0 flex-col items-start justify-start">
 							<span
 								class="title-section mb-0.5 text-lg font-bold"
 								style="color: var(--landing-color-heading)"
 							>
-								Ban Evasion
+								{{ formatMessage(messages.banEvasionTitle) }}
 							</span>
 							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)">
-								Alt accounts and assistance held accountable
+								{{ formatMessage(messages.banEvasionSubtitle) }}
 							</span>
 						</div>
 					</div>
 				</template>
 				<ol class="mx-4">
-					<li>
-						If you are caught evading a ban in-game or through Discord, you will be banned on any
-						alternative accounts as well.
-					</li>
-					<li>Anyone assisting a ban evasion will also be held accountable.</li>
+					<li>{{ formatMessage(messages.banEvasionAltAccounts) }}</li>
+					<li>{{ formatMessage(messages.banEvasionAssisting) }}</li>
 				</ol>
 			</Accordion>
 			<Accordion
@@ -426,41 +407,31 @@
 				<template #title>
 					<div class="flex w-full items-center gap-4">
 						<div class="icon-section">
-							<IconHandFinger />
+							<PointerIcon />
 						</div>
 						<div class="title-wrap-section flex min-w-0 flex-col items-start justify-start">
 							<span
 								class="title-section mb-0.5 text-lg font-bold"
 								style="color: var(--landing-color-heading)"
 							>
-								Disclaimer
+								{{ formatMessage(messages.disclaimerTitle) }}
 							</span>
 							<span class="subtitle-section text-sm" style="color: var(--landing-color-subheading)">
-								Liability notice
+								{{ formatMessage(messages.disclaimerSubtitle) }}
 							</span>
 						</div>
 					</div>
 				</template>
 				<div class="mx-4 flex flex-col gap-4">
-					<span>
-						By participating in the official Vanilla Tyme Servers forum, Minecraft servers, or
-						Discord, you voluntarily agree that the staff team is not liable for anything that
-						happens to you, your computer, or any personal effects as a direct or indirect result of
-						using the aforementioned services.
-					</span>
-					<span>
-						We cannot be held liable for what other players say or do, but if someone breaches the
-						basic terms of service or server rules, please send a screenshot with a time and date.
-						We will investigate and take administrative action where necessary.
-					</span>
+					<span>{{ formatMessage(messages.disclaimerParticipation) }}</span>
+					<span>{{ formatMessage(messages.disclaimerOtherPlayers) }}</span>
 				</div>
 			</Accordion>
 		</div>
 		<div class="rules-cta mt-10">
-			<h2 class="rules-cta__title">Need to report something?</h2>
+			<h2 class="rules-cta__title">{{ formatMessage(messages.ctaTitle) }}</h2>
 			<p class="rules-cta__subtitle">
-				Open a support ticket in Discord or reach out to a staff member directly. We take all
-				reports seriously.
+				{{ formatMessage(messages.ctaDescription) }}
 			</p>
 			<ButtonLink
 				type="colored-text"
@@ -470,7 +441,7 @@
 				target="_blank"
 				rel="noopener"
 			>
-				Open a ticket
+				{{ formatMessage(messages.ctaButton) }}
 				<ChevronRightIcon aria-hidden="true" />
 			</ButtonLink>
 		</div>
@@ -485,25 +456,304 @@ import {
 	HeartIcon,
 	InfoIcon,
 	MessageSquareWarningIcon,
+	PointerIcon,
 	ShieldBanIcon,
 	TriangleAlertIcon,
+	UserXIcon,
 	Volume2Icon,
 	WorldIcon,
-	XIcon,
 } from '@modrinth/assets'
-import { Accordion, ButtonLink } from '@modrinth/ui'
+import {
+	Accordion,
+	Admonition,
+	ButtonLink,
+	defineMessages,
+	IntlFormatted,
+	normalizeChildren,
+	useVIntl,
+} from '@modrinth/ui'
 
-import MessageBanner from '~/components/ui/MessageBanner.vue'
 import NavStack from '~/components/ui/NavStack.vue'
 
-definePageMeta({
-	hero: {
-		pre: 'Discord',
-		accent: 'Guidelines',
-		subtitle:
-			'Applies to all channels, usernames, nicknames, avatars, statuses, and emotes across the Vanilla Tyme Discord server.',
+const { formatMessage } = useVIntl()
+
+const messages = defineMessages({
+	onThisPage: {
+		id: 'rules.on-this-page',
+		defaultMessage: 'On this page',
+	},
+	scopeTitle: {
+		id: 'rules.discord.scope.title',
+		defaultMessage: 'Scope',
+	},
+	scopeSubtitle: {
+		id: 'rules.discord.scope.subtitle',
+		defaultMessage: 'These rules apply server-wide',
+	},
+	scopeNickname: {
+		id: 'rules.discord.scope.nickname',
+		defaultMessage:
+			'<strong>Change your nickname to your Minecraft in-game name.</strong> This prevents confusion and keeps the community organized.',
+	},
+	scopeApplies: {
+		id: 'rules.discord.scope.applies',
+		defaultMessage:
+			'These guidelines apply to all usernames, nicknames, avatars, statuses, and emotes used within the Vanilla Tyme Discord server.',
+	},
+	respectTitle: {
+		id: 'rules.discord.respect.title',
+		defaultMessage: 'Respect & Conduct',
+	},
+	respectSubtitle: {
+		id: 'rules.discord.respect.subtitle',
+		defaultMessage: 'Be thoughtful, civil, and inclusive',
+	},
+	respectOpinions: {
+		id: 'rules.discord.respect.opinions',
+		defaultMessage:
+			'Everyone has the right to express their opinion — but remain thoughtful and respectful. Do not post anything offensive, abusive, or that constitutes hate speech of any kind.',
+	},
+	respectLanguage: {
+		id: 'rules.discord.respect.language',
+		defaultMessage:
+			'Excessive offensive language is prohibited. Cursing is allowed, but keep it tasteful.',
+	},
+	respectProhibitedTopics: {
+		id: 'rules.discord.respect.prohibited-topics',
+		defaultMessage:
+			'<strong>Prohibited topics</strong> — heated/hot-button discussions or posting images/GIFs of the following is not allowed:',
+	},
+	topicReligion: {
+		id: 'rules.discord.respect.topic.religion',
+		defaultMessage: 'Religion',
+	},
+	topicPolitics: {
+		id: 'rules.discord.respect.topic.politics',
+		defaultMessage: 'Politics',
+	},
+	topicNsfw: {
+		id: 'rules.discord.respect.topic.nsfw',
+		defaultMessage: 'NSFW',
+	},
+	topicNsfwTooltip: {
+		id: 'rules.discord.respect.topic.nsfw-tooltip',
+		defaultMessage: 'Includes adult themed things, general obscenities or sexually explicit images',
+	},
+	topicGore: {
+		id: 'rules.discord.respect.topic.gore',
+		defaultMessage: 'Gore / Self-harm',
+	},
+	topicBlood: {
+		id: 'rules.discord.respect.topic.blood',
+		defaultMessage: 'Open wounds / Blood',
+	},
+	topicExtremism: {
+		id: 'rules.discord.respect.topic.extremism',
+		defaultMessage: 'Any Extremism',
+	},
+	topicAnimalCruelty: {
+		id: 'rules.discord.respect.topic.animal-cruelty',
+		defaultMessage: 'Animal Cruelty',
+	},
+	topicAntiLgbtqia: {
+		id: 'rules.discord.respect.topic.anti-lgbtqia',
+		defaultMessage: 'Anti-LGBTQIA+',
+	},
+	respectTopicsRemoved: {
+		id: 'rules.discord.respect.topics-removed',
+		defaultMessage:
+			'Discussion of these topics will be immediately removed and administrative action will be taken against all participants.',
+	},
+	dramaTitle: {
+		id: 'rules.discord.drama.title',
+		defaultMessage: 'Drama & Disputes',
+	},
+	dramaSubtitle: {
+		id: 'rules.discord.drama.subtitle',
+		defaultMessage: 'Handle conflicts privately, not in public channels',
+	},
+	dramaBeKind: {
+		id: 'rules.discord.drama.be-kind',
+		defaultMessage:
+			'Be kind and strive to keep negativity and drama out of all server chat channels, including in-game.',
+	},
+	dramaPrivateDisputes: {
+		id: 'rules.discord.drama.private-disputes',
+		defaultMessage:
+			'All disputes must be handled privately. If you are caught arguing disrespectfully with another person, you may face consequences for inciting drama..',
+	},
+	dramaNoToxicity: {
+		id: 'rules.discord.drama.no-toxicity',
+		defaultMessage: 'Toxicity and animosity in public chat channels will not be tolerated.',
+	},
+	discriminationTitle: {
+		id: 'rules.discord.discrimination.title',
+		defaultMessage: 'Discrimination',
+	},
+	discriminationSubtitle: {
+		id: 'rules.discord.discrimination.subtitle',
+		defaultMessage: 'No "-isms" of any kind',
+	},
+	discriminationNotCondoned: {
+		id: 'rules.discord.discrimination.not-condoned',
+		defaultMessage:
+			'We do not condone or support any acts of "-isms." If you are found perpetrating any of these, you will face administrative action.',
+	},
+	ismRacism: {
+		id: 'rules.discord.discrimination.racism',
+		defaultMessage: 'Racism',
+	},
+	ismAbleism: {
+		id: 'rules.discord.discrimination.ableism',
+		defaultMessage: 'Ableism',
+	},
+	ismSexism: {
+		id: 'rules.discord.discrimination.sexism',
+		defaultMessage: 'Sexism',
+	},
+	ismAgeism: {
+		id: 'rules.discord.discrimination.ageism',
+		defaultMessage: 'Ageism',
+	},
+	illegalTitle: {
+		id: 'rules.discord.illegal.title',
+		defaultMessage: 'Illegal Activity',
+	},
+	illegalSubtitle: {
+		id: 'rules.discord.illegal.subtitle',
+		defaultMessage: 'Promotion of illegal acts may result in removal from the platform.',
+	},
+	illegalBehavior: {
+		id: 'rules.discord.illegal.behavior',
+		defaultMessage:
+			"<strong>Promotion, encouragement, or engagement in any illegal behavior</strong> is unlawful and prohibited. Topics will be reported to Discord'a Trust & Safety team. You may be removed from the platform and potentially reported to local law enforcement.",
+	},
+	spamTitle: {
+		id: 'rules.discord.spam.title',
+		defaultMessage: 'Spam & Abuse',
+	},
+	spamSubtitle: {
+		id: 'rules.discord.spam.subtitle',
+		defaultMessage: "Don't flood channels or abuse mentions",
+	},
+	spamMentions: {
+		id: 'rules.discord.spam.mentions',
+		defaultMessage:
+			'Spamming messages, mass-pinging, spam-pinging staff, and abuse of the mentions system is prohibited.',
+	},
+	spamDisrespect: {
+		id: 'rules.discord.spam.disrespect',
+		defaultMessage:
+			'Abuse and disrespect towards other players and staff members is prohibited. If you are caught doing these things, you may receive a warning.',
+	},
+	harassmentTitle: {
+		id: 'rules.discord.harassment.title',
+		defaultMessage: 'Harassment & Threats',
+	},
+	harassmentSubtitle: {
+		id: 'rules.discord.harassment.subtitle',
+		defaultMessage: 'Doxxing, threats, and impersonations',
+	},
+	harassmentImmediateBan: {
+		id: 'rules.discord.harassment.immediate-ban',
+		defaultMessage:
+			'<strong>If you are caught doing any of the following, you will be banned immediately</strong> and reported directly to Discord support.',
+	},
+	harassmentDoxxing: {
+		id: 'rules.discord.harassment.doxxing',
+		defaultMessage: "Doxxing (sharing another person's private or personal information)",
+	},
+	harassmentAnyKind: {
+		id: 'rules.discord.harassment.any-kind',
+		defaultMessage: 'Harassment of any kind',
+	},
+	harassmentThreats: {
+		id: 'rules.discord.harassment.threats',
+		defaultMessage: 'Making threats against other members',
+	},
+	harassmentImpersonation: {
+		id: 'rules.discord.harassment.impersonation',
+		defaultMessage: 'Impersonating another player or staff member',
+	},
+	harassmentSoliciting: {
+		id: 'rules.discord.harassment.soliciting',
+		defaultMessage: 'Soliciting private information about another person',
+	},
+	advertisingNavLabel: {
+		id: 'rules.discord.advertising.nav-label',
+		defaultMessage: 'Advertising',
+	},
+	advertisingTitle: {
+		id: 'rules.discord.advertising.title',
+		defaultMessage: 'Advertising & Promotions',
+	},
+	advertisingSubtitle: {
+		id: 'rules.discord.advertising.subtitle',
+		defaultMessage: 'No unsolicited promotion in any channel',
+	},
+	advertisingProhibited: {
+		id: 'rules.discord.advertising.prohibited',
+		defaultMessage:
+			'Advertisement of other Discord servers, Minecraft servers, or self-promotion of any social media in any chat channel is prohibited.',
+	},
+	advertisingException: {
+		id: 'rules.discord.advertising.exception',
+		defaultMessage: 'The only exception is content directly related to Vanilla Tyme Servers.',
+	},
+	advertisingVandalization: {
+		id: 'rules.discord.advertising.vandalization',
+		defaultMessage: 'Vandalization of the server in any way will result in administrative action.',
+	},
+	banEvasionTitle: {
+		id: 'rules.discord.ban-evasion.title',
+		defaultMessage: 'Ban Evasion',
+	},
+	banEvasionSubtitle: {
+		id: 'rules.discord.ban-evasion.subtitle',
+		defaultMessage: 'Alt accounts and assistance held accountable',
+	},
+	banEvasionAltAccounts: {
+		id: 'rules.discord.ban-evasion.alt-accounts',
+		defaultMessage:
+			'If you are caught evading a ban in-game or through Discord, you will be banned on any alternative accounts as well.',
+	},
+	banEvasionAssisting: {
+		id: 'rules.discord.ban-evasion.assisting',
+		defaultMessage: 'Anyone assisting a ban evasion will also be held accountable.',
+	},
+	disclaimerTitle: {
+		id: 'rules.discord.disclaimer.title',
+		defaultMessage: 'Disclaimer',
+	},
+	disclaimerSubtitle: {
+		id: 'rules.discord.disclaimer.subtitle',
+		defaultMessage: 'Liability notice',
+	},
+	disclaimerParticipation: {
+		id: 'rules.discord.disclaimer.participation',
+		defaultMessage:
+			'By participating in the official Vanilla Tyme Servers forum, Minecraft servers, or Discord, you voluntarily agree that the staff team is not liable for anything that happens to you, your computer, or any personal effects as a direct or indirect result of using the aforementioned services.',
+	},
+	disclaimerOtherPlayers: {
+		id: 'rules.discord.disclaimer.other-players',
+		defaultMessage:
+			'We cannot be held liable for what other players say or do, but if someone breaches the basic terms of service or server rules, please send a screenshot with a time and date. We will investigate and take administrative action where necessary.',
+	},
+	ctaTitle: {
+		id: 'rules.discord.cta.title',
+		defaultMessage: 'Need to report something?',
+	},
+	ctaDescription: {
+		id: 'rules.discord.cta.description',
+		defaultMessage:
+			'Open a support ticket in Discord or reach out to a staff member directly. We take all reports seriously.',
+	},
+	ctaButton: {
+		id: 'rules.cta.open-ticket',
+		defaultMessage: 'Open a ticket',
 	},
 })
+
 function scrollToSection(id: string) {
 	const el = document.getElementById(id)
 	if (!el) return

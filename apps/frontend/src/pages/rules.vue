@@ -1,109 +1,170 @@
 <template>
-    <div>
-        <div class="landing-hero">
-            <h1 class="main-header">
-                {{ hero.pre }}
-                <span class="main-header-strong">{{ hero.accent }}</span>
-            </h1>
-            <h2 class="main-subheader">{{ hero.subtitle }}</h2>
-            <div
-                v-if="hero.badge"
-                class="relative mt-4 flex h-fit w-fit items-center gap-2 rounded-full px-5 py-2 text-sm font-bold outline outline-1 backdrop-blur-lg"
-                :class="
-                    hero.badge.variant === 'brand' ? 'text-brand' : 'text-orange'
-                "
-                :style="{
-                    background:
-                        hero.badge.variant === 'brand'
-                            ? 'var(--color-brand-highlight)'
-                            : 'var(--color-orange-bg)',
-                }"
-            >
-                <component
-                    :is="heroIcons[hero.badge.icon]"
-                    v-if="hero.badge.icon"
-                    aria-hidden="true"
-                />
-                {{ hero.badge.text }}
-            </div>
-        </div>
-        <div class="new-page sidebar alt-layout sidebar-top">
-            <div
-                class="normal-page__header mb-4 flex items-center justify-between gap-2"
-            >
-                <NavTabs
-                    :links="[
-                        {
-                            label: 'Main',
-                            href: '/rules',
-                        },
-                        {
-                            label: 'Market',
-                            href: '/rules/market',
-                        },
-                        {
-                            label: 'Discord',
-                            href: '/rules/discord',
-                        },
-                    ]"
-                    replace
-                />
-                <Button v-if="rulesToolbar.toggleAll" @click="rulesToolbar.toggleAll">
-                        {{ rulesToolbar.anyOpen ? "Collapse all" : "Expand all" }}
-                        <component
-                            :is="
-                                rulesToolbar.anyOpen
-                                    ? ChevronUpIcon
-                                    : ChevronDownIcon
-                            "
-                            aria-hidden="true"
-                        />
-                </Button>
-            </div>
-            <NuxtPage />
-        </div>
-    </div>
+	<div>
+		<div class="landing-hero">
+			<h1 class="main-header">
+				{{ formatMessage(hero.pre) }}
+				<span class="main-header-strong">{{ formatMessage(hero.accent) }}</span>
+			</h1>
+			<h2 class="main-subheader">{{ formatMessage(hero.subtitle) }}</h2>
+			<div
+				v-if="hero.badge"
+				class="relative mt-4 flex h-fit w-fit items-center gap-2 rounded-full px-5 py-2 text-sm font-bold outline outline-1 backdrop-blur-lg"
+				:class="hero.badge.variant === 'brand' ? 'text-brand' : 'text-orange'"
+				:style="{
+					background:
+						hero.badge.variant === 'brand'
+							? 'var(--color-brand-highlight)'
+							: 'var(--color-orange-bg)',
+				}"
+			>
+				<component :is="hero.badge.icon" aria-hidden="true" />
+				{{ formatMessage(hero.badge.text) }}
+			</div>
+		</div>
+		<div class="new-page sidebar alt-layout sidebar-top">
+			<div class="normal-page__header mb-4 flex items-center justify-between gap-2">
+				<NavTabs
+					:links="[
+						{
+							label: formatMessage(messages.mainTab),
+							href: '/rules',
+						},
+						{
+							label: formatMessage(messages.marketTab),
+							href: '/rules/market',
+						},
+						{
+							label: formatMessage(messages.discordTab),
+							href: '/rules/discord',
+						},
+					]"
+					replace
+				/>
+				<Button v-if="rulesToolbar.toggleAll" @click="rulesToolbar.toggleAll">
+					{{ formatMessage(rulesToolbar.anyOpen ? messages.collapseAll : messages.expandAll) }}
+					<component :is="rulesToolbar.anyOpen ? ChevronUpIcon : ChevronDownIcon" aria-hidden="true" />
+				</Button>
+			</div>
+			<NuxtPage />
+		</div>
+	</div>
 </template>
 
 <script lang="ts" setup>
+import { ChevronDownIcon, ChevronUpIcon, StoreIcon, TriangleAlertIcon } from '@modrinth/assets'
+import { Button, defineMessages, NavTabs, useVIntl } from '@modrinth/ui'
 
-import { ChevronDownIcon, ChevronUpIcon, StoreIcon, TriangleAlertIcon } from '@modrinth/assets';
-import { Button, NavTabs  } from '@modrinth/ui';
-import type { Component } from 'vue'
+const { formatMessage } = useVIntl()
+const route = useRoute()
 
+const messages = defineMessages({
+	mainTab: {
+		id: 'rules.tab.main',
+		defaultMessage: 'Main',
+	},
+	marketTab: {
+		id: 'rules.tab.market',
+		defaultMessage: 'Market',
+	},
+	discordTab: {
+		id: 'rules.tab.discord',
+		defaultMessage: 'Discord',
+	},
+	collapseAll: {
+		id: 'rules.toolbar.collapse-all',
+		defaultMessage: 'Collapse all',
+	},
+	expandAll: {
+		id: 'rules.toolbar.expand-all',
+		defaultMessage: 'Expand all',
+	},
+	mainHeroPre: {
+		id: 'rules.hero.main.pre',
+		defaultMessage: 'The',
+	},
+	mainHeroAccent: {
+		id: 'rules.hero.main.accent',
+		defaultMessage: 'Rules',
+	},
+	mainHeroSubtitle: {
+		id: 'rules.hero.main.subtitle',
+		defaultMessage: 'A nine-year-old community runs on trust. These keep it that way.',
+	},
+	mainHeroBadge: {
+		id: 'rules.hero.main.badge',
+		defaultMessage: 'Reading these in full is required before applying. We check.',
+	},
+	marketHeroPre: {
+		id: 'rules.hero.market.pre',
+		defaultMessage: 'Market',
+	},
+	marketHeroAccent: {
+		id: 'rules.hero.market.accent',
+		defaultMessage: 'Rules',
+	},
+	marketHeroSubtitle: {
+		id: 'rules.hero.market.subtitle',
+		defaultMessage:
+			'Every approved player can buy or sell almost anything in our market area within Spawn.',
+	},
+	marketHeroBadge: {
+		id: 'rules.hero.market.badge',
+		defaultMessage: 'Season 10',
+	},
+	discordHeroPre: {
+		id: 'rules.hero.discord.pre',
+		defaultMessage: 'Discord',
+	},
+	discordHeroAccent: {
+		id: 'rules.hero.discord.accent',
+		defaultMessage: 'Guidelines',
+	},
+	discordHeroSubtitle: {
+		id: 'rules.hero.discord.subtitle',
+		defaultMessage:
+			'Applies to all channels, usernames, nicknames, avatars, statuses, and emotes across the Vanilla Tyme Discord server.',
+	},
+})
 
 const rulesToolbar = reactive<{
-    toggleAll: (() => void) | null;
-    anyOpen: boolean;
+	toggleAll: (() => void) | null
+	anyOpen: boolean
 }>({
-    toggleAll: null,
-    anyOpen: false,
-});
-provide("rulesToolbar", rulesToolbar);
+	toggleAll: null,
+	anyOpen: false,
+})
+provide('rulesToolbar', rulesToolbar)
 
-// Per-page hero. Each child page sets its own via definePageMeta({ hero }),
-// and we fall back to the Main rules hero when a page doesn't define one.
-const heroIcons: Record<string, Component> = {
-    alert: TriangleAlertIcon	,
-    store: StoreIcon,
-};
+const heroes = {
+	rules: {
+		pre: messages.mainHeroPre,
+		accent: messages.mainHeroAccent,
+		subtitle: messages.mainHeroSubtitle,
+		badge: {
+			text: messages.mainHeroBadge,
+			variant: 'warning',
+			icon: TriangleAlertIcon,
+		},
+	},
+	'rules-market': {
+		pre: messages.marketHeroPre,
+		accent: messages.marketHeroAccent,
+		subtitle: messages.marketHeroSubtitle,
+		badge: {
+			text: messages.marketHeroBadge,
+			variant: 'brand',
+			icon: StoreIcon,
+		},
+	},
+	'rules-discord': {
+		pre: messages.discordHeroPre,
+		accent: messages.discordHeroAccent,
+		subtitle: messages.discordHeroSubtitle,
+		badge: null,
+	},
+}
 
-
-const route = useRoute();
-const defaultHero = {
-    pre: "The",
-    accent: "Rules",
-    subtitle:
-        "A nine-year-old community runs on trust. These keep it that way.",
-    badge: {
-        text: "Reading these in full is required before applying. We check.",
-        variant: "warning",
-        icon: "alert",
-    },
-};
-const hero = computed(
-    () => (route.meta.hero as typeof defaultHero) ?? defaultHero,
-);
+const hero = computed(() => heroes[route.name as keyof typeof heroes] ?? heroes.rules)
 </script>
 
 <style scoped lang="scss">
