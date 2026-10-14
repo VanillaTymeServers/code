@@ -609,94 +609,14 @@ if (rulesToolbar) {
 }
 </script>
 
-<style lang="scss">
-.normal-page__content :deep(a) {
-	color: var(--color-link);
-	text-decoration: underline;
-
-	&:focus-visible,
-	&:hover {
-		color: var(--color-link-hover);
-	}
-
-	&:active {
-		color: var(--color-link-active);
-	}
-}
-.icon-section {
-	--_bg: var(--color-brand-highlight);
-	--_size: 2.5rem;
-	--_color: var(--color-brand);
-	width: var(--_size);
-	height: var(--_size);
-	border-radius: calc(16 / 96 * var(--_size));
-	color: var(--_color);
-	background: var(--_bg);
-	display: flex;
-	flex-shrink: 0;
-	justify-content: center;
-	align-items: center;
-	svg {
-		width: 1.25rem;
-		height: 1.25rem;
-	}
-}
-.rule-icon {
-	--_size: 2rem;
-
-	border: 1px solid var(--surface-5);
-	background-color: var(--color-button-bg);
-	object-fit: contain;
-	border-radius: calc(16 / 96 * var(--_override-size, var(--_size)));
-	position: relative;
-	height: var(--_override-size, var(--_size));
-	width: var(--_override-size, var(--_size));
-	min-height: var(--_override-size, var(--_size));
-	min-width: var(--_override-size, var(--_size));
-
-	&.circle {
-		border-radius: 50%;
-	}
-
-	&:not(.no-shadow) {
-		box-shadow: var(--shadow-card);
-	}
-
-	&.no-shadow {
-		box-shadow: none;
-	}
-
-	&.pixelated {
-		image-rendering: pixelated;
-	}
-
-	&.raised {
-		background-color: var(--color-raised-bg);
-	}
-
-	&.tint {
-		background-color: color-mix(in oklch, var(--color-button-bg) 100%, var(--_tint) 5%);
-	}
-}
-ul,
-ol {
-	@apply marker:text-brand;
-}
-li {
-	line-height: 1.65;
-}
-ol {
-	color: var(--landing-color-subheading);
-	li {
-		margin-bottom: 0.5rem;
-	}
-}
+<style lang="scss" scoped>
 .examples {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
 	margin-top: 0.5rem;
 }
+
 .chip {
 	display: inline-flex;
 	align-items: center;
@@ -707,17 +627,20 @@ ol {
 	color: var(--landing-color-heading);
 	background: color-mix(in oklch, var(--landing-color-subheading) 8%, transparent);
 	border: 1px solid color-mix(in oklch, var(--landing-color-subheading) 15%, transparent);
+
+	code {
+		font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+		font-weight: 700;
+		color: var(--color-brand);
+	}
 }
-.chip code {
-	font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
-	font-weight: 700;
-	color: var(--color-brand);
-}
+
 .facts {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.75rem;
 }
+
 .fact {
 	flex: 1;
 	min-width: 130px;
@@ -726,42 +649,17 @@ ol {
 	background: color-mix(in oklch, var(--landing-color-subheading) 5%, transparent);
 	border: 1px solid color-mix(in oklch, var(--landing-color-subheading) 12%, transparent);
 }
+
 .fact-value {
 	font-size: 1.4rem;
 	font-weight: 800;
 	line-height: 1.1;
 	color: var(--color-brand);
 }
+
 .fact-label {
 	margin-top: 0.25rem;
 	font-size: 0.75rem;
-	color: var(--landing-color-subheading);
-}
-.rules-cta {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0.75rem;
-	padding: 3rem 2rem;
-	text-align: center;
-	border-radius: 1.25rem;
-	border: 1px solid color-mix(in oklch, var(--color-brand) 22%, transparent);
-	background: color-mix(in oklch, var(--color-brand) 4%, transparent);
-	a {
-		text-decoration: none;
-	}
-}
-.rules-cta__title {
-	margin: 0;
-	font-size: 1.75rem;
-	font-weight: 800;
-	color: var(--landing-color-heading);
-}
-.rules-cta__subtitle {
-	margin: 0 0 0.75rem;
-	max-width: 30rem;
-	font-size: 1rem;
-	line-height: 1.6;
 	color: var(--landing-color-subheading);
 }
 </style>

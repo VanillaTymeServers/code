@@ -1412,215 +1412,124 @@ if (rulesToolbar) {
 
 <style lang="scss" scoped>
 .normal-page__content li :deep(a) {
-    color: var(--color-link);
-    text-decoration: underline;
+	color: var(--color-link);
+	text-decoration: underline;
 
-    &:focus-visible,
-    &:hover {
-        color: var(--color-link-hover);
-    }
+	&:focus-visible,
+	&:hover {
+		color: var(--color-link-hover);
+	}
 
-    &:active {
-        color: var(--color-link-active);
-    }
+	&:active {
+		color: var(--color-link-active);
+	}
 }
-.icon-section {
-    --_bg: var(--color-brand-highlight);
-    --_size: 2.5rem;
-    --_color: var(--color-brand);
-    width: var(--_size);
-    height: var(--_size);
-    border-radius: calc(16 / 96 * var(--_size));
-    color: var(--_color);
-    background: var(--_bg);
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    svg {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
-}
-.rule-icon {
-    --_size: 2rem;
 
-    border: 1px solid var(--surface-5);
-    background-color: var(--color-button-bg);
-    object-fit: contain;
-    border-radius: calc(16 / 96 * var(--_override-size, var(--_size)));
-    position: relative;
-    height: var(--_override-size, var(--_size));
-    width: var(--_override-size, var(--_size));
-    min-height: var(--_override-size, var(--_size));
-    min-width: var(--_override-size, var(--_size));
-
-    &.circle {
-        border-radius: 50%;
-    }
-
-    &:not(.no-shadow) {
-        box-shadow: var(--shadow-card);
-    }
-
-    &.no-shadow {
-        box-shadow: none;
-    }
-
-    &.pixelated {
-        image-rendering: pixelated;
-    }
-
-    &.raised {
-        background-color: var(--color-raised-bg);
-    }
-
-    &.tint {
-        background-color: color-mix(
-            in oklch,
-            var(--color-button-bg) 100%,
-            var(--_tint) 5%
-        );
-    }
-}
-ul,
-ol {
-    @apply marker:text-brand;
-}
-li {
-    line-height: 1.65;
-}
-ol {
-    color: var(--landing-color-subheading);
-    li {
-        margin-bottom: 0.5rem;
-    }
-}
 .punish-flow {
-    display: flex;
-    align-items: stretch;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+	display: flex;
+	align-items: stretch;
+	gap: 0.5rem;
+	flex-wrap: wrap;
 }
+
 .punish-step {
-    flex: 1;
-    min-width: 110px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.625rem;
-    padding: 1.25rem 0.75rem;
-    border-radius: 0.75rem;
-    text-align: center;
-    background: color-mix(
-        in oklch,
-        var(--landing-color-subheading) 5%,
-        transparent
-    );
-    border: 1px solid
-        color-mix(in oklch, var(--landing-color-subheading) 12%, transparent);
+	flex: 1;
+	min-width: 110px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.625rem;
+	padding: 1.25rem 0.75rem;
+	border-radius: 0.75rem;
+	text-align: center;
+	background: color-mix(in oklch, var(--landing-color-subheading) 5%, transparent);
+	border: 1px solid color-mix(in oklch, var(--landing-color-subheading) 12%, transparent);
 }
+
 .punish-badge {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    font-size: 1.1rem;
-    font-weight: 800;
-    svg {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	font-size: 1.1rem;
+	font-weight: 800;
+
+	svg {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
 }
+
 .punish-name {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--landing-color-heading);
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: var(--landing-color-heading);
 }
+
 .punish-sub {
-    font-size: 0.7rem;
-    color: var(--landing-color-subheading);
+	font-size: 0.7rem;
+	color: var(--landing-color-subheading);
 }
+
 .tier-1 .punish-badge {
-    background: color-mix(
-        in oklch,
-        var(--landing-color-subheading) 14%,
-        transparent
-    );
-    color: var(--landing-color-subheading);
+	background: color-mix(in oklch, var(--landing-color-subheading) 14%, transparent);
+	color: var(--landing-color-subheading);
 }
+
 .tier-2 .punish-badge {
-    background: color-mix(in oklch, var(--color-orange) 15%, transparent);
-    color: var(--color-orange);
+	background: color-mix(in oklch, var(--color-orange) 15%, transparent);
+	color: var(--color-orange);
 }
+
 .tier-3 {
-    border-color: color-mix(in oklch, var(--color-orange) 30%, transparent);
+	border-color: color-mix(in oklch, var(--color-orange) 30%, transparent);
 }
+
 .tier-3 .punish-badge {
-    background: color-mix(in oklch, var(--color-orange) 25%, transparent);
-    color: var(--color-orange);
+	background: color-mix(in oklch, var(--color-orange) 25%, transparent);
+	color: var(--color-orange);
 }
+
 .tier-ban {
-    background: color-mix(in oklch, var(--color-red) 8%, transparent);
-    border-color: color-mix(in oklch, var(--color-red) 35%, transparent);
+	background: color-mix(in oklch, var(--color-red) 8%, transparent);
+	border-color: color-mix(in oklch, var(--color-red) 35%, transparent);
 }
+
 .tier-ban .punish-badge {
-    background: color-mix(in oklch, var(--color-red) 18%, transparent);
-    color: var(--color-red);
+	background: color-mix(in oklch, var(--color-red) 18%, transparent);
+	color: var(--color-red);
 }
+
 .tier-ban .punish-name {
-    color: var(--color-red);
+	color: var(--color-red);
 }
+
 .punish-arrow {
-    align-self: center;
-    flex-shrink: 0;
-    width: 1.1rem;
-    height: 1.1rem;
-    color: var(--landing-color-subheading);
+	align-self: center;
+	flex-shrink: 0;
+	width: 1.1rem;
+	height: 1.1rem;
+	color: var(--landing-color-subheading);
 }
-.rules-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 3rem 2rem;
-    text-align: center;
-    border-radius: 1.25rem;
-    border: 1px solid color-mix(in oklch, var(--color-brand) 22%, transparent);
-    background: color-mix(in oklch, var(--color-brand) 4%, transparent);
-    a {
-        text-decoration: none;
-    }
-}
-.rules-cta__title {
-    margin: 0;
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: var(--landing-color-heading);
-}
-.rules-cta__subtitle {
-    margin: 0 0 0.75rem;
-    max-width: 30rem;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--landing-color-subheading);
-}
+
 @media (max-width: 600px) {
-    .punish-flow {
-        flex-direction: column;
-    }
-    .punish-step {
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 1rem;
-        padding: 0.875rem 1rem;
-        text-align: left;
-    }
-    .punish-arrow {
-        transform: rotate(90deg);
-    }
+	.punish-flow {
+		flex-direction: column;
+	}
+
+	.punish-step {
+		flex-direction: row;
+		justify-content: flex-start;
+		gap: 1rem;
+		padding: 0.875rem 1rem;
+		text-align: left;
+	}
+
+	.punish-arrow {
+		transform: rotate(90deg);
+	}
 }
 </style>
