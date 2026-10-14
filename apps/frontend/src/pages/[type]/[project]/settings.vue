@@ -10,10 +10,10 @@ import {
 	LinkIcon,
 	ServerIcon,
 	SignatureIcon,
+	StoreIcon,
 	TagsIcon,
 	UsersIcon,
 	VersionIcon,
-	StoreIcon,
 } from '@modrinth/assets'
 import {
 	commonMessages,

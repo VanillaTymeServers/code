@@ -1,4 +1,5 @@
 import type { Labrinth } from '@modrinth/api-client'
+
 import { defineMessages } from '../composables/i18n'
 
 export const WOOL_COLORS: Record<Labrinth.Projects.v3.StallColor, string> = {

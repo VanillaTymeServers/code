@@ -29,7 +29,6 @@
 <script setup lang="ts">
 import type { Labrinth } from '@modrinth/api-client'
 import { MapPinIcon, PaletteIcon, StoreIcon } from '@modrinth/assets'
-
 import { defineMessages, stallColorMessages, useVIntl, WOOL_COLORS } from '@modrinth/ui'
 
 defineProps<{

@@ -189,8 +189,8 @@
 </template>
 
 <script setup lang="ts">
-import type { ProjectStatus } from '@modrinth/utils'
 import type { Labrinth } from '@modrinth/api-client'
+import type { ProjectStatus } from '@modrinth/utils'
 import dayjs from 'dayjs'
 import { computed } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'
