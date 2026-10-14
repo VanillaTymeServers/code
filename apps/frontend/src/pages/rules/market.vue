@@ -281,7 +281,6 @@
 				{{ formatMessage(messages.ctaDescription) }}
 			</p>
 			<ButtonLink
-				external
 				type="colored-text"
 				color="brand"
 				size="lg"

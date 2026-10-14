@@ -204,6 +204,7 @@ import _LogInIcon from './icons/log-in.svg?component'
 import _LogOutIcon from './icons/log-out.svg?component'
 import _MailIcon from './icons/mail.svg?component'
 import _ManageIcon from './icons/manage.svg?component'
+import _MapIcon from './icons/map.svg?component'
 import _MapPinIcon from './icons/map-pin.svg?component'
 import _MaximizeIcon from './icons/maximize.svg?component'
 import _MegaphoneIcon from './icons/megaphone.svg?component'
@@ -283,6 +284,7 @@ import _ShieldAlertIcon from './icons/shield-alert.svg?component'
 import _ShieldBanIcon from './icons/shield-ban.svg?component'
 import _ShieldCheckIcon from './icons/shield-check.svg?component'
 import _ShirtIcon from './icons/shirt.svg?component'
+import _ShoppingBasketIcon from './icons/shopping-basket.svg?component'
 import _ShoppingCartIcon from './icons/shopping-cart.svg?component'
 import _ShredderIcon from './icons/shredder.svg?component'
 import _SignalIcon from './icons/signal.svg?component'
@@ -295,6 +297,7 @@ import _SparklesIcon from './icons/sparkles.svg?component'
 import _SpinnerIcon from './icons/spinner.svg?component'
 import _SplitIcon from './icons/split.svg?component'
 import _SquareIcon from './icons/square.svg?component'
+import _SquareCheckIcon from './icons/square-check.svg?component'
 import _SquarePlusIcon from './icons/square-plus.svg?component'
 import _StarIcon from './icons/star.svg?component'
 import _StickyNotePlusIcon from './icons/sticky-note-plus.svg?component'
@@ -493,6 +496,7 @@ import _UsersIcon from './icons/users.svg?component'
 import _VersionIcon from './icons/version.svg?component'
 import _VideoIcon from './icons/video.svg?component'
 import _Volume2Icon from './icons/volume-2.svg?component'
+import _VoteIcon from './icons/vote.svg?component'
 import _WikiIcon from './icons/wiki.svg?component'
 import _WindowIcon from './icons/window.svg?component'
 import _WorldIcon from './icons/world.svg?component'
@@ -500,6 +504,7 @@ import _WrapTextIcon from './icons/wrap-text.svg?component'
 import _WrenchIcon from './icons/wrench.svg?component'
 import _XIcon from './icons/x.svg?component'
 import _XCircleIcon from './icons/x-circle.svg?component'
+import _ZapIcon from './icons/zap.svg?component'
 import _ZoomInIcon from './icons/zoom-in.svg?component'
 import _ZoomOutIcon from './icons/zoom-out.svg?component'
 
@@ -702,6 +707,7 @@ export const LogInIcon = _LogInIcon
 export const LogOutIcon = _LogOutIcon
 export const MailIcon = _MailIcon
 export const ManageIcon = _ManageIcon
+export const MapIcon = _MapIcon
 export const MapPinIcon = _MapPinIcon
 export const MaximizeIcon = _MaximizeIcon
 export const MegaphoneIcon = _MegaphoneIcon
@@ -781,6 +787,7 @@ export const ShieldAlertIcon = _ShieldAlertIcon
 export const ShieldBanIcon = _ShieldBanIcon
 export const ShieldCheckIcon = _ShieldCheckIcon
 export const ShirtIcon = _ShirtIcon
+export const ShoppingBasketIcon = _ShoppingBasketIcon
 export const ShoppingCartIcon = _ShoppingCartIcon
 export const ShredderIcon = _ShredderIcon
 export const SignalIcon = _SignalIcon
@@ -793,6 +800,7 @@ export const SparklesIcon = _SparklesIcon
 export const SpinnerIcon = _SpinnerIcon
 export const SplitIcon = _SplitIcon
 export const SquareIcon = _SquareIcon
+export const SquareCheckIcon = _SquareCheckIcon
 export const SquarePlusIcon = _SquarePlusIcon
 export const StarIcon = _StarIcon
 export const StickyNotePlusIcon = _StickyNotePlusIcon
@@ -991,6 +999,7 @@ export const UsersIcon = _UsersIcon
 export const VersionIcon = _VersionIcon
 export const VideoIcon = _VideoIcon
 export const Volume2Icon = _Volume2Icon
+export const VoteIcon = _VoteIcon
 export const WikiIcon = _WikiIcon
 export const WindowIcon = _WindowIcon
 export const WorldIcon = _WorldIcon
@@ -998,6 +1007,7 @@ export const WrapTextIcon = _WrapTextIcon
 export const WrenchIcon = _WrenchIcon
 export const XIcon = _XIcon
 export const XCircleIcon = _XCircleIcon
+export const ZapIcon = _ZapIcon
 export const ZoomInIcon = _ZoomInIcon
 export const ZoomOutIcon = _ZoomOutIcon
 

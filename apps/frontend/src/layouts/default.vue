@@ -90,281 +90,81 @@
 					/>
 				</NuxtLink>
 			</div>
-			<div
-				class="col-span-2 row-start-2 flex justify-center lg:col-span-1 lg:row-start-auto"
-				:class="{ 'gap-4': !flags.projectTypesPrimaryNav }"
-			>
-				<template v-if="flags.projectTypesPrimaryNav">
-					<ButtonLink
-						type="quiet"
-						to="/discover/mods"
-						:class="
-							route.name === 'discover-mods' || route.path.startsWith('/mod/')
-								? (route.name === 'discover-mods' ? 'main-nav-primary' : 'main-nav-secondary') ===
-									'main-nav-primary'
-									? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
-									: '!bg-[var(--color-button-bg)] !text-contrast'
+			<div class="col-span-2 row-start-2 flex justify-center gap-4 lg:col-span-1 lg:row-start-auto">
+				<ButtonLink
+					type="quiet"
+					to="/discover/shops"
+					:class="
+						isDiscovering
+							? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
+							: isDiscoveringSubpage
+								? '!bg-[var(--color-button-bg)] !text-contrast'
 								: ''
-						"
-					>
-						<BoxIcon aria-hidden="true" />
-						{{ formatMessage(commonProjectTypeCategoryMessages.mod) }}
-					</ButtonLink>
-					<ButtonLink
-						type="quiet"
-						to="/discover/resourcepacks"
-						:class="
-							route.name === 'discover-resourcepacks' || route.path.startsWith('/resourcepack/')
-								? (route.name === 'discover-resourcepacks'
-										? 'main-nav-primary'
-										: 'main-nav-secondary') === 'main-nav-primary'
-									? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
-									: '!bg-[var(--color-button-bg)] !text-contrast'
-								: ''
-						"
-					>
-						<PaintbrushIcon aria-hidden="true" />
-						{{ formatMessage(commonProjectTypeCategoryMessages.resourcepack) }}
-					</ButtonLink>
-					<ButtonLink
-						type="quiet"
-						to="/discover/datapacks"
-						:class="
-							route.name === 'discover-datapacks' || route.path.startsWith('/datapack/')
-								? (route.name === 'discover-datapacks'
-										? 'main-nav-primary'
-										: 'main-nav-secondary') === 'main-nav-primary'
-									? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
-									: '!bg-[var(--color-button-bg)] !text-contrast'
-								: ''
-						"
-					>
-						<BracesIcon aria-hidden="true" />
-						{{ formatMessage(commonProjectTypeCategoryMessages.datapack) }}
-					</ButtonLink>
-					<ButtonLink
-						type="quiet"
-						to="/discover/shaders"
-						:class="
-							route.name === 'discover-shaders' || route.path.startsWith('/shader/')
-								? (route.name === 'discover-shaders'
-										? 'main-nav-primary'
-										: 'main-nav-secondary') === 'main-nav-primary'
-									? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
-									: '!bg-[var(--color-button-bg)] !text-contrast'
-								: ''
-						"
-					>
-						<GlassesIcon aria-hidden="true" />
-						{{ formatMessage(commonProjectTypeCategoryMessages.shader) }}
-					</ButtonLink>
-					<ButtonLink
-						type="quiet"
-						to="/discover/modpacks"
-						:class="
-							route.name === 'discover-modpacks' || route.path.startsWith('/modpack/')
-								? (route.name === 'discover-modpacks'
-										? 'main-nav-primary'
-										: 'main-nav-secondary') === 'main-nav-primary'
-									? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
-									: '!bg-[var(--color-button-bg)] !text-contrast'
-								: ''
-						"
-					>
-						<PackageOpenIcon aria-hidden="true" />
-						{{ formatMessage(commonProjectTypeCategoryMessages.modpack) }}
-					</ButtonLink>
-					<ButtonLink
-						type="quiet"
-						to="/discover/plugins"
-						:class="
-							route.name === 'discover-plugins' || route.path.startsWith('/plugin/')
-								? (route.name === 'discover-plugins'
-										? 'main-nav-primary'
-										: 'main-nav-secondary') === 'main-nav-primary'
-									? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
-									: '!bg-[var(--color-button-bg)] !text-contrast'
-								: ''
-						"
-					>
-						<PlugIcon aria-hidden="true" />
-						{{ formatMessage(commonProjectTypeCategoryMessages.plugin) }}
-					</ButtonLink>
-					<ButtonLink
-						type="quiet"
-						to="/discover/servers"
-						:class="
-							route.name === 'discover-servers' || route.path.startsWith('/server/')
-								? (route.name === 'discover-servers'
-										? 'main-nav-primary'
-										: 'main-nav-secondary') === 'main-nav-primary'
-									? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
-									: '!bg-[var(--color-button-bg)] !text-contrast'
-								: ''
-						"
-					>
-						<ServerIcon aria-hidden="true" />
-						{{ formatMessage(commonProjectTypeCategoryMessages.server) }}
-					</ButtonLink>
-				</template>
-				<template v-else>
-					<TeleportOverflowMenu
-						type="quiet"
-						:label="formatMessage(commonMessages.moreOptionsButton)"
-						hoverable
-						:options="[
-							{
-								id: 'mods',
-								label: formatMessage(commonProjectTypeCategoryMessages.mod),
-								type: 'link',
-								to: '/discover/mods',
-							},
-							{
-								id: 'resourcepacks',
-								label: formatMessage(commonProjectTypeCategoryMessages.resourcepack),
-								type: 'link',
-								to: '/discover/resourcepacks',
-							},
-							{
-								id: 'datapacks',
-								label: formatMessage(commonProjectTypeCategoryMessages.datapack),
-								type: 'link',
-								to: '/discover/datapacks',
-							},
-							{
-								id: 'shaders',
-								label: formatMessage(commonProjectTypeCategoryMessages.shader),
-								type: 'link',
-								to: '/discover/shaders',
-							},
-							{
-								id: 'modpacks',
-								label: formatMessage(commonProjectTypeCategoryMessages.modpack),
-								type: 'link',
-								to: '/discover/modpacks',
-							},
-							{
-								id: 'plugins',
-								label: formatMessage(commonProjectTypeCategoryMessages.plugin),
-								type: 'link',
-								to: '/discover/plugins',
-							},
-							{
-								id: 'servers',
-								label: formatMessage(commonProjectTypeCategoryMessages.server),
-								type: 'link',
-								to: '/discover/servers',
-							},
-						]"
-						:class="[
-							'!w-auto !rounded-xl !px-2.5',
-							isDiscovering
-								? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
-								: isDiscoveringSubpage
-									? '!bg-[var(--color-button-bg)] !text-contrast'
-									: '',
-						]"
-					>
-						<BoxIcon
-							v-if="route.name === 'discover-mods' || route.path.startsWith('/mod/')"
-							aria-hidden="true"
-						/>
-						<PaintbrushIcon
-							v-else-if="
-								route.name === 'discover-resourcepacks' || route.path.startsWith('/resourcepack/')
-							"
-							aria-hidden="true"
-						/>
-						<BracesIcon
-							v-else-if="route.name === 'discover-datapacks' || route.path.startsWith('/datapack/')"
-							aria-hidden="true"
-						/>
-						<PackageOpenIcon
-							v-else-if="route.name === 'discover-modpacks' || route.path.startsWith('/modpack/')"
-							aria-hidden="true"
-						/>
-						<GlassesIcon
-							v-else-if="route.name === 'discover-shaders' || route.path.startsWith('/shader/')"
-							aria-hidden="true"
-						/>
-						<PlugIcon
-							v-else-if="route.name === 'discover-plugins' || route.path.startsWith('/plugin/')"
-							aria-hidden="true"
-						/>
-						<ServerIcon
-							v-else-if="route.name === 'discover-servers' || route.path.startsWith('/server/')"
-							aria-hidden="true"
-						/>
-						<CompassIcon v-else aria-hidden="true" />
-						<span class="hidden md:contents">{{
-							formatMessage(commonMessages.discoverContentLabel)
-						}}</span>
-						<span class="contents md:hidden">{{ formatMessage(navMenuMessages.discover) }}</span>
-						<DropdownIcon aria-hidden="true" class="h-5 w-5" />
+					"
+				>
+					<StoreIcon aria-hidden="true" />
+					{{ formatMessage(navMenuMessages.shops) }}
+				</ButtonLink>
+				<TeleportOverflowMenu
+					type="quiet"
+					:label="formatMessage(navMenuMessages.rulesAndMore)"
+					hoverable
+					:options="[
+						{
+							id: 'rules',
+							label: formatMessage(navMenuMessages.rules),
+							type: 'link',
+							to: '/rules',
+						},
+						{
+							id: 'vote',
+							label: formatMessage(navMenuMessages.vote),
+							type: 'link',
+							to: '/vote',
+						},
+						{
+							id: 'maps',
+							label: formatMessage(navMenuMessages.mapDownloads),
+							type: 'link',
+							to: '/downloads',
+						},
+					]"
+					:class="[
+						'!w-auto !rounded-xl !px-2.5',
+						route.name?.startsWith('rules') || route.name === 'vote' || route.name === 'downloads'
+							? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
+							: '',
+					]"
+				>
+					<CompassIcon aria-hidden="true" />
+					<span class="hidden md:contents">{{ formatMessage(navMenuMessages.rulesAndMore) }}</span>
+					<span class="contents md:hidden">{{
+						formatMessage(navMenuMessages.rulesAndMoreShort)
+					}}</span>
+					<DropdownIcon aria-hidden="true" class="h-5 w-5" />
 
-						<template #mods>
-							<BoxIcon aria-hidden="true" />
-							{{ formatMessage(commonProjectTypeCategoryMessages.mod) }}
-						</template>
-						<template #resourcepacks>
-							<PaintbrushIcon aria-hidden="true" />
-							{{ formatMessage(commonProjectTypeCategoryMessages.resourcepack) }}
-						</template>
-						<template #datapacks>
-							<BracesIcon aria-hidden="true" />
-							{{ formatMessage(commonProjectTypeCategoryMessages.datapack) }}
-						</template>
-						<template #plugins>
-							<PlugIcon aria-hidden="true" />
-							{{ formatMessage(commonProjectTypeCategoryMessages.plugin) }}
-						</template>
-						<template #shaders>
-							<GlassesIcon aria-hidden="true" />
-							{{ formatMessage(commonProjectTypeCategoryMessages.shader) }}
-						</template>
-						<template #modpacks>
-							<PackageOpenIcon aria-hidden="true" />
-							{{ formatMessage(commonProjectTypeCategoryMessages.modpack) }}
-						</template>
-						<template #servers>
-							<ServerIcon aria-hidden="true" />
-							{{ formatMessage(commonProjectTypeCategoryMessages.server) }}
-						</template>
-					</TeleportOverflowMenu>
-					<ButtonLink
-						type="quiet"
-						to="/hosting"
-						:class="
-							route.name?.startsWith('hosting') ||
-							(route.name?.startsWith('discover-') && !!route.query.sid)
-								? (route.name === 'hosting' ? 'main-nav-primary' : 'main-nav-secondary') ===
-									'main-nav-primary'
-									? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
-									: '!bg-[var(--color-button-bg)] !text-contrast'
-								: ''
-						"
-					>
-						<ServerStackIcon aria-hidden="true" />
-						{{ formatMessage(navMenuMessages.hostAServer) }}
-					</ButtonLink>
-					<ButtonLink
-						type="quiet"
-						to="/app"
-						:class="
-							route.name === 'app'
-								? true
-									? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
-									: '!bg-[var(--color-button-bg)] !text-contrast'
-								: ''
-						"
-					>
-						<DownloadIcon aria-hidden="true" />
-						<span class="hidden md:contents">{{
-							formatMessage(navMenuMessages.getModrinthApp)
-						}}</span>
-						<span class="contents md:hidden">{{ formatMessage(navMenuMessages.modrinthApp) }}</span>
-					</ButtonLink>
-				</template>
+					<template #rules>
+						<GavelIcon aria-hidden="true" />
+						{{ formatMessage(navMenuMessages.rules) }}
+					</template>
+					<template #vote>
+						<VoteIcon aria-hidden="true" />
+						{{ formatMessage(navMenuMessages.vote) }}
+					</template>
+					<template #maps>
+						<MapIcon aria-hidden="true" />
+						{{ formatMessage(navMenuMessages.mapDownloads) }}
+					</template>
+				</TeleportOverflowMenu>
+				<ButtonLink
+					type="quiet"
+					href="https://store.vanillatymeservers.com"
+					target="_blank"
+					rel="noopener"
+				>
+					<ShoppingBasketIcon aria-hidden="true" />
+					{{ formatMessage(navMenuMessages.store) }}
+				</ButtonLink>
 			</div>
 			<div class="flex items-center gap-1">
 				<TeleportOverflowMenu
@@ -616,7 +416,9 @@
 					<ButtonLink
 						v-for="navRoute in navRoutes"
 						:key="navRoute.href"
-						:to="navRoute.href"
+						v-bind="
+							navRoute.external ? { href: navRoute.href, target: '_blank' } : { to: navRoute.href }
+						"
 						class="!h-auto !whitespace-normal"
 					>
 						{{ navRoute.label }}
@@ -815,15 +617,13 @@ import {
 	BookOpenIcon,
 	BoxIcon,
 	BoxPlusIcon,
-	BracesIcon,
 	ChartIcon,
 	CollectionPlusIcon,
 	CompassIcon,
 	CurrencyIcon,
-	DownloadIcon,
 	DropdownIcon,
 	FileSearchCornerIcon,
-	GlassesIcon,
+	GavelIcon,
 	GlobeIcon,
 	HamburgerIcon,
 	HashIcon,
@@ -833,13 +633,11 @@ import {
 	LogInIcon,
 	LogOutIcon,
 	MailIcon,
+	MapIcon,
 	ModrinthIcon,
 	MoonIcon,
 	OrganizationIcon,
 	OrganizationPlusIcon,
-	PackageOpenIcon,
-	PaintbrushIcon,
-	PlugIcon,
 	PlusIcon,
 	ReportIcon,
 	ScaleIcon,
@@ -849,11 +647,14 @@ import {
 	ServerStackIcon,
 	SettingsIcon,
 	ShieldAlertIcon,
+	ShoppingBasketIcon,
+	StoreIcon,
 	SunIcon,
 	ToggleRightIcon,
 	TransferIcon,
 	UserIcon,
 	UserSearchIcon,
+	VoteIcon,
 	XIcon,
 } from '@modrinth/assets'
 import {
@@ -861,7 +662,6 @@ import {
 	Button,
 	ButtonLink,
 	commonMessages,
-	commonProjectTypeCategoryMessages,
 	commonSettingsMessages,
 	createHostingIntercomIdentityKey,
 	defineMessages,
@@ -905,7 +705,6 @@ import { getSignInRouteObj } from '~/composables/auth.ts'
 import { logout } from '~/composables/user.js'
 import { errors as generatedStateErrors, taxComplianceThresholds } from '~/generated/state.json'
 import { provideCurrentProjectId } from '~/providers/current-project.ts'
-import { getProjectTypeMessage } from '~/utils/i18n-project-type.ts'
 import { hasActiveMidas } from '~/utils/user-membership.ts'
 
 const country = useUserCountry()
@@ -1023,21 +822,33 @@ const navMenuMessages = defineMessages({
 		id: 'layout.nav.search',
 		defaultMessage: 'Search',
 	},
-	discover: {
-		id: 'layout.nav.discover',
-		defaultMessage: 'Discover',
+	shops: {
+		id: 'layout.nav.shops',
+		defaultMessage: 'Shops',
 	},
-	hostAServer: {
-		id: 'layout.nav.host-a-server',
-		defaultMessage: 'Host a server',
+	rulesAndMore: {
+		id: 'layout.nav.rules-and-more',
+		defaultMessage: 'Rules & more',
 	},
-	getModrinthApp: {
-		id: 'layout.nav.get-modrinth-app',
-		defaultMessage: 'Get Modrinth App',
+	rulesAndMoreShort: {
+		id: 'layout.nav.rules-and-more-short',
+		defaultMessage: 'Rules +',
 	},
-	modrinthApp: {
-		id: 'layout.nav.modrinth-app',
-		defaultMessage: 'Modrinth App',
+	rules: {
+		id: 'layout.nav.rules',
+		defaultMessage: 'Rules',
+	},
+	vote: {
+		id: 'layout.nav.vote',
+		defaultMessage: 'Vote',
+	},
+	mapDownloads: {
+		id: 'layout.nav.map-downloads',
+		defaultMessage: 'Map downloads',
+	},
+	store: {
+		id: 'layout.nav.store',
+		defaultMessage: 'Store',
 	},
 })
 
@@ -1207,7 +1018,8 @@ useSeoMeta({
 	ogDescription: () =>
 		formatMessage({
 			id: 'layout.meta.og-description',
-			defaultMessage: 'Vanilla Tyme SMP is a Minecraft server that is focused on providing a vanilla experience with a few quality of life plugins.',
+			defaultMessage:
+				'Vanilla Tyme SMP is a Minecraft server that is focused on providing a vanilla experience with a few quality of life plugins.',
 		}),
 	ogType: 'website',
 	ogImage: 'https://cdn.modrinth.com/modrinth-new.png',
@@ -1222,33 +1034,26 @@ const isMobileMenuOpen = ref(false)
 const isBrowseMenuOpen = ref(false)
 const navRoutes = computed(() => [
 	{
-		id: 'mods',
-		label: formatMessage(getProjectTypeMessage('mod', true)),
-		href: '/discover/mods',
+		id: 'shops',
+		label: formatMessage(navMenuMessages.shops),
+		href: '/discover/shops',
 	},
 	{
-		label: formatMessage(getProjectTypeMessage('resourcepack', true)),
-		href: '/discover/resourcepacks',
+		label: formatMessage(navMenuMessages.rules),
+		href: '/rules',
 	},
 	{
-		label: formatMessage(getProjectTypeMessage('datapack', true)),
-		href: '/discover/datapacks',
+		label: formatMessage(navMenuMessages.vote),
+		href: '/vote',
 	},
 	{
-		label: formatMessage(getProjectTypeMessage('shader', true)),
-		href: '/discover/shaders',
+		label: formatMessage(navMenuMessages.mapDownloads),
+		href: '/downloads',
 	},
 	{
-		label: formatMessage(getProjectTypeMessage('modpack', true)),
-		href: '/discover/modpacks',
-	},
-	{
-		label: formatMessage(getProjectTypeMessage('plugin', true)),
-		href: '/discover/plugins',
-	},
-	{
-		label: formatMessage(getProjectTypeMessage('server', true)),
-		href: '/discover/servers',
+		label: formatMessage(navMenuMessages.store),
+		href: 'https://store.vanillatymeservers.com',
+		external: true,
 	},
 ])
 

@@ -754,7 +754,7 @@
 				type="colored-text"
 				color="brand"
 				size="lg"
-				to="https://discord.vanillatymeservers.com"
+				href="https://discord.vanillatymeservers.com"
 				target="_blank"
 				rel="noopener"
 			>
