@@ -52,6 +52,7 @@ import { LabrinthServerPingInternalModule } from './labrinth/server-ping/interna
 import { LabrinthSessionsV2Module } from './labrinth/sessions/v2'
 import { LabrinthStateModule } from './labrinth/state'
 import { LabrinthTagsV2Module } from './labrinth/tags/v2'
+import { LabrinthTagsV3Module } from './labrinth/tags/v3'
 import { LabrinthTeamsV2Module } from './labrinth/teams/v2'
 import { LabrinthTeamsV3Module } from './labrinth/teams/v3'
 import { LabrinthTechReviewInternalModule } from './labrinth/tech-review/internal'
@@ -134,6 +135,7 @@ export const MODULE_REGISTRY = {
 	labrinth_sessions_v2: LabrinthSessionsV2Module,
 	labrinth_state: LabrinthStateModule,
 	labrinth_tags_v2: LabrinthTagsV2Module,
+	labrinth_tags_v3: LabrinthTagsV3Module,
 	labrinth_teams_v2: LabrinthTeamsV2Module,
 	labrinth_teams_v3: LabrinthTeamsV3Module,
 	labrinth_tech_review_internal: LabrinthTechReviewInternalModule,

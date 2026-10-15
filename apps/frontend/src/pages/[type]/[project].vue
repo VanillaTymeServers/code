@@ -487,6 +487,12 @@
 						:reason="archivedDisclosure?.note"
 						class="mt-4"
 					/>
+					<ShopArchivedBanner
+						v-if="archivedShopSeason"
+						:title="project.title"
+						:season="archivedShopSeason"
+						class="mt-4"
+					/>
 				</div>
 
 				<div class="normal-page__sidebar">
@@ -644,6 +650,7 @@ import ModpackScanModal from '~/components/ui/moderation/ModpackScanModal.vue'
 import ProjectCollectionSaveButton from '~/components/ui/ProjectCollectionSaveButton.vue'
 import ProjectDownloadModal from '~/components/ui/ProjectDownloadModal/index.vue'
 import ProjectMemberHeader from '~/components/ui/ProjectMemberHeader.vue'
+import ShopArchivedBanner from '~/components/ui/ShopArchivedBanner.vue'
 import ShopSidebarInfo from '~/components/ui/ShopSidebarInfo.vue'
 import { getSignInRouteObj } from '~/composables/auth.ts'
 import { saveFeatureFlags } from '~/composables/featureFlags.ts'
@@ -654,6 +661,7 @@ import {
 } from '~/composables/link-network-validation/submission'
 import { notifyCopied } from '~/composables/moderation.ts'
 import { STALE_TIME, STALE_TIME_LONG, warmProjectCheckCaches } from '~/composables/queries/project'
+import { seasonQueryOptions } from '~/composables/queries/season'
 import { versionQueryOptions } from '~/composables/queries/version'
 import { useServerInstallContent } from '~/composables/use-server-install-content'
 import { userCollectProject, userFollowProject } from '~/composables/user.js'
@@ -1273,6 +1281,13 @@ const archivedDisclosure = computed(() =>
 	),
 )
 const isArchived = computed(() => !!archivedDisclosure.value)
+
+const { data: seasons } = useQuery(seasonQueryOptions.list(client))
+const archivedShopSeason = computed(() => {
+	const shop = projectV3.value?.shop
+	const currentSeason = seasons.value?.find((season) => season.current)
+	return shop && currentSeason && shop.season !== currentSeason.id ? shop.season : null
+})
 
 const creatorsLoading = computed(
 	() =>

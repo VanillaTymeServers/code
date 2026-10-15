@@ -13,7 +13,9 @@ import {
 	RadioTowerIcon,
 	ServerIcon,
 	SHOP_CATEGORY_ICON_MAP,
+	ShoppingCartIcon,
 	SparklesIcon,
+	StoreIcon,
 } from '@modrinth/assets'
 import { sortedCategories } from '@modrinth/utils'
 import { type Component, computed, readonly, type Ref, ref } from 'vue'
@@ -208,6 +210,7 @@ export interface Tags {
 	gameVersions: Labrinth.Tags.v2.GameVersion[]
 	loaders: Labrinth.Tags.v2.Loader[]
 	categories: Labrinth.Tags.v2.Category[]
+	seasons?: Labrinth.Tags.v3.Season[]
 }
 
 export interface SortType {
@@ -422,6 +425,18 @@ export function useSearch(
 		id: 'search.filter.shop_type.stall',
 		defaultMessage: 'Stall',
 	})
+	const shopSeasonFilterName = defineMessage({
+		id: 'search.filter_type.shop_season',
+		defaultMessage: 'Season',
+	})
+	const shopSeasonOption = defineMessage({
+		id: 'search.filter.shop_season.season',
+		defaultMessage: 'Season {season}',
+	})
+	const shopSeasonCurrentOption = defineMessage({
+		id: 'search.filter.shop_season.current',
+		defaultMessage: 'Season {season} (current)',
+	})
 	const includedContentFilterName = defineMessage({
 		id: 'search.filter_type.included_content',
 		defaultMessage: 'Included content',
@@ -471,7 +486,31 @@ export function useSearch(
 			}
 		}
 
+		const currentSeason = tags.value.seasons?.find((season) => season.current)
+		const startedSeasons = currentSeason
+			? (tags.value.seasons ?? []).filter((season) => season.id <= currentSeason.id)
+			: []
+		
 		const filterTypes: FilterType[] = [
+			{
+				id: 'shop_season',
+				formatted_name: formatMessage(shopSeasonFilterName),
+				supported_project_types: ['shop'],
+				display: 'all',
+				query_param: 'se',
+				supports: ['include'],
+				searchable: false,
+				ordering: -1,
+				options: startedSeasons.map((season) => ({
+					id: String(season.id),
+					formatted_name: formatMessage(
+						season.current ? shopSeasonCurrentOption : shopSeasonOption,
+						{ season: season.id },
+					),
+					value: `shop.season:${season.id}`,
+					method: 'or' as const,
+				})),
+			},
 			{
 				id: 'shop_type',
 				formatted_name: formatMessage(shopTypeFilterName),
@@ -487,12 +526,14 @@ export function useSearch(
 						formatted_name: formatMessage(shopTypeShopOption),
 						value: 'shop.stall:false',
 						method: 'or',
+						icon: StoreIcon,
 					},
 					{
 						id: 'stall',
 						formatted_name: formatMessage(shopTypeStallOption),
 						value: 'shop.stall:true',
 						method: 'or',
+						icon: ShoppingCartIcon,
 					},
 				],
 			},
@@ -930,7 +971,16 @@ export function useSearch(
 				}
 			}
 		}
-
+		
+		const currentSeason = tags.value.seasons?.find((season) => season.current)
+		if (
+			currentSeason &&
+			projectTypes.value.includes('shop') &&
+			!filterValues.some((filterValue) => filterValue.type === 'shop_season')
+		) {
+			parts.push(`shop.season = ${formatSearchFilterValue(String(currentSeason.id))}`)
+		}
+		
 		// Project types
 		const mappedProjectTypes = projectTypes.value.map(mapProjectTypeToSearch)
 		if (mappedProjectTypes.length === 1) {

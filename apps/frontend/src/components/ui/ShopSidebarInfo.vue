@@ -18,6 +18,10 @@
 					{{ formatMessage(stallColorMessages[shop.stall_color]) }}
 				</span>
 			</div>
+			<div>
+				<CalendarIcon aria-hidden="true" />
+				<span>{{ formatMessage(messages.season, { season: shop.season }) }}</span>
+			</div>
 			<div v-if="shop.coordinates">
 				<MapPinIcon aria-hidden="true" />
 				<span>X {{ shop.coordinates.x }}, Z {{ shop.coordinates.z }}</span>
@@ -28,7 +32,7 @@
 
 <script setup lang="ts">
 import type { Labrinth } from '@modrinth/api-client'
-import { MapPinIcon, PaletteIcon, StoreIcon } from '@modrinth/assets'
+import { CalendarIcon, MapPinIcon, PaletteIcon, StoreIcon } from '@modrinth/assets'
 import { defineMessages, stallColorMessages, useVIntl, WOOL_COLORS } from '@modrinth/ui'
 
 defineProps<{
@@ -49,6 +53,10 @@ const messages = defineMessages({
 	typeStall: {
 		id: 'shop.sidebar.type-stall',
 		defaultMessage: 'Stall',
+	},
+	season: {
+		id: 'shop.sidebar.season',
+		defaultMessage: 'Season {season}',
 	},
 })
 </script>

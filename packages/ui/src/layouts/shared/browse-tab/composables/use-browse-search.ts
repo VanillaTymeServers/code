@@ -31,6 +31,7 @@ export interface UseBrowseSearchOptions {
 		gameVersions: Labrinth.Tags.v2.GameVersion[]
 		loaders: Labrinth.Tags.v2.Loader[]
 		categories: Labrinth.Tags.v2.Category[]
+		seasons?: Labrinth.Tags.v3.Season[]
 	}>
 	providedFilters?: ComputedRef<FilterValue[]>
 	environmentOverride?: ComputedRef<EnvironmentSearchOverride | undefined>

@@ -31,7 +31,7 @@ import {
 } from '@modrinth/ui'
 import { commonMessages } from '@modrinth/ui/src/utils/common-messages'
 import { cycleValue } from '@modrinth/utils'
-import { useQueryClient } from '@tanstack/vue-query'
+import { useQuery, useQueryClient } from '@tanstack/vue-query'
 import { useTimeoutFn } from '@vueuse/core'
 import { computed, ref, watch } from 'vue'
 import type { LocationQueryRaw } from 'vue-router'
@@ -39,6 +39,7 @@ import type { LocationQueryRaw } from 'vue-router'
 import LogoAnimated from '~/components/brand/LogoAnimated.vue'
 import AdPlaceholder from '~/components/ui/AdPlaceholder.vue'
 import { projectQueryOptions, warmProjectCheckCaches } from '~/composables/queries/project'
+import { seasonQueryOptions } from '~/composables/queries/season'
 import { versionQueryOptions } from '~/composables/queries/version'
 import type {
 	ServerInstallModalHandle,
@@ -458,9 +459,13 @@ const projectTypeId = computed(() => projectType.value?.id ?? 'mod')
 debug('projectTypeId:', projectTypeId.value)
 watch(projectTypeId, (val) => debug('projectTypeId changed:', val))
 
+const { data: seasons, suspense: seasonsSuspense } = useQuery(seasonQueryOptions.list(client))
+await seasonsSuspense()
+const searchTags = computed(() => ({ ...tags.value, seasons: seasons.value ?? [] }))
+	
 const searchState = useBrowseSearch({
 	projectType: projectTypeId,
-	tags,
+	tags: searchTags,
 	providedFilters: serverFilters,
 	environmentOverride: serverEnvironmentOverride,
 	search,

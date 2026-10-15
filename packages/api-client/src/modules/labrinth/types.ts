@@ -1337,11 +1337,12 @@ export namespace Labrinth {
 				stall: boolean
 				stall_color?: StallColor | null
 				coordinates?: Coordinates | null
+				season: number
 			}
 
 			export interface CreateShopProjectRequest {
 				base: CreateProjectBase
-				shop: ShopProject
+				shop: Omit<ShopProject, 'season'>
 			}
 
 			export interface CreateServerProjectRequest {
@@ -2028,6 +2029,13 @@ export namespace Labrinth {
 			export type LicenseText = {
 				title: string
 				body: string
+			}
+		}
+		export namespace v3 {
+			export interface Season {
+				id: number
+				started_at: string
+				current: boolean
 			}
 		}
 	}
