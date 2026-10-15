@@ -184,6 +184,7 @@ pub fn config(cfg: &mut web::ServiceConfig) {
 		tags::link_platform_list_route,
 		tags::report_type_list_route,
 		tags::project_type_list_route,
+		tags::season_list_route,
 		teams::team_members_get_organization,
 		teams::team_members_get_route,
 		teams::teams_get_route,

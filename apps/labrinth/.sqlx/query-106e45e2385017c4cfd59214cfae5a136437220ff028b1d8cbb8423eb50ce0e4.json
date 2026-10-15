@@ -1,0 +1,20 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "SELECT MAX(id) FROM seasons WHERE started_at <= NOW()",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "max",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "106e45e2385017c4cfd59214cfae5a136437220ff028b1d8cbb8423eb50ce0e4"
+}

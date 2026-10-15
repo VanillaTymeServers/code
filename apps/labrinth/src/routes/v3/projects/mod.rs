@@ -503,7 +503,7 @@ pub async fn project_edit_internal(
     req: HttpRequest,
     info: web::Path<(String,)>,
     pool: web::Data<PgPool>,
-    web::Json(new_project): web::Json<EditProject>,
+    web::Json(mut new_project): web::Json<EditProject>,
     redis: web::Data<RedisPool>,
     session_queue: web::Data<AuthQueue>,
     search_state: web::Data<SearchState>,
@@ -1388,6 +1388,10 @@ pub async fn project_edit_internal(
     )
     .await
     .wrap_api_err("updating Minecraft Bedrock server component")?;
+
+    if let Some(Some(shop)) = &mut new_project.shop {
+        shop.season = None;
+    }
 
     reindex_versions |= update(
         &mut transaction,

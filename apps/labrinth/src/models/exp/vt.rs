@@ -76,6 +76,12 @@ component::define! {
         #[create(optional)]
         /// In-game location of the shop.
         pub coordinates: Option<Coordinates>,
+        #[base(serde(default))]
+        #[edit(serde(default))]
+        #[create(default)]
+        /// Season this shop belongs to. Set by the server when the shop is
+        /// created; users cannot choose or change it.
+        pub season: i32,
     }
 }
 

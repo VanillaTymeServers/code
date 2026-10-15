@@ -7,12 +7,14 @@ use crate::database::models::loader_fields::{
     Game, Loader, LoaderField, LoaderFieldEnumValue, LoaderFieldType,
     LoaderMetadata,
 };
+use crate::database::models::season_item::DBSeason;
 use crate::models::link_platform::LinkPlatform;
 use actix_web::{HttpResponse, get, web};
+use chrono::{DateTime, Utc};
 use strum::IntoEnumIterator;
 use xredis::RedisPool;
 
-use crate::database::PgPool;
+use crate::database::{PgPool, ReadOnlyPgPool};
 use itertools::Itertools;
 use serde_json::Value;
 
@@ -25,7 +27,8 @@ pub fn config(cfg: &mut actix_web::web::ServiceConfig) {
         .service(license_text_route)
         .service(link_platform_list_route)
         .service(report_type_list_route)
-        .service(project_type_list_route);
+        .service(project_type_list_route)
+        .service(season_list_route);
 }
 
 #[derive(serde::Serialize, serde::Deserialize)]
@@ -351,4 +354,40 @@ pub async fn project_type_list(
         .await
         .wrap_internal_err("fetching project type from Redis")?;
     Ok(HttpResponse::Ok().json(results))
+}
+
+/// A season of the Vanilla Tyme server.
+#[derive(serde::Serialize, serde::Deserialize, utoipa::ToSchema)]
+pub struct SeasonData {
+    /// Season number.
+    pub id: i32,
+    /// When the season starts or started.
+    pub started_at: DateTime<Utc>,
+    /// Whether this is the season currently running.
+    pub current: bool,
+}
+
+#[utoipa::path(
+    tag = "tags",
+    responses((status = OK, body = Vec<SeasonData>))
+)]
+#[get("/tag/season")]
+pub async fn season_list_route(
+    ro_pool: web::Data<ReadOnlyPgPool>,
+) -> Result<web::Json<Vec<SeasonData>>, ApiError> {
+    let current = DBSeason::current(&***ro_pool)
+        .await
+        .wrap_internal_err("fetching current season")?;
+    let seasons = DBSeason::list(&***ro_pool)
+        .await
+        .wrap_internal_err("fetching seasons")?
+        .into_iter()
+        .map(|season| SeasonData {
+            id: season.id,
+            started_at: season.started_at,
+            current: Some(season.id) == current,
+        })
+        .collect();
+
+    Ok(web::Json(seasons))
 }

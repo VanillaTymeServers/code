@@ -13,8 +13,8 @@ use crate::{
         PgPool,
         models::{
             self, DBOrganization, DBTeamMember, DBUser,
-            project_item::ProjectBuilder, thread_item::ThreadBuilder,
-            version_item::VersionBuilder,
+            project_item::ProjectBuilder, season_item::DBSeason,
+            thread_item::ThreadBuilder, version_item::VersionBuilder,
         },
     },
     file_hosting::FileHost,
@@ -175,7 +175,7 @@ pub async fn create(
         CreateError::Validation(validation_errors_to_string(err, None))
     })?;
 
-    let ProjectCreate { base, components } = create;
+    let ProjectCreate { base, mut components } = create;
 
     exp::component::kinds_valid(
         &components.component_kinds(),
@@ -214,6 +214,14 @@ pub async fn create(
 
     if same_slug_record.exists.unwrap_or(false) {
         return Err(CreateError::SlugCollision);
+    }
+
+    if let Some(shop) = &mut components.shop {
+        let season = DBSeason::current(&mut txn)
+            .await
+            .wrap_internal_err("fetching current season")?
+            .wrap_request_err("no season has started yet")?;
+        shop.season = Some(season);
     }
 
     // create project and supporting records in db
