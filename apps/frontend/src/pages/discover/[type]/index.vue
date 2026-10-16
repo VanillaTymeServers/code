@@ -33,7 +33,8 @@ import { commonMessages } from '@modrinth/ui/src/utils/common-messages'
 import { cycleValue } from '@modrinth/utils'
 import { useQuery, useQueryClient } from '@tanstack/vue-query'
 import { useTimeoutFn } from '@vueuse/core'
-import { computed, ref, watch } from 'vue'
+import { items } from '@vanillatyme/mc-items'
+import { computed, h, markRaw, ref, watch } from 'vue'
 import type { LocationQueryRaw } from 'vue-router'
 
 import LogoAnimated from '~/components/brand/LogoAnimated.vue'
@@ -459,9 +460,16 @@ const projectTypeId = computed(() => projectType.value?.id ?? 'mod')
 debug('projectTypeId:', projectTypeId.value)
 watch(projectTypeId, (val) => debug('projectTypeId changed:', val))
 
+const shopItems = Object.entries(items).map(([id, name]) => ({
+	id,
+	name,
+	icon: markRaw(() =>
+		h('img', { src: `/items/${id}.png`, alt: '', loading: 'lazy', class: 'object-contain' }),
+	),
+}))
 const { data: seasons, suspense: seasonsSuspense } = useQuery(seasonQueryOptions.list(client))
 await seasonsSuspense()
-const searchTags = computed(() => ({ ...tags.value, seasons: seasons.value ?? [] }))
+const searchTags = computed(() => ({ ...tags.value, seasons: seasons.value ?? [], shopItems }))
 	
 const searchState = useBrowseSearch({
 	projectType: projectTypeId,

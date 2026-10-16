@@ -206,11 +206,18 @@ const ALL_PROJECT_TYPES: ProjectType[] = [
 	'server',
 ]
 
+export interface ShopItemTag {
+	id: string
+	name: string
+	icon?: Component
+}
+
 export interface Tags {
 	gameVersions: Labrinth.Tags.v2.GameVersion[]
 	loaders: Labrinth.Tags.v2.Loader[]
 	categories: Labrinth.Tags.v2.Category[]
 	seasons?: Labrinth.Tags.v3.Season[]
+	shopItems?: ShopItemTag[]
 }
 
 export interface SortType {
@@ -437,6 +444,10 @@ export function useSearch(
 		id: 'search.filter.shop_season.current',
 		defaultMessage: 'Season {season} (current)',
 	})
+	const shopSellsFilterName = defineMessage({
+		id: 'search.filter_type.shop_sells',
+		defaultMessage: 'Sells',
+	})
 	const includedContentFilterName = defineMessage({
 		id: 'search.filter_type.included_content',
 		defaultMessage: 'Included content',
@@ -519,7 +530,6 @@ export function useSearch(
 				query_param: 'st',
 				supports: ['include'],
 				searchable: false,
-				ordering: 1,
 				options: [
 					{
 						id: 'shop',
@@ -536,6 +546,23 @@ export function useSearch(
 						icon: ShoppingCartIcon,
 					},
 				],
+			},
+			{
+				id: 'shop_sells',
+				formatted_name: formatMessage(shopSellsFilterName),
+				supported_project_types: ['shop'],
+				display: 'scrollable',
+				query_param: 'sells',
+				supports: ['include'],
+				searchable: true,
+				options: (tags.value.shopItems ?? []).map((item) => ({
+					id: item.id,
+					formatted_name: item.name,
+					icon: item.icon,
+					value: `shop.inventory.item:${item.id}`,
+					query_value: item.id,
+					method: 'or' as const,
+				})),
 			},
 			...Object.values(categoryFilters),
 			{
