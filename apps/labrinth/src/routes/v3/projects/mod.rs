@@ -1391,6 +1391,12 @@ pub async fn project_edit_internal(
 
     if let Some(Some(shop)) = &mut new_project.shop {
         shop.season = None;
+        shop.validate().map_err(|err| {
+            let message =
+                crate::util::validate::validation_errors_to_string(err, None)
+                    .replacen("Field ", "field ", 1);
+            ApiError::Request(eyre!(message))
+        })?;
     }
 
     reindex_versions |= update(

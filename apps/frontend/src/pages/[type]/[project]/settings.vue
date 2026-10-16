@@ -2,6 +2,7 @@
 import {
 	AlignLeftIcon,
 	BookTextIcon,
+	BoxIcon,
 	ChartIcon,
 	GlobeIcon,
 	ImageIcon,
@@ -51,6 +52,7 @@ const isShopProject = computed(() => projectV3.value?.shop != null)
 
 const messages = defineMessages({
 	shop: { id: 'project.settings.shop.title', defaultMessage: 'Shop' },
+	inventory: { id: 'project.settings.inventory.title', defaultMessage: 'Inventory' },
 })
 	
 const navItems = computed(() => {
@@ -127,6 +129,11 @@ const navItems = computed(() => {
 			link: `/${base}/settings/gallery`,
 			label: formatMessage(commonProjectSettingsMessages.gallery),
 			icon: ImageIcon,
+		},
+		isShopProject.value && {
+			link: `/${base}/settings/inventory`,
+			label: formatMessage(messages.inventory),
+			icon: BoxIcon,
 		},
 		!isShopProject.value && {
 			link: `/${base}/settings/links`,

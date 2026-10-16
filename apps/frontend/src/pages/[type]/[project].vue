@@ -831,6 +831,10 @@ const messages = defineMessages({
 		id: 'project.gallery.title',
 		defaultMessage: 'Gallery',
 	},
+	inventoryTab: {
+		id: 'project.inventory.title',
+		defaultMessage: 'Inventory',
+	},
 	moderationTab: {
 		id: 'project.moderation.title',
 		defaultMessage: 'Moderation',
@@ -2541,6 +2545,13 @@ const navLinks = computed(() => {
 			label: formatMessage(messages.galleryTab),
 			href: withInstallContextQuery(`${projectUrl}/gallery`),
 			shown: galleryCount > 0 || !!currentMember.value,
+		},
+		{
+			label: formatMessage(messages.inventoryTab),
+			href: withInstallContextQuery(`${projectUrl}/inventory`),
+			shown:
+				projectV3.value?.shop != null &&
+				(projectV3.value.shop.inventory.length > 0 || !!currentMember.value),
 		},
 		{
 			label: formatMessage(messages.changelogTab),

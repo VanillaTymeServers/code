@@ -1333,16 +1333,33 @@ export namespace Labrinth {
 				z: number
 			}
 
+			export interface InventoryPrice {
+				item: string
+				amount: number
+			}
+
+			export interface InventoryEntry {
+				item: string
+				custom_name?: string | null
+				amount: number
+				price: InventoryPrice
+				sale_price?: number | null
+				note?: string | null
+				in_stock: boolean
+				popular: boolean
+			}
+
 			export interface ShopProject {
 				stall: boolean
 				stall_color?: StallColor | null
 				coordinates?: Coordinates | null
 				season: number
+				inventory: InventoryEntry[]
 			}
 
 			export interface CreateShopProjectRequest {
 				base: CreateProjectBase
-				shop: Omit<ShopProject, 'season'>
+				shop: Omit<ShopProject, 'season' | 'inventory'>
 			}
 
 			export interface CreateServerProjectRequest {
