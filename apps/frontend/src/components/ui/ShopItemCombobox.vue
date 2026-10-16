@@ -1,22 +1,22 @@
 <template>
 	<Combobox
 		v-model="model"
-		:options="suggestedOptions"
+		:options="dropdownOptions"
 		:search-options="itemOptions"
 		:placeholder="placeholder"
 		:search-placeholder="placeholder"
 		:disabled="disabled"
-		:min-search-length-to-open="suggested.length > 0 ? 0 : 2"
 		searchable
 		sync-with-selection
 		select-search-text-on-focus
+		show-icon-in-selected
 		trigger-type="base"
 	/>
 </template>
 
 <script setup lang="ts">
-import { Combobox, type ComboboxOption } from '@modrinth/ui'
-import { items } from '@vanillatyme/mc-items'
+import { Combobox, type ComboboxOption, defineMessages, useVIntl } from '@modrinth/ui'
+import { shopItems } from '~/helpers/shop-items'
 import { h, markRaw } from 'vue'
 
 const props = withDefaults(
@@ -35,25 +35,52 @@ const props = withDefaults(
 
 const model = defineModel<string>()
 
+const PREVIEW_LIMIT = 100
+
+const { formatMessage } = useVIntl()
+
+const messages = defineMessages({
+	typeToSearch: {
+		id: 'shop.item-combobox.type-to-search',
+		defaultMessage: 'Type to search all {count} items',
+	},
+})
+	
 function itemIcon(id: string) {
 	return markRaw(() =>
 		h('img', {
 			src: `/items/${id}.png`,
 			alt: '',
 			loading: 'lazy',
-			class: 'size-6 shrink-0 object-contain',
+			class: 'size-5 shrink-0 object-contain',
 		}),
 	)
 }
 
-const itemOptions: ComboboxOption<string>[] = Object.entries(items).map(([id, name]) => ({
+const itemOptions: ComboboxOption<string>[] = shopItems.map(({ id, name }) => ({
 	value: id,
 	label: name,
 	icon: itemIcon(id),
 	searchTerms: [id],
 }))
 
-const suggestedOptions = computed(() =>
-	itemOptions.filter((option) => props.suggested.includes(option.value)),
-)
+const dropdownOptions = computed(() => {
+	const suggestedOptions = props.suggested
+		.map((id) => itemOptions.find((option) => option.value === id))
+		.filter((option) => option !== undefined)
+	const otherOptions = itemOptions
+		.filter((option) => !props.suggested.includes(option.value))
+		.slice(0, PREVIEW_LIMIT)
+
+	return [
+		...(suggestedOptions.length > 0 ? [...suggestedOptions, { type: 'divider' as const }] : []),
+		...otherOptions,
+		{ type: 'divider' as const },
+		{
+			value: '',
+			label: formatMessage(messages.typeToSearch, { count: itemOptions.length }),
+			disabled: true,
+		},
+	]
+})
 </script>

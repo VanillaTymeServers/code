@@ -15,7 +15,7 @@
 			<Input
 				ref="searchTriggerRef"
 				v-model="searchQuery"
-				:icon="showSearchIcon ? SearchIcon : undefined"
+				:icon="searchLeadingIcon"
 				:type="searchType"
 				:name="searchName"
 				:placeholder="searchPlaceholder || placeholder"
@@ -403,6 +403,14 @@ const selectedOption = computed<ComboboxOption<T> | undefined>(() => {
 	)
 })
 
+/** Leading icon of the search input: the selected option's icon while idle, if enabled */
+const searchLeadingIcon = computed(() => {
+	if (props.showIconInSelected && selectedOption.value?.icon && !userHasTyped.value) {
+		return selectedOption.value.icon
+	}
+	return props.showSearchIcon ? SearchIcon : undefined
+})
+	
 /** Extra content (e.g. channel pill) next to the label while the search field is idle */
 const searchSelectionOverlayVisible = computed(() => {
 	if (!props.searchable || !props.syncWithSelection || !selectedOption.value) return false

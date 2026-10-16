@@ -33,7 +33,6 @@ import { commonMessages } from '@modrinth/ui/src/utils/common-messages'
 import { cycleValue } from '@modrinth/utils'
 import { useQuery, useQueryClient } from '@tanstack/vue-query'
 import { useTimeoutFn } from '@vueuse/core'
-import { items } from '@vanillatyme/mc-items'
 import { computed, h, markRaw, ref, watch } from 'vue'
 import type { LocationQueryRaw } from 'vue-router'
 
@@ -49,6 +48,7 @@ import type {
 import { useServerInstallContent } from '~/composables/use-server-install-content'
 import { withLabrinthCanaryHeader } from '~/helpers/canary.ts'
 import type { DisplayLocation, DisplayMode } from '~/plugins/cosmetics.ts'
+import { shopItems } from '~/helpers/shop-items'
 
 const { formatMessage } = useVIntl()
 const debug = useDebugLogger('Discover')
@@ -460,7 +460,7 @@ const projectTypeId = computed(() => projectType.value?.id ?? 'mod')
 debug('projectTypeId:', projectTypeId.value)
 watch(projectTypeId, (val) => debug('projectTypeId changed:', val))
 
-const shopItems = Object.entries(items).map(([id, name]) => ({
+const shopItemTags = shopItems.map(({ id, name }) => ({
 	id,
 	name,
 	icon: markRaw(() =>
@@ -469,8 +469,12 @@ const shopItems = Object.entries(items).map(([id, name]) => ({
 }))
 const { data: seasons, suspense: seasonsSuspense } = useQuery(seasonQueryOptions.list(client))
 await seasonsSuspense()
-const searchTags = computed(() => ({ ...tags.value, seasons: seasons.value ?? [], shopItems }))
-	
+const searchTags = computed(() => ({
+	...tags.value,
+	seasons: seasons.value ?? [],
+	shopItems: shopItemTags,
+}))
+
 const searchState = useBrowseSearch({
 	projectType: projectTypeId,
 	tags: searchTags,

@@ -202,8 +202,6 @@ const CURRENCIES = [
 	'emerald',
 	'emerald_block',
 	'netherite_ingot',
-	'gold_ingot',
-	'iron_ingot',
 ]
 
 const modal = ref<InstanceType<typeof NewModal>>()
