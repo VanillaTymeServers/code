@@ -38,7 +38,7 @@ function toEntries(
 		.map((project) => ({
 			id: project.id,
 			title: project.title,
-			link: `/${getProjectTypeForUrlShorthand(project.project_types[0], [], tags.value)}/${project.slug}`,
+			link: `/${getProjectTypeForUrlShorthand(project.project_types[0], [], tags.value)}/${project.slug ?? project.id}`,
 		}))
 }
 

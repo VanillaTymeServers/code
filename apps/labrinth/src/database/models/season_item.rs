@@ -1,6 +1,6 @@
 use chrono::{DateTime, Utc};
 use eyre::{Result, WrapErr};
-use crate::database::models::{DBTeamId, DBUserId};
+use crate::database::models::{DBProjectId, DBTeamId, DBUserId};
 
 /// A season of the Vanilla Tyme server. The current season is the highest one
 /// whose start time has passed, so seasons can be scheduled ahead of time.
@@ -87,5 +87,31 @@ impl DBSeason {
         .wrap_err("fetching shop season of team")?;
 
         Ok(season.flatten())
+    }
+
+    /// Removes `slug` from the archived shop that has it, if any, so a new project can use it.
+    /// The archived shop stays reachable by its ID. Returns the archived shop's ID.
+    pub async fn free_archived_slug(
+        slug: &str,
+        exec: impl crate::database::Executor<'_, Database = sqlx::Postgres>,
+    ) -> Result<Option<DBProjectId>> {
+        let project_id = sqlx::query_scalar!(
+            r#"
+            UPDATE mods
+            SET slug = NULL
+            WHERE slug = LOWER($1)
+                AND components ? 'shop'
+                AND (components -> 'shop' ->> 'season')::int IS DISTINCT FROM (
+                    SELECT MAX(id) FROM seasons WHERE started_at <= NOW()
+                )
+            RETURNING id
+            "#,
+            slug,
+        )
+        .fetch_optional(exec)
+        .await
+        .wrap_err("freeing slug of archived shop")?;
+
+        Ok(project_id.map(DBProjectId))
     }
 }

@@ -1,0 +1,22 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE mods\n            SET slug = NULL\n            WHERE slug = LOWER($1)\n                AND components ? 'shop'\n                AND (components -> 'shop' ->> 'season')::int IS DISTINCT FROM (\n                    SELECT MAX(id) FROM seasons WHERE started_at <= NOW()\n                )\n            RETURNING id\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int8"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "f27bd49dd249bd09a78b6660724575d94106250dc9d064e24161b136d48298d0"
+}

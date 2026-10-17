@@ -202,6 +202,14 @@ pub async fn create(
         .await
         .wrap_internal_err("failed to begin transaction")?;
 
+    let freed_slug_project = if components.shop.is_some() {
+        DBSeason::free_archived_slug(&slug, &mut txn)
+            .await
+            .wrap_internal_err("freeing slug of archived shop")?
+    } else {
+        None
+    };
+
     let same_slug_record = sqlx::query!(
         "SELECT EXISTS(
             SELECT 1 FROM mods WHERE slug = $1 OR text_id_lower = $1
@@ -402,6 +410,17 @@ pub async fn create(
     txn.commit()
         .await
         .wrap_internal_err("failed to commit transaction")?;
+
+    if let Some(freed_project_id) = freed_slug_project {
+        super::super::projects::clear_project_cache_and_queue_search(
+            &redis,
+            &search_state,
+            freed_project_id,
+            Some(slug.clone()),
+            None,
+        )
+        .await?;
+    }
 
     super::super::projects::clear_project_cache_and_queue_search(
         &redis,

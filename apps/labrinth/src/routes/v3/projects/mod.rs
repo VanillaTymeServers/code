@@ -1030,6 +1030,22 @@ pub async fn project_edit_internal(
             )));
         }
 
+        if project_item.inner.components.shop.is_some()
+            && let Some(freed_project_id) =
+                DBSeason::free_archived_slug(slug, &mut transaction)
+                    .await
+                    .wrap_internal_err("freeing slug of archived shop")?
+        {
+            clear_project_cache_and_queue_search(
+                &redis,
+                &search_state,
+                freed_project_id,
+                Some(slug.to_lowercase()),
+                None,
+            )
+            .await?;
+        }
+
         let existing = db_models::DBProject::get(
             &slug.to_lowercase(),
             &mut transaction,
