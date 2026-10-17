@@ -13,6 +13,7 @@ use crate::database::models::thread_item::ThreadMessageBuilder;
 use crate::database::models::{
     DBModerationLock, DBProjectId, DBTeamMember, ids as db_ids, image_item,
 };
+use crate::database::models::season_item::DBSeason;
 use crate::database::{self, models as db_models};
 use crate::database::{PgPool, PgTransaction, ReadOnlyPgPool};
 use crate::env::ENV;
@@ -457,6 +458,31 @@ pub struct EditProject {
     pub shop: Option<Option<exp::vt::ShopProjectEdit>>,
 }
 
+/// Refuses changes to a shop from a past season. Staff may still change archived shops.
+pub async fn ensure_shop_editable(
+    shop: Option<&exp::vt::ShopProject>,
+    user: &User,
+    pool: &PgPool,
+) -> Result<(), ApiError> {
+    let Some(shop) = shop else {
+        return Ok(());
+    };
+    if user.role.is_mod() {
+        return Ok(());
+    }
+
+    let current_season = DBSeason::current(pool)
+        .await
+        .wrap_internal_err("fetching current season")?;
+    if Some(shop.season) != current_season {
+        return Err(ApiError::Request(eyre::eyre!(
+            "archived shops cannot be changed"
+        )));
+    }
+
+    Ok(())
+}
+
 #[allow(clippy::too_many_arguments)]
 /// Update a project.
 #[utoipa::path(
@@ -536,6 +562,13 @@ pub async fn project_edit_internal(
     };
 
     let id = project_item.inner.id;
+
+    ensure_shop_editable(
+        project_item.inner.components.shop.as_ref(),
+        &user,
+        &**pool,
+    )
+    .await?;
 
     let (team_member, organization_team_member) =
         db_models::DBTeamMember::get_for_project_permissions(
@@ -2082,6 +2115,15 @@ pub async fn projects_edit(
         ))));
     }
 
+    for project in &projects_data {
+        ensure_shop_editable(
+            project.inner.components.shop.as_ref(),
+            &user,
+            &**pool,
+        )
+        .await?;
+    }
+
     let team_ids = projects_data
         .iter()
         .map(|x| x.inner.team_id)
@@ -2478,6 +2520,13 @@ pub async fn project_icon_edit_internal(
             "the specified project does not exist!".to_string()
         })?;
 
+    ensure_shop_editable(
+        project_item.inner.components.shop.as_ref(),
+        &user,
+        &**pool,
+    )
+    .await?;
+
     if !user.role.is_mod() {
         let (team_member, organization_team_member) =
             db_models::DBTeamMember::get_for_project_permissions(
@@ -2642,6 +2691,13 @@ pub async fn delete_project_icon_internal(
         .wrap_request_err_with(|| {
             "the specified project does not exist!".to_string()
         })?;
+
+    ensure_shop_editable(
+        project_item.inner.components.shop.as_ref(),
+        &user,
+        &**pool,
+    )
+    .await?;
 
     if !user.role.is_mod() {
         let (team_member, organization_team_member) =
@@ -2818,6 +2874,13 @@ pub async fn add_gallery_item_internal(
         .wrap_request_err_with(|| {
             "the specified project does not exist!".to_string()
         })?;
+
+    ensure_shop_editable(
+        project_item.inner.components.shop.as_ref(),
+        &user,
+        &**pool,
+    )
+    .await?;
 
     if project_item.gallery_items.len() > 64 {
         return Err(ApiError::Auth(eyre::eyre!(
@@ -3072,6 +3135,13 @@ pub async fn edit_gallery_item_internal(
         "the specified project does not exist!".to_string()
     })?;
 
+    ensure_shop_editable(
+        project_item.inner.components.shop.as_ref(),
+        &user,
+        &**pool,
+    )
+    .await?;
+
     if !user.role.is_mod() {
         let (team_member, organization_team_member) =
             db_models::DBTeamMember::get_for_project_permissions(
@@ -3297,6 +3367,13 @@ pub async fn delete_gallery_item_internal(
     .wrap_request_err_with(|| {
         "the specified project does not exist!".to_string()
     })?;
+
+    ensure_shop_editable(
+        project_item.inner.components.shop.as_ref(),
+        &user,
+        &**pool,
+    )
+    .await?;
 
     if !user.role.is_mod() {
         let (team_member, organization_team_member) =

@@ -4,9 +4,11 @@ use crate::database::DBProject;
 use crate::database::PgPool;
 use crate::database::models::notification_item::NotificationBuilder;
 use crate::database::models::team_item::TeamAssociationId;
-use crate::database::models::{DBOrganization, DBTeam, DBTeamMember, DBUser};
+use crate::database::models::{
+    DBOrganization, DBTeam, DBTeamId, DBTeamMember, DBUser,
+};
 use crate::database::models::season_item::DBSeason;
-use crate::models::users::Role;
+use crate::models::users::{Role, User};
 use crate::models::ids::TeamId;
 use crate::models::notifications::NotificationBody;
 use crate::models::pats::Scopes;
@@ -847,6 +849,34 @@ pub struct EditTeamMember {
     pub ordering: Option<i64>,
 }
 
+/// Refuses changes to the team of a shop from a past season. Staff may still change them.
+async fn ensure_team_shop_editable(
+    team_id: DBTeamId,
+    user: &User,
+    pool: &PgPool,
+) -> Result<(), ApiError> {
+    if user.role.is_mod() {
+        return Ok(());
+    }
+    let Some(shop_season) = DBSeason::team_shop_season(team_id, pool)
+        .await
+        .wrap_internal_err("fetching shop season of team")?
+    else {
+        return Ok(());
+    };
+
+    let current_season = DBSeason::current(pool)
+        .await
+        .wrap_internal_err("fetching current season")?;
+    if Some(shop_season) != current_season {
+        return Err(ApiError::Request(eyre::eyre!(
+            "archived shops cannot be changed"
+        )));
+    }
+
+    Ok(())
+}
+
 #[utoipa::path(tag = "teams", responses((status = NO_CONTENT)))]
 #[patch("/team/{id}/members/{user_id}")]
 pub async fn edit_team_member_route(
@@ -887,6 +917,8 @@ pub async fn edit_team_member(
     .await
     .wrap_auth_err("authenticating API request")?
     .1;
+
+    ensure_team_shop_editable(id, &current_user, &**pool).await?;
 
     let team_association = DBTeam::get_association(id, &**pool)
         .await
@@ -1100,6 +1132,8 @@ pub async fn transfer_ownership(
     .await
     .wrap_auth_err("authenticating API request")?
     .1;
+
+    ensure_team_shop_editable(id.into(), &current_user, &**pool).await?;
 
     // Forbid transferring ownership of a project team that is owned by an organization
     // These are owned by the organization owner, and must be removed from the organization first
@@ -1315,6 +1349,8 @@ pub async fn remove_team_member(
     .await
     .wrap_auth_err("authenticating API request")?
     .1;
+
+    ensure_team_shop_editable(id, &current_user, &**pool).await?;
 
     let team_association = DBTeam::get_association(id, &**pool)
         .await
