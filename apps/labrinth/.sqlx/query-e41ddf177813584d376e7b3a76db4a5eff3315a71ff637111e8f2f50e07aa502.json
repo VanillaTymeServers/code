@@ -1,0 +1,22 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT (components -> 'shop' ->> 'season')::int AS season\n            FROM mods\n            WHERE team_id = $1 AND components ? 'shop'\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "season",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int8"
+      ]
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "e41ddf177813584d376e7b3a76db4a5eff3315a71ff637111e8f2f50e07aa502"
+}
