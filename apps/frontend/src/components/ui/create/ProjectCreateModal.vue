@@ -62,24 +62,6 @@
 				/>
 			</div>
 			<div class="flex flex-col gap-2.5">
-				<label for="owner">
-					<span class="text-md font-semibold text-contrast">
-						{{ formatMessage(messages.ownerLabel) }}
-					</span>
-				</label>
-				<Combobox
-					id="owner"
-					v-model="owner"
-					name="owner"
-					:options="[userOption, ...ownerOptions]"
-					searchable
-					:disabled="hasHitLimit"
-					select-search-text-on-focus
-					show-icon-in-selected
-				/>
-				<span>{{ formatMessage(messages.ownerDescription) }}</span>
-			</div>
-			<div class="flex flex-col gap-2.5">
 				<label for="visibility" class="flex flex-col gap-1">
 					<span class="text-md font-semibold text-contrast">
 						{{ formatMessage(commonMessages.visibilityLabel) }}
@@ -132,12 +114,10 @@
 
 <script setup lang="ts">
 import type { Labrinth } from '@modrinth/api-client'
-import { OrganizationIcon, PlusIcon, XIcon } from '@modrinth/assets'
+import { PlusIcon, XIcon } from '@modrinth/assets'
 import { Button } from '@modrinth/ui'
 import {
 	Chips,
-	Combobox,
-	type ComboboxOption,
 	commonMessages,
 	defineMessages,
 	injectModrinthClient,
@@ -147,7 +127,7 @@ import {
 	Textarea,
 	useVIntl,
 } from '@modrinth/ui'
-import { computed, defineAsyncComponent, h } from 'vue'
+import { computed } from 'vue'
 
 import SlugSuggestions from '~/components/ui/SlugSuggestions.vue'
 import {
@@ -192,14 +172,6 @@ const messages = defineMessages({
 	typeStall: {
 		id: 'create.shop.type-stall',
 		defaultMessage: 'Stall',
-	},
-	ownerLabel: {
-		id: 'create.project.owner-label',
-		defaultMessage: 'Owner',
-	},
-	ownerDescription: {
-		id: 'create.shop.owner-description',
-		defaultMessage: `Set the shop owner as yourself or an organization you're a member of.`,
 	},
 	nameLabel: {
 		id: 'create.project.name-label',
@@ -249,23 +221,7 @@ const messages = defineMessages({
 		id: 'create.project.missing-fields-tooltip',
 		defaultMessage: 'Missing fields: {fields}',
 	},
-	unknownUser: {
-		id: 'create.project.unknown-user',
-		defaultMessage: 'Unknown user',
-	},
-	userAvatarAlt: {
-		id: 'create.project.user-avatar-alt',
-		defaultMessage: 'User Avatar',
-	},
-	organizationIconAlt: {
-		id: 'create.project.organization-icon-alt',
-		defaultMessage: '{name} Icon',
-	},
 })
-
-const props = defineProps<{
-	organizationId?: string | null
-}>()
 
 const modal = ref<InstanceType<typeof NewModal>>()
 const hasHitLimit = ref(false)
@@ -284,9 +240,6 @@ const { checking: checkingSlugSuggestions, suggestions: slugSuggestions } =
 		title: name,
 		username: () => auth.value.user?.username,
 	})
-const ownerOptions = ref<ComboboxOption<string>[]>([])
-const owner = ref<string | undefined>('self')
-const organizations = ref<Labrinth.Projects.v3.Organization[]>([])
 const visibilities = ref<VisibilityOption[]>([
 	{
 		actual: 'approved',
@@ -321,8 +274,6 @@ const disableCreate = computed(() => {
 	if (!manualSlug.value && checkingSlugSuggestions.value) return true
 	if (!manualSlug.value && !slugSuggestions.value.includes(slug.value)) return true
 	if (description.value.trim().length < 3) return true
-	if (owner.value !== 'self' && !organizations.value.find((org) => org.id === owner.value))
-		return true
 	return false
 })
 
@@ -331,8 +282,6 @@ const missingFieldsTooltip = computed(() => {
 	if (!name.value.trim()) missingFields.push(formatMessage(messages.nameLabel))
 	if (!slug.value.trim()) missingFields.push(formatMessage(messages.urlLabel))
 	if (description.value.trim().length < 3) missingFields.push(formatMessage(messages.summaryLabel))
-	if (owner.value !== 'self' && !organizations.value.find((org) => org.id === owner.value))
-		missingFields.push(formatMessage(messages.ownerLabel))
 
 	if (missingFields.length === 0) return ''
 	return formatMessage(messages.missingFieldsTooltip, {
@@ -344,66 +293,8 @@ const cancel = () => {
 	modal.value?.hide()
 }
 
-const userOption = computed(() => ({
-	value: 'self',
-	label: auth.value.user?.username || formatMessage(messages.unknownUser),
-	icon: auth.value.user?.avatar_url
-		? markRaw(
-				defineAsyncComponent(() =>
-					Promise.resolve({
-						setup: () => () =>
-							h('img', {
-								src: auth.value.user?.avatar_url,
-								alt: formatMessage(messages.userAvatarAlt),
-								class: 'h-5 w-5 rounded-full',
-							}),
-					}),
-				),
-			)
-		: undefined,
-}))
-
 const { labrinth } = injectModrinthClient()
 
-async function fetchOrganizations() {
-	if (!auth.value.user?.id) return
-
-	try {
-		const orgs = (await useBaseFetch(`user/${auth.value.user.id}/organizations`, {
-			apiVersion: 3,
-		})) as Labrinth.Projects.v3.Organization[]
-
-		organizations.value = orgs || []
-
-		ownerOptions.value = organizations.value.map((org) => ({
-			value: org.id,
-			label: org.name,
-			icon: org.icon_url
-				? markRaw(
-						defineAsyncComponent(() =>
-							Promise.resolve({
-								setup: () => () =>
-									h('img', {
-										src: org.icon_url,
-										alt: formatMessage(messages.organizationIconAlt, { name: org.name }),
-										class: 'h-5 w-5 rounded',
-									}),
-							}),
-						),
-					)
-				: markRaw(
-						defineAsyncComponent(() =>
-							Promise.resolve({
-								setup: () => () => h(OrganizationIcon, { class: 'size-5' }),
-							}),
-						),
-					),
-		}))
-		if (props.organizationId) owner.value = props.organizationId
-	} catch (err) {
-		console.error('Failed to fetch organizations:', err)
-	}
-}
 async function createProject() {
 	if (disableCreate.value) return
 	startLoading()
@@ -416,7 +307,6 @@ async function createProject() {
 				summary: description.value.trim(),
 				description: '',
 				requested_status: visibility.value.actual,
-				organization_id: owner.value !== 'self' ? owner.value : undefined,
 			},
 			shop: {
 				stall: shopType.value.stall,
@@ -436,15 +326,13 @@ async function createProject() {
 	stopLoading()
 }
 
-async function show(event?: MouseEvent) {
+function show(event?: MouseEvent) {
 	name.value = ''
 	slug.value = ''
 	description.value = ''
 	manualSlug.value = false
 	showSlugSuggestions.value = false
-	owner.value = 'self'
 	shopType.value = shopTypes.value[0]
-	await fetchOrganizations()
 	modal.value?.show(event)
 }
 

@@ -260,7 +260,7 @@
 				</div>
 			</div>
 		</div>
-		<section class="universal-card">
+		<section v-if="!isShopProject" class="universal-card">
 			<div class="label">
 				<span class="label__title size-card-header">Organization</span>
 			</div>
@@ -602,6 +602,7 @@ const {
 useProjectSettingsHeadTitle(commonProjectSettingsMessages.members)
 
 const isServerProject = computed(() => projectV3.value?.minecraft_server != null)
+const isShopProject = computed(() => projectV3.value?.shop != null)
 
 const auth = await useAuth()
 

@@ -23,17 +23,6 @@
 					:value="membersCount"
 					:label="formatMessage(messages.membersLabel)"
 				/>
-				<PageHeaderMetadataNumberItem
-					:icon="BoxIcon"
-					:value="projectsCount"
-					:label="formatMessage(messages.projectsLabel)"
-				/>
-				<PageHeaderMetadataNumberItem
-					:icon="DownloadIcon"
-					:value="downloads"
-					:label="formatMessage(messages.downloadsLabel)"
-					:tooltip="formatNumber(downloads)"
-				/>
 			</PageHeaderMetadata>
 		</template>
 
@@ -59,9 +48,7 @@
 
 <script setup lang="ts">
 import {
-	BoxIcon,
 	ClipboardCopyIcon,
-	DownloadIcon,
 	MoreVerticalIcon,
 	OrganizationIcon,
 	SettingsIcon,
@@ -78,23 +65,14 @@ import {
 	PageHeaderBadgeItem,
 	PageHeaderMetadata,
 	PageHeaderMetadataNumberItem,
-	useFormatNumber,
 	useVIntl,
 } from '@modrinth/ui'
 import { computed } from 'vue'
 
 const messages = defineMessages({
-	downloadsLabel: {
-		id: 'organization.label.downloads',
-		defaultMessage: 'downloads',
-	},
 	manage: {
 		id: 'organization.button.manage',
 		defaultMessage: 'Manage',
-	},
-	manageProjects: {
-		id: 'organization.button.manage-projects',
-		defaultMessage: 'Manage projects',
 	},
 	membersLabel: {
 		id: 'organization.label.members',
@@ -104,13 +82,9 @@ const messages = defineMessages({
 		id: 'organization.label.organization',
 		defaultMessage: 'Organization',
 	},
-	projectsLabel: {
-		id: 'organization.label.projects',
-		defaultMessage: 'projects',
-	},
 })
 
-const props = defineProps<{
+defineProps<{
 	organization: {
 		id: string
 		name: string
@@ -119,29 +93,17 @@ const props = defineProps<{
 		icon_url?: string | null
 	}
 	membersCount: number
-	projectsCount: number
-	downloads: number
 	canManage?: boolean
 }>()
 
 const emit = defineEmits<{
-	manageProjects: []
 	copyId: []
 	copyPermalink: []
 }>()
 
 const { formatMessage } = useVIntl()
-const formatNumber = useFormatNumber()
 
 const moreActions = computed<ButtonMenuOption[]>(() => [
-	{
-		id: 'manage-projects',
-		label: formatMessage(messages.manageProjects),
-		icon: BoxIcon,
-		action: () => emit('manageProjects'),
-		shown: props.canManage,
-	},
-	{ type: 'divider', shown: props.canManage },
 	{
 		id: 'copy-id',
 		label: formatMessage(commonMessages.copyIdButton),

@@ -7,7 +7,6 @@
 		class="new-page sidebar"
 		:class="{ 'alt-layout': cosmetics.leftContentLayout || routeHasSettings }"
 	>
-		<ModalCreation ref="modal_creation" :organization-id="organization.id" />
 		<template v-if="routeHasSettings">
 			<template v-if="canAccessSettings">
 				<div class="normal-page__sidebar">
@@ -43,11 +42,6 @@
 								icon: UsersIcon,
 							},
 							{
-								link: `/organization/${organization.slug}/settings/projects`,
-								label: 'Projects',
-								icon: BoxIcon,
-							},
-							{
 								link: `/organization/${organization.slug}/settings/analytics`,
 								label: 'Analytics',
 								icon: ChartIcon,
@@ -65,10 +59,7 @@
 				<OrganizationPageHeader
 					:organization="organization"
 					:members-count="acceptedMembers?.length || 0"
-					:projects-count="projects?.length || 0"
-					:downloads="sumDownloads"
 					:can-manage="!!(auth.user && currentMember)"
-					@manage-projects="router.push(`/organization/${organization.slug}/settings/projects`)"
 					@copy-id="copyId"
 					@copy-permalink="copyPermalink"
 				/>
@@ -122,28 +113,6 @@
 						</Button>
 					</div>
 				</div>
-				<NavTabs v-if="navLinks.length > 2" :links="navLinks" replace page-nav />
-				<ProjectList
-					v-if="projects && projects.length > 0"
-					:projects="displayedProjects"
-					:show-status="canSeeProjectStatus"
-				/>
-				<div v-else-if="true" class="error">
-					<UpToDate class="icon" />
-					<br />
-					<span class="preserve-lines text">
-						<template v-if="isPermission(currentMember?.permissions, 1 << 4)">
-							<IntlFormatted :message-id="messages.noProjectsWithCreatePrompt">
-								<template #create-link="{ children }">
-									<a class="link" @click="modal_creation?.show()"
-										><component :is="() => normalizeChildren(children)"
-									/></a>
-								</template>
-							</IntlFormatted>
-						</template>
-						<template v-else>{{ formatMessage(messages.noProjects) }}</template>
-					</span>
-				</div>
 			</div>
 		</template>
 	</div>
@@ -152,7 +121,6 @@
 <script setup lang="ts">
 import type { Labrinth } from '@modrinth/api-client'
 import {
-	BoxIcon,
 	ChartIcon,
 	CheckIcon,
 	CrownIcon,
@@ -164,26 +132,14 @@ import {
 import {
 	Avatar,
 	Button,
-	catalogProjectTypes,
-	commonMessages,
-	defineMessages,
-	filterProjectsByType,
 	injectModrinthClient,
-	IntlFormatted,
-	NavTabs,
-	normalizeChildren,
-	parseProjectTypeRouteParam,
-	ProjectList,
 	SidebarCard,
 	useCompactNumber,
-	useVIntl,
 } from '@modrinth/ui'
-import type { Organization, ProjectType } from '@modrinth/utils'
+import type { Organization } from '@modrinth/utils'
 import { useQuery, useQueryClient } from '@tanstack/vue-query'
 
-import UpToDate from '~/assets/images/illustrations/up_to_date.svg?component'
 import AdPlaceholder from '~/components/ui/AdPlaceholder.vue'
-import ModalCreation from '~/components/ui/create/ProjectCreateModal.vue'
 import NavStack from '~/components/ui/NavStack.vue'
 import OrganizationPageHeader from '~/components/ui/OrganizationPageHeader.vue'
 import { warmProjectCheckCaches } from '~/composables/queries/project'
@@ -192,35 +148,16 @@ import {
 	OrganizationContext,
 	provideOrganizationContext,
 } from '~/providers/organization-context.ts'
-import { isPermission } from '~/utils/permissions.ts'
-import { projectUserSorting } from '~/utils/projects.ts'
 
 type ProjectV3 = Labrinth.Projects.v3.Project
-
-const vintl = useVIntl()
-const { formatMessage } = vintl
-
-const messages = defineMessages({
-	noProjects: {
-		id: 'organization.projects.none',
-		defaultMessage: "This organization doesn't have any projects yet.",
-	},
-	noProjectsWithCreatePrompt: {
-		id: 'organization.projects.none-with-create-prompt',
-		defaultMessage:
-			"This organization doesn't have any projects yet. Would you like to <create-link>create one</create-link>?",
-	},
-})
 
 const { formatCompactNumber } = useCompactNumber()
 
 const auth: { user: any } & any = await useAuth()
 const cosmetics = useCosmetics()
 const route = useNativeRoute()
-const router = useRouter()
 const tags = useGeneratedState()
 const config = useRuntimeConfig()
-const modal_creation = useTemplateRef('modal_creation')
 
 const orgId = useRouteId('organization')
 
@@ -312,24 +249,6 @@ const isInvited = computed(() => {
 	return currentMember.value?.accepted === false
 })
 
-const projectTypes = computed(() => catalogProjectTypes(projects.value ?? []))
-
-const displayedProjects = computed(() =>
-	filterProjectsByType(projects.value ?? [], parseProjectTypeRouteParam(route.params.projectType))
-		.slice()
-		.sort(projectUserSorting),
-)
-
-const sumDownloads = computed(() => {
-	let sum = 0
-
-	for (const project of projects.value ?? []) {
-		sum += project.downloads
-	}
-
-	return sum
-})
-
 const onAcceptInvite = useClientTry(async () => {
 	await acceptTeamInvite(organization.value?.team_id)
 	await refreshOrganization()
@@ -352,22 +271,6 @@ const { currentMember } = organizationContext
 provideOrganizationContext(organizationContext)
 
 const canAccessSettings = computed(() => !!currentMember.value?.accepted)
-
-const authUserId = computed(() => auth.value?.user?.id as string | undefined)
-const viewerProjectsQuery = useQuery({
-	queryKey: computed(() => ['user', authUserId.value, 'projects']),
-	queryFn: () => client.labrinth.users_v3.getProjects(authUserId.value!),
-	enabled: computed(() => !!authUserId.value && !!organization.value && !currentMember.value),
-	staleTime: 30_000,
-})
-const viewerMemberProjectIds = computed(
-	() => new Set((viewerProjectsQuery.data.value ?? []).map((project) => project.id)),
-)
-
-function canSeeProjectStatus(project: ProjectV3) {
-	if (currentMember.value) return true
-	return viewerMemberProjectIds.value.has(project.id)
-}
 
 watch(
 	[routeHasSettings, acceptedMembers, currentMember],
@@ -411,19 +314,6 @@ watch(
 	},
 	{ immediate: true },
 )
-
-const navLinks = computed(() => [
-	{
-		label: formatMessage(commonMessages.allProjectType),
-		href: `/organization/${organization.value?.slug}`,
-	},
-	...projectTypes.value.map((x) => {
-		return {
-			label: formatMessage(getProjectTypeMessage(x as ProjectType, true)),
-			href: `/organization/${organization.value?.slug}/${x}s`,
-		}
-	}),
-])
 
 async function copyId() {
 	await navigator.clipboard.writeText(organization.value?.id ?? '')
