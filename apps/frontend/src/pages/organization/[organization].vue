@@ -41,11 +41,6 @@
 								label: 'Members',
 								icon: UsersIcon,
 							},
-							{
-								link: `/organization/${organization.slug}/settings/analytics`,
-								label: 'Analytics',
-								icon: ChartIcon,
-							},
 						]"
 					/>
 				</div>
@@ -121,7 +116,6 @@
 <script setup lang="ts">
 import type { Labrinth } from '@modrinth/api-client'
 import {
-	ChartIcon,
 	CheckIcon,
 	CrownIcon,
 	SettingsIcon,
