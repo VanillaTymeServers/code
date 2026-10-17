@@ -217,6 +217,24 @@ pub async fn create(
     }
 
     if let Some(shop) = &mut components.shop {
+        if organization_id.is_some() {
+            return Err(ApiError::Request(eyre!(
+                "shops cannot belong to an organization"
+            ))
+            .into());
+        }
+
+        if !user.role.is_mod()
+            && DBSeason::user_has_current_shop(user.id.into(), &mut txn)
+                .await
+                .wrap_internal_err("checking for a current-season shop")?
+        {
+            return Err(ApiError::Request(eyre!(
+                "you are already part of a shop this season"
+            ))
+            .into());
+        }
+
         let season = DBSeason::current(&mut txn)
             .await
             .wrap_internal_err("fetching current season")?

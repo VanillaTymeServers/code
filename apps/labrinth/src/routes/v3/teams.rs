@@ -5,6 +5,8 @@ use crate::database::PgPool;
 use crate::database::models::notification_item::NotificationBuilder;
 use crate::database::models::team_item::TeamAssociationId;
 use crate::database::models::{DBOrganization, DBTeam, DBTeamMember, DBUser};
+use crate::database::models::season_item::DBSeason;
+use crate::models::users::Role;
 use crate::models::ids::TeamId;
 use crate::models::notifications::NotificationBody;
 use crate::models::pats::Scopes;
@@ -450,6 +452,29 @@ pub async fn join_team(
                 "You are already a member of this team",
             )));
         }
+        if !current_user.role.is_mod()
+            && let Some(shop_season) =
+                DBSeason::team_shop_season(team_id, &**pool)
+                    .await
+                    .wrap_internal_err("fetching shop season of team")?
+        {
+            let current_season = DBSeason::current(&**pool)
+                .await
+                .wrap_internal_err("fetching current season")?;
+            if Some(shop_season) != current_season {
+                return Err(ApiError::Request(eyre::eyre!(
+                    "archived shops cannot be changed"
+                )));
+            }
+            if DBSeason::user_has_current_shop(current_user.id.into(), &**pool)
+                .await
+                .wrap_internal_err("checking for a current-season shop")?
+            {
+                return Err(ApiError::Request(eyre::eyre!(
+                    "you are already part of a shop this season"
+                )));
+            }
+        }
         let mut transaction = pool
             .begin()
             .await
@@ -679,6 +704,29 @@ pub async fn add_team_member(
     .await
     .wrap_internal_err("fetching user from database")?
     .wrap_request_err_with(|| "an invalid User ID specified".to_string())?;
+
+    if let Some(shop_season) = DBSeason::team_shop_season(team_id, &**pool)
+        .await
+        .wrap_internal_err("fetching shop season of team")?
+    {
+        let current_season = DBSeason::current(&**pool)
+            .await
+            .wrap_internal_err("fetching current season")?;
+        if !current_user.role.is_mod() && Some(shop_season) != current_season {
+            return Err(ApiError::Request(eyre::eyre!(
+                "archived shops cannot be changed"
+            )));
+        }
+        if !Role::from_string(&new_user.role).is_mod()
+            && DBSeason::user_has_current_shop(new_user.id, &**pool)
+                .await
+                .wrap_internal_err("checking for a current-season shop")?
+        {
+            return Err(ApiError::Request(eyre::eyre!(
+                "this user is already part of a shop this season"
+            )));
+        }
+    }
 
     let mut force_accepted = false;
     if let TeamAssociationId::Project(pid) = team_association {

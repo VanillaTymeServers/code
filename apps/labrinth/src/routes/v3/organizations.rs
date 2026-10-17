@@ -967,7 +967,11 @@ pub async fn organization_projects_add(
             "The specified project is already owned by an organization!",
         )));
     }
-
+    if project_item.inner.components.shop.is_some() {
+        return Err(ApiError::Request(eyre::eyre!(
+            "shops cannot belong to an organization"
+        )));
+    }
     let project_team_member =
         database::models::DBTeamMember::get_from_user_id_project(
             project_item.inner.id,
