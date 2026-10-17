@@ -143,6 +143,7 @@
 							v-if="
 								projectV3 &&
 								currentMember &&
+								archivedShopSeason === null &&
 								(projectV3.status === 'draft' ||
 									projectV3.status === 'processing' ||
 									tags.rejectedStatuses.includes(projectV3.status))
@@ -165,7 +166,10 @@
 						v-if="projectV3Loaded"
 						:project="project"
 						:project-v3="projectV3"
-						:show-status-badge="!!currentMember || projectV3.status !== 'approved'"
+						:archived="archivedShopSeason !== null"
+						:show-status-badge="
+							!!currentMember || projectV3.status !== 'approved' || archivedShopSeason !== null
+						"
 						@category="(category) => router.push(`${projectSearchUrl}?f=categories:${category}`)"
 					>
 						<template #actions>
@@ -1286,7 +1290,8 @@ const archivedDisclosure = computed(() =>
 )
 const isArchived = computed(() => !!archivedDisclosure.value)
 
-const { data: seasons } = useQuery(seasonQueryOptions.list(client))
+const { data: seasons, suspense: seasonsSuspense } = useQuery(seasonQueryOptions.list(client))
+onServerPrefetch(seasonsSuspense)
 const archivedShopSeason = computed(() => {
 	const shop = projectV3.value?.shop
 	const currentSeason = seasons.value?.find((season) => season.current)
@@ -2044,6 +2049,7 @@ const projectHeaderMoreActions = computed(() => {
 			},
 		}))
 	const isPluginOnly = dependentSearchTypes.length === 1 && dependentSearchTypes[0] === 'plugin'
+	const isShop = projectV3.value?.shop != null
 
 	return [
 		{
@@ -2054,7 +2060,7 @@ const projectHeaderMoreActions = computed(() => {
 			to: `${projectPath.value}/settings/analytics`,
 			shown: !!auth.value.user && !!currentMember.value,
 		},
-		...dependentSearchActions,
+		...(isShop ? [] : dependentSearchActions),
 		{
 			id: 'view-modpacks',
 			label: formatMessage(messages.viewModpacks),
@@ -2066,9 +2072,9 @@ const projectHeaderMoreActions = computed(() => {
 					dep: formatDependencyProjectFilterOption(projectId, ['required']),
 				},
 			},
-			shown: !isPluginOnly && project.value?.actualProjectType !== 'modpack',
+			shown: !isShop && !isPluginOnly && project.value?.actualProjectType !== 'modpack',
 		},
-		{ type: 'divider' },
+		{ type: 'divider', shown: !isShop || (!!auth.value.user && !!currentMember.value) },
 		{
 			id: 'moderation-checklist',
 			label: formatMessage(messages.reviewProject),

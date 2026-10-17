@@ -10,7 +10,7 @@
 			:proceed-label="formatMessage(messages.deleteConfirmationProceedText)"
 			@proceed="deleteProject"
 		/>
-		<section class="universal-card">
+		<section v-if="!shopReadOnly" class="universal-card">
 			<div class="flex max-w-[600px] flex-col gap-6">
 				<div class="label">
 					<h3>
@@ -311,10 +311,12 @@
 			</SettingsOptionCard>
 		</div>
 		<ValidationMessage
+			v-if="!shopReadOnly"
 			:check="saveValidation.withoutFields(['name', 'summary', 'icon', 'slug'])"
 			class="my-4"
 		/>
 		<UnsavedChangesPopup
+			v-if="!shopReadOnly"
 			:original="original"
 			:modified="modified"
 			:saving="saving"
@@ -379,6 +381,7 @@ const {
 	patchIcon,
 	invalidate,
 } = injectProjectPageContext()
+const shopReadOnly = useShopReadOnly()
 const { labrinth } = injectModrinthClient()
 const aiImageWarningModal = useTemplateRef('aiImageWarningModal')
 

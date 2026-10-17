@@ -15,7 +15,7 @@
 		</template>
 
 		<template v-if="showStatusBadge" #badges>
-			<ProjectStatusBadge :status="projectV3.status" />
+			<ProjectStatusBadge :status="archived ? 'archived' : projectV3.status" />
 		</template>
 
 		<template #metadata>
@@ -106,10 +106,13 @@ withDefaults(
 		project: HeaderProject
 		projectV3?: HeaderProjectV3 | null
 		showStatusBadge?: boolean
+		/** Show the badge as archived instead of the project's own status, e.g. for past-season shops. */
+		archived?: boolean
 	}>(),
 	{
 		projectV3: null,
 		showStatusBadge: false,
+		archived: false,
 	},
 )
 

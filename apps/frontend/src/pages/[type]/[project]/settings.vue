@@ -17,6 +17,7 @@ import {
 	VersionIcon,
 } from '@modrinth/assets'
 import {
+	Admonition,
 	commonMessages,
 	commonProjectSettingsMessages,
 	defineMessages,
@@ -50,13 +51,34 @@ const isServerProject = computed(() => projectV3.value?.minecraft_server != null
 
 const isShopProject = computed(() => projectV3.value?.shop != null)
 
+const shopReadOnly = useShopReadOnly()
+
 const messages = defineMessages({
 	shop: { id: 'project.settings.shop.title', defaultMessage: 'Shop' },
 	inventory: { id: 'project.settings.inventory.title', defaultMessage: 'Inventory' },
+	archivedTitle: {
+		id: 'project.settings.shop.archived-title',
+		defaultMessage: 'This shop is archived',
+	},
+	archivedDescription: {
+		id: 'project.settings.shop.archived-description',
+		defaultMessage:
+			'It belongs to a past season and can no longer be changed. You can still delete it below.',
+	},
 })
-	
+
 const navItems = computed(() => {
 	const base = `${project.value.project_type}/${project.value.slug ? project.value.slug : project.value.id}`
+
+	if (shopReadOnly.value) {
+		return [
+			{
+				link: `/${base}/settings`,
+				label: formatMessage(commonProjectSettingsMessages.general),
+				icon: InfoIcon,
+			},
+		]
+	}
 
 	const showEnvironment =
 		projectV3.value?.project_types?.some((type) => ['mod', 'modpack'].includes(type)) &&
@@ -163,6 +185,17 @@ const navItems = computed(() => {
 
 const tags = useGeneratedState()
 const route = useRoute()
+
+watch(
+	[shopReadOnly, () => route.name],
+	([readOnly, routeName]) => {
+		if (readOnly && routeName !== 'type-project-settings') {
+			navigateTo(`/${project.value.project_type}/${project.value.slug ?? project.value.id}/settings`)
+		}
+	},
+	{ immediate: true },
+)
+
 const collapsedChecklist = useLocalStorage(`project-checklist-collapsed-${project.value.id}`, false)
 
 // To persist scroll position through settings pages
@@ -188,6 +221,7 @@ const moderatorSeeUserUi = computed<boolean>({
 	<div class="mb-8 flex w-full flex-col gap-4">
 		<ModerationProjectNags
 			v-if="
+				!shopReadOnly &&
 				projectV3 &&
 				((currentMember && (project.status === 'draft' || project.status === 'processing')) ||
 					tags.rejectedStatuses.includes(project.status))
@@ -205,6 +239,9 @@ const moderatorSeeUserUi = computed<boolean>({
 			:submit-project="setProcessing"
 			@toggle-collapsed="() => (collapsedChecklist = !collapsedChecklist)"
 		/>
+		<Admonition v-if="shopReadOnly" type="info" :header="formatMessage(messages.archivedTitle)">
+			{{ formatMessage(messages.archivedDescription) }}
+		</Admonition>
 		<div class="grid gap-6 lg:grid-cols-[1fr_3fr]">
 			<div>
 				<NavStack :items="navItems" />
