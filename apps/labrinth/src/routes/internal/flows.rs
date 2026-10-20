@@ -1545,6 +1545,17 @@ struct NewOAuthAccount {
     pub app_session: bool,
 }
 
+/// Vanilla Tyme accounts are created from the Minecraft server with `/register`.
+fn ensure_public_signups_allowed() -> Result<(), ApiError> {
+    if ENV.ALLOW_PUBLIC_SIGNUPS {
+        return Ok(());
+    }
+
+    Err(ApiError::Request(eyre!(
+        "sign-ups are disabled, run /register on the Minecraft server to create an account"
+    )))
+}
+
 fn validate_account_consent(account_consent: bool) -> Result<(), ApiError> {
     if account_consent {
         info!("account consent trigger, denying");
@@ -1610,6 +1621,7 @@ pub async fn create_oauth_account(
     email_queue: Data<EmailQueue>,
     web::Json(new_account): web::Json<NewOAuthAccount>,
 ) -> Result<HttpResponse, CreateAccountError> {
+    ensure_public_signups_allowed()?;
     new_account
         .validate()
         .map_err(|err| eyre::eyre!(err))
@@ -2216,6 +2228,7 @@ pub async fn validate_create_account_with_password(
     redis: Data<RedisPool>,
     new_account: web::Json<NewAccount>,
 ) -> Result<(), CreateAccountError> {
+    ensure_public_signups_allowed()?;
     let mut transaction = pool
         .begin()
         .await
@@ -2246,6 +2259,7 @@ pub async fn create_account_with_password(
     new_account: web::Json<NewAccount>,
     email: web::Data<EmailQueue>,
 ) -> Result<HttpResponse, CreateAccountError> {
+    ensure_public_signups_allowed()?;
     let new_account = new_account.into_inner();
 
     validate_account_consent(new_account.account_consent)

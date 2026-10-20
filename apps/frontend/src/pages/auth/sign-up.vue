@@ -113,6 +113,9 @@ useHead({
 	title: () => `${formatMessage(messages.title)} - Modrinth`,
 })
 
+definePageMeta({
+	redirect: '/auth/join',
+})
 const route = useNativeRoute()
 const isProtocolV2 = isLauncherProtocolV2(route)
 type LauncherCallback = Extract<LauncherHandoff, { type: 'callback' }>
