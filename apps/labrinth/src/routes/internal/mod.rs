@@ -20,6 +20,7 @@ pub mod search;
 pub mod server_ping;
 pub mod session;
 pub mod statuses;
+pub mod vt;
 
 pub use super::ApiError;
 use super::SecurityAddon;
@@ -56,7 +57,8 @@ pub fn config(cfg: &mut web::ServiceConfig) {
             .configure(gotenberg::config)
             .configure(medal::config)
             .configure(mural::config)
-            .configure(statuses::config),
+            .configure(statuses::config)
+            .configure(vt::config),
     );
 }
 

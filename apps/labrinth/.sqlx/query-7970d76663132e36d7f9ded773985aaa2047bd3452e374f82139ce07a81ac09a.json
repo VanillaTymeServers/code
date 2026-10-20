@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n        UPDATE users\n        SET\n            email = $2,\n            email_verified = FALSE,\n            password = $3,\n            eligibility_verified_at = NOW()\n        WHERE id = $1 AND password IS NULL\n        ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int8",
+        "Varchar",
+        "Text"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "7970d76663132e36d7f9ded773985aaa2047bd3452e374f82139ce07a81ac09a"
+}

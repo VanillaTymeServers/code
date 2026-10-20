@@ -133,6 +133,7 @@ vars! {
     LABRINTH_MEDAL_KEY: String = "";
     LABRINTH_EXTERNAL_NOTIFICATION_KEY: String = "";
     LABRINTH_SUBSCRIPTIONS_KEY: String = "";
+    VT_PLUGIN_KEY: String = "";
     RATE_LIMIT_IGNORE_KEY: String = "";
     DATABASE_URL: String = "postgresql://labrinth:labrinth@localhost/labrinth";
 

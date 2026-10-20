@@ -59,6 +59,7 @@ import { LabrinthTechReviewInternalModule } from './labrinth/tech-review/interna
 import { LabrinthThreadsV3Module } from './labrinth/threads/v3'
 import { LabrinthUsersV2Module } from './labrinth/users/v2'
 import { LabrinthUsersV3Module } from './labrinth/users/v3'
+import { LabrinthVtInternalModule } from './labrinth/vt/internal'
 import { LauncherMetaManifestV0Module } from './launcher-meta/v0'
 import { MclogsInsightsV1Module } from './mclogs/insights/v1'
 import { MclogsLogsV1Module } from './mclogs/logs/v1'
@@ -144,6 +145,7 @@ export const MODULE_REGISTRY = {
 	labrinth_users_v3: LabrinthUsersV3Module,
 	labrinth_versions_v2: LabrinthVersionsV2Module,
 	labrinth_versions_v3: LabrinthVersionsV3Module,
+	labrinth_vt_internal: LabrinthVtInternalModule,
 	paper_versions_v3: PaperVersionsV3Module,
 	purpur_versions_v2: PurpurVersionsV2Module,
 	sharedinstances_invites_v1: SharedInstancesInvitesV1Module,

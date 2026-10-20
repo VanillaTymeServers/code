@@ -1,0 +1,3 @@
+ALTER TABLE users
+	ADD COLUMN minecraft_uuid UUID UNIQUE,
+	ADD COLUMN rank TEXT;

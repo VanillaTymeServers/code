@@ -72,6 +72,11 @@ pub enum DBFlow {
         user_id: DBUserId,
         email: String,
     },
+    /// Setting the email and password of an account created from the
+    /// Vanilla Tyme Minecraft server.
+    ClaimAccount {
+        user_id: DBUserId,
+    },
 }
 
 mod json_string {

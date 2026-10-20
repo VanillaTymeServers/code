@@ -1556,7 +1556,7 @@ fn validate_account_consent(account_consent: bool) -> Result<(), ApiError> {
     Ok(())
 }
 
-async fn send_verify_email(
+pub(crate) async fn send_verify_email(
     email_queue: &EmailQueue,
     txn: &mut PgTransaction<'_>,
     redis: &RedisPool,
@@ -2026,7 +2026,7 @@ async fn ensure_email_passes_gate(
     Ok(())
 }
 
-async fn ensure_email_is_usable(
+pub(crate) async fn ensure_email_is_usable(
     redis: &RedisPool,
     email: &str,
 ) -> Result<(), ApiError> {

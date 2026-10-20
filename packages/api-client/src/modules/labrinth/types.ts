@@ -728,6 +728,23 @@ export namespace Labrinth {
 		}
 	}
 
+	export namespace Vt {
+		export namespace Internal {
+			export type ClaimInfo = {
+				username: string
+				avatar_url: string | null
+			}
+
+			export type ClaimAccountRequest = {
+				flow: string
+				email: string
+				password: string
+			}
+
+			export type ClaimAccountResponse = Auth.v2.AuthSessionResponse
+		}
+	}
+
 	export namespace Auth {
 		export namespace Internal {
 			export type SubscriptionStatus = {
