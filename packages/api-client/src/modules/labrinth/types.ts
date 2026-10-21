@@ -1981,6 +1981,8 @@ export namespace Labrinth {
 				github_id?: number
 				discord_id?: string
 				steam_id?: string
+				rank?: string | null
+				minecraft_uuid?: string | null
 			}
 
 			export type SearchUser = {

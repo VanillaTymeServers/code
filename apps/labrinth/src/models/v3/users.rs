@@ -5,6 +5,7 @@ pub use ariadne::users::UserStatus;
 use chrono::{DateTime, Utc};
 use rust_decimal::Decimal;
 use serde::{Deserialize, Serialize};
+use uuid::Uuid;
 
 pub const DELETED_USER: UserId = UserId(127155982985829);
 
@@ -78,6 +79,12 @@ pub struct User {
     pub discord_id: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub steam_id: Option<String>,
+
+    /// Vanilla Tyme rank (the LuckPerms primary group), shown as a badge.
+    pub rank: Option<String>,
+    /// Minecraft account this user was created from with `/register`.
+    #[schema(value_type = Option<String>)]
+    pub minecraft_uuid: Option<Uuid>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, utoipa::ToSchema)]
@@ -151,6 +158,8 @@ impl From<DBUser> for User {
             eligibility_verified_at: None,
             moderation_notes: None,
             lock: None,
+            rank: data.rank,
+            minecraft_uuid: data.minecraft_uuid,
         }
     }
 }
@@ -222,6 +231,8 @@ impl User {
             eligibility_verified_at: db_user.eligibility_verified_at,
             moderation_notes: None,
             lock: None,
+            rank: db_user.rank,
+            minecraft_uuid: db_user.minecraft_uuid,
         }
     }
 }

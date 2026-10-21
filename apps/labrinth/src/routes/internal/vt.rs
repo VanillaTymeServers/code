@@ -211,24 +211,12 @@ pub async fn register_account(
             is_subscribed_to_newsletter: false,
             eligibility_verified_at: None,
             lock: None,
+            minecraft_uuid: Some(uuid),
+            rank: Some(rank),
         }
         .insert(&mut transaction)
         .await
         .wrap_internal_err("inserting account from minecraft")?;
-
-        sqlx::query!(
-            "
-            UPDATE users
-            SET minecraft_uuid = $1, rank = $2
-            WHERE id = $3
-            ",
-            uuid,
-            rank,
-            user_id as DBUserId,
-        )
-        .execute(&mut transaction)
-        .await
-        .wrap_internal_err("linking account to minecraft")?;
 
         (user_id, RegisterStatus::Created, None)
     };

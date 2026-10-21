@@ -323,6 +323,10 @@ tauri-utils = { git = "https://github.com/tauri-apps/tauri", rev = "7cc68e74ff69
 [profile.dev.package.sqlx-macros]
 opt-level = 3
 
+# Full debug info pushes labrinth's dev rlib past the 4 GiB archive limit on Windows
+[profile.dev.package.labrinth]
+debug = "line-tables-only"
+
 # Optimize for speed and reduce size on release builds
 [profile.release]
 opt-level = "s"  # Optimize for binary size

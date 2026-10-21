@@ -19,6 +19,7 @@ use rust_decimal::Decimal;
 use serde::{Deserialize, Serialize};
 use std::fmt::{Debug, Display};
 use std::hash::Hash;
+use uuid::Uuid;
 use xredis::RedisPool;
 
 const USERS_NAMESPACE: &str = "users:v4";
@@ -65,6 +66,13 @@ pub struct DBUser {
 
     #[serde(default)]
     pub lock: Option<DBUserLock>,
+
+    /// Minecraft account this user was created from with `/register`.
+    #[serde(default)]
+    pub minecraft_uuid: Option<Uuid>,
+    /// Vanilla Tyme rank (the LuckPerms primary group), only used for display.
+    #[serde(default)]
+    pub rank: Option<String>,
 }
 
 #[derive(Deserialize, Serialize, Clone, Debug)]
@@ -98,14 +106,14 @@ impl DBUser {
                 github_id, discord_id, gitlab_id, google_id, steam_id, microsoft_id,
                 email_verified, password, paypal_id, paypal_country, paypal_email,
                 venmo_handle, stripe_customer_id, allow_friend_requests, is_subscribed_to_newsletter,
-                eligibility_verified_at
+                eligibility_verified_at, minecraft_uuid, rank, role
             )
             VALUES (
                 $1, $2, $3, $4, $5,
                 $6, $7,
                 $8, $9, $10, $11, $12, $13,
                 $14, $15, $16, $17, $18, $19, $20, $21, $22,
-                $23
+                $23, $24, $25, $26
             )
             ",
             self.id as DBUserId,
@@ -131,6 +139,9 @@ impl DBUser {
             self.allow_friend_requests,
             self.is_subscribed_to_newsletter,
             self.eligibility_verified_at,
+            self.minecraft_uuid,
+            self.rank,
+            self.role,
         )
         .execute(&mut *transaction)
         .await?;
@@ -231,7 +242,7 @@ impl DBUser {
                         github_id, discord_id, gitlab_id, google_id, steam_id, microsoft_id,
                         email_verified, password, totp_secret, paypal_id, paypal_country, paypal_email,
                         venmo_handle, stripe_customer_id, allow_friend_requests, is_subscribed_to_newsletter,
-                        eligibility_verified_at,
+                        eligibility_verified_at, minecraft_uuid, rank,
                         user_locks.locked_by AS "lock_locked_by?",
                         user_locks.reason AS "lock_reason?",
                         user_locks.created AS "lock_created?"
@@ -296,6 +307,8 @@ impl DBUser {
                                     reason,
                                     created,
                                 }),
+                            minecraft_uuid: u.minecraft_uuid,
+                            rank: u.rank,
                         };
 
                         acc.insert(u.id, (Some(u.username), user));
