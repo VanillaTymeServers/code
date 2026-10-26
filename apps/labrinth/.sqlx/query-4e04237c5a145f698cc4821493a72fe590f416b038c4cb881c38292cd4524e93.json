@@ -1,0 +1,19 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n        UPDATE users\n        SET\n            username = CASE WHEN $2 THEN $3 ELSE username END,\n            rank = $4,\n            role = $5,\n            discord_id = COALESCE($6, discord_id)\n        WHERE id = $1\n        ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int8",
+        "Bool",
+        "Varchar",
+        "Text",
+        "Varchar",
+        "Int8"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "4e04237c5a145f698cc4821493a72fe590f416b038c4cb881c38292cd4524e93"
+}

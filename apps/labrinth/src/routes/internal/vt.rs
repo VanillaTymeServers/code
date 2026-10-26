@@ -10,7 +10,7 @@ use uuid::Uuid;
 use xredis::RedisPool;
 use zxcvbn::Score;
 
-use crate::database::PgPool;
+use crate::database::{PgPool, PgTransaction};
 use crate::database::models::flow_item::DBFlow;
 use crate::database::models::{DBUser, DBUserId, generate_user_id};
 use crate::env::ENV;
@@ -28,6 +28,7 @@ pub fn config(cfg: &mut web::ServiceConfig) {
     cfg.service(
         web::scope("/vt")
             .service(register_account)
+            .service(sync_account)
             .service(claim_info)
             .service(claim_account),
     );
@@ -36,9 +37,9 @@ pub fn config(cfg: &mut web::ServiceConfig) {
 /// How long a player has to open their link and finish setting up their account.
 const CLAIM_LINK_EXPIRY_MINUTES: i64 = 30;
 
-/// A player registering a website account from the Minecraft server.
+/// A Minecraft player's details, sent by the server's plugin.
 #[derive(Deserialize, utoipa::ToSchema)]
-pub struct RegisterAccount {
+pub struct PlayerAccount {
     /// Minecraft UUID of the player.
     #[schema(value_type = String)]
     pub uuid: Uuid,
@@ -48,6 +49,40 @@ pub struct RegisterAccount {
     pub rank: String,
     /// Discord user ID linked to the player, if any.
     pub discord_id: Option<String>,
+}
+
+/// [`PlayerAccount`] after validation, with the role its rank maps to.
+struct PlayerDetails {
+    uuid: Uuid,
+    username: String,
+    rank: String,
+    role: String,
+    discord_id: Option<i64>,
+}
+
+impl PlayerAccount {
+    fn into_details(self) -> Result<PlayerDetails, ApiError> {
+        if !is_valid_minecraft_username(&self.username) {
+            return Err(ApiError::Request(eyre!("invalid minecraft username")));
+        }
+        let rank = self.rank.trim().to_lowercase();
+        if rank.is_empty() || rank.len() > 32 {
+            return Err(ApiError::Request(eyre!("invalid rank")));
+        }
+        let discord_id = self
+            .discord_id
+            .map(|id| id.parse::<i64>())
+            .transpose()
+            .wrap_request_err("invalid discord id")?;
+
+        Ok(PlayerDetails {
+            uuid: self.uuid,
+            username: self.username,
+            role: role_for_rank(&rank).to_string(),
+            rank,
+            discord_id,
+        })
+    }
 }
 
 #[derive(Serialize, utoipa::ToSchema)]
@@ -84,6 +119,74 @@ fn is_valid_minecraft_username(username: &str) -> bool {
             .all(|c| c.is_ascii_alphanumeric() || c == '_')
 }
 
+/// A website account already linked to a Minecraft player.
+struct LinkedAccount {
+    id: DBUserId,
+    username: String,
+    has_password: bool,
+}
+
+async fn find_linked_account(
+    uuid: Uuid,
+    transaction: &mut PgTransaction<'_>,
+) -> Result<Option<LinkedAccount>, ApiError> {
+    let account = sqlx::query!(
+        r#"
+        SELECT id, username, password IS NOT NULL AS "has_password!"
+        FROM users
+        WHERE minecraft_uuid = $1
+        "#,
+        uuid,
+    )
+    .fetch_optional(&mut *transaction)
+    .await
+    .wrap_internal_err("fetching account by minecraft uuid")?;
+
+    Ok(account.map(|account| LinkedAccount {
+        id: DBUserId(account.id),
+        username: account.username,
+        has_password: account.has_password,
+    }))
+}
+
+/// Brings a linked account up to date with the player's latest details. The
+/// username only changes if the new one isn't taken by another account.
+async fn update_linked_account(
+    account: &LinkedAccount,
+    details: &PlayerDetails,
+    transaction: &mut PgTransaction<'_>,
+    redis: &RedisPool,
+) -> Result<(), ApiError> {
+    let username_free = account.username.eq_ignore_ascii_case(&details.username)
+        || DBUser::get(&details.username, &mut *transaction, redis)
+            .await
+            .wrap_internal_err("checking if username is taken")?
+            .is_none();
+
+    sqlx::query!(
+        "
+        UPDATE users
+        SET
+            username = CASE WHEN $2 THEN $3 ELSE username END,
+            rank = $4,
+            role = $5,
+            discord_id = COALESCE($6, discord_id)
+        WHERE id = $1
+        ",
+        account.id as DBUserId,
+        username_free,
+        details.username,
+        details.rank,
+        details.role,
+        details.discord_id,
+    )
+    .execute(&mut *transaction)
+    .await
+    .wrap_internal_err("updating account from minecraft")?;
+
+    Ok(())
+}
+
 /// Create or update the website account of a Minecraft player.
 #[utoipa::path(
 	context_path = "/vt",
@@ -94,87 +197,36 @@ fn is_valid_minecraft_username(username: &str) -> bool {
 pub async fn register_account(
     pool: web::Data<PgPool>,
     redis: web::Data<RedisPool>,
-    body: web::Json<RegisterAccount>,
+    body: web::Json<PlayerAccount>,
 ) -> Result<web::Json<RegisterAccountResponse>, ApiError> {
-    let RegisterAccount {
-        uuid,
-        username,
-        rank,
-        discord_id,
-    } = body.into_inner();
-
-    if !is_valid_minecraft_username(&username) {
-        return Err(ApiError::Request(eyre!("invalid minecraft username")));
-    }
-    let rank = rank.trim().to_lowercase();
-    if rank.is_empty() || rank.len() > 32 {
-        return Err(ApiError::Request(eyre!("invalid rank")));
-    }
-    let discord_id = discord_id
-        .map(|id| id.parse::<i64>())
-        .transpose()
-        .wrap_request_err("invalid discord id")?;
-    let role = role_for_rank(&rank).to_string();
+    let details = body.into_inner().into_details()?;
 
     let mut transaction = pool
         .begin()
         .await
         .wrap_internal_err("starting database transaction")?;
 
-    let existing = sqlx::query!(
-        r#"
-        SELECT id, username, password IS NOT NULL AS "has_password!"
-        FROM users
-        WHERE minecraft_uuid = $1
-        "#,
-        uuid,
-    )
-    .fetch_optional(&mut transaction)
-    .await
-    .wrap_internal_err("fetching account by minecraft uuid")?;
+    let (user_id, status, old_username) = if let Some(account) =
+        find_linked_account(details.uuid, &mut transaction).await?
+    {
+        update_linked_account(&account, &details, &mut transaction, &redis)
+            .await?;
 
-    let (user_id, status, old_username) = if let Some(existing) = existing {
-        let username_free = existing.username.eq_ignore_ascii_case(&username)
-            || DBUser::get(&username, &mut transaction, &redis)
-                .await
-                .wrap_internal_err("checking if username is taken")?
-                .is_none();
-
-        sqlx::query!(
-            "
-            UPDATE users
-            SET
-                username = CASE WHEN $2 THEN $3 ELSE username END,
-                rank = $4,
-                role = $5,
-                discord_id = COALESCE($6, discord_id)
-            WHERE id = $1
-            ",
-            existing.id,
-            username_free,
-            username,
-            rank,
-            role,
-            discord_id,
-        )
-        .execute(&mut transaction)
-        .await
-        .wrap_internal_err("updating account from minecraft")?;
-
-        let status = if existing.has_password {
+        let status = if account.has_password {
             RegisterStatus::Registered
         } else {
             RegisterStatus::Pending
         };
-        (DBUserId(existing.id), status, Some(existing.username))
+        (account.id, status, Some(account.username))
     } else {
-        if DBUser::get(&username, &mut transaction, &redis)
+        if DBUser::get(&details.username, &mut transaction, &redis)
             .await
             .wrap_internal_err("checking if username is taken")?
             .is_some()
         {
             return Err(ApiError::Request(eyre!(
-                "username `{username}` is already used by another account"
+                "username `{}` is already used by another account",
+                details.username
             )));
         }
 
@@ -185,7 +237,7 @@ pub async fn register_account(
         DBUser {
             id: user_id,
             github_id: None,
-            discord_id,
+            discord_id: details.discord_id,
             gitlab_id: None,
             google_id: None,
             steam_id: None,
@@ -197,22 +249,25 @@ pub async fn register_account(
             venmo_handle: None,
             stripe_customer_id: None,
             totp_secret: None,
-            username: username.clone(),
+            username: details.username.clone(),
             email: None,
             email_verified: false,
-            avatar_url: Some(format!("https://minotar.net/helm/{uuid}/128.png")),
+            avatar_url: Some(format!(
+                "https://minotar.net/helm/{}/128.png",
+                details.uuid
+            )),
             raw_avatar_url: None,
             bio: None,
             created: Utc::now(),
-            role,
+            role: details.role.clone(),
             badges: Badges::default(),
             campaign_pride_26: None,
             allow_friend_requests: true,
             is_subscribed_to_newsletter: false,
             eligibility_verified_at: None,
             lock: None,
-            minecraft_uuid: Some(uuid),
-            rank: Some(rank),
+            minecraft_uuid: Some(details.uuid),
+            rank: Some(details.rank.clone()),
         }
         .insert(&mut transaction)
         .await
@@ -227,7 +282,7 @@ pub async fn register_account(
         .wrap_internal_err("committing database transaction")?;
 
     DBUser::clear_caches(
-        &[(user_id, old_username), (user_id, Some(username))],
+        &[(user_id, old_username), (user_id, Some(details.username))],
         &redis,
     )
     .await
@@ -244,6 +299,58 @@ pub async fn register_account(
     };
 
     Ok(web::Json(RegisterAccountResponse { status, link }))
+}
+
+/// Update the website account of a Minecraft player, if they have one. Never
+/// creates an account; called whenever a player joins or their rank changes.
+#[utoipa::path(
+	context_path = "/vt",
+	tag = "vt",
+	responses(
+		(status = OK, description = "Account updated"),
+		(status = NOT_FOUND, description = "The player has no website account")
+	)
+)]
+#[post("/accounts/sync", guard = "vt_plugin_key_guard")]
+pub async fn sync_account(
+    pool: web::Data<PgPool>,
+    redis: web::Data<RedisPool>,
+    body: web::Json<PlayerAccount>,
+) -> Result<(), ApiError> {
+    let details = body.into_inner().into_details()?;
+
+    let mut transaction = pool
+        .begin()
+        .await
+        .wrap_internal_err("starting database transaction")?;
+
+    let Some(account) =
+        find_linked_account(details.uuid, &mut transaction).await?
+    else {
+        return Err(ApiError::NotFound(eyre!(
+            "no website account is linked to this player"
+        )));
+    };
+
+    update_linked_account(&account, &details, &mut transaction, &redis)
+        .await?;
+
+    transaction
+        .commit()
+        .await
+        .wrap_internal_err("committing database transaction")?;
+
+    DBUser::clear_caches(
+        &[
+            (account.id, Some(account.username)),
+            (account.id, Some(details.username)),
+        ],
+        &redis,
+    )
+    .await
+    .wrap_internal_err("clearing cached account")?;
+
+    Ok(())
 }
 
 /// The account that is still waiting to be claimed through `flow`.
