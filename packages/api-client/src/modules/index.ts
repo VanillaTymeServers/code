@@ -69,6 +69,7 @@ import { SharedInstancesInstancesV1Module } from './shared-instances/instances/v
 import { SharedInstancesInvitesV1Module } from './shared-instances/invites/v1'
 import { SharedInstancesModerationV1Module } from './shared-instances/moderation/v1'
 import { SharedInstancesUsersV1Module } from './shared-instances/users/v1'
+import { TebexHeadlessModule } from './tebex/headless'
 
 type ModuleConstructor = new (client: AbstractModrinthClient) => AbstractModule
 
@@ -152,6 +153,7 @@ export const MODULE_REGISTRY = {
 	sharedinstances_instances_v1: SharedInstancesInstancesV1Module,
 	sharedinstances_moderation_v1: SharedInstancesModerationV1Module,
 	sharedinstances_users_v1: SharedInstancesUsersV1Module,
+	tebex_headless: TebexHeadlessModule,
 } as const satisfies Record<string, ModuleConstructor>
 
 export type ModuleID = keyof typeof MODULE_REGISTRY

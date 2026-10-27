@@ -123,14 +123,9 @@
 									<p class="m-0 text-sm leading-relaxed">
 										<IntlFormatted :message-id="option">
 											<template #supporter-link="{ children }">
-												<a
-													href="https://store.vanillatymeservers.com/package/3584585"
-													class="text-link"
-													target="_blank"
-													rel="noopener"
-												>
+												<NuxtLink to="/store/package/3584585" class="text-link">
 													<component :is="() => normalizeChildren(children)" />
-												</a>
+												</NuxtLink>
 											</template>
 										</IntlFormatted>
 									</p>

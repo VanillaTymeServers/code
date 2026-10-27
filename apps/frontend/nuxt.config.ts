@@ -202,7 +202,7 @@ export default defineNuxtConfig({
 			buildEnv: process.env.BUILD_ENV,
 			preview: process.env.PREVIEW === 'true',
 			featureFlagOverrides: getFeatureFlagOverrides(),
-
+			tebexPublicToken: process.env.TEBEX_PUBLIC_TOKEN,
 			owner: process.env.VERCEL_GIT_REPO_OWNER || 'modrinth',
 			slug: process.env.VERCEL_GIT_REPO_SLUG || 'code',
 			branch:

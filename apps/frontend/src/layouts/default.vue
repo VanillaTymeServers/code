@@ -156,12 +156,7 @@
 						{{ formatMessage(navMenuMessages.mapDownloads) }}
 					</template>
 				</TeleportOverflowMenu>
-				<ButtonLink
-					type="quiet"
-					href="https://store.vanillatymeservers.com"
-					target="_blank"
-					rel="noopener"
-				>
+				<ButtonLink type="quiet" to="/store">
 					<ShoppingBasketIcon aria-hidden="true" />
 					{{ formatMessage(navMenuMessages.store) }}
 				</ButtonLink>
@@ -1052,8 +1047,7 @@ const navRoutes = computed(() => [
 	},
 	{
 		label: formatMessage(navMenuMessages.store),
-		href: 'https://store.vanillatymeservers.com',
-		external: true,
+		href: '/store',
 	},
 ])
 
