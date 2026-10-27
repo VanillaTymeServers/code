@@ -156,7 +156,15 @@
 						{{ formatMessage(navMenuMessages.mapDownloads) }}
 					</template>
 				</TeleportOverflowMenu>
-				<ButtonLink type="quiet" to="/store">
+				<ButtonLink
+					type="quiet"
+					to="/store"
+					:class="
+						route.name?.startsWith('store')
+							? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
+							: ''
+					"
+				>
 					<ShoppingBasketIcon aria-hidden="true" />
 					{{ formatMessage(navMenuMessages.store) }}
 				</ButtonLink>
