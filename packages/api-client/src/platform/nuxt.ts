@@ -45,6 +45,11 @@ export class NuxtCircuitBreakerStorage implements CircuitBreakerStorage {
 }
 
 /**
+ * APIs the rate limit key is meant for. It must never be sent to third-party services.
+ */
+const RATE_LIMITED_APIS = new Set(['labrinth', 'archon', 'sharedinstances'])
+
+/**
  * Nuxt-specific configuration
  */
 export interface NuxtClientConfig extends ClientConfig {
@@ -217,14 +222,16 @@ export class NuxtModrinthClient extends XHRUploadClient {
 		return super.normalizeError(error)
 	}
 
-	protected async buildDefaultHeaders(): Promise<Record<string, string>> {
+	protected async buildDefaultHeaders(
+		api?: RequestOptions['api'],
+	): Promise<Record<string, string>> {
 		const headers: Record<string, string> = {
-			...(await super.buildDefaultHeaders()),
+			...(await super.buildDefaultHeaders(api)),
 		}
 
 		// Use the resolved key (populated by resolveRateLimitKey in request())
 		// @ts-expect-error - import.meta is provided by Nuxt
-		if (import.meta.server && this.rateLimitKeyResolved) {
+		if (import.meta.server && this.rateLimitKeyResolved && RATE_LIMITED_APIS.has(api ?? '')) {
 			headers['x-ratelimit-key'] = this.rateLimitKeyResolved
 		}
 

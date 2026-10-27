@@ -133,7 +133,7 @@ export abstract class AbstractModrinthClient extends AbstractUploadClient {
 
 		const url = this.buildUrl(path, baseUrl, options.version)
 
-		const defaultHeaders = await this.buildDefaultHeaders()
+		const defaultHeaders = await this.buildDefaultHeaders(options.api)
 
 		// Merge options with defaults
 		const mergedOptions: RequestOptions = {
@@ -182,7 +182,7 @@ export abstract class AbstractModrinthClient extends AbstractUploadClient {
 		}
 
 		const url = this.buildUrl(path, baseUrl, options.version)
-		const defaultHeaders = await this.buildDefaultHeaders()
+		const defaultHeaders = await this.buildDefaultHeaders(options.api)
 		const mergedOptions: RequestOptions = {
 			method: 'GET',
 			retry: false,
@@ -365,8 +365,13 @@ export abstract class AbstractModrinthClient extends AbstractUploadClient {
 	 *
 	 * Subclasses can override this to add platform-specific headers
 	 * (e.g., Nuxt rate limit key)
+	 *
+	 * @param _api - The API the request goes to, so subclasses can keep first-party headers off
+	 * third-party requests
 	 */
-	protected async buildDefaultHeaders(): Promise<Record<string, string>> {
+	protected async buildDefaultHeaders(
+		_api?: RequestOptions['api'],
+	): Promise<Record<string, string>> {
 		const headers: Record<string, string> = {
 			'Content-Type': 'application/json',
 			...this.config.headers,

@@ -43,7 +43,7 @@ export abstract class XHRUploadClient extends AbstractModrinthClient {
 		const handle: UploadHandle<T> = {
 			promise: (async () => {
 				const isFormData = 'formData' in options && options.formData instanceof FormData
-				const baseHeaders = await this.buildDefaultHeaders()
+				const baseHeaders = await this.buildDefaultHeaders(options.api)
 				if (isFormData) {
 					delete baseHeaders['Content-Type']
 				} else {
