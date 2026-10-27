@@ -72,15 +72,11 @@
 						<span class="chip">
 							<code>{{ '<>' }}</code> {{ formatMessage(messages.currencyDiamond) }}
 						</span>
-						<span class="chip">
-							<code>d</code> {{ formatMessage(messages.currencyDiamond) }}
-						</span>
+						<span class="chip"> <code>d</code> {{ formatMessage(messages.currencyDiamond) }} </span>
 						<span class="chip">
 							<code>[ ]</code> {{ formatMessage(messages.currencyDiamondBlock) }}
 						</span>
-						<span class="chip">
-							<code>[ ]</code> {{ formatMessage(messages.currencySlot) }}
-						</span>
+						<span class="chip"> <code>[ ]</code> {{ formatMessage(messages.currencySlot) }} </span>
 					</div>
 				</Admonition>
 			</Accordion>
@@ -573,22 +569,23 @@ function scrollToSection(id: string) {
 }
 
 const sectionIds = ['overview', 'permits', 'stalls', 'shops', 'maintenance']
-const accordions = reactive<Record<string, any>>({})
+const accordions = reactive(new Map<string, any>())
 const accordionRefs = Object.fromEntries(
 	sectionIds.map((id) => [
 		id,
 		(el: any) => {
-			if (el) accordions[id] = el
-			else delete accordions[id]
+			if (el) accordions.set(id, el)
+			else accordions.delete(id)
 		},
 	]),
 )
 
-const anyOpen = computed(() => (Object.values(accordions) as any[]).some((a) => a.isOpen))
+const anyOpen = computed(() => [...accordions.values()].some((a) => a.isOpen))
 function toggleAll() {
 	const open = !anyOpen.value
-	for (const a of Object.values(accordions) as any[]) {
-		open ? a.open() : a.close()
+	for (const a of accordions.values()) {
+		if (open) a.open()
+		else a.close()
 	}
 }
 

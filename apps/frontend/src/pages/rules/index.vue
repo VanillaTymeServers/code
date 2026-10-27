@@ -1141,7 +1141,8 @@ const messages = defineMessages({
 	},
 	basesMarked: {
 		id: 'rules.main.bases.marked',
-		defaultMessage: 'Ensure your base is marked with pillars/signs in each corner or a full border.',
+		defaultMessage:
+			'Ensure your base is marked with pillars/signs in each corner or a full border.',
 	},
 	basesBannerMarkers: {
 		id: 'rules.main.bases.banner-markers',
@@ -1373,23 +1374,24 @@ const sectionIds = [
 	'punishments',
 ]
 
-const accordions = reactive<Record<string, any>>({})
+const accordions = reactive(new Map<string, any>())
 const accordionRefs = Object.fromEntries(
 	sectionIds.map((id) => [
 		id,
 		(el: any) => {
-			if (el) accordions[id] = el
-			else delete accordions[id]
+			if (el) accordions.set(id, el)
+			else accordions.delete(id)
 		},
 	]),
 )
 
-const anyOpen = computed(() => (Object.values(accordions) as any[]).some((a) => a.isOpen))
+const anyOpen = computed(() => [...accordions.values()].some((a) => a.isOpen))
 
 function toggleAll() {
 	const open = !anyOpen.value
-	for (const a of Object.values(accordions) as any[]) {
-		open ? a.open() : a.close()
+	for (const a of accordions.values()) {
+		if (open) a.open()
+		else a.close()
 	}
 }
 
