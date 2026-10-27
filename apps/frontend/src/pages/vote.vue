@@ -118,7 +118,11 @@
 								{{ formatMessage(messages.tradeOptionsLabel) }}
 							</h4>
 							<div>
-								<div v-for="option in tradeIn.options" :key="option.id" class="flex items-start gap-2">
+								<div
+									v-for="option in tradeIn.options"
+									:key="option.id"
+									class="flex items-start gap-2"
+								>
 									<div class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
 									<p class="m-0 text-sm leading-relaxed">
 										<IntlFormatted :message-id="option">
@@ -137,7 +141,9 @@
 				<p class="m-0 flex justify-center">{{ formatMessage(messages.moreComingSoon) }}</p>
 				<div class="rounded-2xl bg-bg-raised p-6">
 					<div class="flex flex-col gap-2 text-center">
-						<h3 class="m-0 text-lg font-bold">{{ formatMessage(messages.howTradeInsWorkTitle) }}</h3>
+						<h3 class="m-0 text-lg font-bold">
+							{{ formatMessage(messages.howTradeInsWorkTitle) }}
+						</h3>
 						<p class="m-0 text-sm leading-relaxed">
 							{{ formatMessage(messages.howTradeInsWorkDescription) }}
 						</p>
@@ -173,7 +179,9 @@
 						:aria-label="formatMessage(messages.sortByLabel)"
 					>
 						<template #selected="{ label }">
-							<span class="font-semibold text-primary">{{ formatMessage(messages.sortByLabel) }}</span>
+							<span class="font-semibold text-primary">{{
+								formatMessage(messages.sortByLabel)
+							}}</span>
 							<span class="font-semibold text-secondary">{{ label }}</span>
 						</template>
 					</Combobox>

@@ -410,7 +410,7 @@ const searchLeadingIcon = computed(() => {
 	}
 	return props.showSearchIcon ? SearchIcon : undefined
 })
-	
+
 /** Extra content (e.g. channel pill) next to the label while the search field is idle */
 const searchSelectionOverlayVisible = computed(() => {
 	if (!props.searchable || !props.syncWithSelection || !selectedOption.value) return false

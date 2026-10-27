@@ -689,53 +689,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Buat proyek"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Bidang hilang: {fields}"
   },
   "create.project.name-label": {
     "message": "Nama"
   },
-  "create.project.name-placeholder": {
-    "message": "Masukkan nama proyek..."
-  },
-  "create.project.owner-description": {
-    "message": "Buat diri Anda atau organisasi yang Anda sertai sebagai pemilik proyek."
-  },
-  "create.project.owner-label": {
-    "message": "Pemilik"
-  },
-  "create.project.server-project-title": {
-    "message": "Membuat proyek server"
-  },
-  "create.project.summary-description": {
-    "message": "Satu atau dua kalimat yang menjelaskan proyek Anda."
-  },
   "create.project.summary-label": {
     "message": "Ringkasan"
   },
-  "create.project.summary-placeholder": {
-    "message": "Proyek ini menambahkan..."
-  },
-  "create.project.title": {
-    "message": "Membuat proyek"
-  },
-  "create.project.type-label": {
-    "message": "Jenis"
-  },
-  "create.project.type-project": {
-    "message": "Proyek"
-  },
-  "create.project.type-server": {
-    "message": "Server"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.visibility-description": {
-    "message": "Visibilitas proyek Anda setelah ia disetujui."
   },
   "create.project.visibility-private": {
     "message": "Pribadi"
@@ -1580,30 +1544,6 @@
   "landing.feature.search.heading": {
     "message": "Temukan apa yang Anda mau, dengan cepat dan mudah"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Tempat untuk {content} Minecraft"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "paket data"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "paket mod"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "mod"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "pasang-masuk"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "paket sumber"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "server"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "efek gambar"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -1669,9 +1609,6 @@
   },
   "layout.action.new-organization": {
     "message": "Organisasi baru"
-  },
-  "layout.action.new-project": {
-    "message": "Proyek baru"
   },
   "layout.action.publish": {
     "message": "Terbitkan"
@@ -1847,20 +1784,8 @@
   "layout.nav.active-reports": {
     "message": "Laporan aktif"
   },
-  "layout.nav.discover": {
-    "message": "Temukan"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Dapatkan Modrinth App"
-  },
   "layout.nav.home": {
     "message": "Beranda"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Jalankan server"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Beranda Modrinth"

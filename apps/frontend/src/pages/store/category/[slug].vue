@@ -18,9 +18,7 @@ const { data: categories, suspense } = useQuery(
 )
 
 const category = computed(() =>
-	categories.value?.find(
-		(c) => c.slug === route.params.slug || String(c.id) === route.params.slug,
-	),
+	categories.value?.find((c) => c.slug === route.params.slug || String(c.id) === route.params.slug),
 )
 
 const notFound = () =>

@@ -1325,62 +1325,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Skapa projekt"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Saknade fält: {fields}"
   },
   "create.project.name-label": {
     "message": "Namn"
   },
-  "create.project.name-placeholder": {
-    "message": "Ange projektnamn..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "{name} ikon"
-  },
-  "create.project.owner-description": {
-    "message": "Sätt projektägaren som dig själv eller en organisation du är medlem i."
-  },
-  "create.project.owner-label": {
-    "message": "Ägare"
-  },
-  "create.project.server-project-title": {
-    "message": "Skapar ett serverprojekt"
-  },
-  "create.project.summary-description": {
-    "message": "En mening eller två som beskriver ditt projekt."
-  },
   "create.project.summary-label": {
     "message": "Sammanfattning"
   },
-  "create.project.summary-placeholder": {
-    "message": "Detta projekt lägger till..."
-  },
-  "create.project.title": {
-    "message": "Skapar ett projekt"
-  },
-  "create.project.type-label": {
-    "message": "Typ"
-  },
-  "create.project.type-project": {
-    "message": "Projekt"
-  },
-  "create.project.type-server": {
-    "message": "Server"
-  },
-  "create.project.unknown-user": {
-    "message": "Okänd användare"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "Användaravatar"
-  },
-  "create.project.visibility-description": {
-    "message": "Synligheten av ditt projekt efter att det har godkänts."
   },
   "create.project.visibility-private": {
     "message": "Privat"
@@ -2465,30 +2420,6 @@
   "landing.feature.search.heading": {
     "message": "Hitta det du vill snabbt och enkelt"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Platsen för Minecraft {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "datapaket"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "modpaket"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "moddar"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "plugins"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "resurspaket"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "servrar"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shaders"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2560,12 +2491,6 @@
   },
   "layout.action.new-organization": {
     "message": "Ny organisation"
-  },
-  "layout.action.new-project": {
-    "message": "Nytt projekt"
-  },
-  "layout.action.new-server-project": {
-    "message": "Nytt serverprojekt"
   },
   "layout.action.publish": {
     "message": "Skapa"
@@ -2771,20 +2696,8 @@
   "layout.nav.add-account": {
     "message": "Lägg till konto"
   },
-  "layout.nav.discover": {
-    "message": "Utforska"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Installera Modrinth App"
-  },
   "layout.nav.home": {
     "message": "Hem"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Skaffa en server"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth hem sida"
@@ -3068,20 +2981,11 @@
   "organization.button.manage": {
     "message": "Hantera"
   },
-  "organization.button.manage-projects": {
-    "message": "Hantera projekt"
-  },
-  "organization.label.downloads": {
-    "message": "nedladdningar"
-  },
   "organization.label.members": {
     "message": "medlemmar"
   },
   "organization.label.organization": {
     "message": "Organisation"
-  },
-  "organization.label.projects": {
-    "message": "projekt"
   },
   "organization.project-transfer.id-column": {
     "message": "ID"
@@ -3103,12 +3007,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "Typ"
-  },
-  "organization.projects.none": {
-    "message": "Den här organisationen har inga projekt än."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "Den här organisationen har inga projekt än. Vill du <create-link>skapa ett</create-link>?"
   },
   "project-member-header.error-decline": {
     "message": "Kunde inte neka teaminbjudan"

@@ -1,4 +1,4 @@
-import { ModrinthApiError,type Tebex } from '@modrinth/api-client'
+import { ModrinthApiError, type Tebex } from '@modrinth/api-client'
 import { injectModrinthClient } from '@modrinth/ui'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/vue-query'
 

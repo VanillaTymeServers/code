@@ -50,7 +50,10 @@
 					</div>
 				</div>
 			</div>
-			<div v-else-if="module.type === 'featured_package'" class="card flex-card flex flex-col gap-3">
+			<div
+				v-else-if="module.type === 'featured_package'"
+				class="card flex-card flex flex-col gap-3"
+			>
 				<h2 class="m-0 text-lg">{{ module.data.header }}</h2>
 				<StorePackageCard :pkg="module.data.package" />
 			</div>
@@ -59,7 +62,15 @@
 </template>
 
 <script setup lang="ts">
-import { Avatar, defineMessages, injectModrinthClient, ProgressBar, useRelativeTime, useVIntl, useFormatDateTime } from '@modrinth/ui'
+import {
+	Avatar,
+	defineMessages,
+	injectModrinthClient,
+	ProgressBar,
+	useFormatDateTime,
+	useRelativeTime,
+	useVIntl,
+} from '@modrinth/ui'
 import { useQuery } from '@tanstack/vue-query'
 
 import StorePackageCard from '~/components/ui/store/StorePackageCard.vue'

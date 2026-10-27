@@ -1382,62 +1382,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "프로젝트 만들기"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "누락된 필드: {fields}"
   },
   "create.project.name-label": {
     "message": "이름"
   },
-  "create.project.name-placeholder": {
-    "message": "프로젝트 이름 입력..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "{name} 아이콘"
-  },
-  "create.project.owner-description": {
-    "message": "프로젝트 소유자를 자신 또는 소속된 조직으로 설정하세요."
-  },
-  "create.project.owner-label": {
-    "message": "소유자"
-  },
-  "create.project.server-project-title": {
-    "message": "서버 프로젝트 생성"
-  },
-  "create.project.summary-description": {
-    "message": "당신의 프로젝트를 짧은 문장으로 설명해 주세요."
-  },
   "create.project.summary-label": {
     "message": "개요"
   },
-  "create.project.summary-placeholder": {
-    "message": "이 프로젝트에 추가할 건..."
-  },
-  "create.project.title": {
-    "message": "프로젝트 생성"
-  },
-  "create.project.type-label": {
-    "message": "유형"
-  },
-  "create.project.type-project": {
-    "message": "프로젝트"
-  },
-  "create.project.type-server": {
-    "message": "서버"
-  },
-  "create.project.unknown-user": {
-    "message": "알려지지 않은 사용자"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "사용자 아바타"
-  },
-  "create.project.visibility-description": {
-    "message": "승인 후 프로젝트의 공개 범위."
   },
   "create.project.visibility-private": {
     "message": "비공개"
@@ -2606,30 +2561,6 @@
   "landing.feature.search.heading": {
     "message": "원하는 프로젝트를 쉽고 빠르게 찾으세요"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "마인크래프트 {content} 위한 공간"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "데이터 팩을"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "모드팩을"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "모드를"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "플러그인을"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "리소스 팩을"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "서버를"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "셰이더를"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2701,12 +2632,6 @@
   },
   "layout.action.new-organization": {
     "message": "새 조직"
-  },
-  "layout.action.new-project": {
-    "message": "새 프로젝트"
-  },
-  "layout.action.new-server-project": {
-    "message": "새 서버"
   },
   "layout.action.publish": {
     "message": "게시"
@@ -2921,20 +2846,8 @@
   "layout.nav.add-account": {
     "message": "계정 추가"
   },
-  "layout.nav.discover": {
-    "message": "탐색"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Modrinth App 받기"
-  },
   "layout.nav.home": {
     "message": "홈"
-  },
-  "layout.nav.host-a-server": {
-    "message": "서버 호스트하기"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth 앱"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth 홈페이지"
@@ -3353,20 +3266,11 @@
   "organization.button.manage": {
     "message": "관리"
   },
-  "organization.button.manage-projects": {
-    "message": "프로젝트 관리"
-  },
-  "organization.label.downloads": {
-    "message": "다운로드"
-  },
   "organization.label.members": {
     "message": "멤버"
   },
   "organization.label.organization": {
     "message": "조직"
-  },
-  "organization.label.projects": {
-    "message": "프로젝트"
   },
   "organization.project-transfer.id-column": {
     "message": "아이디"
@@ -3388,12 +3292,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "타입"
-  },
-  "organization.projects.none": {
-    "message": "이 조직에는 아직 프로젝트가 없습니다."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "이 조직에는 아직 프로젝트가 없습니다. <create-link>하나 생성하시겠습니까?</create-link>?"
   },
   "project-member-header.error-decline": {
     "message": "팀 초대를 거절하지 못했습니다"

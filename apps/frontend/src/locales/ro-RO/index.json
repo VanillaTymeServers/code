@@ -713,32 +713,14 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Creează un proiect"
-  },
   "create.project.name-label": {
     "message": "Nume"
-  },
-  "create.project.name-placeholder": {
-    "message": "Introduceți numele proiectului..."
-  },
-  "create.project.summary-description": {
-    "message": "O propoziție sau două care îți descriu proiectul."
   },
   "create.project.summary-label": {
     "message": "Rezumat"
   },
-  "create.project.summary-placeholder": {
-    "message": "Acest proiect adaugă..."
-  },
-  "create.project.title": {
-    "message": "Creează un proiect"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.visibility-description": {
-    "message": "Vizibilitatea proiectului tău după ce a fost aprobat."
   },
   "create.project.visibility-private": {
     "message": "Privat"
@@ -1142,30 +1124,6 @@
   "landing.feature.search.heading": {
     "message": "Găsește ce vrei, rapid și ușor"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Locul ideal pentru {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "pachete de date"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "pachete de moduri"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "moduri"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "pluginuri"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "pachete de resurse"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "servere"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shadere"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -1225,9 +1183,6 @@
   },
   "layout.action.new-organization": {
     "message": "Organizație nouă"
-  },
-  "layout.action.new-project": {
-    "message": "Proiect nou"
   },
   "layout.avatar.alt": {
     "message": "Avatarul tău"
@@ -1373,20 +1328,8 @@
   "layout.nav.active-reports": {
     "message": "Rapoarte active"
   },
-  "layout.nav.discover": {
-    "message": "Descoperă"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Ia-ți Modrinth App"
-  },
   "layout.nav.home": {
     "message": "Acasă"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Găzduiește un server"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Pagina de pornire Modrinth"

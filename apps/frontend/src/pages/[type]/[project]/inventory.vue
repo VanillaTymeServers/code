@@ -5,7 +5,10 @@
 				v-for="(entry, index) in inventory"
 				:key="index"
 				class="flex gap-4 rounded-2xl border border-solid bg-surface-3 p-4"
-				:class="[entry.popular ? 'border-green' : 'border-surface-4', { 'opacity-60': !entry.in_stock }]"
+				:class="[
+					entry.popular ? 'border-green' : 'border-surface-4',
+					{ 'opacity-60': !entry.in_stock },
+				]"
 			>
 				<img
 					:src="itemIcon(entry.item)"

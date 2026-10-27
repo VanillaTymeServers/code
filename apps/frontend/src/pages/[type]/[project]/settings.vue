@@ -127,21 +127,23 @@ const navItems = computed(() => {
 			label: formatMessage(commonProjectSettingsMessages.description),
 			icon: AlignLeftIcon,
 		},
-		!isServerProject.value && !isShopProject.value && {
-			link: `/${base}/settings/versions`,
-			label: formatMessage(commonProjectSettingsMessages.versions),
-			icon: VersionIcon,
-		},
+		!isServerProject.value &&
+			!isShopProject.value && {
+				link: `/${base}/settings/versions`,
+				label: formatMessage(commonProjectSettingsMessages.versions),
+				icon: VersionIcon,
+			},
 		hasPermissionsPage.value && {
 			link: `/${base}/settings/permissions`,
 			label: formatMessage(commonProjectSettingsMessages.permissions),
 			icon: SignatureIcon,
 		},
-		!isServerProject.value && !isShopProject.value && {
-			link: `/${base}/settings/license`,
-			label: formatMessage(commonProjectSettingsMessages.license),
-			icon: BookTextIcon,
-		},
+		!isServerProject.value &&
+			!isShopProject.value && {
+				link: `/${base}/settings/license`,
+				label: formatMessage(commonProjectSettingsMessages.license),
+				icon: BookTextIcon,
+			},
 		isServerProject.value && {
 			link: `/${base}/settings/description`,
 			label: formatMessage(commonProjectSettingsMessages.description),
@@ -190,7 +192,9 @@ watch(
 	[shopReadOnly, () => route.name],
 	([readOnly, routeName]) => {
 		if (readOnly && routeName !== 'type-project-settings') {
-			navigateTo(`/${project.value.project_type}/${project.value.slug ?? project.value.id}/settings`)
+			navigateTo(
+				`/${project.value.project_type}/${project.value.slug ?? project.value.id}/settings`,
+			)
 		}
 	},
 	{ immediate: true },

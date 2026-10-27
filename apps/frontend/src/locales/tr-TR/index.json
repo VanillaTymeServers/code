@@ -1358,62 +1358,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Proje oluştur"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Eksik alanlar:{fields}"
   },
   "create.project.name-label": {
     "message": "İsim"
   },
-  "create.project.name-placeholder": {
-    "message": "Projenin ismini girin..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "{name} İkon"
-  },
-  "create.project.owner-description": {
-    "message": "Proje sahibini kendin ya da üyesi olduğun bir organizasyon olarak ayarla."
-  },
-  "create.project.owner-label": {
-    "message": "Sahip"
-  },
-  "create.project.server-project-title": {
-    "message": "Sunucu Projesi oluştur"
-  },
-  "create.project.summary-description": {
-    "message": "Projenizi anlatan bir iki cümle."
-  },
   "create.project.summary-label": {
     "message": "Özet"
   },
-  "create.project.summary-placeholder": {
-    "message": "Bu projenin ekledikleri..."
-  },
-  "create.project.title": {
-    "message": "Proje oluştur"
-  },
-  "create.project.type-label": {
-    "message": "Tür"
-  },
-  "create.project.type-project": {
-    "message": "Proje"
-  },
-  "create.project.type-server": {
-    "message": "Sunucu"
-  },
-  "create.project.unknown-user": {
-    "message": "Bilinmeyen kullanıcı"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "Kullanıcı Avatarı"
-  },
-  "create.project.visibility-description": {
-    "message": "Projenizin onaylandıktan sonraki görünürlük ayarı."
   },
   "create.project.visibility-private": {
     "message": "Gizli"
@@ -2582,30 +2537,6 @@
   "landing.feature.search.heading": {
     "message": "İstediğinizi kolay ve hızlıca bulun"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Minecraft {content} için bir numaralı yer"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "veri paketleri"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "mod paketleri"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "modları"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "pluginleri"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "kaynak paketleri"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "sunucuları"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shaderları"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2677,12 +2608,6 @@
   },
   "layout.action.new-organization": {
     "message": "Yeni organizasyon"
-  },
-  "layout.action.new-project": {
-    "message": "Yeni proje"
-  },
-  "layout.action.new-server-project": {
-    "message": "Yeni sunucu projesi"
   },
   "layout.action.publish": {
     "message": "Yayınla"
@@ -2897,20 +2822,8 @@
   "layout.nav.add-account": {
     "message": "Hesap ekle"
   },
-  "layout.nav.discover": {
-    "message": "Keşfet"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Modrinth App'i yükle"
-  },
   "layout.nav.home": {
     "message": "Anasayfa"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Sunucu kur"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth ana sayfası"
@@ -3326,20 +3239,11 @@
   "organization.button.manage": {
     "message": "Yönet"
   },
-  "organization.button.manage-projects": {
-    "message": "Projeleri yönet"
-  },
-  "organization.label.downloads": {
-    "message": "indirmeler"
-  },
   "organization.label.members": {
     "message": "üyeler"
   },
   "organization.label.organization": {
     "message": "Organizasyon"
-  },
-  "organization.label.projects": {
-    "message": "projeler"
   },
   "organization.project-transfer.id-column": {
     "message": "ID"
@@ -3361,12 +3265,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "Tür"
-  },
-  "organization.projects.none": {
-    "message": "Bu organizasyon herhangi bir projeye sahip değil."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "Bu organizasyon herhangi bir projeye sahip değil. Bir tane <create-link>oluşturmak</create-link> ister misiniz?"
   },
   "project-member-header.error-decline": {
     "message": "Ekip daveti reddedilemedi"

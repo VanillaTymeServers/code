@@ -1130,59 +1130,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Vytvořit projekt"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Chybějící políčka: {fields}"
   },
   "create.project.name-label": {
     "message": "Název"
   },
-  "create.project.name-placeholder": {
-    "message": "Zadejte název projektu..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "{name} Ikona"
-  },
-  "create.project.owner-label": {
-    "message": "Vlastník"
-  },
-  "create.project.server-project-title": {
-    "message": "Vytváření serverového projektu"
-  },
-  "create.project.summary-description": {
-    "message": "Popiště vaši organizace dvěma nebo jednou větou."
-  },
   "create.project.summary-label": {
     "message": "Shrnutí"
   },
-  "create.project.summary-placeholder": {
-    "message": "Tento projekt přidává..."
-  },
-  "create.project.title": {
-    "message": "Vytvořit projekt"
-  },
-  "create.project.type-label": {
-    "message": "Typ"
-  },
-  "create.project.type-project": {
-    "message": "Projekt"
-  },
-  "create.project.type-server": {
-    "message": "Server"
-  },
-  "create.project.unknown-user": {
-    "message": "Neznámý uživatel"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "Avatar uživatele"
-  },
-  "create.project.visibility-description": {
-    "message": "Viditelnost vašeho projektu poté co bude schválena."
   },
   "create.project.visibility-private": {
     "message": "Soukromé"
@@ -1811,27 +1769,6 @@
   "landing.creator.feature.monetization.title": {
     "message": "Monetizace"
   },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "data packy"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "modpacky"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "módy"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "pluginy"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "resource packy"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "servery"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shadery"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -1864,9 +1801,6 @@
   },
   "layout.action.new-organization": {
     "message": "Nová organizace"
-  },
-  "layout.action.new-project": {
-    "message": "Nový projekt"
   },
   "layout.action.publish": {
     "message": "Zveřejnit"
@@ -2021,20 +1955,8 @@
   "layout.nav.active-reports": {
     "message": "Aktivní nahlášení"
   },
-  "layout.nav.discover": {
-    "message": "Objevit"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Získat Modrinth App"
-  },
   "layout.nav.home": {
     "message": "Domů"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Hostovat server"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Domovská stránka Modrinthu"
@@ -2179,9 +2101,6 @@
   },
   "muralpay.placeholder.account-number": {
     "message": "Zadejte číslo účtu"
-  },
-  "organization.label.downloads": {
-    "message": "stažení"
   },
   "project-member-header.error-decline": {
     "message": "Nepodařilo se zamítnout pozvánku do týmu"

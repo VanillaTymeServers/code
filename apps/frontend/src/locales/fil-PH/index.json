@@ -557,53 +557,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Lumikha ng proyekto"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Nakukulang na field: {fields}"
   },
   "create.project.name-label": {
     "message": "Pangalan"
   },
-  "create.project.name-placeholder": {
-    "message": "Ilagay ang pangalan ng proyekto..."
-  },
-  "create.project.owner-description": {
-    "message": "Itatakda kang may-ari ng proyekto o ng organisasyong sinalihan mo."
-  },
-  "create.project.owner-label": {
-    "message": "May-ari"
-  },
-  "create.project.server-project-title": {
-    "message": "Naglilikha ng proyektong server"
-  },
-  "create.project.summary-description": {
-    "message": "Maisa o dalawang pangungusap na maglalarawan sa iyong proyekto."
-  },
   "create.project.summary-label": {
     "message": "Buod"
   },
-  "create.project.summary-placeholder": {
-    "message": "This project adds..."
-  },
-  "create.project.title": {
-    "message": "Naglilikha ng proyekto"
-  },
-  "create.project.type-label": {
-    "message": "Uri"
-  },
-  "create.project.type-project": {
-    "message": "Proyekto"
-  },
-  "create.project.type-server": {
-    "message": "Server"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.visibility-description": {
-    "message": "Ang visibility ng itong proyekto matapos nitong ma-approve."
   },
   "create.project.visibility-private": {
     "message": "Pribado"
@@ -1505,30 +1469,6 @@
   "landing.feature.search.heading": {
     "message": "Hanapin ang gusto mo, mabilisan at madalian"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Ang lugar para sa Minecraft na {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "mga data pack"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "mga modpack"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "mga mod"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "mga plugin"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "mga resource pack"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "mga server"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "mga shader"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -1594,9 +1534,6 @@
   },
   "layout.action.new-organization": {
     "message": "Bagong organisasyon"
-  },
-  "layout.action.new-project": {
-    "message": "Bagong proyekto"
   },
   "layout.action.publish": {
     "message": "Ilathala"
@@ -1775,20 +1712,8 @@
   "layout.nav.active-reports": {
     "message": "Mga aktibong sumbong"
   },
-  "layout.nav.discover": {
-    "message": "Tumuklas"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Kunin ang Modrinth App"
-  },
   "layout.nav.home": {
     "message": "Tahanan"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Mag-host ng server"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Pahina ng tahanan ng Modrinth"

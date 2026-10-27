@@ -473,53 +473,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "צור פרויקט"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "שדות חסרים: {fields}"
   },
   "create.project.name-label": {
     "message": "שם"
   },
-  "create.project.name-placeholder": {
-    "message": "הכנס שם פרויקט..."
-  },
-  "create.project.owner-description": {
-    "message": "הגדר את בעלי הפרויקט כעצמך או כארגון שבו אתה חבר."
-  },
-  "create.project.owner-label": {
-    "message": "בעלים"
-  },
-  "create.project.server-project-title": {
-    "message": "יצירת פרויקט שרת"
-  },
-  "create.project.summary-description": {
-    "message": "משפט או שניים שמפרטים על הפרויקט שלך."
-  },
   "create.project.summary-label": {
     "message": "סיכום"
   },
-  "create.project.summary-placeholder": {
-    "message": "הפרויקט מוסיף..."
-  },
-  "create.project.title": {
-    "message": "יוצר פרויקט"
-  },
-  "create.project.type-label": {
-    "message": "סוג"
-  },
-  "create.project.type-project": {
-    "message": "פרויקט"
-  },
-  "create.project.type-server": {
-    "message": "שרת"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.visibility-description": {
-    "message": "מצב נראות הפרויקט שלך אחרי שאושר."
   },
   "create.project.visibility-private": {
     "message": "פרויקט פרטי"
@@ -1337,30 +1301,6 @@
   "landing.feature.search.heading": {
     "message": "מצא מה שתרצא, בקלות ובמהירות"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "המקום ל{content} מיינקראפט"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "חבילות נתונים"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "חבילות מודים"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "מודים"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "פלאגינים"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "חבילות משאבים"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "שרתים"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "שיידרים"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -1426,9 +1366,6 @@
   },
   "layout.action.new-organization": {
     "message": "ארגון חדש"
-  },
-  "layout.action.new-project": {
-    "message": "פרוייקט חדש"
   },
   "layout.action.publish": {
     "message": "פרסם"
@@ -1577,17 +1514,8 @@
   "layout.nav.active-reports": {
     "message": "דוחות פעילים"
   },
-  "layout.nav.discover": {
-    "message": "גלה"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "להוריד אפליקציאת Modrinth"
-  },
   "layout.nav.home": {
     "message": "דף בית"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "דף הבית של Modrinth"

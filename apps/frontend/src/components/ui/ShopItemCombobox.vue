@@ -16,8 +16,9 @@
 
 <script setup lang="ts">
 import { Combobox, type ComboboxOption, defineMessages, useVIntl } from '@modrinth/ui'
-import { shopItems } from '~/helpers/shop-items'
 import { h, markRaw } from 'vue'
+
+import { shopItems } from '~/helpers/shop-items'
 
 const props = withDefaults(
 	defineProps<{
@@ -45,7 +46,7 @@ const messages = defineMessages({
 		defaultMessage: 'Type to search all {count} items',
 	},
 })
-	
+
 function itemIcon(id: string) {
 	return markRaw(() =>
 		h('img', {

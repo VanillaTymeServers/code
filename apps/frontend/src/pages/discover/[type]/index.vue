@@ -47,8 +47,8 @@ import type {
 } from '~/composables/use-server-install-content'
 import { useServerInstallContent } from '~/composables/use-server-install-content'
 import { withLabrinthCanaryHeader } from '~/helpers/canary.ts'
-import type { DisplayLocation, DisplayMode } from '~/plugins/cosmetics.ts'
 import { shopItems } from '~/helpers/shop-items'
+import type { DisplayLocation, DisplayMode } from '~/plugins/cosmetics.ts'
 
 const { formatMessage } = useVIntl()
 const debug = useDebugLogger('Discover')

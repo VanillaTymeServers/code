@@ -1382,62 +1382,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Projekt erstellen"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Fehlende Felder: {fields}"
   },
   "create.project.name-label": {
     "message": "Name"
   },
-  "create.project.name-placeholder": {
-    "message": "Projektnamen eingeben..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "Icon von {name}"
-  },
-  "create.project.owner-description": {
-    "message": "Setze dich oder eine Organisation, bei der du Mitglied bist, als Projektbesitzer."
-  },
-  "create.project.owner-label": {
-    "message": "Besitzer"
-  },
-  "create.project.server-project-title": {
-    "message": "Ein Serverprojekt erstellen"
-  },
-  "create.project.summary-description": {
-    "message": "Ein, zwei Sätze eingeben, um dein Projekt zu beschreiben."
-  },
   "create.project.summary-label": {
     "message": "Kurzbeschreibung"
   },
-  "create.project.summary-placeholder": {
-    "message": "Dieses Projekt..."
-  },
-  "create.project.title": {
-    "message": "Ein Projekt erstellen"
-  },
-  "create.project.type-label": {
-    "message": "Art"
-  },
-  "create.project.type-project": {
-    "message": "Projekt"
-  },
-  "create.project.type-server": {
-    "message": "Server"
-  },
-  "create.project.unknown-user": {
-    "message": "Unbekannter Benutzer"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "Benutzer-Avatar"
-  },
-  "create.project.visibility-description": {
-    "message": "Die Sichtbarkeit deines Projekts nach der Überprüfung."
   },
   "create.project.visibility-private": {
     "message": "Privat"
@@ -2606,30 +2561,6 @@
   "landing.feature.search.heading": {
     "message": "Finde was du brauchst, schnell und einfach"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Der Ort für Minecraft {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "Datenpakete"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "Modpakete"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "Mods"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "Plugins"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "Ressourcenpakete"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "Server"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "Shader"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2701,12 +2632,6 @@
   },
   "layout.action.new-organization": {
     "message": "Neue Organisation"
-  },
-  "layout.action.new-project": {
-    "message": "Neues Projekt"
-  },
-  "layout.action.new-server-project": {
-    "message": "Neues Serverprojekt"
   },
   "layout.action.publish": {
     "message": "Veröffentlichen"
@@ -2921,20 +2846,8 @@
   "layout.nav.add-account": {
     "message": "Konto hinzufügen"
   },
-  "layout.nav.discover": {
-    "message": "Entdecken"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Modrinth App herunterladen"
-  },
   "layout.nav.home": {
     "message": "Startseite"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Server hosten"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth Startseite"
@@ -3353,20 +3266,11 @@
   "organization.button.manage": {
     "message": "Verwalten"
   },
-  "organization.button.manage-projects": {
-    "message": "Projekte verwalten"
-  },
-  "organization.label.downloads": {
-    "message": "Downloads"
-  },
   "organization.label.members": {
     "message": "Mitglieder"
   },
   "organization.label.organization": {
     "message": "Organisation"
-  },
-  "organization.label.projects": {
-    "message": "Projekte"
   },
   "organization.project-transfer.id-column": {
     "message": "ID"
@@ -3388,12 +3292,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "Typ"
-  },
-  "organization.projects.none": {
-    "message": "Diese Organisation hat noch keine Projekte."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "Diese Organisation hat noch keine Projekte. Möchtest du <create-link>eins erstellen</create-link>?"
   },
   "project-member-header.error-decline": {
     "message": "Ablehnen der Team-Einladung fehlgeschlagen"

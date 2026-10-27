@@ -851,12 +851,6 @@
   "create-project-version.create-modal.stage.add-files.admonition": {
     "message": "Dodatne datoteke su namenjene pratećim resursima, kao što je izvorni kod, a ne alternativnim verzijama ili varijantama."
   },
-  "create.project.server-project-title": {
-    "message": "Kreiranje projekat servera"
-  },
-  "create.project.type-server": {
-    "message": "Server"
-  },
   "dashboard.analytics.total-downloads": {
     "message": "Ukupan broj preuzimanja"
   },
@@ -1112,12 +1106,6 @@
   "landing.creator.feature.discovery.description": {
     "message": "Omogući hiljadama korisnika da otkriju tvoj projekat putem pretrage, naše početne stranice, Discord servera i drugih načina koji tek dolaze!"
   },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "resurs paketi"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "serveri"
-  },
   "layout.action.analytics-events": {
     "message": "Analitički događaji"
   },
@@ -1258,9 +1246,6 @@
   },
   "layout.nav.home": {
     "message": "Početna"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Hostuj server"
   },
   "layout.nav.my-servers": {
     "message": "Moji serveri"

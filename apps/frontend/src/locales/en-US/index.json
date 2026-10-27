@@ -755,6 +755,33 @@
   "auth.authorize.redirect-url": {
     "message": "You will be redirected to <redirect-url>{url}</redirect-url>"
   },
+  "auth.claim.confirm-password-label": {
+    "message": "Confirm password"
+  },
+  "auth.claim.create-account": {
+    "message": "Create account"
+  },
+  "auth.claim.description": {
+    "message": "Add your email and choose a password to finish setting up your account."
+  },
+  "auth.claim.link-problem-title": {
+    "message": "This link can't be used"
+  },
+  "auth.claim.missing-flow": {
+    "message": "This link is incomplete. Run /register in-game to get a new one."
+  },
+  "auth.claim.password-mismatch": {
+    "message": "The passwords don't match."
+  },
+  "auth.claim.sign-in": {
+    "message": "Sign in"
+  },
+  "auth.claim.title": {
+    "message": "Finish your account"
+  },
+  "auth.claim.welcome": {
+    "message": "Welcome, {username}!"
+  },
   "auth.continue-with-provider": {
     "message": "Continue with {provider}"
   },
@@ -811,6 +838,18 @@
   },
   "auth.create-account.username.placeholder": {
     "message": "Enter username"
+  },
+  "auth.join.afterwards": {
+    "message": "You'll get a link in chat to add your email and choose a password. Your Discord must be linked first."
+  },
+  "auth.join.description": {
+    "message": "Vanilla Tyme accounts are created from the Minecraft server. Join the server and run:"
+  },
+  "auth.join.sign-in": {
+    "message": "Already have an account? Sign in"
+  },
+  "auth.join.title": {
+    "message": "Create an account"
   },
   "auth.reauthenticate.2fa.description": {
     "message": "Enter the 6-digit code from your authenticator app, or one of your backup codes."
@@ -1394,62 +1433,20 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Create project"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Missing fields: {fields}"
   },
   "create.project.name-label": {
     "message": "Name"
   },
-  "create.project.name-placeholder": {
-    "message": "Enter project name..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "{name} Icon"
-  },
-  "create.project.owner-description": {
-    "message": "Set the project owner as yourself or an organization you're a member of."
-  },
-  "create.project.owner-label": {
-    "message": "Owner"
-  },
-  "create.project.server-project-title": {
-    "message": "Creating a server project"
-  },
-  "create.project.summary-description": {
-    "message": "A sentence or two that describes your project."
+  "create.project.shop-title": {
+    "message": "Creating a shop"
   },
   "create.project.summary-label": {
     "message": "Summary"
   },
-  "create.project.summary-placeholder": {
-    "message": "This project adds..."
-  },
-  "create.project.title": {
-    "message": "Creating a project"
-  },
-  "create.project.type-label": {
-    "message": "Type"
-  },
-  "create.project.type-project": {
-    "message": "Project"
-  },
-  "create.project.type-server": {
-    "message": "Server"
-  },
-  "create.project.unknown-user": {
-    "message": "Unknown user"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "User Avatar"
-  },
-  "create.project.visibility-description": {
-    "message": "The visibility of your project after it has been approved."
   },
   "create.project.visibility-private": {
     "message": "Private"
@@ -1459,6 +1456,30 @@
   },
   "create.project.visibility-unlisted": {
     "message": "Unlisted"
+  },
+  "create.shop.create-project": {
+    "message": "Create shop"
+  },
+  "create.shop.name-placeholder": {
+    "message": "Enter shop name..."
+  },
+  "create.shop.summary-description": {
+    "message": "A sentence or two that describes your shop."
+  },
+  "create.shop.summary-placeholder": {
+    "message": "This shop adds..."
+  },
+  "create.shop.type-label": {
+    "message": "Type"
+  },
+  "create.shop.type-shop": {
+    "message": "Shop"
+  },
+  "create.shop.type-stall": {
+    "message": "Stall"
+  },
+  "create.shop.visibility-description": {
+    "message": "The visibility of your shop after it has been approved."
   },
   "dashboard.affiliate-links.create.button": {
     "message": "Create affiliate link"
@@ -2225,6 +2246,78 @@
   "discover.seo.title-with-query": {
     "message": "Search {projectType} | {query}"
   },
+  "downloads.download-button": {
+    "message": "Download"
+  },
+  "downloads.filter.server": {
+    "message": "Server"
+  },
+  "downloads.filter.server.plots": {
+    "message": "Creative Plots"
+  },
+  "downloads.filter.server.svt": {
+    "message": "Semi-Vanilla Tyme"
+  },
+  "downloads.filter.server.vt": {
+    "message": "Vanilla Tyme"
+  },
+  "downloads.hero.subtitle": {
+    "message": "Download world saves from all of our servers and explore the (almost) full history of Vanilla Tyme"
+  },
+  "downloads.hero.title": {
+    "message": "Map Downloads"
+  },
+  "downloads.map.plots1": {
+    "message": "Creative Plots"
+  },
+  "downloads.map.svt1": {
+    "message": "Semi-Vanilla Season 1"
+  },
+  "downloads.map.svt2": {
+    "message": "Semi-Vanilla Season 2"
+  },
+  "downloads.map.vt1": {
+    "message": "Season 1"
+  },
+  "downloads.map.vt3": {
+    "message": "Season 3"
+  },
+  "downloads.map.vt4": {
+    "message": "Season 4"
+  },
+  "downloads.map.vt5": {
+    "message": "Season 5"
+  },
+  "downloads.map.vt6": {
+    "message": "Season 6"
+  },
+  "downloads.map.vt7": {
+    "message": "Season 7"
+  },
+  "downloads.map.vt8": {
+    "message": "Season 8"
+  },
+  "downloads.map.vt9": {
+    "message": "Season 9"
+  },
+  "downloads.no-results": {
+    "message": "No results found."
+  },
+  "downloads.view-button": {
+    "message": "View"
+  },
+  "downloads.viewer.close": {
+    "message": "Close"
+  },
+  "downloads.viewer.open-in-new-tab": {
+    "message": "Open in new tab"
+  },
+  "downloads.viewer.zoom-in": {
+    "message": "Zoom in"
+  },
+  "downloads.viewer.zoom-out": {
+    "message": "Zoom out"
+  },
   "error.collection.404.list_item.1": {
     "message": "You may have mistyped the collection's URL."
   },
@@ -2621,29 +2714,26 @@
   "landing.feature.search.heading": {
     "message": "Find what you want, quickly and easily"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "The place for Minecraft {content}"
+  "landing.heading.a-minecraft-server-for": {
+    "message": "A Minecraft server for {content}"
   },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "data packs"
+  "landing.heading.a-minecraft-server-for.builders": {
+    "message": "builders"
   },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "modpacks"
+  "landing.heading.a-minecraft-server-for.dreamers": {
+    "message": "dreamers"
   },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "mods"
+  "landing.heading.a-minecraft-server-for.explorers": {
+    "message": "explorers"
   },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "plugins"
+  "landing.heading.a-minecraft-server-for.friends": {
+    "message": "friends"
   },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "resource packs"
+  "landing.heading.a-minecraft-server-for.redstoners": {
+    "message": "redstoners"
   },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "servers"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shaders"
+  "landing.heading.a-minecraft-server-for.you": {
+    "message": "you"
   },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
@@ -2717,11 +2807,8 @@
   "layout.action.new-organization": {
     "message": "New organization"
   },
-  "layout.action.new-project": {
-    "message": "New project"
-  },
-  "layout.action.new-server-project": {
-    "message": "New server project"
+  "layout.action.new-shop": {
+    "message": "New shop"
   },
   "layout.action.publish": {
     "message": "Publish"
@@ -2919,10 +3006,10 @@
     "message": "Toggle menu"
   },
   "layout.meta.description": {
-    "message": "Download Minecraft mods, plugins, datapacks, shaders, resourcepacks, and modpacks on Modrinth. Discover and publish projects on Modrinth with a modern, easy to use interface and API."
+    "message": "Vanilla Tyme SMP is a Minecraft server that is focused on providing a vanilla experience with a few quality of life plugins."
   },
   "layout.meta.og-description": {
-    "message": "Discover and publish Minecraft content!"
+    "message": "Vanilla Tyme SMP is a Minecraft server that is focused on providing a vanilla experience with a few quality of life plugins."
   },
   "layout.mobile.close-menu": {
     "message": "Close menu"
@@ -2936,20 +3023,11 @@
   "layout.nav.add-account": {
     "message": "Add account"
   },
-  "layout.nav.discover": {
-    "message": "Discover"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Get Modrinth App"
-  },
   "layout.nav.home": {
     "message": "Home"
   },
-  "layout.nav.host-a-server": {
-    "message": "Host a server"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
+  "layout.nav.map-downloads": {
+    "message": "Map downloads"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth home page"
@@ -2972,11 +3050,26 @@
   "layout.nav.revenue": {
     "message": "Revenue"
   },
+  "layout.nav.rules": {
+    "message": "Rules"
+  },
+  "layout.nav.rules-and-more": {
+    "message": "Rules & more"
+  },
+  "layout.nav.rules-and-more-short": {
+    "message": "Rules +"
+  },
   "layout.nav.saved-projects": {
     "message": "Saved projects"
   },
   "layout.nav.search": {
     "message": "Search"
+  },
+  "layout.nav.shops": {
+    "message": "Shops"
+  },
+  "layout.nav.store": {
+    "message": "Store"
   },
   "layout.nav.switch-account": {
     "message": "Switch account"
@@ -2986,6 +3079,9 @@
   },
   "layout.nav.upgrade-to-modrinth-plus": {
     "message": "Upgrade to Modrinth+"
+  },
+  "layout.nav.vote": {
+    "message": "Vote"
   },
   "layout.publish.email-verification-required.description": {
     "message": "You must verify your email before publishing on Modrinth."
@@ -3368,20 +3464,11 @@
   "organization.button.manage": {
     "message": "Manage"
   },
-  "organization.button.manage-projects": {
-    "message": "Manage projects"
-  },
-  "organization.label.downloads": {
-    "message": "downloads"
-  },
   "organization.label.members": {
     "message": "members"
   },
   "organization.label.organization": {
     "message": "Organization"
-  },
-  "organization.label.projects": {
-    "message": "projects"
   },
   "organization.project-transfer.id-column": {
     "message": "ID"
@@ -3403,12 +3490,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "Type"
-  },
-  "organization.projects.none": {
-    "message": "This organization doesn't have any projects yet."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "This organization doesn't have any projects yet. Would you like to <create-link>create one</create-link>?"
   },
   "project-member-header.error-decline": {
     "message": "Failed to decline team invitation"
@@ -3745,6 +3826,30 @@
   },
   "project.install-context.back-to-discover": {
     "message": "Back to discover"
+  },
+  "project.inventory.empty.description": {
+    "message": "This shop hasn't listed anything it sells."
+  },
+  "project.inventory.empty.heading": {
+    "message": "No items yet"
+  },
+  "project.inventory.for-amount": {
+    "message": "for {amount}"
+  },
+  "project.inventory.out-of-stock": {
+    "message": "Out of stock"
+  },
+  "project.inventory.popular": {
+    "message": "Popular"
+  },
+  "project.inventory.sale": {
+    "message": "Sale"
+  },
+  "project.inventory.seo-title": {
+    "message": "{title} - Inventory"
+  },
+  "project.inventory.title": {
+    "message": "Inventory"
   },
   "project.moderation.admonition.approved.body.private": {
     "message": "Your project is private, meaning it can only be accessed by you and people you invite."
@@ -4136,6 +4241,30 @@
   "project.settings.general.url.title": {
     "message": "URL"
   },
+  "project.settings.inventory.add-button": {
+    "message": "Add item"
+  },
+  "project.settings.inventory.delete-description": {
+    "message": "It will be removed from your shop’s inventory."
+  },
+  "project.settings.inventory.delete-title": {
+    "message": "Are you sure you want to delete this item?"
+  },
+  "project.settings.inventory.empty.description": {
+    "message": "Add the items your shop sells so players know what to bring."
+  },
+  "project.settings.inventory.empty.heading": {
+    "message": "No items yet"
+  },
+  "project.settings.inventory.heading": {
+    "message": "Inventory"
+  },
+  "project.settings.inventory.price-summary": {
+    "message": "{amount} for {price} {currency}"
+  },
+  "project.settings.inventory.title": {
+    "message": "Inventory"
+  },
   "project.settings.license.all-rights": {
     "message": "All Rights Reserved/No License"
   },
@@ -4436,6 +4565,42 @@
   "project.settings.server.srv-records-tooltip": {
     "message": "The address you enter here may have DNS SRV records _minecraft._tcp.(your domain) which point to your Minecraft server address and port."
   },
+  "project.settings.shop.archived-description": {
+    "message": "It belongs to a past season and can no longer be changed. You can still delete it below."
+  },
+  "project.settings.shop.archived-title": {
+    "message": "This shop is archived"
+  },
+  "project.settings.shop.coordinates-description": {
+    "message": "Where your shop is in the world. Leave both empty if it has no location yet."
+  },
+  "project.settings.shop.coordinates-invalid": {
+    "message": "Enter both X and Z as whole numbers, or leave both empty."
+  },
+  "project.settings.shop.coordinates-label": {
+    "message": "Coordinates"
+  },
+  "project.settings.shop.heading": {
+    "message": "Shop details"
+  },
+  "project.settings.shop.stall-color-label": {
+    "message": "Stall color"
+  },
+  "project.settings.shop.stall-color-placeholder": {
+    "message": "Select a color"
+  },
+  "project.settings.shop.title": {
+    "message": "Shop"
+  },
+  "project.settings.shop.type-label": {
+    "message": "Type"
+  },
+  "project.settings.shop.type-shop": {
+    "message": "Shop"
+  },
+  "project.settings.shop.type-stall": {
+    "message": "Stall"
+  },
   "project.settings.tags.all-tags-selected-warning": {
     "message": "You've selected all {count} available tags. Please select only the tags that truly apply to your project."
   },
@@ -4639,6 +4804,780 @@
   },
   "report.submit": {
     "message": "Submit report"
+  },
+  "rules.cta.open-ticket": {
+    "message": "Open a ticket"
+  },
+  "rules.discord.advertising.exception": {
+    "message": "The only exception is content directly related to Vanilla Tyme Servers."
+  },
+  "rules.discord.advertising.nav-label": {
+    "message": "Advertising"
+  },
+  "rules.discord.advertising.prohibited": {
+    "message": "Advertisement of other Discord servers, Minecraft servers, or self-promotion of any social media in any chat channel is prohibited."
+  },
+  "rules.discord.advertising.subtitle": {
+    "message": "No unsolicited promotion in any channel"
+  },
+  "rules.discord.advertising.title": {
+    "message": "Advertising & Promotions"
+  },
+  "rules.discord.advertising.vandalization": {
+    "message": "Vandalization of the server in any way will result in administrative action."
+  },
+  "rules.discord.ban-evasion.alt-accounts": {
+    "message": "If you are caught evading a ban in-game or through Discord, you will be banned on any alternative accounts as well."
+  },
+  "rules.discord.ban-evasion.assisting": {
+    "message": "Anyone assisting a ban evasion will also be held accountable."
+  },
+  "rules.discord.ban-evasion.subtitle": {
+    "message": "Alt accounts and assistance held accountable"
+  },
+  "rules.discord.ban-evasion.title": {
+    "message": "Ban Evasion"
+  },
+  "rules.discord.cta.description": {
+    "message": "Open a support ticket in Discord or reach out to a staff member directly. We take all reports seriously."
+  },
+  "rules.discord.cta.title": {
+    "message": "Need to report something?"
+  },
+  "rules.discord.disclaimer.other-players": {
+    "message": "We cannot be held liable for what other players say or do, but if someone breaches the basic terms of service or server rules, please send a screenshot with a time and date. We will investigate and take administrative action where necessary."
+  },
+  "rules.discord.disclaimer.participation": {
+    "message": "By participating in the official Vanilla Tyme Servers forum, Minecraft servers, or Discord, you voluntarily agree that the staff team is not liable for anything that happens to you, your computer, or any personal effects as a direct or indirect result of using the aforementioned services."
+  },
+  "rules.discord.disclaimer.subtitle": {
+    "message": "Liability notice"
+  },
+  "rules.discord.disclaimer.title": {
+    "message": "Disclaimer"
+  },
+  "rules.discord.discrimination.ableism": {
+    "message": "Ableism"
+  },
+  "rules.discord.discrimination.ageism": {
+    "message": "Ageism"
+  },
+  "rules.discord.discrimination.not-condoned": {
+    "message": "We do not condone or support any acts of \"-isms.\" If you are found perpetrating any of these, you will face administrative action."
+  },
+  "rules.discord.discrimination.racism": {
+    "message": "Racism"
+  },
+  "rules.discord.discrimination.sexism": {
+    "message": "Sexism"
+  },
+  "rules.discord.discrimination.subtitle": {
+    "message": "No \"-isms\" of any kind"
+  },
+  "rules.discord.discrimination.title": {
+    "message": "Discrimination"
+  },
+  "rules.discord.drama.be-kind": {
+    "message": "Be kind and strive to keep negativity and drama out of all server chat channels, including in-game."
+  },
+  "rules.discord.drama.no-toxicity": {
+    "message": "Toxicity and animosity in public chat channels will not be tolerated."
+  },
+  "rules.discord.drama.private-disputes": {
+    "message": "All disputes must be handled privately. If you are caught arguing disrespectfully with another person, you may face consequences for inciting drama.."
+  },
+  "rules.discord.drama.subtitle": {
+    "message": "Handle conflicts privately, not in public channels"
+  },
+  "rules.discord.drama.title": {
+    "message": "Drama & Disputes"
+  },
+  "rules.discord.harassment.any-kind": {
+    "message": "Harassment of any kind"
+  },
+  "rules.discord.harassment.doxxing": {
+    "message": "Doxxing (sharing another person's private or personal information)"
+  },
+  "rules.discord.harassment.immediate-ban": {
+    "message": "<strong>If you are caught doing any of the following, you will be banned immediately</strong> and reported directly to Discord support."
+  },
+  "rules.discord.harassment.impersonation": {
+    "message": "Impersonating another player or staff member"
+  },
+  "rules.discord.harassment.soliciting": {
+    "message": "Soliciting private information about another person"
+  },
+  "rules.discord.harassment.subtitle": {
+    "message": "Doxxing, threats, and impersonations"
+  },
+  "rules.discord.harassment.threats": {
+    "message": "Making threats against other members"
+  },
+  "rules.discord.harassment.title": {
+    "message": "Harassment & Threats"
+  },
+  "rules.discord.illegal.behavior": {
+    "message": "<strong>Promotion, encouragement, or engagement in any illegal behavior</strong> is unlawful and prohibited. Topics will be reported to Discord'a Trust & Safety team. You may be removed from the platform and potentially reported to local law enforcement."
+  },
+  "rules.discord.illegal.subtitle": {
+    "message": "Promotion of illegal acts may result in removal from the platform."
+  },
+  "rules.discord.illegal.title": {
+    "message": "Illegal Activity"
+  },
+  "rules.discord.respect.language": {
+    "message": "Excessive offensive language is prohibited. Cursing is allowed, but keep it tasteful."
+  },
+  "rules.discord.respect.opinions": {
+    "message": "Everyone has the right to express their opinion — but remain thoughtful and respectful. Do not post anything offensive, abusive, or that constitutes hate speech of any kind."
+  },
+  "rules.discord.respect.prohibited-topics": {
+    "message": "<strong>Prohibited topics</strong> — heated/hot-button discussions or posting images/GIFs of the following is not allowed:"
+  },
+  "rules.discord.respect.subtitle": {
+    "message": "Be thoughtful, civil, and inclusive"
+  },
+  "rules.discord.respect.title": {
+    "message": "Respect & Conduct"
+  },
+  "rules.discord.respect.topic.animal-cruelty": {
+    "message": "Animal Cruelty"
+  },
+  "rules.discord.respect.topic.anti-lgbtqia": {
+    "message": "Anti-LGBTQIA+"
+  },
+  "rules.discord.respect.topic.blood": {
+    "message": "Open wounds / Blood"
+  },
+  "rules.discord.respect.topic.extremism": {
+    "message": "Any Extremism"
+  },
+  "rules.discord.respect.topic.gore": {
+    "message": "Gore / Self-harm"
+  },
+  "rules.discord.respect.topic.nsfw": {
+    "message": "NSFW"
+  },
+  "rules.discord.respect.topic.nsfw-tooltip": {
+    "message": "Includes adult themed things, general obscenities or sexually explicit images"
+  },
+  "rules.discord.respect.topic.politics": {
+    "message": "Politics"
+  },
+  "rules.discord.respect.topic.religion": {
+    "message": "Religion"
+  },
+  "rules.discord.respect.topics-removed": {
+    "message": "Discussion of these topics will be immediately removed and administrative action will be taken against all participants."
+  },
+  "rules.discord.scope.applies": {
+    "message": "These guidelines apply to all usernames, nicknames, avatars, statuses, and emotes used within the Vanilla Tyme Discord server."
+  },
+  "rules.discord.scope.nickname": {
+    "message": "<strong>Change your nickname to your Minecraft in-game name.</strong> This prevents confusion and keeps the community organized."
+  },
+  "rules.discord.scope.subtitle": {
+    "message": "These rules apply server-wide"
+  },
+  "rules.discord.scope.title": {
+    "message": "Scope"
+  },
+  "rules.discord.spam.disrespect": {
+    "message": "Abuse and disrespect towards other players and staff members is prohibited. If you are caught doing these things, you may receive a warning."
+  },
+  "rules.discord.spam.mentions": {
+    "message": "Spamming messages, mass-pinging, spam-pinging staff, and abuse of the mentions system is prohibited."
+  },
+  "rules.discord.spam.subtitle": {
+    "message": "Don't flood channels or abuse mentions"
+  },
+  "rules.discord.spam.title": {
+    "message": "Spam & Abuse"
+  },
+  "rules.hero.discord.accent": {
+    "message": "Guidelines"
+  },
+  "rules.hero.discord.pre": {
+    "message": "Discord"
+  },
+  "rules.hero.discord.subtitle": {
+    "message": "Applies to all channels, usernames, nicknames, avatars, statuses, and emotes across the Vanilla Tyme Discord server."
+  },
+  "rules.hero.main.accent": {
+    "message": "Rules"
+  },
+  "rules.hero.main.badge": {
+    "message": "Reading these in full is required before applying. We check."
+  },
+  "rules.hero.main.pre": {
+    "message": "The"
+  },
+  "rules.hero.main.subtitle": {
+    "message": "A nine-year-old community runs on trust. These keep it that way."
+  },
+  "rules.hero.market.accent": {
+    "message": "Rules"
+  },
+  "rules.hero.market.badge": {
+    "message": "Season 10"
+  },
+  "rules.hero.market.pre": {
+    "message": "Market"
+  },
+  "rules.hero.market.subtitle": {
+    "message": "Every approved player can buy or sell almost anything in our market area within Spawn."
+  },
+  "rules.main.bases.banner-markers": {
+    "message": "Do not break or attempt to break another players banner marker"
+  },
+  "rules.main.bases.claim-structures": {
+    "message": "Players are allowed to claim structures outside of their main base. You may claim one of any individual type of structure. Examples include an ocean monument, nether fortress, or pillager tower. After claiming clearly with signs, players are expected to use structures within 30 days."
+  },
+  "rules.main.bases.marked": {
+    "message": "Ensure your base is marked with pillars/signs in each corner or a full border."
+  },
+  "rules.main.bases.max-size": {
+    "message": "Bases shall not exceed 750 blocks square (750x750) in size."
+  },
+  "rules.main.bases.scout-area": {
+    "message": "Prior to claiming your base, thoroughly scout the area, including caves, to ensure the area isn't already claimed. Use common sense. If there are torches, signs, crops planted, livestock in pens, etc., it's obvious the area is inhabited. If you are in doubt, contact a staff member via support ticket for assistance."
+  },
+  "rules.main.bases.subtitle": {
+    "message": "Player claimed areas in the overworld"
+  },
+  "rules.main.bases.title": {
+    "message": "Bases"
+  },
+  "rules.main.cta.button": {
+    "message": "Apply on Discord"
+  },
+  "rules.main.cta.description": {
+    "message": "Now that you've read the rules, hop into our Discord and fill out the application to join the SMP."
+  },
+  "rules.main.cta.title": {
+    "message": "Ready to apply?"
+  },
+  "rules.main.end.builds": {
+    "message": "Farms and builds of any type are not allowed on the main end island without staff approval. You may build farms in the outer end islands (x/z coords +/- 1000). Temporary beacons are allowed to aide in mining obsidian pillars."
+  },
+  "rules.main.end.dragon-respawn": {
+    "message": "The dragon may be respawned."
+  },
+  "rules.main.end.first-dragon-fight": {
+    "message": "The first dragon fight and opening of the end is scheduled after the start of each map. No one is allowed to go to the End dimension before this time."
+  },
+  "rules.main.end.no-enderman-farms": {
+    "message": "No personal Enderman farms. Server provides a public Enderman farm."
+  },
+  "rules.main.end.subtitle": {
+    "message": "Dragon fights, farms, and the outer islands"
+  },
+  "rules.main.end.title": {
+    "message": "The End"
+  },
+  "rules.main.gameplay.client-mods": {
+    "message": "Client mods that give an unfair advantage are not allowed. A few exceptions exist — when in doubt, open a ticket."
+  },
+  "rules.main.gameplay.heads-up": {
+    "message": "<highlight>Heads up:</highlight> all player actions are logged. Getting caught is unavoidable."
+  },
+  "rules.main.gameplay.no-bugs": {
+    "message": "No in-game bugs, glitches, or exploits. Exception: breaking bedrock on nether roof or world base in your own base area with TNT & piston is allowed."
+  },
+  "rules.main.gameplay.no-cheats": {
+    "message": "No cheats, hacks, or exploits."
+  },
+  "rules.main.gameplay.no-duplication": {
+    "message": "No item duplication. TNT duplication is allowed."
+  },
+  "rules.main.gameplay.no-griefing": {
+    "message": "No griefing — damaging anything that isn't yours."
+  },
+  "rules.main.gameplay.no-hacks": {
+    "message": "No fly hacks, speed hacks, PvP hacks, free camera."
+  },
+  "rules.main.gameplay.no-lagging": {
+    "message": "No intentional lagging or crashing the server."
+  },
+  "rules.main.gameplay.no-outside-items": {
+    "message": "Don't bring items in from outside the game."
+  },
+  "rules.main.gameplay.no-rearranging": {
+    "message": "Don't rearrange items in containers that aren't yours."
+  },
+  "rules.main.gameplay.no-scripts": {
+    "message": "No scripts, macros, auto-loggers, auto-clickers, auto-miners."
+  },
+  "rules.main.gameplay.no-stealing": {
+    "message": "No stealing. Don't take from bases, chests, farms, or spawn without permission."
+  },
+  "rules.main.gameplay.no-xray": {
+    "message": "No xray (vanilla exploit, mods, resource packs, etc.)."
+  },
+  "rules.main.gameplay.pvp-consent": {
+    "message": "PvP requires consent from all parties. Indirect harm via traps counts."
+  },
+  "rules.main.gameplay.seed-private": {
+    "message": "Server seed is private. Don't share, request, or use it."
+  },
+  "rules.main.gameplay.subtitle": {
+    "message": "No hacks, no cheats, no exploits — play fairly"
+  },
+  "rules.main.gameplay.title": {
+    "message": "Gameplay & Fair Play"
+  },
+  "rules.main.inactivity.member-rank": {
+    "message": "After 30 days of not logging in, a player with the Member rank is considered inactive. Any base owned by an inactive member rank player is subject for removal, unless staff is notified or a post has been made in the inactivity support ticket. Supporter's bases are safe from inactivity rollback."
+  },
+  "rules.main.inactivity.no-claiming": {
+    "message": "At no point can another player claim an inactive base or take items from it."
+  },
+  "rules.main.inactivity.structure-claims": {
+    "message": "Extra claims of structures from any rank player outside of their main base are not safe from inactivity. Examples: nether fortress, ocean monument. If you've claimed a structure and not used it in more than 60 days, staff may reclaim it."
+  },
+  "rules.main.inactivity.subtitle": {
+    "message": "What happens to your base while you're away"
+  },
+  "rules.main.inactivity.title": {
+    "message": "Inactivity"
+  },
+  "rules.main.joining.apply": {
+    "message": "Apply by joining our <discord-link>Discord</discord-link> server and filling out the application. Players must be approved before playing."
+  },
+  "rules.main.joining.link-account": {
+    "message": "Once accepted, link your Discord (instructions in <link-account-link>link account channel</link-account-link>) and remain in our Discord while you play."
+  },
+  "rules.main.joining.low-effort": {
+    "message": "Incomplete or low effort applications may be denied."
+  },
+  "rules.main.joining.lying": {
+    "message": "Any player found to have lied on their application prior to, or anytime after being accepted, is subject to an immediate ban."
+  },
+  "rules.main.joining.no-review-requests": {
+    "message": "Do not ask staff to review your application."
+  },
+  "rules.main.joining.read-rules": {
+    "message": "Read all of the rules in full before applying."
+  },
+  "rules.main.joining.subtitle": {
+    "message": "Application process and account requirements"
+  },
+  "rules.main.joining.title": {
+    "message": "Joining Vanilla Tyme SMP"
+  },
+  "rules.main.joining.usernames": {
+    "message": "Inappropriate Minecraft usernames or skins will not be accepted unless changed."
+  },
+  "rules.main.lag.afk-farm-switches": {
+    "message": "AFK farms need both an on/off switch and a kill switch."
+  },
+  "rules.main.lag.afk-hostile-farms": {
+    "message": "AFKing at hostile mob farms is allowed only when mobs die immediately and don't build up."
+  },
+  "rules.main.lag.auto-collection": {
+    "message": "Limit auto-collection (minecarts/hoppers) to as few as possible. Cover hoppers with solid blocks where applicable."
+  },
+  "rules.main.lag.guardian-farms": {
+    "message": "Guardian farms cannot exceed 20x20x20 (the Guardian spawning area)."
+  },
+  "rules.main.lag.mob-farm-switch": {
+    "message": "Mob farms must have an on/off switch where possible."
+  },
+  "rules.main.lag.mob-limit": {
+    "message": "Each base — single player or shared — may have at most 100 animals and 100 villagers. Staff may remove mobs over the limit without notice."
+  },
+  "rules.main.lag.no-afk-autoclickers": {
+    "message": "No autoclickers while AFK."
+  },
+  "rules.main.lag.no-chunk-loaders": {
+    "message": "No chunk loaders of any kind."
+  },
+  "rules.main.lag.no-entity-cramming": {
+    "message": "No bypassing vanilla entity cramming. Stacking minecarts is not allowed."
+  },
+  "rules.main.lag.no-mega-sorters": {
+    "message": "No mega item sorters or excessively large redstone builds. Staff may ask you to fix or remove anything causing significant lag."
+  },
+  "rules.main.lag.staff-may-disable": {
+    "message": "Staff may disable any farm causing significant lag or otherwise breaking the rules."
+  },
+  "rules.main.lag.subtitle": {
+    "message": "Keeping the server smooth for everyone"
+  },
+  "rules.main.lag.title": {
+    "message": "Lag"
+  },
+  "rules.main.lag.trading-villagers": {
+    "message": "Trading villagers must be optimized."
+  },
+  "rules.main.lag.villager-breeders": {
+    "message": "Breeders must not let over 24 villagers build up at a time."
+  },
+  "rules.main.lag.villagers": {
+    "message": "Villagers:"
+  },
+  "rules.main.market.area": {
+    "message": "A designated market area is provided at spawn for all players to participate in after approval."
+  },
+  "rules.main.market.no-shops-elsewhere": {
+    "message": "Players cannot set up shops, signs, chests, or advertisements in any other part of spawn or public server area without permission or in a predesignated area. This includes the Spawn portion of the nether. This includes the overworld, nether, and main end island. The only exception is within your own market plot/stall."
+  },
+  "rules.main.market.read-rules": {
+    "message": "Players are required to read the <market-rules-link>Market rules</market-rules-link> before starting their own Market Stall or Shop in spawn."
+  },
+  "rules.main.market.sell-from-base": {
+    "message": "Players are allowed to sell items from their base or personal nether tunnel area."
+  },
+  "rules.main.market.subtitle": {
+    "message": "Buying, selling, and the spawn market"
+  },
+  "rules.main.market.title": {
+    "message": "Market & Economy"
+  },
+  "rules.main.nether.main-tunnels": {
+    "message": "Our main nether tunnels extend north, south, east, and west from 0, 0. Players may not build in or edit the main nether tunnels which extend to approximately +/- 7 on each side of 0."
+  },
+  "rules.main.nether.portal-connection": {
+    "message": "Your nether portal must connect to the closest main tunnel and can not have perpendicular side tunnels. If the tunnel you need is already taken, you must contact the person or staff to share the tunnel."
+  },
+  "rules.main.nether.portal-height": {
+    "message": "Personal portals must be created or moved to 115 on the y axis in the nether and must sync properly with your portal in the Overworld."
+  },
+  "rules.main.nether.portal-hubs": {
+    "message": "Personal portal hubs must be on the nether roof and are restricted to your personal base (750x750 in the overworld)."
+  },
+  "rules.main.nether.subtitle": {
+    "message": "Main tunnels, personal portals, and roof hubs"
+  },
+  "rules.main.nether.title": {
+    "message": "The Nether"
+  },
+  "rules.main.nether.tunnel-format": {
+    "message": "Personal nether tunnels and portals must follow the proper size and layout format."
+  },
+  "rules.main.nether.tunnel-size": {
+    "message": "Tunnels cannot exceed the max width and height of 9x9; this includes the walls, floor and roof."
+  },
+  "rules.main.nether.tunnel-spacing": {
+    "message": "Personal nether tunnels are spaced every 10 blocks. Your personal tunnel should end in coordinates 1 and 9. Example: tunnel goes from 721 to 729"
+  },
+  "rules.main.nether.zero-coords": {
+    "message": "The blocks on the 0 cords should be left as is. Example: Block 720 and 730 are left netherrack"
+  },
+  "rules.main.proof.code": {
+    "message": "To confirm you've read these rules, include the code <code>#BlameDragon</code> in the Additional Questions section of your application."
+  },
+  "rules.main.proof.subtitle": {
+    "message": "Required in your application"
+  },
+  "rules.main.proof.title": {
+    "message": "Proof"
+  },
+  "rules.main.punishments.ban": {
+    "message": "Ban"
+  },
+  "rules.main.punishments.bans": {
+    "message": "<strong>Bans:</strong> may be immediate without warning depending on severity. Bans are permanent but may be appealed once. Denied appeals are final."
+  },
+  "rules.main.punishments.final-notice": {
+    "message": "Final notice"
+  },
+  "rules.main.punishments.first-warning": {
+    "message": "First Warning"
+  },
+  "rules.main.punishments.not-step-by-step": {
+    "message": "<highlight>Not always step-by-step.</highlight> Serious violations can skip straight to a permanent ban without warning. Every ban may be appealed once — a denied appeal is final."
+  },
+  "rules.main.punishments.permanent": {
+    "message": "Permanent"
+  },
+  "rules.main.punishments.second-warning": {
+    "message": "Second Warning"
+  },
+  "rules.main.punishments.subtitle": {
+    "message": "What happens when rules are broken"
+  },
+  "rules.main.punishments.third-warning": {
+    "message": "Third Warning"
+  },
+  "rules.main.punishments.title": {
+    "message": "Punishments"
+  },
+  "rules.main.punishments.warnings": {
+    "message": "<strong>Warnings:</strong> after 3 warnings, a player will be banned."
+  },
+  "rules.main.safety.account-responsibility": {
+    "message": "You are responsible for your account. Don't share login. If compromised, contact staff ASAP."
+  },
+  "rules.main.safety.community-content": {
+    "message": "Vanilla Tyme content may be shared in our <community-content-link>community content</community-content-link> channel."
+  },
+  "rules.main.safety.english-only": {
+    "message": "English only in public game chat. Other languages allowed in DMs."
+  },
+  "rules.main.safety.eulas": {
+    "message": "Comply with <discord-link>Discord</discord-link> and <minecraft-link>Minecraft</minecraft-link> EULAs."
+  },
+  "rules.main.safety.in-game-advertising": {
+    "message": "In-game advertising of goods/services: max once per hour in chat. Prefer the Discord <trade-link>Buy/Sell/Trade</trade-link> channel."
+  },
+  "rules.main.safety.no-advertising": {
+    "message": "No advertising or self promotion."
+  },
+  "rules.main.safety.no-alt-accounts": {
+    "message": "No alt accounts. One Minecraft + one Discord account per player. Sharing internet with another player? Open a ticket and notify staff."
+  },
+  "rules.main.safety.no-arguing": {
+    "message": "No arguing in public channels. You may discuss opposing views via DM — but if someone asks you to stop, you must comply."
+  },
+  "rules.main.safety.no-doxxing": {
+    "message": "No Doxxing. Sharing private/identifying information about another person — name, location, social media — is prohibited."
+  },
+  "rules.main.safety.no-excessive-swearing": {
+    "message": "No excessive or abusive swearing intended to offend, intimidate, or harm."
+  },
+  "rules.main.safety.no-free-items": {
+    "message": "No asking for free items."
+  },
+  "rules.main.safety.no-harassment": {
+    "message": "No harassment, disrespectful, derogatory, or abusive chat towards anyone, including staff."
+  },
+  "rules.main.safety.no-harmful-content": {
+    "message": "No harmful, violent, or obscene content (NSFW, gore, self harm, drugs, etc.)."
+  },
+  "rules.main.safety.no-name-calling": {
+    "message": "No name calling or swearing at others."
+  },
+  "rules.main.safety.no-offensive-content": {
+    "message": "No racist, anti-LGBTQ+, sexist, anti-religious, or otherwise offensive content."
+  },
+  "rules.main.safety.no-other-servers": {
+    "message": "No promoting or mention of other Minecraft servers. (General content creator servers talk is fine.)"
+  },
+  "rules.main.safety.no-politics": {
+    "message": "No political or religious topics."
+  },
+  "rules.main.safety.no-real-currency": {
+    "message": "No sales of items for real currency."
+  },
+  "rules.main.safety.no-spam": {
+    "message": "No spam — repetitive, irrelevant, or unsolicited messages."
+  },
+  "rules.main.safety.subtitle": {
+    "message": "How we treat each other in chat and voice"
+  },
+  "rules.main.safety.title": {
+    "message": "Safety & Communication"
+  },
+  "rules.main.spawn.area": {
+    "message": "Spawn extends 750 blocks in all directions from x0/z0. No building, mining, or gathering except in designated areas or with staff approval."
+  },
+  "rules.main.spawn.events": {
+    "message": "Holiday/celebration events with free items: one item per player unless a sign says otherwise. You pick up your own — no picking up for others."
+  },
+  "rules.main.spawn.subtitle": {
+    "message": "750 blocks from x0/z0"
+  },
+  "rules.main.spawn.title": {
+    "message": "Spawn"
+  },
+  "rules.main.support.general-questions": {
+    "message": "General questions use our <community-help-link>community help</community-help-link> Discord channel."
+  },
+  "rules.main.support.no-staff-dms": {
+    "message": "Don't DM individual staff. Exception: if your issue is with a staff member, contact a developer directly."
+  },
+  "rules.main.support.staff-in-game": {
+    "message": "Staff in-game may answer straightforward questions, but they may be busy/AFK. If no response, open a <ticket-link>ticket</ticket-link>."
+  },
+  "rules.main.support.subtitle": {
+    "message": "How to get answers from staff"
+  },
+  "rules.main.support.tickets": {
+    "message": "Specific questions or anything needing staff make a <ticket-link>general support ticket</ticket-link> in Discord. Tickets get the fastest response."
+  },
+  "rules.main.support.title": {
+    "message": "Support & Help"
+  },
+  "rules.market.cta.description": {
+    "message": "Grab your Market Permit from Marty at spawn, then claim an open stall or plot. Questions? Open a ticket in our Discord."
+  },
+  "rules.market.cta.title": {
+    "message": "Ready to set up shop?"
+  },
+  "rules.market.currency-examples.diamond": {
+    "message": "= diamond"
+  },
+  "rules.market.currency-examples.diamond-block": {
+    "message": "= diamond block"
+  },
+  "rules.market.currency-examples.slot": {
+    "message": "= a slot"
+  },
+  "rules.market.currency-examples.title": {
+    "message": "Currency sign examples"
+  },
+  "rules.market.maintenance.good-standing": {
+    "message": "To stay in good standing, actively check inventory, collect payments, and/or restock your stall or shop at least once every 30 days."
+  },
+  "rules.market.maintenance.inactive-removal": {
+    "message": "If your shop goes inactive for over 30 days it will be removed without notice and your Market Permit will be revoked. All shop contents are donated to spawn."
+  },
+  "rules.market.maintenance.reopening": {
+    "message": "Once a shop is removed or closed, you may reopen by purchasing a new shop permit."
+  },
+  "rules.market.maintenance.subtitle": {
+    "message": "Keep your shop active or lose it"
+  },
+  "rules.market.maintenance.title": {
+    "message": "Maintenance"
+  },
+  "rules.market.overview.choose-spot": {
+    "message": "Choose between a pre-built stall or a blank plot to build your own shop. The full process is below."
+  },
+  "rules.market.overview.currency-sign": {
+    "message": "Display your shop's currency on a sign so pricing is clear. You can request any payment (diamonds, iron, etc.) as long as it's clearly marked and consistent."
+  },
+  "rules.market.overview.no-stall-and-shop": {
+    "message": "No player may have a stall and a shop at the same time."
+  },
+  "rules.market.overview.sharing": {
+    "message": "You can share a shop with other players — but no player may be part of more than one shop or stall at a time. Each player needs their own permit."
+  },
+  "rules.market.overview.subtitle": {
+    "message": "How the market works"
+  },
+  "rules.market.overview.title": {
+    "message": "Overview"
+  },
+  "rules.market.permits.display": {
+    "message": "Every shop/stall member must buy and display their own Market Permit, visible in the stall/shop immediately after claiming."
+  },
+  "rules.market.permits.marty": {
+    "message": "<strong>Marty the Market Master</strong> sells permits at the permit office located in spawn <highlight>x0 z-116</highlight> for <highlight>2 diamond blocks</highlight> each."
+  },
+  "rules.market.permits.no-giving": {
+    "message": "You may not give away or sell your permit to any player."
+  },
+  "rules.market.permits.no-moving": {
+    "message": "Don't remove or move the permit of any shop/stall you're not a member of."
+  },
+  "rules.market.permits.no-renaming": {
+    "message": "Permits should not be renamed."
+  },
+  "rules.market.permits.own-permit": {
+    "message": "Each player must purchase their own permit."
+  },
+  "rules.market.permits.subtitle": {
+    "message": "Required for every shop or stall member"
+  },
+  "rules.market.permits.switching": {
+    "message": "To switch between a stall and a plot, fully vacate your current spot first, open a ticket to notify staff, and move your permit to the new spot."
+  },
+  "rules.market.permits.title": {
+    "message": "Market Permits"
+  },
+  "rules.market.shops.build-height": {
+    "message": "Max build height is 40 blocks above natural ground level. Builds may descend up to 10 blocks below your floor level."
+  },
+  "rules.market.shops.claiming": {
+    "message": "To claim a plot, replace the vacant sign with your in-game name and the date you claimed. Obtain a Market Permit first and display it immediately. If none are open, you'll have to wait."
+  },
+  "rules.market.shops.entity-limits": {
+    "message": "Shops may use no more than 32 player heads, 64 item frames, and 16 armor stands."
+  },
+  "rules.market.shops.invisible-item-frames": {
+    "message": "Empty invisible item frames may not be used in shops."
+  },
+  "rules.market.shops.lighting": {
+    "message": "All shops must be lit so mobs cannot spawn — including roofs."
+  },
+  "rules.market.shops.marked-plots": {
+    "message": "All plot locations are clearly marked with concrete at the corners. You may not create your own plot."
+  },
+  "rules.market.shops.max-build-height": {
+    "message": "max build height"
+  },
+  "rules.market.shops.max-depth": {
+    "message": "max depth below floor"
+  },
+  "rules.market.shops.plot-dimensions": {
+    "message": "All plots are 20×20 blocks. Only banners, trapdoors, buttons, and signs may overhang the plot."
+  },
+  "rules.market.shops.plot-size": {
+    "message": "plot size"
+  },
+  "rules.market.shops.redstone": {
+    "message": "Redstone is allowed in limited quantity:"
+  },
+  "rules.market.shops.redstone.dispensers": {
+    "message": "Simple item dispensers"
+  },
+  "rules.market.shops.redstone.lighting": {
+    "message": "Lighting"
+  },
+  "rules.market.shops.redstone.no-farms": {
+    "message": "No farms anywhere in the market area"
+  },
+  "rules.market.shops.redstone.note-blocks": {
+    "message": "Small, non-looped note block songs"
+  },
+  "rules.market.shops.redstone.piston-doors": {
+    "message": "Piston doors"
+  },
+  "rules.market.shops.subtitle": {
+    "message": "Build your own on a blank 20×20 plot"
+  },
+  "rules.market.shops.switching": {
+    "message": "To switch to a stall, remove all blocks from your plot first, then open a ticket to notify staff."
+  },
+  "rules.market.shops.terraforming": {
+    "message": "Minimal terraforming of the ground is allowed."
+  },
+  "rules.market.shops.title": {
+    "message": "Shops"
+  },
+  "rules.market.stalls.available": {
+    "message": "stalls available"
+  },
+  "rules.market.stalls.claiming": {
+    "message": "To claim a stall, replace the vacant sign with your in-game name and the date you claimed. You must obtain a Market Permit first and display it immediately. If none are open, you'll have to wait — availability isn't guaranteed."
+  },
+  "rules.market.stalls.container-limit": {
+    "message": "Each stall may have a maximum of 10 barrels/chests (a double chest counts as 2). You may not add more."
+  },
+  "rules.market.stalls.decorations": {
+    "message": "You may add signs, banners, and up to 3 decorative player heads to promote your stall. Decorations must be attached to the stall."
+  },
+  "rules.market.stalls.max-containers": {
+    "message": "max barrels/chests"
+  },
+  "rules.market.stalls.rearranging": {
+    "message": "You may rearrange the barrels and chests, but you may not remove, add, or swap out any of the stall's blocks."
+  },
+  "rules.market.stalls.subtitle": {
+    "message": "Pre-built & ready to sell — first come, first served"
+  },
+  "rules.market.stalls.title": {
+    "message": "Stalls"
+  },
+  "rules.on-this-page": {
+    "message": "On this page"
+  },
+  "rules.tab.discord": {
+    "message": "Discord"
+  },
+  "rules.tab.main": {
+    "message": "Main"
+  },
+  "rules.tab.market": {
+    "message": "Market"
+  },
+  "rules.toolbar.collapse-all": {
+    "message": "Collapse all"
+  },
+  "rules.toolbar.expand-all": {
+    "message": "Expand all"
   },
   "scopes.analytics.description": {
     "message": "Access your analytics data"
@@ -5669,6 +6608,201 @@
   "shared-instance.invite.unavailable.title": {
     "message": "This invite isn't available"
   },
+  "shop.archived.body": {
+    "message": "This shop was part of Season {season} and is now archived. It may no longer exist on the current map."
+  },
+  "shop.archived.header": {
+    "message": "{title} is from Season {season}"
+  },
+  "shop.inventory.modal.add-title": {
+    "message": "Add item"
+  },
+  "shop.inventory.modal.amount-description": {
+    "message": "How many of the item the buyer gets per trade."
+  },
+  "shop.inventory.modal.amount-label": {
+    "message": "Amount"
+  },
+  "shop.inventory.modal.currency-placeholder": {
+    "message": "Currency item"
+  },
+  "shop.inventory.modal.custom-name-label": {
+    "message": "Custom name"
+  },
+  "shop.inventory.modal.custom-name-placeholder": {
+    "message": "Optional, e.g. an anvil-renamed item's name"
+  },
+  "shop.inventory.modal.edit-title": {
+    "message": "Edit item"
+  },
+  "shop.inventory.modal.in-stock-label": {
+    "message": "In stock"
+  },
+  "shop.inventory.modal.item-label": {
+    "message": "Item"
+  },
+  "shop.inventory.modal.item-placeholder": {
+    "message": "Search for an item"
+  },
+  "shop.inventory.modal.note-label": {
+    "message": "Note"
+  },
+  "shop.inventory.modal.note-placeholder": {
+    "message": "Optional, e.g. \"Unbreaking III, Mending\""
+  },
+  "shop.inventory.modal.popular-label": {
+    "message": "Popular"
+  },
+  "shop.inventory.modal.price-label": {
+    "message": "Price"
+  },
+  "shop.inventory.modal.sale-price-invalid": {
+    "message": "The sale price must be a whole number lower than the normal price."
+  },
+  "shop.inventory.modal.sale-price-label": {
+    "message": "Sale price"
+  },
+  "shop.inventory.modal.sale-price-placeholder": {
+    "message": "Optional, leave empty when not on sale"
+  },
+  "shop.item-combobox.type-to-search": {
+    "message": "Type to search all {count} items"
+  },
+  "shop.sidebar.season": {
+    "message": "Season {season}"
+  },
+  "shop.sidebar.title": {
+    "message": "Shop info"
+  },
+  "shop.sidebar.type-shop": {
+    "message": "Shop"
+  },
+  "shop.sidebar.type-stall": {
+    "message": "Stall"
+  },
+  "store.cart.button": {
+    "message": "Cart ({count})"
+  },
+  "store.cart.buying-as": {
+    "message": "Buying as {username}"
+  },
+  "store.cart.checkout": {
+    "message": "Checkout"
+  },
+  "store.cart.empty": {
+    "message": "Your cart is empty."
+  },
+  "store.cart.gift-for": {
+    "message": "Gift for {username}"
+  },
+  "store.cart.keep-shopping": {
+    "message": "Keep shopping"
+  },
+  "store.cart.one-time": {
+    "message": "One-time"
+  },
+  "store.cart.recurring": {
+    "message": "Recurring"
+  },
+  "store.cart.remove": {
+    "message": "Remove from cart"
+  },
+  "store.cart.tax": {
+    "message": "Tax"
+  },
+  "store.cart.title": {
+    "message": "Your cart"
+  },
+  "store.cart.total": {
+    "message": "Total"
+  },
+  "store.category.not-found": {
+    "message": "Category not found"
+  },
+  "store.hero.accent": {
+    "message": "Vanilla Tyme"
+  },
+  "store.hero.pre": {
+    "message": "Support"
+  },
+  "store.hero.subtitle": {
+    "message": "When you make a donation, you are helping to keep our servers running."
+  },
+  "store.package.add-failed.title": {
+    "message": "Could not add to cart"
+  },
+  "store.package.add-to-cart": {
+    "message": "Add to cart"
+  },
+  "store.package.added.text": {
+    "message": "{name} is in your cart."
+  },
+  "store.package.added.title": {
+    "message": "Added to cart"
+  },
+  "store.package.back": {
+    "message": "Back to store"
+  },
+  "store.package.buying-as": {
+    "message": "Buying as {username}"
+  },
+  "store.package.change-player": {
+    "message": "Change player"
+  },
+  "store.package.gift-label": {
+    "message": "Gift this to another player"
+  },
+  "store.package.gift-username-placeholder": {
+    "message": "Recipient's Minecraft username"
+  },
+  "store.package.in-cart": {
+    "message": "In your cart"
+  },
+  "store.package.not-found": {
+    "message": "Package not found"
+  },
+  "store.package.one-time-or-recurring": {
+    "message": "{count, plural, one {One-time or every {unit}} other {One-time or every # {unit}s}}"
+  },
+  "store.package.purchase-type": {
+    "message": "Purchase type"
+  },
+  "store.package.purchase-type.one-time": {
+    "message": "One-time"
+  },
+  "store.package.purchase-type.subscription": {
+    "message": "{count, plural, one {Every {unit}} other {Every # {unit}s}}"
+  },
+  "store.package.recurring": {
+    "message": "{count, plural, one {Every {unit}} other {Every # {unit}s}}"
+  },
+  "store.package.remove": {
+    "message": "Remove"
+  },
+  "store.package.username-label": {
+    "message": "Your Minecraft username"
+  },
+  "store.package.username-placeholder": {
+    "message": "Your in-game name"
+  },
+  "store.purchase-complete.body": {
+    "message": "Your purchase is being processed. Perks are applied in game within a few minutes."
+  },
+  "store.purchase-complete.title": {
+    "message": "Thank you for your support!"
+  },
+  "store.sale.amount": {
+    "message": "{amount} off until {date}"
+  },
+  "store.sale.commands": {
+    "message": "Bonus perks until {date}"
+  },
+  "store.sale.percentage": {
+    "message": "{percentage}% off until {date}"
+  },
+  "store.sidebar.goal-progress": {
+    "message": "{raised} of {target}"
+  },
   "ui.latest-news-row.latest-news": {
     "message": "Latest news from Modrinth"
   },
@@ -5819,5 +6953,226 @@
   "version.unknown-embedded-content.title": {
     "message": "Withheld due to unknown embedded content"
   },
-  "landing.heading.a-minecraft-server-for": {"message": "A Minecraft server for {content}"}
+  "vote.faq.collectibles.answer-1": {
+    "message": "Collectibles are special items that you can obtain from voting and turn in to get various perks. Some collectibles have special desirable characteristics that cannot be obtained in vanilla Minecraft while others are just for show. All Collectibles can be identified by the “Collectible” text in the lore of the item. Collectibles are commonly traded, bought, and sold between players."
+  },
+  "vote.faq.collectibles.answer-2": {
+    "message": "All staff have a collectible named for them. Players have the ability to get a collectible named for them by winning early map competitions or by turning in sets of collectibles."
+  },
+  "vote.faq.collectibles.question": {
+    "message": "What are collectibles?"
+  },
+  "vote.faq.title": {
+    "message": "Frequently Asked Questions"
+  },
+  "vote.faq.trophies.answer-1": {
+    "message": "Trophies are special items awarded to players. Trophies can commonly be obtained as milestone voting swords (every 50 votes), holiday gifts, event gifts, competition prizes, weekly competition prizes, mini-game winner prizes and more."
+  },
+  "vote.faq.trophies.answer-2": {
+    "message": "All Trophies can be identified by the “Trophy” text in the lore of the item. Like collectibles, trophies are commonly traded, bought, and sold between players in game."
+  },
+  "vote.faq.trophies.answer-3": {
+    "message": "5 Trophies can be traded in for one Collectible. Contact a staff member in game or through discord support when you are ready to trade the trophies in. You will be given a Collectible Scoop."
+  },
+  "vote.faq.trophies.question": {
+    "message": "What are trophies?"
+  },
+  "vote.hero.leaderboard-button": {
+    "message": "View the leaderboard"
+  },
+  "vote.hero.subtitle": {
+    "message": "Support the server by voting to help us grow and keep the community active!"
+  },
+  "vote.hero.title-line-1": {
+    "message": "Vote for"
+  },
+  "vote.hero.title-line-2": {
+    "message": "Vanilla Tyme SMP"
+  },
+  "vote.hero.vote-button": {
+    "message": "Vote for the server"
+  },
+  "vote.leaderboard.column.all-time": {
+    "message": "All Time"
+  },
+  "vote.leaderboard.column.avatar": {
+    "message": "Avatar"
+  },
+  "vote.leaderboard.column.combined": {
+    "message": "D / W / M / All"
+  },
+  "vote.leaderboard.column.daily": {
+    "message": "Daily"
+  },
+  "vote.leaderboard.column.monthly": {
+    "message": "Monthly"
+  },
+  "vote.leaderboard.column.username": {
+    "message": "Username"
+  },
+  "vote.leaderboard.column.weekly": {
+    "message": "Weekly"
+  },
+  "vote.leaderboard.search-placeholder": {
+    "message": "Search usernames..."
+  },
+  "vote.leaderboard.sort-by": {
+    "message": "Sort by:"
+  },
+  "vote.leaderboard.sort.all": {
+    "message": "All time"
+  },
+  "vote.leaderboard.sort.month": {
+    "message": "This month"
+  },
+  "vote.leaderboard.sort.today": {
+    "message": "Today"
+  },
+  "vote.leaderboard.sort.week": {
+    "message": "This week"
+  },
+  "vote.leaderboard.subtitle": {
+    "message": "Just a little friendly competition!"
+  },
+  "vote.leaderboard.title": {
+    "message": "Voting Leaderboard"
+  },
+  "vote.links.site.curseforge": {
+    "message": "Curseforge"
+  },
+  "vote.links.site.minecraft-multiplayer": {
+    "message": "Minecraft Multiplayer"
+  },
+  "vote.links.site.minecraft-server-list": {
+    "message": "Minecraft Server List"
+  },
+  "vote.links.site.minecraft-servers": {
+    "message": "Minecraft Servers"
+  },
+  "vote.links.site.minelist": {
+    "message": "Minelist"
+  },
+  "vote.links.site.official-server-list": {
+    "message": "Official Server List"
+  },
+  "vote.links.site.planet-minecraft": {
+    "message": "Planet Minecraft"
+  },
+  "vote.links.title": {
+    "message": "Vote links"
+  },
+  "vote.seo.description": {
+    "message": "Support the Vanilla Tyme SMP server by voting and helping us grow!"
+  },
+  "vote.seo.title": {
+    "message": "Vote for Vanilla Tyme SMP"
+  },
+  "vote.tiers.chance": {
+    "message": "Chance"
+  },
+  "vote.tiers.collectible": {
+    "message": "Collectible"
+  },
+  "vote.tiers.extra-lucky": {
+    "message": "Extra Lucky"
+  },
+  "vote.tiers.lucky": {
+    "message": "Lucky"
+  },
+  "vote.tiers.rarity.common": {
+    "message": "common"
+  },
+  "vote.tiers.rarity.legendary": {
+    "message": "legendary"
+  },
+  "vote.tiers.rarity.rare": {
+    "message": "rare"
+  },
+  "vote.tiers.rarity.uncommon": {
+    "message": "uncommon"
+  },
+  "vote.tiers.regular": {
+    "message": "Regular"
+  },
+  "vote.tiers.stat.most-common": {
+    "message": "Most Common"
+  },
+  "vote.tiers.stat.rarest-drop": {
+    "message": "Rarest Drop"
+  },
+  "vote.tiers.stat.reward-tiers": {
+    "message": "Reward Tiers"
+  },
+  "vote.tiers.stat.total-coverage": {
+    "message": "Total coverage"
+  },
+  "vote.tiers.title": {
+    "message": "Vote reward tiers"
+  },
+  "vote.trade-ins.five.nether-roof": {
+    "message": "3x3 Nether roof access"
+  },
+  "vote.trade-ins.five.spawn-mob": {
+    "message": "Spawn any mob (except Wither/Dragon) at chosen location"
+  },
+  "vote.trade-ins.five.title": {
+    "message": "Trade 5 Collectibles"
+  },
+  "vote.trade-ins.five.trident": {
+    "message": "Unenchanted Trident"
+  },
+  "vote.trade-ins.how-it-works.description": {
+    "message": "Collect unique items through voting, then trade them in for special perks! Once you have the required number of unique collectibles, you can exchange them for any of the available options in that tier. Choose wisely - traded collectibles are consumed in the process."
+  },
+  "vote.trade-ins.how-it-works.title": {
+    "message": "How Trade-Ins work"
+  },
+  "vote.trade-ins.more-coming-soon": {
+    "message": "...and more coming soon™!"
+  },
+  "vote.trade-ins.options-label": {
+    "message": "Available trade options:"
+  },
+  "vote.trade-ins.sets.custom-collectible": {
+    "message": "Custom personalized collectible item of your choice added to collectible list. Contact staff via Discord ticket to start approval process. Remains in rotation permanently (unless player banned)"
+  },
+  "vote.trade-ins.sets.subtitle": {
+    "message": "of 24 unique collectibles"
+  },
+  "vote.trade-ins.sets.title": {
+    "message": "Trade 3 Sets"
+  },
+  "vote.trade-ins.subtitle": {
+    "message": "Trade your unique collectibles for exclusive perks and rewards"
+  },
+  "vote.trade-ins.ten.axe": {
+    "message": "Looting III Netherite axe"
+  },
+  "vote.trade-ins.ten.convert-spawner": {
+    "message": "Convert Overworld spawner to zombie, skeleton, spider, or cave spider"
+  },
+  "vote.trade-ins.ten.move-spawner": {
+    "message": "Move any spawner to your base (same dimension, with permissions)"
+  },
+  "vote.trade-ins.ten.supporter": {
+    "message": "<supporter-link>Supporter</supporter-link> rank"
+  },
+  "vote.trade-ins.ten.title": {
+    "message": "Trade 10 Collectibles"
+  },
+  "vote.trade-ins.title": {
+    "message": "Collectible Trade-ins"
+  },
+  "vote.trade-ins.twenty-four.armor": {
+    "message": "1.14 God Armor Set: Diamond armor with all Protection types (IV), Thorns III, plus Depth Strider III, Feather Falling IV, Aqua Affinity & Respiration III"
+  },
+  "vote.trade-ins.twenty-four.bow": {
+    "message": "Mending + Infinity Bow"
+  },
+  "vote.trade-ins.twenty-four.title": {
+    "message": "Trade 24 Collectibles"
+  },
+  "vote.trade-ins.unique-collectibles": {
+    "message": "unique collectibles"
+  }
 }

@@ -1376,62 +1376,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "プロジェクトを作成"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "不足している項目: {fields}"
   },
   "create.project.name-label": {
     "message": "名前"
   },
-  "create.project.name-placeholder": {
-    "message": "プロジェクト名を入力…"
-  },
-  "create.project.organization-icon-alt": {
-    "message": "{name}アイコン"
-  },
-  "create.project.owner-description": {
-    "message": "プロジェクトオーナーを自分自身または自身が所属している組織に設定してください。"
-  },
-  "create.project.owner-label": {
-    "message": "オーナー"
-  },
-  "create.project.server-project-title": {
-    "message": "サーバープロジェクトを作成"
-  },
-  "create.project.summary-description": {
-    "message": "1〜2文程度のプロジェクトの説明。"
-  },
   "create.project.summary-label": {
     "message": "概要"
   },
-  "create.project.summary-placeholder": {
-    "message": "プロジェクトの説明…"
-  },
-  "create.project.title": {
-    "message": "プロジェクトを作成"
-  },
-  "create.project.type-label": {
-    "message": "タイプ"
-  },
-  "create.project.type-project": {
-    "message": "プロジェクト"
-  },
-  "create.project.type-server": {
-    "message": "サーバー"
-  },
-  "create.project.unknown-user": {
-    "message": "不明なユーザー"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "ユーザーのアバター"
-  },
-  "create.project.visibility-description": {
-    "message": "プロジェクトが承認された後の公開範囲"
   },
   "create.project.visibility-private": {
     "message": "非公開"
@@ -2519,30 +2474,6 @@
   "landing.feature.search.heading": {
     "message": "探しているものを、素早く簡単に"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Minecraftの{content}が集まる場所"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "データパック"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "Modパック"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "Mod"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "プラグイン"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "リソースパック"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "サーバー"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "シェーダー"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2611,12 +2542,6 @@
   },
   "layout.action.new-organization": {
     "message": "新規組織"
-  },
-  "layout.action.new-project": {
-    "message": "新規プロジェクト"
-  },
-  "layout.action.new-server-project": {
-    "message": "新規サーバープロジェクト"
   },
   "layout.action.publish": {
     "message": "公開する"
@@ -2807,20 +2732,8 @@
   "layout.nav.add-account": {
     "message": "アカウントを追加"
   },
-  "layout.nav.discover": {
-    "message": "探索"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Modrinth Appを入手"
-  },
   "layout.nav.home": {
     "message": "ホーム"
-  },
-  "layout.nav.host-a-server": {
-    "message": "サーバーをホスト"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinthホームページ"
@@ -3155,20 +3068,11 @@
   "organization.button.manage": {
     "message": "編集"
   },
-  "organization.button.manage-projects": {
-    "message": "プロジェクトを編集"
-  },
-  "organization.label.downloads": {
-    "message": "ダウンロード"
-  },
   "organization.label.members": {
     "message": "メンバー"
   },
   "organization.label.organization": {
     "message": "組織"
-  },
-  "organization.label.projects": {
-    "message": "プロジェクト"
   },
   "organization.project-transfer.id-column": {
     "message": "ID"

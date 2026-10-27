@@ -42,7 +42,10 @@
 				/>
 				<Button v-if="rulesToolbar.toggleAll" @click="rulesToolbar.toggleAll">
 					{{ formatMessage(rulesToolbar.anyOpen ? messages.collapseAll : messages.expandAll) }}
-					<component :is="rulesToolbar.anyOpen ? ChevronUpIcon : ChevronDownIcon" aria-hidden="true" />
+					<component
+						:is="rulesToolbar.anyOpen ? ChevronUpIcon : ChevronDownIcon"
+						aria-hidden="true"
+					/>
 				</Button>
 			</div>
 			<NuxtPage />

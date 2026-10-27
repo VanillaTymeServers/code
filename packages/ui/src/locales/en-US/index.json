@@ -4496,6 +4496,18 @@
   "search.filter.option.sub_options.expand.tooltip": {
     "defaultMessage": "Show more options"
   },
+  "search.filter.shop_season.current": {
+    "defaultMessage": "Season {season} (current)"
+  },
+  "search.filter.shop_season.season": {
+    "defaultMessage": "Season {season}"
+  },
+  "search.filter.shop_type.shop": {
+    "defaultMessage": "Shop"
+  },
+  "search.filter.shop_type.stall": {
+    "defaultMessage": "Stall"
+  },
   "search.filter_type.advanced": {
     "defaultMessage": "Advanced exclusions"
   },
@@ -4585,6 +4597,15 @@
   },
   "search.filter_type.shader_loader": {
     "defaultMessage": "Loader"
+  },
+  "search.filter_type.shop_season": {
+    "defaultMessage": "Season"
+  },
+  "search.filter_type.shop_sells": {
+    "defaultMessage": "Sells"
+  },
+  "search.filter_type.shop_type": {
+    "defaultMessage": "Type"
   },
   "search.photosensitivity-warning-modal.body.1": {
     "defaultMessage": "We cannot guarantee that all content on Modrinth has been labeled appropriately."
@@ -6427,6 +6448,60 @@
   },
   "sharing.invite-players-toast.server-suffix": {
     "defaultMessage": "server."
+  },
+  "shop.coordinates-label": {
+    "defaultMessage": "Coordinates"
+  },
+  "shop.stall-color.black": {
+    "defaultMessage": "Black"
+  },
+  "shop.stall-color.blue": {
+    "defaultMessage": "Blue"
+  },
+  "shop.stall-color.brown": {
+    "defaultMessage": "Brown"
+  },
+  "shop.stall-color.cyan": {
+    "defaultMessage": "Cyan"
+  },
+  "shop.stall-color.gray": {
+    "defaultMessage": "Gray"
+  },
+  "shop.stall-color.green": {
+    "defaultMessage": "Green"
+  },
+  "shop.stall-color.light-blue": {
+    "defaultMessage": "Light blue"
+  },
+  "shop.stall-color.light-gray": {
+    "defaultMessage": "Light gray"
+  },
+  "shop.stall-color.lime": {
+    "defaultMessage": "Lime"
+  },
+  "shop.stall-color.magenta": {
+    "defaultMessage": "Magenta"
+  },
+  "shop.stall-color.orange": {
+    "defaultMessage": "Orange"
+  },
+  "shop.stall-color.pink": {
+    "defaultMessage": "Pink"
+  },
+  "shop.stall-color.purple": {
+    "defaultMessage": "Purple"
+  },
+  "shop.stall-color.red": {
+    "defaultMessage": "Red"
+  },
+  "shop.stall-color.white": {
+    "defaultMessage": "White"
+  },
+  "shop.stall-color.yellow": {
+    "defaultMessage": "Yellow"
+  },
+  "shop.stall-label": {
+    "defaultMessage": "{color} stall"
   },
   "skins.select": {
     "defaultMessage": "Select skin"

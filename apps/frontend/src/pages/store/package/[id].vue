@@ -14,10 +14,14 @@
 			<div class="flex min-w-0 flex-grow flex-col gap-4">
 				<div class="flex flex-col gap-1">
 					<h1 class="m-0 text-3xl font-bold text-contrast">{{ pkg.name }}</h1>
-					<span class="text-2xl font-bold text-brand">{{ price(pkg.total_price, pkg.currency) }}</span>
+					<span class="text-2xl font-bold text-brand">{{
+						price(pkg.total_price, pkg.currency)
+					}}</span>
 				</div>
 				<div v-if="pkg.type === 'both' && pkg.expiry_period" class="flex flex-col gap-2">
-					<span class="font-semibold text-contrast">{{ formatMessage(messages.purchaseType) }}</span>
+					<span class="font-semibold text-contrast">{{
+						formatMessage(messages.purchaseType)
+					}}</span>
 					<Chips
 						v-model="purchaseType"
 						:items="['single', 'subscription'] as const"
@@ -66,7 +70,10 @@
 				<div class="flex flex-wrap items-center gap-2">
 					<template v-if="inBasket">
 						<span class="font-semibold text-brand">{{ formatMessage(messages.inCart) }}</span>
-						<Button :disabled="removeMutation.isPending.value" @click="removeMutation.mutate(pkg.id)">
+						<Button
+							:disabled="removeMutation.isPending.value"
+							@click="removeMutation.mutate(pkg.id)"
+						>
 							<TrashIcon aria-hidden="true" />
 							{{ formatMessage(messages.remove) }}
 						</Button>
@@ -99,8 +106,8 @@ import { ChevronLeftIcon, ShoppingCartIcon, TrashIcon } from '@modrinth/assets'
 import {
 	Button,
 	ButtonLink,
-	Chips,
 	Checkbox,
+	Chips,
 	defineMessages,
 	injectModrinthClient,
 	injectNotificationManager,
@@ -224,7 +231,7 @@ const messages = defineMessages({
 		id: 'store.package.not-found',
 		defaultMessage: 'Package not found',
 	},
-		giftLabel: {
+	giftLabel: {
 		id: 'store.package.gift-label',
 		defaultMessage: 'Gift this to another player',
 	},

@@ -1064,53 +1064,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Tạo Dự Án"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Trường thông tin bị thiếu: {fields}"
   },
   "create.project.name-label": {
     "message": "Tên"
   },
-  "create.project.name-placeholder": {
-    "message": "Nhập tên dự án..."
-  },
-  "create.project.owner-description": {
-    "message": "Chọn chính bạn hoặc tổ chức của bạn làm chủ sở hữu dự án."
-  },
-  "create.project.owner-label": {
-    "message": "Chủ sở hữu"
-  },
-  "create.project.server-project-title": {
-    "message": "Tạo dự án máy chủ"
-  },
-  "create.project.summary-description": {
-    "message": "Một hoặc hai câu mô tả dự án của bạn."
-  },
   "create.project.summary-label": {
     "message": "Tóm tắt"
   },
-  "create.project.summary-placeholder": {
-    "message": "Dự án này thêm..."
-  },
-  "create.project.title": {
-    "message": "Đang tạo dự án"
-  },
-  "create.project.type-label": {
-    "message": "Loại"
-  },
-  "create.project.type-project": {
-    "message": "Dự án"
-  },
-  "create.project.type-server": {
-    "message": "Máy chủ"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.visibility-description": {
-    "message": "Khả năng hiển thị của dự án sau khi được phê duyệt."
   },
   "create.project.visibility-private": {
     "message": "Riêng tư"
@@ -2195,30 +2159,6 @@
   "landing.feature.search.heading": {
     "message": "Tìm thứ bạn muốn, nhanh và dễ dàng"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Nơi dành cho {content} Minecraft"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "gói dữ liệu"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "modpack"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "mod"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "plugin"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "gói tài nguyên"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "máy chủ"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shader"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2290,9 +2230,6 @@
   },
   "layout.action.new-organization": {
     "message": "Tổ chức mới"
-  },
-  "layout.action.new-project": {
-    "message": "Dự án mới"
   },
   "layout.action.publish": {
     "message": "Đăng tải"
@@ -2477,20 +2414,8 @@
   "layout.nav.active-reports": {
     "message": "Báo cáo hoạt động"
   },
-  "layout.nav.discover": {
-    "message": "Khám phá"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Tải ứng dụng Modrinth"
-  },
   "layout.nav.home": {
     "message": "Trang chủ"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Tạo máy chủ"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Ứng dụng Modrinth"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Trang chủ Modrinth"

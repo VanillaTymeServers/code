@@ -144,7 +144,7 @@ const messages = defineMessages({
 		id: 'downloads.download-button',
 		defaultMessage: 'Download',
 	},
-		noResults: {
+	noResults: {
 		id: 'downloads.no-results',
 		defaultMessage: 'No results found.',
 	},

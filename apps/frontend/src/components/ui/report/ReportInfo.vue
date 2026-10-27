@@ -50,7 +50,10 @@
 					<span class="title">{{ report.version.name }}</span>
 				</nuxt-link>
 				of
-				<nuxt-link :to="`/project/${report.project.slug ?? report.project.id}`" class="iconified-stacked-link">
+				<nuxt-link
+					:to="`/project/${report.project.slug ?? report.project.id}`"
+					class="iconified-stacked-link"
+				>
 					<Avatar :src="report.project.icon_url" size="xs" no-shadow :raised="raised" />
 					<div class="stacked">
 						<span class="title">{{ report.project.title }}</span>

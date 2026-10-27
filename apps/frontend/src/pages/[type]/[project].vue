@@ -512,11 +512,7 @@
 						:status-online="projectV3?.minecraft_java_server?.ping?.data != null"
 						class="card flex-card"
 					/>
-					<ShopSidebarInfo
-						v-if="projectV3?.shop"
-						:shop="projectV3.shop"
-						class="card flex-card"
-					/>
+					<ShopSidebarInfo v-if="projectV3?.shop" :shop="projectV3.shop" class="card flex-card" />
 					<ProjectSidebarCompatibility
 						v-if="
 							projectV3Loaded &&

@@ -1382,62 +1382,17 @@
   "create.organization.url-label": {
     "message": "Link"
   },
-  "create.project.create-project": {
-    "message": "Projekt létrehozása"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Hiányzó mezők: {fields}"
   },
   "create.project.name-label": {
     "message": "Név"
   },
-  "create.project.name-placeholder": {
-    "message": "Adj meg egy projekt nevet..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "{name} ikon"
-  },
-  "create.project.owner-description": {
-    "message": "Állítsd be a projekt tulajdonosát saját magadra vagy egy olyan szervezetre, amelynek tagja vagy."
-  },
-  "create.project.owner-label": {
-    "message": "Tulajdonos"
-  },
-  "create.project.server-project-title": {
-    "message": "Szerverprojekt létrehozása"
-  },
-  "create.project.summary-description": {
-    "message": "Egy vagy kettő mondat ami leírja a projektedet."
-  },
   "create.project.summary-label": {
     "message": "Összegzés"
   },
-  "create.project.summary-placeholder": {
-    "message": "Ez a projekt hozzá ad..."
-  },
-  "create.project.title": {
-    "message": "Projekt létrehozása"
-  },
-  "create.project.type-label": {
-    "message": "Típus"
-  },
-  "create.project.type-project": {
-    "message": "Projekt"
-  },
-  "create.project.type-server": {
-    "message": "Szerver"
-  },
-  "create.project.unknown-user": {
-    "message": "Ismeretlen felhasználó"
-  },
   "create.project.url-label": {
     "message": "Link"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "Felhasználói avatár"
-  },
-  "create.project.visibility-description": {
-    "message": "A projekt láthatósága jóváhagyása után."
   },
   "create.project.visibility-private": {
     "message": "Privát"
@@ -2597,30 +2552,6 @@
   "landing.feature.search.heading": {
     "message": "Találd meg gyorsan és egyszerűen, amit keresel"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "A hely a Minecraft {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "adatcsomagoknak"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "modcsomagoknak"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "modoknak"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "bővítményeknek"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "forráscsomagoknak"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "szervereknek"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shadereknek"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2692,12 +2623,6 @@
   },
   "layout.action.new-organization": {
     "message": "Új szervezet"
-  },
-  "layout.action.new-project": {
-    "message": "Új projekt"
-  },
-  "layout.action.new-server-project": {
-    "message": "Új szerverprojekt"
   },
   "layout.action.publish": {
     "message": "Létrehozás"
@@ -2912,20 +2837,8 @@
   "layout.nav.add-account": {
     "message": "Fiók hozzáadása"
   },
-  "layout.nav.discover": {
-    "message": "Felfedezés"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Szerezd meg a Modrinth Appot"
-  },
   "layout.nav.home": {
     "message": "Kezdőlap"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Hozz létre egy szervert"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth kezdőlap"
@@ -3344,20 +3257,11 @@
   "organization.button.manage": {
     "message": "Kezelés"
   },
-  "organization.button.manage-projects": {
-    "message": "Projektek kezelése"
-  },
-  "organization.label.downloads": {
-    "message": "letöltés"
-  },
   "organization.label.members": {
     "message": "tag"
   },
   "organization.label.organization": {
     "message": "Szervezet"
-  },
-  "organization.label.projects": {
-    "message": "projekt"
   },
   "organization.project-transfer.id-column": {
     "message": "Azonosító"
@@ -3379,12 +3283,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "Írás"
-  },
-  "organization.projects.none": {
-    "message": "Ennek a szervezetnek még nincsenek projektjei."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "Ennek a szervezetnek még nincsenek projektjei. Szeretnél <create-link>létrehozni egyet</create-link>?"
   },
   "project-member-header.error-decline": {
     "message": "Nem sikerült elutasítani a meghívást"

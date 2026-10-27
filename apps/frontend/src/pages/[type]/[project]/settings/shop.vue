@@ -138,7 +138,7 @@ function woolIcon(color: Labrinth.Projects.v3.StallColor, size = 24) {
 	return markRaw(() =>
 		h('img', {
 			src: `/items/${color}_wool.png`,
-		alt: `${formatMessage(stallColorMessages[color])} wool`,
+			alt: `${formatMessage(stallColorMessages[color])} wool`,
 			class: 'object-contain',
 			style: { width: `${size}px`, height: `${size}px` },
 		}),

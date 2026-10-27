@@ -932,62 +932,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Opret projekt"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Mangler informationer: {fields}"
   },
   "create.project.name-label": {
     "message": "Navn"
   },
-  "create.project.name-placeholder": {
-    "message": "Indtast projekt navn..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "{name} Ikon"
-  },
-  "create.project.owner-description": {
-    "message": "Det projekt ejeren som dig selv eller en organisation du medlem af."
-  },
-  "create.project.owner-label": {
-    "message": "Ejer"
-  },
-  "create.project.server-project-title": {
-    "message": "Opretter et server projekt"
-  },
-  "create.project.summary-description": {
-    "message": "En sætning eller to som beskriver dit projekt."
-  },
   "create.project.summary-label": {
     "message": "Resumé"
   },
-  "create.project.summary-placeholder": {
-    "message": "Dette projekt tilføjer..."
-  },
-  "create.project.title": {
-    "message": "Opretter et projekt"
-  },
-  "create.project.type-label": {
-    "message": "Type"
-  },
-  "create.project.type-project": {
-    "message": "Projekt"
-  },
-  "create.project.type-server": {
-    "message": "Server"
-  },
-  "create.project.unknown-user": {
-    "message": "Ukendt bruger"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "Bruger Avatar"
-  },
-  "create.project.visibility-description": {
-    "message": "Dit projekts synlighed efter det er blevet godkendt."
   },
   "create.project.visibility-private": {
     "message": "Privat"
@@ -1847,30 +1802,6 @@
   "landing.feature.search.heading": {
     "message": "Find hvad du vil have, hurtigt og nemt"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Stedet til Minecraft {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "datapakker"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "modpacks"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "mods"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "plugins"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "ressourcepakke"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "servere"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shaders"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -1933,9 +1864,6 @@
   },
   "layout.action.new-organization": {
     "message": "Ny organisation"
-  },
-  "layout.action.new-project": {
-    "message": "Nyt projekt"
   },
   "layout.action.publish": {
     "message": "Udgiv"
@@ -2072,20 +2000,8 @@
   "layout.nav.active-reports": {
     "message": "Aktive rapporter"
   },
-  "layout.nav.discover": {
-    "message": "Opdag"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Hent Modrinth-app"
-  },
   "layout.nav.home": {
     "message": "Hjem"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Host en server"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth forside"
@@ -2260,12 +2176,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "Type"
-  },
-  "organization.projects.none": {
-    "message": "Denne organisation har ikke nogle projekter endnu."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "Denne organisation har ikke nogle projekter endnu. Kunnde dig tænke dig at <create-link>oprette et</create-link>?"
   },
   "project-member-header.error-decline": {
     "message": "Afvisning af hold invitation fejlede"

@@ -17,7 +17,13 @@
 
 <script setup lang="ts">
 import type { Tebex } from '@modrinth/api-client'
-import { Admonition, defineMessages, injectModrinthClient, useFormatDateTime, useVIntl } from '@modrinth/ui'
+import {
+	Admonition,
+	defineMessages,
+	injectModrinthClient,
+	useFormatDateTime,
+	useVIntl,
+} from '@modrinth/ui'
 import { useQuery } from '@tanstack/vue-query'
 
 import StoreCategorySection from '~/components/ui/store/StoreCategorySection.vue'
@@ -58,7 +64,10 @@ function saleSummary(sale: Tebex.Headless.Sale) {
 		return formatMessage(messages.salePercentage, { percentage: discount.percentage, date })
 	}
 	if (discount.type === 'amount' && discount.amount != null) {
-		return formatMessage(messages.saleAmount, { amount: price(discount.amount, discount.currency), date })
+		return formatMessage(messages.saleAmount, {
+			amount: price(discount.amount, discount.currency),
+			date,
+		})
 	}
 	return formatMessage(messages.saleCommands, { date })
 }

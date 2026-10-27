@@ -22,7 +22,7 @@
 					</span>
 					<span v-if="item.in_basket.gift_username" class="text-sm text-secondary">
 						{{ formatMessage(messages.giftFor, { username: item.in_basket.gift_username }) }}
-					</span>					
+					</span>
 				</div>
 				<span class="font-semibold text-contrast">
 					{{ price(item.in_basket.price, basket.currency) }}
@@ -130,7 +130,9 @@ async function checkout() {
 	launching.value = true
 	try {
 		const { default: Tebex } = await import('@tebexio/tebex.js')
-		const brand = getComputedStyle(document.documentElement).getPropertyValue('--color-brand').trim()
+		const brand = getComputedStyle(document.documentElement)
+			.getPropertyValue('--color-brand')
+			.trim()
 
 		Tebex.checkout.init({
 			ident: basket.value.ident,

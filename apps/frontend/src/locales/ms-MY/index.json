@@ -1010,59 +1010,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Cipta projek"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Medan yang hilang: {fields}"
   },
   "create.project.name-label": {
     "message": "Nama"
   },
-  "create.project.name-placeholder": {
-    "message": "Masukkan nama projek..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "Ikon {name}"
-  },
-  "create.project.owner-description": {
-    "message": "Tetapkan pemilik projek sebagai diri anda atau organisasi yang anda sertai."
-  },
-  "create.project.owner-label": {
-    "message": "Pemilik"
-  },
-  "create.project.server-project-title": {
-    "message": "Mencipta sebuah projek pelayan"
-  },
-  "create.project.summary-description": {
-    "message": "Satu atau dua ayat yang menerangkan projek anda."
-  },
   "create.project.summary-label": {
     "message": "Ringkasan"
   },
-  "create.project.summary-placeholder": {
-    "message": "Projek ini menambah..."
-  },
-  "create.project.title": {
-    "message": "Mencipta sebuah projek"
-  },
-  "create.project.type-label": {
-    "message": "Jenis"
-  },
-  "create.project.type-project": {
-    "message": "Projek"
-  },
-  "create.project.type-server": {
-    "message": "Pelayan"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "Avatar Pengguna"
-  },
-  "create.project.visibility-description": {
-    "message": "Keterlihatan projek anda selepas ia diluluskan."
   },
   "create.project.visibility-private": {
     "message": "Peribadi"
@@ -2099,30 +2057,6 @@
   "landing.feature.search.heading": {
     "message": "Cari apa yang anda mahu, dengan cepat dan mudah"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Tempat untuk {content} Minecraft"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "pek data"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "pek mod"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "mod"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "pemalam"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "pek sumber"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "pelayan"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "pembayang"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2191,9 +2125,6 @@
   },
   "layout.action.new-organization": {
     "message": "Organisasi baharu"
-  },
-  "layout.action.new-project": {
-    "message": "Projek baharu"
   },
   "layout.action.publish": {
     "message": "Terbitkan"
@@ -2393,20 +2324,8 @@
   "layout.nav.add-account": {
     "message": "Tambah akaun"
   },
-  "layout.nav.discover": {
-    "message": "Temui"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Dapatkan Modrinth App"
-  },
   "layout.nav.home": {
     "message": "Laman Utama"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Hos sebuah pelayan"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Laman utama Modrinth"
@@ -2741,14 +2660,8 @@
   "organization.button.manage": {
     "message": "Urus"
   },
-  "organization.label.downloads": {
-    "message": "muat turun"
-  },
   "organization.label.members": {
     "message": "ahli"
-  },
-  "organization.label.projects": {
-    "message": "projek"
   },
   "organization.project-transfer.id-column": {
     "message": "ID"

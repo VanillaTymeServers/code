@@ -115,21 +115,8 @@
 
 <script setup lang="ts">
 import type { Labrinth } from '@modrinth/api-client'
-import {
-	CheckIcon,
-	CrownIcon,
-	SettingsIcon,
-	SpinnerIcon,
-	UsersIcon,
-	XIcon,
-} from '@modrinth/assets'
-import {
-	Avatar,
-	Button,
-	injectModrinthClient,
-	SidebarCard,
-	useCompactNumber,
-} from '@modrinth/ui'
+import { CheckIcon, CrownIcon, SettingsIcon, SpinnerIcon, UsersIcon, XIcon } from '@modrinth/assets'
+import { Avatar, Button, injectModrinthClient, SidebarCard, useCompactNumber } from '@modrinth/ui'
 import type { Organization } from '@modrinth/utils'
 import { useQuery, useQueryClient } from '@tanstack/vue-query'
 

@@ -1376,62 +1376,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Создать проект"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Не заполнены поля: {fields}"
   },
   "create.project.name-label": {
     "message": "Название"
   },
-  "create.project.name-placeholder": {
-    "message": "Введите название проекта..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "Иконка {name}"
-  },
-  "create.project.owner-description": {
-    "message": "Укажите себя или организацию, в которой состоите."
-  },
-  "create.project.owner-label": {
-    "message": "Владелец"
-  },
-  "create.project.server-project-title": {
-    "message": "Создание серверного проекта"
-  },
-  "create.project.summary-description": {
-    "message": "Пара предложений про проект."
-  },
   "create.project.summary-label": {
     "message": "Сводка"
   },
-  "create.project.summary-placeholder": {
-    "message": "Этот проект добавляет..."
-  },
-  "create.project.title": {
-    "message": "Создание проекта"
-  },
-  "create.project.type-label": {
-    "message": "Тип"
-  },
-  "create.project.type-project": {
-    "message": "Проект"
-  },
-  "create.project.type-server": {
-    "message": "Сервер"
-  },
-  "create.project.unknown-user": {
-    "message": "Неизвестный пользователь"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "Аватар"
-  },
-  "create.project.visibility-description": {
-    "message": "Видимость проекта после прохождения модерации."
   },
   "create.project.visibility-private": {
     "message": "Приватный"
@@ -2600,30 +2555,6 @@
   "landing.feature.search.heading": {
     "message": "Ищите нужное быстро и легко"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Место для Minecraft {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "наборов данных"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "сборок"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "модов"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "плагинов"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "наборов ресурсов"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "серверов"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "шейдеров"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2695,12 +2626,6 @@
   },
   "layout.action.new-organization": {
     "message": "Новая организация"
-  },
-  "layout.action.new-project": {
-    "message": "Новый проект"
-  },
-  "layout.action.new-server-project": {
-    "message": "Новый серверный проект"
   },
   "layout.action.publish": {
     "message": "Опубликовать"
@@ -2915,20 +2840,8 @@
   "layout.nav.add-account": {
     "message": "Добавить аккаунт"
   },
-  "layout.nav.discover": {
-    "message": "Найти"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Скачать Modrinth App"
-  },
   "layout.nav.home": {
     "message": "Главная"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Создать сервер"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Главная страница Modrinth"
@@ -3344,20 +3257,11 @@
   "organization.button.manage": {
     "message": "Управление"
   },
-  "organization.button.manage-projects": {
-    "message": "Управлять проектами"
-  },
-  "organization.label.downloads": {
-    "message": "скачивания"
-  },
   "organization.label.members": {
     "message": "участники"
   },
   "organization.label.organization": {
     "message": "Организация"
-  },
-  "organization.label.projects": {
-    "message": "проекты"
   },
   "organization.project-transfer.id-column": {
     "message": "ID"
@@ -3379,12 +3283,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "Тип"
-  },
-  "organization.projects.none": {
-    "message": "У этой организации ещё нет проектов."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "У этой организации ещё нет проектов. Хотите <create-link>создать новый</create-link>?"
   },
   "project-member-header.error-decline": {
     "message": "Не удалось отклонить приглашение в команду"

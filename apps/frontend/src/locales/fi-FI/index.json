@@ -713,30 +713,6 @@
   "landing.feature.search.heading": {
     "message": "Löydä mitä haluat nopeasti ja helposti"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Paikka Minecraft {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "datapaketeille"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "modipaketeille"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "modeille"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "plugineille"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "resurssipaketeille"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "palvelimille"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shadereille"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -763,9 +739,6 @@
   },
   "layout.action.file-lookup": {
     "message": "Etsi tiedosto"
-  },
-  "layout.action.new-project": {
-    "message": "Uusi projekti"
   },
   "layout.action.publish": {
     "message": "Julkaise"
@@ -830,17 +803,8 @@
   "layout.footer.social.x": {
     "message": "X"
   },
-  "layout.nav.discover": {
-    "message": "Löydä"
-  },
   "layout.nav.home": {
     "message": "Koti"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Hostaa palvelin"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.organizations": {
     "message": "Organisaatiot"

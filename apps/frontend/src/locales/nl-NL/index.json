@@ -1370,62 +1370,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Project aanmaken"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Missende velden: {fields}"
   },
   "create.project.name-label": {
     "message": "Naam"
   },
-  "create.project.name-placeholder": {
-    "message": "Voer projectnaam in..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "{name} pictogram"
-  },
-  "create.project.owner-description": {
-    "message": "Stel de project eigenaar in als jezelf of een organisatie waar je lid van bent."
-  },
-  "create.project.owner-label": {
-    "message": "Eigenaar"
-  },
-  "create.project.server-project-title": {
-    "message": "Een server project aanmaken"
-  },
-  "create.project.summary-description": {
-    "message": "Eén of twee zinnen die je project beschrijven."
-  },
   "create.project.summary-label": {
     "message": "Samenvatting"
   },
-  "create.project.summary-placeholder": {
-    "message": "Dit project..."
-  },
-  "create.project.title": {
-    "message": "Een project aanmaken"
-  },
-  "create.project.type-label": {
-    "message": "Type"
-  },
-  "create.project.type-project": {
-    "message": "Project"
-  },
-  "create.project.type-server": {
-    "message": "Server"
-  },
-  "create.project.unknown-user": {
-    "message": "Onbekende gebruiker"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "Gebruikersavatar"
-  },
-  "create.project.visibility-description": {
-    "message": "De zichtbaarheid van je project nadat het is goedgekeurd."
   },
   "create.project.visibility-private": {
     "message": "Privé"
@@ -2594,30 +2549,6 @@
   "landing.feature.search.heading": {
     "message": "Vind wat je zoekt, snel en eenvoudig"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Dé plek voor Minecraft {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "data packs"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "modpacks"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "mods"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "plugins"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "bronpakketten"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "servers"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shaders"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2689,12 +2620,6 @@
   },
   "layout.action.new-organization": {
     "message": "Nieuwe organisatie"
-  },
-  "layout.action.new-project": {
-    "message": "Nieuw project"
-  },
-  "layout.action.new-server-project": {
-    "message": "Nieuw server project"
   },
   "layout.action.publish": {
     "message": "Publiceer"
@@ -2909,20 +2834,8 @@
   "layout.nav.add-account": {
     "message": "Account toevoegen"
   },
-  "layout.nav.discover": {
-    "message": "Ontdek"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Modrinth-app downloaden"
-  },
   "layout.nav.home": {
     "message": "Thuispagina"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Host een server"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth-app"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth startpagina"
@@ -3338,20 +3251,11 @@
   "organization.button.manage": {
     "message": "Beheren"
   },
-  "organization.button.manage-projects": {
-    "message": "Projecten beheren"
-  },
-  "organization.label.downloads": {
-    "message": "downloads"
-  },
   "organization.label.members": {
     "message": "leden"
   },
   "organization.label.organization": {
     "message": "Organisatie"
-  },
-  "organization.label.projects": {
-    "message": "projecten"
   },
   "organization.project-transfer.id-column": {
     "message": "ID"
@@ -3373,12 +3277,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "Type"
-  },
-  "organization.projects.none": {
-    "message": "Deze organisatie heeft nog geen projecten."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "Deze organisatie heeft nog geen projecten. Wil je er <create-link>een aanmaken</create-link>?"
   },
   "project-member-header.error-decline": {
     "message": "Team uitnodiging niet afgeslagen"

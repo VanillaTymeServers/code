@@ -1382,62 +1382,17 @@
   "create.organization.url-label": {
     "message": "網址"
   },
-  "create.project.create-project": {
-    "message": "建立專案"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "缺少欄位：{fields}"
   },
   "create.project.name-label": {
     "message": "名稱"
   },
-  "create.project.name-placeholder": {
-    "message": "輸入專案名稱..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "{name} 圖示"
-  },
-  "create.project.owner-description": {
-    "message": "請將專案擁有者設為你自己，或是你所屬的組織。"
-  },
-  "create.project.owner-label": {
-    "message": "擁有者"
-  },
-  "create.project.server-project-title": {
-    "message": "建立伺服器專案"
-  },
-  "create.project.summary-description": {
-    "message": "用一兩句話描述你的專案。"
-  },
   "create.project.summary-label": {
     "message": "摘要"
   },
-  "create.project.summary-placeholder": {
-    "message": "這個專案加入了..."
-  },
-  "create.project.title": {
-    "message": "建立專案"
-  },
-  "create.project.type-label": {
-    "message": "類型"
-  },
-  "create.project.type-project": {
-    "message": "專案"
-  },
-  "create.project.type-server": {
-    "message": "伺服器"
-  },
-  "create.project.unknown-user": {
-    "message": "未知使用者"
-  },
   "create.project.url-label": {
     "message": "網址"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "使用者顯示圖片"
-  },
-  "create.project.visibility-description": {
-    "message": "你的專案核准後的瀏覽權限。"
   },
   "create.project.visibility-private": {
     "message": "私人"
@@ -2606,30 +2561,6 @@
   "landing.feature.search.heading": {
     "message": "輕鬆快速找到你想要的內容"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Minecraft {content}首選平臺"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "資料包"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "模組包"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "模組"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "插件"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "資源包"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "伺服器"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "光影包"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2701,12 +2632,6 @@
   },
   "layout.action.new-organization": {
     "message": "新增組織"
-  },
-  "layout.action.new-project": {
-    "message": "新增專案"
-  },
-  "layout.action.new-server-project": {
-    "message": "新增伺服器專案"
   },
   "layout.action.publish": {
     "message": "發布"
@@ -2921,20 +2846,8 @@
   "layout.nav.add-account": {
     "message": "新增帳號"
   },
-  "layout.nav.discover": {
-    "message": "探索"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "取得 Modrinth App"
-  },
   "layout.nav.home": {
     "message": "首頁"
-  },
-  "layout.nav.host-a-server": {
-    "message": "託管伺服器"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth 首頁"
@@ -3353,20 +3266,11 @@
   "organization.button.manage": {
     "message": "管理"
   },
-  "organization.button.manage-projects": {
-    "message": "管理專案"
-  },
-  "organization.label.downloads": {
-    "message": "次下載"
-  },
   "organization.label.members": {
     "message": "位成員"
   },
   "organization.label.organization": {
     "message": "組織"
-  },
-  "organization.label.projects": {
-    "message": "個專案"
   },
   "organization.project-transfer.id-column": {
     "message": "ID"
@@ -3388,12 +3292,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "類型"
-  },
-  "organization.projects.none": {
-    "message": "這個組織還沒有任何專案。"
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "這個組織還沒有任何專案。你想要<create-link>建立一個</create-link>嗎？"
   },
   "project-member-header.error-decline": {
     "message": "拒絕團隊邀請失敗"

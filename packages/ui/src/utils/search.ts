@@ -501,7 +501,7 @@ export function useSearch(
 		const startedSeasons = currentSeason
 			? (tags.value.seasons ?? []).filter((season) => season.id <= currentSeason.id)
 			: []
-		
+
 		const filterTypes: FilterType[] = [
 			{
 				id: 'shop_season',
@@ -998,7 +998,7 @@ export function useSearch(
 				}
 			}
 		}
-		
+
 		const currentSeason = tags.value.seasons?.find((season) => season.current)
 		if (
 			currentSeason &&
@@ -1007,7 +1007,7 @@ export function useSearch(
 		) {
 			parts.push(`shop.season = ${formatSearchFilterValue(String(currentSeason.id))}`)
 		}
-		
+
 		// Project types
 		const mappedProjectTypes = projectTypes.value.map(mapProjectTypeToSearch)
 		if (mappedProjectTypes.length === 1) {

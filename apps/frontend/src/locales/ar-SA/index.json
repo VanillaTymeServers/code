@@ -1328,62 +1328,17 @@
   "create.organization.url-label": {
     "message": "عنوان URL"
   },
-  "create.project.create-project": {
-    "message": "إنشاء مشروع"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "حقل مفقود: {fields}"
   },
   "create.project.name-label": {
     "message": "الإسم"
   },
-  "create.project.name-placeholder": {
-    "message": "أدخل اسم المشروع..."
-  },
-  "create.project.organization-icon-alt": {
-    "message": "أيقونة {name}"
-  },
-  "create.project.owner-description": {
-    "message": "عين مالك المشروع كنفسك أو كمنظمة أنت عضو منها."
-  },
-  "create.project.owner-label": {
-    "message": "المالك"
-  },
-  "create.project.server-project-title": {
-    "message": "إنشاء مشروع الخادم"
-  },
-  "create.project.summary-description": {
-    "message": "جملة أو جملتان تصف مجموعتك."
-  },
   "create.project.summary-label": {
     "message": "الملخص"
   },
-  "create.project.summary-placeholder": {
-    "message": "هذا المشروع يضيف..."
-  },
-  "create.project.title": {
-    "message": "إنشاء مشروع"
-  },
-  "create.project.type-label": {
-    "message": "النوع"
-  },
-  "create.project.type-project": {
-    "message": "مشروع"
-  },
-  "create.project.type-server": {
-    "message": "خادم"
-  },
-  "create.project.unknown-user": {
-    "message": "مستخدم غير معروف"
-  },
   "create.project.url-label": {
     "message": "عنوان URL"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "صورة المستخدم"
-  },
-  "create.project.visibility-description": {
-    "message": "رؤية مشروعك بعد الموافقة عليه."
   },
   "create.project.visibility-private": {
     "message": "خاص"
@@ -2540,30 +2495,6 @@
   "landing.feature.search.heading": {
     "message": "اعثر على ما تريد، بسرعة وسهولة"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "المكان المناسب لمحتوى Minecraft {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "داتاباك"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "مودباكات"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "مودات"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "بلوقن"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "ريسورس باك"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "سيرفرات"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "شادرز"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2635,9 +2566,6 @@
   },
   "layout.action.new-organization": {
     "message": "مؤسسة جديدة"
-  },
-  "layout.action.new-project": {
-    "message": "مشروع جديد"
   },
   "layout.action.publish": {
     "message": "نشر"
@@ -2849,20 +2777,8 @@
   "layout.nav.add-account": {
     "message": "إضافة حساب"
   },
-  "layout.nav.discover": {
-    "message": "استكشاف"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "احصل على Modrinth App"
-  },
   "layout.nav.home": {
     "message": "الصفحة الرئيسية"
-  },
-  "layout.nav.host-a-server": {
-    "message": "استضف خادمًا"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "الصفحة الرئيسة لمودرينث"
@@ -3272,20 +3188,11 @@
   "organization.button.manage": {
     "message": "إدارة"
   },
-  "organization.button.manage-projects": {
-    "message": "إدارة المشاريع"
-  },
-  "organization.label.downloads": {
-    "message": "التنزيلات"
-  },
   "organization.label.members": {
     "message": "الأعضاء"
   },
   "organization.label.organization": {
     "message": "المؤسسة"
-  },
-  "organization.label.projects": {
-    "message": "المشاريع"
   },
   "organization.project-transfer.id-column": {
     "message": "المعرّف"
@@ -3307,12 +3214,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "النوع"
-  },
-  "organization.projects.none": {
-    "message": "لا تملك هذه المؤسسة أي مشاريع بعد."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "لا تملك هذه المؤسسة أي مشاريع بعد. هل ترغب في <create-link>إنشاء مشروع</create-link>؟"
   },
   "project-member-header.error-decline": {
     "message": "تعذّر رفض دعوة الفريق"

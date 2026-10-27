@@ -1379,62 +1379,17 @@
   "create.organization.url-label": {
     "message": "Посилання"
   },
-  "create.project.create-project": {
-    "message": "Створити проєкт"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Відсутні поля: {fields}"
   },
   "create.project.name-label": {
     "message": "Назва"
   },
-  "create.project.name-placeholder": {
-    "message": "Уведіть назву проєкту…"
-  },
-  "create.project.organization-icon-alt": {
-    "message": "Значок {name}"
-  },
-  "create.project.owner-description": {
-    "message": "Установіть власника проєкту як себе чи організацію, членом якої ви є."
-  },
-  "create.project.owner-label": {
-    "message": "Власник"
-  },
-  "create.project.server-project-title": {
-    "message": "Створення проєкту сервера"
-  },
-  "create.project.summary-description": {
-    "message": "Кілька речень, які описують ваш проєкт."
-  },
   "create.project.summary-label": {
     "message": "Короткий зміст"
   },
-  "create.project.summary-placeholder": {
-    "message": "Цей проєкт додає…"
-  },
-  "create.project.title": {
-    "message": "Створення проєкту"
-  },
-  "create.project.type-label": {
-    "message": "Тип"
-  },
-  "create.project.type-project": {
-    "message": "Проєкт"
-  },
-  "create.project.type-server": {
-    "message": "Сервер"
-  },
-  "create.project.unknown-user": {
-    "message": "Невідомий користувач"
-  },
   "create.project.url-label": {
     "message": "Посилання"
-  },
-  "create.project.user-avatar-alt": {
-    "message": "Аватар користувача"
-  },
-  "create.project.visibility-description": {
-    "message": "Видимість вашого проєкту після його затвердження."
   },
   "create.project.visibility-private": {
     "message": "Приватно"
@@ -2603,30 +2558,6 @@
   "landing.feature.search.heading": {
     "message": "Знаходьте те, що бажаєте, швидко та легко"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Місце для {content} Minecraft"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "пакетів даних"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "збірок"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "модів"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "плагінів"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "пакетів ресурсів"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "серверів"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "шейдерів"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2698,12 +2629,6 @@
   },
   "layout.action.new-organization": {
     "message": "Нова організація"
-  },
-  "layout.action.new-project": {
-    "message": "Новий проєкт"
-  },
-  "layout.action.new-server-project": {
-    "message": "Новий проєкт сервера"
   },
   "layout.action.publish": {
     "message": "Опублікувати"
@@ -2918,20 +2843,8 @@
   "layout.nav.add-account": {
     "message": "Додати обліковий запис"
   },
-  "layout.nav.discover": {
-    "message": "Дослідити"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Установити Modrinth App"
-  },
   "layout.nav.home": {
     "message": "Головна"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Створити сервер"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Головна сторінка Modrinth"
@@ -3350,20 +3263,11 @@
   "organization.button.manage": {
     "message": "Керувати"
   },
-  "organization.button.manage-projects": {
-    "message": "Керувати проєктами"
-  },
-  "organization.label.downloads": {
-    "message": "завантажень"
-  },
   "organization.label.members": {
     "message": "членів"
   },
   "organization.label.organization": {
     "message": "Організація"
-  },
-  "organization.label.projects": {
-    "message": "проєктів"
   },
   "organization.project-transfer.id-column": {
     "message": "ID"
@@ -3385,12 +3289,6 @@
   },
   "organization.project-transfer.type-column": {
     "message": "Тип"
-  },
-  "organization.projects.none": {
-    "message": "Ця організація ще не має проєктів."
-  },
-  "organization.projects.none-with-create-prompt": {
-    "message": "Ця організація ще не має проєктів. Бажаєте <create-link>створити новий</create-link>?"
   },
   "project-member-header.error-decline": {
     "message": "Не вдалося відхилити запрошення до команди"

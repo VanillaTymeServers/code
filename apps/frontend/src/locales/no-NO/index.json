@@ -872,53 +872,17 @@
   "create.organization.url-label": {
     "message": "URL"
   },
-  "create.project.create-project": {
-    "message": "Lag et prosjekt"
-  },
   "create.project.missing-fields-tooltip": {
     "message": "Manglende felt: {fields}"
   },
   "create.project.name-label": {
     "message": "Navn"
   },
-  "create.project.name-placeholder": {
-    "message": "Skriv inn prosjektnavn..."
-  },
-  "create.project.owner-description": {
-    "message": "Sett prosjekteieren som deg sjøl eller ei organisering du er medlem av."
-  },
-  "create.project.owner-label": {
-    "message": "Eier"
-  },
-  "create.project.server-project-title": {
-    "message": "Laging av et nytt serverprosjekt"
-  },
-  "create.project.summary-description": {
-    "message": "En eller to setninger som beskriver prosjektet ditt."
-  },
   "create.project.summary-label": {
     "message": "Oppsummering"
   },
-  "create.project.summary-placeholder": {
-    "message": "Dette prosjektet legger til..."
-  },
-  "create.project.title": {
-    "message": "Lag et prosjekt"
-  },
-  "create.project.type-label": {
-    "message": "Type"
-  },
-  "create.project.type-project": {
-    "message": "Prosjekt"
-  },
-  "create.project.type-server": {
-    "message": "Server"
-  },
   "create.project.url-label": {
     "message": "URL"
-  },
-  "create.project.visibility-description": {
-    "message": "Synligheten til prosjektet ditt etter at det er godkjent."
   },
   "create.project.visibility-private": {
     "message": "Privat"
@@ -1943,30 +1907,6 @@
   "landing.feature.search.heading": {
     "message": "Finn ut hva du vil ha, raskt og enkelt"
   },
-  "landing.heading.the-place-for-minecraft": {
-    "message": "Plassen for Minecraft {content}"
-  },
-  "landing.heading.the-place-for-minecraft.data-packs": {
-    "message": "data packs"
-  },
-  "landing.heading.the-place-for-minecraft.modpacks": {
-    "message": "modpacks"
-  },
-  "landing.heading.the-place-for-minecraft.mods": {
-    "message": "mods"
-  },
-  "landing.heading.the-place-for-minecraft.plugins": {
-    "message": "plugins"
-  },
-  "landing.heading.the-place-for-minecraft.resource-packs": {
-    "message": "resource packs"
-  },
-  "landing.heading.the-place-for-minecraft.servers": {
-    "message": "servere"
-  },
-  "landing.heading.the-place-for-minecraft.shaders": {
-    "message": "shaders"
-  },
   "landing.launcher.atlauncher-label": {
     "message": "ATLauncher"
   },
@@ -2038,9 +1978,6 @@
   },
   "layout.action.new-organization": {
     "message": "Ny organisering"
-  },
-  "layout.action.new-project": {
-    "message": "Nytt prosjekt"
   },
   "layout.action.publish": {
     "message": "Publiser"
@@ -2222,20 +2159,8 @@
   "layout.nav.active-reports": {
     "message": "Akrive rapporter"
   },
-  "layout.nav.discover": {
-    "message": "Utforsk"
-  },
-  "layout.nav.get-modrinth-app": {
-    "message": "Skaff deg Modrinth App-en"
-  },
   "layout.nav.home": {
     "message": "Heim"
-  },
-  "layout.nav.host-a-server": {
-    "message": "Opprett en server"
-  },
-  "layout.nav.modrinth-app": {
-    "message": "Modrinth App"
   },
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth-heimeside"

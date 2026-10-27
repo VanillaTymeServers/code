@@ -84,7 +84,9 @@
 					:placeholder="formatMessage(messages.salePricePlaceholder)"
 					autocomplete="off"
 				/>
-				<span v-if="!saleValid" class="text-red">{{ formatMessage(messages.salePriceInvalid) }}</span>
+				<span v-if="!saleValid" class="text-red">{{
+					formatMessage(messages.salePriceInvalid)
+				}}</span>
 			</div>
 
 			<div class="flex flex-col gap-2">
@@ -196,13 +198,7 @@ const messages = defineMessages({
 	popularLabel: { id: 'shop.inventory.modal.popular-label', defaultMessage: 'Popular' },
 })
 
-const CURRENCIES = [
-	'diamond',
-	'diamond_block',
-	'emerald',
-	'emerald_block',
-	'netherite_ingot',
-]
+const CURRENCIES = ['diamond', 'diamond_block', 'emerald', 'emerald_block', 'netherite_ingot']
 
 const modal = ref<InstanceType<typeof NewModal>>()
 
