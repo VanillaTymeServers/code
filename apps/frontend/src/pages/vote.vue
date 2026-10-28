@@ -193,6 +193,7 @@
 						<div class="max-md:hidden">{{ formatMessage(messages.columnDaily) }}</div>
 						<div class="max-md:hidden">{{ formatMessage(messages.columnWeekly) }}</div>
 						<div class="max-md:hidden">{{ formatMessage(messages.columnMonthly) }}</div>
+						<div class="max-md:hidden">{{ formatMessage(messages.columnSeason) }}</div>
 						<div class="max-md:hidden">{{ formatMessage(messages.columnAllTime) }}</div>
 						<div class="md:hidden">{{ formatMessage(messages.columnCombined) }}</div>
 					</div>
@@ -210,9 +211,11 @@
 						<div class="max-md:hidden">{{ vote.daily }}</div>
 						<div class="max-md:hidden">{{ vote.weekly }}</div>
 						<div class="max-md:hidden">{{ vote.monthly }}</div>
+						<div class="max-md:hidden">{{ vote.season }}</div>
 						<div class="max-md:hidden">{{ vote.allTime }}</div>
 						<div class="md:hidden">
-							{{ vote.daily }} / {{ vote.weekly }} / {{ vote.monthly }} / {{ vote.allTime }}
+							{{ vote.daily }} / {{ vote.weekly }} / {{ vote.monthly }} / {{ vote.season }} /
+							{{ vote.allTime }}
 						</div>
 					</div>
 				</div>
@@ -273,7 +276,7 @@ import { refDebounced } from '@vueuse/core'
 
 import type { VoteLeaderboardEntry } from '~/server/routes/api/votes.get'
 
-type SortOrder = 'today' | 'week' | 'month' | 'all'
+type SortOrder = 'today' | 'week' | 'month' | 'season' | 'all'
 
 const { formatMessage } = useVIntl()
 
@@ -513,6 +516,10 @@ const messages = defineMessages({
 		id: 'vote.leaderboard.sort.month',
 		defaultMessage: 'This month',
 	},
+	sortSeason: {
+		id: 'vote.leaderboard.sort.season',
+		defaultMessage: 'This season',
+	},
 	sortAll: {
 		id: 'vote.leaderboard.sort.all',
 		defaultMessage: 'All time',
@@ -537,13 +544,17 @@ const messages = defineMessages({
 		id: 'vote.leaderboard.column.monthly',
 		defaultMessage: 'Monthly',
 	},
+	columnSeason: {
+		id: 'vote.leaderboard.column.season',
+		defaultMessage: 'Season',
+	},
 	columnAllTime: {
 		id: 'vote.leaderboard.column.all-time',
 		defaultMessage: 'All Time',
 	},
 	columnCombined: {
 		id: 'vote.leaderboard.column.combined',
-		defaultMessage: 'D / W / M / All',
+		defaultMessage: 'D / W / M / S / All',
 	},
 	faqTitle: {
 		id: 'vote.faq.title',
@@ -709,12 +720,13 @@ const sortOptions = computed<{ value: SortOrder; label: string }[]>(() => [
 	{ value: 'today', label: formatMessage(messages.sortToday) },
 	{ value: 'week', label: formatMessage(messages.sortWeek) },
 	{ value: 'month', label: formatMessage(messages.sortMonth) },
+	{ value: 'season', label: formatMessage(messages.sortSeason) },
 	{ value: 'all', label: formatMessage(messages.sortAll) },
 ])
 
 const usernameQuery = ref('')
 const debouncedUsernameQuery = refDebounced(usernameQuery, 300)
-const sortOrder = ref<SortOrder>('all')
+const sortOrder = ref<SortOrder>('season')
 
 const { data: leaderboard, suspense } = useQuery({
 	queryKey: computed(() => ['vote-leaderboard', sortOrder.value, debouncedUsernameQuery.value]),
@@ -798,13 +810,13 @@ function getHostname(url: string): string {
 
 .leaderboard-row {
 	display: grid;
-	grid-template-columns: min-content minmax(min-content, 2fr) repeat(4, minmax(min-content, 1fr));
+	grid-template-columns: 3.5rem minmax(0, 2fr) repeat(5, minmax(0, 1fr));
 	align-items: center;
 	gap: 1rem;
 	padding: 0.5rem 0.75rem;
 
 	@media (max-width: 767.98px) {
-		grid-template-columns: min-content minmax(min-content, 2fr) minmax(min-content, 1fr);
+		grid-template-columns: 3.5rem minmax(0, 2fr) minmax(0, 1fr);
 	}
 
 	&:nth-child(odd):not(.leaderboard-header) {
