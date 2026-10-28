@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="new-page sidebar alt-layout sidebar-top rules-layout">
-			<div class="normal-page__header mb-4 flex items-center justify-between gap-2">
+			<div class="normal-page__header mb-4 flex flex-wrap items-center justify-between gap-2">
 				<NavTabs
 					:links="[
 						{

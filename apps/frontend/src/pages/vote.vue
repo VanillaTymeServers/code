@@ -91,7 +91,7 @@
 		</section>
 
 		<section class="vote-section relative mx-auto flex flex-col gap-8">
-			<h1 class="relative m-0 mt-8 max-w-3xl text-3xl leading-[120%] md:text-7xl">
+			<h1 class="relative m-0 mt-16 max-w-3xl text-3xl leading-[120%] md:mt-24 md:text-7xl">
 				{{ formatMessage(messages.tradeInsTitle) }}
 			</h1>
 			<h2
@@ -153,7 +153,7 @@
 		</section>
 
 		<section id="leaderboard" class="vote-section relative mx-auto flex flex-col gap-8">
-			<h1 class="relative m-0 mt-8 max-w-3xl text-3xl leading-[120%] md:text-7xl">
+			<h1 class="relative m-0 mt-16 max-w-3xl text-3xl leading-[120%] md:mt-24 md:text-7xl">
 				{{ formatMessage(messages.leaderboardTitle) }}
 			</h1>
 			<h2
@@ -162,7 +162,7 @@
 				{{ formatMessage(messages.leaderboardSubtitle) }}
 			</h2>
 			<div class="flex flex-col gap-4">
-				<div class="flex w-full gap-3">
+				<div class="flex w-full flex-wrap gap-3">
 					<Input
 						v-model="usernameQuery"
 						:icon="SearchIcon"
@@ -188,14 +188,15 @@
 				</div>
 				<div class="leaderboard-table rounded-2xl bg-bg-raised p-4">
 					<div class="leaderboard-row leaderboard-header">
-						<div>{{ formatMessage(messages.columnAvatar) }}</div>
+						<div>
+							<span class="max-md:sr-only">{{ formatMessage(messages.columnAvatar) }}</span>
+						</div>
 						<div>{{ formatMessage(messages.columnUsername) }}</div>
 						<div class="max-md:hidden">{{ formatMessage(messages.columnDaily) }}</div>
 						<div class="max-md:hidden">{{ formatMessage(messages.columnWeekly) }}</div>
 						<div class="max-md:hidden">{{ formatMessage(messages.columnMonthly) }}</div>
-						<div class="max-md:hidden">{{ formatMessage(messages.columnSeason) }}</div>
-						<div class="max-md:hidden">{{ formatMessage(messages.columnAllTime) }}</div>
-						<div class="md:hidden">{{ formatMessage(messages.columnCombined) }}</div>
+						<div>{{ formatMessage(messages.columnSeason) }}</div>
+						<div>{{ formatMessage(messages.columnAllTime) }}</div>
 					</div>
 					<div v-for="vote in leaderboard ?? []" :key="vote.uuid" class="leaderboard-row">
 						<div>
@@ -211,12 +212,8 @@
 						<div class="max-md:hidden">{{ vote.daily }}</div>
 						<div class="max-md:hidden">{{ vote.weekly }}</div>
 						<div class="max-md:hidden">{{ vote.monthly }}</div>
-						<div class="max-md:hidden">{{ vote.season }}</div>
-						<div class="max-md:hidden">{{ vote.allTime }}</div>
-						<div class="md:hidden">
-							{{ vote.daily }} / {{ vote.weekly }} / {{ vote.monthly }} / {{ vote.season }} /
-							{{ vote.allTime }}
-						</div>
+						<div>{{ vote.season }}</div>
+						<div>{{ vote.allTime }}</div>
 					</div>
 				</div>
 			</div>
@@ -552,10 +549,6 @@ const messages = defineMessages({
 		id: 'vote.leaderboard.column.all-time',
 		defaultMessage: 'All Time',
 	},
-	columnCombined: {
-		id: 'vote.leaderboard.column.combined',
-		defaultMessage: 'D / W / M / S / All',
-	},
 	faqTitle: {
 		id: 'vote.faq.title',
 		defaultMessage: 'Frequently Asked Questions',
@@ -804,8 +797,7 @@ function getHostname(url: string): string {
 }
 
 .vote-section {
-	max-width: min(100%, 1096px);
-	width: min(100%, 1096px);
+	width: min(calc(100% - 2rem), 1096px);
 }
 
 .leaderboard-row {
@@ -816,7 +808,7 @@ function getHostname(url: string): string {
 	padding: 0.5rem 0.75rem;
 
 	@media (max-width: 767.98px) {
-		grid-template-columns: 3.5rem minmax(0, 2fr) minmax(0, 1fr);
+		grid-template-columns: 2rem minmax(0, 2fr) repeat(2, minmax(0, 1fr));
 	}
 
 	&:nth-child(odd):not(.leaderboard-header) {

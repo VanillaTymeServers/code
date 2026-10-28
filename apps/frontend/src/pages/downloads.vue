@@ -380,6 +380,14 @@ onKeyStroke('Escape', closeMap)
 	font-weight: 600;
 	line-height: 100%;
 	margin: 2rem 0;
+
+	@media screen and (max-width: 1024px) {
+		font-size: 4rem;
+	}
+
+	@media screen and (max-width: 746px) {
+		font-size: 3rem;
+	}
 }
 .expanded-map-modal {
 	position: fixed;
