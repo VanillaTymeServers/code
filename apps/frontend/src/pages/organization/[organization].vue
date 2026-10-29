@@ -60,8 +60,6 @@
 				/>
 			</div>
 			<div class="normal-page__sidebar">
-				<AdPlaceholder v-if="!auth.user" />
-
 				<SidebarCard title="Members">
 					<div class="flex flex-col gap-3 font-semibold">
 						<nuxt-link
@@ -120,7 +118,6 @@ import { Avatar, Button, injectModrinthClient, SidebarCard, useCompactNumber } f
 import type { Organization } from '@modrinth/utils'
 import { useQuery, useQueryClient } from '@tanstack/vue-query'
 
-import AdPlaceholder from '~/components/ui/AdPlaceholder.vue'
 import NavStack from '~/components/ui/NavStack.vue'
 import OrganizationPageHeader from '~/components/ui/OrganizationPageHeader.vue'
 import { warmProjectCheckCaches } from '~/composables/queries/project'

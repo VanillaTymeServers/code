@@ -6,7 +6,6 @@
 		</ClientOnly>
 		<NotificationPanel />
 		<AccountSwitchOverlay :show="isSwitchingAccount" />
-		<AdsConsentNotification />
 		<I18nDebugPanel />
 		<NuxtPage />
 		<div id="teleports"></div>
@@ -21,7 +20,6 @@ import {
 	NotificationPanel,
 } from '@modrinth/ui'
 
-import AdsConsentNotification from '~/components/ui/AdsConsentNotification.vue'
 import { setupProviders } from '~/providers/setup.ts'
 
 import {

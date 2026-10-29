@@ -525,7 +525,6 @@
 						:project-v3="projectV3"
 						class="card flex-card"
 					/>
-					<AdPlaceholder v-if="!auth.user && tags.approvedStatuses.includes(projectV3.status)" />
 					<ProjectSidebarLinks
 						:project="project"
 						:project-v3="projectV3"
@@ -642,7 +641,6 @@ import { useLocalStorage } from '@vueuse/core'
 import { nextTick, onScopeDispose, readonly, ref, useTemplateRef, watch, watchEffect } from 'vue'
 
 import { navigateTo } from '#app'
-import AdPlaceholder from '~/components/ui/AdPlaceholder.vue'
 import CollectionCreateModal from '~/components/ui/create/CollectionCreateModal.vue'
 import ModerationChecklist from '~/components/ui/moderation/checklist/ModerationChecklist.vue'
 import ModerationProjectNags from '~/components/ui/moderation/ModerationProjectNags.vue'

@@ -260,7 +260,6 @@
 						</div>
 					</nuxt-link>
 				</SidebarCard>
-				<AdPlaceholder v-if="!auth.user" />
 				<SidebarCard
 					v-if="collection.id !== 'following'"
 					:title="formatMessage(commonMessages.detailsLabel)"
@@ -407,8 +406,6 @@ import { isAdmin, renderString } from '@modrinth/utils'
 import { useQuery, useQueryClient } from '@tanstack/vue-query'
 import dayjs from 'dayjs'
 import { onServerPrefetch } from 'vue'
-
-import AdPlaceholder from '~/components/ui/AdPlaceholder.vue'
 
 useSeoMeta({
 	robots: 'noindex',

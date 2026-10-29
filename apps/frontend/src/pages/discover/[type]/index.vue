@@ -37,7 +37,6 @@ import { computed, h, markRaw, ref, watch } from 'vue'
 import type { LocationQueryRaw } from 'vue-router'
 
 import LogoAnimated from '~/components/brand/LogoAnimated.vue'
-import AdPlaceholder from '~/components/ui/AdPlaceholder.vue'
 import { projectQueryOptions, warmProjectCheckCaches } from '~/composables/queries/project'
 import { seasonQueryOptions } from '~/composables/queries/season'
 import { versionQueryOptions } from '~/composables/queries/version'
@@ -65,7 +64,6 @@ const route = useRoute()
 const cosmetics = useCosmetics()
 const tags = useGeneratedState()
 const flags = useFeatureFlags()
-const auth = await useAuth()
 
 let prefetchTimeout: ReturnType<typeof useTimeoutFn> | null = null
 const HOVER_DURATION_TO_PREFETCH_MS = 500
@@ -659,9 +657,7 @@ const { isStuck: isInstallHeaderStuck } = useStickyObserver(
 			:aria-label="formatMessage(commonMessages.filtersLabel)"
 		>
 			<BrowseSidebar>
-				<template #prepend>
-					<AdPlaceholder v-if="!auth.user && !serverData" />
-				</template>
+				<template #prepend> </template>
 			</BrowseSidebar>
 		</aside>
 	</div>
