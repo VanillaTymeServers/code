@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Продовжити"
   },
-  "ads-consent.accept": {
-    "message": "Прийняти всі"
-  },
-  "ads-consent.body": {
-    "message": "Реклама підтримує існування Modrinth і фінансує виплати творцям. Наші партнери можуть зберігати й отримувати доступ до cookie на вебсайті, щоб персоналізувати рекламу та збирати метрики."
-  },
-  "ads-consent.manage": {
-    "message": "Налаштувати"
-  },
-  "ads-consent.reject": {
-    "message": "Відхилити всі"
-  },
-  "ads-consent.title": {
-    "message": "Ваша приватність і як реклама підтримує Modrinth"
-  },
   "analytics.action.add": {
     "message": "Додати"
   },
@@ -2714,24 +2699,6 @@
   "layout.banner.verify-email.description": {
     "message": "З міркувань безпеки, Modrinth вимагає підтвердження адреси електронної пошти, пов’язаної з вашим обліковим записом."
   },
-  "layout.footer.about": {
-    "message": "Про нас"
-  },
-  "layout.footer.about.careers": {
-    "message": "Кар’єра"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Журнал змін"
-  },
-  "layout.footer.about.news": {
-    "message": "Новини"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Програма винагород"
-  },
-  "layout.footer.about.status": {
-    "message": "Статус"
-  },
   "layout.footer.based-on-label": {
     "message": "На основі"
   },
@@ -2753,9 +2720,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "НЕ Є ОФІЦІЙНИМ ПРОДУКТОМ MINECRAFT. НЕ СХВАЛЕНО І НЕ ПОВ’ЯЗАНО З MOJANG ЧИ MICROSOFT."
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Політика щодо авторських прав та DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "Політика конфіденційности"
   },
@@ -2768,56 +2732,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Умови використання"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Інформація про Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth має <github-link>відкритий код</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Продукти"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Ресурси"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "Документація API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Центр допомоги"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Сповістити про проблеми"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Перекласти"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "невідомо"

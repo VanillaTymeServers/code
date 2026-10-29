@@ -341,12 +341,6 @@
   "changelog.justNow": {
     "defaultMessage": "刚刚"
   },
-  "changelog.product.app": {
-    "defaultMessage": "App"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Hosting"
-  },
   "changelog.product.web": {
     "defaultMessage": "平台"
   },

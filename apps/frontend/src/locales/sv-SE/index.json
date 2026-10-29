@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Fortsätt"
   },
-  "ads-consent.accept": {
-    "message": "Godkänn alla"
-  },
-  "ads-consent.body": {
-    "message": "Annonser gör Modrinth möjligt och finansierar utbetalningar till skapare. Våra partner kan lagra eller komma åt kakor på webbplatsen för att rikta annonser och mäta statistik."
-  },
-  "ads-consent.manage": {
-    "message": "Hantera inställningar"
-  },
-  "ads-consent.reject": {
-    "message": "Avvisa alla"
-  },
-  "ads-consent.title": {
-    "message": "Din integritet och hur reklam stödjer Modrinth"
-  },
   "analytics.action.add": {
     "message": "Lägg till"
   },
@@ -2567,24 +2552,6 @@
   "layout.banner.verify-email.description": {
     "message": "Modrinth kräver att du verifierar din e-postadress associerat med ditt konto av säkerhetsskäl."
   },
-  "layout.footer.about": {
-    "message": "Om"
-  },
-  "layout.footer.about.careers": {
-    "message": "Karriärer"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Ändringslogg"
-  },
-  "layout.footer.about.news": {
-    "message": "Nyheter"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Intäktsprogram"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.based-on-label": {
     "message": "Baserat på"
   },
@@ -2606,9 +2573,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "INTE EN OFFICIEL MINECRAFT-TJÄNST. VARKEN GODKÄND AV ELLER ASSOCIERAD MED MOJANG ELLER MICROSOFT."
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Upphovsrättspolicy och DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "Integritetspolicy"
   },
@@ -2621,56 +2585,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Användarvillkor"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinth-information"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth har <github-link>öppen källkod</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Produkter"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Resurser"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "API-dokumentation"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Hjälpcenter"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Rapportera problem"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Översätt"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "okänd"

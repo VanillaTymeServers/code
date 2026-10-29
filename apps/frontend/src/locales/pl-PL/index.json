@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Kontynuuj"
   },
-  "ads-consent.accept": {
-    "message": "Zaakceptuj wszystko"
-  },
-  "ads-consent.body": {
-    "message": "Reklamy pozwalają na dalsze działanie Modrinth i finansują dochody dla twórców. Nasi partnerzy mogą gromadzić i uzyskiwać dostęp do plików cookies w celu personalizacji reklam i mierzenia skuteczności​."
-  },
-  "ads-consent.manage": {
-    "message": "Zarządzaj preferencjami"
-  },
-  "ads-consent.reject": {
-    "message": "Odrzuć wszystko"
-  },
-  "ads-consent.title": {
-    "message": "Twoja prywatność i to, jak reklamy wspierają Modrinth"
-  },
   "analytics.action.add": {
     "message": "Dodaj"
   },
@@ -2711,24 +2696,6 @@
   "layout.banner.verify-email.description": {
     "message": "Dla bezpieczeństwa, Modrinth musi zweryfikować e-maila powiązanego z twoim kontem."
   },
-  "layout.footer.about": {
-    "message": "O nas"
-  },
-  "layout.footer.about.careers": {
-    "message": "Kariery"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Dziennik zmian"
-  },
-  "layout.footer.about.news": {
-    "message": "Wiadomości"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Program wynagrodzenia"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.based-on-label": {
     "message": "Na podstawie"
   },
@@ -2750,9 +2717,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "TO NIE JEST OFICJALNA USŁUGA MINECRAFT. NIE JEST ZATWIERDZONA ANI POWIĄZANA Z MOJANG LUB MICROSOFT."
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Polityka dotycząca praw autorskich i ustawa DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "Polityka prywatności"
   },
@@ -2765,56 +2729,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Warunki użytkowania"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Informacje o Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth to <github-link>otwarte oprogramowanie</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Produkty"
-  },
-  "layout.footer.products.app": {
-    "message": "Aplikacja Modrinth"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Zasoby"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "Dokumentacja API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Centrum pomocy"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Zgłoś problemy"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Przetłumacz"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "nieznany"

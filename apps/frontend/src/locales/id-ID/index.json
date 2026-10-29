@@ -5,18 +5,6 @@
   "action.continue": {
     "message": "Lanjutkan"
   },
-  "ads-consent.accept": {
-    "message": "Terima semua"
-  },
-  "ads-consent.manage": {
-    "message": "Kelola preferensi"
-  },
-  "ads-consent.reject": {
-    "message": "Tolak semua"
-  },
-  "ads-consent.title": {
-    "message": "Privasi Anda dan bagaimana iklan-iklan mendukung Modrinth"
-  },
   "analytics.action.add": {
     "message": "Tambah"
   },
@@ -1682,32 +1670,11 @@
   "layout.banner.verify-email.description": {
     "message": "Demi alasan keamanan, Modrinth mengharuskan Anda untuk memverifikasi alamat sur-el yang terkait dengan akun Anda."
   },
-  "layout.footer.about": {
-    "message": "Tentang"
-  },
-  "layout.footer.about.careers": {
-    "message": "Karir"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Catatan perubahan"
-  },
-  "layout.footer.about.news": {
-    "message": "Berita"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Program Ganjaran"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.legal": {
     "message": "Kehukuman"
   },
   "layout.footer.legal-disclaimer": {
     "message": "BUKAN LAYANAN RESMI MINECRAFT. TIDAK DISETUJUI OLEH ATAU BERHUBUNGAN DENGAN MOJANG ATAU MICROSOFT."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Kebijakan Hak Cipta dan DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "Kebijakan Privasi"
@@ -1721,50 +1688,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Ketentuan Penggunaan"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Informasi Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth adalah proyek <github-link>bersumber terbuka</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Produk"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Sumber Daya"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "Dokumentasi API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Pusat Bantuan"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Laporkan masalah"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Penerjemahan"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.menu-toggle.action": {
     "message": "Hidup/matikan menu"

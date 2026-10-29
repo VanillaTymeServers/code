@@ -341,12 +341,6 @@
   "changelog.justNow": {
     "defaultMessage": "Juuri nyt"
   },
-  "changelog.product.app": {
-    "defaultMessage": "Sovellus"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Isännöinti"
-  },
   "changelog.product.web": {
     "defaultMessage": "Alusta"
   },
@@ -1248,4 +1242,3 @@
     "defaultMessage": "Sinulla on tallentamattomia muutoksia."
   }
 }
-

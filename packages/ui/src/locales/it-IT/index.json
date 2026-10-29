@@ -338,12 +338,6 @@
   "changelog.justNow": {
     "defaultMessage": "Ora"
   },
-  "changelog.product.app": {
-    "defaultMessage": "App"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Hosting"
-  },
   "changelog.product.web": {
     "defaultMessage": "Piattaforma"
   },

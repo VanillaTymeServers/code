@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Continue"
   },
-  "ads-consent.accept": {
-    "message": "Accept all"
-  },
-  "ads-consent.body": {
-    "message": "Ads make Modrinth possible and fund creator payouts. Our partners may store or access cookies on the website to personalize ads and measure performance."
-  },
-  "ads-consent.manage": {
-    "message": "Manage preferences"
-  },
-  "ads-consent.reject": {
-    "message": "Reject all"
-  },
-  "ads-consent.title": {
-    "message": "Your privacy and how ads support Modrinth"
-  },
   "analytics.action.add": {
     "message": "Add"
   },
@@ -2897,23 +2882,20 @@
   "layout.footer.about": {
     "message": "About"
   },
-  "layout.footer.about.careers": {
-    "message": "Careers"
-  },
   "layout.footer.about.changelog": {
     "message": "Changelog"
   },
   "layout.footer.about.news": {
     "message": "News"
   },
-  "layout.footer.about.rewards-program": {
-    "message": "Rewards Program"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.based-on-label": {
     "message": "Based on"
+  },
+  "layout.footer.based-on-modrinth": {
+    "message": "Based on original work © 2020-{year} Rinth, Inc., licensed under AGPL v3."
+  },
+  "layout.footer.copyright": {
+    "message": "© {year} Vanilla Tyme."
   },
   "layout.footer.developer-mode-activated.text": {
     "message": "Developer mode has been enabled"
@@ -2933,9 +2915,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT."
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Copyright Policy and DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "Privacy Policy"
   },
@@ -2948,56 +2927,38 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Terms of Use"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinth information"
-  },
   "layout.footer.open-source": {
-    "message": "Modrinth is <github-link>open source</github-link>."
+    "message": "Website is <github-link>open source</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Products"
+  "layout.footer.server": {
+    "message": "Server"
   },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
+  "layout.footer.server.map-downloads": {
+    "message": "Map Downloads"
   },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
+  "layout.footer.server.rules": {
+    "message": "Rules"
   },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
+  "layout.footer.server.store": {
+    "message": "Store"
   },
-  "layout.footer.resources": {
-    "message": "Resources"
+  "layout.footer.server.vote": {
+    "message": "Vote"
   },
-  "layout.footer.resources.api-docs": {
-    "message": "API documentation"
+  "layout.footer.shops": {
+    "message": "Shops"
   },
-  "layout.footer.resources.help-center": {
-    "message": "Help Center"
+  "layout.footer.shops.browse": {
+    "message": "Browse shops"
   },
-  "layout.footer.resources.report-issues": {
-    "message": "Report issues"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Translate"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
+  "layout.footer.site-information": {
+    "message": "Vanilla Tyme information"
   },
   "layout.footer.social.discord": {
     "message": "Discord"
   },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
+  "layout.footer.social.github": {
+    "message": "GitHub"
   },
   "layout.footer.unknown-commit": {
     "message": "unknown"
@@ -5573,6 +5534,9 @@
   "rules.tab.market": {
     "message": "Market"
   },
+  "rules.tab.website": {
+    "message": "Website"
+  },
   "rules.toolbar.collapse-all": {
     "message": "Collapse all"
   },
@@ -6816,7 +6780,7 @@
     "message": "Subscribed!"
   },
   "ui.newsletter-button.tooltip": {
-    "message": "Subscribe to the Modrinth newsletter"
+    "message": "Subscribe to the Vanilla Tyme newsletter"
   },
   "ui.two-factor-code.authentication-code": {
     "message": "Six-digit authentication code"

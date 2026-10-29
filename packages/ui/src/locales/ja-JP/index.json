@@ -341,12 +341,6 @@
   "changelog.justNow": {
     "defaultMessage": "今"
   },
-  "changelog.product.app": {
-    "defaultMessage": "アプリ"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "ホスティング"
-  },
   "changelog.product.web": {
     "defaultMessage": "プラットフォーム"
   },

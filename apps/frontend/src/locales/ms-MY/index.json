@@ -5,12 +5,6 @@
   "action.continue": {
     "message": "Teruskan"
   },
-  "ads-consent.accept": {
-    "message": "Terima semua"
-  },
-  "ads-consent.reject": {
-    "message": "Tolak semua"
-  },
   "analytics.action.add": {
     "message": "Tambah"
   },
@@ -2210,32 +2204,11 @@
   "layout.banner.verify-email.description": {
     "message": "Atas sebab keselamatan, Modrinth memerlukan anda mengesahkan alamat e-mel yang dikaitkan dengan akaun anda."
   },
-  "layout.footer.about": {
-    "message": "Tentang"
-  },
-  "layout.footer.about.careers": {
-    "message": "Kerjaya"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Log Perubahan"
-  },
-  "layout.footer.about.news": {
-    "message": "Berita"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Program Ganjaran"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.legal": {
     "message": "Undang-undang"
   },
   "layout.footer.legal-disclaimer": {
     "message": "BUKAN PERKHIDMATAN RASMI MINECRAFT. TIDAK DILULUSKAN ATAU BERKAITAN DENGAN MOJANG ATAU MICROSOFT."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Dasar Hak Cipta dan DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "Dasar Privasi"
@@ -2249,56 +2222,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Terma Penggunaan"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Maklumat Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "<github-link>Sumber Modrinth adalah terbuka</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Produk"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Sumber"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "Dokumentasi API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Pusat Bantuan"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Laporkan isu"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Terjemah"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "tidak diketahui"

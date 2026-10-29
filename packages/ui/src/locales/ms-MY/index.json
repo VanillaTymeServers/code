@@ -302,12 +302,6 @@
   "changelog.justNow": {
     "defaultMessage": "Tadi"
   },
-  "changelog.product.app": {
-    "defaultMessage": "Aplikasi"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Hosting"
-  },
   "changelog.product.web": {
     "defaultMessage": "Platform"
   },

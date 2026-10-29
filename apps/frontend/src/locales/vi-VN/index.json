@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Tiếp tục"
   },
-  "ads-consent.accept": {
-    "message": "Chấp nhận tất cả"
-  },
-  "ads-consent.body": {
-    "message": "Quảng cáo giúp Modrinth hoạt động và tài trợ cho việc thanh toán cho người sáng tạo nội dung. Các đối tác của chúng tôi có thể lưu trữ hoặc truy cập cookie trong ứng dụng để cá nhân hóa quảng cáo và đo lường hiệu suất."
-  },
-  "ads-consent.manage": {
-    "message": "Quản lý tuỳ chọn"
-  },
-  "ads-consent.reject": {
-    "message": "Từ chối tất cả"
-  },
-  "ads-consent.title": {
-    "message": "Quyền riêng tư của bạn và cách quảng cáo hỗ trợ Modrinth"
-  },
   "analytics.action.add": {
     "message": "Thêm"
   },
@@ -2312,32 +2297,11 @@
   "layout.banner.verify-email.description": {
     "message": "Vì lý do bảo mật, Modrinth yêu cầu bạn xác minh địa chỉ email được liên kết với tài khoản của mình."
   },
-  "layout.footer.about": {
-    "message": "Giới thiệu"
-  },
-  "layout.footer.about.careers": {
-    "message": "Tuyển dụng"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Nhật ký thay đổi"
-  },
-  "layout.footer.about.news": {
-    "message": "Tin tức"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Chương trình phần thưởng"
-  },
-  "layout.footer.about.status": {
-    "message": "Trạng thái"
-  },
   "layout.footer.legal": {
     "message": "Pháp lý"
   },
   "layout.footer.legal-disclaimer": {
     "message": "KHÔNG PHẢI LÀ DỊCH VỤ CHÍNH THỨC CỦA MINECRAFT. KHÔNG ĐƯỢC MOJANG HOẶC MICROSOFT PHÊ DUYỆT HOẶC LIÊN KẾT."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Chính sách bản quyền và DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "Chính sách quyền riêng tư"
@@ -2351,50 +2315,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Điều khoản sử dụng"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Thông tin Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth là <github-link>mã nguồn mở</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Sản phẩm"
-  },
-  "layout.footer.products.app": {
-    "message": "Ứng dụng Modrinth"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Tài nguyên"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "Tài liệu API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Trung tâm trợ giúp"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Báo cáo sự cố"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Dịch thuật"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.menu-toggle.action": {
     "message": "Chuyển đổi menu"

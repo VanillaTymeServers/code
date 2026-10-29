@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "続ける"
   },
-  "ads-consent.accept": {
-    "message": "すべて同意"
-  },
-  "ads-consent.body": {
-    "message": "Modrinthは広告収益によって運営され、クリエイターへの報酬もその収益から支払われています。当社のパートナーは、広告のパーソナライズや効果測定のために、サイト内でCookieを保存・利用する場合があります。"
-  },
-  "ads-consent.manage": {
-    "message": "設定の管理"
-  },
-  "ads-consent.reject": {
-    "message": "すべて拒否する"
-  },
-  "ads-consent.title": {
-    "message": "プライバシーと広告がModrinthを支える仕組み"
-  },
   "analytics.action.add": {
     "message": "追加"
   },
@@ -2618,32 +2603,11 @@
   "layout.banner.verify-email.description": {
     "message": "セキュリティ上の理由により、Modrinthではアカウントに関連付けられたメールアドレスの確認が必要です。"
   },
-  "layout.footer.about": {
-    "message": "このサービスについて"
-  },
-  "layout.footer.about.careers": {
-    "message": "キャリア"
-  },
-  "layout.footer.about.changelog": {
-    "message": "変更履歴"
-  },
-  "layout.footer.about.news": {
-    "message": "ニュース"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "報酬プログラム"
-  },
-  "layout.footer.about.status": {
-    "message": "ステータス"
-  },
   "layout.footer.legal": {
     "message": "法的情報"
   },
   "layout.footer.legal-disclaimer": {
     "message": "Minecraftの公式サービスではありません。MojangまたはMicrosoftの承認または連携はありません。"
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "著作権ポリシーとDMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "プライバシーポリシー"
@@ -2657,56 +2621,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "利用規約"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinthについて"
-  },
   "layout.footer.open-source": {
     "message": "Modrinthは<github-link>オープンソース</github-link>です。"
   },
-  "layout.footer.products": {
-    "message": "製品"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "リソース"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "APIドキュメント"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "ヘルプセンター"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "問題を報告"
-  },
-  "layout.footer.resources.translate": {
-    "message": "翻訳"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "不明"

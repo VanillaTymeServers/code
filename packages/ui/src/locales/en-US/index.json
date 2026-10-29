@@ -341,14 +341,8 @@
   "changelog.justNow": {
     "defaultMessage": "Just now"
   },
-  "changelog.product.app": {
-    "defaultMessage": "App"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Hosting"
-  },
   "changelog.product.web": {
-    "defaultMessage": "Platform"
+    "defaultMessage": "Website"
   },
   "collection-widget.empty-collection": {
     "defaultMessage": "This collection is empty."

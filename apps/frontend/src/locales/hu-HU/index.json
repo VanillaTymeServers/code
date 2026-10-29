@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Tovább"
   },
-  "ads-consent.accept": {
-    "message": "Összes elfogadása"
-  },
-  "ads-consent.body": {
-    "message": "A hirdetések teszik lehetővé a Modrinth működését, és biztosítják a tartalomkészítők juttatásait. Partnereink sütiket tárolhatnak vagy érhetnek el a weboldalon a hirdetések személyre szabása és a teljesítmény mérése céljából."
-  },
-  "ads-consent.manage": {
-    "message": "Beállítások kezelése"
-  },
-  "ads-consent.reject": {
-    "message": "Összes elutasítása"
-  },
-  "ads-consent.title": {
-    "message": "Adataid védelme és a hirdetések szerepe a Modrinth működésében"
-  },
   "analytics.action.add": {
     "message": "Hozzáadás"
   },
@@ -2708,24 +2693,6 @@
   "layout.banner.verify-email.description": {
     "message": "Biztonsági okokból a Modrinth megköveteli, hogy igazold a fiókodhoz tartozó e-mail címet."
   },
-  "layout.footer.about": {
-    "message": "Rólunk"
-  },
-  "layout.footer.about.careers": {
-    "message": "Karrierek"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Változásnapló"
-  },
-  "layout.footer.about.news": {
-    "message": "Hírek"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Jutalomprogram"
-  },
-  "layout.footer.about.status": {
-    "message": "Állapot"
-  },
   "layout.footer.based-on-label": {
     "message": "Alapján"
   },
@@ -2747,9 +2714,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "NEM HIVATALOS MINECRAFT SZOLGÁLTATÁS. A MOJANG VAGY MICROSOFT NEM HAGYTA JÓVÁ, ÉS NEM PARTNERÜK."
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Szerzői jogi iránynyelvek és DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "Adatvédelmi iránynyelvek"
   },
@@ -2762,56 +2726,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Felhasználási feltételek"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinth infórmáció"
-  },
   "layout.footer.open-source": {
     "message": "A Modrinth <github-link>nyílt forráskódú</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Termékek"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Források"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "API dokumentáció"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Sugó"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Problémák jelentése"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Fordítás"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "Youtyube"
   },
   "layout.footer.unknown-commit": {
     "message": "ismeretlen"

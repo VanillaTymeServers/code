@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Continuar"
   },
-  "ads-consent.accept": {
-    "message": "Aceitar todos"
-  },
-  "ads-consent.body": {
-    "message": "Os anúncios tornam o Modrinth possível e financiam os criadores de projetos. Os nossos parceiros podem armazenar ou aceder a cookies no site para personalizar a publicidade e analisar o seu desempenho."
-  },
-  "ads-consent.manage": {
-    "message": "Gerir preferências"
-  },
-  "ads-consent.reject": {
-    "message": "Rejeitar tudo"
-  },
-  "ads-consent.title": {
-    "message": "A tua privacidade e como os anúncios suportam o Modrinth"
-  },
   "analytics.action.add": {
     "message": "Adicionar"
   },
@@ -2300,32 +2285,11 @@
   "layout.banner.verify-email.description": {
     "message": "Por razões de segurança, Modrinth requer que verifiques o endereço e-mail associado à tua conta."
   },
-  "layout.footer.about": {
-    "message": "Sobre"
-  },
-  "layout.footer.about.careers": {
-    "message": "Empregos"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Lista de alterações"
-  },
-  "layout.footer.about.news": {
-    "message": "Notícias"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Programa de Recompensas"
-  },
-  "layout.footer.about.status": {
-    "message": "Estado"
-  },
   "layout.footer.legal": {
     "message": "Informação legal"
   },
   "layout.footer.legal-disclaimer": {
     "message": "NÃO É UM SERVIÇO OFICIAL MINECRAFT. NÃO APROVADO NEM ASSOCIADO À MOJANG E/OU À MICROSOFT."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Política de Direitos de Autor e DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "Política de Privacidade"
@@ -2339,50 +2303,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Termos de Uso"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Informação do Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth é <github-link>open source</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Produtos"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Recursos"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "Documentação da API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Centro de Ajuda"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Reportar problemas"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Tradução"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.menu-toggle.action": {
     "message": "Abrir/Fechar menu"

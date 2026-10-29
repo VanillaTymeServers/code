@@ -293,12 +293,6 @@
   "changelog.justNow": {
     "defaultMessage": "Akkurat nå"
   },
-  "changelog.product.app": {
-    "defaultMessage": "App"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Hosting"
-  },
   "changelog.product.web": {
     "defaultMessage": "Plattform"
   },
@@ -2775,4 +2769,3 @@
     "defaultMessage": "Du har ulagrede endringer."
   }
 }
-

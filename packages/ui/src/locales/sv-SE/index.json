@@ -335,12 +335,6 @@
   "changelog.justNow": {
     "defaultMessage": "Just nu"
   },
-  "changelog.product.app": {
-    "defaultMessage": "App"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Hosting"
-  },
   "changelog.product.web": {
     "defaultMessage": "Plattform"
   },

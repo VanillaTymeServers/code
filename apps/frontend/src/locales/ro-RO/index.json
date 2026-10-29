@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Continuă"
   },
-  "ads-consent.accept": {
-    "message": "Acceptă tot"
-  },
-  "ads-consent.body": {
-    "message": "Anunțurile fac posibil Modrinth și finanțează plățile creatorilor. Partenerii noștri pot stoca sau accesa cookie-uri în aplicație pentru a personaliza reclamele și a măsura performanța."
-  },
-  "ads-consent.manage": {
-    "message": "Gestionează preferințele"
-  },
-  "ads-consent.reject": {
-    "message": "Refuză tot"
-  },
-  "ads-consent.title": {
-    "message": "Confidențialitatea ta și modul în care anunțurile susțin Modrinth"
-  },
   "analytics.action.add": {
     "message": "Adaugă"
   },
@@ -1229,32 +1214,11 @@
   "layout.banner.verify-email.description": {
     "message": "Din motive de securitate, pe Modrinth este necesar să verifici adresa de email asociată contului."
   },
-  "layout.footer.about": {
-    "message": "Despre"
-  },
-  "layout.footer.about.careers": {
-    "message": "Cariere"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Istoric modificări"
-  },
-  "layout.footer.about.news": {
-    "message": "Noutăți"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Program de recompense"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.legal": {
     "message": "Informații juridice"
   },
   "layout.footer.legal-disclaimer": {
     "message": "NU ESTE UN SERVICIU OFICIAL MINECRAFT. NU ESTE APROBAT DE SAU ASOCIAT CU MOJANG SAU MICROSOFT."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Dreptul de autor și DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "Politica de confidențialitate"
@@ -1268,47 +1232,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Termeni de Utilizare"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Informații Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth are <github-link>sursa deschisă</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Produse"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.resources": {
-    "message": "Resurse"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "Documentație API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Centru Ajutor"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Raportează problemă"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Traducere"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.menu-toggle.action": {
     "message": "Comută meniul"

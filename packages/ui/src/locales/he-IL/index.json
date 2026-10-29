@@ -278,12 +278,6 @@
   "changelog.justNow": {
     "defaultMessage": "רק לעכשיו"
   },
-  "changelog.product.app": {
-    "defaultMessage": "אפליקציה"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "ארח"
-  },
   "changelog.product.web": {
     "defaultMessage": "פלטפורמה"
   },

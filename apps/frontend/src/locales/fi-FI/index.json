@@ -746,21 +746,6 @@
   "layout.avatar.alt": {
     "message": "Avatarisi"
   },
-  "layout.footer.about": {
-    "message": "Tietoa meistä"
-  },
-  "layout.footer.about.careers": {
-    "message": "Urat"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Muutosloki"
-  },
-  "layout.footer.about.news": {
-    "message": "Uutiset"
-  },
-  "layout.footer.about.status": {
-    "message": "Tila"
-  },
   "layout.footer.legal": {
     "message": "Oikeudelliset tiedot"
   },
@@ -770,38 +755,8 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Käyttöehdot"
   },
-  "layout.footer.products": {
-    "message": "Tuotteet"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.resources": {
-    "message": "Resurssit"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Tuki Keskus"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Raportoi ongelmista"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Käännä"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.nav.home": {
     "message": "Koti"

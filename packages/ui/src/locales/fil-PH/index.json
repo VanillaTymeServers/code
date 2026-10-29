@@ -194,12 +194,6 @@
   "changelog.justNow": {
     "defaultMessage": "Ngayon lang"
   },
-  "changelog.product.app": {
-    "defaultMessage": "App"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Hosting"
-  },
   "changelog.product.web": {
     "defaultMessage": "Plataporma"
   },
@@ -2736,4 +2730,3 @@
     "defaultMessage": "Uri"
   }
 }
-

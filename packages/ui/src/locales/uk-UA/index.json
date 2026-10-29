@@ -341,12 +341,6 @@
   "changelog.justNow": {
     "defaultMessage": "Щойно"
   },
-  "changelog.product.app": {
-    "defaultMessage": "App"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Hosting"
-  },
   "changelog.product.web": {
     "defaultMessage": "Платформа"
   },

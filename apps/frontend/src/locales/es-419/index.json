@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Continuar"
   },
-  "ads-consent.accept": {
-    "message": "Aceptar todo"
-  },
-  "ads-consent.body": {
-    "message": "Los anuncios hacen posible a Modrinth y financian los pagos a los creadores. Nuestros socios pueden guardar o acceder a cookies en la aplicación para personalizar anuncios y medir su rendimiento."
-  },
-  "ads-consent.manage": {
-    "message": "Gestionar preferencias"
-  },
-  "ads-consent.reject": {
-    "message": "Rechazar todo"
-  },
-  "ads-consent.title": {
-    "message": "Tu privacidad y cómo los anuncios apoyan a Modrinth"
-  },
   "analytics.action.add": {
     "message": "Añadir"
   },
@@ -2717,24 +2702,6 @@
   "layout.banner.verify-email.description": {
     "message": "Por motivos de seguridad, Modrinth necesita verificar la dirección de correo electrónico asociada a tu cuenta."
   },
-  "layout.footer.about": {
-    "message": "Acerca de"
-  },
-  "layout.footer.about.careers": {
-    "message": "Empleos"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Registro de cambios"
-  },
-  "layout.footer.about.news": {
-    "message": "Noticias"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Programa de recompensas"
-  },
-  "layout.footer.about.status": {
-    "message": "Estado"
-  },
   "layout.footer.based-on-label": {
     "message": "Basado en"
   },
@@ -2756,9 +2723,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "NO ES UN SERVICIO OFICIAL DE MINECRAFT. NO ESTÁ APROBADO POR MOJANG NI MICROSOFT, NI ESTÁ ASOCIADO CON ELLOS."
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Política de derechos de autor y DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "Política de privacidad"
   },
@@ -2771,56 +2735,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Términos de Uso"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Información de Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth es de <github-link>código abierto</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Productos"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Recursos"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "Documentación de la API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Centro de ayuda"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Reportar problemas"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Traducir"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "desconocido"

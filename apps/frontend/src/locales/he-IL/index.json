@@ -5,15 +5,6 @@
   "action.continue": {
     "message": "המשך"
   },
-  "ads-consent.accept": {
-    "message": "אשר הכול"
-  },
-  "ads-consent.manage": {
-    "message": "ניהול העדפות"
-  },
-  "ads-consent.reject": {
-    "message": "דחיית כל השינויים"
-  },
   "analytics.action.add": {
     "message": "לְהוֹסִיף"
   },
@@ -1430,32 +1421,11 @@
   "layout.banner.tin-mismatch.description": {
     "message": "אפשרות המשיכה שלך ננעלה זמנית מכיוון שמספר ה-TIN או ה-SSN לא תואם לרשומות ה-IRS. יש ליצור קשר עם התמיכה כדי לאפס ולהגיש מחדש את טופס המס."
   },
-  "layout.footer.about": {
-    "message": "אודות"
-  },
-  "layout.footer.about.careers": {
-    "message": "קריירות"
-  },
-  "layout.footer.about.changelog": {
-    "message": "יומן שינויים"
-  },
-  "layout.footer.about.news": {
-    "message": "חדשות"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "תוכנית תגמולים"
-  },
-  "layout.footer.about.status": {
-    "message": "מצב"
-  },
   "layout.footer.legal": {
     "message": "מידע משפטי"
   },
   "layout.footer.legal-disclaimer": {
     "message": "לא שירות רשמי של Minecraft. לא אושר על ידי או משוייך עם Mojang או Minecraft."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "מדיניות זכויות יוצרים ו-DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "מדיניות הפרטיות"
@@ -1469,47 +1439,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "תנאי שימוש"
   },
-  "layout.footer.modrinth-information": {
-    "message": "מידע על Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth הוא <github-link>קוד פתוח</github-link>."
   },
-  "layout.footer.products": {
-    "message": "מוצרים"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.resources": {
-    "message": "משאבים"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "מסמכי API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "מרכז תמיכה"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "דיווח בעיות"
-  },
-  "layout.footer.resources.translate": {
-    "message": "תרגם"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "דיסקורד"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "מסטודון"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.nav.active-reports": {
     "message": "דוחות פעילים"

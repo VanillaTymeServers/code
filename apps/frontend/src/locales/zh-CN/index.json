@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "继续"
   },
-  "ads-consent.accept": {
-    "message": "全部接受"
-  },
-  "ads-consent.body": {
-    "message": "广告使 Modrinth 得以运营，并为创作者报酬提供资金支持。我们的合作伙伴可能会在网站上存储或访问 Cookie，以便实现广告个性化和效果衡量。"
-  },
-  "ads-consent.manage": {
-    "message": "管理偏好设置"
-  },
-  "ads-consent.reject": {
-    "message": "全部拒绝"
-  },
-  "ads-consent.title": {
-    "message": "您的隐私以及广告如何支持 Modrinth"
-  },
   "analytics.action.add": {
     "message": "添加"
   },
@@ -2717,24 +2702,6 @@
   "layout.banner.verify-email.description": {
     "message": "为确保账户安全，Modrinth 需要你验证与账户关联的电子邮箱地址。"
   },
-  "layout.footer.about": {
-    "message": "关于"
-  },
-  "layout.footer.about.careers": {
-    "message": "招贤纳士"
-  },
-  "layout.footer.about.changelog": {
-    "message": "更新日志"
-  },
-  "layout.footer.about.news": {
-    "message": "新闻"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "激励计划"
-  },
-  "layout.footer.about.status": {
-    "message": "服务状态"
-  },
   "layout.footer.based-on-label": {
     "message": "基于"
   },
@@ -2756,9 +2723,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "非官方 Minecraft 产品，未经 Mojang 或 Microsoft 批准或关联。"
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "版权政策与 DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "隐私政策"
   },
@@ -2771,56 +2735,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "使用条款"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinth 信息"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth 是一个<github-link>开源项目</github-link>。"
   },
-  "layout.footer.products": {
-    "message": "产品"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "资源"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "API 文档"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "帮助中心"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "报告问题"
-  },
-  "layout.footer.resources.translate": {
-    "message": "翻译"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "未知"

@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "متابعة"
   },
-  "ads-consent.accept": {
-    "message": "قبول الكل"
-  },
-  "ads-consent.body": {
-    "message": "تساعد الإعلانات في استمرار Modrinth وتمويل مدفوعات المبدعين. قد يقوم شركاؤنا بتخزين ملفات تعريف الارتباط Cookies على الموقع أو الوصول إليها لتخصيص الإعلانات وقياس أدائها."
-  },
-  "ads-consent.manage": {
-    "message": "إدارة التفضيلات"
-  },
-  "ads-consent.reject": {
-    "message": "رفض الكل"
-  },
-  "ads-consent.title": {
-    "message": "خصوصيتك وكيف تساهم الإعلانات في دعم Modrinth"
-  },
   "analytics.action.add": {
     "message": "إضافة"
   },
@@ -2648,24 +2633,6 @@
   "layout.banner.verify-email.description": {
     "message": "لأسباب أمنية، يحتاج مودرنث منك التحقق من عنوان البريد الإلكتروني المرتبط بحسابك."
   },
-  "layout.footer.about": {
-    "message": "حول"
-  },
-  "layout.footer.about.careers": {
-    "message": "الوظائف"
-  },
-  "layout.footer.about.changelog": {
-    "message": "سجل التغييرات"
-  },
-  "layout.footer.about.news": {
-    "message": "أخبار"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "برنامج المكافآت"
-  },
-  "layout.footer.about.status": {
-    "message": "حالة"
-  },
   "layout.footer.based-on-label": {
     "message": "بناءً على"
   },
@@ -2687,9 +2654,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "ليست خدمة رسمية من خدمات MINECRAFT. غير معتمدة من قبل MOJANG أو MICROSOFT، وليست مرتبطة بهما."
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "سياسة حقوق النشر و DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "سياسة الخصوصية"
   },
@@ -2702,56 +2666,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "شروط الاستخدام"
   },
-  "layout.footer.modrinth-information": {
-    "message": "معلومات Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth <github-link>مفتوح المصدر</github-link>."
   },
-  "layout.footer.products": {
-    "message": "منتجات"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "استضافة Modrinth"
-  },
-  "layout.footer.resources": {
-    "message": "موارد"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "وثائق واجهة برمجة التطبيقات API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "مركز المساعدة"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "الإبلاغ عن المشكلات"
-  },
-  "layout.footer.resources.translate": {
-    "message": "ترجمة"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "غير معروف"

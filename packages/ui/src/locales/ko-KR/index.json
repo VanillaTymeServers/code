@@ -332,12 +332,6 @@
   "changelog.justNow": {
     "defaultMessage": "최근"
   },
-  "changelog.product.app": {
-    "defaultMessage": "앱"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "호스팅"
-  },
   "changelog.product.web": {
     "defaultMessage": "플랫폼"
   },

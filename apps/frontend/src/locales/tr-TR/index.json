@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Devam et"
   },
-  "ads-consent.accept": {
-    "message": "Tümünü kabul et"
-  },
-  "ads-consent.body": {
-    "message": "Reklamlar, Modrinth'i mümkün kılar ve içerik oluşturucalara yapılan ödemeleri finanse eder."
-  },
-  "ads-consent.manage": {
-    "message": "Tercihleri yönet"
-  },
-  "ads-consent.reject": {
-    "message": "Tümünü reddet"
-  },
-  "ads-consent.title": {
-    "message": "Reklamlar Modrinth'i nasıl destekler ve gizliliğiniz"
-  },
   "analytics.action.add": {
     "message": "Ekle"
   },
@@ -2693,24 +2678,6 @@
   "layout.banner.verify-email.description": {
     "message": "Güvenlik sebebiyle Modrinth hesabınızın e-posta adresini doğrulamanız gerek."
   },
-  "layout.footer.about": {
-    "message": "Hakkında"
-  },
-  "layout.footer.about.careers": {
-    "message": "Kariyerler"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Değişiklikler"
-  },
-  "layout.footer.about.news": {
-    "message": "Haberler"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Ödül Programı"
-  },
-  "layout.footer.about.status": {
-    "message": "Durum"
-  },
   "layout.footer.based-on-label": {
     "message": "Kaynak"
   },
@@ -2732,9 +2699,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "RESMİ BİR MINECRAFT HİZMETİ DEĞİLDİR. MOJANG VEYA MICROSOFT TARAFINDAN ONAYLANMAMIŞTIR VEYA İLİŞKİLİ DEĞİLDİR."
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Telif Hakkı Politikası ve DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "Gizlillik ilkesi"
   },
@@ -2747,56 +2711,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Kullanım Koşulları"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinth bilgileri"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth <github-link>açık kaynaklıdır</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Ürünler"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Kaynaklar"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "API dokümantasyonu"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Yardım Merkezi"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Sorunları bildir"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Çevir"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "bilinmeyen"

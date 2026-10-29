@@ -2057,32 +2057,11 @@
   "layout.banner.verify-email.description": {
     "message": "Gunna sikkerhet, så trenger Modrinth at du bekrefter email-adressa assisiert med kontoen din."
   },
-  "layout.footer.about": {
-    "message": "Om"
-  },
-  "layout.footer.about.careers": {
-    "message": "Karrierer"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Endringslogg"
-  },
-  "layout.footer.about.news": {
-    "message": "Nyheter"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Belønningsprogram"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.legal": {
     "message": "Juridisk"
   },
   "layout.footer.legal-disclaimer": {
     "message": "IKKE EN OFFISIEL MINECRAFT-SERVICE. IKKE TILLATT ELLER ASSOSIERT MED MOJANG ELLER MICROSOFT."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Opphavsrettpolicy og DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "Personvernsregler"
@@ -2096,50 +2075,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Bruksvilkår"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinth-informasjon"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth er <github-link>Åpen kjeldekode</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Produkt"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Ressurser"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "API dokumentasjon"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Hjelpesenter"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Rapporter problem"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Oversett"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.menu-toggle.action": {
     "message": "Vekslingsmeny"

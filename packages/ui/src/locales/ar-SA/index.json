@@ -341,12 +341,6 @@
   "changelog.justNow": {
     "defaultMessage": "الآن فقط"
   },
-  "changelog.product.app": {
-    "defaultMessage": "تطبيق"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "المضيف"
-  },
   "changelog.product.web": {
     "defaultMessage": "منصّة"
   },
@@ -1782,4 +1776,3 @@
     "defaultMessage": "ماينكرافت: إصدار جافا"
   }
 }
-

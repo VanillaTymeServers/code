@@ -1610,32 +1610,11 @@
   "layout.banner.verify-email.description": {
     "message": "Dahil sa mga kadahilang pangseguridad, kailangan ng Modrinth na mapatunayan ang email address sa iyong account."
   },
-  "layout.footer.about": {
-    "message": "Tungkol"
-  },
-  "layout.footer.about.careers": {
-    "message": "Mga Karera"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Changelog"
-  },
-  "layout.footer.about.news": {
-    "message": "Balita"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Programa ng Gantimpala"
-  },
-  "layout.footer.about.status": {
-    "message": "Estado"
-  },
   "layout.footer.legal": {
     "message": "Legal"
   },
   "layout.footer.legal-disclaimer": {
     "message": "HINDI OPISYAL NA SERBISYO NG MINECRAFT. HINDI APRUBADO O KAAKIBAT NG MOJANG O NG MICROSOFT."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Patakaran sa Copyright at DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "Patakaran sa Pribasiya"
@@ -1649,50 +1628,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Mga Tuntunin sa Paggamit"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Impormasyon ng Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "<github-link>Open source</github-link> ang Modrinth."
   },
-  "layout.footer.products": {
-    "message": "Mga Produkto"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Mga Mapagkukunan"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "Dokumentasyon ng API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Help Center"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Magsumbong ng isyu"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Isalin"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.menu-toggle.action": {
     "message": "I-toggle ang menu"

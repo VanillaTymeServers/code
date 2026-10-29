@@ -341,12 +341,6 @@
   "changelog.justNow": {
     "defaultMessage": "Agora pouco"
   },
-  "changelog.product.app": {
-    "defaultMessage": "App"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Hospedagem"
-  },
   "changelog.product.web": {
     "defaultMessage": "Plataforma"
   },

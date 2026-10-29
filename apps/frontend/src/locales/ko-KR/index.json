@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "계속"
   },
-  "ads-consent.accept": {
-    "message": "모두 수용"
-  },
-  "ads-consent.body": {
-    "message": "Modrinth는 광고를 통해 운영되며, 크리에이터에게 지급하여 보상합니다. 파트너들은 맞춤형 광고 제공과 성과 측정을 위해 웹사이트에서 쿠키를 저장 또는 접근할 수 있습니다."
-  },
-  "ads-consent.manage": {
-    "message": "참조 관리"
-  },
-  "ads-consent.reject": {
-    "message": "모두 거절"
-  },
-  "ads-consent.title": {
-    "message": "프라이버시와 광고가 Modrinth를 지원하는 방식"
-  },
   "analytics.action.add": {
     "message": "추가"
   },
@@ -2717,24 +2702,6 @@
   "layout.banner.verify-email.description": {
     "message": "보안상의 이유로 Modrinth 계정에 연결된 이메일 주소를 인증해야 합니다."
   },
-  "layout.footer.about": {
-    "message": "소개"
-  },
-  "layout.footer.about.careers": {
-    "message": "채용"
-  },
-  "layout.footer.about.changelog": {
-    "message": "변경 사항"
-  },
-  "layout.footer.about.news": {
-    "message": "소식"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "보상 프로그램"
-  },
-  "layout.footer.about.status": {
-    "message": "상태"
-  },
   "layout.footer.based-on-label": {
     "message": "에 따라"
   },
@@ -2756,9 +2723,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "공식 Minecraft 서비스가 아닙니다. Mojang 또는 Microsoft의 승인을 받지 않았으며 연관되어 있지 않습니다."
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "저작권 정책 및 DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "개인정보 처리방침"
   },
@@ -2771,56 +2735,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "이용 약관"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinth 정보"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth는 <github-link>오픈 소스</github-link>입니다."
   },
-  "layout.footer.products": {
-    "message": "상품"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth 호스팅"
-  },
-  "layout.footer.resources": {
-    "message": "정보"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "API 문서"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "지원 센터"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "오류 신고"
-  },
-  "layout.footer.resources.translate": {
-    "message": "번역"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "확인되지 않음"

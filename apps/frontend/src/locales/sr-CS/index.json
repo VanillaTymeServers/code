@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Nastavi"
   },
-  "ads-consent.accept": {
-    "message": "Prihvati sve"
-  },
-  "ads-consent.body": {
-    "message": "Reklame omogućavaju Modrinth i finansiraju isplate kreatorima. Naši partneri mogu da čuvaju ili pristupe kolačićima na websitu kako bi personalizovali reklame i merili performanse."
-  },
-  "ads-consent.manage": {
-    "message": "Upravljaj preferencijama"
-  },
-  "ads-consent.reject": {
-    "message": "Odbij sve"
-  },
-  "ads-consent.title": {
-    "message": "Vaša privatnost i kako reklame pomažu Modrinthu"
-  },
   "analytics.action.add": {
     "message": "Dodaj"
   },
@@ -1154,32 +1139,11 @@
   "layout.banner.verify-email.description": {
     "message": "Iz sigurnosnih razloga, Modrinth zahteva da verifikuješ email adresu povezanu sa svojim nalogom."
   },
-  "layout.footer.about": {
-    "message": "O nama"
-  },
-  "layout.footer.about.careers": {
-    "message": "Poslovi"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Spisak promena"
-  },
-  "layout.footer.about.news": {
-    "message": "Novosti"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Program nagrađivanja"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.legal": {
     "message": "Pravno"
   },
   "layout.footer.legal-disclaimer": {
     "message": "NIJE ZVANIČNA MINECRAFT USLUGA. NIJE ODOBRENO NITI POVEZANO SA MOJANG-om ILI MICROSOFT-om."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Politika autorskih prava i DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "Politika privatnosti"
@@ -1196,44 +1160,8 @@
   "layout.footer.open-source": {
     "message": "Modrinth je <github-link>otvorenog koda</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Proizvodi"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth hostiranje"
-  },
-  "layout.footer.resources": {
-    "message": "Resursi"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "API dokumentacija"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Centar za pomoć"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Prijavite probleme"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Prevedi"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.menu-toggle.action": {
     "message": "Prebaci meni"

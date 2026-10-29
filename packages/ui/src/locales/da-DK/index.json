@@ -269,12 +269,6 @@
   "changelog.justNow": {
     "defaultMessage": "Lige nu"
   },
-  "changelog.product.app": {
-    "defaultMessage": "App"
-  },
-  "changelog.product.hosting": {
-    "defaultMessage": "Hosting"
-  },
   "changelog.product.web": {
     "defaultMessage": "Platform"
   },
@@ -2220,4 +2214,3 @@
     "defaultMessage": "Du har ændringer, der ikke er gemt"
   }
 }
-

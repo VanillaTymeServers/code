@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Forsæt"
   },
-  "ads-consent.accept": {
-    "message": "Tillad alle"
-  },
-  "ads-consent.body": {
-    "message": "Reklamer gør Modrinth muligt og finansiere skaber udbetalinger. Vores partnere må gemme og tilgå cookies på hjemmesiden for at personliggøre."
-  },
-  "ads-consent.manage": {
-    "message": "Administrer præferencer"
-  },
-  "ads-consent.reject": {
-    "message": "Afvis alle"
-  },
-  "ads-consent.title": {
-    "message": "Dit privatliv og hvordan reklamer hjælper Modrinth"
-  },
   "analytics.action.add": {
     "message": "Tilføj"
   },
@@ -1898,32 +1883,11 @@
   "layout.banner.verify-email.description": {
     "message": "For sikkerhedsgrunde kræver Modrinth at du bekræfter den e-mail adresse tilknyttet til din konto."
   },
-  "layout.footer.about": {
-    "message": "Om"
-  },
-  "layout.footer.about.careers": {
-    "message": "Karrierer"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Ændringslog"
-  },
-  "layout.footer.about.news": {
-    "message": "Nyheder"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Belønningsprogram"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.legal": {
     "message": "Juridisk"
   },
   "layout.footer.legal-disclaimer": {
     "message": "IKKE EN OFFICIEL MINECRAFT-TJENESTE. IKKE GODKENDT AF ELLER FORBUNDET MED MOJANG ELLER MICROSOFT."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Ophavsretspolitik og DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "Privatlivspolitik"
@@ -1934,50 +1898,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Brugsvilkår"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinth information"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth er <github-link>open source</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Produkter"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Ressourcer"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "API dokumentation"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Hjælpe Center"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Anmeld fejl"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Oversæt"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.footer.unknown-commit": {
     "message": "ukendt"

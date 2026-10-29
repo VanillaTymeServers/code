@@ -5,18 +5,6 @@
   "action.continue": {
     "message": "Pokračovat"
   },
-  "ads-consent.accept": {
-    "message": "Přijmout vše"
-  },
-  "ads-consent.manage": {
-    "message": "Spravovat preference"
-  },
-  "ads-consent.reject": {
-    "message": "Odmítnout vše"
-  },
-  "ads-consent.title": {
-    "message": "Vaše soukromí a způsob, jakým reklamy podporují Modrinth"
-  },
   "analytics.action.add": {
     "message": "Přidat"
   },
@@ -1853,32 +1841,11 @@
   "layout.banner.verify-email.description": {
     "message": "Z bezpečnostních důvodů potřebuje Modrinth ověření e-mailové adresy spojené s vaším účtem."
   },
-  "layout.footer.about": {
-    "message": "O"
-  },
-  "layout.footer.about.careers": {
-    "message": "Kariéra"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Seznam změn"
-  },
-  "layout.footer.about.news": {
-    "message": "Novinky"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Program odměn"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.legal": {
     "message": "Právní info"
   },
   "layout.footer.legal-disclaimer": {
     "message": "TOTO NENÍ OFICIÁLNÍ SLUŽBA MINECRAFTU. NENÍ SCHVÁLENO ANI ASOCIOVÁNO S MOJANG NEBO MICROSOFTEM."
-  },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Zásady autorských práv a DMCA"
   },
   "layout.footer.legal.privacy-policy": {
     "message": "Zásady ochrany osobních údajů"
@@ -1892,50 +1859,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Podmínky Užívání"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinth informace"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth je <github-link>open source</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Produkty"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Zdroje"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "Dokumentace API"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Pomocné centrum"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Nahlásit problémy"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Přeložit"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
   },
   "layout.menu-toggle.action": {
     "message": "Přepnout menu"

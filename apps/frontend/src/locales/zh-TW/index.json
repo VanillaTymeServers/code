@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "繼續"
   },
-  "ads-consent.accept": {
-    "message": "全部接受"
-  },
-  "ads-consent.body": {
-    "message": "廣告使 Modrinth 得以營運，並為創作者提供收益。我們的合作夥伴可能會在網站上儲存或存取 Cookie，以實現個人化廣告並衡量廣告成效。"
-  },
-  "ads-consent.manage": {
-    "message": "管理偏好設定"
-  },
-  "ads-consent.reject": {
-    "message": "全部拒絕"
-  },
-  "ads-consent.title": {
-    "message": "關於你的隱私，以及廣告如何幫助 Modrinth"
-  },
   "analytics.action.add": {
     "message": "新增"
   },
@@ -2717,24 +2702,6 @@
   "layout.banner.verify-email.description": {
     "message": "為了安全起見，Modrinth 需要你驗證與你的帳號連結的電子郵件地址。"
   },
-  "layout.footer.about": {
-    "message": "關於"
-  },
-  "layout.footer.about.careers": {
-    "message": "加入我們"
-  },
-  "layout.footer.about.changelog": {
-    "message": "更新日誌"
-  },
-  "layout.footer.about.news": {
-    "message": "新聞"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "獎勵計畫"
-  },
-  "layout.footer.about.status": {
-    "message": "服務狀態"
-  },
   "layout.footer.based-on-label": {
     "message": "基於"
   },
@@ -2756,9 +2723,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "非官方 MINECRAFT 服務。未經 MOJANG 或 MICROSOFT 核准或與之關聯。"
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "著作權政策與 DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "隱私權政策"
   },
@@ -2771,56 +2735,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "使用條款"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Modrinth 資訊"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth 是<github-link>開源專案</github-link>。"
   },
-  "layout.footer.products": {
-    "message": "產品"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "資源"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "API 文件"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "說明中心"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "回報問題"
-  },
-  "layout.footer.resources.translate": {
-    "message": "協助翻譯"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "未知"

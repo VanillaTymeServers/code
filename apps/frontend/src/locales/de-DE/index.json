@@ -5,21 +5,6 @@
   "action.continue": {
     "message": "Weiter"
   },
-  "ads-consent.accept": {
-    "message": "Alle akzeptieren"
-  },
-  "ads-consent.body": {
-    "message": "Werbung ermöglicht Modrinth und finanziert die Auszahlungen an die Ersteller. Unsere Partner speichern möglicherweise Cookies auf der Website oder greifen auf diese zu, um Werbung zu personalisieren und die Leistung zu messen."
-  },
-  "ads-consent.manage": {
-    "message": "Einstellungen verwalten"
-  },
-  "ads-consent.reject": {
-    "message": "Alle ablehnen"
-  },
-  "ads-consent.title": {
-    "message": "Deine Privatsphäre und wie Werbung Modrinth unterstützt"
-  },
   "analytics.action.add": {
     "message": "Hinzufügen"
   },
@@ -2717,24 +2702,6 @@
   "layout.banner.verify-email.description": {
     "message": "Aus Sicherheitsgründen muss Modrinth die mit deinem Konto verknüpfte E-Mail-Adresse überprüfen."
   },
-  "layout.footer.about": {
-    "message": "Über"
-  },
-  "layout.footer.about.careers": {
-    "message": "Karrieren"
-  },
-  "layout.footer.about.changelog": {
-    "message": "Änderungen"
-  },
-  "layout.footer.about.news": {
-    "message": "Neuigkeiten"
-  },
-  "layout.footer.about.rewards-program": {
-    "message": "Belohnungsprogramm"
-  },
-  "layout.footer.about.status": {
-    "message": "Status"
-  },
   "layout.footer.based-on-label": {
     "message": "Basierend auf"
   },
@@ -2756,9 +2723,6 @@
   "layout.footer.legal-disclaimer": {
     "message": "KEIN OFFIZIELLER MINECRAFT-DIENST. NICHT VON MOJANG ODER MICROSOFT UNTERSTÜTZT ODER MIT IHNEN ASSOZIIERT."
   },
-  "layout.footer.legal.copyright-policy": {
-    "message": "Urheberrechtsrichtlinie und DMCA"
-  },
   "layout.footer.legal.privacy-policy": {
     "message": "Datenschutzerklärung"
   },
@@ -2771,56 +2735,11 @@
   "layout.footer.legal.terms-of-use": {
     "message": "Nutzungsbedingungen"
   },
-  "layout.footer.modrinth-information": {
-    "message": "Informationen zu Modrinth"
-  },
   "layout.footer.open-source": {
     "message": "Modrinth ist <github-link>Open Source</github-link>."
   },
-  "layout.footer.products": {
-    "message": "Produkte"
-  },
-  "layout.footer.products.app": {
-    "message": "Modrinth App"
-  },
-  "layout.footer.products.plus": {
-    "message": "Modrinth+"
-  },
-  "layout.footer.products.servers": {
-    "message": "Modrinth Hosting"
-  },
-  "layout.footer.resources": {
-    "message": "Ressourcen"
-  },
-  "layout.footer.resources.api-docs": {
-    "message": "API-Dokumentation"
-  },
-  "layout.footer.resources.help-center": {
-    "message": "Hilfecenter"
-  },
-  "layout.footer.resources.report-issues": {
-    "message": "Fehler melden"
-  },
-  "layout.footer.resources.translate": {
-    "message": "Übersetzen"
-  },
-  "layout.footer.social.bluesky": {
-    "message": "Bluesky"
-  },
   "layout.footer.social.discord": {
     "message": "Discord"
-  },
-  "layout.footer.social.mastodon": {
-    "message": "Mastodon"
-  },
-  "layout.footer.social.reddit": {
-    "message": "Reddit"
-  },
-  "layout.footer.social.x": {
-    "message": "X"
-  },
-  "layout.footer.social.youtube": {
-    "message": "YouTube"
   },
   "layout.footer.unknown-commit": {
     "message": "unbekannt"
