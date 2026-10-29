@@ -42,7 +42,6 @@ import {
 	injectNotificationManager,
 	injectUserPreferences,
 	IntlFormatted,
-	isProjectDisplayLocation,
 	normalizeChildren,
 	type ProjectDisplayLocation,
 	type ProjectLayout,
@@ -72,7 +71,7 @@ const developerModeBanner = defineMessages({
 	description: {
 		id: 'settings.display.banner.developer-mode.description',
 		defaultMessage:
-			"<strong>Developer mode</strong> is active. This will allow you to view the internal IDs of various things throughout Modrinth that may be helpful if you're a developer using the Modrinth API. Click on the Modrinth logo at the bottom of the page 5 times to toggle developer mode.",
+			"<strong>Developer mode</strong> is active. This will allow you to view the internal IDs of various things throughout the website that may be helpful if you're a developer using the API. Click on the Vanilla Tyme logo at the bottom of the page 5 times to toggle developer mode.",
 	},
 	deactivate: {
 		id: 'settings.display.banner.developer-mode.button',
@@ -81,7 +80,7 @@ const developerModeBanner = defineMessages({
 })
 
 useHead({
-	title: () => `${formatMessage(messages.headTitle)} - Modrinth`,
+	title: () => `${formatMessage(messages.headTitle)} - Vanilla Tyme`,
 })
 
 const notifications = defineMessages({
@@ -97,7 +96,6 @@ const notifications = defineMessages({
 
 const cosmetics = useCosmetics()
 const flags = useFeatureFlags()
-const tags = useGeneratedState()
 const theme = useTheme()
 
 // On the server the value of native theme can be 'unknown'. To hydrate
@@ -115,24 +113,14 @@ const systemTheme = useMountedValue((mounted): Theme => {
 	return systemTheme_ === 'light' ? theme.preferences.light : theme.preferences.dark
 })
 
-const projectLayouts = computed<ProjectLayoutSetting[]>(() => {
-	const layouts = tags.value.projectTypes
-		.map(({ id }) => id)
-		.filter(isProjectDisplayLocation)
-		.map(
-			(type): ProjectLayoutSetting => ({
-				type,
-				layout: cosmetics.value.searchDisplayMode[type] === 'list' ? 'rows' : 'grid',
-			}),
-		)
-
-	layouts.push({
-		type: 'user',
-		layout: cosmetics.value.searchDisplayMode.user === 'list' ? 'rows' : 'grid',
-	})
-
-	return layouts
-})
+const projectLayouts = computed<ProjectLayoutSetting[]>(() =>
+	(['shop', 'user'] as const).map(
+		(type): ProjectLayoutSetting => ({
+			type,
+			layout: cosmetics.value.searchDisplayMode[type] === 'list' ? 'rows' : 'grid',
+		}),
+	),
+)
 
 const sidebarPreferences = computed<SidebarPreferences>(() => ({
 	right_aligned_search: cosmetics.value.rightSearchLayout,
@@ -159,6 +147,7 @@ const layoutPreferenceKeys: Record<
 	resourcepack: 'resourcepacks',
 	modpack: 'modpacks',
 	server: 'servers',
+	shop: 'shops',
 	user: 'users',
 }
 

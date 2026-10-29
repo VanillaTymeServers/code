@@ -16,11 +16,6 @@
 								label: formatMessage(commonSettingsMessages.appearance),
 								icon: PaintbrushIcon,
 							},
-							{
-								link: '/settings/language',
-								label: formatMessage(commonSettingsMessages.language),
-								icon: LanguagesIcon,
-							},
 							flags.developerMode
 								? {
 										link: '/settings/flags',
@@ -38,23 +33,9 @@
 								: null,
 							auth.user
 								? {
-										link: '/settings/social',
-										label: formatMessage(commonSettingsMessages.social),
-										icon: HeartHandshakeIcon,
-									}
-								: null,
-							auth.user
-								? {
 										link: '/settings/account',
 										label: formatMessage(commonSettingsMessages.account),
 										icon: ShieldIcon,
-									}
-								: null,
-							auth.user
-								? {
-										link: '/settings/authorizations',
-										label: formatMessage(commonSettingsMessages.authorizedApps),
-										icon: GridIcon,
 									}
 								: null,
 							auth.user
@@ -64,26 +45,12 @@
 										icon: MonitorSmartphoneIcon,
 									}
 								: null,
-							auth.user
-								? {
-										link: '/settings/billing',
-										label: formatMessage(commonSettingsMessages.billing),
-										icon: CardIcon,
-									}
-								: null,
 							auth.user ? { type: 'heading', label: formatMessage(messages.developer) } : null,
 							auth.user
 								? {
 										link: '/settings/pats',
 										label: formatMessage(commonSettingsMessages.pats),
 										icon: KeyIcon,
-									}
-								: null,
-							auth.user
-								? {
-										link: '/settings/applications',
-										label: formatMessage(commonSettingsMessages.applications),
-										icon: ServerIcon,
 									}
 								: null,
 							isStaff(auth.user) ? { type: 'heading', label: 'Staff' } : null,
@@ -104,15 +71,10 @@
 </template>
 <script setup>
 import {
-	CardIcon,
-	GridIcon,
-	HeartHandshakeIcon,
 	KeyIcon,
-	LanguagesIcon,
 	MonitorSmartphoneIcon,
 	PaintbrushIcon,
 	ScaleIcon,
-	ServerIcon,
 	ShieldIcon,
 	ToggleRightIcon,
 	UserIcon,

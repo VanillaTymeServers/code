@@ -120,15 +120,7 @@
 				<PlusIcon /> {{ formatMessage(messages.create) }}
 			</Button>
 		</div>
-		<p>
-			<IntlFormatted :message-id="messages.description">
-				<template #doc-link="{ children }">
-					<a class="text-link" href="https://docs.modrinth.com">
-						<component :is="() => children" />
-					</a>
-				</template>
-			</IntlFormatted>
-		</p>
+		<p>{{ formatMessage(messages.description) }}</p>
 		<div v-for="pat in displayPats" :key="pat.id" class="universal-card recessed token">
 			<div>
 				<div>
@@ -219,7 +211,6 @@ import {
 	injectModrinthClient,
 	injectNotificationManager,
 	Input,
-	IntlFormatted,
 	NewModal,
 	useFormatDateTime,
 	useRelativeTime,
@@ -293,7 +284,7 @@ const messages = defineMessages({
 	description: {
 		id: 'settings.pats.description',
 		defaultMessage:
-			"PATs can be used to access Modrinth's API. They can be created and revoked at any time. For more information, see <doc-link>Modrinth's API documentation</doc-link>.",
+			'PATs can be used to access the Vanilla Tyme API. They can be created and revoked at any time.',
 	},
 	create: {
 		id: 'settings.pats.action.create',
@@ -333,7 +324,7 @@ definePageMeta({
 })
 
 useHead({
-	title: `${formatMessage(commonSettingsMessages.pats)} - Modrinth`,
+	title: `${formatMessage(commonSettingsMessages.pats)} - Vanilla Tyme`,
 })
 
 const data = useNuxtApp()

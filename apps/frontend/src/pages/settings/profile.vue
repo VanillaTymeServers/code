@@ -72,6 +72,6 @@ function saveProfileSettings(): void {
 }
 
 useHead({
-	title: () => `${formatMessage(commonSettingsMessages.profile)} - Modrinth`,
+	title: () => `${formatMessage(commonSettingsMessages.profile)} - Vanilla Tyme`,
 })
 </script>
