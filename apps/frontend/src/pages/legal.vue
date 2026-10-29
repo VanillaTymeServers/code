@@ -6,14 +6,13 @@
 					{ type: 'heading', label: 'Platform' },
 					{ link: '/legal/terms', label: 'Terms of Use', icon: HeartHandshakeIcon },
 					{ link: '/legal/rules', label: 'Content Rules', icon: ScaleIcon },
-					{ link: '/legal/copyright', label: 'Copyright Policy', icon: CopyrightIcon },
 					{ link: '/legal/security', label: 'Security Notice', icon: ShieldIcon },
 					{ type: 'heading', label: 'Privacy' },
 					{ link: '/legal/privacy', label: 'Privacy Policy', icon: LockIcon },
-					{ link: '/legal/ccpa', label: 'California Privacy Notice', icon: InfoIcon },
-					{ type: 'heading', label: 'Rewards Program' },
-					{ link: '/legal/cmp', label: 'Rewards Program Terms', icon: CurrencyIcon },
-					{ link: '/legal/cmp-info', label: 'Rewards Program Info', icon: InfoIcon },
+					{ type: 'heading', label: 'Server' },
+					{ link: '/rules', label: 'Server Rules', icon: GavelIcon },
+					{ link: '/rules/market', label: 'Market Rules', icon: StoreIcon },
+					{ link: '/rules/discord', label: 'Discord Guidelines', icon: DiscordIcon },
 				]"
 			/>
 		</div>
@@ -25,13 +24,13 @@
 
 <script setup>
 import {
-	CopyrightIcon,
-	CurrencyIcon,
+	DiscordIcon,
+	GavelIcon,
 	HeartHandshakeIcon,
-	InfoIcon,
 	LockIcon,
 	ScaleIcon,
 	ShieldIcon,
+	StoreIcon,
 } from '@modrinth/assets'
 
 import NavStack from '~/components/ui/NavStack.vue'

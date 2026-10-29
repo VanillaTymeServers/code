@@ -1,233 +1,104 @@
 <template>
 	<div class="markdown-body">
 		<h1>Content Rules</h1>
-		<p><em>Last modified: August 13, 2026</em></p>
-
+		<p><em>Last modified: October 28, 2026</em></p>
 		<p>
-			These Content Rules are to be considered part of our
-			<nuxt-link to="/legal/terms">Terms of Use</nuxt-link> and apply to any and all User
-			Contributions, Gaming Content, and use of Interactive Services (collectively, "Content").
-		</p>
-
-		<p>
-			If you find any violations of these Rules on our website, you should make us aware. You may
-			use the Report button on any project, version, or user page, or you may email us at
-			<a href="mailto:support@modrinth.com">support@modrinth.com</a>.
+			These rules apply to everything you publish on the Vanilla Tyme website, such as your profile
+			and your shop listings. They are part of our
+			<nuxt-link to="/legal/terms">Terms of Use</nuxt-link>.
 		</p>
 
 		<h2 id="prohibited-content">1. Prohibited Content</h2>
-
 		<p>
-			Content must in their entirety comply with all applicable federal, state, local, and
-			international laws and regulations. Without limiting the foregoing, Content must not:
+			Anything you put on the website, including your bio, shop names, descriptions and images, must
+			not contain:
 		</p>
 		<ol>
+			<li>anything illegal, or anything that encourages illegal activity;</li>
+			<li>sexual or sexually suggestive content;</li>
 			<li>
-				Contain any material which is defamatory, obscene, indecent, abusive, offensive, harassing,
-				violent, hateful, inflammatory, harmful, damaging, disruptive, contradictory, or otherwise
-				objectionable.
+				hate speech, slurs, or content that attacks people for their race, ethnicity, religion,
+				gender, sexuality, disability or any similar trait;
 			</li>
+			<li>harassment, threats, bullying or targeting of other players or staff;</li>
+			<li>graphic violence, gore, or content that promotes self-harm;</li>
 			<li>
-				Promote sexually explicit or pornographic material, violence, or discrimination based on
-				race, sex, gender, religion, nationality, disability, sexual orientation, or age.
+				anyone's personal information, such as real names, addresses, phone numbers or photos,
+				without their permission;
 			</li>
-			<li>
-				Infringe any patent, trademark, trade secret, copyright, or other intellectual property or
-				other rights of any other person.
-			</li>
-			<li>
-				Violate the legal rights (including the rights of publicity and privacy) of others or
-				contain any material that could give rise to any civil or criminal liability under
-				applicable laws or regulations or that otherwise may be in conflict with our
-				<nuxt-link to="/legal/terms">Terms of Use</nuxt-link> or
-				<nuxt-link to="/legal/privacy">Privacy Policy</nuxt-link>.
-			</li>
-			<li>
-				Promote any illegal activity, or advocate, promote or assist any unlawful act, including
-				real-life drugs or illicit substances.
-			</li>
-			<li>
-				Cause annoyance, inconvenience, or needless anxiety or be likely to upset, embarrass, alarm,
-				annoy, harm, or deceive any other person.
-			</li>
-			<li>Make or share intentionally wrong or misleading claims.</li>
-			<li>
-				Impersonate any person, or misrepresent your identity or affiliation with any person or
-				organization.
-			</li>
-			<li>
-				Give the impression that they emanate from or are endorsed by us or any other person or
-				entity, if this is not the case.
-			</li>
-			<li>Contain an excessive amount of profane language.</li>
-			<li>
-				Be designed to upload any data to a remote server (i.e. one that the user does not directly
-				choose to connect to in-game) without clear disclosure.
-			</li>
-			<li>
-				Bypass restrictions placed by Mojang to prevent users from joining certain in-game servers.
-			</li>
+			<li>spam, scams, phishing, or links to malware or suspicious downloads;</li>
+			<li>content that copies someone else's work without permission;</li>
+			<li>content that pretends to be another player, staff or Vanilla Tyme.</li>
 		</ol>
 
-		<h2 id="clear-and-honest-function">2. Clear and Honest Function</h2>
-
+		<h2 id="clear-and-honest-listings">2. Clear and Honest Listings</h2>
 		<p>
-			Projects, a form of Content, must make a clear and honest attempt to describe their purpose in
-			designated areas on the project page. Necessary information must not be obscured in any way or
-			use confusing language or technical jargon when it is unnecessary.
+			Shop pages must clearly and honestly describe the shop in the places meant for it, such as the
+			name, summary, description and inventory. Important information must not be hidden or written
+			in a confusing way.
 		</p>
-		<p>
-			Important information like content disclosures must always be described accurately and
-			appropriately.
-		</p>
-
 		<h3 id="general-expectations">2.1. General Expectations</h3>
-
-		<p>
-			From a project description, users should be able to understand what the project does and how
-			to use it. Projects must attempt to describe the following three things within their
-			description:
-		</p>
-		<ol type="a">
-			<li>what the project specifically does or adds</li>
-			<li>why someone should want to download the project</li>
-			<li>any other critical information the user must know before downloading</li>
-		</ol>
-
-		<h3 id="accessibility">2.2. Accessibility</h3>
-
-		<p>
-			Project descriptions must be accessible so that they can be read through a variety of mediums.
-			All descriptions must have a plain-text version, though images, videos, and other content can
-			take priority if desired. Headers must not be used for body text.
-		</p>
-
-		<p>
-			Project descriptions must have an English-language translation unless they are exclusively
-			meant for use in a specific language, such as translation packs. Descriptions may provide
-			translations into other languages if desired.
-		</p>
-
-		<h2 id="cheats-and-hacks">3. Cheats and Hacks</h2>
-
-		<p>
-			Projects cannot contain or download "cheats", which we define as a client-side modification
-			that:
-		</p>
+		<p>From your shop's page, players should be able to tell:</p>
 		<ol>
-			<li>is advertised as a "cheat", "hack", or "hacked client"</li>
+			<li>what you sell, and what you charge for it, including the currency you use;</li>
+			<li>where your shop is, so they can find it in game;</li>
+			<li>anything else they need to know before they visit or trade.</li>
+		</ol>
+		<h3 id="readability">2.2. Readability</h3>
+		<ol>
 			<li>
-				gives an unfair advantage in a multiplayer setting over other players that do not have a
-				comparable modification and does not provide a server-side opt-out
+				Descriptions must be readable as text. Images are welcome, but important information must
+				not only be in images.
 			</li>
-			<li>
-				contains any of the following functions without requiring a server-side opt-in:
-				<ol type="a">
-					<li>X-ray or the ability to see through opaque blocks</li>
-					<li>aim bot or aim assist</li>
-					<li>flight, speed, or other movement modifications</li>
-					<li>automatic or assisted PvP combat</li>
-					<li>
-						active client-side hiding of third party modifications that have server-side opt-outs
-					</li>
-					<li>item duplication</li>
-				</ol>
-			</li>
+			<li>Shop names, summaries and descriptions must be in English.</li>
 		</ol>
 
-		<h2 id="copyright-and-legality-of-content">4. Copyright and Reuploads</h2>
+		<h2 id="shop-listings">3. Shop Listings</h2>
+		<ol>
+			<li>Only list a shop you are a member of.</li>
+			<li>
+				Keep your items, prices and coordinates matching your shop in game, and update them when
+				they change.
+			</li>
+			<li>
+				Shop names, descriptions and images must follow
+				<a href="#prohibited-content">section 1, Prohibited Content</a>.
+			</li>
+			<li>Don't advertise other servers or anything outside of Vanilla Tyme.</li>
+			<li>Images should show your own shop or items. AI-generated images are allowed.</li>
+		</ol>
 
+		<h2 id="miscellaneous">4. Miscellaneous</h2>
 		<p>
-			You must own or have the necessary licenses, rights, consents, and permissions to store,
-			share, and distribute the Content that is uploaded under your Modrinth account.
-		</p>
-
-		<p>
-			Content may not be directly reuploaded from another source without explicit permission from
-			the original author. If explicit permission has been granted, or it is a license-abiding
-			"fork", this restriction does not apply. We define "forks" as modified copies of a project
-			which have diverged substantially from the original project.
-		</p>
-
-		<p>
-			When uploading content you have the necessary permissions to distribute but did not author
-			yourself, you must make a meaningful effort to credit each original source properly.
-		</p>
-
-		<h2 id="miscellaneous">5. Miscellaneous</h2>
-
-		<p>
-			There are certain other small aspects to creating projects that all authors should attempt to
-			abide by. These will not be enforced as strictly, but abiding by all will result fewer
-			potential issues during project review, and a better project with more potential reach.
+			These aren't enforced as strictly, but following them makes your shop clearer and easier to
+			find.
 		</p>
 		<ol>
 			<li>
-				All metadata, including license, environment information, tags, content disclosures, etc.
-				are filled out correctly and are consistent with information found elsewhere.
+				Your shop's name is just its name, without extra text like "BEST PRICES!!" or "cheap".
 			</li>
 			<li>
-				Project titles are only the name of the project, without any other unnecessary filler data.
+				The summary is a short sentence about what you sell, without repeating the shop's name.
 			</li>
-			<li>
-				Project summaries contain a small summary of the project without any formatting and without
-				repeating the project title.
-			</li>
-			<li>All external links lead to public resources that are relevant.</li>
-			<li>
-				Gallery images are relevant to the project and do not give a false impression of the
-				project's contents.
-			</li>
-			<li>All dependencies must be specified in the Dependencies section of each version.</li>
-			<li>
-				"Additional files" are only used for special designated purposes, such as source JAR files.
-				In other words, separate versions and/or projects are used where appropriate instead of
-				additional files.
-			</li>
-			<li>
-				Files uploaded to a project should be directly related to the content of the initial project
-				page or a direct linear upgrade. Files with different functionality should not be uploaded
-				as new versions within a single project; instead, they should be published as separate
-				projects.
-			</li>
-			<li>
-				All applicable content disclosures are filled out accurately and maintained with up-to-date
-				information.
-			</li>
+			<li>Categories, shop type and color are set correctly and match your shop.</li>
+			<li>Gallery images are relevant and don't give a wrong impression of what you sell.</li>
+			<li>Any links lead to public pages related to your shop.</li>
+			<li>Sold-out items are removed or updated, so players don't make a trip for nothing.</li>
 		</ol>
 
-		<h2 id="generative-ai">6. Usage of Generative "AI"</h2>
-
-		<p>
-			Projects must be forthright and honest about the usage of generative AI in their production,
-			publication, and within the project itself. Projects cannot be entirely or primarily comprised
-			of content created or derived from generative AI output.
-		</p>
-
-		<h3 id="disclosure-of-ai-generated-content">6.1. Disclosure of AI generated content</h3>
-
-		<p>You must apply the appropriate “Contains AI-generated content” content disclosure when:</p>
-		<ol type="a">
-			<li>a substantial portion of the project's code is a product of AI output.</li>
+		<h2 id="enforcement">5. Enforcement</h2>
+		<ol>
 			<li>
-				the project includes any assets that are primarily or entirely a product of AI output.
-			</li>
-			<li>the project's design or functionality relies on the use of generative AI.</li>
-			<li>
-				any element of the project's page such as description or publishing relies on generative AI.
-			</li>
-		</ol>
-
-		<h3 id="prohibited-usage-of-ai">6.2. Prohibited AI generated content</h3>
-
-		<ol type="a">
-			<li>
-				No images uploaded to a gallery, icon, description, or any other part of a project page may
-				be created or derived from generative AI output. Any such images may be removed.
+				Staff can edit, hide or delist any shop listing or profile content that breaks these rules,
+				including after a report.
 			</li>
 			<li>
-				Projects may not be published publicly if the contents are primarily or entirely a product
-				of AI output.
+				Your website account and your place on the server go together, so breaking these rules can
+				also lead to a warning or a ban in game, depending on how serious it is.
+			</li>
+			<li>
+				To report a shop or profile, open a ticket in our
+				<a href="https://discord.vanillatymeservers.com" target="_blank" rel="noopener">Discord</a>.
 			</li>
 		</ol>
 	</div>
@@ -235,41 +106,12 @@
 
 <script setup>
 const description =
-	'The Content Rules of Modrinth, an open source modding platform focused on Minecraft.'
+	'The rules for content published on the Vanilla Tyme website, such as shop listings and profiles.'
 
 useSeoMeta({
-	title: 'Content Rules - Modrinth',
+	title: 'Content Rules - Vanilla Tyme',
 	description,
 	ogTitle: 'Content Rules',
 	ogDescription: description,
 })
 </script>
-
-<style scoped>
-.markdown-body h2 {
-	@apply mb-3 mt-5 pb-1 pt-0 text-xl font-semibold text-contrast;
-}
-.markdown-body h3 {
-	@apply mb-1 mt-5 p-0 text-lg font-semibold text-contrast;
-}
-
-.markdown-body a {
-	@apply !font-semibold !text-brand !no-underline hover:!text-brand hover:!underline;
-}
-
-.markdown-body p {
-	@apply leading-normal;
-}
-
-.markdown-body ol {
-	@apply mb-3;
-}
-
-.markdown-body ol ol {
-	@apply mb-2;
-}
-
-.markdown-body li {
-	@apply mb-1;
-}
-</style>

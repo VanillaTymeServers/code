@@ -1,63 +1,61 @@
 <template>
 	<div class="markdown-body">
 		<h1>Security Notice</h1>
+		<p><em>Last modified: October 28, 2026</em></p>
+		<p>
+			This notice explains how to report a security vulnerability in the Vanilla Tyme website. If
+			you have found one, we want to hear about it so we can fix it before anyone misuses it.
+		</p>
 
+		<h2>Reporting a vulnerability</h2>
 		<p>
-			This is the security notice for all Modrinth repositories. The notice explains how
-			vulnerabilities should be reported.
-		</p>
-		<h2>Reporting a Vulnerability</h2>
-		<p>
-			If you've found a vulnerability, we would like to know so we can fix it before it is released
-			publicly.
-			<strong>Do not open a GitHub issue for a found vulnerability</strong>.
-		</p>
-		<p>
-			Send details to <a href="mailto:support@modrinth.com">support@modrinth.com</a>
-			including:
+			Open a ticket in our
+			<a href="https://discord.vanillatymeservers.com" target="_blank" rel="noopener">Discord</a>.
+			Tickets are only visible to staff.
+			<strong>Do not post vulnerabilities in public channels</strong>
+			or share them with other players. Please include:
 		</p>
 		<ul>
-			<li>the website, page or repository where the vulnerability can be observed</li>
-			<li>a brief description of the vulnerability</li>
-			<li>
-				optionally the type of vulnerability and any related
-				<a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_2017_Project">
-					OWASP category
-				</a>
-			</li>
-			<li>non-destructive exploitation details</li>
+			<li>the page or feature where the vulnerability can be found;</li>
+			<li>a short description of the vulnerability and what it could let someone do;</li>
+			<li>steps to reproduce it that don't harm other players or their data.</li>
 		</ul>
-		<p>We will do our best to reply as fast as possible.</p>
-		<h2>Scope</h2>
-		<p>The following vulnerabilities <strong>are not</strong> in scope:</p>
+		<p>We will reply as soon as we can and let you know when it is fixed.</p>
+
+		<h2>Testing responsibly</h2>
 		<ul>
+			<li>Only test with your own account. Don't access, change or delete other players' data.</li>
 			<li>
-				volumetric vulnerabilities, for example overwhelming a service with a high volume of
-				requests
+				Stop as soon as you have confirmed the issue, and don't keep any data you came across.
+			</li>
+			<li>Give us a reasonable amount of time to fix the issue before telling anyone else.</li>
+		</ul>
+		<p>
+			If you follow these guidelines and report in good faith, we won't treat your research as a
+			break of our <nuxt-link to="/legal/terms">Terms of Use</nuxt-link> or
+			<nuxt-link to="/legal/rules">Content Rules</nuxt-link>.
+		</p>
+
+		<h2>Out of scope</h2>
+		<ul>
+			<li>attacks that overwhelm the website with traffic, such as denial of service;</li>
+			<li>
+				reports that only say something doesn't follow "best practice", such as missing headers;
 			</li>
 			<li>
-				reports indicating that our services do not fully align with "best practice", for example
-				missing security headers
+				services we don't run, such as Tebex, Discord or Minecraft. Report those to the company that
+				runs them.
 			</li>
 		</ul>
-		<p>If you aren't sure, you can still reach out via email or direct message.</p>
-		<hr />
-		<p>
-			This notice is inspired by the
-			<a href="https://www.pythondiscord.com/pages/security-notice/">
-				Python Discord Security Notice</a
-			>.
-		</p>
-		<p><em>Version 2026-03</em></p>
+		<p>If you're not sure whether something counts, open a ticket and ask.</p>
 	</div>
 </template>
 
 <script setup>
-const description =
-	'The Security Notice of Modrinth, an open source modding platform focused on Minecraft.'
+const description = 'How to report a security vulnerability in the Vanilla Tyme website.'
 
 useSeoMeta({
-	title: 'Security Notice - Modrinth',
+	title: 'Security Notice - Vanilla Tyme',
 	description,
 	ogTitle: 'Security Notice',
 	ogDescription: description,

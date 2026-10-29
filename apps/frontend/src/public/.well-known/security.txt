@@ -1,6 +1,5 @@
-Contact: mailto:support@modrinth.com
-Expires: 2026-12-31T00:00:00.000Z
+Contact: https://discord.vanillatymeservers.com
+Expires: 2027-10-28T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://modrinth.com/.well-known/security.txt
-Policy: https://modrinth.com/legal/security
-Hiring: https://careers.modrinth.com/
+Canonical: https://vanillatymeservers.com/.well-known/security.txt
+Policy: https://vanillatymeservers.com/legal/security
