@@ -1,5 +1,5 @@
 Contact: https://discord.vanillatymeservers.com
 Expires: 2027-10-28T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://vanillatymeservers.com/.well-known/security.txt
-Policy: https://vanillatymeservers.com/legal/security
+Canonical: https://vanillatyme.com/.well-known/security.txt
+Policy: https://vanillatyme.com/legal/security
