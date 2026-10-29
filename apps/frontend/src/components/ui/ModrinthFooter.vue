@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import {
-	BlueskyIcon,
-	DiscordIcon,
-	MastodonIcon,
-	RedditIcon,
-	ToggleRightIcon,
-	TwitterIcon,
-	YouTubeIcon,
-} from '@modrinth/assets'
+import { DiscordIcon, GithubIcon, ToggleRightIcon } from '@modrinth/assets'
 import { Button, ButtonLink } from '@modrinth/ui'
 import {
 	AutoLink,
@@ -28,13 +20,21 @@ const { addNotification } = injectNotificationManager()
 const config = useRuntimeConfig()
 
 const messages = defineMessages({
-	modrinthInformation: {
-		id: 'layout.footer.modrinth-information',
-		defaultMessage: 'Modrinth information',
+	siteInformation: {
+		id: 'layout.footer.site-information',
+		defaultMessage: 'Vanilla Tyme information',
 	},
 	openSource: {
 		id: 'layout.footer.open-source',
-		defaultMessage: 'Modrinth is <github-link>open source</github-link>.',
+		defaultMessage: 'Website is <github-link>open source</github-link>.',
+	},
+	copyright: {
+		id: 'layout.footer.copyright',
+		defaultMessage: '© {year} Vanilla Tyme.',
+	},
+	basedOnModrinth: {
+		id: 'layout.footer.based-on-modrinth',
+		defaultMessage: 'Based on original work © 2020-{year} Rinth, Inc., licensed under AGPL v3.',
 	},
 	legalDisclaimer: {
 		id: 'layout.footer.legal-disclaimer',
@@ -75,34 +75,13 @@ const socialLinks: {
 }[] = [
 	{
 		label: defineMessage({ id: 'layout.footer.social.discord', defaultMessage: 'Discord' }),
-		href: 'https://discord.modrinth.com',
+		href: 'https://discord.vanillatymeservers.com',
 		icon: DiscordIcon,
 	},
 	{
-		label: defineMessage({ id: 'layout.footer.social.bluesky', defaultMessage: 'Bluesky' }),
-		href: 'https://bsky.app/profile/modrinth.com',
-		icon: BlueskyIcon,
-	},
-	{
-		label: defineMessage({ id: 'layout.footer.social.mastodon', defaultMessage: 'Mastodon' }),
-		href: 'https://floss.social/@modrinth',
-		icon: MastodonIcon,
-		rel: 'me',
-	},
-	{
-		label: defineMessage({ id: 'layout.footer.social.x', defaultMessage: 'X' }),
-		href: 'https://x.com/modrinth',
-		icon: TwitterIcon,
-	},
-	{
-		label: defineMessage({ id: 'layout.footer.social.youtube', defaultMessage: 'YouTube' }),
-		href: 'https://www.youtube.com/@modrinth',
-		icon: YouTubeIcon,
-	},
-	{
-		label: defineMessage({ id: 'layout.footer.social.reddit', defaultMessage: 'Reddit' }),
-		href: 'https://www.reddit.com/r/Modrinth',
-		icon: RedditIcon,
+		label: defineMessage({ id: 'layout.footer.social.github', defaultMessage: 'GitHub' }),
+		href: 'https://github.com/VanillaTymeServers',
+		icon: GithubIcon,
 	},
 ]
 
@@ -124,72 +103,40 @@ const footerLinks: {
 				href: '/news/changelog',
 				label: defineMessage({ id: 'layout.footer.about.changelog', defaultMessage: 'Changelog' }),
 			},
+		],
+	},
+	{
+		label: defineMessage({ id: 'layout.footer.server', defaultMessage: 'Server' }),
+		links: [
 			{
-				href: 'https://status.modrinth.com',
-				label: defineMessage({ id: 'layout.footer.about.status', defaultMessage: 'Status' }),
+				href: '/rules',
+				label: defineMessage({ id: 'layout.footer.server.rules', defaultMessage: 'Rules' }),
 			},
 			{
-				href: 'https://careers.modrinth.com',
-				label: defineMessage({ id: 'layout.footer.about.careers', defaultMessage: 'Careers' }),
+				href: '/vote',
+				label: defineMessage({ id: 'layout.footer.server.vote', defaultMessage: 'Vote' }),
 			},
 			{
-				href: '/legal/cmp-info',
+				href: '/downloads',
 				label: defineMessage({
-					id: 'layout.footer.about.rewards-program',
-					defaultMessage: 'Rewards Program',
+					id: 'layout.footer.server.map-downloads',
+					defaultMessage: 'Map Downloads',
 				}),
+			},
+			{
+				href: '/store',
+				label: defineMessage({ id: 'layout.footer.server.store', defaultMessage: 'Store' }),
 			},
 		],
 	},
 	{
-		label: defineMessage({ id: 'layout.footer.products', defaultMessage: 'Products' }),
+		label: defineMessage({ id: 'layout.footer.shops', defaultMessage: 'Shops' }),
 		links: [
 			{
-				href: '/plus',
-				label: defineMessage({ id: 'layout.footer.products.plus', defaultMessage: 'Modrinth+' }),
-			},
-			{
-				href: '/app',
-				label: defineMessage({ id: 'layout.footer.products.app', defaultMessage: 'Modrinth App' }),
-			},
-			{
-				href: '/hosting',
+				href: '/discover/shops',
 				label: defineMessage({
-					id: 'layout.footer.products.servers',
-					defaultMessage: 'Modrinth Hosting',
-				}),
-			},
-		],
-	},
-	{
-		label: defineMessage({ id: 'layout.footer.resources', defaultMessage: 'Resources' }),
-		links: [
-			{
-				href: 'https://support.modrinth.com',
-				label: defineMessage({
-					id: 'layout.footer.resources.help-center',
-					defaultMessage: 'Help Center',
-				}),
-			},
-			{
-				href: 'https://translate.modrinth.com',
-				label: defineMessage({
-					id: 'layout.footer.resources.translate',
-					defaultMessage: 'Translate',
-				}),
-			},
-			{
-				href: 'https://github.com/modrinth/code/issues',
-				label: defineMessage({
-					id: 'layout.footer.resources.report-issues',
-					defaultMessage: 'Report issues',
-				}),
-			},
-			{
-				href: 'https://docs.modrinth.com/api/',
-				label: defineMessage({
-					id: 'layout.footer.resources.api-docs',
-					defaultMessage: 'API documentation',
+					id: 'layout.footer.shops.browse',
+					defaultMessage: 'Browse shops',
 				}),
 			},
 		],
@@ -222,13 +169,6 @@ const footerLinks: {
 					defaultMessage: 'Security Notice',
 				}),
 			},
-			{
-				href: '/legal/copyright',
-				label: defineMessage({
-					id: 'layout.footer.legal.copyright-policy',
-					defaultMessage: 'Copyright Policy and DMCA',
-				}),
-			},
 		],
 	},
 ]
@@ -236,6 +176,7 @@ const footerLinks: {
 const developerModeCounter = ref(0)
 
 const state = useGeneratedState()
+const buildYear = computed(() => state.value.buildYear ?? new Date().getFullYear())
 
 function developerModeIncrement() {
 	developerModeCounter.value++
@@ -269,13 +210,13 @@ function developerModeIncrement() {
 				<div
 					class="flex flex-col items-center gap-3 md:items-start"
 					role="region"
-					:aria-label="formatMessage(messages.modrinthInformation)"
+					:aria-label="formatMessage(messages.siteInformation)"
 				>
 					<div class="flex items-center gap-2">
 						<Button
 							type="quiet"
 							interaction="none"
-							aria-label="Modrinth"
+							aria-label="Vanilla Tyme"
 							class="!h-auto !p-0"
 							@click="developerModeIncrement()"
 						>
@@ -313,7 +254,7 @@ function developerModeIncrement() {
 							<IntlFormatted :message-id="messages.openSource">
 								<template #github-link="{ children }">
 									<a
-										href="https://github.com/modrinth/code"
+										href="https://github.com/VanillaTymeServers/code"
 										class="text-brand hover:underline"
 										target="_blank"
 										rel="noopener"
@@ -323,7 +264,7 @@ function developerModeIncrement() {
 								</template>
 							</IntlFormatted>
 						</p>
-						<p class="m-0">© {{ state.buildYear ?? '2025' }} Rinth, Inc.</p>
+						<p class="m-0">{{ formatMessage(messages.copyright, { year: buildYear }) }}</p>
 					</div>
 				</div>
 				<div class="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:contents">
@@ -377,8 +318,11 @@ function developerModeIncrement() {
 					{{ config.public.hash }}
 				</AutoLink>
 			</p>
-			<div class="flex justify-center text-center text-xs font-medium text-secondary opacity-50">
-				{{ formatMessage(messages.legalDisclaimer) }}
+			<div
+				class="flex flex-col items-center gap-1 text-center text-xs font-medium text-secondary opacity-50"
+			>
+				<span>{{ formatMessage(messages.basedOnModrinth, { year: buildYear }) }}</span>
+				<span>{{ formatMessage(messages.legalDisclaimer) }}</span>
 			</div>
 		</div>
 	</footer>
