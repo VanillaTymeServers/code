@@ -278,144 +278,6 @@
   "analytics.stat.revenue": {
     "message": "รายได้"
   },
-  "app-marketing.download.description": {
-    "message": "แอปเดสก์ท็อปของเราพร้อมใช้งานบนทุกแพลตฟอร์ม เลือกเวอร์ชันที่คุณต้องการได้เลย"
-  },
-  "app-marketing.download.download-appimage": {
-    "message": "โหลดไฟล์ AppImage"
-  },
-  "app-marketing.download.download-beta": {
-    "message": "โหลดตัวเบต้า"
-  },
-  "app-marketing.download.download-deb": {
-    "message": "โหลดไฟล์ DEB"
-  },
-  "app-marketing.download.download-rpm": {
-    "message": "โหลดไฟล์ RPM"
-  },
-  "app-marketing.download.flathub": {
-    "message": "เอามันบน Flathub"
-  },
-  "app-marketing.download.linux": {
-    "message": "Linux"
-  },
-  "app-marketing.download.linux-disclaimer": {
-    "message": "เวอร์ชั่น Linux แอพ Modrinth <issues-link> อาจมีปัญหา</issues-link> ในบางเครื่องและการตั้งค่าบางอย่าง ถ้าแอพ Modrinth ไม่เสถียรในเครื่องของคุณ เราขอให้คุณลองใช้แอพอื่นๆเช่น <prism-link>Prism Launcher</prism-link> เพื่อติดตั้งเนื้อหาของ Modrinth"
-  },
-  "app-marketing.download.mac": {
-    "message": "Mac"
-  },
-  "app-marketing.download.options-title": {
-    "message": "ตัวเลือกการดาวน์โหลด"
-  },
-  "app-marketing.download.terms": {
-    "message": "การดาวน์โหลด Modrinth App ถือว่าคุณยอมรับ <terms-link>ข้อกำหนดการใช้งาน</terms-link> และ <privacy-link>นโยบายความเป็นส่วนตัว</privacy-link> ของเรา"
-  },
-  "app-marketing.download.title": {
-    "message": "ดาวน์โหลดแอปพลิเคชัน Modrinth (Beta)"
-  },
-  "app-marketing.download.windows": {
-    "message": "Windows"
-  },
-  "app-marketing.features.importing.gdlauncher-alt": {
-    "message": "GDLauncher"
-  },
-  "app-marketing.features.importing.multimc-alt": {
-    "message": "MultiMC"
-  },
-  "app-marketing.features.mod-management.actions": {
-    "message": "การกระทำ"
-  },
-  "app-marketing.features.mod-management.byAuthor": {
-    "message": "โดย {author}"
-  },
-  "app-marketing.features.mod-management.description": {
-    "message": "Modrinth ช่วยให้การจัดการมอดทั้งหมดของคุณในที่เดียวเป็นเรื่องง่าย คุณสามารถติดตั้ง ถอนการติดตั้ง และอัปเดตมอดได้ด้วยการคลิกเพียงครั้งเดียว!"
-  },
-  "app-marketing.features.mod-management.installed-mods": {
-    "message": "ม็อดที่ติดตั้งแล้ว"
-  },
-  "app-marketing.features.mod-management.name": {
-    "message": "ชื่อ"
-  },
-  "app-marketing.features.mod-management.search-mods": {
-    "message": "ค้นหามอด"
-  },
-  "app-marketing.features.mod-management.title": {
-    "message": "การจัดการมอด"
-  },
-  "app-marketing.features.mod-management.version": {
-    "message": "เวอร์ชัน"
-  },
-  "app-marketing.features.open-source.title": {
-    "message": "โอเพนซอร์ส"
-  },
-  "app-marketing.features.performance.activity-monitor": {
-    "message": "ตัวตรวจสอบกิจกรรม"
-  },
-  "app-marketing.features.performance.cpu-percent": {
-    "message": "% CPU"
-  },
-  "app-marketing.features.performance.discord": {
-    "message": "Discord"
-  },
-  "app-marketing.features.performance.google-chrome": {
-    "message": "Google Chrome"
-  },
-  "app-marketing.features.performance.modrinth-app": {
-    "message": "แอป Modrinth"
-  },
-  "app-marketing.features.performance.one-billion-percent": {
-    "message": "1 พันล้าน %"
-  },
-  "app-marketing.features.performance.ram": {
-    "message": "RAM"
-  },
-  "app-marketing.features.performance.small": {
-    "message": "เล็ก"
-  },
-  "app-marketing.features.performance.title": {
-    "message": "มีประสิทธิภาพ"
-  },
-  "app-marketing.features.play.description": {
-    "message": "ดาวน์โหลดและเล่นม็อดกับม็อดแพ็กที่คุณชื่นชอบได้ง่าย ๆ ผ่านแอป Modrinth"
-  },
-  "app-marketing.features.play.title": {
-    "message": "เล่นกับม็อดที่คุณชอบ"
-  },
-  "app-marketing.features.sharing.modpack": {
-    "message": "ม็อดแพ็ก"
-  },
-  "app-marketing.features.sharing.share-button": {
-    "message": "แชร์"
-  },
-  "app-marketing.features.sharing.title": {
-    "message": "แชร์ม็อดแพ็ค"
-  },
-  "app-marketing.features.unlike-any-launcher": {
-    "message": "Launcher ที่ไม่ซ้ำใคร"
-  },
-  "app-marketing.features.youve-used-before": {
-    "message": "คุณใช้มันมาก่อน"
-  },
-  "app-marketing.hero.download-button": {
-    "message": "ดาวน์โหลดแอป Modrinth"
-  },
-  "app-marketing.hero.download-modrinth-app": {
-    "message": "ดาวน์โหลดแอป Modrinth"
-  },
-  "app-marketing.hero.download-modrinth-app-for-os": {
-    "message": "ดาวน์โหลดแอป Modrinth สำหรับ {os}"
-  },
-  "app-marketing.hero.more-download-options": {
-    "message": "ตัวเลือกการดาวน์โหลดเพิ่มเติม"
-  },
-  "app-marketing.hide-other-packages": {
-    "message": "ซ่อนแพ็คเกจอื่นๆ"
-  },
-  "app-marketing.show-other-packages": {
-    "message": "แสดงแพ็คเกจอื่นๆ"
-  },
   "auth.authorize.action.authorize": {
     "message": "อนุญาต"
   },
@@ -647,20 +509,8 @@
   "error.user.404.title": {
     "message": "ไม่พบผู้ใช้"
   },
-  "hosting-marketing.know-what-you-need": {
-    "message": ""
-  },
   "hosting-marketing.medal.learn-more": {
     "message": "เรียนรู้เพิ่มเติม"
-  },
-  "hosting-marketing.server-for-everyone": {
-    "message": ""
-  },
-  "hosting-marketing.why.all-on-modrinth": {
-    "message": ""
-  },
-  "hosting-marketing.why.all-on-modrinth.description": {
-    "message": ""
   },
   "landing.button.discover-mods": {
     "message": "สำรวจและค้นหาม็อด"
@@ -730,11 +580,5 @@
   },
   "landing.notifications.received-time": {
     "message": ""
-  },
-  "settings.applications.button.upload-icon": {
-    "message": "อัปโหลดไอคอน"
-  },
-  "settings.applications.field.icon": {
-    "message": "ไอคอน"
   }
 }

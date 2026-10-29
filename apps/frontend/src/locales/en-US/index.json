@@ -527,195 +527,6 @@
   "analytics.value.unmonetized": {
     "message": "Unmonetized"
   },
-  "app-marketing.download.description": {
-    "message": "Our desktop app is available across all platforms, choose your desired version."
-  },
-  "app-marketing.download.download-appimage": {
-    "message": "Download the AppImage"
-  },
-  "app-marketing.download.download-beta": {
-    "message": "Download the beta"
-  },
-  "app-marketing.download.download-deb": {
-    "message": "Download the DEB"
-  },
-  "app-marketing.download.download-rpm": {
-    "message": "Download the RPM"
-  },
-  "app-marketing.download.flathub": {
-    "message": "Get it on Flathub"
-  },
-  "app-marketing.download.linux": {
-    "message": "Linux"
-  },
-  "app-marketing.download.linux-disclaimer": {
-    "message": "The Linux versions of Modrinth App are <issues-link>known to have issues</issues-link> on certain systems and configurations. If Modrinth App is unstable on your system, we encourage you to try other apps like <prism-link>Prism Launcher</prism-link> to easily install Modrinth content."
-  },
-  "app-marketing.download.mac": {
-    "message": "Mac"
-  },
-  "app-marketing.download.options-title": {
-    "message": "Download options"
-  },
-  "app-marketing.download.terms": {
-    "message": "By downloading Modrinth App, you agree to our <terms-link>Terms</terms-link> and <privacy-link>Privacy Policy</privacy-link>."
-  },
-  "app-marketing.download.title": {
-    "message": "Download Modrinth App (Beta)"
-  },
-  "app-marketing.download.windows": {
-    "message": "Windows"
-  },
-  "app-marketing.features.importing.description": {
-    "message": "Import all your existing game instances from the launcher you were using before, and get started with Modrinth App in seconds!"
-  },
-  "app-marketing.features.importing.gdlauncher-alt": {
-    "message": "GDLauncher"
-  },
-  "app-marketing.features.importing.multimc-alt": {
-    "message": "MultiMC"
-  },
-  "app-marketing.features.importing.title": {
-    "message": "Instance importing"
-  },
-  "app-marketing.features.manage-skins.description": {
-    "message": "Switch between all of your Minecraft skins right from the app."
-  },
-  "app-marketing.features.manage-skins.title": {
-    "message": "Skin selector"
-  },
-  "app-marketing.features.mod-management.actions": {
-    "message": "Actions"
-  },
-  "app-marketing.features.mod-management.byAuthor": {
-    "message": "by {author}"
-  },
-  "app-marketing.features.mod-management.description": {
-    "message": "Modrinth makes it easy to manage all your mods in one place. You can install, uninstall, and update mods with a single click."
-  },
-  "app-marketing.features.mod-management.installed-mods": {
-    "message": "Installed mods"
-  },
-  "app-marketing.features.mod-management.name": {
-    "message": "Name"
-  },
-  "app-marketing.features.mod-management.search-mods": {
-    "message": "Search mods"
-  },
-  "app-marketing.features.mod-management.title": {
-    "message": "Mod management"
-  },
-  "app-marketing.features.mod-management.version": {
-    "message": "Version"
-  },
-  "app-marketing.features.open-source.description": {
-    "message": "Modrinth App is fully open source. You can view the source code on our <github-link>GitHub</github-link>!"
-  },
-  "app-marketing.features.open-source.title": {
-    "message": "Open source"
-  },
-  "app-marketing.features.performance.activity-monitor": {
-    "message": "Activity monitor"
-  },
-  "app-marketing.features.performance.cpu-percent": {
-    "message": "% CPU"
-  },
-  "app-marketing.features.performance.description": {
-    "message": "Modrinth App performs better than many of the leading mod managers!"
-  },
-  "app-marketing.features.performance.discord": {
-    "message": "Discord"
-  },
-  "app-marketing.features.performance.good-performance": {
-    "message": "Good performance"
-  },
-  "app-marketing.features.performance.google-chrome": {
-    "message": "Google Chrome"
-  },
-  "app-marketing.features.performance.modrinth-app": {
-    "message": "Modrinth App"
-  },
-  "app-marketing.features.performance.one-billion-percent": {
-    "message": "1 billion %"
-  },
-  "app-marketing.features.performance.process-name": {
-    "message": "Process name"
-  },
-  "app-marketing.features.performance.ram": {
-    "message": "RAM"
-  },
-  "app-marketing.features.performance.small": {
-    "message": "Small"
-  },
-  "app-marketing.features.performance.title": {
-    "message": "Performant"
-  },
-  "app-marketing.features.play.description": {
-    "message": "Use Modrinth App to download and play with your favorite mods and modpacks."
-  },
-  "app-marketing.features.play.title": {
-    "message": "Play with your favorite mods"
-  },
-  "app-marketing.features.settings-sync.description": {
-    "message": "Use the same options, resource packs, and more across all your instances."
-  },
-  "app-marketing.features.settings-sync.title": {
-    "message": "Sync your settings"
-  },
-  "app-marketing.features.sharing.description": {
-    "message": "Build, share, and play modpacks with any of the thousands of mods and modpacks hosted here on Modrinth."
-  },
-  "app-marketing.features.sharing.modpack": {
-    "message": "Modpack"
-  },
-  "app-marketing.features.sharing.share-button": {
-    "message": "Share"
-  },
-  "app-marketing.features.sharing.title": {
-    "message": "Share modpacks"
-  },
-  "app-marketing.features.unlike-any-launcher": {
-    "message": "Unlike any launcher"
-  },
-  "app-marketing.features.website.description": {
-    "message": "Modrinth App is fully integrated with the website, so you can access all your favorite projects from the app!"
-  },
-  "app-marketing.features.website.title": {
-    "message": "Website integration"
-  },
-  "app-marketing.features.youve-used-before": {
-    "message": "you've used before"
-  },
-  "app-marketing.hero.app-screenshot-alt": {
-    "message": "Screenshot of Modrinth App with a Cobblemon instance opened to the 'Content' page."
-  },
-  "app-marketing.hero.description": {
-    "message": "Modrinth App is a unique, open source launcher that allows you to play your favorite mods, and keep them up to date, all in one neat little package."
-  },
-  "app-marketing.hero.download-button": {
-    "message": "Download Modrinth App"
-  },
-  "app-marketing.hero.download-modrinth-app": {
-    "message": "Download Modrinth App"
-  },
-  "app-marketing.hero.download-modrinth-app-for-os": {
-    "message": "Download Modrinth App for {os}"
-  },
-  "app-marketing.hero.minecraft-screenshot-alt": {
-    "message": "Screenshot of the Cobblemon instance's main menu screen."
-  },
-  "app-marketing.hero.more-download-options": {
-    "message": "More Download Options"
-  },
-  "app-marketing.hide-other-packages": {
-    "message": "Hide other packages"
-  },
-  "app-marketing.not-recommended": {
-    "message": "We don't recommend you use these unless you know what you're doing."
-  },
-  "app-marketing.show-other-packages": {
-    "message": "Show other packages"
-  },
   "auth.authorize.action.authorize": {
     "message": "Authorize"
   },
@@ -1902,10 +1713,10 @@
     "message": "Server projects do not support bulk editing"
   },
   "dashboard.projects.empty": {
-    "message": "You don't have any projects yet. Click the green button above to begin."
+    "message": "You don't have any shops yet. Click the green button above to begin."
   },
   "dashboard.projects.head-title": {
-    "message": "Projects"
+    "message": "Shops"
   },
   "dashboard.projects.links.and-more": {
     "message": "and {count} more..."
@@ -1932,7 +1743,7 @@
     "message": "Edit links"
   },
   "dashboard.projects.links.issue-tracker.description": {
-    "message": "A place for users to report bugs, issues, and concerns about your project."
+    "message": "A place for users to report bugs, issues, and concerns about your shop."
   },
   "dashboard.projects.links.issue-tracker.label": {
     "message": "Issue tracker"
@@ -1947,37 +1758,37 @@
     "message": "Enter a valid URL"
   },
   "dashboard.projects.links.show-all-projects": {
-    "message": "Show all projects"
+    "message": "Show all shops"
   },
   "dashboard.projects.links.source-code.description": {
-    "message": "A page/repository containing the source code for your project"
+    "message": "A page/repository containing the source code for your shop"
   },
   "dashboard.projects.links.source-code.label": {
     "message": "Source code"
   },
   "dashboard.projects.links.wiki-page.description": {
-    "message": "A page containing information, documentation, and help for the project"
+    "message": "A page containing information, documentation, and help for the shop"
   },
   "dashboard.projects.links.wiki-page.label": {
     "message": "Wiki page"
   },
   "dashboard.projects.notification.bulk-edit-success": {
-    "message": "Bulk edited selected project's links."
+    "message": "Bulk edited the selected shops' links."
   },
   "dashboard.projects.project.icon-alt": {
     "message": "Icon for {title}"
   },
   "dashboard.projects.project.moderator-message-aria": {
-    "message": "Project has a message from the moderators. View the project to see more."
+    "message": "Shop has a message from the moderators. View the shop to see more."
   },
   "dashboard.projects.project.review-environment-metadata": {
     "message": "Please review environment metadata"
   },
   "dashboard.projects.selection-bar.aria-label": {
-    "message": "Selected projects actions"
+    "message": "Selected shops actions"
   },
   "dashboard.projects.selection-bar.selected-count": {
-    "message": "{count, plural, one {# project selected} other {# projects selected}}"
+    "message": "{count, plural, one {# shop selected} other {# shops selected}}"
   },
   "dashboard.projects.table.id": {
     "message": "ID"
@@ -1986,7 +1797,7 @@
     "message": "Name"
   },
   "dashboard.projects.table.select-all-bulk-editable": {
-    "message": "Select all projects that support bulk editing"
+    "message": "Select all shops that support bulk editing"
   },
   "dashboard.projects.table.status": {
     "message": "Status"
@@ -2097,7 +1908,7 @@
     "message": "Overview"
   },
   "dashboard.sidebar.label.projects": {
-    "message": "Projects"
+    "message": "Shops"
   },
   "dashboard.sidebar.label.revenue": {
     "message": "Revenue"
@@ -2402,162 +2213,6 @@
   "error.user.404.title": {
     "message": "User not found"
   },
-  "frog": {
-    "message": "You've been frogged! 🐸"
-  },
-  "frog.altText": {
-    "message": "A photorealistic painting of a frog labyrinth"
-  },
-  "frog.title": {
-    "message": "Frog"
-  },
-  "hosting-marketing.available-locations": {
-    "message": "Available in North America, Europe, Southeast Asia, and Australia for wide coverage."
-  },
-  "hosting-marketing.billing.monthly": {
-    "message": "Pay monthly"
-  },
-  "hosting-marketing.billing.quarterly": {
-    "message": "Pay quarterly"
-  },
-  "hosting-marketing.billing.save-with-quarterly": {
-    "message": "Save 16% with quarterly billing!"
-  },
-  "hosting-marketing.billing.starting-at": {
-    "message": "Starting at {price} / month"
-  },
-  "hosting-marketing.billing.yearly": {
-    "message": "Pay yearly"
-  },
-  "hosting-marketing.faq.burst-threads": {
-    "message": "How do CPU burst threads work?"
-  },
-  "hosting-marketing.faq.burst-threads.answer": {
-    "message": "When your server is under heavy load, we temporarily give it access to additional CPU threads to help mitigate lag spikes and instability. This helps prevent the TPS from going below 20, ensuring the smoothest experience possible. Since those extra CPU threads are only shortly available during high load periods, they might not show up in Spark reports or other profiling tools."
-  },
-  "hosting-marketing.faq.cpu-kind": {
-    "message": "What kind of CPUs do Modrinth Hosting servers run on?"
-  },
-  "hosting-marketing.faq.cpu-kind.answer": {
-    "message": "Modrinth Hosting servers are powered by AMD Ryzen 7950X or 9950X equivalent, paired with DDR5 memory."
-  },
-  "hosting-marketing.faq.currency": {
-    "message": "What currency are the prices in?"
-  },
-  "hosting-marketing.faq.currency.answer": {
-    "message": "All prices are listed in United States Dollars (USD)."
-  },
-  "hosting-marketing.faq.ddos-protection": {
-    "message": "Do Modrinth Hosting servers have DDoS protection?"
-  },
-  "hosting-marketing.faq.ddos-protection.answer": {
-    "message": "Yes. All Modrinth Hosting servers come with DDoS protection, with up to 17 Tbps capacity in some locations."
-  },
-  "hosting-marketing.faq.heading": {
-    "message": "Frequently Asked Questions"
-  },
-  "hosting-marketing.faq.how-fast": {
-    "message": "How fast are Modrinth Hosting servers?"
-  },
-  "hosting-marketing.faq.how-fast.answer.one": {
-    "message": "Modrinth Hosting servers are hosted on very modern high-performance hardware, but it's tough to say how exactly that will translate into how fast your server will run because there are so many factors that affect it, such as the mods, data packs, or plugins you're running on your server, and even user behavior."
-  },
-  "hosting-marketing.faq.how-fast.answer.two": {
-    "message": "Most performance issues that arise tend to be the fault of an unoptimized modpack, mod, data pack, or plugin that causes the server to lag. Since our servers are very high-end, you shouldn't run into much trouble as long as you pick an appropriate plan for the content you're running on the server."
-  },
-  "hosting-marketing.faq.increase-storage": {
-    "message": "Can I increase the storage on my server?"
-  },
-  "hosting-marketing.faq.increase-storage.answer": {
-    "message": "Yes, storage can be increased on your server at no additional cost. If you need more storage, reach out to Modrinth Support."
-  },
-  "hosting-marketing.faq.location": {
-    "message": "Where are Modrinth Hosting servers located? Can I choose a region?"
-  },
-  "hosting-marketing.faq.location.answer": {
-    "message": "We have servers available across North America, Europe, Southeast Asia, and Australia at the moment that you can choose upon purchase. More regions to come in the future! If you'd like to switch your region, please contact support."
-  },
-  "hosting-marketing.faq.versions-loaders": {
-    "message": "What Minecraft versions and loaders can be used?"
-  },
-  "hosting-marketing.faq.versions-loaders.answer.one": {
-    "message": "Modrinth Hosting servers can run any version of Minecraft: Java Edition going all the way back to version 1.2.5, including snapshot versions."
-  },
-  "hosting-marketing.faq.versions-loaders.answer.two": {
-    "message": "We also support a wide range of mod and plugin loaders, including Fabric, Quilt, Forge, and NeoForge for mods, as well as Paper and Purpur for plugins. Availability depends on whether the mod or plugin loader supports the selected Minecraft version."
-  },
-  "hosting-marketing.get-started": {
-    "message": "Get started"
-  },
-  "hosting-marketing.hero.button.manage-your-servers": {
-    "message": "Manage your servers"
-  },
-  "hosting-marketing.hero.button.start-a-new-server": {
-    "message": "Start a new server"
-  },
-  "hosting-marketing.hero.button.start-your-server": {
-    "message": "Start your server"
-  },
-  "hosting-marketing.hero.host-with-modrinth": {
-    "message": "Host your next server with Modrinth Hosting"
-  },
-  "hosting-marketing.hero.hosting-description": {
-    "message": "Modrinth Hosting is the easiest way to host your own Minecraft: Java Edition server. Seamlessly install and play your favorite mods and modpacks, all within the Modrinth platform."
-  },
-  "hosting-marketing.included.advanced-networking": {
-    "message": "Advanced networking management"
-  },
-  "hosting-marketing.included.advanced-networking.description": {
-    "message": "Add your own domain to your server, reserve up to 15 ports for mods that require them, and more."
-  },
-  "hosting-marketing.included.backups-included": {
-    "message": "Backups included"
-  },
-  "hosting-marketing.included.backups-included.description": {
-    "message": "Every server comes with 15 backups stored securely off-site."
-  },
-  "hosting-marketing.included.custom-url": {
-    "message": "Custom URL"
-  },
-  "hosting-marketing.included.custom-url.description": {
-    "message": "Share your server with a custom <contrast>modrinth.gg</contrast> URL."
-  },
-  "hosting-marketing.included.description": {
-    "message": "Included with every server is a suite of features designed to provide a hosting experience that only Modrinth can offer."
-  },
-  "hosting-marketing.included.file-manager": {
-    "message": "Easy to use file manager"
-  },
-  "hosting-marketing.included.file-manager.description": {
-    "message": "Search, manage, edit, and upload files directly to your server with ease."
-  },
-  "hosting-marketing.included.heading": {
-    "message": "Comes with all the features you need."
-  },
-  "hosting-marketing.included.help": {
-    "message": "Help when you need it"
-  },
-  "hosting-marketing.included.help.description": {
-    "message": "Reach out to the Modrinth team for help with your server at any time."
-  },
-  "hosting-marketing.included.powerful-console": {
-    "message": "A powerful console, server properties manager, and more"
-  },
-  "hosting-marketing.included.powerful-console.description": {
-    "message": "Modrinth Hosting comes with powerful tools to manage your server."
-  },
-  "hosting-marketing.included.sftp-access": {
-    "message": "SFTP access"
-  },
-  "hosting-marketing.included.sftp-access.description": {
-    "message": "Access your server's files directly with SFTP built into Modrinth Hosting."
-  },
-  "hosting-marketing.included.with-your-server": {
-    "message": "Included with your server"
-  },
-  "hosting-marketing.know-what-you-need": {
-    "message": "Know exactly what you need?"
-  },
   "hosting-marketing.medal.info": {
     "message": "Try a free <orange>3 GB server</orange> for 5 days powered by <orange>Medal</orange>"
   },
@@ -2566,69 +2221,6 @@
   },
   "hosting-marketing.medal.text-secondary": {
     "message": "Limited-time offer. No credit card required. Available for US servers."
-  },
-  "hosting-marketing.notification.error-fetching-payment-data-title": {
-    "message": "Error fetching payment data"
-  },
-  "hosting-marketing.notification.invalid-product-text": {
-    "message": "The selected product was found but lacks necessary data. Please contact support."
-  },
-  "hosting-marketing.notification.invalid-product-title": {
-    "message": "Invalid product"
-  },
-  "hosting-marketing.notification.server-capacity-full-text": {
-    "message": "We are currently at capacity. Please try again later."
-  },
-  "hosting-marketing.notification.server-capacity-full-title": {
-    "message": "Server Capacity Full"
-  },
-  "hosting-marketing.notification.unexpected-error-text": {
-    "message": "An unexpected error occurred"
-  },
-  "hosting-marketing.pick-customized-plan": {
-    "message": "Pick a customized plan with just the specs you need."
-  },
-  "hosting-marketing.server-for-everyone": {
-    "message": "There's a server for everyone"
-  },
-  "hosting-marketing.why.all-on-modrinth": {
-    "message": "Manage it all on Modrinth"
-  },
-  "hosting-marketing.why.all-on-modrinth.description": {
-    "message": "Your server, mods, players, and more are all on Modrinth. No need to switch between platforms."
-  },
-  "hosting-marketing.why.consistently-fast": {
-    "message": "Consistently fast"
-  },
-  "hosting-marketing.why.consistently-fast.description": {
-    "message": "Our infrastructure is never overloaded, meaning each server hosted with Modrinth always runs at its full performance."
-  },
-  "hosting-marketing.why.description": {
-    "message": "Choose from the thousands of modpacks on Modrinth or create your own. Invite your friends when you're ready to play."
-  },
-  "hosting-marketing.why.heading": {
-    "message": "Find a modpack. Now it's a server."
-  },
-  "hosting-marketing.why.modern-reliable-hosting": {
-    "message": "Experience modern, reliable hosting"
-  },
-  "hosting-marketing.why.modern-reliable-hosting.description": {
-    "message": "Modrinth Hosting servers are hosted on <contrast>high-performance AMD CPUs with DDR5 RAM</contrast>, running on custom-built software to ensure your server performs smoothly."
-  },
-  "hosting-marketing.why.where-mods-are": {
-    "message": "Play where your mods are"
-  },
-  "hosting-marketing.why.where-mods-are.description": {
-    "message": "Modrinth Hosting seamlessly integrates the mod and modpack installation process into your server."
-  },
-  "hosting-marketing.why.why-modrinth-hosting": {
-    "message": "Why Modrinth Hosting?"
-  },
-  "hosting-marketing.why.your-favorite-mods": {
-    "message": "All your favorite mods"
-  },
-  "hosting-marketing.why.your-favorite-mods.description": {
-    "message": "Choose between Vanilla, Fabric, Forge, Quilt and NeoForge. If it's on Modrinth, it can run on your server."
   },
   "hosting.plan.out-of-stock": {
     "message": "Out of stock"
@@ -3003,7 +2595,7 @@
     "message": "Profile"
   },
   "layout.nav.projects": {
-    "message": "Projects"
+    "message": "My shops"
   },
   "layout.nav.remove-account": {
     "message": "Remove account"
@@ -5834,9 +5426,6 @@
   "search.filter.locked.server.sync": {
     "message": "Sync with server"
   },
-  "servers.manage.content.title": {
-    "message": "Content - {serverName} - Modrinth"
-  },
   "servers.notice.actions": {
     "message": "Actions"
   },
@@ -5892,13 +5481,13 @@
     "message": "Generating export..."
   },
   "settings.account.data-export.description": {
-    "message": "Request a copy of all your personal data you have uploaded to Modrinth. This may take several minutes to complete."
+    "message": "Request a copy of all your personal data you have uploaded to Vanilla Tyme. This may take several minutes to complete."
   },
   "settings.account.data-export.title": {
     "message": "Data export"
   },
   "settings.account.delete.confirm.description": {
-    "message": "This will **immediately delete all of your user data and follows**. This will not delete your projects. Deleting your account cannot be reversed.<br><br>If you need help with your account, get support on the [Modrinth Discord](https://discord.modrinth.com)."
+    "message": "This will **immediately delete all of your user data and follows**. This will not delete your shops. Deleting your account cannot be reversed.<br><br>If you need help with your account, get support on the [Vanilla Tyme Discord](https://discord.vanillatymeservers.com)."
   },
   "settings.account.delete.confirm.proceed": {
     "message": "Delete this account"
@@ -6131,110 +5720,11 @@
   "settings.account.two-factor.verify.label": {
     "message": "Verify code"
   },
-  "settings.applications.about": {
-    "message": "About"
-  },
-  "settings.applications.button.add-more": {
-    "message": "Add more"
-  },
-  "settings.applications.button.add-redirect-uri": {
-    "message": "Add a redirect URI"
-  },
-  "settings.applications.button.create": {
-    "message": "Create app"
-  },
-  "settings.applications.button.delete": {
-    "message": "Delete"
-  },
-  "settings.applications.button.new": {
-    "message": "New application"
-  },
-  "settings.applications.button.upload-icon": {
-    "message": "Upload icon"
-  },
-  "settings.applications.client-id": {
-    "message": "Client ID"
-  },
-  "settings.applications.client-secret": {
-    "message": "Client secret"
-  },
-  "settings.applications.created-on": {
-    "message": "Created on {date}"
-  },
-  "settings.applications.delete.confirm.button": {
-    "message": "Delete this application"
-  },
-  "settings.applications.delete.confirm.description": {
-    "message": "This will permanently delete this application and revoke all access tokens. (forever!)"
-  },
-  "settings.applications.delete.confirm.title": {
-    "message": "Are you sure you want to delete this application?"
-  },
-  "settings.applications.description.intro": {
-    "message": "Applications can be used to authenticate Modrinth's users with your products. For more information, see <docs-link>Modrinth's API documentation</docs-link>."
-  },
-  "settings.applications.field.description": {
-    "message": "Description"
-  },
-  "settings.applications.field.description.placeholder": {
-    "message": "Enter the application's description..."
-  },
-  "settings.applications.field.icon": {
-    "message": "Icon"
-  },
-  "settings.applications.field.name": {
-    "message": "Name"
-  },
-  "settings.applications.field.name.placeholder": {
-    "message": "Enter the application's name..."
-  },
-  "settings.applications.field.redirect-uri.placeholder": {
-    "message": "https://example.com/auth/callback"
-  },
-  "settings.applications.field.redirect-uris": {
-    "message": "Redirect URIs"
-  },
-  "settings.applications.field.scopes": {
-    "message": "Scopes"
-  },
-  "settings.applications.field.url": {
-    "message": "URL"
-  },
-  "settings.applications.field.url.placeholder": {
-    "message": "https://example.com"
-  },
-  "settings.applications.head-title": {
-    "message": "Applications"
-  },
-  "settings.applications.modal.header": {
-    "message": "Application information"
-  },
-  "settings.applications.notification.icon-updated.description": {
-    "message": "Your application icon has been updated."
-  },
-  "settings.applications.notification.icon-updated.title": {
-    "message": "Icon updated"
-  },
-  "settings.applications.secret.disclaimer": {
-    "message": "Save your secret now, it will be hidden after you leave this page!"
-  },
   "settings.authorizations.about-this-app": {
     "message": "About this app"
   },
   "settings.authorizations.created-by": {
     "message": "Created by {user}"
-  },
-  "settings.authorizations.description": {
-    "message": "When you authorize an application with your Modrinth account, you grant it access to your account. You can manage and review access to your account here at any time."
-  },
-  "settings.authorizations.empty-state.description": {
-    "message": "Applications you authorize will appear here."
-  },
-  "settings.authorizations.empty-state.heading": {
-    "message": "No authorized apps"
-  },
-  "settings.authorizations.head-title": {
-    "message": "Authorizations"
   },
   "settings.authorizations.official-tooltip": {
     "message": "This app is created by an official Modrinth account."
@@ -6242,218 +5732,14 @@
   "settings.authorizations.revoke.action": {
     "message": "Revoke"
   },
-  "settings.authorizations.revoke.confirm.description": {
-    "message": "This will revoke the application's access to your account. You can always re-authorize it later."
-  },
-  "settings.authorizations.revoke.confirm.title": {
-    "message": "Are you sure you want to revoke this application?"
-  },
   "settings.authorizations.unofficial-disclosure": {
     "message": "This app is not affiliated with Modrinth in any way, despite its name."
-  },
-  "settings.billing.charges.description": {
-    "message": "All of your past charges to your Modrinth account will be listed here:"
-  },
-  "settings.billing.charges.product.medal-trial": {
-    "message": "Medal Server Trial"
-  },
-  "settings.billing.charges.product.midas": {
-    "message": "Modrinth Plus"
-  },
-  "settings.billing.charges.product.pyro": {
-    "message": "Modrinth Hosting"
-  },
-  "settings.billing.charges.title": {
-    "message": "Past charges"
-  },
-  "settings.billing.expires": {
-    "message": "Expires {date}"
-  },
-  "settings.billing.interval.month": {
-    "message": "month"
-  },
-  "settings.billing.interval.quarter": {
-    "message": "quarter"
-  },
-  "settings.billing.interval.year": {
-    "message": "year"
-  },
-  "settings.billing.midas.benefits.ad-free": {
-    "message": "Ad-free browsing on modrinth.com and Modrinth App"
-  },
-  "settings.billing.midas.benefits.badge": {
-    "message": "Modrinth+ badge on your profile"
-  },
-  "settings.billing.midas.benefits.support": {
-    "message": "Support Modrinth and creators directly"
-  },
-  "settings.billing.midas.benefits.title": {
-    "message": "Benefits"
-  },
-  "settings.billing.midas.save-per-year": {
-    "message": "Save {amount}/year by switching to yearly billing!"
-  },
-  "settings.billing.midas.status.cancelled.line1": {
-    "message": "You've cancelled your subscription."
-  },
-  "settings.billing.midas.status.cancelled.line2": {
-    "message": "You will retain your perks until the end of the current billing cycle."
-  },
-  "settings.billing.midas.status.failed": {
-    "message": "Your subscription payment failed. Please update your payment method."
-  },
-  "settings.billing.midas.status.open": {
-    "message": "You're currently subscribed to:"
-  },
-  "settings.billing.midas.status.processing": {
-    "message": "Your payment is being processed. Perks will activate once payment is complete."
-  },
-  "settings.billing.midas.upsell": {
-    "message": "Become a subscriber to Modrinth Plus!"
-  },
-  "settings.billing.modal.cancel.action": {
-    "message": "Cancel subscription"
-  },
-  "settings.billing.modal.cancel.description": {
-    "message": "This will cancel your subscription. You will retain your perks until the end of the current billing cycle."
-  },
-  "settings.billing.modal.cancel.title": {
-    "message": "Are you sure you want to cancel your subscription?"
-  },
-  "settings.billing.modal.delete.action": {
-    "message": "Remove this payment method"
-  },
-  "settings.billing.modal.delete.description": {
-    "message": "This will remove this payment method forever (like really forever)."
-  },
-  "settings.billing.modal.delete.title": {
-    "message": "Are you sure you want to remove this payment method?"
-  },
-  "settings.billing.next": {
-    "message": "Next:"
-  },
-  "settings.billing.or-yearly-save": {
-    "message": "Or {price} / year (save {percent}%)!"
-  },
-  "settings.billing.payment_method.action.add": {
-    "message": "Add payment method"
-  },
-  "settings.billing.payment_method.action.history": {
-    "message": "View past charges"
-  },
-  "settings.billing.payment_method.action.primary": {
-    "message": "Make primary"
-  },
-  "settings.billing.payment_method.card_expiry": {
-    "message": "Expires {month}/{year}"
-  },
-  "settings.billing.payment_method.none": {
-    "message": "You have not added any payment methods."
-  },
-  "settings.billing.payment_method.primary": {
-    "message": "Primary"
-  },
-  "settings.billing.payment_method.title": {
-    "message": "Payment methods"
-  },
-  "settings.billing.plan.title": {
-    "message": "{size} Plan"
-  },
-  "settings.billing.price.includes-tax": {
-    "message": "Includes {amount} tax"
-  },
-  "settings.billing.price.per-interval": {
-    "message": "{price} / {interval}"
-  },
-  "settings.billing.pyro.cpu": {
-    "message": "{shared} Shared CPUs (Bursts up to {bursts} CPUs)"
-  },
-  "settings.billing.pyro.linked-server.not-found": {
-    "message": "A linked server couldn't be found for this subscription. There are a few possible explanations for this. If you just purchased your server, this is normal. It could take up to an hour for your server to be provisioned. Otherwise, if you purchased this server a while ago, it has likely since been suspended. If this is not what you were expecting, please contact Modrinth Support with the following information:"
-  },
-  "settings.billing.pyro.linked-server.server-id": {
-    "message": "Server ID: {id}"
-  },
-  "settings.billing.pyro.linked-server.stripe-id": {
-    "message": "Stripe ID: {id}"
-  },
-  "settings.billing.pyro.ram": {
-    "message": "{gb} GB RAM"
-  },
-  "settings.billing.pyro.resubscribe.error.text": {
-    "message": "An error occurred while resubscribing to your Modrinth server."
-  },
-  "settings.billing.pyro.resubscribe.error.title": {
-    "message": "Error resubscribing"
-  },
-  "settings.billing.pyro.resubscribe.request-submitted.text": {
-    "message": "If the server is currently cancelled, it may take 10-15 minutes to set up the server."
-  },
-  "settings.billing.pyro.resubscribe.request-submitted.title": {
-    "message": "Resubscription request submitted"
-  },
-  "settings.billing.pyro.resubscribe.success.text": {
-    "message": "Server subscription resubscribed successfully"
-  },
-  "settings.billing.pyro.status.failed": {
-    "message": "Your subscription payment failed. Please update your payment method, then resubscribe."
-  },
-  "settings.billing.pyro.status.processing": {
-    "message": "Your payment is being processed. Your server will activate once payment is complete."
-  },
-  "settings.billing.pyro.storage": {
-    "message": "{gb} GB SSD"
-  },
-  "settings.billing.pyro.swap": {
-    "message": "{gb} GB Swap"
-  },
-  "settings.billing.pyro_subscription.description": {
-    "message": "Manage your Modrinth Server subscriptions."
-  },
-  "settings.billing.pyro_subscription.title": {
-    "message": "Modrinth Server Subscriptions"
-  },
-  "settings.billing.renews": {
-    "message": "Renews {date}"
-  },
-  "settings.billing.resubscribe": {
-    "message": "Resubscribe"
-  },
-  "settings.billing.since": {
-    "message": "Since {date}"
-  },
-  "settings.billing.subscribe": {
-    "message": "Subscribe"
-  },
-  "settings.billing.subscription.description": {
-    "message": "Manage your Modrinth subscriptions."
-  },
-  "settings.billing.subscription.title": {
-    "message": "Subscriptions"
-  },
-  "settings.billing.switch.switching-to-interval": {
-    "message": "Switching to {interval, select, monthly {monthly} yearly {yearly} other {{interval}}}"
-  },
-  "settings.billing.switch.to-interval": {
-    "message": "Switch to {interval, select, monthly {monthly} yearly {yearly} other {{interval}}}"
-  },
-  "settings.billing.switch.tooltip.monthly-additional-per-year": {
-    "message": "Monthly billing will cost you an additional {amount} per year"
-  },
-  "settings.billing.switches-to-billing-on": {
-    "message": "Switches to {interval, select, monthly {monthly} yearly {yearly} other {{interval}}} billing on {date}"
-  },
-  "settings.billing.update-method": {
-    "message": "Update method"
-  },
-  "settings.billing.upgrade": {
-    "message": "Upgrade"
   },
   "settings.display.banner.developer-mode.button": {
     "message": "Deactivate developer mode"
   },
   "settings.display.banner.developer-mode.description": {
-    "message": "<strong>Developer mode</strong> is active. This will allow you to view the internal IDs of various things throughout Modrinth that may be helpful if you're a developer using the Modrinth API. Click on the Modrinth logo at the bottom of the page 5 times to toggle developer mode."
+    "message": "<strong>Developer mode</strong> is active. This will allow you to view the internal IDs of various things throughout the website that may be helpful if you're a developer using the API. Click on the Vanilla Tyme logo at the bottom of the page 5 times to toggle developer mode."
   },
   "settings.display.notification.developer-mode-deactivated.text": {
     "message": "Developer mode has been disabled"
@@ -6468,7 +5754,7 @@
     "message": "Create a PAT"
   },
   "settings.pats.description": {
-    "message": "PATs can be used to access Modrinth's API. They can be created and revoked at any time. For more information, see <doc-link>Modrinth's API documentation</doc-link>."
+    "message": "PATs can be used to access the Vanilla Tyme API. They can be created and revoked at any time."
   },
   "settings.pats.modal.create.action": {
     "message": "Create PAT"
@@ -6525,7 +5811,7 @@
     "message": "Current session"
   },
   "settings.sessions.description": {
-    "message": "Here are all the devices that are currently logged in with your Modrinth account. You can log out of each one individually.\n\nIf you see an entry you don't recognize, log out of that device and change your Modrinth account password immediately."
+    "message": "Here are all the devices that are currently logged in with your Vanilla Tyme account. You can log out of each one individually.\n\nIf you see an entry you don't recognize, log out of that device and change your Vanilla Tyme account password immediately."
   },
   "settings.sessions.last-accessed-ago": {
     "message": "Last accessed {ago}"
@@ -6544,33 +5830,6 @@
   },
   "settings.sidebar.label.display": {
     "message": "Display"
-  },
-  "shared-instance.invite.accept": {
-    "message": "Accept invite"
-  },
-  "shared-instance.invite.inviter.unknown": {
-    "message": "A Modrinth user"
-  },
-  "shared-instance.invite.joined-count": {
-    "message": "{count, plural, one {# person has} other {# people have}} already joined"
-  },
-  "shared-instance.invite.loading": {
-    "message": "Loading invite…"
-  },
-  "shared-instance.invite.title": {
-    "message": "{name} has invited you to play"
-  },
-  "shared-instance.invite.trust.description": {
-    "message": "This invite was created by another Modrinth user, not Modrinth. Only accept invites from people you trust."
-  },
-  "shared-instance.invite.trust.heading": {
-    "message": "Do you know this user?"
-  },
-  "shared-instance.invite.unavailable.description": {
-    "message": "It may have expired, reached its use limit, or been removed by the person who shared it."
-  },
-  "shared-instance.invite.unavailable.title": {
-    "message": "This invite isn't available"
   },
   "shop.archived.body": {
     "message": "This shop was part of Season {season} and is now archived. It may no longer exist on the current map."
