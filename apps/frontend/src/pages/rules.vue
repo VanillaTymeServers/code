@@ -37,6 +37,10 @@
 							label: formatMessage(messages.discordTab),
 							href: '/rules/discord',
 						},
+						{
+							label: formatMessage(messages.websiteTab),
+							href: '/legal/rules',
+						},
 					]"
 					replace
 				/>
@@ -72,6 +76,10 @@ const messages = defineMessages({
 	discordTab: {
 		id: 'rules.tab.discord',
 		defaultMessage: 'Discord',
+	},
+	websiteTab: {
+		id: 'rules.tab.website',
+		defaultMessage: 'Website',
 	},
 	collapseAll: {
 		id: 'rules.toolbar.collapse-all',
@@ -112,7 +120,7 @@ const messages = defineMessages({
 	},
 	marketHeroBadge: {
 		id: 'rules.hero.market.badge',
-		defaultMessage: 'Season 10',
+		defaultMessage: 'Season 11',
 	},
 	discordHeroPre: {
 		id: 'rules.hero.discord.pre',

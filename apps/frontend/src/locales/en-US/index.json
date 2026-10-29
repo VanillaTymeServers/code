@@ -5019,7 +5019,7 @@
     "message": "Rules"
   },
   "rules.hero.market.badge": {
-    "message": "Season 10"
+    "message": "Season 11"
   },
   "rules.hero.market.pre": {
     "message": "Market"
@@ -6998,14 +6998,14 @@
   "vote.leaderboard.column.avatar": {
     "message": "Avatar"
   },
-  "vote.leaderboard.column.combined": {
-    "message": "D / W / M / All"
-  },
   "vote.leaderboard.column.daily": {
     "message": "Daily"
   },
   "vote.leaderboard.column.monthly": {
     "message": "Monthly"
+  },
+  "vote.leaderboard.column.season": {
+    "message": "Season"
   },
   "vote.leaderboard.column.username": {
     "message": "Username"
@@ -7024,6 +7024,9 @@
   },
   "vote.leaderboard.sort.month": {
     "message": "This month"
+  },
+  "vote.leaderboard.sort.season": {
+    "message": "This season"
   },
   "vote.leaderboard.sort.today": {
     "message": "Today"
