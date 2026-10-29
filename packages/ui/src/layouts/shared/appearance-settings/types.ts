@@ -16,6 +16,7 @@ export const projectDisplayLocations = [
 	'shader',
 	'datapack',
 	'server',
+	'shop',
 	'user',
 ] as const
 

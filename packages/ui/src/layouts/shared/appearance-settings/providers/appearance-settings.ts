@@ -87,6 +87,7 @@ const layoutPreferenceKeys: Record<
 	resourcepack: 'resourcepacks',
 	modpack: 'modpacks',
 	server: 'servers',
+	shop: 'shops',
 	user: 'users',
 }
 

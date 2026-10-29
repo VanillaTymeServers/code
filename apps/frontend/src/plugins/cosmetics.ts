@@ -10,6 +10,7 @@ export type DisplayLocation =
 	| 'shader'
 	| 'datapack'
 	| 'server'
+	| 'shop'
 	| 'user'
 	| 'collection'
 
@@ -51,6 +52,7 @@ export default defineNuxtPlugin({
 					shader: 'gallery',
 					datapack: 'list',
 					server: 'list',
+					shop: 'grid',
 					user: 'list',
 					collection: 'list',
 				},

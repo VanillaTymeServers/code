@@ -111,6 +111,7 @@ pub struct LayoutPreferences {
     pub resourcepacks: LayoutOption,
     pub modpacks: LayoutOption,
     pub servers: LayoutOption,
+    pub shops: LayoutOption,
     pub users: LayoutOption,
 }
 
@@ -124,6 +125,7 @@ impl Default for LayoutPreferences {
             resourcepacks: LayoutOption::Grid,
             modpacks: LayoutOption::Rows,
             servers: LayoutOption::Rows,
+            shops: LayoutOption::Grid,
             users: LayoutOption::Rows,
         }
     }

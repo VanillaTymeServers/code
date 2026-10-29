@@ -81,6 +81,7 @@ watch(
 			preferences.layouts.modpacks === 'rows' ? 'list' : 'grid'
 		cosmetics.value.searchDisplayMode.server =
 			preferences.layouts.servers === 'rows' ? 'list' : 'grid'
+		cosmetics.value.searchDisplayMode.shop = preferences.layouts.shops === 'rows' ? 'list' : 'grid'
 		cosmetics.value.searchDisplayMode.user = preferences.layouts.users === 'rows' ? 'list' : 'grid'
 		cosmetics.value.rightSearchLayout = preferences.sidebars.right_aligned_search
 		cosmetics.value.leftContentLayout = preferences.sidebars.left_aligned_content

@@ -1916,6 +1916,7 @@ export namespace Labrinth {
 				resourcepacks: LayoutOption
 				modpacks: LayoutOption
 				servers: LayoutOption
+				shops: LayoutOption
 				users: LayoutOption
 			}
 
