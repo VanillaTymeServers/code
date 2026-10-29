@@ -400,7 +400,6 @@ export function useSearch(
 
 	const sortTypes: readonly SortType[] = readonly([
 		{ display: 'Relevance', name: 'relevance' },
-		{ display: 'Downloads', name: 'downloads' },
 		{ display: 'Followers', name: 'follows' },
 		{ display: 'Date published', name: 'newest' },
 		{ display: 'Date updated', name: 'updated' },

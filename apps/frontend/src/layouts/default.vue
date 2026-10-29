@@ -950,7 +950,7 @@ const messages = defineMessages({
 	},
 	projects: {
 		id: 'layout.nav.projects',
-		defaultMessage: 'Projects',
+		defaultMessage: 'My shops',
 	},
 	organizations: {
 		id: 'layout.nav.organizations',
@@ -1127,22 +1127,6 @@ const userMenuOptions = computed(() => {
 			to: `/user/${user.username}`,
 		},
 		{
-			id: 'plus',
-			label: formatMessage(messages.upgradeToModrinthPlus),
-			icon: ArrowBigUpDashIcon,
-			type: 'link',
-			to: '/plus',
-			tone: 'purple',
-			shown: !flags.value.hidePlusPromoInUserMenu && !hasActiveMidas(user),
-		},
-		{
-			id: 'servers',
-			label: formatMessage(messages.myServers),
-			icon: ServerStackIcon,
-			type: 'link',
-			to: '/hosting/manage',
-		},
-		{
 			id: 'flags',
 			label: formatMessage(commonSettingsMessages.featureFlags),
 			icon: ToggleRightIcon,
@@ -1209,21 +1193,6 @@ const userMenuOptions = computed(() => {
 			icon: ChartIcon,
 			type: 'link',
 			to: '/dashboard/analytics',
-		},
-		{
-			id: 'affiliate-links',
-			label: formatMessage(commonMessages.affiliateLinksButton),
-			icon: AffiliateIcon,
-			type: 'link',
-			to: '/dashboard/affiliate-links',
-			shown: Boolean(user.badges & UserBadge.AFFILIATE),
-		},
-		{
-			id: 'revenue',
-			label: formatMessage(messages.revenue),
-			icon: CurrencyIcon,
-			type: 'link',
-			to: '/dashboard/revenue',
 		},
 	]
 

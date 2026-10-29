@@ -378,7 +378,7 @@ const { formatMessage } = useVIntl()
 const messages = defineMessages({
 	headTitle: {
 		id: 'dashboard.projects.head-title',
-		defaultMessage: 'Projects',
+		defaultMessage: 'Shops',
 	},
 	editLinksButton: {
 		id: 'dashboard.projects.links.button.edit',
@@ -386,11 +386,11 @@ const messages = defineMessages({
 	},
 	selectedProjectsCount: {
 		id: 'dashboard.projects.selection-bar.selected-count',
-		defaultMessage: '{count, plural, one {# project selected} other {# projects selected}}',
+		defaultMessage: '{count, plural, one {# shop selected} other {# shops selected}}',
 	},
 	selectionActionBarAriaLabel: {
 		id: 'dashboard.projects.selection-bar.aria-label',
-		defaultMessage: 'Selected projects actions',
+		defaultMessage: 'Selected shops actions',
 	},
 	editLinksHeader: {
 		id: 'dashboard.projects.links.header.edit',
@@ -407,7 +407,7 @@ const messages = defineMessages({
 	},
 	issueTrackerDescription: {
 		id: 'dashboard.projects.links.issue-tracker.description',
-		defaultMessage: 'A place for users to report bugs, issues, and concerns about your project.',
+		defaultMessage: 'A place for users to report bugs, issues, and concerns about your shop.',
 	},
 	sourceCodeLabel: {
 		id: 'dashboard.projects.links.source-code.label',
@@ -415,7 +415,7 @@ const messages = defineMessages({
 	},
 	sourceCodeDescription: {
 		id: 'dashboard.projects.links.source-code.description',
-		defaultMessage: 'A page/repository containing the source code for your project',
+		defaultMessage: 'A page/repository containing the source code for your shop',
 	},
 	wikiPageLabel: {
 		id: 'dashboard.projects.links.wiki-page.label',
@@ -423,7 +423,7 @@ const messages = defineMessages({
 	},
 	wikiPageDescription: {
 		id: 'dashboard.projects.links.wiki-page.description',
-		defaultMessage: 'A page containing information, documentation, and help for the project',
+		defaultMessage: 'A page containing information, documentation, and help for the shop',
 	},
 	discordInviteLabel: {
 		id: 'dashboard.projects.links.discord-invite.label',
@@ -460,11 +460,11 @@ const messages = defineMessages({
 	},
 	showAllProjects: {
 		id: 'dashboard.projects.links.show-all-projects',
-		defaultMessage: 'Show all projects',
+		defaultMessage: 'Show all shops',
 	},
 	noProjectsYet: {
 		id: 'dashboard.projects.empty',
-		defaultMessage: "You don't have any projects yet. Click the green button above to begin.",
+		defaultMessage: "You don't have any shops yet. Click the green button above to begin.",
 	},
 	nameHeader: {
 		id: 'dashboard.projects.table.name',
@@ -484,7 +484,7 @@ const messages = defineMessages({
 	},
 	selectAllBulkEditableProjects: {
 		id: 'dashboard.projects.table.select-all-bulk-editable',
-		defaultMessage: 'Select all projects that support bulk editing',
+		defaultMessage: 'Select all shops that support bulk editing',
 	},
 	projectIconAlt: {
 		id: 'dashboard.projects.project.icon-alt',
@@ -492,7 +492,7 @@ const messages = defineMessages({
 	},
 	projectModeratorMessageAriaLabel: {
 		id: 'dashboard.projects.project.moderator-message-aria',
-		defaultMessage: 'Project has a message from the moderators. View the project to see more.',
+		defaultMessage: 'Shop has a message from the moderators. View the shop to see more.',
 	},
 	reviewEnvironmentMetadata: {
 		id: 'dashboard.projects.project.review-environment-metadata',
@@ -504,7 +504,7 @@ const messages = defineMessages({
 	},
 	bulkEditSuccessText: {
 		id: 'dashboard.projects.notification.bulk-edit-success',
-		defaultMessage: "Bulk edited selected project's links.",
+		defaultMessage: "Bulk edited the selected shops' links.",
 	},
 })
 

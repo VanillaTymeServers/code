@@ -86,7 +86,7 @@ export const commonMessages = defineMessages({
 	},
 	createAProjectButton: {
 		id: 'button.create-a-project',
-		defaultMessage: 'Create a project',
+		defaultMessage: 'Create a shop',
 	},
 	createdAgoLabel: {
 		id: 'label.created-ago',
@@ -870,6 +870,10 @@ export const commonProjectTypeCategoryMessages = defineMessages({
 		id: 'project-type.server.category',
 		defaultMessage: 'Servers',
 	},
+	shop: {
+		id: 'project-type.shop.category',
+		defaultMessage: 'Shops',
+	},
 	project: {
 		id: 'project-type.project.category',
 		defaultMessage: 'Projects',
@@ -905,6 +909,10 @@ export const commonProjectTypeTitleMessages = defineMessages({
 		id: 'project-type.server.capital',
 		defaultMessage: '{count, plural, one {Server} other {Servers}}',
 	},
+	shop: {
+		id: 'project-type.shop.capital',
+		defaultMessage: '{count, plural, one {Shop} other {Shops}}',
+	},
 	project: {
 		id: 'project-type.project.capital',
 		defaultMessage: '{count, plural, one {Project} other {Projects}}',
@@ -939,6 +947,10 @@ export const commonProjectTypeSentenceMessages = defineMessages({
 	server: {
 		id: 'project-type.server.lowercase',
 		defaultMessage: '{count, plural, one {server} other {servers}}',
+	},
+	shop: {
+		id: 'project-type.shop.lowercase',
+		defaultMessage: '{count, plural, one {shop} other {shops}}',
 	},
 	project: {
 		id: 'project-type.project.lowercase',

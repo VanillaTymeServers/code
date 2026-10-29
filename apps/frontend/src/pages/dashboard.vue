@@ -139,7 +139,7 @@ const messages = defineMessages({
 	},
 	projects: {
 		id: 'dashboard.sidebar.label.projects',
-		defaultMessage: 'Projects',
+		defaultMessage: 'Shops',
 	},
 	organizations: {
 		id: 'dashboard.sidebar.label.organizations',

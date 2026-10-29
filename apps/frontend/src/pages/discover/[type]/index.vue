@@ -129,7 +129,7 @@ const resultsDisplayLocation = computed<DisplayLocation | undefined>(
 )
 const resultsDisplayMode = computed<DisplayMode>(() =>
 	resultsDisplayLocation.value
-		? cosmetics.value.searchDisplayMode[resultsDisplayLocation.value]
+		? (cosmetics.value.searchDisplayMode[resultsDisplayLocation.value] ?? 'grid')
 		: 'list',
 )
 
@@ -141,6 +141,7 @@ const layoutPreferenceKeys = {
 	resourcepack: 'resourcepacks',
 	modpack: 'modpacks',
 	server: 'servers',
+	shop: 'shops',
 	user: 'users',
 } as const satisfies Partial<Record<DisplayLocation, keyof Labrinth.Users.v3.LayoutPreferences>>
 
