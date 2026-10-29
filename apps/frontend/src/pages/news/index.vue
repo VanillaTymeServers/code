@@ -29,10 +29,10 @@ const featuredArticle = computed(() => articles.value?.[0])
 const config = useRuntimeConfig()
 
 useSeoMeta({
-	title: 'Modrinth News',
-	ogTitle: 'Modrinth News',
-	description: 'Keep up-to-date on the latest news from Modrinth.',
-	ogDescription: 'Keep up-to-date on the latest news from Modrinth.',
+	title: 'Vanilla Tyme News',
+	ogTitle: 'Vanilla Tyme News',
+	description: 'Keep up-to-date on the latest news from Vanilla Tyme.',
+	ogDescription: 'Keep up-to-date on the latest news from Vanilla Tyme.',
 	ogType: 'website',
 	ogImage: () => `${config.public.siteUrl}/news/thumbnail.webp`,
 	twitterCard: 'summary_large_image',

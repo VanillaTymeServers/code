@@ -87,15 +87,7 @@ const versionName = computed(() => props.entry.version ?? longDate.value)
 const messages = defineMessages({
 	web: {
 		id: 'changelog.product.web',
-		defaultMessage: 'Platform',
-	},
-	hosting: {
-		id: 'changelog.product.hosting',
-		defaultMessage: 'Hosting',
-	},
-	app: {
-		id: 'changelog.product.app',
-		defaultMessage: 'App',
+		defaultMessage: 'Website',
 	},
 	justNow: {
 		id: 'changelog.justNow',
