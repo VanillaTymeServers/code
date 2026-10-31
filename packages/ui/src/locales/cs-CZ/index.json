@@ -3752,9 +3752,6 @@
   "report.item-type.version": {
     "defaultMessage": "verze"
   },
-  "report.type.spam": {
-    "defaultMessage": "Spam"
-  },
   "search.filter.dependency_type.optional": {
     "defaultMessage": "Volitelné"
   },

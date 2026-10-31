@@ -761,9 +761,6 @@
   "error.generic.404.title": {
     "message": "Stranica nije pronađena"
   },
-  "error.generic.default.list_item.1": {
-    "message": "Proveri da li je Modrinth nedostupan na našoj <status-link>stranici statusa</status-link>."
-  },
   "error.generic.default.list_title": {
     "message": "Molimo pokušaj ponovo za nekoliko minuta."
   },
@@ -1114,24 +1111,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Greške možeš prijaviti na njihovom <issues-link>issue tracker-u</issues-link>."
-  },
-  "report.not-for.dmca": {
-    "message": "DMCA zahtevi za uklanjanje"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Pogledaj našu <policy-link>Politiku autorskih prava</policy-link>."
-  },
-  "report.note.copyright.1": {
-    "message": "Imaj na umu da *ne* podnosiš DMCA zahtev za uklanjanje ovom prijavom, nego prijavljuješ ponovo postavljen sadržaj."
-  },
-  "report.note.copyright.2": {
-    "message": "Ako si htio da podneseš DMCA zahtev (što je pravna radnja), pogledaj našu <copyright-policy-link>Politiku autorskih prava</copyright-policy-link>."
-  },
-  "report.note.malicious.1": {
-    "message": "Prijave za maliciozan ili obmanjujući sadržaj moraju sadržati značajne dokaze, kao što su primeri koda."
-  },
-  "report.note.malicious.2": {
-    "message": "Sažeci iz Microsoft Defender-a, VirusTotal-a ili AI detekcije malvera nisu dovoljni i neće biti prihvaćeni."
   },
   "report.please-report": {
     "message": "Molimo prijavi:"

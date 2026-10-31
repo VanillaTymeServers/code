@@ -4148,9 +4148,6 @@
   "report.item-type.version": {
     "defaultMessage": "バージョン"
   },
-  "report.type.spam": {
-    "defaultMessage": "スパム行為"
-  },
   "s.bg": {
     "defaultMessage": "バックグラウンドタスクが実行中です"
   },

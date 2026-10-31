@@ -4238,30 +4238,6 @@
   "report.item-type.version": {
     "defaultMessage": "versie"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "AI-gegenereerde afbeeldingen in pictogram, galerij of beschrijving"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "Opnieuw geüpload werk"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Volledig AI-gegenereerd project"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Ongepast"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Schadelijk"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Ontbrekende of onjuiste openbaarmaking"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Naamkraken"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Spam"
-  },
   "s.bg": {
     "defaultMessage": "Achtergrondtaak wordt uitgevoerd"
   },
@@ -5962,9 +5938,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "Profielfoto"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "Je profielgegevens zijn openbaar <profile-link>te bekijken op Modrinth</profile-link> en via de <docs-link>Modrinth API</docs-link>."
   },
   "settings.profile.save-error": {
     "defaultMessage": "Het bijwerken van het profiel is mislukt"

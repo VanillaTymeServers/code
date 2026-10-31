@@ -4247,30 +4247,6 @@
   "report.item-type.version": {
     "defaultMessage": "version"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "Images générées par l'IA dans l'icône, la galerie ou la description"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "Travail réuploadé"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Projet entièrement généré par IA"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Inapproprié"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Malicieux"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Divulgation manquante ou incorrecte"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Squat de nom"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Spam"
-  },
   "s.bg": {
     "defaultMessage": "Tâche d'arrière-plan en exécution"
   },

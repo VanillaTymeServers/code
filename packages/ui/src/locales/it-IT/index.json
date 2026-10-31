@@ -4307,30 +4307,6 @@
   "report.item-type.version": {
     "defaultMessage": "versione"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "Icona, galleria o descrizione generati dall'IA"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "Lavoro ricaricato"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Interamente generato dall'IA"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Inappropriato"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Dannoso"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Informative errate o mancanti"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Impersonazione"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Spam"
-  },
   "s.bg": {
     "defaultMessage": "Attività in esecuzione in background"
   },
@@ -6025,9 +6001,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "Foto profilo"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "Le informazioni del tuo profilo sono <profile-link>visibili pubblicamente su Modrinth</profile-link> e tramite l''<docs-link>API di Modrinth</docs-link>."
   },
   "settings.profile.save-error": {
     "defaultMessage": "Impossibile salvare il profilo"

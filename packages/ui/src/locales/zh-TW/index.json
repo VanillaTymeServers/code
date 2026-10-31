@@ -4367,30 +4367,6 @@
   "report.item-type.version": {
     "defaultMessage": "版本"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "圖示、圖庫或描述中的圖片由 AI 生成"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "重新上傳的作品"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "專案完全由 AI 生成"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "不當內容"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "惡意內容"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "揭露資訊缺失或不正確"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "名稱搶占"
-  },
-  "report.type.spam": {
-    "defaultMessage": "垃圾內容"
-  },
   "s.bg": {
     "defaultMessage": "背景工作執行中"
   },
@@ -6094,9 +6070,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "個人檔案相片"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "你的個人檔案資訊會<profile-link>公開顯示在 Modrinth 上</profile-link>，並可透過 <docs-link>Modrinth API</docs-link> 查詢。"
   },
   "settings.profile.save-error": {
     "defaultMessage": "無法更新個人檔案"

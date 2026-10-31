@@ -4259,30 +4259,6 @@
   "report.item-type.version": {
     "defaultMessage": "versión"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "Imágenes generadas por IA en iconos, galerías o descripción"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "Trabajo resubido"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Proyecto totalmente generado por IA"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Inapropiado"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Malicioso"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Falta o divulgación incorrecta"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Suplantación de identidad"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Spam"
-  },
   "s.bg": {
     "defaultMessage": "Tarea en segundo plano ejecutándose"
   },
@@ -5986,9 +5962,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "Foto de perfil"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "La información de tu perfil está <profile-link>visible públicamente en Modrinth</profile-link> y a la <docs-link>Modrinth API</docs-link>."
   },
   "settings.profile.save-error": {
     "defaultMessage": "No se pudo actualizar el perfil"

@@ -4301,30 +4301,6 @@
   "report.item-type.version": {
     "defaultMessage": "sürüm"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "AI tarafından üretilmiş ikon, resim veya açıklamalar"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "Yeniden yüklenmiş çalışma"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Tamamen AI tarafından üretilmiş proje"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Uygunsuz"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Kötü amaçlı"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Eksik veya yanlış bildirim"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Ad hakkı ihlali"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Gereksiz içerik"
-  },
   "s.bg": {
     "defaultMessage": "Arka plan görevi çalışıyor"
   },
@@ -6016,9 +5992,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "Profil resmi"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "Profil bilgileriniz Modrinth üzerinde <profile-link>herkese açık olarak görüntülenebilir</profile-link> ve <docs-link>Modrinth API</docs-link> aracılığıyla erişilebilir."
   },
   "settings.profile.save-error": {
     "defaultMessage": "Profil güncellenemedi"

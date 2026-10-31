@@ -617,66 +617,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "ניצלת את מכסת המשיכה שלך בסך <b>{withdrawLimit}</b>. עליך למלא טופס מס כדי למשוך סכום נוסף."
   },
-  "dashboard.revenue.available-now": {
-    "message": "זמין כעת"
-  },
-  "dashboard.revenue.balance": {
-    "message": "יתרה"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "ההכנסה המשוערת עשויה להשתנות עד שתהיה זמינה."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "לחצו כאן כדי לקרוא כיצד Modrinth מנהלת את ההכנסות שלכם."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "משוער ל-{date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "מעבד"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "ההכנסות נשמרות בסטטוס \"בביצוע\" עד סוף החודש, ויהיו זמינות למשיכה לאחר 60 יום נוספים."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "זמן קבלה"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "עסקאות"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "משיכה"
-  },
-  "dashboard.revenue.tos": {
-    "message": "בהעלאת פרויקטים ל-Modrinth ובמשיכת כספים מחשבונך, הנך מסכים ל<terms-link>תנאי תוכנית התגמולים</terms-link> שלנו. למידע נוסף על <info-link>תוכנית התגמולים</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "הורד כקובץ CSV"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "עסקאות"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "אין עסקאות"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "התשלומים והמשיכות שלך יופיעו כאן."
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "ראה הכל"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "אפשרות המשיכה שלך ננעלה זמנית מכיוון שמספר ה-TIN או ה-SSN לא תואם לרשומות ה-IRS. יש ליצור קשר עם התמיכה כדי לאפס ולהגיש מחדש את טופס המס."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "משכו כסף מהיתרה הזמינה שלכם לכל אמצעי תשלום שתבחרו."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "למשוך"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "למשוך"
-  },
   "dashboard.withdraw.completion.account": {
     "message": "חשבון"
   },
@@ -799,9 +739,6 @@
   },
   "error.generic.451.title": {
     "message": "תוכן לא נגיש מסיבות משפטיות"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "בדוק אם Modrinth אינו זמין ב<status-link>דף הסטטוס</status-link> שלנו."
   },
   "error.generic.default.list_title": {
     "message": "נסו שוב בעוד מספר דקות."
@@ -1441,24 +1378,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "ניתן לדווח על באגים ב-<issues-link>מערכת ניהול התקלות</issues-link> שלהם."
-  },
-  "report.not-for.dmca": {
-    "message": "בקשות להסרת תוכן (DMCA)"
-  },
-  "report.not-for.dmca.description": {
-    "message": "לפרטים נוספים, עיינו ב<policy-link>מדיניות זכויות היוצרים</policy-link> שלנו."
-  },
-  "report.note.copyright.1": {
-    "message": "לתשומת לבך: אינך מגיש בקשה להסרת תוכן (DMCA), אלא דיווח על תוכן שהועלה מחדש."
-  },
-  "report.note.copyright.2": {
-    "message": "אם כוונתך להגיש בקשה להסרת תוכן במסגרת DMCA (המהווה הליך משפטי), עליך לעיין ב<copyright-policy-link>מדיניות זכויות היוצרים</copyright-policy-link> שלנו."
-  },
-  "report.note.malicious.1": {
-    "message": "דיווחים על תוכן זדוני או מטעה חייבים לכלול ראיות משמעותיות להתנהגות זו, כגון דגימות קוד."
-  },
-  "report.note.malicious.2": {
-    "message": "סיכומים מ-Microsoft Defender, VirusTotal או זיהוי נוזקות מבוסס בינה מלאכותית (AI) אינם מהווים ראיה מספקת ולא יתקבלו."
   },
   "report.please-report": {
     "message": "נא לדווח על:"

@@ -1478,21 +1478,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit": {
     "message": "Uttagsgräns"
   },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Länka Discord"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Hämta din Discord-roll"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1 mn+ nedladdningar"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Kreatör"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Pride 2026"
-  },
   "dashboard.head-title": {
     "message": "Instrumentpanel"
   },
@@ -1631,69 +1616,6 @@
   "dashboard.reports.title": {
     "message": "Rapporteringar"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Tillgängligt nu"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Saldo"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Estimerad inkomst kan ändras tills att den är tillgänglig."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Klicka för att läsa om hur Modrinth hanterar din inkomst."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Estimerat {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Processerar"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Inkomst processeras tills slutet av månaden och blir tillgänglig 60 dagar senare."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Togs emot"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Transaktioner"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Uttaget"
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Ladda ner som CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Transaktionshistorik"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transaktioner"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Inga transaktioner"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Dina utbetalningar och utdrag kommer synas här."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Senaste månaden"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Denna månad"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Visa alla"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Alla år"
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Ta ut"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Ta ut"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Aktiva rapporter"
   },
@@ -1717,9 +1639,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Projekt"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Intäkter"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Konto"
@@ -1876,9 +1795,6 @@
   },
   "error.generic.451.title": {
     "message": "Innehåll otillgängligt av juridiska skäl"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Se om Modrinth ligger nere på vår <status-link>statussida</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Vänligen försök igen om några minuter."
@@ -2572,15 +2488,6 @@
   },
   "project.actions.view-modpacks": {
     "message": "Visa modpaket"
-  },
-  "project.ai-image-warning-modal.body.1": {
-    "message": "Användning av AI-genererade bilder för att representera ditt projekt är inte tillåtet. Att försöka arbeta runt upptäckning kan leda till att ditt konto spärras."
-  },
-  "project.ai-image-warning-modal.body.2": {
-    "message": "Läs avsnitt 6 av <rules>Modrinths innehållsregler</rules> för mer information om våran generativ AI-policy."
-  },
-  "project.ai-image-warning-modal.title": {
-    "message": "AI-genererade bilder är inte tillåtna"
   },
   "project.collections.create-new": {
     "message": "Skapa ny samling"
@@ -3280,15 +3187,6 @@
   },
   "report.not-for.bug-reports": {
     "message": "Buggrapporter"
-  },
-  "report.not-for.dmca": {
-    "message": "DMCA borttagning"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Se våran <policy-link>Upphovsrättspolicy</policy-link>."
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "Innehållsupplysningar är en ny funktion vi nyligen har lagt till. Vi ger skaparna tid att få deras upplysningar aktuella innan vi börjar godkänna anmälningar för saknade eller felaktiga upplysningar."
   },
   "report.please-report": {
     "message": "Vänligen rapportera:"

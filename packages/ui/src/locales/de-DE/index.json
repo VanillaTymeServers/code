@@ -4367,30 +4367,6 @@
   "report.item-type.version": {
     "defaultMessage": "Version"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "KI-generierte Bilder im Icon, in der Galerie oder in der Beschreibung"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "Erneut hochgeladenes Werk"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Vollständig KI-generiertes Projekt"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Unangemessen"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Bösartig"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Fehlende oder falsche Angaben"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Name Squatting"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Spam"
-  },
   "s.bg": {
     "defaultMessage": "Hintergrundaufgabe wird ausgeführt"
   },
@@ -6094,9 +6070,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "Profilbild"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "Deine Profilinformationen sind öffentlich <profile-link>auf Modrinth</profile-link> und über die <docs-link>Modrinth-API</docs-link> sichtbar."
   },
   "settings.profile.save-error": {
     "defaultMessage": "Profil konnte nicht aktualisiert werden"

@@ -1562,24 +1562,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "你已用尽<b>{withdrawLimit}</b>的提现额度。若需继续提现，请先完成税务表格填写。"
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "你符合获取 {roles} 的条件。通过 Modrinth 关联你的 Discord 账户，我们将自动同步相关身份组。"
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "关联 Discord 账户"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "领取你的 Discord 身份组"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "破百万下载"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "创作者"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "2026 骄傲月"
-  },
   "dashboard.head-title": {
     "message": "仪表盘"
   },
@@ -1736,78 +1718,6 @@
   "dashboard.reports.title": {
     "message": "举报"
   },
-  "dashboard.revenue.available-now": {
-    "message": "可用"
-  },
-  "dashboard.revenue.balance": {
-    "message": "余额"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "预计收入在公布前可能会有所调整。"
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "点击了解 Modrinth 如何处理你的收入。"
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "预计日期：{date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "处理中"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "收入将维持在处理状态直至月底结束，随后在60天后方可使用。"
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "接收"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "交易次数"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "已提现"
-  },
-  "dashboard.revenue.tos": {
-    "message": "通过将项目上传至 Modrinth 并从账户中提取资金，即表示你同意我们的<terms-link>激励计划条款</terms-link>。了解更多关于<info-link>激励计划</info-link>的信息。"
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "以 CSV 格式下载"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "交易记录"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "账单"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "无交易记录"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "你的支付和提现记录将在此区域显示。"
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "上个月"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "这个月"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "查看所有"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "所有年份"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "由于你的纳税人识别号或社会安全号码与美国国税局记录不符，你的提现被暂时锁定。请联系客服重置并重新提交你的税表。"
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "从可用余额中提现至任何支付方式。"
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "提现"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "提现"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "处理中的举报"
   },
@@ -1831,9 +1741,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "项目"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "收益"
   },
   "dashboard.withdraw.completion.account": {
     "message": "账户"
@@ -2002,9 +1909,6 @@
   },
   "error.generic.451.title": {
     "message": "因法律原因无法提供内容"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "前往我们的<status-link>状态页面</status-link>，查看 Modrinth 服务是否中断。"
   },
   "error.generic.default.list_title": {
     "message": "请在几分钟后再试。"
@@ -2849,15 +2753,6 @@
   "project.actions.view-project-type-dependents": {
     "message": "查看{projectType}依赖项"
   },
-  "project.ai-image-warning-modal.body.1": {
-    "message": "不允许使用AI生成的图片来表示您的项目，不接受检测工作可能导致您的 Modrints 帐户被封禁。"
-  },
-  "project.ai-image-warning-modal.body.2": {
-    "message": "有关我们生成式AI政策的更多信息，请参阅Modrinth《<rules>内容规范</rules>》的第6节。"
-  },
-  "project.ai-image-warning-modal.title": {
-    "message": "不允许使用AI生成的图片"
-  },
   "project.collections.create-new": {
     "message": "创建新收藏夹"
   },
@@ -3163,9 +3058,6 @@
   },
   "project.settings.delete-project.description.1": {
     "message": "从Modrinth中永久删除此项目，已删除的项目 <emphasis>无法由 Modrinth 员工或支持恢复</emphasis>。"
-  },
-  "project.settings.delete-project.description.2": {
-    "message": "上传到这个项目并且在Modrints托管的整合包中积极使用的文件可能仍然存在。"
   },
   "project.settings.delete-project.title": {
     "message": "删除项目"
@@ -3862,36 +3754,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "你可以在 <issues-link>问题追踪器</issues-link> 向他们报告漏洞。"
-  },
-  "report.not-for.dmca": {
-    "message": "由于DMCA下架"
-  },
-  "report.not-for.dmca.description": {
-    "message": "详见我们的<policy-link>版权政策</policy-link>。"
-  },
-  "report.note.ai-images.1": {
-    "message": "我们刚刚更新了规则，禁止在图标、画廊及项目描述中使用 AI 生成的图像。在正式开始接收此类举报之前，我们正在向创作者提供一段宽限期，以便他们从自己的项目中移除 AI 图像。"
-  },
-  "report.note.check-back-later": {
-    "message": "请在宽限期结束后再来查看。目前暂不受理此类举报。"
-  },
-  "report.note.copyright.1": {
-    "message": "请注意，你提交的并非 DMCA 下架请求，而是对转载内容的举报。"
-  },
-  "report.note.copyright.2": {
-    "message": "如果你需要填报 DMCA 删除请求（这是一个法务行为），请参见我们的<copyright-policy-link>版权政策</copyright-policy-link>。"
-  },
-  "report.note.fully-ai-generated.1": {
-    "message": "我们刚刚更新了规则，明确禁止完全由 AI 生成的项目。在正式开始接收此类举报之前，我们正在向创作者提供一段宽限期，以便他们更新或下架完全由 AI 生成的项目。"
-  },
-  "report.note.malicious.1": {
-    "message": "报告恶意或欺骗性内容时必须附上行为的实质性证据，例如代码样本。"
-  },
-  "report.note.malicious.2": {
-    "message": "Microsoft Defender、VirusTotal 等杀毒软件的报告，或 AI 恶意软件检测结果不属于充分的证据形式，不会被接受。"
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "内容披露是我们新增的一个功能。 我们向创作者提供一个宽限期，以便在我们开始接受缺失或不正确的披露报告之前更新他们的披露。"
   },
   "report.please-report": {
     "message": "请举报："

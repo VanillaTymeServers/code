@@ -4100,12 +4100,6 @@
   "report.item-type.version": {
     "defaultMessage": "버전"
   },
-  "report.type.inappropriate": {
-    "defaultMessage": "부적절함"
-  },
-  "report.type.spam": {
-    "defaultMessage": "스팸"
-  },
   "s.bg": {
     "defaultMessage": "백그라운드 작업 실행 중"
   },
@@ -5596,9 +5590,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "프로필 사진"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "프로필 정보는 Modrinth에서 <profile-link>누구나 볼 수 있게 공개</profile-link>되며, <docs-link>Modrinth API</docs-link>를 통해서도 확인할 수 있습니다."
   },
   "settings.profile.save-error": {
     "defaultMessage": "프로필 업데이트 실패"

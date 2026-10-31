@@ -4367,30 +4367,6 @@
   "report.item-type.version": {
     "defaultMessage": "版本"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "图标、画廊或描述中使用了 AI 生成的图像"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "重新上传的项目"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "完全由AI生成的项目"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "不当内容"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "恶意内容"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "披露信息缺少或不正确"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "抢注名称（盗用名称）"
-  },
-  "report.type.spam": {
-    "defaultMessage": "垃圾内容"
-  },
   "s.bg": {
     "defaultMessage": "后台任务正在运行"
   },
@@ -6094,9 +6070,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "头像"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "您的个人资料信息可以在 <profile-link>Modrinth 上公开查看</profile-link>，也可通过 <docs-link>Modrinth API</docs-link> 获取。"
   },
   "settings.profile.save-error": {
     "defaultMessage": "更新档案失败"

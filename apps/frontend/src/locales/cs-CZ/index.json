@@ -1151,24 +1151,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Vyčerpali jste svůj limit pro výběr <b>{withdrawLimit}</b>. Pro vyšší výběr musíte vyplnit daňový formulář."
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "Máte nárok na {roles}. Propojte svůj účet Discord přes Modrinth a my je automaticky synchronizujeme."
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Propojit Discord"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Získej své role na Discordu"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1M+ Stažení"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Tvůrce"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Pride 2026"
-  },
   "dashboard.head-title": {
     "message": "Nástěnka"
   },
@@ -1295,60 +1277,6 @@
   "dashboard.reports.title": {
     "message": "Nahlášení"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Nyní k dispozici"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Zůstatek"
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Odhadováno {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Zpracovávám"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Počet transakcí"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Vybráno"
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Stáhnout jako CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Historie transakcí"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transakce"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Žádné transakce"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Zde se zobrazí vaše výplaty a výběry."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Předchozí měsíc"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Tento měsíc"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Vidět vše"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Všechny leta"
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Vyberte peníze z dostupného zůstatku na libovolnou platební metodu."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Vybrat"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Vybrat"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Aktivní nahlášení"
   },
@@ -1372,9 +1300,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Projekty"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Zisk"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Účet"
@@ -1468,9 +1393,6 @@
   },
   "error.generic.404.title": {
     "message": "Stránka nenalezena"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Zkontrolujte, zda je Modrinth offline, na naší <status-link>Stránce statusu</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Prosím zkuste znovu za pár minut."
@@ -2128,24 +2050,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Můžete nahlásit chyby na jejich <issues-link>issue trackeru</issues-link>."
-  },
-  "report.not-for.dmca": {
-    "message": "Stažení kvůli DMCA"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Podívejte se na naše <policy-link>Zásady autorských práv</policy-link>."
-  },
-  "report.note.copyright.1": {
-    "message": "Mějte na vědomí, že *neodesíláte* žádost o stažení kvůli DMCA, ale hlášení o znovunahraném obsahu."
-  },
-  "report.note.copyright.2": {
-    "message": "Pokud jste místo toho chtěli odeslat žádost o stažení kvůli DMCA (což je právní úkon), prosím podívejte se na naše <copyright-policy-link> Zásady autorských práv</copyright-policy-link>."
-  },
-  "report.note.malicious.1": {
-    "message": "Hlášení o podvodném nebo klamném obsahu musí obashovat značné důkazy o takovém chování, jako například části kódu."
-  },
-  "report.note.malicious.2": {
-    "message": "Shrnutí z Microsot Defenderu, VirusTotalu, nebo AI malware deketčního programu nejsou dostatečné formy důkazů a nebudou akceptovány."
   },
   "report.please-report": {
     "message": "Prosím nahlaste:"

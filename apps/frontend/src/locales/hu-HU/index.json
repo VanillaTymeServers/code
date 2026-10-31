@@ -1562,24 +1562,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Elérted a(z) <b>{withdrawLimit}</b> kifizetési limitet. További kifizetésekhez ki kell töltened egy adózási űrlapot."
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "Jogosult vagy a következő rangokra: {roles}. Kapcsold össze a Discord fiókodat a Modrinthon keresztül, és automatikusan szinkronizáljuk őket."
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Link a Discordra"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Vedd át a Discord-rangjaidat!"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1M+ letöltés"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Fejlesztő"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Pride 2026"
-  },
   "dashboard.head-title": {
     "message": "Irányítópult"
   },
@@ -1736,78 +1718,6 @@
   "dashboard.reports.title": {
     "message": "Jelentések"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Elérhető most"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Egyenleg"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "A becsült bevételek a rendelkezésre bocsátásig változhatnak."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Kattints ide, hogy elolvasd, hogyan kezeli a Modrinth a bevételeidet."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Becsült {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Feldolgozás"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "A bevétel a hónap végéig feldolgozás alatt áll, majd 60 nappal később válik elérhetővé."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Megkapva"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Tranzakciók"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Felvéve"
-  },
-  "dashboard.revenue.tos": {
-    "message": "A projektek Modrinthra való feltöltésével és a számládról történő pénzfelvétellel elfogadod a <terms-link>jutalomprogram feltételeit</terms-link>. Tudj meg többet a <info-link>jutalomprogramról</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Letöltés CSV formátumban"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Tranzakcióelőzmények"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Tranzakciók"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Nincsenek tranzakciók"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "A kifizetések és a felvételek itt jelennek meg."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Múlt hónapban"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Ebben a hónapban"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Összes megtekintése"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Minden év"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "A kifizetéseid ideiglenesen zárolva vannak, mert az adóazonosító számod vagy a társadalombiztosítási számod nem egyezik az adóhatóság (IRS) nyilvántartásában szereplő adatokkal. Kérjük, vedd fel a kapcsolatot az ügyfélszolgálattal az adóbevallásod visszaállításához és újbóli benyújtásához."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Vegyél fel az elérhető egyenlegéből bármilyen kifizetési móddal."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Pénzfelvétel"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Pénzfelvétel"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Aktív jelentések"
   },
@@ -1831,9 +1741,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Projektek"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Bevétel"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Fiók"
@@ -1993,9 +1900,6 @@
   },
   "error.generic.451.title": {
     "message": "Tartalom nem elérhető legális okok miatt"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Ellenőrizd, hogy a Modrinth elérhető-e az <status-link>állapotoldalon</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Kerjük próbáld újra pár perc múlva."
@@ -2840,15 +2744,6 @@
   "project.actions.view-project-type-dependents": {
     "message": "{projectType} függő projektjeinek megtekintése"
   },
-  "project.ai-image-warning-modal.body.1": {
-    "message": "A projekted bemutatására nem használhatsz mesterséges intelligenciával generált képeket. Az észlelés megkerülésére tett kísérlet a Modrinth-fiókod felfüggesztéséhez vezethet."
-  },
-  "project.ai-image-warning-modal.body.2": {
-    "message": "A generatív MI-irányelvünkről további információkat a <rules>Modrinth tartalmi szabályai</rules> 6. szakaszában találsz."
-  },
-  "project.ai-image-warning-modal.title": {
-    "message": "Mesterséges Inteligencia által generáltatott képek nem engedélyezettek"
-  },
   "project.collections.create-new": {
     "message": "Új gyűjtemény létrehozása"
   },
@@ -3154,9 +3049,6 @@
   },
   "project.settings.delete-project.description.1": {
     "message": "Véglegesen törli ezt a projektet a Modrinthról. A törölt projekteket a Modrinth munkatársai vagy az ügyfélszolgálat <emphasis>sem tudja visszaállítani</emphasis>."
-  },
-  "project.settings.delete-project.description.2": {
-    "message": "A projekthez feltöltött, a Modrinthon tárolt modcsomagok által aktívan használt fájlok továbbra is elérhetők maradhatnak."
   },
   "project.settings.delete-project.title": {
     "message": "Projekt végleges törlése"
@@ -3853,36 +3745,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "A hibákat a <issues-link>hibajelentő rendszer</issues-link>ben jelentheted be."
-  },
-  "report.not-for.dmca": {
-    "message": "DMCA leszedések"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Lásd a <policy-link>Szerzői jogi irányelvünket</policy-link>."
-  },
-  "report.note.ai-images.1": {
-    "message": "Nemrég frissítettük a szabályainkat, amelyek mostantól tiltják a mesterséges intelligenciával generált képeket az ikonokban, galériákban és leírásokban. A készítőknek türelmi időt biztosítunk, hogy eltávolítsák az MI által generált képeket a projektjeikből, mielőtt elkezdjük elfogadni az ezekkel kapcsolatos jelentéseket."
-  },
-  "report.note.check-back-later": {
-    "message": "Nézz vissza később, amikor a türelmi idő lejár. Az ilyen típusú jelentéseket jelenleg nem fogadjuk el."
-  },
-  "report.note.copyright.1": {
-    "message": "Felhívjuk a figyelmedet, hogy *nem* DMCA-eltávolítási kérelmet nyújtasz be, hanem újratöltött tartalomról szóló bejelentést."
-  },
-  "report.note.copyright.2": {
-    "message": "Ha DMCA-eltávolítási kérelmet (ami jogi lépés) szeretnél benyújtani, kérjük, olvasd el a <copyright-policy-link>Szerzői jogi irányelvünket</copyright-policy-link>."
-  },
-  "report.note.fully-ai-generated.1": {
-    "message": "A készítőknek türelmi időt biztosítunk, hogy frissítsék vagy eltávolítsák a teljes egészében MI által generált projektjeiket, mielőtt elkezdjük elfogadni az ezekkel kapcsolatos jelentéseket."
-  },
-  "report.note.malicious.1": {
-    "message": "A rosszindulatú vagy megtévesztő tartalmakról szóló bejelentéseknek tartalmazniuk kell a magatartásra vonatkozó lényeges bizonyítékokat, például kódmintákat."
-  },
-  "report.note.malicious.2": {
-    "message": "A Microsoft Defender, a VirusTotal vagy az MI rosszindulatú programok észlelése által készített összefoglalók nem minősülnek elegendő bizonyítéknak, ezért nem fogadhatók el."
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "A tartalmi nyilatkozatok egy újonnan bevezetett funkció. A készítőknek türelmi időt biztosítunk, hogy naprakésszé tegyék a nyilatkozataikat, mielőtt elkezdjük elfogadni a hiányzó vagy helytelen nyilatkozatokkal kapcsolatos jelentéseket."
   },
   "report.please-report": {
     "message": "Kérjük, az alábbiakat jelentsd:"

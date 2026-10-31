@@ -1538,21 +1538,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "出金限度額の <b>{withdrawLimit}</b> に達しました。これ以上の額を出金するには、納税申告書類を記入する必要があります。"
   },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Discordをリンクする"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Discordのロールを獲得"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "ダウンロード数100万超え"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "クリエイター"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "プライド2026"
-  },
   "dashboard.head-title": {
     "message": "ダッシュボード"
   },
@@ -1697,78 +1682,6 @@
   "dashboard.reports.title": {
     "message": "通報"
   },
-  "dashboard.revenue.available-now": {
-    "message": "現在出金可能"
-  },
-  "dashboard.revenue.balance": {
-    "message": "残高"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "推定収益額は、利用可能になるまで変更される場合があります。"
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Modrinthの収益取り扱いに関する詳細はこちらをご覧ください。"
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "{date}（予定）"
-  },
-  "dashboard.revenue.processing": {
-    "message": "処理中"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "収益は月末まで「処理中」となり、その60日後に出金可能となります。"
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "受け取り済み"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "取引"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "出金済み"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Modrinthへのプロジェクトのアップロード、およびアカウントからの出金を行うことで、当サイトの<terms-link>報酬プログラム利用規約</terms-link>に同意したものとみなされます。詳細は<info-link>報酬プログラム</info-link>についてをご覧ください。"
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "CSVでダウンロード"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "取引履歴"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "取引"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "取引がありません"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "支払いおよび出金の履歴がここに表示されます。"
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "先月"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "今月"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "すべて見る"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "全ての年"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "入力された納税者番号または社会保障番号が米国内国歳入庁の記録と一致しなかったため、出金が一時的にロックされています。サポートに連絡して、納税申告書類のリセットと再提出を行ってください。"
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "利用可能な残高から、お好みの支払い方法で出金します。"
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "出金"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "出金"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "アクティブな通報"
   },
@@ -1792,9 +1705,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "プロジェクト"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "収益"
   },
   "dashboard.withdraw.completion.account": {
     "message": "アカウント"
@@ -1939,9 +1849,6 @@
   },
   "error.generic.451.title": {
     "message": "法的な理由によりコンテンツを利用できません"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Modrinthがダウンしていないか、<status-link>ステータスページ</status-link>で確認してください。"
   },
   "error.generic.default.list_title": {
     "message": "数分後に再度試してください。"
@@ -2660,9 +2567,6 @@
   "project.actions.view-project-type-dependents": {
     "message": "{projectType} の依存関係を表示"
   },
-  "project.ai-image-warning-modal.title": {
-    "message": "AI生成画像の使用は禁止されています"
-  },
   "project.collections.create-new": {
     "message": "新規コレクションを作成"
   },
@@ -2968,36 +2872,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "バグの報告は、<issues-link>issue tracker</issues-link>にて行えます。"
-  },
-  "report.not-for.dmca": {
-    "message": "DMCAテイクダウン"
-  },
-  "report.not-for.dmca.description": {
-    "message": "<policy-link>著作権ポリシー</policy-link>をご覧ください。"
-  },
-  "report.note.ai-images.1": {
-    "message": "ルールを更新し、アイコン、ギャラリー、説明文へのAI生成画像の使用を禁止しました。クリエイターがプロジェクトからAI生成画像を削除するための一定の猶予期間を設けています。そのため、猶予期間が終了するまで、AI生成画像に関する報告は受け付けません。"
-  },
-  "report.note.check-back-later": {
-    "message": "猶予期間が終了した後に、もう一度ご確認ください。現在、この種の報告は受け付けていません。"
-  },
-  "report.note.copyright.1": {
-    "message": "ご注意ください：これはDMCA削除要請ではなく、再アップロードされたコンテンツへの報告です。"
-  },
-  "report.note.copyright.2": {
-    "message": "DMCAに基づく削除要請 (法的措置) を提出する意図であった場合は、当社の<copyright-policy-link>著作権ポリシー</copyright-policy-link>をご参照ください。"
-  },
-  "report.note.fully-ai-generated.1": {
-    "message": "ルールを更新し、AIによって完全に生成されたプロジェクトを禁止しました。クリエイターが完全にAIで生成されたプロジェクトを更新または削除するための一定の猶予期間を設けています。そのため、猶予期間が終了するまで、完全にAIで生成されたプロジェクトに関する報告は受け付けません。"
-  },
-  "report.note.malicious.1": {
-    "message": "悪意のあるコンテンツまたは虚偽的なコンテンツに関する報告には、コードサンプルなど、当該行為を裏付ける十分な証拠を含める必要があります。"
-  },
-  "report.note.malicious.2": {
-    "message": "Microsoft Defender、VirusTotal、またはAIマルウェア検出による要約は、十分な証拠形式とはみなされず、受理されません。"
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "コンテンツ開示は、最近追加された新機能です。開示内容が最新の状態になるまで、クリエイターに一定の猶予期間を設けています。そのため、開示が記載されていない、または誤っていることに関する報告の受け付けは、猶予期間終了後に開始します。\n"
   },
   "report.please-report": {
     "message": "是非報告ください："

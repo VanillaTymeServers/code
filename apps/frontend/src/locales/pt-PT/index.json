@@ -1337,12 +1337,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Já utilizou o seu limite de levantamento de <b>{withdrawLimit}</b>. Deve preencher um formulário fiscal para levantar mais."
   },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1M+ Transferências"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Criador"
-  },
   "dashboard.head-title": {
     "message": "Painel de Controlo"
   },
@@ -1444,75 +1438,6 @@
   },
   "dashboard.projects.table.type": {
     "message": "Tipo"
-  },
-  "dashboard.revenue.available-now": {
-    "message": "Disponível agora"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Saldo"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "A receita estimada pode estar sujeita a alterações até ser disponibilizada."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Clica para ler sobre como Modrinth gere os teus rendimentos."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Estimado {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "A processar"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Os rendimentos permanecem em processamento até ao fim do mês, depois ficam disponíveis após 60 dias."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Recebido"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Transações"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Levantado"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Ao carregares projetos para o Modrinth e levantares dinheiro da tua conta, concordas com os nossos <terms-link>Termos do Programa de Recompensas</terms-link>. Sabe mais sobre o <info-link>Programa de Recompensas</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Transferir como CSV"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transações"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Sem transações"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Os teus pagamentos e levantamentos aparecerão aqui."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Mês passado"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Esse mês"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Ver todas"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Todos os anos"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Os seus levantamentos estão temporariamente bloqueados porque o seu TIN ou SSN não corresponde aos registos do IRS. Por favor, contacte o apoio ao cliente para reiniciar e submeter novamente o seu formulário fiscal."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Levante o seu saldo disponível para qualquer método de pagamento."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Levantar"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Levantar"
   },
   "dashboard.sidebar.label.creators": {
     "message": "Criadores"
@@ -1651,9 +1576,6 @@
   },
   "error.generic.451.title": {
     "message": "Conteúdo indisponível por motivos legais"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Verifica se o Modrinth está em baixo na nossa <status-link>página de Status</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Por favor tenta novamente em alguns minutos."
@@ -2384,9 +2306,6 @@
   "project.notification.updated.title": {
     "message": "Projeto atualizado"
   },
-  "project.settings.delete-project.description.2": {
-    "message": "Ficheiros carregados para este projeto que são usados ativamente em Modpacks hospedados no Modrinth podem continuar a existir."
-  },
   "project.settings.general.name.description": {
     "message": "Evita prefixos, sufixos, parênteses ou descrições adicionais—usa apenas o nome real do projeto."
   },
@@ -2473,24 +2392,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Podes relatar bugs no seu <issues-link>issue tracker</issues-link>."
-  },
-  "report.not-for.dmca": {
-    "message": "Remoções DMCA"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Vê a nossa <policy-link>Política de Direitos de Autor</policy-link>."
-  },
-  "report.note.copyright.1": {
-    "message": "Por favor nota que *não* estás a enviar um pedido de remoção DMCA, mas sim uma denúncia de conteúdo recarregado."
-  },
-  "report.note.copyright.2": {
-    "message": "Se invés disso quiseres enviar um pedido de remoção DMCA (que é uma ação legal), por favor vê a nossa <copyright-policy-link>Política de Direitos de Autor</copyright-policy-link>."
-  },
-  "report.note.malicious.1": {
-    "message": "Denúncias de conteúdo malicioso ou enganoso devem incluir evidências substanciais do seu comportamento, como amostras do código."
-  },
-  "report.note.malicious.2": {
-    "message": "Sumários do Microsoft Defender, VirusTotal, ou deteção de malware por IA não são formas suficientes de evidência e não serão aceites."
   },
   "report.please-report": {
     "message": "Por favor denuncia:"

@@ -1226,24 +1226,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Bạn đã sử dụng hết giới hạn rút tiền <b>{withdrawLimit}</b>. Bạn cần hoàn thành biểu mẫu thuế để rút thêm."
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "Bạn đủ điều kiện cho vai trò {roles}. Hãy liên kết tài khoản Discord với Modrinth và chúng tôi sẽ đồng bộ chúng tự động."
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Liên kết với Discord"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Nhận vai trò Discord của bạn"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1M+ Downloads"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Creator"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Pride 2026"
-  },
   "dashboard.head-title": {
     "message": "Bảng điều khiển"
   },
@@ -1391,78 +1373,6 @@
   "dashboard.reports.title": {
     "message": "Báo cáo"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Khả dụng ngay"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Số dư"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Doanh thu ước tính có thể thay đổi cho đến khi được chuyển sang trạng thái khả dụng."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Nhấp để tìm hiểu cách Modrinth xử lý doanh thu của bạn."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Ước tính {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Đang xử lý"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Doanh thu sẽ ở trạng thái đang xử lý cho đến cuối tháng, sau đó sẽ trở nên khả dụng sau 60 ngày."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Đã nhận"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Giao dịch"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Đã rút"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Bằng việc tải dự án lên Modrinth và rút tiền từ tài khoản của bạn, bạn đồng ý với <terms-link>Điều Khoản Chương Trình Phần Thưởng</terms-link>. Tìm hiểu thêm về <info-link>Chương Trình Phần Thưởng</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Tải xuống dưới dạng CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Lịch sử giao dịch"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Giao dịch"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Chưa có giao dịch"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Các khoản thanh toán và rút tiền của bạn sẽ hiển thị tại đây."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Tháng trước"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Tháng này"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Xem tất cả"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Mọi năm"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Việc rút tiền của bạn tạm thời bị khóa do TIN hoặc SSN không khớp với hồ sơ của IRS. Vui lòng liên hệ hỗ trợ để đặt lại và gửi lại biểu mẫu thuế của bạn."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Rút tiền từ số dư khả dụng của bạn sang bất kỳ phương thức thanh toán nào."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Rút tiền"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Rút tiền"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Báo cáo hiện hành"
   },
@@ -1486,9 +1396,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Dự án"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Doanh thu"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Tài khoản"
@@ -1645,9 +1552,6 @@
   },
   "error.generic.451.title": {
     "message": "Nội dung không khả dụng vì lý do pháp lý"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Kiểm tra xem Modrinth có đang gặp sự cố không trên <status-link>Trang trạng thái</status-link> của chúng tôi."
   },
   "error.generic.default.list_title": {
     "message": "Vui lòng thử lại sau vài phút."
@@ -2560,24 +2464,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Bạn có thể báo cáo lỗi tại <issues-link>trình theo dõi lỗi</issues-link> của dự án."
-  },
-  "report.not-for.dmca": {
-    "message": "Yêu cầu gỡ nội dung theo DMCA"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Xem <policy-link>Chính sách bản quyền</policy-link> của chúng tôi."
-  },
-  "report.note.copyright.1": {
-    "message": "Vui lòng lưu ý rằng bạn không đang gửi yêu cầu gỡ nội dung theo DMCA, mà là báo cáo nội dung được tải lại."
-  },
-  "report.note.copyright.2": {
-    "message": "Nếu bạn muốn gửi yêu cầu gỡ nội dung theo DMCA (một hành động pháp lý), vui lòng xem <copyright-policy-link>Chính sách bản quyền</copyright-policy-link>."
-  },
-  "report.note.malicious.1": {
-    "message": "Báo cáo về nội dung độc hại hoặc lừa đảo phải kèm theo bằng chứng rõ ràng về hành vi đó, chẳng hạn như mẫu mã nguồn."
-  },
-  "report.note.malicious.2": {
-    "message": "Các bản tóm tắt từ Microsoft Defender, VirusTotal hoặc công cụ phát hiện mã độc bằng AI không được coi là bằng chứng đầy đủ và sẽ không được chấp nhận."
   },
   "report.please-report": {
     "message": "Vui lòng báo cáo:"

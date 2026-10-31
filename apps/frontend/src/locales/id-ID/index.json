@@ -830,66 +830,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Anda telah menggunakan batas penarikan <b>{withdrawLimit}</b> Anda. Untuk melakukan penarikan lebih banyak Anda wajib melengkapi formulir pajak."
   },
-  "dashboard.revenue.available-now": {
-    "message": "Tersedia sekarang"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Saldo"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Estimasi pendapatan dapat berubah sewaktu-waktu hingga data tersebut tersedia."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Klik untuk membaca tentang bagaimana Modrinth menangani pendapatan Anda."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Perkiraan {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Memproses"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Pendapatan tetap dalam proses hingga akhir bulan, lalu menjadi tersedia dalam 60 hari kemudian."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Diterima"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Transaksi"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Ditarik"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Dengan mengunggah proyek ke Modrinth dan menarik uang dari rekening Anda, Anda menyetujui <terms-link>Syarat dan Ketentuan Program Ganjaran</terms-link> kami. Pelajari lebih lanjut tentang <info-link>Program Hadiah</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Unduh sebagai CSV"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transaksi"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Tidak ada transaksi"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Pembayaran dan penarikan Anda akan muncul di sini."
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Lihat semua"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Penarikan dana Anda diblokir sementara karena TIN atau SSN Anda tidak sesuai dengan catatan IRS. Mohon hubungi dukungan untuk mengatur ulang dan mengirimkan kembali formulir pajak Anda."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Tarik dari saldo Anda yang tersedia ke metode pembayaran apa pun."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Tarik"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Tarik"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Laporan aktif"
   },
@@ -913,9 +853,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Proyek"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Pendapatan"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Rekening"
@@ -1039,9 +976,6 @@
   },
   "error.generic.451.title": {
     "message": "Konten tidak tersedia karena alasan hukum"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Periksa apakah Modrinth sedang mengalami gangguan di <status-link>halaman Status</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Silakan coba lagi dalam beberapa menit."
@@ -1834,24 +1768,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Anda dapat melaporkan kekutu pada <issues-link>pelacak isu</issues-link> mereka."
-  },
-  "report.not-for.dmca": {
-    "message": "Penghapusan konten yang melanggar DMCA"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Lihat <policy-link>Kebijakan Hak Cipta</policy-link> kami."
-  },
-  "report.note.copyright.1": {
-    "message": "Harap diperhatikan bahwa Anda *bukan* menyerahkan permintaan penghapusan DMCA, tetapi laporan konten yang diunggah ulang."
-  },
-  "report.note.copyright.2": {
-    "message": "Bila sebaliknya Anda bermaksud untuk mengajukan permintaan penghapusan DMCA (yang merupakan tindakan hukum), mohon lihat <copyright-policy-link>Kebijakan Hak Cipta</copyright-policy-link> kami."
-  },
-  "report.note.malicious.1": {
-    "message": "Laporan untuk konten berbahaya atau menipu harus menyertakan bukti perilaku yang mencukupi, seperti sampel kode."
-  },
-  "report.note.malicious.2": {
-    "message": "Ringkasan dari Microsoft Defender, VirusTotal, atau pendeteksi malwer AI tidak akan dianggap sebagai bukti yang mencukupi dan tidak akan diterima."
   },
   "report.please-report": {
     "message": "Mohon laporkan:"

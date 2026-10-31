@@ -2625,7 +2625,7 @@
     "defaultMessage": "Filters"
   },
   "label.followed-projects": {
-    "defaultMessage": "Followed projects"
+    "defaultMessage": "Followed shops"
   },
   "label.game-version": {
     "defaultMessage": "Game version"
@@ -3255,7 +3255,7 @@
     "defaultMessage": "A Vanilla Tyme member."
   },
   "profile.block-user.admonition-body": {
-    "defaultMessage": "{username} will not be able to send you friend requests, invite you to shared instances or invite you to Modrinth Hosting servers."
+    "defaultMessage": "{username} will not be able to send you friend requests."
   },
   "profile.block-user.admonition-title": {
     "defaultMessage": "Are you sure you want to block this user?"
@@ -3324,10 +3324,10 @@
     "defaultMessage": "Unlock account"
   },
   "profile.collection.projects-count": {
-    "defaultMessage": "{count, plural, one {# project} other {# projects}}"
+    "defaultMessage": "{count, plural, one {# shop} other {# shops}}"
   },
   "profile.details.error.github-popup-blocked": {
-    "defaultMessage": "Allow pop-ups for Modrinth, then try again."
+    "defaultMessage": "Allow pop-ups for Vanilla Tyme, then try again."
   },
   "profile.details.error.github-profile-message": {
     "defaultMessage": "The GitHub profile could not be retrieved. Please try again."
@@ -4377,7 +4377,7 @@
     "defaultMessage": "content"
   },
   "report.item-type.project": {
-    "defaultMessage": "project"
+    "defaultMessage": "shop"
   },
   "report.item-type.user": {
     "defaultMessage": "user"
@@ -4385,29 +4385,29 @@
   "report.item-type.version": {
     "defaultMessage": "version"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "AI-generated images in icon, gallery, or description"
+  "report.type.advertising": {
+    "defaultMessage": "Advertising"
   },
-  "report.type.copyright": {
-    "defaultMessage": "Reuploaded work"
+  "report.type.copied-work": {
+    "defaultMessage": "Copied work"
   },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Fully AI-generated project"
+  "report.type.harassment": {
+    "defaultMessage": "Harassment"
   },
-  "report.type.inappropriate": {
-    "defaultMessage": "Inappropriate"
+  "report.type.impersonation": {
+    "defaultMessage": "Impersonation"
   },
-  "report.type.malicious": {
-    "defaultMessage": "Malicious"
+  "report.type.inappropriate-content": {
+    "defaultMessage": "Inappropriate content"
   },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Missing or incorrect disclosure"
+  "report.type.personal-information": {
+    "defaultMessage": "Personal information"
   },
-  "report.type.name-squatting": {
-    "defaultMessage": "Name squatting"
+  "report.type.spam-or-scam": {
+    "defaultMessage": "Spam or scam"
   },
-  "report.type.spam": {
-    "defaultMessage": "Spam"
+  "report.type.wrong-shop-info": {
+    "defaultMessage": "Wrong shop info"
   },
   "s.bg": {
     "defaultMessage": "Background task running"
@@ -6228,7 +6228,7 @@
     "defaultMessage": "Profile picture"
   },
   "settings.profile.public-information.description": {
-    "defaultMessage": "Your profile information is publicly <profile-link>viewable on Modrinth</profile-link> and through the <docs-link>Modrinth API</docs-link>."
+    "defaultMessage": "Your profile information is publicly <profile-link>viewable on Vanilla Tyme</profile-link>."
   },
   "settings.profile.save-error": {
     "defaultMessage": "Failed to update profile"
@@ -6237,10 +6237,10 @@
     "defaultMessage": "An error occurred while updating your profile. Please try again."
   },
   "settings.profile.sign-in-required.description": {
-    "defaultMessage": "Sign in with a Modrinth account to customize your public profile."
+    "defaultMessage": "Sign in with a Vanilla Tyme account to customize your public profile."
   },
   "settings.profile.sign-in-required.title": {
-    "defaultMessage": "Modrinth account required"
+    "defaultMessage": "Vanilla Tyme account required"
   },
   "settings.profile.username.description": {
     "defaultMessage": "A unique case-insensitive name to identify your profile."

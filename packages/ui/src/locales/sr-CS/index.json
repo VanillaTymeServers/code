@@ -4211,15 +4211,6 @@
   "report.item-type.version": {
     "defaultMessage": "verzija"
   },
-  "report.type.inappropriate": {
-    "defaultMessage": "Neprikladno"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Zlonamerno"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Neželjena pošta"
-  },
   "s.bg": {
     "defaultMessage": "Pozadinski zadatak u toku"
   },

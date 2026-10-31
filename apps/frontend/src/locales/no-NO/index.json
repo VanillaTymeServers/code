@@ -1049,12 +1049,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Du har brukt opp uttakingsgrensa di <b>{withdrawLimit}</b>. Du må fullføre et skatteskjema for å ta flere uttak."
   },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1Mill+ Nedlastninger"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Skaper"
-  },
   "dashboard.head-title": {
     "message": "Kontrollpanel"
   },
@@ -1172,78 +1166,6 @@
   "dashboard.reports.title": {
     "message": "Rapporter"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Tilgjengelig nå"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Balanse"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Estimerte inntekter kan endre seg etter at det har blitt gjort tilgjengelig."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Klikk her for å lese om hvordan Modrinth handterer inntektene dine."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Estimert {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Prosesserer"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Inntekt kommer til å ligge i prosesseringa til enden av måneden, så blir den tilgjengelig etter 60 dager."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Mottatt"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Transaksjoner"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Ta ut"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Når du laster opp prosjekt til Modrinth og tar ut penger fra kontoen din, så sier du deg enig med <terms-link>Belønningsprogramvilkåra våre</terms-link>. Lær mer om <info-link>-belønningsprogrammet</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Last ned som en CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Transaksjonshistorikk"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transaksjoner"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Ingen transaksjoner"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Utbetalinga di og uttaka dine dukker opp her."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Siste måned"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Denne måneden"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Se alle"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Alle år"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Uttaka dine er midlertidig låst, fordi TINen-og-SSN-en din ikke stemmer med IRS-rekordene. Vær så snill å ta kontakt med brukerstøtte for å tilbakestille og sende inn skatteskjemaet ditt igjen."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Uttak fra den tilgjengelige balansen din for hvilken som helst betalingsmetode."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Ta ut"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Ta ut"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Aktive rapporter"
   },
@@ -1264,9 +1186,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Prosjekter"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Omsetning"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Konto"
@@ -1408,9 +1327,6 @@
   },
   "error.generic.451.title": {
     "message": "Innholdet er utilgjengelig av juridiske grunner"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Sjekk om Modrinth er nede på <status-link>Statussida vår</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Vær så snill å prøv igjen etter noen minutt."
@@ -2254,24 +2170,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Du kan rapportere bugs til <issues-link>problemsporinga</issues-link> deres."
-  },
-  "report.not-for.dmca": {
-    "message": "DMCA-nedtakelse"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Se <policy-link>Opprettshav-policy-en</policy-link> vår."
-  },
-  "report.note.copyright.1": {
-    "message": "Husk at du ikke sender inn en DMCA-nedtakelsesforespørsel, men heller en rapport av innhold som har vært lagt ut flere ganger."
-  },
-  "report.note.copyright.2": {
-    "message": "Viss du meinte å sende inn en DMCA-nedtakelsesforespørsel (som er ei lovlig handling) istedenfor, vennligst se <copyright-policy-link>Opphavsrettspolicy-en</copyright-policy-link> vår."
-  },
-  "report.note.malicious.1": {
-    "message": "Rapportering for støtende eller villedende innhold må inkluderer nok bevis på oppførselen, sånn som kodeprøver."
-  },
-  "report.note.malicious.2": {
-    "message": "Oppsummeringer fra Microsoft Sikkerhet, VirusTotal, eller skadelig programvareoppdaging fra AI er ikke nok bevis og kommer ikke til å bli akseptert."
   },
   "report.please-report": {
     "message": "Vær så snill å rapporter:"

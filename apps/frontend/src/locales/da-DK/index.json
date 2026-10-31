@@ -998,18 +998,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit": {
     "message": "Hæve grænse"
   },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Forbind Discord"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1M+ Downloads"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Skaber"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Pride 2026"
-  },
   "dashboard.head-title": {
     "message": "Kontrolpanel"
   },
@@ -1103,66 +1091,6 @@
   "dashboard.projects.table.type": {
     "message": "Type"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Tilgængelige nu"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Saldo"
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Klik for at læse hvordan Modrinth håndtere din omsætning."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Anslået {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Behandler"
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Modtaget"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Transaktioner"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Hævet"
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Download som CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Transaktions historik"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transaktioner"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Ingen transaktioner"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Dine udbetalinger og hævninger vil blive vist her."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Sidste måned"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Denne måned"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Se alle"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Alle år"
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Hæv fra din tilgængelige saldo til hvilken som helst udbetalingsmetode."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Hæv"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Hæv"
-  },
   "dashboard.sidebar.label.dashboard": {
     "message": "Kontrolpanel"
   },
@@ -1177,9 +1105,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Projekter"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Indtægter"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Konto"
@@ -1294,9 +1219,6 @@
   },
   "error.generic.451.title": {
     "message": "Indholdet er ikke tilgængeligt af lovmæssige årsager"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Tjek om Modrinth er nede på vores <status-link>Status side</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Venligst prøv igen om nogle minutter."
@@ -1999,15 +1921,6 @@
   },
   "report.not-for.bug-reports": {
     "message": "Fejl rapporter"
-  },
-  "report.not-for.dmca": {
-    "message": "DMCA-fjernelser"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Se vores <policy-link>Politik Om Pphavsret</policy-link>."
-  },
-  "report.note.copyright.1": {
-    "message": "Bemærk venligst, at du *ikke* indsender en anmodning om fjernelse i henhold til DMCA, men derimod en anmeldelse af genuploadet indhold."
   },
   "report.please-report": {
     "message": "Venligst anmeld:"

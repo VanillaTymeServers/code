@@ -1562,24 +1562,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Du hast dein Auszahlungslimit von <b>{withdrawLimit}</b> aufgebraucht. Du musst ein Steuerformular ausfüllen, um mehr abzuheben."
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "Du bist für {roles} qualifiziert. Verknüpfe dein Discord-Konto über Modrinth, dann synchronisieren wir diese automatisch."
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Discord verbinden"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Hol dir deine Discord-Rollen"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1M+ Downloads"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Ersteller"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Pride 2026"
-  },
   "dashboard.head-title": {
     "message": "Dashboard"
   },
@@ -1736,78 +1718,6 @@
   "dashboard.reports.title": {
     "message": "Meldungen"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Jetzt verfügbar"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Guthaben"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Geschätzte Einnahmen können sich bis sie verfügbar sind ändern."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Klicke um zu erfahren, wie Modrinth deine Einnahmen verwaltet."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Geschätzt {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "In Verarbeitung"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Die Einnahmen bleiben bis zum Monatsende in Bearbeitung und werden 60 Tage später verfügbar."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Erhalten"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Transaktionen"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Ausgezahlt"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Durch das Hochladen von Projekten auf Modrinth und das Auszahlen von Geld von deinem Konto stimmst du unseren <terms-link>Bedingungen für das Belohnungsprogramm</terms-link> zu. Erfahre mehr über das <info-link>Belohnungsprogramm</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Als CSV herunterladen"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Zahlungsverlauf"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transaktionen"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Keine Transaktionen"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Deine Auszahlungen und Abhebungen erscheinen hier."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Letzen Monat"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Diesen Monat"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Alle anzeigen"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Ganzes Jahr"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Deine Auszahlungen sind vorrübergehend gesperrt, da deine TIN oder SSN nicht mit den IRS-Aufzeichnungen übereinstimmt. Bitte kontaktiere den Support um dein Steuerformular zurückzusetzen und erneut einzureichen."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Hebe von deinem verfügbaren Guthaben über eine Zahlungsmethode ab."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Auszahlen"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Auszahlen"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Aktive Meldungen"
   },
@@ -1831,9 +1741,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Projekte"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Einnahmen"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Konto"
@@ -2002,9 +1909,6 @@
   },
   "error.generic.451.title": {
     "message": "Inhalt aufgrund rechtlicher Gründe nicht verfügbar"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Schaue auf unserer <status-link>Statusseite</status-link> nach, ob Modrinth offline ist."
   },
   "error.generic.default.list_title": {
     "message": "Bitte versuch es in ein paar Minuten erneut."
@@ -2849,15 +2753,6 @@
   "project.actions.view-project-type-dependents": {
     "message": "Abhängige {projectType} ansehen"
   },
-  "project.ai-image-warning-modal.body.1": {
-    "message": "Die Verwendung von KI-generierten Bildern zur Darstellung deines Projekts ist nicht erlaubt. Versuche, die Erkennung zu umgehen, können zur Sperrung deines Modrinth-Kontos führen."
-  },
-  "project.ai-image-warning-modal.body.2": {
-    "message": "Siehe Abschnitt 6 der <rules>Inhaltsrichtlinien von Modrinth</rules> für weitere Informationen zu unseren Richtlinien bezüglich generativer KI."
-  },
-  "project.ai-image-warning-modal.title": {
-    "message": "KI-generierte Bilder sind nicht erlaubt"
-  },
   "project.collections.create-new": {
     "message": "Neue Kollektion erstellen"
   },
@@ -3163,9 +3058,6 @@
   },
   "project.settings.delete-project.description.1": {
     "message": "Löscht dieses Projekt unwiderruflich von Modrinth. Gelöschte Projekte <emphasis>können weder von den Mitarbeitern noch vom Support von Modrinth wiederhergestellt werden</emphasis>."
-  },
-  "project.settings.delete-project.description.2": {
-    "message": "Dateien, die in dieses Projekt hochgeladen wurden und aktiv in auf Modrinth gehosteten Modpacks verwendet werden, bleiben möglicherweise weiterhin bestehen."
   },
   "project.settings.delete-project.title": {
     "message": "Projekt löschen"
@@ -3862,36 +3754,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Du kannst Fehler im <issues-link>Issue Tracker</issues-link> melden."
-  },
-  "report.not-for.dmca": {
-    "message": "DMCA-Abmahnungen"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Schau dir unsere <policy-link>Urheberrechtsrichtlinie</policy-link> an."
-  },
-  "report.note.ai-images.1": {
-    "message": "Wir haben kürzlich unsere Richtlinien aktualisiert und das Verwenden von KI-generierten Bildern in Icons, Galerien und Beschreibungen verboten. Wir geben Erstellern eine Übergangsfrist, um KI-Bilder aus ihren Projekten zu entfernen, bevor wir Meldungen dazu entgegennehmen."
-  },
-  "report.note.check-back-later": {
-    "message": "Schaue später erneut vorbei, sobald die Übergangsfrist abgelaufen ist. Meldungen dieser Art werden derzeit nicht entgegengenommen."
-  },
-  "report.note.copyright.1": {
-    "message": "Bitte beachte, dass du *keinen* DMCA-Löschungsantrag stellst, sondern lediglich einen Bericht über erneut hochgeladene Inhalte."
-  },
-  "report.note.copyright.2": {
-    "message": "Falls du stattdessen einen DMCA-Löschungsantrag stellen möchtest (was eine rechtliche Maßnahme ist), schau dir bitte unsere <copyright-policy-link>Urheberrechtsrichtlinie</copyright-policy-link> an."
-  },
-  "report.note.fully-ai-generated.1": {
-    "message": "Wir haben kürzlich unsere Richtlinien aktualisiert und vollständig KI-generierte Projekte verboten. Wir geben Erstellern eine Übergangsfrist, um vollständig KI-generierte Projekte anzupassen oder zu entfernen, bevor wir Meldungen dazu entgegennehmen."
-  },
-  "report.note.malicious.1": {
-    "message": "Meldungen für bösartige oder trügerische Inhalte müssen ausreichende Beweise für das Verhalten, z.B. Codeausschnitte, enthalten."
-  },
-  "report.note.malicious.2": {
-    "message": "Zusammenfassungen von Microsoft Defender, VirusTotal oder KI-Virus-Detektoren sind keine ausreichenden Beweise und werden nicht akzeptiert."
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "Angaben zum Inhalt sind eine neue Funktion, die wir gerade hinzugefügt haben. Wir geben Erstellern eine Übergangsfrist, um ihre Angaben auf den neuesten Stand zu bringen, bevor wir Meldungen über fehlende oder falsche Angaben entgegennehmen."
   },
   "report.please-report": {
     "message": "Bitte melde:"

@@ -1556,24 +1556,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Достигнут лимит вывода в <b>{withdrawLimit}</b>. Для снятия лимита заполните налоговую форму."
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "Вам доступны роли за {roles}. Привяжите Discord к аккаунту Modrinth, чтобы синхронизировать роли."
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Привязать Discord"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Получите роли в Discord"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1 млн скачиваний"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "статус автора"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "поддержку ЛГБТК+"
-  },
   "dashboard.head-title": {
     "message": "Панель управления"
   },
@@ -1730,78 +1712,6 @@
   "dashboard.reports.title": {
     "message": "Жалобы"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Доступно"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Баланс"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Сумма может измениться, прежде чем станет доступна."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Нажмите, чтобы узнать, как Modrinth рассчитывает доход."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Ожидается {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "В обработке"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Средства остаются в обработке до конца месяца и становятся доступными через 60 дней."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Получено"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Транзакций"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Выведено"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Загружая проекты на Modrinth и выводя деньги со своего счёта, вы соглашаетесь с нашими <terms-link>Условиями программы вознаграждений</terms-link>. Узнайте больше о <info-link>программе вознаграждений</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Скачать в формате CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "История транзакций"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Транзакции"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Нет транзакций"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Выплаты и выводы средств появятся здесь."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "В прошлом месяце"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "В этом месяце"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Посмотреть все"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Все годы"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Вывод средств временно заблокирован: указанный TIN или SSN не совпал с данными IRS. Свяжитесь с поддержкой для повторной отправки формы."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Выведите средства с баланса любым из доступных способов."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Вывести средства"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Вывод средств"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Активные жалобы"
   },
@@ -1825,9 +1735,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Проекты"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Доход"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Счёт"
@@ -1996,9 +1903,6 @@
   },
   "error.generic.451.title": {
     "message": "Контент недоступен по юридичес­ким причинам"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Проверьте доступность Modrinth на <status-link>странице статуса</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Повторите попытку через несколько минут."
@@ -2840,15 +2744,6 @@
   "project.actions.view-project-type-dependents": {
     "message": "Посмотреть зависимости {projectType}"
   },
-  "project.ai-image-warning-modal.body.1": {
-    "message": "Использование изображений от ИИ для представления своего проекта запрещено. Попытка обойти проверку приведёт к блокировке аккаунта Modrinth."
-  },
-  "project.ai-image-warning-modal.body.2": {
-    "message": "Подробности — в разделе 6 <rules>Правил контента Modrinth</rules>, про нашу политику в отношении ИИ-генерации."
-  },
-  "project.ai-image-warning-modal.title": {
-    "message": "ИИ-изображения запрещены"
-  },
   "project.collections.create-new": {
     "message": "Создать новую коллекцию"
   },
@@ -3154,9 +3049,6 @@
   },
   "project.settings.delete-project.description.1": {
     "message": "Проект будет удалён с Modrinth навсегда. Удалённые проекты <emphasis>невозможно восстановить</emphasis> через поддержку Modrinth."
-  },
-  "project.settings.delete-project.description.2": {
-    "message": "Файлы, загруженные в этот проект, которые активно используются в сборках, размещенных на Modrinth, могут продолжать существовать."
   },
   "project.settings.delete-project.title": {
     "message": "Удаление проекта"
@@ -3838,36 +3730,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Сообщайте об ошибках в <issues-link>трекере проекта</issues-link>."
-  },
-  "report.not-for.dmca": {
-    "message": "Для удаления по DMCA"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Ознакомьтесь с нашей <policy-link>политикой авторских прав</policy-link>."
-  },
-  "report.note.ai-images.1": {
-    "message": "Запрет на ИИ‑изображения в иконках, галереях и описаниях появился недавно. Мы дали авторам время на обновление проектов перед приёмом жалоб."
-  },
-  "report.note.check-back-later": {
-    "message": "Дождитесь окончания переходного периода. Жалобы этого типа пока не принимаются."
-  },
-  "report.note.copyright.1": {
-    "message": "Это жалоба на перезалив контента, а не запрос на удаление по DMCA."
-  },
-  "report.note.copyright.2": {
-    "message": "Для подачи претензии на удаление контента по DMCA изучите <copyright-policy-link>политику авторских прав</copyright-policy-link>."
-  },
-  "report.note.fully-ai-generated.1": {
-    "message": "Запрет на полностью созданные ИИ проекты появился недавно. Мы дали авторам время на обновление проектов перед приёмом жалоб."
-  },
-  "report.note.malicious.1": {
-    "message": "В жалобах на вредоносный контент нужны веские доказательства, например фрагменты кода."
-  },
-  "report.note.malicious.2": {
-    "message": "Отчётов Microsoft Defender, VirusTotal и ИИ‑сканеров недостаточно для доказательств."
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "Маркировка контента появилась недавно. Мы дали авторам время на обновление проектов перед приёмом жалоб."
   },
   "report.please-report": {
     "message": "На что жаловаться"

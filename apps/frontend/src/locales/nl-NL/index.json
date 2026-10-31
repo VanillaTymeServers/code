@@ -1556,24 +1556,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Je hebt je opnamelimiet <b>{withdrawLimit}</b> bereikt. Je moet een belastingformulier invullen om meer geld op te nemen."
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "Je komt in aanmerking voor {roles}. Koppel je Discord-account via Modrinth en wij zorgen ervoor dat ze automatisch worden gesynchroniseerd."
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Verbind Discord"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Claim je Discord-rollen"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1M+ Downloads"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Maaker"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Pride 2026"
-  },
   "dashboard.head-title": {
     "message": "Dashboard"
   },
@@ -1730,78 +1712,6 @@
   "dashboard.reports.title": {
     "message": "Rapporten"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Nu beschikbaar"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Saldo"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Geschatte winst kan worden gewijzigd totdat het beschikbaar wordt gesteld."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Klik om te lezen over hoe Modrinth omgaat met jouw inkomsten."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Geschatte {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Verwerking"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Inkomsten blijven tot het einde van de maand in verwerking en komt dan 60 dagen later beschikbaar."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Ontvangen"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Transacties"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Opgenomen"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Door projecten op Modrinth te uploaden en geld van je account op te nemen, ga je akkoord met onze <terms-link>voorwaarden voor het beloningsprogramma</terms-link>. Lees meer over het <info-link>beloningsprogramma</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Download als CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Transactiegeschiedenis"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transacties"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Geen transacties"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Je uitbetalingen en opnames zullen hier verschijnen."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Afgelopen maand"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Deze maand"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Zie alle"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Alle jaren"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Je opnames zijn tijdelijk geblokkeerd omdat je TIN of SSN niet overeenkomt met de gegevens van de IRS. Neem contact op met de klantenservice om je belastingformulier opnieuw in te vullen en in te dienen."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": ""
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Opnemen"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Opnemen"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Actieve rapporten"
   },
@@ -1825,9 +1735,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Projecten"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Omzet"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Account"
@@ -1996,9 +1903,6 @@
   },
   "error.generic.451.title": {
     "message": "Content niet beschikbaar om juridische redenen"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Controleer of Modrinth een storing heeft op onze <status-link>Status pagina</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Probeer alstublieft opnieuw in een paar minuten."
@@ -2843,15 +2747,6 @@
   "project.actions.view-project-type-dependents": {
     "message": "Afhankelijkheden van {projectType} bekijken"
   },
-  "project.ai-image-warning-modal.body.1": {
-    "message": "Het gebruik van ai gemaakte afbeeldingen in je project is niet toegestaan. Het proberen van de detectie omzeilen is niet toegestaan en kan er voor zorgen voor het uitschakelen van uw account."
-  },
-  "project.ai-image-warning-modal.body.2": {
-    "message": "Zie paragraaf 6 van <rules>de inhoudsregels van Modrinth</rules> voor meer informatie over ons beleid wat betreft generatieve AI."
-  },
-  "project.ai-image-warning-modal.title": {
-    "message": "AI-gegenereerde afbeeldingen zijn niet toegestaan"
-  },
   "project.collections.create-new": {
     "message": "Nieuwe collectie aanmaken"
   },
@@ -3157,9 +3052,6 @@
   },
   "project.settings.delete-project.description.1": {
     "message": "Permanent verwijder dit project van modrinth. Verwijderde projecten <emphasis>kunnen niet hersteld worden</emphasis> door modrinth of help medewerkers."
-  },
-  "project.settings.delete-project.description.2": {
-    "message": "Bestanden geüpload naar dit project zij actief gebruikt in modpacks op Modrith en kan nog steeds blijven bestaan"
   },
   "project.settings.delete-project.title": {
     "message": "Verwijder project"
@@ -3655,36 +3547,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Je kan problemen melden bij hun <issues-link>problemen tracker</issues-link>."
-  },
-  "report.not-for.dmca": {
-    "message": "DMCA neerhalingen"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Zie onze <policy-link>Auteursrechtbeleid</policy-link>."
-  },
-  "report.note.ai-images.1": {
-    "message": "We hebben zojuist onze regels bijgewerkt om AI-gegenereerde afbeeldingen te verbieden in pictogrammen, galerijen en beschrijvingen. We geven makers een vrijwaringsperiode om AI-afbeeldingen uit hun projecten te verwijderen voordat we rapporten voor hen gaan accepteren."
-  },
-  "report.note.check-back-later": {
-    "message": "Kom later terug zodra de genadeperiode is afgelopen. Rapporten van dit type worden op dit moment niet geaccepteerd."
-  },
-  "report.note.copyright.1": {
-    "message": "Houd er rekening mee dat je *geen* DMCA-verzoek tot verwijdering indient, maar een melding van opnieuw geüploade inhoud."
-  },
-  "report.note.copyright.2": {
-    "message": "Als je in plaats hiervan een DMCA-verzoek tot verwijdering (een juridische procedure) wilde indienen, raadpleeg dan ons <copyright-policy-link>auteursrechtbeleid</copyright-policy-link>."
-  },
-  "report.note.fully-ai-generated.1": {
-    "message": "We hebben zojuist onze regels bijgewerkt om AI-gegenereerde projecten volledig te verbieden. We geven makers een vrijwaringsperiode om door AI-gegenereerde projecten volledig bij te werken of op te nemen voordat we rapporten voor hen accepteren."
-  },
-  "report.note.malicious.1": {
-    "message": "Rapporten voor malware en niet geaccepteerde content moeten bewijs hebben zoals code voorbeelden."
-  },
-  "report.note.malicious.2": {
-    "message": "Samenvattingen van Microsoft Defender, VirusTotal, of AI malware is geen goede vorm van bewijs en zal niet geaccepteerd worden."
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "Content onthullingen zijn een nieuwe functie die we zojuist hebben toegevoegd. We geven de makers een vrijwaringsperiode om hun onthullingen up-to-date te krijgen voordat we rapporten voor ontbrekende of onjuiste onthullingen gaan accepteren."
   },
   "report.please-report": {
     "message": "Graag rapporteer:"

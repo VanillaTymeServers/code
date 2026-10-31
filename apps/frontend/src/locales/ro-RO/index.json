@@ -680,39 +680,6 @@
   "dashboard.creator-withdraw-modal.tremendous-details.unverified-email-header": {
     "message": "Email neverificat"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Disponibil acum"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Balanta"
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Estimat {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Procesare"
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Primit"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Tranzactii"
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Descarca ca CSV"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Tranzactii"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Fara tranzactii"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Plățile tale vor apărea aici."
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Vezi toate"
-  },
   "dashboard.withdraw.completion.date": {
     "message": "Data"
   },
@@ -742,9 +709,6 @@
   },
   "error.generic.451.title": {
     "message": "Conținut indisponibil din motive legale"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Verifică dacă Modrinth este picat pe a noastră <status-link>Pagină de status</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Te rog încercă din nou în câteva minute."
@@ -1273,24 +1237,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Poți raporta erori în <issues-link>tracker-ul de probleme</issues-link> al acestora."
-  },
-  "report.not-for.dmca": {
-    "message": "Retrageri DMCA"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Vezi <policy-link>Politica noastră de Drepturi de Autor</policy-link>."
-  },
-  "report.note.copyright.1": {
-    "message": "Te rugăm să reții că *nu* trimiți o cerere de retragere DMCA, ci mai degrabă un raport privind conținutul reîncărcat."
-  },
-  "report.note.copyright.2": {
-    "message": "Dacă intenționai să depui o cerere de retragere DMCA (care reprezintă o acțiune legală), te rugăm să consulți <copyright-policy-link>Politica noastră de Drepturi de Autor</copyright-policy-link>."
-  },
-  "report.note.malicious.1": {
-    "message": "Rapoartele pentru conținut malițios sau înșelător trebuie să includă dovezi consistente ale comportamentului, cum ar fi exemple de cod."
-  },
-  "report.note.malicious.2": {
-    "message": "Rezumatelor provenite de la Microsoft Defender, VirusTotal sau de la sisteme AI de detectare a malware-ului nu li se acordă suficientă valoare ca dovezi și nu vor fi acceptate."
   },
   "report.please-report": {
     "message": "Te rugăm să raportezi:"

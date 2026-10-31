@@ -4358,30 +4358,6 @@
   "report.item-type.version": {
     "defaultMessage": "wersję"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "Obrazy wygenerowane przez AI w ikonie, galerii lub opisie"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "Ponownie przesłane prace"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Projekt w pełni wygenerowany przez sztuczną inteligancję"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Nieodpowiednie treści"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Złośliwe"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": ""
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Skradziona nazwa"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Spam"
-  },
   "s.bg": {
     "defaultMessage": "Przetwarzanie w tle"
   },
@@ -6085,9 +6061,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "Zdjęcie profilowe"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "Twoje informacje profilowe są publicznie <profile-link>dostępne na Modrinth</profile-link> i poprzez <docs-link>Modrinth API</docs-link>."
   },
   "settings.profile.save-error": {
     "defaultMessage": "Nie udało się zaktualizować profilu"

@@ -4319,30 +4319,6 @@
   "report.item-type.version": {
     "defaultMessage": "версія"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "Використання ШІ для значків і зображень"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "Перезавантажена робота"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Проєкт, повністю створений ШІ"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Неналежний вміст"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Шкідливий вміст"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Відсутня або некоректна інформація"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Захоплення назв"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Спам"
-  },
   "s.bg": {
     "defaultMessage": "Запуск завдання в тлі"
   },
@@ -6046,9 +6022,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "Зображення профілю"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "Інформація з вашого профілю є <profile-link>загальнодоступною на Modrinth</profile-link> та через <docs-link>Modrinth API</docs-link>."
   },
   "settings.profile.save-error": {
     "defaultMessage": "Не вдалося оновити профіль"

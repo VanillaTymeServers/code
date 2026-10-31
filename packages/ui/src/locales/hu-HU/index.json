@@ -4349,30 +4349,6 @@
   "report.item-type.version": {
     "defaultMessage": "verzió"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "MI-vel létrehozott képek az ikonban, a galériában vagy a leírásban"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "Újrafeltöltött munka"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Teljes egészében MI-vel készített projekt"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Nem megfelelő tartalom"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Kártékony tartalom"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Hiányzó vagy helytelen tájékoztatás"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Névbitorlás"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Spam"
-  },
   "s.bg": {
     "defaultMessage": "Háttérfeladat fut"
   },
@@ -6076,9 +6052,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "Profilkép"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "A profiladataid nyilvánosan <profile-link>megtekinthetők a Modrinthon</profile-link> és a <docs-link>Modrinth API</docs-link>-n keresztül."
   },
   "settings.profile.save-error": {
     "defaultMessage": "A profil frissítése nem sikerült"

@@ -1508,24 +1508,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "لقد استنفدت رصيدك <b>{withdrawLimit}</b> حد السحب. يجب عليك تعبئة نموذج ضريبي لسحب مبلغ أكبر."
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "أنت مؤهل للحصول على {roles}. اربط حساب Discord الخاص بك عبر Modrinth وسنزامنها تلقائيًا."
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "ربط Discord"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "المطالبة بأدوار Discord الخاصة بك"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "أكثر من 1 مليون تنزيل"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "المنشئ"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Pride 2026"
-  },
   "dashboard.head-title": {
     "message": "لوحة التحكم"
   },
@@ -1682,75 +1664,6 @@
   "dashboard.reports.title": {
     "message": "البلاغات"
   },
-  "dashboard.revenue.available-now": {
-    "message": "متاح الآن"
-  },
-  "dashboard.revenue.balance": {
-    "message": "الرصيد"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "قد تخضع الإيرادات المقدرة للتغيير حتى يتم توفيرها. "
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "اضغط لكي تعرف كيف Modrinth يستحمل إيراداتك"
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "مقدر {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "معالجة"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "تبقى الإيرادات قيد المعالجة حتى نهاية الشهر، ثم تصبح متاحة بعد 60 يومًا."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "تلقى"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "المعاملات"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "تم سحبه"
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "قم بالتنزيل كملف CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "سجل المعاملات"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "المعاملات"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "لا توجد معاملات"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "ستظهر علميات الدفع والسحب الخاصة بك هنا."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "الشهر الماضي"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "هذا الشهر"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "عرض الكل"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "كل السنوات"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "تم تعليق عمليات السحب مؤقتًا لأن رقم التعريف الضريبي أو رقم الضمان الاجتماعي الخاص بك لم يتطابق مع سجلات مصلحة الضرائب الأمريكية. يرجى التواصل مع الدعم لإعادة تعيين رقم التعريف الضريبي وإعادة إرسال نموذجك الضريبي."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "اسحب من رصيدك المتاح إلى أي طريقة دفع."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "سحب"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "سحب"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "البلاغات النشطة"
   },
@@ -1774,9 +1687,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "المشاريع"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "الإيرادات"
   },
   "dashboard.withdraw.completion.account": {
     "message": "الحساب"
@@ -1939,9 +1849,6 @@
   },
   "error.generic.451.title": {
     "message": "المحتوى غير متاح لأسباب قانونية"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "تحقق مما إذا كان مودرنث متوقفًا على <status-link>صفحة الحالة</status-link> الخاصة بنا."
   },
   "error.generic.default.list_title": {
     "message": "يرجى المحاولة مرة أخرى بعد بضع دقائق."

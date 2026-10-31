@@ -1562,24 +1562,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Has agotado tu límite de retiro de <b>{withdrawLimit}</b>. Debes completar un formulario de impuestos para retirar más."
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "Cumples los requisitos para los roles {roles}. Vincula tu cuenta de Discord a través de Modrinth y los sincronizaremos automáticamente."
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Vincular Discord"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Reclama tus roles de Discord"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "+1 M de descargas"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Creador"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Orgullo 2026"
-  },
   "dashboard.head-title": {
     "message": "Panel de control"
   },
@@ -1736,78 +1718,6 @@
   "dashboard.reports.title": {
     "message": "Reportes"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Disponible ahora"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Saldo"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Los ingresos estimados pueden estar sujetos a cambios hasta que estén disponibles."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Haz clic aquí para leer acerca del cómo Modrinth gestiona tus ingresos."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Fecha estimada {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Procesando"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Los ingresos permanecen en proceso hasta final de mes, luego están disponibles 60 días después."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Recibido"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Transacciones"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Retiros"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Al subir proyectos a Modrinth y retirar dinero de tu cuenta, aceptas nuestros <terms-link>Términos del programa de recompensas</terms-link>. Aprende más acerca del <info-link>Programa de recompensas</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Descargar como CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Historial de transacciones"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transacciones"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Sin transacciones"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Tus pagos y retiros aparecerán aquí."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Mes anterior"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Este mes"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Ver todo"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Todos los años"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Tus retiros están temporalmente bloqueados por que tu TIN o SSN no coinciden con los registros del IRS. Conte en contacto con el equipo de soporte para restablecerlos y reenviar tu formulario fiscal."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Transfiere fondos de tu saldo disponible a cualquier método de pago."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Retira"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Retirar"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Reportes activos"
   },
@@ -1831,9 +1741,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Proyectos"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Ingresos"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Cuenta"
@@ -2002,9 +1909,6 @@
   },
   "error.generic.451.title": {
     "message": "Contenido no disponible por razones legales"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Revisa si Modrinth está caído en nuestra <status-link>Página de estado</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Vuelve a intentarlo en unos minutos."
@@ -2849,15 +2753,6 @@
   "project.actions.view-project-type-dependents": {
     "message": "Ver dependencias de {projectType}"
   },
-  "project.ai-image-warning-modal.body.1": {
-    "message": "No está permitido utilizar imágenes generadas por IA para representar tu proyecto. Intentar eludir la detección puede conllevar la suspensión de tu cuenta de Modrinth."
-  },
-  "project.ai-image-warning-modal.body.2": {
-    "message": "Consulte la sección 6 de <rules>Modrinth's Content Rules</rules> para obtener más información sobre nuestra política generativa de IA."
-  },
-  "project.ai-image-warning-modal.title": {
-    "message": "Imágenes generadas por IA no son permitidas"
-  },
   "project.collections.create-new": {
     "message": "Crear nueva colección"
   },
@@ -3163,9 +3058,6 @@
   },
   "project.settings.delete-project.description.1": {
     "message": "Elimina permanentemente este proyecto de Modrinth. Los proyectos borrados <emphasis>no pueden ser recuperados</emphasis> por el personal o soporte de Modrinth."
-  },
-  "project.settings.delete-project.description.2": {
-    "message": "Los archivos subidos a este proyecto que son activamente usados en Modpacks alojados en Modrinth pueden seguir existiendo."
   },
   "project.settings.delete-project.title": {
     "message": "Eliminar proyecto"
@@ -3862,36 +3754,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Puedes reportar errores en su <issues-link>rastreador de errores</issues-link>."
-  },
-  "report.not-for.dmca": {
-    "message": "Retirada de contenidos DMCA"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Consulta nuestra <policy-link>Política de derechos de autor</policy-link>."
-  },
-  "report.note.ai-images.1": {
-    "message": "Acabamos de actualizar nuestras reglas para prohibir imágenes generadas por AIs en iconos, galerías y descripciones. Estamos dando a los creadores un período de gracia para eliminar imágenes hechas con IA de sus proyectos antes de empezar a aceptar reportes sobre ello."
-  },
-  "report.note.check-back-later": {
-    "message": "Vuelve a comprobar más tarde una vez finalizado el período de gracia. Los reportes de este tipo no están siendo aceptados en este momento."
-  },
-  "report.note.copyright.1": {
-    "message": "Ten en cuenta que *no* estás enviando una solicitud de retirada DMCA, sino reportando contenido re-subido."
-  },
-  "report.note.copyright.2": {
-    "message": "Si lo que querías era presentar una solicitud de retirada DMCA (que es una acción legal), consulta nuestra <copyright-policy-link>Política de derechos de autor</copyright-policy-link>."
-  },
-  "report.note.fully-ai-generated.1": {
-    "message": "Acabamos de actualizar nuestras reglas para prohibir proyectos totalmente generados por AI. Estamos dando a los creadores un período de gracia para actualizar o eliminar completamente los proyectos generados por AIs antes de empezar a aceptar reportes sobre ello."
-  },
-  "report.note.malicious.1": {
-    "message": "Los reportes de contenido malicioso o engañoso deben incluir evidencia sustancial de este comportamiento, como muestras de código."
-  },
-  "report.note.malicious.2": {
-    "message": "Los resúmenes de Microsoft Defender, VirusTotal o la detección de malware por IA no son pruebas suficientes y no serán aceptados."
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "Las divulgaciones de contenido son una nueva característica que acabamos de añadir. Estamos dando a los creadores un período de gracia para que se actualicen sus divulgaciones antes de empezar a aceptar los informes de divulgaciones faltantes o incorrectas."
   },
   "report.please-report": {
     "message": "Por favor, informa:"

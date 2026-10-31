@@ -1562,24 +1562,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "<b>{withdrawLimit}</b> çekme limitinizi kadarını kullandınız. Daha fazla çekmek için vergi formunu gerekir."
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "{roles} için uygunsun. Discord hesabını Modrinth üzerinden bağla, bizde bunları otomatik olarak senkronize edelim."
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Discord bağla"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Discord rollerini al"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1M+ İndirme"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Oluşturucu"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Onur 2026"
-  },
   "dashboard.head-title": {
     "message": "Kontrol Paneli"
   },
@@ -1736,78 +1718,6 @@
   "dashboard.reports.title": {
     "message": "Raporlar"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Şu anda mevcut"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Bakiye"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Tahmini gelir, kullanılabilir hale gelene kadar değişikliğe tabi olabilir."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Modrinth'in gelirinizi nasıl işlediği hakkında bilgi almak için tıklayın."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Tahminen {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "İşleniyor"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Gelir ay sonuna kadar işlemde kalır, ardından 60 gün sonra kullanılabilir hale gelir."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Alındı"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "İşlemler"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Çekilen"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Modrinth'e proje yükleyerek ve hesabınızdan para çekerek <terms-link>Ödül Programı Şartlarımızı</terms-link> kabul etmiş olursunuz. <info-link>Ödül Programı</info-link> hakkında daha fazla bilgi edinin."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "CSV olarak indir"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "İşlem geçmişi"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "İşlemler"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "İşlem bulunamadı"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Ödeme ve para çekimleriniz burada görünür."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Geçen ay"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Bu ay"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Hepsini göster"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Tüm zamanlar"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "TIN veya SSN numaranız IRS kayıtlarıyla eşleşmediği için para çekme işlemleriniz geçici olarak engellendi. Vergi formunuzu sıfırlamak ve yeniden göndermek için destekle iletişime geçin."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Mevcut bakiyenizden herhangi bir ödeme yöntemine para çekin."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Para Çek"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Para Çek"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Aktif raporlar"
   },
@@ -1831,9 +1741,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Projeler"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Gelir"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Hesap"
@@ -2002,9 +1909,6 @@
   },
   "error.generic.451.title": {
     "message": "Bu içerik, yasal nedenlerden dolayı erişilemez"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "<status-link>Durum sayfamızdan</status-link> Modrinth'in çöküp çökmediğini kontrol edin."
   },
   "error.generic.default.list_title": {
     "message": "Lütfen bir kaç dakika içinde tekrar dene."
@@ -2849,15 +2753,6 @@
   "project.actions.view-project-type-dependents": {
     "message": "{projectType} bağımlılıklarını görüntüle"
   },
-  "project.ai-image-warning-modal.body.1": {
-    "message": "AI ile oluşturulmuş görselleri projenizi temsil etmek için kullanmak yasaktır. Tespiti atlatmaya çalışmak, Modrinth hesabınızın askıya alınmasına yol açabilir."
-  },
-  "project.ai-image-warning-modal.body.2": {
-    "message": "Üretken AI politikamız hakkında daha fazla bilgi için <rules>Modrinth İçerik Kuralları</rules>’nın 6. bölümüne bakın."
-  },
-  "project.ai-image-warning-modal.title": {
-    "message": "AI tarafından oluşturulmuş resimler kabul edilmiyor"
-  },
   "project.collections.create-new": {
     "message": "Yeni koleksiyon oluştur"
   },
@@ -3154,9 +3049,6 @@
   },
   "project.settings.delete-project.description.1": {
     "message": "Proje Modrinth'den kalıcı olarak kaldırıldı. Kaldırılan projeler Modrinth personeli veya destek ekibi tarafından <emphasis>kurtarılamaz</emphasis>."
-  },
-  "project.settings.delete-project.description.2": {
-    "message": "Bu projeye yüklenen ve Modrinth’te barındırılan Mod Paketlerinde aktif olarak kullanılan dosyalar varlığını sürdürebilir."
   },
   "project.settings.delete-project.title": {
     "message": "Projeyi kaldır"
@@ -3631,36 +3523,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "<issues-link>Hata izleyicilerinden</issues-link> hataları bildirebilirsiniz."
-  },
-  "report.not-for.dmca": {
-    "message": "DMCA kaldırmaları"
-  },
-  "report.not-for.dmca.description": {
-    "message": "<policy-link>Telif Hakkı Politikası</policy-link>'mızı inceleyin."
-  },
-  "report.note.ai-images.1": {
-    "message": "Simgelerde, galerilerde ve açıklamalarda yapay zeka tarafından üretilen görsellerin kullanılmasını yasaklamak üzere kurallarımızı güncelledik. Bu görsellerle ilgili bildirimleri kabul etmeye başlamadan önce, içerik oluşturuculara projelerinden yapay zeka görsellerini kaldırmaları için bir geçiş süresi tanıyoruz."
-  },
-  "report.note.check-back-later": {
-    "message": "Bekleme süresi sona erdiğinde lütfen daha sonra tekrar kontrol edin. Şu anda bu tür bildirimler kabul edilmemektedir."
-  },
-  "report.note.copyright.1": {
-    "message": "Lütfen bir DMCA kaldırma talebi *değil* ama yeniden yüklenmiş içeriğin bir bildirisini göndereceğinizi dikkate alın."
-  },
-  "report.note.copyright.2": {
-    "message": "Eğer bir DMCA kaldırma talebi (yasal bir eylem olan) iletmeyi kastediyorsanız, bunun yerine <copyright-policy-link>Telif Hakkı Politikası</copyright-policy-link>'na göz atın."
-  },
-  "report.note.fully-ai-generated.1": {
-    "message": "Kurallarımızı, tamamen yapay zekâ ile üretilmiş projeleri yasaklayacak şekilde güncelledik. Yapımcılara, tamamen yapay zekâ ile üretilmiş projelerini güncellemeleri veya kaldırmaları için bir süre tanıyoruz; bu sürenin ardından bu projelerle ilgili şikâyetleri kabul etmeye başlayacağız."
-  },
-  "report.note.malicious.1": {
-    "message": "Kötü niyetli ve yanıltıcı içeriklerin bildirimi, kod örnekleri gibi bu davranışın sağlam kanıtlarını içermeli."
-  },
-  "report.note.malicious.2": {
-    "message": "Microsoft Defender, VirusTotal veya AI malware tespitlerinden çıkan özetler, yeterli kanıt biçimlerinden değildir ve kabul edilmeyecektir."
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "İçerik açıklamaları, yeni eklediğimiz bir özelliktir. Yapımcılara, eksik veya yanlış açıklamalar için raporları kabul etmeye başlamadan önce açıklamalarını güncellemek için bir süre tanıyoruz."
   },
   "report.please-report": {
     "message": "Lütfen bildirin:"

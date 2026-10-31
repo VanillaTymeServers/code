@@ -1178,15 +1178,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Anda telah menggunakan had pengeluaran anda sebanyak <b>{withdrawLimit}</b>. Anda mesti melengkapkan borang cukai untuk mengeluarkan lebih banyak wang."
   },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1J+ Muat Turun"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Pencipta"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Pride 2026"
-  },
   "dashboard.head-title": {
     "message": "Papan Pemuka"
   },
@@ -1319,78 +1310,6 @@
   "dashboard.reports.title": {
     "message": "Laporan"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Tersedia sekarang"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Baki"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Anggaran hasil pendapatan mungkin tertakluk kepada perubahan sehingga ia tersedia."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Klik untuk membaca tentang cara Modrinth mengendalikan pendapatan anda."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Anggaran {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Sedang diproses"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Hasil pendapatan kekal dalam pemprosesan sehingga akhir bulan, dan kemudian akan tersedia 60 hari kemudian."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Diterima"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Transaksi"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Dikeluarkan"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Dengan memuat naik projek ke Modrinth dan mengeluarkan wang daripada akaun anda, anda bersetuju dengan <terms-link>Terma Program Ganjaran</terms-link> kami. Ketahui lebih lanjut tentang <info-link>Program Ganjaran</info-link> ini."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Muat turun sebagai CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Sejarah transaksi"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transaksi"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Tiada transaksi"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Pembayaran dan pengeluaran anda akan dipaparkan di sini."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "Bulan lalu"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "Bulan ini"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Lihat semua"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Semua tahun"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Pengeluaran anda telah dikunci buat sementara waktu kerana TIN atau SSN anda tidak sepadan dengan rekod IRS. Sila hubungi sokongan untuk menetapkan semula dan menghantar semula borang cukai anda."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Keluarkan wang daripada baki yang tersedia kepada mana-mana kaedah pembayaran."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Pengeluaran"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Pengeluaran"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Laporan yang aktif"
   },
@@ -1414,9 +1333,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Projek"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Pendapatan"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Akaun"
@@ -1552,9 +1468,6 @@
   },
   "error.generic.451.title": {
     "message": "Kandungan tidak tersedia atas sebab undang-undang"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Semak sama ada Modrinth tidak berfungsi pada <status-link>laman Status</status-link> kami."
   },
   "error.generic.default.list_title": {
     "message": "Sila cuba lagi dalam beberapa minit."
@@ -2572,24 +2485,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Anda boleh melaporkan pepijat kepada <issues-link>penjejak isu</issues-link> mereka."
-  },
-  "report.not-for.dmca": {
-    "message": "Permintaan alih keluar DMCA"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Lihat <policy-link>Dasar Hak Cipta</policy-link> kami."
-  },
-  "report.note.copyright.1": {
-    "message": "Sila ambil perhatian bahawa anda *bukan* menyerahkan permintaan alih keluar DMCA, sebaliknya laporan kandungan yang dimuat naik semula."
-  },
-  "report.note.copyright.2": {
-    "message": "Jika anda berniat untuk memfailkan permintaan alih keluar DMCA (yang merupakan tindakan undang-undang), sila lihat <copyright-policy-link>Dasar Hak Cipta</copyright-policy-link> kami."
-  },
-  "report.note.malicious.1": {
-    "message": "Laporan untuk kandungan berniat jahat atau mengelirukan mesti mengandungi bukti besar tentang tingkah laku itu, seperti sampel kod."
-  },
-  "report.note.malicious.2": {
-    "message": "Ringkasan daripada Microsoft Defender, VirusTotal atau pengesanan perisian hasad AI bukanlah bentuk bukti yang mencukupi dan tidak akan diterima."
   },
   "report.please-report": {
     "message": "Tolong laporkan:"

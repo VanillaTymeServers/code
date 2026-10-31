@@ -4097,27 +4097,6 @@
   "report.item-type.version": {
     "defaultMessage": "version"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "AI-genererade bilder i ikonen, galleriet eller beskrivningen"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Fullt AI-genererat projekt"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Olämplig"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Skadlig"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Saknad eller felaktigt upplysande"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Paxande av namn"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Spam"
-  },
   "s.bg": {
     "defaultMessage": "Bakgrundsprocess körs"
   },
@@ -5644,9 +5623,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "Profilbild"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "Din profilinformation är offentligt <profile-link>synlig på Modrinth</profile-link> och genom <docs-link>Modrinth API</docs-link>:et."
   },
   "settings.profile.save-error": {
     "defaultMessage": "Kunde inte att uppdatera profil"

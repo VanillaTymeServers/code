@@ -1562,24 +1562,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "你已用盡你的提領額度：<b>{withdrawLimit}</b>。你必須填寫一份稅務表單才能提領更多金額。"
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "你符合以下身分組的領取資格：{roles}。透過 Modrinth 連結你的 Discord 帳號，我們將自動為你同步。"
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "連結 Discord 帳號"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "領取你的 Discord 身分組"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "破百萬下載"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "創作者"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "2026年驕傲月"
-  },
   "dashboard.head-title": {
     "message": "資訊主頁"
   },
@@ -1736,78 +1718,6 @@
   "dashboard.reports.title": {
     "message": "檢舉"
   },
-  "dashboard.revenue.available-now": {
-    "message": "可提領"
-  },
-  "dashboard.revenue.balance": {
-    "message": "餘額"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "預估收益在開放領取前可能有所變動。"
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "按這裡了解 Modrinth 如何處理你的收入。"
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "預計時間：{date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "處理中"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "收入會一直處於處理中狀態直到月底，然後在 60 天後才會變成可供提領的金額。"
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "已收到"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "交易"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "提領"
-  },
-  "dashboard.revenue.tos": {
-    "message": "透過上傳專案至 Modrinth 並從您的帳號中提領款項，即表示您同意我們的《<terms-link>獎勵計畫條款</terms-link>》。請了解更多關於《<info-link>獎勵計畫</info-link>》的資訊。"
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "下載為 CSV 檔案"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "交易紀錄"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "交易"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "沒有交易紀錄"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "你的付款和提領紀錄將顯示在這裡。"
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "上個月"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "這個月"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "查看全部"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "所有年份"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "由於你的稅務識別碼 (TIN) 或社會安全號碼 (SSN) 與美國國稅局 (IRS) 的紀錄不符，你的提領功能已暫時鎖定。請聯絡客服以重設並重新提交你的稅務表單。"
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "從你可用的餘額提領至任何付款方式。"
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "提領"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "提領"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "處理中的檢舉"
   },
@@ -1831,9 +1741,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "專案"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "收益"
   },
   "dashboard.withdraw.completion.account": {
     "message": "帳戶"
@@ -2002,9 +1909,6 @@
   },
   "error.generic.451.title": {
     "message": "因法律原因無法提供內容"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "前往我們的<status-link>狀態頁面</status-link>，查看 Modrinth 是不是停機了。"
   },
   "error.generic.default.list_title": {
     "message": "請在幾分鐘後再試一次。"
@@ -2849,15 +2753,6 @@
   "project.actions.view-project-type-dependents": {
     "message": "查看{projectType}相依項"
   },
-  "project.ai-image-warning-modal.body.1": {
-    "message": "Modrinth 上不允許使用 AI 生成的圖片來呈現你的專案。試圖規避偵測機制可能會導致你的 Modrinth 帳號遭到停權。"
-  },
-  "project.ai-image-warning-modal.body.2": {
-    "message": "關於 Modrinth 的生成式 AI 政策的更多資訊，請參閱我們的《<rules>內容規範</rules>》第 6 節。"
-  },
-  "project.ai-image-warning-modal.title": {
-    "message": "不允許使用 AI 生成的圖片"
-  },
   "project.collections.create-new": {
     "message": "建立新收藏"
   },
@@ -3163,9 +3058,6 @@
   },
   "project.settings.delete-project.description.1": {
     "message": "將這個專案從 Modrinth 中永久刪除。Modrinth 的工作人員和客服團隊<emphasis>無法還原</emphasis>已刪除的專案。"
-  },
-  "project.settings.delete-project.description.2": {
-    "message": "如果上傳到這個專案的檔案目前仍被 Modrinth 上的模組包使用，檔案可能會繼續存在。"
   },
   "project.settings.delete-project.title": {
     "message": "刪除專案"
@@ -3862,36 +3754,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "你可以將錯誤回報至他們的<issues-link>問題追蹤器</issues-link>。"
-  },
-  "report.not-for.dmca": {
-    "message": "DMCA 下架"
-  },
-  "report.not-for.dmca.description": {
-    "message": "請參閱我們的《<policy-link>著作權政策</policy-link>》。"
-  },
-  "report.note.ai-images.1": {
-    "message": "我們剛更新了內容規範，禁止在圖示、圖庫及描述中使用 AI 生成的圖片。在我們開始受理這類檢舉之前，我們將給予創作者一段寬限期，以便他們從專案中移除 AI 生成的圖片。"
-  },
-  "report.note.check-back-later": {
-    "message": "請在寬限期結束後再回來查看。目前暫不受理這類檢舉。"
-  },
-  "report.note.copyright.1": {
-    "message": "請注意，這「不是」DMCA 下架要求，而是針對重新上傳內容進行檢舉。"
-  },
-  "report.note.copyright.2": {
-    "message": "如果你原本打算提交 DMCA 下架要求（此為法律行動），則請參閱我們的《<copyright-policy-link>著作權政策</copyright-policy-link>》。"
-  },
-  "report.note.fully-ai-generated.1": {
-    "message": "我們剛更新了內容規範，禁止完全由 AI 生成的作品。在我們開始受理這類檢舉之前，我們將給予創作者一段寬限期，以便他們更新或下架完全由 AI 生成的專案。"
-  },
-  "report.note.malicious.1": {
-    "message": "針對惡意或欺騙性內容的檢舉，必須附上該行為的實質證據，例如程式碼樣本。"
-  },
-  "report.note.malicious.2": {
-    "message": "Microsoft Defender、VirusTotal 或 AI 惡意軟體偵測的摘要，不構成充分證據，且將不予採納。"
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "內容揭露資訊是我們剛新增的功能。在我們開始受理缺少或不正確揭露資訊的檢舉之前，我們將給予創作者一段寬限期，以便他們將揭露資訊更新至最新狀態。"
   },
   "report.please-report": {
     "message": "請檢舉："

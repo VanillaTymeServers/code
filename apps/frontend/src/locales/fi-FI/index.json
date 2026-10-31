@@ -428,15 +428,6 @@
   "dashboard.reports.title": {
     "message": "Raportit"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Saatavilla nyt"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Prosessoidaan"
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Lataa CSV-tiedostona"
-  },
   "error.collection.404.list_item.1": {
     "message": "Saatoit kirjoittaa kokoelman URL osoitteen väärin."
   },

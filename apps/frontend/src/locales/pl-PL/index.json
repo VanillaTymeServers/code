@@ -1559,24 +1559,6 @@
   "dashboard.creator-withdraw-modal.withdraw-limit-used": {
     "message": "Przekroczono limit wypłat (<b>{withdrawLimit}</b>). Musisz wypełnić formularz podatkowy, by wypłacić więcej."
   },
-  "dashboard.discord-roles.banner.body": {
-    "message": "Możesz otrzymać role: {roles}. Połącz swoje konto Discord poprzez Modrinth, a my automatycznie Ci je damy."
-  },
-  "dashboard.discord-roles.banner.cta": {
-    "message": "Połącz z Discord"
-  },
-  "dashboard.discord-roles.banner.title": {
-    "message": "Odbierz role na Discord"
-  },
-  "dashboard.discord-roles.role.big-creator": {
-    "message": "1M+ pobrań"
-  },
-  "dashboard.discord-roles.role.creator": {
-    "message": "Twórca"
-  },
-  "dashboard.discord-roles.role.pride": {
-    "message": "Miesiąc dumy 2026"
-  },
   "dashboard.head-title": {
     "message": "Kokpit"
   },
@@ -1730,78 +1712,6 @@
   "dashboard.reports.title": {
     "message": "Zgłoszenia"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Dostępne teraz"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Saldo"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Szacunkowe przychody mogą ulec zmianie do momentu ich udostępnienia."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Kliknij tutaj, by dowiedzieć się, jak Modrinth oblicza Twoje przychody."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Oszacowane na {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Przetwarzane"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Przychody są przetwarzane do końca miesiąca, po czym są dostępne 60 dni później."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Otrzymane"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Transakcje"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Wypłacone"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Udostępniając projekty na Modrinth i wypłacając pieniądze z konta, wyrażasz zgodę na <terms-link>Warunki programu wynagrodzenia</terms-link>. Dowiedz się więcej o <info-link>programie wynagrodzenia</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "Pobierz jako CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Historia transakcji"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Transakcje"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Brak transakcji"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Tutaj pojawią się otrzymane fundusze i wypłaty."
-  },
-  "dashboard.revenue.transactions.period.last-month": {
-    "message": "W zeszłym miesiącu"
-  },
-  "dashboard.revenue.transactions.period.this-month": {
-    "message": "W tym miesiącu"
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Zobacz wszystkie"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Wszystkie lata"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Twoje wypłaty są tymczasowo zablokowane, ponieważ Twój TIN lub SSN nie pasował do zapisów IRS. Skontaktuj się z obsługą, by resetować i ponownie wysłać Twój formularz podatkowy."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Wypłać z salda Twojego konta poprzez daną metodę płatności."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Wypłata"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Wypłata"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Aktywne zgłoszenia"
   },
@@ -1825,9 +1735,6 @@
   },
   "dashboard.sidebar.label.projects": {
     "message": "Projekty"
-  },
-  "dashboard.sidebar.label.revenue": {
-    "message": "Przychód"
   },
   "dashboard.withdraw.completion.account": {
     "message": "Konto"
@@ -1996,9 +1903,6 @@
   },
   "error.generic.451.title": {
     "message": "Treści niedostępne z przyczyn prawnych"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Sprawdź na naszej <status-link>stronie statusu</status-link>, czy Modrinth jest niedostępny."
   },
   "error.generic.default.list_title": {
     "message": "Spróbuj ponownie za kilka minut."
@@ -2840,15 +2744,6 @@
   "project.actions.view-project-type-dependents": {
     "message": "Zobacz zależności {projectType}"
   },
-  "project.ai-image-warning-modal.body.1": {
-    "message": "Używanie obrazów wygenerowanych przez AI do reprezentowania twojego projektu nie jest dozwolone. Próba ominięcia wykrycia może doprowadzić do zawieszenia twojego konta Modrinth."
-  },
-  "project.ai-image-warning-modal.body.2": {
-    "message": "Aby uzyskać więcej informacji na temat naszej ogólnej polityki AI, zobacz sekcję 6 <rules>Zasady Treści</rules>."
-  },
-  "project.ai-image-warning-modal.title": {
-    "message": "Zdjęcia wygenerowane przez AI nie są dozwolone"
-  },
   "project.collections.create-new": {
     "message": "Utwórz nową kolekcję"
   },
@@ -3154,9 +3049,6 @@
   },
   "project.settings.delete-project.description.1": {
     "message": "Trwale usuwa ten projekt z Modrinth. Usunięte projekty <emphasis>nie mogą być odzyskane</emphasis> przez personel Modrinth lub wsparcie."
-  },
-  "project.settings.delete-project.description.2": {
-    "message": "Pliki przesłane do tego projektu, które są aktywnie używane w paczkach modów hostowanych w Modrinth mogą nadal istnieć."
   },
   "project.settings.delete-project.title": {
     "message": "Usuń projekt"
@@ -3853,36 +3745,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Błędy można zgłaszać za pośrednictwem <issues-link>systemu śledzenia błędów</issues-link>."
-  },
-  "report.not-for.dmca": {
-    "message": "Usunięcia na podstawie ustawy DMCA"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Zobacz naszą <policy-link>Politykę dotyczącą praw autorskich</policy-link>."
-  },
-  "report.note.ai-images.1": {
-    "message": "Właśnie zaktualizowaliśmy nasze zasady, aby zakazać generowanych przez AI obrazów w ikonach, galeriach i opisach. Dajemy twórcom okres karencji na usunięcie zdjęć AI z ich projektów, zanim zaczniemy akceptować raporty dla nich."
-  },
-  "report.note.check-back-later": {
-    "message": "Sprawdź ponownie później, gdy okres karencji zakończy się. Raporty tego typu nie są obecnie akceptowane."
-  },
-  "report.note.copyright.1": {
-    "message": "Należy pamiętać, że *nie* przesyłasz wniosku o usunięcie treści na podstawie ustawy DMCA, ale zgłoszenie dotyczące ponownie przesłanej treści."
-  },
-  "report.note.copyright.2": {
-    "message": "Jeśli zamierzałeś złożyć wniosek o usunięcie treści na podstawie ustawy DMCA (co stanowi działanie prawne), zapoznaj się z naszą <copyright-policy-link>Polityką dotyczącą praw autorskich</copyright-policy-link>."
-  },
-  "report.note.fully-ai-generated.1": {
-    "message": "Właśnie zaktualizowaliśmy nasze zasady, aby zakazać w pełni generowanych przez AI projektów. Dajemy twórcom okres karencji na aktualizację lub usunięcie w pełni wygenerowanych przez AI projektów, zanim zaczniemy akceptować raporty dla nich."
-  },
-  "report.note.malicious.1": {
-    "message": "Zgłoszenia szkodliwych lub zwodniczych treści muszą zawierać znaczny dowód, na przykład fragmenty kodu źródłowego."
-  },
-  "report.note.malicious.2": {
-    "message": "Podsumowania z Microsoft Defender, VirusTotal lub narzędzi AI wykrywających złośliwe oprogramowanie nie są uważane jako wystarczający dowód i nie będą akceptowane."
-  },
-  "report.note.missing-disclosure.1": {
-    "message": "Ujawnienia treści są nową funkcją, którą właśnie dodaliśmy. Dajemy twórcom okres karencji na aktualizację ich ujawnień, zanim zaczniemy akceptować raporty o brakujących lub nieprawidłowych informacjach."
   },
   "report.please-report": {
     "message": "Proszę zgłosić:"

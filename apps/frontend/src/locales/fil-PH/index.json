@@ -785,72 +785,6 @@
   "dashboard.reports.title": {
     "message": "Mga sumbong"
   },
-  "dashboard.revenue.available-now": {
-    "message": "Magagamit ngayon"
-  },
-  "dashboard.revenue.balance": {
-    "message": "Balanse"
-  },
-  "dashboard.revenue.estimated-tooltip.msg1": {
-    "message": "Ang tinanatayang revenu ay maaari pang magbagi hanggang lamang na ito ay magiging available na."
-  },
-  "dashboard.revenue.estimated-tooltip.msg2": {
-    "message": "Pindutin upang matuto kung paano pinamamahalaan ng Modrinth ang iyong revenue."
-  },
-  "dashboard.revenue.estimated-with-date": {
-    "message": "Tinantiyang {date}"
-  },
-  "dashboard.revenue.processing": {
-    "message": "Processing"
-  },
-  "dashboard.revenue.processing.tooltip": {
-    "message": "Mananatiling prinoproseso ang revenu hanggang sa dulo ng buwan, matapos ay magagamit na matapos ng 60 araw."
-  },
-  "dashboard.revenue.stats.received": {
-    "message": "Natanggap"
-  },
-  "dashboard.revenue.stats.transactions": {
-    "message": "Mga transaksiyon"
-  },
-  "dashboard.revenue.stats.withdrawn": {
-    "message": "Withdrawn"
-  },
-  "dashboard.revenue.tos": {
-    "message": "Sa pag-upload ng mga proyekto sa Modrinth at pag-withdraw ng pera galing sa iyong account, sumasang-ayon ka sa aming <terms-link>Mga Tuntunin sa Programa ng Gantimpala</terms-link>. Matuto pa ukol sa aming <info-link>Programa ng Gantimpala</info-link>."
-  },
-  "dashboard.revenue.transactions.btn.download-csv": {
-    "message": "I-download bilang CSV"
-  },
-  "dashboard.revenue.transactions.head-title": {
-    "message": "Kasaysayan ng transaksiyon"
-  },
-  "dashboard.revenue.transactions.header": {
-    "message": "Mga transaksiyon"
-  },
-  "dashboard.revenue.transactions.none": {
-    "message": "Walang mga transaction"
-  },
-  "dashboard.revenue.transactions.none.desc": {
-    "message": "Ang iyong mga kabayaran at pag-withdraw ay magpapakita rito."
-  },
-  "dashboard.revenue.transactions.see-all": {
-    "message": "Tingnan lahat"
-  },
-  "dashboard.revenue.transactions.year.all": {
-    "message": "Lahat ng taon"
-  },
-  "dashboard.revenue.withdraw.blocked-tin-mismatch": {
-    "message": "Ang iyong pag-withdraw ay pansamantalang pinatigilan dahil hindi tumugma ang iyong TIN o SSN sa talaan ng IRS. Mangyaring abutin ang suporta upang ma-reset at muling sumitehin ang iyong pormularyo sa buwis."
-  },
-  "dashboard.revenue.withdraw.card.description": {
-    "message": "Mag-withdraw galing sa iyang magagamit na balanse sa kahit anong paraan sa kabayaran."
-  },
-  "dashboard.revenue.withdraw.card.title": {
-    "message": "Mag-withdraw"
-  },
-  "dashboard.revenue.withdraw.header": {
-    "message": "Mag-withdraw"
-  },
   "dashboard.sidebar.label.activeReports": {
     "message": "Aktibong sumbong"
   },
@@ -976,9 +910,6 @@
   },
   "error.generic.451.title": {
     "message": "Hindi maaabot na kontento dahil sa legal na rason"
-  },
-  "error.generic.default.list_item.1": {
-    "message": "Tingnan if wala ba ang Modrinth sa ngayon gamit ang aming <status-link>Status page</status-link>."
   },
   "error.generic.default.list_title": {
     "message": "Mangyaring subukan muli sa iilang minuto."
@@ -1783,24 +1714,6 @@
   },
   "report.not-for.bug-reports.description": {
     "message": "Maaari mong isumbong ang mga bug sa kanilang <issues-link>subaybayan ng isyu</issues-link>."
-  },
-  "report.not-for.dmca": {
-    "message": "DMCA takedowns"
-  },
-  "report.not-for.dmca.description": {
-    "message": "Tingnan ang aming <policy-link>Patakaran sa Copyright</policy-link>."
-  },
-  "report.note.copyright.1": {
-    "message": "Mangyaring paunawaan na *hindi* DMCA takedown request ang iyong isusumite, ngunit ito ay isang sumbong sa kontentong muling-upload."
-  },
-  "report.note.copyright.2": {
-    "message": "Kung sa halip ang ibig mong gawin ay mag-file ng DMCA takedown request (na isang legal na aksiyon), mangyaring tingan ang aming <copyright-policy-link>Patakaran sa Copyright</copyright-policy-link>."
-  },
-  "report.note.malicious.1": {
-    "message": "Ang mga sumbong sa malisyoso o mapanlinlang na kontento ay dapat may matibay na ebidensiya sa naturang pag-uugali, katulad ng code sample."
-  },
-  "report.note.malicious.2": {
-    "message": "Mga buod galing sa Microsoft Defender, VirusTotal, o AI malware detection ay hindi sapat na patunay at hindi tinatanggap."
   },
   "report.please-report": {
     "message": "Pakisumbong:"

@@ -4271,30 +4271,6 @@
   "report.item-type.version": {
     "defaultMessage": "версия"
   },
-  "report.type.ai-images": {
-    "defaultMessage": "ИИ‑изображения в иконке, галерее или описании"
-  },
-  "report.type.copyright": {
-    "defaultMessage": "Перезалив"
-  },
-  "report.type.fully-ai-generated": {
-    "defaultMessage": "Полностью созданный ИИ проект"
-  },
-  "report.type.inappropriate": {
-    "defaultMessage": "Неприемлемый контент"
-  },
-  "report.type.malicious": {
-    "defaultMessage": "Вредоносный контент"
-  },
-  "report.type.missing-disclosure": {
-    "defaultMessage": "Неверная маркировка контента"
-  },
-  "report.type.name-squatting": {
-    "defaultMessage": "Присвоение названия"
-  },
-  "report.type.spam": {
-    "defaultMessage": "Спам"
-  },
   "s.bg": {
     "defaultMessage": "Выполняется фоновая задача"
   },
@@ -5998,9 +5974,6 @@
   },
   "settings.profile.profile-picture.title": {
     "defaultMessage": "Изображение профиля"
-  },
-  "settings.profile.public-information.description": {
-    "defaultMessage": "Информация в вашем профиле <profile-link>доступна публично на Modrinth</profile-link> и через <docs-link>API Modrinth</docs-link>."
   },
   "settings.profile.save-error": {
     "defaultMessage": "Не удалось обновить профиль"
