@@ -96,7 +96,7 @@ const messages = defineMessages({
 	collectionInfo: {
 		id: 'create.collection.collection-info',
 		defaultMessage:
-			'Your new collection will be created as a public collection with {count, plural, =0 {no projects} one {# project} other {# projects}}.',
+			'Your new collection will be created as a public collection with {count, plural, =0 {no shops} one {# shop} other {# shops}}.',
 	},
 	createCollection: {
 		id: 'create.collection.create-collection',

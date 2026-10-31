@@ -60,7 +60,7 @@ const article = computed(() => ({
 const authorCount = computed(() => authors?.value?.length ?? 0)
 
 const articleTitle = computed(() => article.value.title)
-const articleUrl = computed(() => `https://modrinth.com/news/article/${route.params.slug}`)
+const articleUrl = computed(() => `https://vanillatyme.com/news/article/${route.params.slug}`)
 
 const thumbnailPath = computed(() =>
 	article.value.thumbnail

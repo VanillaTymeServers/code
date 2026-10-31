@@ -879,7 +879,7 @@ const messages = defineMessages({
 	},
 	modrinthHomePage: {
 		id: 'layout.nav.modrinth-home-page',
-		defaultMessage: 'Modrinth home page',
+		defaultMessage: 'Vanilla Tyme home page',
 	},
 	createNew: {
 		id: 'layout.action.create-new',
@@ -895,7 +895,7 @@ const messages = defineMessages({
 	},
 	verifyEmailBeforePublishing: {
 		id: 'layout.publish.email-verification-required.description',
-		defaultMessage: 'You must verify your email before publishing on Modrinth.',
+		defaultMessage: 'You must verify your email before publishing on Vanilla Tyme.',
 	},
 	reviewProjects: {
 		id: 'layout.action.review-projects',

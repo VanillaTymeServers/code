@@ -13,7 +13,12 @@
 			<template v-if="hasHitLimit">
 				{{ formatMessage(messages.limitReachedDescription, { type: typeName.singular, max }) }}
 				<div class="w-min">
-					<ButtonLink type="colored" color="red" to="https://support.modrinth.com" target="_blank">
+					<ButtonLink
+						type="colored"
+						color="red"
+						href="https://discord.vanillatymeservers.com"
+						target="_blank"
+					>
 						<MessageIcon />{{ formatMessage(messages.contactSupport) }}</ButtonLink
 					>
 				</div>
@@ -30,7 +35,7 @@
 					<ButtonLink
 						type="colored"
 						color="orange"
-						to="https://support.modrinth.com"
+						href="https://discord.vanillatymeservers.com"
 						target="_blank"
 					>
 						<MessageIcon />{{ formatMessage(messages.contactSupport) }}</ButtonLink
@@ -82,7 +87,7 @@ const messages = defineMessages({
 	},
 	typeProject: {
 		id: 'create.limit-alert.type-project',
-		defaultMessage: 'project',
+		defaultMessage: 'shop',
 	},
 	typeOrganization: {
 		id: 'create.limit-alert.type-organization',
@@ -94,7 +99,7 @@ const messages = defineMessages({
 	},
 	typePluralProject: {
 		id: 'create.limit-alert.type-plural-project',
-		defaultMessage: 'projects',
+		defaultMessage: 'shops',
 	},
 	typePluralOrganization: {
 		id: 'create.limit-alert.type-plural-organization',

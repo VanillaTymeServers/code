@@ -174,11 +174,11 @@ const messages = defineMessages({
 	},
 	followingCollectionDescription: {
 		id: 'collection.description.following',
-		defaultMessage: "Auto-generated collection of all the projects you're following.",
+		defaultMessage: "Auto-generated collection of all the shops you're following.",
 	},
 	projectsCountLabel: {
 		id: 'dashboard.collections.label.projects-count',
-		defaultMessage: '{count} {countPlural, plural, one {project} other {projects}}',
+		defaultMessage: '{count} {countPlural, plural, one {shop} other {shops}}',
 	},
 	searchInputLabel: {
 		id: 'dashboard.collections.label.search-input',

@@ -260,7 +260,7 @@ const placeholder = computed(() => placeholders[placeholderIndex.value] ?? place
 					wrapper-class="w-full"
 				>
 					<template #prefix>
-						<span class="whitespace-nowrap">https://modrinth.com/project/</span>
+						<span class="whitespace-nowrap">https://vanillatyme.com/shop/</span>
 					</template>
 				</Input>
 				<ValidationMessage :check="saveValidation.forField('slug')" class="mt-2" />

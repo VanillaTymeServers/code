@@ -1861,7 +1861,7 @@ const following = computed(() => {
 })
 
 const PROJECT_NOT_FOUND_DESCRIPTION =
-	"There's no project here, check that you have the right link! It may still be under review or no longer publicly available on Modrinth."
+	"There's no shop here, check that you have the right link! It may still be under review or no longer publicly available."
 
 const title = computed(() =>
 	project.value
@@ -1876,7 +1876,7 @@ const description = computed(() => {
 	const creator = organization.value?.name || members.value.find((x) => x.is_owner)?.user?.username
 	const byLine = creator ? ` by ${creator}` : ''
 
-	return `${project.value.description} - Download the Minecraft ${projectTypeDisplay.value} ${project.value.title}${byLine} on Modrinth`
+	return `${project.value.description} - ${project.value.title}${byLine} on Vanilla Tyme`
 })
 
 const canCreateServerFrom = computed(() => {
@@ -2155,7 +2155,7 @@ function getDependentSearchTypes() {
 }
 
 const createCanonicalUrl = () =>
-	project.value ? `https://modrinth.com/project/${project.value.id}` : undefined
+	project.value ? `https://vanillatyme.com/shop/${project.value.id}` : undefined
 
 useHead({
 	link: [

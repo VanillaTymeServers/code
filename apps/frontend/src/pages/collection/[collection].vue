@@ -184,7 +184,7 @@
 											count: formatCompactNumber(projects?.length || 0),
 											type: formatMessage(
 												getProjectTypeSentenceMessage(
-													projectTypes.length === 1 ? projectTypes[0] : 'project',
+													projectTypes.length === 1 ? projectTypes[0] : 'shop',
 												),
 												{
 													count: formatCompactNumberPlural(projects?.length || 0),
@@ -338,7 +338,7 @@
 						type="colored"
 						color="brand"
 						class="mx-auto w-min"
-						to="/discover/mods"
+						to="/discover/shops"
 					>
 						<CompassIcon class="size-5" />
 						{{ formatMessage(messages.discoverModsButton) }}
@@ -493,15 +493,15 @@ const messages = defineMessages({
 	},
 	followingCollectionDescription: {
 		id: 'collection.description.following',
-		defaultMessage: "Auto-generated collection of all the projects you're following.",
+		defaultMessage: "Auto-generated collection of all the shops you're following.",
 	},
 	noProjectsLabel: {
 		id: 'collection.label.no-projects',
-		defaultMessage: 'No projects in collection yet',
+		defaultMessage: 'No shops in collection yet',
 	},
 	discoverModsButton: {
 		id: 'collection.button.discover-mods',
-		defaultMessage: 'Discover mods',
+		defaultMessage: 'Discover shops',
 	},
 	uploadIconAriaLabel: {
 		id: 'collection.aria-label.upload-icon',
@@ -509,15 +509,15 @@ const messages = defineMessages({
 	},
 	projectsCountLabel: {
 		id: 'collection.label.projects-count',
-		defaultMessage: '{count, plural, =0 {No projects yet} other {<stat>{count}</stat> {type}}}',
+		defaultMessage: '{count, plural, =0 {No shops yet} other {<stat>{count}</stat> {type}}}',
 	},
 	removeProjectButton: {
 		id: 'collection.button.remove-project',
-		defaultMessage: 'Remove project',
+		defaultMessage: 'Remove shop',
 	},
 	unfollowProjectButton: {
 		id: 'collection.button.unfollow-project',
-		defaultMessage: 'Unfollow project',
+		defaultMessage: 'Unfollow shop',
 	},
 	updatedAtLabel: {
 		id: 'collection.label.updated-at',
@@ -723,7 +723,7 @@ watch(
 	[collection, creator, creatorHasPublicProjects],
 	([col, cre, hasPublicProjects]) => {
 		if (col && cre) {
-			const canonicalUrl = col ? `https://modrinth.com/collection/${col.id}` : undefined
+			const canonicalUrl = col ? `https://vanillatyme.com/collection/${col.id}` : undefined
 			useSeoMeta({
 				title: formatMessage(messages.collectionTitle, { name: col.name }),
 				description: formatMessage(messages.collectionDescription, {

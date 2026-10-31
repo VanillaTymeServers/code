@@ -32,7 +32,7 @@ export class ModrinthApiError extends Error {
 
 	constructor(message: string, data?: ApiErrorData) {
 		super(message)
-		this.name = 'ModrinthApiError'
+		this.name = 'VanillaTymeApiError'
 
 		this.statusCode = data?.statusCode
 		this.originalError = data?.originalError
@@ -78,7 +78,7 @@ export class ModrinthServerError extends ModrinthApiError {
 		const errorMessage = data?.v1Error ? formatV1ErrorMessage(data.v1Error) : message
 
 		super(errorMessage, data)
-		this.name = 'ModrinthServerError'
+		this.name = 'VanillaTymeServerError'
 		this.v1Error = data?.v1Error
 
 		if (Error.captureStackTrace) {

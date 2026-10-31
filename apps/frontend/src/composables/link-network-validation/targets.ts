@@ -32,7 +32,7 @@ export function projectLinkTargets(
 	const addDescription = (value: string, image: boolean) => {
 		if (!value || value.startsWith('#')) return
 		try {
-			const url = new URL(value, 'https://modrinth.com/')
+			const url = new URL(value, 'https://vanillatyme.com/')
 			if (!['http:', 'https:'].includes(url.protocol)) return
 			const key = `${image}:${url.href}`
 			if (seen.has(key)) return

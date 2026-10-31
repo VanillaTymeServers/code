@@ -10,7 +10,7 @@ function getOfficialOrigin(apiBaseUrl: string): string {
 	if (apiBaseUrl.startsWith('https://staging-api.modrinth.com')) {
 		return 'https://staging.modrinth.com'
 	}
-	return 'https://modrinth.com'
+	return 'https://vanillatyme.com'
 }
 
 function getAlternativeOrigin(hostname: string | null | undefined): string | null {

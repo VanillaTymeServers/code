@@ -61,7 +61,7 @@
 				<p class="m-0">
 					<IntlFormatted :message-id="messages.replyModalHelpCenterNote">
 						<template #help-center-link="{ children }">
-							<a class="text-link" href="https://support.modrinth.com" target="_blank">
+							<a class="text-link" href="https://discord.vanillatymeservers.com" target="_blank">
 								<component :is="() => children" />
 							</a>
 						</template>
@@ -481,7 +481,7 @@ const messages = defineMessages({
 	replyModalHelpCenterNote: {
 		id: 'conversation-thread.reply-modal.help-center-note',
 		defaultMessage:
-			'If you need to get in contact with the moderation team, please use the <help-center-link>Modrinth Help Center</help-center-link> and click the blue bubble in the bottom right corner to contact support.',
+			'If you need to get in contact with staff, please open a ticket on our <help-center-link>Discord</help-center-link>.',
 	},
 	replyModalConfirmationDescription: {
 		id: 'conversation-thread.reply-modal.confirmation.description',

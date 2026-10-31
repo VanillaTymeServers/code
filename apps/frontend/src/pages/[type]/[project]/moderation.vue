@@ -84,7 +84,7 @@
 					<p class="mb-0 mt-3 leading-tight">
 						<IntlFormatted :message-id="messages.threadHelpCenterNote1">
 							<template #help-center-link="{ children }">
-								<a class="text-link" href="https://support.modrinth.com" target="_blank">
+								<a class="text-link" href="https://discord.vanillatymeservers.com" target="_blank">
 									<component :is="() => normalizeChildren(children)" />
 								</a>
 							</template>
@@ -93,7 +93,7 @@
 					<p class="mb-0 mt-2 leading-tight">
 						<IntlFormatted :message-id="messages.threadHelpCenterNote2">
 							<template #help-center-link="{ children }">
-								<a class="text-link" href="https://support.modrinth.com" target="_blank">
+								<a class="text-link" href="https://discord.vanillatymeservers.com" target="_blank">
 									<component :is="() => normalizeChildren(children)" />
 								</a>
 							</template>
@@ -178,7 +178,7 @@ const messages = defineMessages({
 	admonitionRejectedSpamNotice: {
 		id: 'project.moderation.admonition.rejected.spam-notice',
 		defaultMessage:
-			'Repeatedly submitting your project without addressing all moderation concerns first may result in account suspension.',
+			'Repeatedly submitting your shop without addressing all moderation concerns first may result in account suspension.',
 	},
 	threadSectionTitle: {
 		id: 'project.moderation.thread.title',
@@ -187,7 +187,7 @@ const messages = defineMessages({
 	threadPrivateDescription: {
 		id: 'project.moderation.thread.private-description',
 		defaultMessage:
-			'This is a private conversation thread with the Modrinth moderators. They may message you with issues concerning this project.',
+			'This is a private conversation thread with Vanilla Tyme staff. They may message you with issues concerning this shop.',
 	},
 	threadHelpCenterNote1: {
 		id: 'project.moderation.thread.help-center-note.1',
@@ -197,17 +197,17 @@ const messages = defineMessages({
 	threadHelpCenterNote2: {
 		id: 'project.moderation.thread.help-center-note.2',
 		defaultMessage:
-			'If you need assistance or have additional inquiries, please visit the <help-center-link>Modrinth Help Center</help-center-link> and click the blue bubble to contact support.',
+			'If you need assistance or have additional inquiries, please open a ticket on our <help-center-link>Discord</help-center-link>.',
 	},
 	threadApprovedWarning: {
 		id: 'project.moderation.thread.approved-warning',
 		defaultMessage:
-			'This thread is not actively monitored, but may be reviewed for information about your project if needed.',
+			'This thread is not actively monitored, but may be reviewed for information about your shop if needed.',
 	},
 	approvedProjectVisibilityMessage: {
 		id: 'project.moderation.admonition.approved.body.visibility-message',
 		defaultMessage:
-			"You can change the visibility of your project in your project's <visibility-settings-link>visibility settings</visibility-settings-link>.",
+			"You can change the visibility of your shop in your shop's <visibility-settings-link>visibility settings</visibility-settings-link>.",
 	},
 })
 
@@ -264,20 +264,20 @@ const approvedAdmonitionMessage = computed<MessageDescriptor | null>(() => {
 		case 'archived':
 			return defineMessage({
 				id: 'project.moderation.admonition.approved.body.public',
-				defaultMessage: 'Your project is published and discoverable on Modrinth.',
+				defaultMessage: 'Your shop is published and discoverable on Vanilla Tyme.',
 			})
 		case 'unlisted':
 			return defineMessage({
 				id: 'project.moderation.admonition.approved.body.unlisted',
 				defaultMessage:
-					'Your project is unlisted, meaning it can only be accessed with a direct link and is not discoverable on Modrinth.',
+					'Your shop is unlisted, meaning it can only be accessed with a direct link and is not discoverable on Vanilla Tyme.',
 			})
 
 		case 'private':
 			return defineMessage({
 				id: 'project.moderation.admonition.approved.body.private',
 				defaultMessage:
-					'Your project is private, meaning it can only be accessed by you and people you invite.',
+					'Your shop is private, meaning it can only be accessed by you and people you invite.',
 			})
 		default:
 			return null
@@ -296,7 +296,7 @@ const moderationAdmonition = computed<{
 			type: 'info',
 			header: defineMessage({
 				id: 'project.moderation.admonition.draft.header',
-				defaultMessage: 'Draft project',
+				defaultMessage: 'Draft shop',
 			}),
 			body: [
 				{
@@ -304,7 +304,7 @@ const moderationAdmonition = computed<{
 					message: defineMessage({
 						id: 'project.moderation.admonition.draft.body',
 						defaultMessage:
-							"This is a draft project that cannot be seen by others until submitted for review and approved by Modrinth's moderation team.",
+							'This is a draft shop that cannot be seen by others until submitted for review and approved by staff.',
 					}),
 				},
 				{
@@ -312,7 +312,7 @@ const moderationAdmonition = computed<{
 					message: defineMessage({
 						id: 'project.moderation.admonition.draft.submit-for-review',
 						defaultMessage:
-							"Once you have completed all required steps and ensured your project complies with Modrinth's <rules-link>Content Rules</rules-link> you can submit your project for review.",
+							'Once you have completed all required steps and ensured your shop complies with our <rules-link>Content Rules</rules-link> you can submit your shop for review.',
 					}),
 				},
 			],
@@ -344,15 +344,14 @@ const moderationAdmonition = computed<{
 			type: 'moderation',
 			header: defineMessage({
 				id: 'project.moderation.admonition.under-review.header',
-				defaultMessage: 'Project under review',
+				defaultMessage: 'Shop under review',
 			}),
 			body: [
 				{
 					type: 'paragraph',
 					message: defineMessage({
 						id: 'project.moderation.admonition.under-review.body.1',
-						defaultMessage:
-							"Your project is in queue to be reviewed by Modrinth's moderation team.",
+						defaultMessage: 'Your shop is in queue to be reviewed by staff.',
 					}),
 				},
 				{
@@ -361,18 +360,18 @@ const moderationAdmonition = computed<{
 						defineMessage({
 							id: 'project.moderation.admonition.under-review.body.2',
 							defaultMessage:
-								"Your project will be scanned and then reviewed by human moderators to ensure it meets Modrinth's <rules-link>Content Rules</rules-link> and <terms-link>Terms of Use</terms-link>.",
+								'Your shop will be scanned and then reviewed by staff to ensure it meets our <rules-link>Content Rules</rules-link> and <terms-link>Terms of Use</terms-link>.',
 						}),
 						defineMessage({
 							id: 'project.moderation.admonition.under-review.body.3',
 							defaultMessage:
-								"You can still modify your project, it won't affect your position in the queue.",
+								"You can still modify your shop, it won't affect your position in the queue.",
 						}),
 						// temp moved 24-48 hr below to keep old translation for future
 						defineMessage({
 							id: 'project.moderation.admonition.under-review.body.4.alt-week',
 							defaultMessage:
-								'We aim to review submissions within a week, but some projects may face delays. This does not reflect an issue with your submission.',
+								'We aim to review submissions within a week, but some shops may face delays. This does not reflect an issue with your submission.',
 						}),
 					],
 				},
@@ -381,7 +380,7 @@ const moderationAdmonition = computed<{
 					message: defineMessage({
 						id: 'project.moderation.admonition.under-review.body.5',
 						defaultMessage:
-							'<emphasis>We appreciate your patience while our moderators work hard to keep Modrinth safe, and look forward to helping you share your content! 💚</emphasis>',
+							'<emphasis>We appreciate your patience while staff review your shop! 💙</emphasis>',
 					}),
 				},
 			],
@@ -401,7 +400,7 @@ const moderationAdmonition = computed<{
 					message: defineMessage({
 						id: 'project.moderation.admonition.withheld.body',
 						defaultMessage:
-							'Your project will not appear publicly and can only be accessed with a direct link.{requestedStatus, select, unlisted { Based on your selected <visibility-settings-link>visibility settings</visibility-settings-link>, most likely no action is necessary.} other { Please address all moderation concerns, including any issues listed in messages below before resubmitting this project.}}',
+							'Your shop will not appear publicly and can only be accessed with a direct link.{requestedStatus, select, unlisted { Based on your selected <visibility-settings-link>visibility settings</visibility-settings-link>, most likely no action is necessary.} other { Please address all moderation concerns, including any issues listed in messages below before resubmitting this shop.}}',
 					}),
 				},
 				{
@@ -425,7 +424,7 @@ const moderationAdmonition = computed<{
 					message: defineMessage({
 						id: 'project.moderation.admonition.rejected.address-all-concerns',
 						defaultMessage:
-							'Please address all moderation concerns, including any issues listed in messages below, before resubmitting this project.',
+							'Please address all moderation concerns, including any issues listed in messages below, before resubmitting this shop.',
 					}),
 				},
 				{
@@ -443,7 +442,7 @@ const moderationAdmonition = computed<{
 defineMessage({
 	id: 'project.moderation.admonition.under-review.body.4',
 	defaultMessage:
-		'We aim to review submissions in 24–48 hours, but some projects may face delays. This does not reflect an issue with your submission.',
+		'We aim to review submissions in 24–48 hours, but some shops may face delays. This does not reflect an issue with your submission.',
 })
 
 const moderatorSeeUserUi = computed<boolean>({

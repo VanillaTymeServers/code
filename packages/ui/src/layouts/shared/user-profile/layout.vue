@@ -543,7 +543,7 @@ const props = withDefaults(
 		displayMode: 'list',
 		sidebarPosition: 'right',
 		variant: 'web',
-		siteUrl: 'https://modrinth.com',
+		siteUrl: 'https://vanillatyme.com',
 		externalNavigation: false,
 		projectLinkMode: 'website',
 		editProfileLink: undefined,
@@ -570,7 +570,7 @@ const sidebarSectionClass = computed(() =>
 const messages = defineMessages({
 	collectionProjectsCount: {
 		id: 'profile.collection.projects-count',
-		defaultMessage: '{count, plural, one {# project} other {# projects}}',
+		defaultMessage: '{count, plural, one {# shop} other {# shops}}',
 	},
 	userDetailsTitle: {
 		id: 'profile.details.title',
@@ -610,7 +610,7 @@ const messages = defineMessages({
 	},
 	githubPopupBlockedMessage: {
 		id: 'profile.details.error.github-popup-blocked',
-		defaultMessage: 'Allow pop-ups for Modrinth, then try again.',
+		defaultMessage: 'Allow pop-ups for Vanilla Tyme, then try again.',
 	},
 	paymentMethodsLabel: {
 		id: 'profile.details.label.payment-methods',
@@ -711,8 +711,7 @@ const messages = defineMessages({
 	},
 	blockUserAdmonitionBody: {
 		id: 'profile.block-user.admonition-body',
-		defaultMessage:
-			'{username} will not be able to send you friend requests, invite you to shared instances or invite you to Modrinth Hosting servers.',
+		defaultMessage: '{username} will not be able to send you friend requests.',
 	},
 	blockUserSuccessTitle: {
 		id: 'profile.block-user.success-title',
