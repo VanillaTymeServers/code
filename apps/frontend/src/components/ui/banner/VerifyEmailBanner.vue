@@ -26,7 +26,7 @@ const verifyEmailBannerMessages = defineMessages({
 	description: {
 		id: 'layout.banner.verify-email.description',
 		defaultMessage:
-			'For security reasons, Modrinth needs you to verify the email address associated with your account.',
+			'For security reasons, Vanilla Tyme needs you to verify the email address associated with your account.',
 	},
 	action: {
 		id: 'layout.banner.verify-email.action',
@@ -42,7 +42,7 @@ const addEmailBannerMessages = defineMessages({
 	description: {
 		id: 'layout.banner.add-email.description',
 		defaultMessage:
-			'For security reasons, Modrinth needs you to register an email address to your account.',
+			'For security reasons, Vanilla Tyme needs you to register an email address to your account.',
 	},
 	action: {
 		id: 'layout.banner.add-email.button',
