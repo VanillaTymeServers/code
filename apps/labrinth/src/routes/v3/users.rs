@@ -49,8 +49,6 @@ pub fn config(cfg: &mut actix_web::web::ServiceConfig) {
         .service(collections_list)
         .service(orgs_list)
         .service(user_edit_route)
-        .service(user_icon_edit_route)
-        .service(user_icon_delete_route)
         .service(user_delete_route)
         .service(user_follows_route)
         .service(user_notifications_route)

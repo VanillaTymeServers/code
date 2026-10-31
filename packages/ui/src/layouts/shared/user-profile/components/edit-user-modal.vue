@@ -4,44 +4,7 @@
 			<div class="flex flex-col gap-2.5">
 				<span class="text-lg font-semibold text-contrast">Profile picture</span>
 				<div class="flex items-center gap-4">
-					<Avatar
-						:src="displayedAvatarUrl"
-						size="md"
-						circle
-						:alt="form.username || user.username"
-					/>
-					<div class="flex flex-col gap-2">
-						<FileButton
-							:max-size="524288"
-							:prompt="formatMessage(commonMessages.uploadImageButton)"
-							accept="image/png,image/jpeg,image/gif,image/webp"
-							size="md"
-							:disabled="isSaving"
-							@change="showAvatarPreview"
-						>
-							<UploadIcon aria-hidden="true" />
-						</FileButton>
-						<Button
-							v-if="avatarUrl && !pendingAvatarDeletion"
-							native-type="button"
-							size="md"
-							:disabled="isSaving"
-							@click="removeAvatar"
-						>
-							<TrashIcon aria-hidden="true" />
-							{{ formatMessage(commonMessages.removeImageButton) }}
-						</Button>
-						<Button
-							v-if="avatarFile || pendingAvatarDeletion"
-							native-type="button"
-							size="md"
-							:disabled="isSaving"
-							@click="resetAvatar"
-						>
-							<UndoIcon aria-hidden="true" />
-							{{ formatMessage(commonMessages.resetButton) }}
-						</Button>
-					</div>
+					<Avatar :src="avatarUrl" size="md" circle :alt="form.username || user.username" />
 				</div>
 			</div>
 
@@ -118,13 +81,13 @@
 
 <script setup lang="ts">
 import type { Labrinth } from '@modrinth/api-client'
-import { SaveIcon, SpinnerIcon, TrashIcon, UndoIcon, UploadIcon, XIcon } from '@modrinth/assets'
+import { SaveIcon, SpinnerIcon, XIcon } from '@modrinth/assets'
 import { useQueryClient } from '@tanstack/vue-query'
-import { computed, onBeforeUnmount, ref, shallowRef } from 'vue'
+import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 import Avatar from '#ui/components/base/Avatar.vue'
-import { Button, FileButton } from '#ui/components/base/buttons'
+import { Button } from '#ui/components/base/buttons'
 import Combobox from '#ui/components/base/Combobox.vue'
 import Input from '#ui/components/base/inputs/Input.vue'
 import Textarea from '#ui/components/base/inputs/Textarea.vue'
@@ -158,9 +121,6 @@ const form = ref<{
 	role: null,
 })
 const avatarUrl = ref<string | null>(null)
-const avatarFile = shallowRef<File | null>(null)
-const avatarPreviewUrl = ref<string | null>(null)
-const pendingAvatarDeletion = ref(false)
 
 const roleOptions = [
 	{ value: 'developer', label: 'None' },
@@ -168,22 +128,11 @@ const roleOptions = [
 	{ value: 'admin', label: 'Admin' },
 ] satisfies { value: Labrinth.Users.v3.Role; label: string }[]
 
-const displayedAvatarUrl = computed(() => {
-	if (avatarPreviewUrl.value) {
-		return avatarPreviewUrl.value
-	}
-	if (pendingAvatarDeletion.value) {
-		return null
-	}
-	return avatarUrl.value
-})
-
 const hasChanges = computed(() => {
 	return (
 		form.value.username !== props.user.username ||
 		form.value.bio !== (props.user.bio ?? '') ||
-		form.value.role !== props.user.role ||
-		Boolean(avatarFile.value || pendingAvatarDeletion.value)
+		form.value.role !== props.user.role
 	)
 })
 
@@ -197,47 +146,13 @@ const canSave = computed(() => {
 	)
 })
 
-function revokeAvatarPreview(): void {
-	if (avatarPreviewUrl.value) {
-		URL.revokeObjectURL(avatarPreviewUrl.value)
-		avatarPreviewUrl.value = null
-	}
-}
-
 function syncFromUser(): void {
-	revokeAvatarPreview()
 	form.value = {
 		username: props.user.username,
 		bio: props.user.bio ?? '',
 		role: props.user.role,
 	}
 	avatarUrl.value = props.user.avatar_url ?? null
-	avatarFile.value = null
-	pendingAvatarDeletion.value = false
-}
-
-function showAvatarPreview(files: File[]): void {
-	const file = files[0]
-	if (!file) {
-		return
-	}
-
-	revokeAvatarPreview()
-	avatarFile.value = file
-	avatarPreviewUrl.value = URL.createObjectURL(file)
-	pendingAvatarDeletion.value = false
-}
-
-function removeAvatar(): void {
-	revokeAvatarPreview()
-	avatarFile.value = null
-	pendingAvatarDeletion.value = true
-}
-
-function resetAvatar(): void {
-	revokeAvatarPreview()
-	avatarFile.value = null
-	pendingAvatarDeletion.value = false
 }
 
 function show(): void {
@@ -276,14 +191,6 @@ async function save(): Promise<void> {
 			await userProfile.patchUser(props.user.id, patch)
 		}
 
-		if (pendingAvatarDeletion.value) {
-			await userProfile.deleteAvatar(props.user.id)
-		} else if (avatarFile.value) {
-			const extension = avatarFile.value.type.split('/').at(-1)
-			if (!extension) throw new Error('The selected image does not have a valid file type.')
-			await userProfile.changeAvatar(props.user.id, avatarFile.value, extension)
-		}
-
 		await queryClient.invalidateQueries({ queryKey: ['user', props.userId] })
 		hide()
 
@@ -300,8 +207,6 @@ async function save(): Promise<void> {
 		isSaving.value = false
 	}
 }
-
-onBeforeUnmount(revokeAvatarPreview)
 
 defineExpose({
 	show,

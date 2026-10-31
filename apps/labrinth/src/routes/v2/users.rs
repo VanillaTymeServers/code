@@ -24,8 +24,6 @@ pub fn config(cfg: &mut actix_web::web::ServiceConfig) {
             .service(projects_list)
             .service(user_delete)
             .service(user_edit)
-            .service(user_icon_edit)
-            .service(user_icon_delete)
             .service(user_notifications)
             .service(user_follows),
     );

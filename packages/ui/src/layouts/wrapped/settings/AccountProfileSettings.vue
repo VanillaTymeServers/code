@@ -6,14 +6,6 @@
 		:heading="formatMessage(messages.signInRequiredTitle)"
 		:description="formatMessage(messages.signInRequiredDescription)"
 	>
-		<template #illustration>
-			<div class="relative mb-4 h-[200px]">
-				<img :src="ThinkingRinthbot" alt="" class="h-full w-auto object-contain" />
-				<div
-					class="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-bg-raised to-transparent"
-				/>
-			</div>
-		</template>
 		<template #actions>
 			<Button type="colored" color="brand" size="xl" native-type="button" @click="requestSignIn">
 				<LogInIcon aria-hidden="true" />
@@ -32,11 +24,6 @@
 						</a>
 					</RouterLink>
 				</template>
-				<template #docs-link="{ children }">
-					<a href="https://docs.modrinth.com/" target="_blank" class="text-link">
-						<component :is="() => children" />
-					</a>
-				</template>
 			</IntlFormatted>
 		</p>
 
@@ -52,36 +39,7 @@
 					{{ formatMessage(messages.profilePicture) }}
 				</h2>
 				<div class="flex items-center gap-4">
-					<Avatar :src="displayedAvatarUrl" size="md" circle :alt="auth.user.value.username" />
-					<div class="flex flex-col gap-2">
-						<FileButton
-							:max-size="524288"
-							:prompt="formatMessage(commonMessages.uploadImageButton)"
-							accept="image/png,image/jpeg,image/gif,image/webp"
-							size="md"
-							@change="showPreviewImage"
-						>
-							<UploadIcon aria-hidden="true" />
-						</FileButton>
-						<Button
-							v-if="avatarUrl && !pendingAvatarDeletion"
-							native-type="button"
-							size="md"
-							@click="removePreviewImage"
-						>
-							<TrashIcon aria-hidden="true" />
-							{{ formatMessage(commonMessages.removeImageButton) }}
-						</Button>
-						<Button
-							v-if="avatarFile || pendingAvatarDeletion"
-							native-type="button"
-							size="md"
-							@click="resetAvatar"
-						>
-							<UndoIcon aria-hidden="true" />
-							{{ formatMessage(commonMessages.resetButton) }}
-						</Button>
-					</div>
+					<Avatar :src="avatarUrl" size="md" circle :alt="auth.user.value.username" />
 				</div>
 			</div>
 
@@ -126,12 +84,12 @@
 </template>
 
 <script setup lang="ts">
-import { LogInIcon, ThinkingRinthbot, TrashIcon, UndoIcon, UploadIcon } from '@modrinth/assets'
-import { computed, onBeforeUnmount, ref, shallowRef, watch } from 'vue'
+import { LogInIcon } from '@modrinth/assets'
+import { computed, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 
 import Avatar from '#ui/components/base/Avatar.vue'
-import { Button, FileButton } from '#ui/components/base/buttons'
+import { Button } from '#ui/components/base/buttons'
 import EmptyState from '#ui/components/base/EmptyState.vue'
 import Input from '#ui/components/base/inputs/Input.vue'
 import Textarea from '#ui/components/base/inputs/Textarea.vue'
@@ -169,16 +127,8 @@ const activeUserId = ref<string | null>(null)
 const original = ref<ProfileFields>({ username: '', bio: '' })
 const current = ref<ProfileFields>({ username: '', bio: '' })
 const avatarUrl = ref<string | null>(null)
-const avatarFile = shallowRef<File | null>(null)
-const previewImageUrl = ref<string | null>(null)
-const pendingAvatarDeletion = ref(false)
 const saving = ref(false)
 
-const displayedAvatarUrl = computed(() => {
-	if (previewImageUrl.value) return previewImageUrl.value
-	if (pendingAvatarDeletion.value) return null
-	return avatarUrl.value
-})
 const profilePath = computed(
 	() => `/user/${encodeURIComponent(auth.user.value?.username ?? current.value.username)}`,
 )
@@ -188,13 +138,11 @@ const originalState = computed(() => ({
 }))
 const modifiedState = computed(() => ({
 	...current.value,
-	avatarChanged: Boolean(avatarFile.value || pendingAvatarDeletion.value),
+	avatarChanged: false,
 }))
 const hasChanges = computed(
 	() =>
-		current.value.username !== original.value.username ||
-		current.value.bio !== original.value.bio ||
-		Boolean(avatarFile.value || pendingAvatarDeletion.value),
+		current.value.username !== original.value.username || current.value.bio !== original.value.bio,
 )
 
 watch(
@@ -208,7 +156,6 @@ watch(
 )
 
 function syncFromUser(user: AuthUser | null): void {
-	revokePreviewImage()
 	activeUserId.value = user?.id ?? null
 	original.value = {
 		username: user?.username ?? '',
@@ -216,42 +163,10 @@ function syncFromUser(user: AuthUser | null): void {
 	}
 	current.value = { ...original.value }
 	avatarUrl.value = user?.avatar_url ?? null
-	avatarFile.value = null
-	pendingAvatarDeletion.value = false
-}
-
-function revokePreviewImage(): void {
-	if (previewImageUrl.value) {
-		URL.revokeObjectURL(previewImageUrl.value)
-		previewImageUrl.value = null
-	}
-}
-
-function showPreviewImage(files: File[]): void {
-	const file = files[0]
-	if (!file) return
-
-	revokePreviewImage()
-	avatarFile.value = file
-	previewImageUrl.value = URL.createObjectURL(file)
-	pendingAvatarDeletion.value = false
-}
-
-function removePreviewImage(): void {
-	revokePreviewImage()
-	avatarFile.value = null
-	pendingAvatarDeletion.value = true
-}
-
-function resetAvatar(): void {
-	revokePreviewImage()
-	avatarFile.value = null
-	pendingAvatarDeletion.value = false
 }
 
 function reset(): void {
 	current.value = { ...original.value }
-	resetAvatar()
 }
 
 async function requestSignIn(): Promise<void> {
@@ -285,14 +200,6 @@ async function save(): Promise<void> {
 			await props.patchUser(user.id, patch)
 		}
 
-		if (pendingAvatarDeletion.value) {
-			await props.deleteAvatar(user.id)
-		} else if (avatarFile.value) {
-			const extension = avatarFile.value.type.split('/').at(-1)
-			if (!extension) throw new Error('The selected image does not have a valid file type.')
-			await props.changeAvatar(user.id, avatarFile.value, extension)
-		}
-
 		const refreshedUser = await props.getAuthenticatedUser()
 		auth.user.value = refreshedUser
 		syncFromUser(refreshedUser)
@@ -307,8 +214,6 @@ async function save(): Promise<void> {
 	}
 }
 
-onBeforeUnmount(revokePreviewImage)
-
 defineExpose({
 	originalState,
 	modifiedState,
@@ -322,7 +227,7 @@ const messages = defineMessages({
 	description: {
 		id: 'settings.profile.public-information.description',
 		defaultMessage:
-			'Your profile information is publicly <profile-link>viewable on Modrinth</profile-link> and through the <docs-link>Modrinth API</docs-link>.',
+			'Your profile information is publicly <profile-link>viewable on Vanilla Tyme</profile-link>.',
 	},
 	profilePicture: {
 		id: 'settings.profile.profile-picture.title',
@@ -342,11 +247,11 @@ const messages = defineMessages({
 	},
 	signInRequiredTitle: {
 		id: 'settings.profile.sign-in-required.title',
-		defaultMessage: 'Modrinth account required',
+		defaultMessage: 'Vanilla Tyme account required',
 	},
 	signInRequiredDescription: {
 		id: 'settings.profile.sign-in-required.description',
-		defaultMessage: 'Sign in with a Modrinth account to customize your public profile.',
+		defaultMessage: 'Sign in with a Vanilla Tyme account to customize your public profile.',
 	},
 	saveError: {
 		id: 'settings.profile.save-error',
