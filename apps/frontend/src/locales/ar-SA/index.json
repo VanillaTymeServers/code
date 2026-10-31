@@ -2297,9 +2297,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "الصفحة الرئيسة لمودرينث"
   },
-  "layout.nav.my-servers": {
-    "message": "خوادمي"
-  },
   "layout.nav.organizations": {
     "message": "المؤسسات"
   },
@@ -2323,9 +2320,6 @@
   },
   "layout.nav.switch-account": {
     "message": "تبديل الحساب"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "الترقية إلى Modrinth+"
   },
   "layout.publish.email-verification-required.description": {
     "message": "يجب عليك التحقق من بريدك الإلكتروني قبل النشر على Modrinth."

@@ -1673,9 +1673,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Domovská stránka Modrinthu"
   },
-  "layout.nav.my-servers": {
-    "message": "Moje servery"
-  },
   "layout.nav.organizations": {
     "message": "Organizace"
   },
@@ -1693,9 +1690,6 @@
   },
   "layout.nav.search": {
     "message": "Hledat"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Upgradovat na Modrinth+"
   },
   "moderation.moderate": {
     "message": "Moderace"

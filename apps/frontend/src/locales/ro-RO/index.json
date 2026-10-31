@@ -1028,9 +1028,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Pagina de pornire Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "Serverele mele"
-  },
   "layout.nav.organizations": {
     "message": "Organizații"
   },
@@ -1048,9 +1045,6 @@
   },
   "layout.nav.search": {
     "message": "Caută"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Treci la Modrinth+"
   },
   "moderation.moderate": {
     "message": "Moderare"

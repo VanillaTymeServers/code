@@ -911,9 +911,6 @@
   "layout.nav.home": {
     "message": "Početna"
   },
-  "layout.nav.my-servers": {
-    "message": "Moji serveri"
-  },
   "layout.nav.search": {
     "message": "Pretraga"
   },

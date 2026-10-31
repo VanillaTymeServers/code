@@ -1574,9 +1574,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth forside"
   },
-  "layout.nav.my-servers": {
-    "message": "Mine servere"
-  },
   "layout.nav.organizations": {
     "message": "Organisationer"
   },
@@ -1594,9 +1591,6 @@
   },
   "layout.nav.search": {
     "message": "Søg"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Opgrader til Modrinth+"
   },
   "layout.publish.email-verification-required.title": {
     "message": "E-mailbekræftelse påkrævet"

@@ -2363,9 +2363,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth 首頁"
   },
-  "layout.nav.my-servers": {
-    "message": "我的伺服器"
-  },
   "layout.nav.organizations": {
     "message": "組織"
   },
@@ -2392,9 +2389,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "無法切換帳號，請再試一次。"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "升級至 Modrinth+"
   },
   "layout.publish.email-verification-required.description": {
     "message": "在 Modrinth 上發行內容之前，你必須先驗證你的電子郵件地址。"

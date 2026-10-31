@@ -1742,9 +1742,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth-heimeside"
   },
-  "layout.nav.my-servers": {
-    "message": "Serverne mine"
-  },
   "layout.nav.organizations": {
     "message": "Organisasjon"
   },
@@ -1762,9 +1759,6 @@
   },
   "layout.nav.search": {
     "message": "Søk"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Oppgrader til Modrinth+"
   },
   "moderation.moderate": {
     "message": "Moderer"

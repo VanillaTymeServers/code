@@ -1301,9 +1301,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Pahina ng tahanan ng Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "Aking mga server"
-  },
   "layout.nav.organizations": {
     "message": "Mga organisasyon"
   },
@@ -1321,9 +1318,6 @@
   },
   "layout.nav.search": {
     "message": "Maghanap"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Mag-upgrade sa Modrinth+"
   },
   "moderation.moderate": {
     "message": "Moderate"

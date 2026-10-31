@@ -2360,9 +2360,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Page d'accueil de Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "Mes serveurs"
-  },
   "layout.nav.organizations": {
     "message": "Organisations"
   },
@@ -2389,9 +2386,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "Impossible de changer de compte. Veuillez essayer à nouveau."
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Passer à Modrinth+"
   },
   "layout.publish.email-verification-required.description": {
     "message": "Vous devez vérifier votre adresse e-mail avant de publier sur Modrinth."

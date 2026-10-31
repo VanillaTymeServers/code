@@ -2270,9 +2270,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Modrinthホームページ"
   },
-  "layout.nav.my-servers": {
-    "message": "自分のサーバー"
-  },
   "layout.nav.organizations": {
     "message": "組織"
   },
@@ -2293,9 +2290,6 @@
   },
   "layout.nav.switch-account": {
     "message": "アカウント切り替え"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Modrinth+にアップグレード"
   },
   "modal.shared-instance.open-in-app.get-app": {
     "message": "Modrinth Appを取得"

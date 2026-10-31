@@ -2363,9 +2363,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth 首页"
   },
-  "layout.nav.my-servers": {
-    "message": "我的服务器"
-  },
   "layout.nav.organizations": {
     "message": "组织"
   },
@@ -2392,9 +2389,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "无法切换账户，请稍后重试。"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "升级至 Modrinth+"
   },
   "layout.publish.email-verification-required.description": {
     "message": "您必须先验证您的电子邮箱才能在 Modrinth 上发布内容。"

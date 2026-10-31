@@ -1973,9 +1973,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Página inicial do Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "Meus servidores"
-  },
   "layout.nav.organizations": {
     "message": "Organizações"
   },
@@ -1993,9 +1990,6 @@
   },
   "layout.nav.search": {
     "message": "Pesquisar"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Atualiza para o Modrinth+"
   },
   "moderation.moderate": {
     "message": "Moderar"

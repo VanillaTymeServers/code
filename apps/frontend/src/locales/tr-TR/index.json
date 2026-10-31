@@ -2363,9 +2363,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth ana sayfası"
   },
-  "layout.nav.my-servers": {
-    "message": "Sunucularım"
-  },
   "layout.nav.organizations": {
     "message": "Organizasyonlar"
   },
@@ -2392,9 +2389,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "Hesaplar değiştirilemedi. Lütfen tekrar deneyin."
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Modrinth+ Kullan"
   },
   "layout.publish.email-verification-required.description": {
     "message": "Modrinth'e paylaşmadan önce e-postanızı doğrulamanız lazım."

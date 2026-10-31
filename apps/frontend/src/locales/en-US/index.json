@@ -2585,9 +2585,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth home page"
   },
-  "layout.nav.my-servers": {
-    "message": "My servers"
-  },
   "layout.nav.organizations": {
     "message": "Organizations"
   },
@@ -2629,9 +2626,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "Couldn't switch accounts. Please try again."
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Upgrade to Modrinth+"
   },
   "layout.nav.vote": {
     "message": "Vote"

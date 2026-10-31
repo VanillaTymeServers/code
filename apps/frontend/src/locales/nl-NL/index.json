@@ -2357,9 +2357,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth startpagina"
   },
-  "layout.nav.my-servers": {
-    "message": "Mijn servers"
-  },
   "layout.nav.organizations": {
     "message": "Organisaties"
   },
@@ -2386,9 +2383,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "Kon niet van account wisselen. Probeer het nog eens."
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Upgrade naar Modrinth+"
   },
   "layout.publish.email-verification-required.description": {
     "message": "Je moet je e-mailadres verifiëren voordat je iets op Modrinth kunt publiceren."

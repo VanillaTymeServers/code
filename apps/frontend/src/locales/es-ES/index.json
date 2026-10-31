@@ -2357,9 +2357,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Página de inicio de Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "Mis servidores"
-  },
   "layout.nav.organizations": {
     "message": "Organizaciones"
   },
@@ -2386,9 +2383,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "No se pudo cambiar la cuenta. Por favor, inténtelo de nuevo."
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Actualizar a Modrinth+"
   },
   "layout.publish.email-verification-required.description": {
     "message": "Debes de verificar tu dirección de correo electrónico antes de publicar en Modrinth."

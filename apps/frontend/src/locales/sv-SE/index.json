@@ -2228,9 +2228,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth hem sida"
   },
-  "layout.nav.my-servers": {
-    "message": "Mina servrar"
-  },
   "layout.nav.organizations": {
     "message": "Organisationer"
   },
@@ -2257,9 +2254,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "Kunde inte byta konton. Vänligen försök igen."
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Uppgradera till Modrinth+"
   },
   "layout.publish.email-verification-required.description": {
     "message": "Du måste verifiera din e-post innan du publicerar på Modrinth."

@@ -1895,9 +1895,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Laman utama Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "Pelayan saya"
-  },
   "layout.nav.organizations": {
     "message": "Organisasi"
   },
@@ -1915,9 +1912,6 @@
   },
   "layout.nav.search": {
     "message": "Cari"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Naik taraf ke Modrinth+"
   },
   "modal.shared-instance.open-in-app.managed-by": {
     "message": "Diurus oleh"

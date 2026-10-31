@@ -2357,9 +2357,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Главная страница Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "Мои серверы"
-  },
   "layout.nav.organizations": {
     "message": "Организации"
   },
@@ -2386,9 +2383,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "Не удалось сменить аккаунт. Повторите попытку."
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Перейти на Modrinth+"
   },
   "layout.publish.email-verification-required.description": {
     "message": "Перед публикацией на Modrinth необходимо подтвердить адрес электронной почты."

@@ -1982,9 +1982,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Trang chủ Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "Máy chủ của tôi"
-  },
   "layout.nav.organizations": {
     "message": "Tổ chức"
   },
@@ -2002,9 +1999,6 @@
   },
   "layout.nav.search": {
     "message": "Tìm kiếm"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Nâng cấp lên Modrinth+"
   },
   "moderation.moderate": {
     "message": "Kiểm duyệt"

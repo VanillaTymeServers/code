@@ -2354,9 +2354,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Modrinth kezdőlap"
   },
-  "layout.nav.my-servers": {
-    "message": "Szervereim"
-  },
   "layout.nav.organizations": {
     "message": "Szervezetek"
   },
@@ -2383,9 +2380,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "Nem sikerült fiókot váltani. Kérlek, próbád újra."
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Frissíts a Modrinth+-ra"
   },
   "layout.publish.email-verification-required.description": {
     "message": "A Modrinthon való közzététel előtt hitelesítened kell az e-mail címedet."

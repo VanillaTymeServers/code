@@ -1097,9 +1097,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "דף הבית של Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "השרתים שלי"
-  },
   "layout.nav.organizations": {
     "message": "ארגונים"
   },
@@ -1117,9 +1114,6 @@
   },
   "layout.nav.search": {
     "message": "חיפוש"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "שדרגו ל-Modrinth+"
   },
   "moderation.page.projects": {
     "message": "פרויקטים"

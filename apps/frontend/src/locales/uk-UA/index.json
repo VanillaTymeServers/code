@@ -2360,9 +2360,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Головна сторінка Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "Мої сервери"
-  },
   "layout.nav.organizations": {
     "message": "Організації"
   },
@@ -2389,9 +2386,6 @@
   },
   "layout.nav.switch-account-failed": {
     "message": "Не вдалося змінити обліковий запис. Спробуйте ще раз."
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Покращитися до Modrinth+"
   },
   "layout.publish.email-verification-required.description": {
     "message": "Підтвердьте свою електронну пошту, перш ніж публікувати на Modrinth."

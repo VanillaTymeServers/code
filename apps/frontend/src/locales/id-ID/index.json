@@ -1361,9 +1361,6 @@
   "layout.nav.modrinth-home-page": {
     "message": "Beranda Modrinth"
   },
-  "layout.nav.my-servers": {
-    "message": "Server saya"
-  },
   "layout.nav.organizations": {
     "message": "Organisasi"
   },
@@ -1381,9 +1378,6 @@
   },
   "layout.nav.search": {
     "message": "Cari"
-  },
-  "layout.nav.upgrade-to-modrinth-plus": {
-    "message": "Tingkatkan ke Modrinth+"
   },
   "moderation.moderate": {
     "message": "Moderasi"
