@@ -9,20 +9,7 @@
 			<div v-if="is404" class="error-graphic">
 				<Logo404 />
 			</div>
-			<div class="error-box" :class="{ 'has-bot': !is404 }">
-				<img
-					v-if="is401"
-					:src="AnnoyedRinthbot"
-					alt="Annoyed Modrinth bot"
-					class="error-box__sad-bot"
-				/>
-				<img
-					v-else-if="!is404"
-					:src="SadRinthbot"
-					alt="Sad Modrinth bot"
-					class="error-box__sad-bot"
-				/>
-				<div v-if="!is404" class="error-box__top-glow" />
+			<div class="error-box">
 				<div class="error-box__body">
 					<h1 class="error-box__title">{{ formatMessage(errorMessages.title) }}</h1>
 					<p v-if="errorMessages.subtitle" class="error-box__subtitle">
@@ -73,13 +60,8 @@
 					<ul v-if="errorMessages.list_items" class="error-box__list">
 						<li v-for="item in errorMessages.list_items" :key="item">
 							<IntlFormatted :message-id="item">
-								<template #status-link="{ children }">
-									<a href="https://status.modrinth.com" target="_blank" rel="noopener">
-										<component :is="() => normalizeChildren(children)" />
-									</a>
-								</template>
 								<template #support-link="{ children }">
-									<a href="https://support.modrinth.com" target="_blank" rel="noopener">
+									<a :href="DISCORD_URL" target="_blank" rel="noopener">
 										<component :is="() => normalizeChildren(children)" />
 									</a>
 								</template>
@@ -102,7 +84,7 @@
 </template>
 
 <script setup>
-import { AnnoyedRinthbot, LogInIcon, LogOutIcon, SadRinthbot } from '@modrinth/assets'
+import { LogInIcon, LogOutIcon } from '@modrinth/assets'
 import {
 	AccountChoiceList,
 	AccountSwitchOverlay,
@@ -129,6 +111,7 @@ import {
 	useStoredAccounts,
 } from '~/composables/accounts.ts'
 import { getSignInRouteObj } from '~/composables/auth.js'
+import { DISCORD_URL } from '~/helpers/homepage'
 import { setupProviders } from '~/providers/setup.ts'
 
 const auth = await useAuth()
@@ -246,13 +229,9 @@ const messages = {
 		}),
 		list_items: [
 			defineMessage({
-				id: 'error.generic.default.list_item.1',
-				defaultMessage: 'Check if Modrinth is down on our <status-link>Status page</status-link>.',
-			}),
-			defineMessage({
 				id: 'error.generic.default.list_item.support',
 				defaultMessage:
-					'If this keeps happening, you may want to let the Modrinth Team know through our <support-link>support portal</support-link>.',
+					'If this keeps happening, let the staff know on our <support-link>Discord</support-link>.',
 			}),
 		],
 	},
@@ -266,6 +245,7 @@ const PROJECT_PATH_PREFIXES = [
 	'/shader/',
 	'/modpack/',
 	'/project/',
+	'/shop/',
 ]
 
 const routeMessages = [
@@ -275,7 +255,7 @@ const routeMessages = [
 			404: {
 				title: defineMessage({
 					id: 'error.project.404.title',
-					defaultMessage: 'Project not found',
+					defaultMessage: 'Shop not found',
 				}),
 				list_title: defineMessage({
 					id: 'error.project.404.list_title',
@@ -284,17 +264,17 @@ const routeMessages = [
 				list_items: [
 					defineMessage({
 						id: 'error.project.404.list_item.1',
-						defaultMessage: "You may have mistyped the project's URL.",
+						defaultMessage: "You may have mistyped the shop's URL.",
 					}),
 					defineMessage({
 						id: 'error.project.404.list_item.2',
 						defaultMessage:
-							"The project's owner may have changed the URL, made the project private, or deleted it.",
+							"The shop's owner may have changed the URL, made the shop private, or deleted it.",
 					}),
 					defineMessage({
 						id: 'error.project.404.list_item.3',
 						defaultMessage:
-							"The project may have been taken down by Modrinth's moderation team for violating our <tou-link>Terms of Use</tou-link>.",
+							'The shop may have been taken down by staff for violating our <tou-link>Terms of Use</tou-link>.',
 					}),
 				],
 			},
@@ -324,7 +304,7 @@ const routeMessages = [
 					defineMessage({
 						id: 'error.user.404.list_item.3',
 						defaultMessage:
-							"The user's account may have been terminated for violating Modrinth's <tou-link>Terms of Use</tou-link>.",
+							"The user's account may have been terminated for violating our <tou-link>Terms of Use</tou-link>.",
 					}),
 				],
 			},
@@ -354,7 +334,7 @@ const routeMessages = [
 					defineMessage({
 						id: 'error.organization.404.list_item.3',
 						defaultMessage:
-							"The organization may have been removed by Modrinth's moderation team for violating our <tou-link>Terms of Use</tou-link>.",
+							'The organization may have been removed by staff for violating our <tou-link>Terms of Use</tou-link>.',
 					}),
 				],
 			},
@@ -384,7 +364,7 @@ const routeMessages = [
 					defineMessage({
 						id: 'error.collection.404.list_item.3',
 						defaultMessage:
-							"The collection may have been taken down by Modrinth's moderation team for violating our <tou-link>Terms of Use</tou-link>.",
+							'The collection may have been taken down by staff for violating our <tou-link>Terms of Use</tou-link>.',
 					}),
 				],
 			},
@@ -430,10 +410,6 @@ const routeMessages = [
 	box-shadow: var(--shadow-card);
 	position: relative;
 
-	&.has-bot {
-		margin-block: 120px;
-	}
-
 	p {
 		margin: 0;
 	}
@@ -447,36 +423,6 @@ const routeMessages = [
 			filter: brightness(1.125);
 			text-decoration: underline;
 		}
-	}
-
-	&__sad-bot {
-		--_bot-height: 112px;
-		position: absolute;
-		top: calc(-1 * var(--_bot-height));
-		right: 5rem;
-		width: auto;
-		height: var(--_bot-height);
-
-		@media screen and (max-width: 768px) {
-			--_bot-height: 70px;
-			right: 2rem;
-		}
-	}
-
-	&__top-glow {
-		width: 100%;
-		height: 1px;
-		background: linear-gradient(
-			to right,
-			transparent 2rem,
-			var(--color-green) calc(100% - 13rem),
-			var(--color-green) calc(100% - 5rem),
-			transparent calc(100% - 2rem)
-		);
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 0.4;
 	}
 
 	&__title {
