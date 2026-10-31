@@ -170,7 +170,7 @@ export const commonMessages = defineMessages({
 	},
 	followedProjectsLabel: {
 		id: 'label.followed-projects',
-		defaultMessage: 'Followed projects',
+		defaultMessage: 'Followed shops',
 	},
 	galleryInputView: {
 		id: 'input.view.gallery',
@@ -1014,7 +1014,7 @@ export function formatContentTypeSentence(
 export const reportItemTypeMessages = defineMessages({
 	project: {
 		id: 'report.item-type.project',
-		defaultMessage: 'project',
+		defaultMessage: 'shop',
 	},
 	version: {
 		id: 'report.item-type.version',
@@ -1042,37 +1042,37 @@ export function formatReportItemType(
 }
 
 export const reportTypeMessages = defineMessages({
+	inappropriate: {
+		id: 'report.type.inappropriate-content',
+		defaultMessage: 'Inappropriate content',
+	},
+	harassment: {
+		id: 'report.type.harassment',
+		defaultMessage: 'Harassment',
+	},
+	'personal-information': {
+		id: 'report.type.personal-information',
+		defaultMessage: 'Personal information',
+	},
 	spam: {
-		id: 'report.type.spam',
-		defaultMessage: 'Spam',
+		id: 'report.type.spam-or-scam',
+		defaultMessage: 'Spam or scam',
 	},
 	copyright: {
-		id: 'report.type.copyright',
-		defaultMessage: 'Reuploaded work',
+		id: 'report.type.copied-work',
+		defaultMessage: 'Copied work',
 	},
-	inappropriate: {
-		id: 'report.type.inappropriate',
-		defaultMessage: 'Inappropriate',
+	impersonation: {
+		id: 'report.type.impersonation',
+		defaultMessage: 'Impersonation',
 	},
-	malicious: {
-		id: 'report.type.malicious',
-		defaultMessage: 'Malicious',
+	'wrong-shop-info': {
+		id: 'report.type.wrong-shop-info',
+		defaultMessage: 'Wrong shop info',
 	},
-	'name-squatting': {
-		id: 'report.type.name-squatting',
-		defaultMessage: 'Name squatting',
-	},
-	'missing-disclosure': {
-		id: 'report.type.missing-disclosure',
-		defaultMessage: 'Missing or incorrect disclosure',
-	},
-	'ai-images': {
-		id: 'report.type.ai-images',
-		defaultMessage: 'AI-generated images in icon, gallery, or description',
-	},
-	'fully-ai-generated': {
-		id: 'report.type.fully-ai-generated',
-		defaultMessage: 'Fully AI-generated project',
+	advertising: {
+		id: 'report.type.advertising',
+		defaultMessage: 'Advertising',
 	},
 })
 

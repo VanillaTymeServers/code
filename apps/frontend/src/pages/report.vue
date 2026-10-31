@@ -86,21 +86,6 @@
 								</span>
 							</div>
 						</div>
-						<div class="text-md flex items-center gap-2 font-semibold text-contrast">
-							<XCircleIcon class="h-8 w-8 shrink-0 text-brand-red" />
-							<div class="flex flex-col">
-								<span>{{ formatMessage(messages.dmcaTakedown) }}</span>
-								<span class="text-sm font-medium text-secondary">
-									<IntlFormatted :message-id="messages.dmcaTakedownDescription">
-										<template #policy-link="{ children }">
-											<nuxt-link class="text-link" :to="`/legal/copyright`">
-												<component :is="() => children" />
-											</nuxt-link>
-										</template>
-									</IntlFormatted>
-								</span>
-							</div>
-						</div>
 					</div>
 				</div>
 				<div class="card-shadow flex flex-col gap-4 rounded-xl bg-bg-raised p-6">
@@ -197,27 +182,6 @@
 								{{ formatReportType(formatMessage, item) }}
 							</RadioButtons>
 						</div>
-						<div
-							v-if="warnings[reportType]"
-							class="flex gap-2 rounded-xl border-2 border-solid border-brand-orange bg-highlight-orange p-4 text-contrast"
-						>
-							<IssuesIcon class="h-5 w-5 shrink-0 text-orange" />
-							<div class="flex flex-col gap-2">
-								<p
-									v-for="(warning, index) in warnings[reportType]"
-									:key="`warning-${reportType}-${index}`"
-									class="m-0 leading-tight"
-								>
-									<IntlFormatted :message-id="warning">
-										<template #copyright-policy-link="{ children }">
-											<nuxt-link class="text-link" :to="`/legal/copyright`">
-												<component :is="() => children" />
-											</nuxt-link>
-										</template>
-									</IntlFormatted>
-								</p>
-							</div>
-						</div>
 						<div :class="{ hidden: !reportType }">
 							<span class="text-lg font-semibold text-contrast">
 								{{ formatMessage(messages.reportBodyTitle) }}
@@ -230,7 +194,6 @@
 							<MarkdownEditor
 								v-model="reportBody"
 								placeholder=""
-								:disabled="disableReporting"
 								:on-image-upload="onImageUpload"
 							/>
 						</div>
@@ -239,7 +202,7 @@
 								id="submit-button"
 								type="colored"
 								color="brand"
-								:disabled="submitLoading || !canSubmit || disableReporting"
+								:disabled="submitLoading || !canSubmit"
 								@click="submitReport"
 							>
 								<SendIcon aria-hidden="true" />
@@ -267,12 +230,12 @@ import {
 	VersionIcon,
 	XCircleIcon,
 } from '@modrinth/assets'
-import { Button, ButtonLink } from '@modrinth/ui'
 import {
 	AutoLink,
 	Avatar,
+	Button,
+	ButtonLink,
 	commonMessages,
-	defineMessage,
 	defineMessages,
 	formatReportItemType,
 	formatReportType,
@@ -280,7 +243,6 @@ import {
 	Input,
 	IntlFormatted,
 	MarkdownEditor,
-	type MessageDescriptor,
 	RadialHeader,
 	RadioButtons,
 	useVIntl,
@@ -414,24 +376,10 @@ async function fetchItem() {
 }
 
 const reportItems = ['project', 'version', 'user']
-const dummyProjectReportTypes = ['missing-disclosure', 'ai-images', 'fully-ai-generated'] as const
-const reportTypes = computed(() => {
-	const types = [...tags.value.reportTypes]
-	if (reportItem.value === 'project') {
-		const otherIndex = types.indexOf('other')
-		if (otherIndex === -1) {
-			types.push(...dummyProjectReportTypes)
-		} else {
-			types.splice(otherIndex, 0, ...dummyProjectReportTypes)
-		}
-	}
-	return types
-})
-const disableReporting = computed(() => dummyProjectReportTypes.includes(reportType.value))
+const reportTypes = computed(() => tags.value.reportTypes)
 
 const canSubmit = computed(() => {
 	return (
-		!disableReporting.value &&
 		reportItem.value !== '' &&
 		reportItemID.value !== '' &&
 		reportType.value !== '' &&
@@ -542,11 +490,11 @@ const onImageUpload = async (file: File) => {
 const messages = defineMessages({
 	reportContent: {
 		id: 'report.report-content',
-		defaultMessage: 'Report content to moderators',
+		defaultMessage: 'Report content to staff',
 	},
 	reportItem: {
 		id: 'report.report-item',
-		defaultMessage: 'Report {title} to moderators',
+		defaultMessage: 'Report {title} to staff',
 	},
 	alreadyReportedItem: {
 		id: 'report.already-reported',
@@ -576,7 +524,7 @@ const messages = defineMessages({
 	violation: {
 		id: 'report.for.violation',
 		defaultMessage:
-			'Violation of Modrinth <rules-link>Rules</rules-link> or <terms-link>Terms of Use</terms-link>',
+			'Violation of Vanilla Tyme <rules-link>Rules</rules-link> or <terms-link>Terms of Use</terms-link>',
 	},
 	violationDescription: {
 		id: 'report.for.violation.description',
@@ -591,14 +539,6 @@ const messages = defineMessages({
 		id: 'report.not-for.bug-reports.description',
 		defaultMessage: 'You can report bugs to their <issues-link>issue tracker</issues-link>.',
 	},
-	dmcaTakedown: {
-		id: 'report.not-for.dmca',
-		defaultMessage: 'DMCA takedowns',
-	},
-	dmcaTakedownDescription: {
-		id: 'report.not-for.dmca.description',
-		defaultMessage: 'See our <policy-link>Copyright Policy</policy-link>.',
-	},
 	whatContentType: {
 		id: 'report.question.content-type',
 		defaultMessage: 'What type of content are you reporting?',
@@ -609,7 +549,7 @@ const messages = defineMessages({
 	},
 	whatReportReason: {
 		id: 'report.question.report-reason',
-		defaultMessage: "Which of Modrinth's rules is this {item} violating?",
+		defaultMessage: 'Which of our rules is this {item} violating?',
 	},
 	checking: {
 		id: 'report.checking',
@@ -632,60 +572,7 @@ const messages = defineMessages({
 		id: 'report.submit',
 		defaultMessage: 'Submit report',
 	},
-	checkBackLater: {
-		id: 'report.note.check-back-later',
-		defaultMessage:
-			'Check back later once the grace period has ended. Reports of this type are not being accepted at this time.',
-	},
 })
-
-const warnings: Record<string, MessageDescriptor[]> = {
-	copyright: [
-		defineMessage({
-			id: 'report.note.copyright.1',
-			defaultMessage:
-				'Please note that you are *not* submitting a DMCA takedown request, but rather a report of reuploaded content.',
-		}),
-		defineMessage({
-			id: 'report.note.copyright.2',
-			defaultMessage:
-				'If you meant to file a DMCA takedown request (which is a legal action) instead, please see our <copyright-policy-link>Copyright Policy</copyright-policy-link>.',
-		}),
-	],
-	malicious: [
-		defineMessage({
-			id: 'report.note.malicious.1',
-			defaultMessage:
-				'Reports for malicious or deceptive content must include substantial evidence of the behavior, such as code samples.',
-		}),
-		defineMessage({
-			id: 'report.note.malicious.2',
-			defaultMessage:
-				'Summaries from Microsoft Defender, VirusTotal, or AI malware detection are not sufficient forms of evidence and will not be accepted.',
-		}),
-	],
-	'missing-disclosure': [
-		defineMessage({
-			id: 'report.note.missing-disclosure.1',
-			defaultMessage: `Content disclosures are a new feature we've just added. We're giving creators a grace period to get their disclosures up-to-date before we begin accepting reports for missing or incorrect disclosures.`,
-		}),
-		messages.checkBackLater,
-	],
-	'ai-images': [
-		defineMessage({
-			id: 'report.note.ai-images.1',
-			defaultMessage: `We've just updated our rules to prohibit AI-generated images in icons, galleries, and descriptions. We're giving creators a grace period to remove AI images from their projects before we begin accepting reports for them.`,
-		}),
-		messages.checkBackLater,
-	],
-	'fully-ai-generated': [
-		defineMessage({
-			id: 'report.note.fully-ai-generated.1',
-			defaultMessage: `We've just updated our rules to prohibit fully AI-generated projects. We're giving creators a grace period to update or take down fully AI-generated projects before we begin accepting reports for them.`,
-		}),
-		messages.checkBackLater,
-	],
-}
 </script>
 
 <style scoped lang="scss">
