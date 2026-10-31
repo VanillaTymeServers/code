@@ -82,12 +82,7 @@ const BREAKDOWN_PRESET_VALUES: AnalyticsBreakdownPreset[] = [
 	'dependent_project_download',
 ]
 
-const ANALYTICS_DASHBOARD_STAT_VALUES: AnalyticsDashboardStat[] = [
-	'views',
-	'downloads',
-	'revenue',
-	'playtime',
-]
+const ANALYTICS_DASHBOARD_STAT_VALUES: AnalyticsDashboardStat[] = ['views']
 
 const ANALYTICS_GRAPH_VIEW_MODE_VALUES: AnalyticsGraphViewMode[] = ['line', 'area', 'bar']
 const ANALYTICS_TABLE_SORT_COLUMN_VALUES: AnalyticsTableSortColumn[] = [

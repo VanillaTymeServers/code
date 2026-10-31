@@ -183,7 +183,7 @@ export function useAnalyticsChartDatasets(
 			context.displayedSelectedGroupBy.value === 'day' &&
 			isLastBucketCurrentDay(nextFetchRequest.time_range, sliceCount.value)
 		) {
-			datasets.revenue = datasets.revenue.map((dataset) => ({
+			datasets.revenue = (datasets.revenue ?? []).map((dataset) => ({
 				...dataset,
 				lastDataPointUnavailable: true,
 			}))

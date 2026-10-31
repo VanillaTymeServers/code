@@ -2,12 +2,9 @@ import type { Labrinth } from '@modrinth/api-client'
 
 import type { AnalyticsDashboardStat } from '~/providers/analytics/analytics'
 
-export const ANALYTICS_DASHBOARD_STATS: readonly AnalyticsDashboardStat[] = [
-	'views',
-	'downloads',
-	'revenue',
-	'playtime',
-]
+export const ANALYTICS_DASHBOARD_STATS: readonly AnalyticsDashboardStat[] = ['views']
+
+export const ANALYTICS_BREAKDOWNS_ENABLED = false
 
 export const TOP_GRAPH_DATASET_LIMIT = 8
 export const GRAPH_RENDER_DATASET_LIMIT = 250

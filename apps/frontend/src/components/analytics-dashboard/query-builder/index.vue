@@ -154,6 +154,7 @@
 			</Combobox>
 
 			<MultiSelect
+				v-if="ANALYTICS_BREAKDOWNS_ENABLED"
 				v-model="selectedBreakdownValue"
 				class="min-w-0 max-w-full"
 				:options="breakdownOptions"
@@ -393,7 +394,7 @@
 			</div>
 
 			<div class="flex flex-wrap items-start gap-2">
-				<div class="flex items-center gap-2">
+				<div v-if="ANALYTICS_BREAKDOWNS_ENABLED" class="flex items-center gap-2">
 					<div class="flex w-32 items-center gap-2 text-primary">
 						<BlocksIcon class="size-5" />
 						<span class="text-base font-medium">
@@ -487,6 +488,7 @@ import {
 	injectAnalyticsDashboardContext,
 } from '~/providers/analytics/analytics'
 
+import { ANALYTICS_BREAKDOWNS_ENABLED } from '../analytics-chart/analytics-chart-constants.ts'
 import {
 	analyticsMessages,
 	formatAnalyticsBreakdownLabel,
@@ -1028,14 +1030,16 @@ const breakdownOptions = computed<MultiSelectOption<Exclude<AnalyticsBreakdownPr
 			},
 		)
 
-		return options.map((option) => {
-			const isSelected = selectedBreakdownSet.has(option.value)
-			return {
-				...option,
-				disabled:
-					!isSelected && (hasReachedBreakdownLimit || !canSelectBreakdownOption(option.value)),
-			}
-		})
+		return options
+			.filter((option) => getAnalyticsStatsForBreakdown(option.value).length > 0)
+			.map((option) => {
+				const isSelected = selectedBreakdownSet.has(option.value)
+				return {
+					...option,
+					disabled:
+						!isSelected && (hasReachedBreakdownLimit || !canSelectBreakdownOption(option.value)),
+				}
+			})
 	},
 )
 

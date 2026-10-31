@@ -26,7 +26,7 @@
 		</Admonition>
 		<div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
 			<StatCard
-				v-for="card in statCards"
+				v-for="card in statCards.filter((card) => ANALYTICS_DASHBOARD_STATS.includes(card.key))"
 				:key="card.key"
 				:label="card.label"
 				:stat-label="card.statLabel"
@@ -51,6 +51,7 @@ import {
 	injectAnalyticsDashboardContext,
 } from '~/providers/analytics/analytics'
 
+import { ANALYTICS_DASHBOARD_STATS } from '../analytics-chart/analytics-chart-constants.ts'
 import { analyticsStatCardMessages, formatAnalyticsStatLabel } from '../analytics-messages.ts'
 import { formatAnalyticsTableFullPlaytime } from '../analytics-table/analytics-table-formatting.ts'
 import StatCard from './StatCard.vue'

@@ -36,12 +36,7 @@ export const FILTER_VALUE_CATEGORIES: Exclude<AnalyticsQueryFilterCategory, 'pro
 	'dependent_project_type',
 ]
 
-const ANALYTICS_DASHBOARD_STAT_ORDER: AnalyticsDashboardStat[] = [
-	'views',
-	'downloads',
-	'revenue',
-	'playtime',
-]
+const ANALYTICS_DASHBOARD_STAT_ORDER: AnalyticsDashboardStat[] = ['views']
 
 const ANALYTICS_STATS_BY_DIMENSION: Record<
 	AnalyticsDashboardDimension,
@@ -262,7 +257,9 @@ function haveAnalyticsStatOverlap(
 export function getAnalyticsStatsForDimension(
 	dimension: AnalyticsDashboardDimension,
 ): readonly AnalyticsDashboardStat[] {
-	return ANALYTICS_STATS_BY_DIMENSION[dimension]
+	return ANALYTICS_STATS_BY_DIMENSION[dimension].filter((stat) =>
+		ANALYTICS_DASHBOARD_STAT_ORDER.includes(stat),
+	)
 }
 
 export function getAnalyticsStatsForBreakdown(

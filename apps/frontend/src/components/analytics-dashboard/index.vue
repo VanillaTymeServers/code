@@ -29,7 +29,7 @@
 		</div>
 		<StatCards />
 		<AnalyticsChart />
-		<AnalyticsTable />
+		<AnalyticsTable v-show="ANALYTICS_BREAKDOWNS_ENABLED" />
 	</div>
 </template>
 
@@ -43,6 +43,7 @@ import {
 } from '~/providers/analytics/analytics'
 import { injectOrganizationContext } from '~/providers/organization-context'
 
+import { ANALYTICS_BREAKDOWNS_ENABLED } from './analytics-chart/analytics-chart-constants.ts'
 import AnalyticsChart from './analytics-chart/index.vue'
 import { analyticsMessages } from './analytics-messages.ts'
 import AnalyticsTable from './analytics-table/index.vue'

@@ -38,23 +38,23 @@ export const analyticsMessages = defineMessages({
 	},
 	allProjects: {
 		id: 'analytics.project.all',
-		defaultMessage: 'All projects',
+		defaultMessage: 'All shops',
 	},
 	yourProjects: {
 		id: 'analytics.project.your',
-		defaultMessage: 'Your projects',
+		defaultMessage: 'Your shops',
 	},
 	userProjects: {
 		id: 'analytics.project.user',
-		defaultMessage: "{username}'s projects",
+		defaultMessage: "{username}'s shops",
 	},
 	selectProjects: {
 		id: 'analytics.project.select',
-		defaultMessage: 'Select projects',
+		defaultMessage: 'Select shops',
 	},
 	projectCount: {
 		id: 'analytics.project.count',
-		defaultMessage: '{count, plural, one {# project} other {# projects}}',
+		defaultMessage: '{count, plural, one {# shop} other {# shops}}',
 	},
 	projectIconAlt: {
 		id: 'analytics.project.icon-alt',
@@ -70,15 +70,15 @@ export const analyticsMessages = defineMessages({
 	},
 	noProjectsAvailable: {
 		id: 'analytics.empty.no-projects',
-		defaultMessage: 'No projects available',
+		defaultMessage: 'No shops available',
 	},
 	noProjectsAvailableForAnalytics: {
 		id: 'analytics.empty.no-projects-for-analytics',
-		defaultMessage: 'No projects available for analytics',
+		defaultMessage: 'No shops available for analytics',
 	},
 	selectAtLeastOneProject: {
 		id: 'analytics.empty.select-project',
-		defaultMessage: 'Select at least one project to view data',
+		defaultMessage: 'Select at least one shop to view data',
 	},
 	unknown: {
 		id: 'analytics.value.unknown',
@@ -115,7 +115,7 @@ export const analyticsMessages = defineMessages({
 	},
 	projectLabel: {
 		id: 'analytics.query.label.project',
-		defaultMessage: 'Project:',
+		defaultMessage: 'Shop:',
 	},
 	timeframeLabel: {
 		id: 'analytics.query.label.timeframe',
@@ -143,7 +143,7 @@ export const analyticsMessages = defineMessages({
 	},
 	projectsAbove: {
 		id: 'analytics.threshold.projects-above',
-		defaultMessage: 'Projects above',
+		defaultMessage: 'Shops above',
 	},
 	countriesAbove: {
 		id: 'analytics.threshold.countries-above',
@@ -151,7 +151,7 @@ export const analyticsMessages = defineMessages({
 	},
 	projectVersionsAbove: {
 		id: 'analytics.threshold.project-versions-above',
-		defaultMessage: 'Project versions above',
+		defaultMessage: 'Shop versions above',
 	},
 	gameVersionsAbove: {
 		id: 'analytics.threshold.game-versions-above',
@@ -159,7 +159,7 @@ export const analyticsMessages = defineMessages({
 	},
 	projectDownloadsThresholdAria: {
 		id: 'analytics.threshold.project-downloads-aria',
-		defaultMessage: 'Project downloads threshold',
+		defaultMessage: 'Shop downloads threshold',
 	},
 	countryDownloadsThresholdAria: {
 		id: 'analytics.threshold.country-downloads-aria',
@@ -167,7 +167,7 @@ export const analyticsMessages = defineMessages({
 	},
 	projectVersionDownloadsThresholdAria: {
 		id: 'analytics.threshold.project-version-downloads-aria',
-		defaultMessage: 'Project version downloads threshold',
+		defaultMessage: 'Shop version downloads threshold',
 	},
 	gameVersionDownloadsThresholdAria: {
 		id: 'analytics.threshold.game-version-downloads-aria',
@@ -187,11 +187,11 @@ export const analyticsMessages = defineMessages({
 	},
 	searchProjectVersionsPlaceholder: {
 		id: 'analytics.filter.search.project-versions',
-		defaultMessage: 'Search project versions...',
+		defaultMessage: 'Search shop versions...',
 	},
 	searchDependentProjectsPlaceholder: {
 		id: 'analytics.filter.search.dependent-projects',
-		defaultMessage: 'Search projects...',
+		defaultMessage: 'Search shops...',
 	},
 	searchMembersPlaceholder: {
 		id: 'analytics.filter.search.members',
@@ -215,7 +215,7 @@ export const analyticsMessages = defineMessages({
 	},
 	dependentProjectSearchFailedTitle: {
 		id: 'analytics.filter.dependent-project-search-failed-title',
-		defaultMessage: 'Dependent projects failed to load',
+		defaultMessage: 'Dependent shops failed to load',
 	},
 })
 
@@ -359,7 +359,7 @@ export const analyticsBreakdownMessages = defineMessages({
 	},
 	project: {
 		id: 'analytics.breakdown.project',
-		defaultMessage: 'Project',
+		defaultMessage: 'Shop',
 	},
 	country: {
 		id: 'analytics.breakdown.country',
@@ -383,11 +383,11 @@ export const analyticsBreakdownMessages = defineMessages({
 	},
 	dependentProjectDownload: {
 		id: 'analytics.breakdown.dependent-project-download',
-		defaultMessage: 'Dependent project',
+		defaultMessage: 'Dependent shop',
 	},
 	dependentProjectType: {
 		id: 'analytics.breakdown.dependent-project-type',
-		defaultMessage: 'Dependent project type',
+		defaultMessage: 'Dependent shop type',
 	},
 	dependentOn: {
 		id: 'analytics.breakdown.dependent-on',
@@ -395,7 +395,7 @@ export const analyticsBreakdownMessages = defineMessages({
 	},
 	versionId: {
 		id: 'analytics.breakdown.project-version',
-		defaultMessage: 'Project version',
+		defaultMessage: 'Shop version',
 	},
 	loader: {
 		id: 'analytics.breakdown.loader',
@@ -407,7 +407,7 @@ export const analyticsBreakdownMessages = defineMessages({
 	},
 	projectStatus: {
 		id: 'analytics.breakdown.project-status',
-		defaultMessage: 'Project status',
+		defaultMessage: 'Shop status',
 	},
 })
 
@@ -526,7 +526,7 @@ export const analyticsTableMessages = defineMessages({
 	},
 	csvFilename: {
 		id: 'analytics.table.csv.filename',
-		defaultMessage: 'Modrinth Analytics {breakdown} Breakdown - {dateRange}',
+		defaultMessage: 'Vanilla Tyme Analytics {breakdown} Breakdown - {dateRange}',
 	},
 	durationDays: {
 		id: 'analytics.table.duration.days',
@@ -570,22 +570,22 @@ export const analyticsChartMessages = defineMessages({
 	tableSelectionLimited: {
 		id: 'analytics.chart.table-selection.limited',
 		defaultMessage:
-			'Showing {limit} {itemType, select, project {{limit, plural, one {project} other {projects}}} country {{limit, plural, one {country} other {countries}}} monetization {{limit, plural, one {monetization value} other {monetization values}}} downloadSource {{limit, plural, one {download source} other {download sources}}} downloadReason {{limit, plural, one {download reason} other {download reasons}}} member {{limit, plural, one {member} other {members}}} projectVersion {{limit, plural, one {project version} other {project versions}}} loader {{limit, plural, one {loader} other {loaders}}} gameVersion {{limit, plural, one {game version} other {game versions}}} other {{limit, plural, one {item} other {items}}}} from table',
+			'Showing {limit} {itemType, select, project {{limit, plural, one {shop} other {shops}}} country {{limit, plural, one {country} other {countries}}} monetization {{limit, plural, one {monetization value} other {monetization values}}} downloadSource {{limit, plural, one {download source} other {download sources}}} downloadReason {{limit, plural, one {download reason} other {download reasons}}} member {{limit, plural, one {member} other {members}}} projectVersion {{limit, plural, one {project version} other {project versions}}} loader {{limit, plural, one {loader} other {loaders}}} gameVersion {{limit, plural, one {game version} other {game versions}}} other {{limit, plural, one {item} other {items}}}} from table',
 	},
 	tableSelectionAll: {
 		id: 'analytics.chart.table-selection.all',
 		defaultMessage:
-			'Showing all {itemType, select, project {{count, plural, one {project} other {projects}}} country {{count, plural, one {country} other {countries}}} monetization {{count, plural, one {monetization value} other {monetization values}}} downloadSource {{count, plural, one {download source} other {download sources}}} downloadReason {{count, plural, one {download reason} other {download reasons}}} member {{count, plural, one {member} other {members}}} projectVersion {{count, plural, one {project version} other {project versions}}} loader {{count, plural, one {loader} other {loaders}}} gameVersion {{count, plural, one {game version} other {game versions}}} other {{count, plural, one {item} other {items}}}} from table',
+			'Showing all {itemType, select, project {{count, plural, one {shop} other {shops}}} country {{count, plural, one {country} other {countries}}} monetization {{count, plural, one {monetization value} other {monetization values}}} downloadSource {{count, plural, one {download source} other {download sources}}} downloadReason {{count, plural, one {download reason} other {download reasons}}} member {{count, plural, one {member} other {members}}} projectVersion {{count, plural, one {project version} other {project versions}}} loader {{count, plural, one {loader} other {loaders}}} gameVersion {{count, plural, one {game version} other {game versions}}} other {{count, plural, one {item} other {items}}}} from table',
 	},
 	tableSelectionTop: {
 		id: 'analytics.chart.table-selection.top',
 		defaultMessage:
-			'Showing top {count} {itemType, select, project {{count, plural, one {project} other {projects}}} country {{count, plural, one {country} other {countries}}} monetization {{count, plural, one {monetization value} other {monetization values}}} downloadSource {{count, plural, one {download source} other {download sources}}} downloadReason {{count, plural, one {download reason} other {download reasons}}} member {{count, plural, one {member} other {members}}} projectVersion {{count, plural, one {project version} other {project versions}}} loader {{count, plural, one {loader} other {loaders}}} gameVersion {{count, plural, one {game version} other {game versions}}} other {{count, plural, one {item} other {items}}}} from table',
+			'Showing top {count} {itemType, select, project {{count, plural, one {shop} other {shops}}} country {{count, plural, one {country} other {countries}}} monetization {{count, plural, one {monetization value} other {monetization values}}} downloadSource {{count, plural, one {download source} other {download sources}}} downloadReason {{count, plural, one {download reason} other {download reasons}}} member {{count, plural, one {member} other {members}}} projectVersion {{count, plural, one {project version} other {project versions}}} loader {{count, plural, one {loader} other {loaders}}} gameVersion {{count, plural, one {game version} other {game versions}}} other {{count, plural, one {item} other {items}}}} from table',
 	},
 	tableSelectionCount: {
 		id: 'analytics.chart.table-selection.count',
 		defaultMessage:
-			'Showing {count} {itemType, select, project {{count, plural, one {project} other {projects}}} country {{count, plural, one {country} other {countries}}} monetization {{count, plural, one {monetization value} other {monetization values}}} downloadSource {{count, plural, one {download source} other {download sources}}} downloadReason {{count, plural, one {download reason} other {download reasons}}} member {{count, plural, one {member} other {members}}} projectVersion {{count, plural, one {project version} other {project versions}}} loader {{count, plural, one {loader} other {loaders}}} gameVersion {{count, plural, one {game version} other {game versions}}} other {{count, plural, one {item} other {items}}}} from table',
+			'Showing {count} {itemType, select, project {{count, plural, one {shop} other {shops}}} country {{count, plural, one {country} other {countries}}} monetization {{count, plural, one {monetization value} other {monetization values}}} downloadSource {{count, plural, one {download source} other {download sources}}} downloadReason {{count, plural, one {download reason} other {download reasons}}} member {{count, plural, one {member} other {members}}} projectVersion {{count, plural, one {project version} other {project versions}}} loader {{count, plural, one {loader} other {loaders}}} gameVersion {{count, plural, one {game version} other {game versions}}} other {{count, plural, one {item} other {items}}}} from table',
 	},
 	lineView: {
 		id: 'analytics.chart.view.line',
@@ -633,19 +633,19 @@ export const analyticsChartMessages = defineMessages({
 	},
 	projectEvents: {
 		id: 'analytics.chart.controls.project-events',
-		defaultMessage: 'Project events',
+		defaultMessage: 'Shop events',
 	},
 	modrinthEvents: {
 		id: 'analytics.chart.controls.modrinth-events',
-		defaultMessage: 'Modrinth events',
+		defaultMessage: 'Vanilla Tyme events',
 	},
 	noProjectEvents: {
 		id: 'analytics.chart.controls.no-project-events',
-		defaultMessage: 'No project events in graph.',
+		defaultMessage: 'No shop events in graph.',
 	},
 	noModrinthEvents: {
 		id: 'analytics.chart.controls.no-modrinth-events',
-		defaultMessage: 'No Modrinth events in graph.',
+		defaultMessage: 'No Vanilla Tyme events in graph.',
 	},
 	viewMonetizedAnalyticsDetails: {
 		id: 'analytics.chart.legend.monetization-details.aria',
@@ -745,19 +745,19 @@ export const analyticsProjectEventMessages = defineMessages({
 	},
 	projectApproved: {
 		id: 'analytics.project-event.project-approved',
-		defaultMessage: 'Project approved',
+		defaultMessage: 'Shop approved',
 	},
 	projectUnlisted: {
 		id: 'analytics.project-event.project-unlisted',
-		defaultMessage: 'Project unlisted',
+		defaultMessage: 'Shop unlisted',
 	},
 	projectPrivate: {
 		id: 'analytics.project-event.project-private',
-		defaultMessage: 'Project set to private',
+		defaultMessage: 'Shop set to private',
 	},
 	projectStatusChanged: {
 		id: 'analytics.project-event.project-status-changed',
-		defaultMessage: 'Project status changed',
+		defaultMessage: 'Shop status changed',
 	},
 })
 
