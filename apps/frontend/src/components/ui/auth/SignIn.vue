@@ -134,29 +134,7 @@
 						}}
 					</div>
 
-					<section class="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-						<ButtonLink
-							v-for="provider in oauthProviders"
-							:key="provider.id"
-							class="relative w-full !justify-center overflow-visible"
-							:class="{
-								'!border !border-[var(--color-green)]': lastSignInOAuthProvider === provider.id,
-							}"
-							:href="getAuthUrl(provider.id, redirectTarget, requestsAppSession)"
-							:aria-label="
-								formatMessage(messages.continueWithProvider, { provider: provider.name })
-							"
-							@click="onOAuthProviderClick(provider.id)"
-						>
-							<component :is="provider.icon" />
-							<span>{{ provider.name }}</span>
-							<span
-								v-if="lastSignInOAuthProvider === provider.id"
-								class="oauth-provider-last-sign-in-badge"
-							>
-								{{ formatMessage(messages.lastSignInLabel) }}
-							</span>
-						</ButtonLink>
+					<section class="flex flex-col gap-2.5">
 						<Button
 							class="relative !w-full !justify-center overflow-visible sm:col-span-2"
 							:class="{
@@ -276,10 +254,7 @@ import {
 	type StoredAccountAuthMethod,
 } from '@/composables/accounts.ts'
 import { getAuthUrl } from '@/composables/auth.ts'
-import {
-	isLauncherProtocolV2,
-	LAUNCHER_REAUTH_ACCOUNT_STORAGE_KEY,
-} from '@/composables/launcher-auth.ts'
+import { LAUNCHER_REAUTH_ACCOUNT_STORAGE_KEY } from '@/composables/launcher-auth.ts'
 
 const oauthProviders = [
 	{ id: 'discord', name: 'Discord', icon: DiscordColorIcon },
@@ -395,9 +370,6 @@ const focusedReauthAccount = computed(() => {
 	}
 	return null
 })
-const requestsAppSession = computed(
-	() => isLauncherProtocolV2({ query: routeQuery }) && !reauthAccount,
-)
 
 const onOAuthProviderClick = (provider: AuthProvider) => {
 	pendingSignInOAuthProvider.value = provider
@@ -426,11 +398,11 @@ const messages = defineMessages({
 	},
 	signInWithLabel: {
 		id: 'auth.sign-in.sign-in-with',
-		defaultMessage: 'Sign into Modrinth',
+		defaultMessage: 'Sign into Vanilla Tyme',
 	},
 	launcherReauthTitle: {
 		id: 'auth.sign-in.launcher.reauthenticate.title',
-		defaultMessage: 'Sign into Modrinth App',
+		defaultMessage: 'Sign into Vanilla Tyme App',
 	},
 	useDifferentAccount: {
 		id: 'auth.sign-in.reauthenticate.use-different-account',
@@ -438,7 +410,7 @@ const messages = defineMessages({
 	},
 	chooseAccountLabel: {
 		id: 'auth.sign-in.choose-account',
-		defaultMessage: 'Choose an account to use in Modrinth App',
+		defaultMessage: 'Choose an account to use in Vanilla Tyme App',
 	},
 	addAccountLabel: {
 		id: 'auth.sign-in.add-account',

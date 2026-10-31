@@ -15,7 +15,7 @@
 				<ButtonLink class="shadow-none" to="/settings/account">
 					<SettingsIcon /> {{ formatMessage(messages.accountSettings) }}
 				</ButtonLink>
-				<ButtonLink type="colored" color="brand" to="/discover/mods">
+				<ButtonLink type="colored" color="brand" to="/discover/shops">
 					{{ formatMessage(messages.discoverMods) }}
 					<RightArrowIcon />
 				</ButtonLink>
@@ -36,7 +36,7 @@
 					<ButtonLink to="/settings/account">
 						<SettingsIcon /> {{ formatMessage(messages.accountSettings) }}
 					</ButtonLink>
-					<ButtonLink type="colored" color="brand" to="/discover/mods">
+					<ButtonLink type="colored" color="brand" to="/discover/shops">
 						{{ formatMessage(messages.discoverMods) }}
 						<RightArrowIcon />
 					</ButtonLink>
@@ -129,7 +129,7 @@ const messages = defineMessages({
 	},
 	discoverMods: {
 		id: 'auth.verify-email.action.discover-mods',
-		defaultMessage: 'Discover mods',
+		defaultMessage: 'Discover shops',
 	},
 	emailSentNotificationTitle: {
 		id: 'auth.verify-email.notification.email-sent.title',
