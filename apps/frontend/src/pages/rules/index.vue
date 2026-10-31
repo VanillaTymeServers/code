@@ -583,7 +583,6 @@
 						{{ formatMessage(messages.lagVillagers) }}
 						<ul>
 							<li>{{ formatMessage(messages.lagVillagerBreeders) }}</li>
-							<li>{{ formatMessage(messages.lagTradingVillagers) }}</li>
 						</ul>
 					</li>
 					<li>{{ formatMessage(messages.lagGuardianFarms) }}</li>
@@ -1241,10 +1240,6 @@ const messages = defineMessages({
 	lagVillagerBreeders: {
 		id: 'rules.main.lag.villager-breeders',
 		defaultMessage: 'Breeders must not let over 24 villagers build up at a time.',
-	},
-	lagTradingVillagers: {
-		id: 'rules.main.lag.trading-villagers',
-		defaultMessage: 'Trading villagers must be optimized.',
 	},
 	lagGuardianFarms: {
 		id: 'rules.main.lag.guardian-farms',
