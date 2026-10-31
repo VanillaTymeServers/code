@@ -40,7 +40,7 @@ const { data: categories, suspense: categoriesSuspense } = useQuery(
 )
 const { data: sales, suspense: salesSuspense } = useQuery(storeQueryOptions.sales(token, client))
 
-onServerPrefetch(() => Promise.all([categoriesSuspense(), salesSuspense()]))
+await Promise.all([categoriesSuspense(), salesSuspense()]).catch(() => {})
 
 const messages = defineMessages({
 	salePercentage: {

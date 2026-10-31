@@ -93,7 +93,7 @@ const { data: webstore, suspense: webstoreSuspense } = useQuery(
 	storeQueryOptions.webstore(token, client),
 )
 
-onServerPrefetch(() => Promise.all([modulesSuspense(), webstoreSuspense()]))
+await Promise.all([modulesSuspense(), webstoreSuspense()]).catch(() => {})
 
 const messages = defineMessages({
 	goalProgress: {

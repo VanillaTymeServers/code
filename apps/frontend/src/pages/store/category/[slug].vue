@@ -39,4 +39,6 @@ const messages = defineMessages({
 		defaultMessage: 'Category not found',
 	},
 })
+
+if (import.meta.client) await suspense().catch(() => {})
 </script>
