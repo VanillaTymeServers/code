@@ -1532,33 +1532,6 @@
   "hosting.plan.select-plan": {
     "message": "Vybrat plán"
   },
-  "landing.button.discover-mods": {
-    "message": "Objevit módy"
-  },
-  "landing.creator.feature.discovery.title": {
-    "message": "Objev"
-  },
-  "landing.creator.feature.monetization.title": {
-    "message": "Monetizace"
-  },
-  "landing.launcher.atlauncher-label": {
-    "message": "ATLauncher"
-  },
-  "landing.launcher.modrinth-app-label": {
-    "message": "Modrinth App"
-  },
-  "landing.launcher.prism-launcher-label": {
-    "message": "Prism Launcher"
-  },
-  "landing.notifications.heading": {
-    "message": "Oznámení"
-  },
-  "landing.section.for-creators.label": {
-    "message": "Pro Tvůrce"
-  },
-  "landing.section.for-players.label": {
-    "message": "Pro hráče"
-  },
   "layout.action.change-theme": {
     "message": "Změnit motiv"
   },

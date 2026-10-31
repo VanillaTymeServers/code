@@ -2072,114 +2072,6 @@
   "hosting.plan.select-plan": {
     "message": "Вибрати план"
   },
-  "landing.button.discover-mods": {
-    "message": "Дослідити моди"
-  },
-  "landing.button.go-to-dashboard": {
-    "message": "Перейти до Панелі керування"
-  },
-  "landing.creator.feature.constantly-evolving.description": {
-    "message": "Отримуйте найкращий можливий досвід створення модів завдяки постійним оновленням від команди Modrinth"
-  },
-  "landing.creator.feature.constantly-evolving.title": {
-    "message": "Постійний розвиток"
-  },
-  "landing.creator.feature.data-statistics.description": {
-    "message": "Отримуйте детальні звіти про перегляди, завантаження та доходи"
-  },
-  "landing.creator.feature.data-statistics.title": {
-    "message": "Дані та статистика"
-  },
-  "landing.creator.feature.discovery.description": {
-    "message": "Дозвольте тисячам користувачів відкрити для себе ваш проєкт через пошук, головну сторінку, сервер у Discord та інші способи, які з’являться в майбутньому!"
-  },
-  "landing.creator.feature.discovery.title": {
-    "message": "Охоплення"
-  },
-  "landing.creator.feature.diverse-ecosystem.description": {
-    "message": "Інтегруйте ваші інструменти збірки з Minotaur, щоб автоматично завантажувати нові версії, щойно ви їх випускаєте"
-  },
-  "landing.creator.feature.diverse-ecosystem.title": {
-    "message": "Різноманітна екосистема"
-  },
-  "landing.creator.feature.monetization.description": {
-    "message": "Отримуйте дохід від реклами на сторінках ваших проєктів і виводьте кошти в будь-який час"
-  },
-  "landing.creator.feature.monetization.title": {
-    "message": "Монетизація"
-  },
-  "landing.creator.feature.team-management.description": {
-    "message": "Запрошуйте учасників вашої команди й керуйте їхніми ролями та дозволами з легкістю"
-  },
-  "landing.creator.feature.team-management.title": {
-    "message": "Керування командою"
-  },
-  "landing.error.failedToLoadRandomProjects": {
-    "message": "Не вдалося завантажити випадкові проєкти :("
-  },
-  "landing.feature.follow.description": {
-    "message": "Отримуйте сповіщення, як тільки ваші улюблені проєкти оновлюються, і будьте в курсі всіх подій."
-  },
-  "landing.feature.follow.heading": {
-    "message": "Відстежуйте проєкти, які любите"
-  },
-  "landing.feature.launcher.description": {
-    "message": "Відкрите API Modrinth дає змогу запускачам реалізувати глибоку інтеграцію з Modrinth. Ви можете користуватися Modrinth у <link>нашому застосунку</link> або певних запускачах, як-от ATLauncher, MultiMC і Prism Launcher."
-  },
-  "landing.feature.launcher.heading": {
-    "message": "Грайте з вашим улюбленим запускачем"
-  },
-  "landing.feature.search.description": {
-    "message": "За допомогою швидкісного пошуку і потужних фільтрів Modrinth ви знайдете те, що вам потрібно, вже під час набору."
-  },
-  "landing.feature.search.heading": {
-    "message": "Знаходьте те, що бажаєте, швидко та легко"
-  },
-  "landing.launcher.atlauncher-label": {
-    "message": "ATLauncher"
-  },
-  "landing.launcher.graphic-alt": {
-    "message": "Спрощене зображення вікна Minecraft, з логотипом Mojang Studios в зеленому кольорі Modrinth."
-  },
-  "landing.launcher.modrinth-app-label": {
-    "message": "Modrinth App"
-  },
-  "landing.launcher.prism-launcher-label": {
-    "message": "Prism Launcher"
-  },
-  "landing.notifications.has-been-updated": {
-    "message": "«{title}» оновлено!"
-  },
-  "landing.notifications.heading": {
-    "message": "Сповіщення"
-  },
-  "landing.notifications.received-time": {
-    "message": "Отримано {time}"
-  },
-  "landing.notifications.version-released": {
-    "message": "Версію {version} було випущено для {gameVersion}"
-  },
-  "landing.section.for-creators.description": {
-    "message": "Створіть свою домівку для своїх творінь та охоплюйте величезну авдиторію відданих гравців."
-  },
-  "landing.section.for-creators.label": {
-    "message": "Для творців"
-  },
-  "landing.section.for-creators.tagline": {
-    "message": "Діліться вашим умістом зі світом"
-  },
-  "landing.section.for-players.description": {
-    "message": "Від чарівних біомів до проклятих підземель — ви обов’язково знайдете вміст, який виведе вашу гру на новий рівень."
-  },
-  "landing.section.for-players.label": {
-    "message": "Для гравців"
-  },
-  "landing.section.for-players.tagline": {
-    "message": "Відкрийте для себе понад {count, number} творінь"
-  },
-  "landing.subheading": {
-    "message": "Досліджуйте, грайте та діліться вмістом для Minecraft на нашій платформі з відкритим кодом, створеній для спільноти."
-  },
   "layout.action.analytics-events": {
     "message": "Події аналітики"
   },
@@ -2392,9 +2284,6 @@
   },
   "layout.publish.email-verification-required.title": {
     "message": "Необхідно підтвердити електронну пошту"
-  },
-  "messages.noResults": {
-    "message": "Не знайдено результатів за вашим запитом!"
   },
   "modal.shared-instance.open-in-app.benefit.install": {
     "message": "Автоматично встановлювати все, у що вони грають"

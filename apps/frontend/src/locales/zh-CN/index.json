@@ -2075,114 +2075,6 @@
   "hosting.plan.select-plan": {
     "message": "选择方案"
   },
-  "landing.button.discover-mods": {
-    "message": "发现模组"
-  },
-  "landing.button.go-to-dashboard": {
-    "message": "前往仪表板"
-  },
-  "landing.creator.feature.constantly-evolving.description": {
-    "message": "Modrinth 团队将持续更新，为你提供优质的模组创作体验"
-  },
-  "landing.creator.feature.constantly-evolving.title": {
-    "message": "持续进化"
-  },
-  "landing.creator.feature.data-statistics.description": {
-    "message": "获取页面浏览量、下载量和项目收入的详细数据报告"
-  },
-  "landing.creator.feature.data-statistics.title": {
-    "message": "数据统计"
-  },
-  "landing.creator.feature.discovery.description": {
-    "message": "通过搜索、首页、Discord 社区以及未来更多渠道，让你的项目被成千上万的用户发现！"
-  },
-  "landing.creator.feature.discovery.title": {
-    "message": "探索发现"
-  },
-  "landing.creator.feature.diverse-ecosystem.description": {
-    "message": "通过 Minotaur 与你的构建工具无缝集成，在新版本发布时自动上传"
-  },
-  "landing.creator.feature.diverse-ecosystem.title": {
-    "message": "生态拓展"
-  },
-  "landing.creator.feature.monetization.description": {
-    "message": "从你的项目页面获得广告收入，并随时提现"
-  },
-  "landing.creator.feature.monetization.title": {
-    "message": "获取收益"
-  },
-  "landing.creator.feature.team-management.description": {
-    "message": "轻松邀请团队成员，便捷管理成员角色与权限"
-  },
-  "landing.creator.feature.team-management.title": {
-    "message": "团队管理"
-  },
-  "landing.error.failedToLoadRandomProjects": {
-    "message": "加载随机项目失败 :("
-  },
-  "landing.feature.follow.description": {
-    "message": "当关注的项目更新时，你将收到通知，及时获取最新动态。"
-  },
-  "landing.feature.follow.heading": {
-    "message": "关注你喜欢的项目"
-  },
-  "landing.feature.launcher.description": {
-    "message": "Modrinth 的开源 API 允许启动器深度集成于Modrinth 。通过<link>我们的应用程序</link>，以及 ATLauncher、MultiMC、Prism Launcher 等高人气启动器，均可直接访问 Modrinth。"
-  },
-  "landing.feature.launcher.heading": {
-    "message": "与你心仪的启动器协同并行"
-  },
-  "landing.feature.search.description": {
-    "message": "Modrinth 的搜索快如闪电，配合强大的筛选功能，心仪内容就在弹指一挥间。"
-  },
-  "landing.feature.search.heading": {
-    "message": "查找迅速，轻松锁定"
-  },
-  "landing.launcher.atlauncher-label": {
-    "message": "ATLauncher"
-  },
-  "landing.launcher.graphic-alt": {
-    "message": "一个简化版的 Minecraft 窗口，其中包含以 Modrinth 绿色显示的 Mojang Studios 徽标。"
-  },
-  "landing.launcher.modrinth-app-label": {
-    "message": "Modrinth App"
-  },
-  "landing.launcher.prism-launcher-label": {
-    "message": "Prism Launcher"
-  },
-  "landing.notifications.has-been-updated": {
-    "message": "{title} 更新了！"
-  },
-  "landing.notifications.heading": {
-    "message": "通知"
-  },
-  "landing.notifications.received-time": {
-    "message": "{time}收到"
-  },
-  "landing.notifications.version-released": {
-    "message": "新版本 {version} 已发布，适用于 {gameVersion}"
-  },
-  "landing.section.for-creators.description": {
-    "message": "为你的创作安一个家，连接全球千万忠实玩家。"
-  },
-  "landing.section.for-creators.label": {
-    "message": "面向创作者"
-  },
-  "landing.section.for-creators.tagline": {
-    "message": "让你的作品走向世界"
-  },
-  "landing.section.for-players.description": {
-    "message": "从奇幻生物群系到诅咒地牢，海量内容定能将你的游戏体验提升到全新高度。"
-  },
-  "landing.section.for-players.label": {
-    "message": "面向玩家"
-  },
-  "landing.section.for-players.tagline": {
-    "message": "探索超过 {count, number} 件作品"
-  },
-  "landing.subheading": {
-    "message": "在我们为社区打造的开源平台上，探索、畅玩并分享 Minecraft 的无限可能。"
-  },
   "layout.action.analytics-events": {
     "message": "分析活动"
   },
@@ -2395,9 +2287,6 @@
   },
   "layout.publish.email-verification-required.title": {
     "message": "需要验证电子邮件"
-  },
-  "messages.noResults": {
-    "message": "没有您的查询结果！"
   },
   "modal.shared-instance.open-in-app.benefit.install": {
     "message": "自动安装他们正在玩的所有游戏"

@@ -488,57 +488,6 @@
   "hosting.plan.out-of-stock": {
     "message": "Loppuunmyyty"
   },
-  "landing.button.discover-mods": {
-    "message": "Löydä modeja"
-  },
-  "landing.creator.feature.data-statistics.description": {
-    "message": "Saa yksityiskohtaisia raportteja sivun katselukerroista, latausten määristä ja tulosta"
-  },
-  "landing.creator.feature.data-statistics.title": {
-    "message": "Data ja Tilastot"
-  },
-  "landing.creator.feature.discovery.title": {
-    "message": "Tutustuminen"
-  },
-  "landing.creator.feature.monetization.title": {
-    "message": "Monetisointi"
-  },
-  "landing.creator.feature.team-management.description": {
-    "message": "Kutsu tiimiläisesi ja hallinnoi rooleja sekä lupia kätevästi"
-  },
-  "landing.creator.feature.team-management.title": {
-    "message": "Tiimin Hallinta"
-  },
-  "landing.error.failedToLoadRandomProjects": {
-    "message": "Satunnaisten projektien lataaminen epäonnistui :("
-  },
-  "landing.feature.follow.heading": {
-    "message": "Seuraa projekteja joita rakastat"
-  },
-  "landing.feature.launcher.heading": {
-    "message": "Pelaa lempi launcherillasi"
-  },
-  "landing.feature.search.heading": {
-    "message": "Löydä mitä haluat nopeasti ja helposti"
-  },
-  "landing.launcher.atlauncher-label": {
-    "message": "ATLauncher"
-  },
-  "landing.launcher.modrinth-app-label": {
-    "message": "Modrinth App"
-  },
-  "landing.launcher.prism-launcher-label": {
-    "message": "Prism Launcher"
-  },
-  "landing.notifications.heading": {
-    "message": "Ilmoitukset"
-  },
-  "landing.section.for-creators.label": {
-    "message": "Luojille"
-  },
-  "landing.section.for-players.label": {
-    "message": "Pelaajille"
-  },
   "layout.action.change-theme": {
     "message": "Vaihda teemaa"
   },

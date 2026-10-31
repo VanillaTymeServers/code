@@ -2075,114 +2075,6 @@
   "hosting.plan.select-plan": {
     "message": "Plan auswählen"
   },
-  "landing.button.discover-mods": {
-    "message": "Entdecke Mods"
-  },
-  "landing.button.go-to-dashboard": {
-    "message": "Gehe zum Dashboard"
-  },
-  "landing.creator.feature.constantly-evolving.description": {
-    "message": "Erlebe das bestmögliche Modding-Erlebnis mit ständigen Updates vom Modrinth-Team"
-  },
-  "landing.creator.feature.constantly-evolving.title": {
-    "message": "Ständig im Wandel"
-  },
-  "landing.creator.feature.data-statistics.description": {
-    "message": "Erhalte detaillierte Berichte zu Seitenaufrufen, Downloadzahlen und Einnahmen"
-  },
-  "landing.creator.feature.data-statistics.title": {
-    "message": "Daten und Statistiken"
-  },
-  "landing.creator.feature.discovery.description": {
-    "message": "Lass dein Projekt von tausenden Nutzern entdeckt werden. Über die Suche, unsere Startseite, den Discord-Server und viele weitere Möglichkeiten in der Zukunft!"
-  },
-  "landing.creator.feature.discovery.title": {
-    "message": "Entdeckung"
-  },
-  "landing.creator.feature.diverse-ecosystem.description": {
-    "message": "Integriere deine Build-Tools mit Minotaur, um neue Versionen automatisch direkt nach der Veröffentlichung hochzuladen"
-  },
-  "landing.creator.feature.diverse-ecosystem.title": {
-    "message": "Vielfältiges Ökosystem"
-  },
-  "landing.creator.feature.monetization.description": {
-    "message": "Erhalte Werbeeinnahmen von deinen Projektseiten und hebe dein Guthaben jederzeit ab"
-  },
-  "landing.creator.feature.monetization.title": {
-    "message": "Monetarisierung"
-  },
-  "landing.creator.feature.team-management.description": {
-    "message": "Lade deine Teammitglieder ein und verwalte Rollen und Berechtigungen mit Leichtigkeit"
-  },
-  "landing.creator.feature.team-management.title": {
-    "message": "Termverwaltung"
-  },
-  "landing.error.failedToLoadRandomProjects": {
-    "message": "Zufällige Projekte konnten nicht geladen werden :("
-  },
-  "landing.feature.follow.description": {
-    "message": "Erhalte Benachrichtigungen, sobald deine Lieblingsprojekte aktualisiert werden und bleibe immer auf dem Laufenden."
-  },
-  "landing.feature.follow.heading": {
-    "message": "Folge Projekten, die du magst"
-  },
-  "landing.feature.launcher.description": {
-    "message": "Die Open-Source-API von Modrinth ermöglicht Launchern eine tiefe Integration mit Modrinth. Du kannst Modrinth über <link>unsere eigene App</link> sowie einige der beliebtesten Launcher wie ATLauncher, MultiMC und Prism Launcher nutzen."
-  },
-  "landing.feature.launcher.heading": {
-    "message": "Spiele mit deinem Lieblings-Launcher"
-  },
-  "landing.feature.search.description": {
-    "message": "Die blitzschnelle Suche von Modrinth und die leistungsstarken Filter ermöglichen es dir, genau das zu finden, was du suchst, schon während du tippst."
-  },
-  "landing.feature.search.heading": {
-    "message": "Finde schnell und einfach, was du suchst"
-  },
-  "landing.launcher.atlauncher-label": {
-    "message": "ATLauncher"
-  },
-  "landing.launcher.graphic-alt": {
-    "message": "Eine vereinfachte Darstellung eines Minecraft-Fensters mit dem Mojang Studios Logo in Modrinth-Grün."
-  },
-  "landing.launcher.modrinth-app-label": {
-    "message": "Modrinth App"
-  },
-  "landing.launcher.prism-launcher-label": {
-    "message": "Prism Launcher"
-  },
-  "landing.notifications.has-been-updated": {
-    "message": "{title} wurde aktualisiert!"
-  },
-  "landing.notifications.heading": {
-    "message": "Benachrichtigungen"
-  },
-  "landing.notifications.received-time": {
-    "message": "Erhalten {time}"
-  },
-  "landing.notifications.version-released": {
-    "message": "Version {version} wurde für die {gameVersion} veröffentlicht"
-  },
-  "landing.section.for-creators.description": {
-    "message": "Gib deinen Kreationen ein Online-Zuhause und erreiche ein riesiges Publikum engagierter Spieler."
-  },
-  "landing.section.for-creators.label": {
-    "message": "Für Ersteller"
-  },
-  "landing.section.for-creators.tagline": {
-    "message": "Teile deine Inhalte mit der Welt"
-  },
-  "landing.section.for-players.description": {
-    "message": "Von magischen Biomen bis hin zu verfluchten Dungeons. Hier findest du Inhalte, die dein Spielerlebnis auf das nächste Level bringen."
-  },
-  "landing.section.for-players.label": {
-    "message": "Für Spieler"
-  },
-  "landing.section.for-players.tagline": {
-    "message": "Entdecke über {count, number} Kreationen"
-  },
-  "landing.subheading": {
-    "message": "Entdecke, spiele und teile Minecraft-Inhalte über unsere Open-Source-Plattform, die für die Community entwickelt wurde."
-  },
   "layout.action.analytics-events": {
     "message": "Analytics-Events"
   },
@@ -2395,9 +2287,6 @@
   },
   "layout.publish.email-verification-required.title": {
     "message": "E-Mail-Bestätigung erforderlich"
-  },
-  "messages.noResults": {
-    "message": "Keine Ergebnisse für deine Suche gefunden!"
   },
   "modal.shared-instance.open-in-app.benefit.install": {
     "message": "Installiere automatisch alles, was gerade gespielt wird"
