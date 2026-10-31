@@ -3249,10 +3249,10 @@
     "defaultMessage": "Visa"
   },
   "profile.bio.fallback.creator": {
-    "defaultMessage": "A Modrinth creator."
+    "defaultMessage": "A Vanilla Tyme creator."
   },
   "profile.bio.fallback.user": {
-    "defaultMessage": "A Modrinth user."
+    "defaultMessage": "A Vanilla Tyme member."
   },
   "profile.block-user.admonition-body": {
     "defaultMessage": "{username} will not be able to send you friend requests, invite you to shared instances or invite you to Modrinth Hosting servers."
@@ -3288,7 +3288,7 @@
     "defaultMessage": "Create a collection"
   },
   "profile.button.create-project": {
-    "defaultMessage": "Create a project"
+    "defaultMessage": "Create a shop"
   },
   "profile.button.force-password-reset": {
     "defaultMessage": "Force password reset"
@@ -3426,10 +3426,10 @@
     "defaultMessage": "You don't have any collections yet."
   },
   "profile.label.no-projects": {
-    "defaultMessage": "This user has no projects!"
+    "defaultMessage": "This user has no shops!"
   },
   "profile.label.no-projects-auth-description": {
-    "defaultMessage": "You don't have any projects yet."
+    "defaultMessage": "You don't have any shops yet."
   },
   "profile.label.organizations": {
     "defaultMessage": "Organizations"
@@ -3441,7 +3441,7 @@
     "defaultMessage": "Official Modrinth account"
   },
   "profile.official-account.bio": {
-    "defaultMessage": "The official user account of Modrinth. Get support at <support-link></support-link> or via email at <email></email>"
+    "defaultMessage": "The official user account of Vanilla Tyme. Get support at <support-link></support-link> or via email at <email></email>"
   },
   "profile.reset-2fa.admonition-body": {
     "defaultMessage": "{username}'s authenticator and backup codes will be removed and they will be notified. Only do this after verifying their identity."

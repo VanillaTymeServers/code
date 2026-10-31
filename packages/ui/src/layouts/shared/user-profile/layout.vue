@@ -626,11 +626,11 @@ const messages = defineMessages({
 	},
 	bioFallbackUser: {
 		id: 'profile.bio.fallback.user',
-		defaultMessage: 'A Modrinth user.',
+		defaultMessage: 'A Vanilla Tyme member.',
 	},
 	bioFallbackCreator: {
 		id: 'profile.bio.fallback.creator',
-		defaultMessage: 'A Modrinth creator.',
+		defaultMessage: 'A Vanilla Tyme creator.',
 	},
 	collectionLabel: {
 		id: 'profile.label.collection',
@@ -646,15 +646,15 @@ const messages = defineMessages({
 	},
 	profileNoProjectsLabel: {
 		id: 'profile.label.no-projects',
-		defaultMessage: 'This user has no projects!',
+		defaultMessage: 'This user has no shops!',
 	},
 	profileNoProjectsAuthDescription: {
 		id: 'profile.label.no-projects-auth-description',
-		defaultMessage: "You don't have any projects yet.",
+		defaultMessage: "You don't have any shops yet.",
 	},
 	createProjectButton: {
 		id: 'profile.button.create-project',
-		defaultMessage: 'Create a project',
+		defaultMessage: 'Create a shop',
 	},
 	profileNoCollectionsLabel: {
 		id: 'profile.label.no-collections',
@@ -679,7 +679,7 @@ const messages = defineMessages({
 	officialAccountBio: {
 		id: 'profile.official-account.bio',
 		defaultMessage:
-			'The official user account of Modrinth. Get support at <support-link></support-link> or via email at <email></email>',
+			'The official user account of Vanilla Tyme. Get support at <support-link></support-link> or via email at <email></email>',
 	},
 	blockButton: {
 		id: 'profile.button.block',
