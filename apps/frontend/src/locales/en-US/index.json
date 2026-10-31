@@ -4874,9 +4874,6 @@
   "rules.main.lag.title": {
     "message": "Lag"
   },
-  "rules.main.lag.trading-villagers": {
-    "message": "Trading villagers must be optimized."
-  },
   "rules.main.lag.villager-breeders": {
     "message": "Breeders must not let over 24 villagers build up at a time."
   },
