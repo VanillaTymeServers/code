@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<AiImageWarningModal ref="aiImageWarningModal" />
 		<ConfirmModal
 			ref="modal_confirm"
 			:title="formatMessage(messages.deleteConfirmationTitle)"
@@ -14,7 +13,7 @@
 			<div class="flex max-w-[600px] flex-col gap-6">
 				<div class="label">
 					<h3>
-						<span class="label__title size-card-header">Project information</span>
+						<span class="label__title size-card-header">Shop information</span>
 					</h3>
 				</div>
 
@@ -52,7 +51,9 @@
 					>
 						<template #prefix>
 							<span class="whitespace-nowrap">
-								<span class="hidden sm:inline">https://modrinth.com</span>/{{ projectTypeForUrl }}/
+								<span class="hidden sm:inline">https://vanillatyme.com</span>/{{
+									projectTypeForUrl
+								}}/
 							</span>
 						</template>
 					</Input>
@@ -294,9 +295,6 @@
 						</template>
 					</IntlFormatted>
 				</p>
-				<p>
-					{{ formatMessage(messages.deleteProjectDescription2) }}
-				</p>
 				<template #actions>
 					<Button
 						type="colored"
@@ -356,7 +354,6 @@ import {
 } from '@modrinth/ui'
 import { fileIsValid, formatProjectStatus, isAdmin } from '@modrinth/utils'
 
-import AiImageWarningModal from '~/components/ui/AiImageWarningModal.vue'
 import SlugSuggestions from '~/components/ui/SlugSuggestions.vue'
 import ValidationMessage from '~/components/ValidationMessage.vue'
 import { useAuth } from '~/composables/auth.js'
@@ -366,7 +363,6 @@ import {
 	useProjectSlugSuggestions,
 	useSlugSuggestionVisibility,
 } from '~/composables/project-slug-suggestions'
-import { fileDeclaresAi } from '~/helpers/c2pa'
 import { getProjectTypeForUrl } from '~/helpers/projects.js'
 
 const auth = await useAuth()
@@ -383,7 +379,6 @@ const {
 } = injectProjectPageContext()
 const shopReadOnly = useShopReadOnly()
 const { labrinth } = injectModrinthClient()
-const aiImageWarningModal = useTemplateRef('aiImageWarningModal')
 
 useProjectSettingsHeadTitle(commonProjectSettingsMessages.general)
 
@@ -626,10 +621,6 @@ const showPreviewImage = async (files) => {
 	if (!file) {
 		return
 	}
-	if (await fileDeclaresAi(file)) {
-		aiImageWarningModal.value?.show()
-		return
-	}
 	const reader = new FileReader()
 	icon.value = file
 	deletedIcon.value = false
@@ -756,33 +747,28 @@ const messages = defineMessages({
 	},
 	deleteProjectTitle: {
 		id: 'project.settings.delete-project.title',
-		defaultMessage: 'Delete project',
+		defaultMessage: 'Delete shop',
 	},
 	deleteProjectButton: {
 		id: 'project.settings.delete-project.button',
-		defaultMessage: 'Delete project',
+		defaultMessage: 'Delete shop',
 	},
 	deleteProjectDescription1: {
 		id: 'project.settings.delete-project.description.1',
 		defaultMessage:
-			'Permanently deletes this project from Modrinth. Deleted projects <emphasis>cannot be recovered</emphasis> by Modrinth staff or support.',
-	},
-	deleteProjectDescription2: {
-		id: 'project.settings.delete-project.description.2',
-		defaultMessage:
-			'Files uploaded to this project that are actively used in Modpacks hosted on Modrinth may continue to exist.',
+			'Permanently deletes this shop from Vanilla Tyme. Deleted shops <emphasis>cannot be recovered</emphasis> by staff.',
 	},
 	deleteConfirmationTitle: {
 		id: 'project.settings.delete-project.confirmation.title',
-		defaultMessage: 'Are you sure you want to delete this project?',
+		defaultMessage: 'Are you sure you want to delete this shop?',
 	},
 	deleteConfirmationDescription: {
 		id: 'project.settings.delete-project.confirmation.description',
-		defaultMessage: `If you proceed, all of this project's information and all of its versions will be immediately deleted from our database. None of it is recoverable later if you change your mind. Consider just setting your project to be Private for a less permanent option.`,
+		defaultMessage: `If you proceed, all of this shop's information will be immediately deleted from our database. None of it is recoverable later if you change your mind. Consider just setting your shop to be Private for a less permanent option.`,
 	},
 	deleteConfirmationProceedText: {
 		id: 'project.settings.delete-project.confirmation.proceed-text',
-		defaultMessage: 'Permanently delete project',
+		defaultMessage: 'Permanently delete shop',
 	},
 })
 </script>

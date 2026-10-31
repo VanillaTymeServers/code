@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<ValidationMessage :check="galleryImagesValidation" class="mb-4" />
-		<AiImageWarningModal ref="aiImageWarningModal" />
 		<Modal
 			v-if="currentMember"
 			ref="modal_edit_item"
@@ -83,7 +82,7 @@
 				<label for="gallery-image-featured" class="w-fit">
 					<span class="label__title">Banner image</span>
 					<span class="label__description">
-						You can feature one image on your project to be used as a banner image.
+						You can feature one image on your shop to be used as a banner image.
 					</span>
 				</label>
 				<Button
@@ -321,11 +320,9 @@ import {
 	useFormatDateTime,
 } from '@modrinth/ui'
 
-import AiImageWarningModal from '~/components/ui/AiImageWarningModal.vue'
 import ValidationMessage from '~/components/ValidationMessage.vue'
 import { useProjectNagMessages } from '~/composables/project-nag-validation'
 import { useProjectSaveValidation } from '~/composables/project-save-validation'
-import { fileDeclaresAi } from '~/helpers/c2pa'
 import { isPermission } from '~/utils/permissions.ts'
 
 const formatDate = useFormatDateTime({
@@ -343,7 +340,6 @@ const {
 
 useProjectSettingsHeadTitle(commonProjectSettingsMessages.gallery)
 
-const aiImageWarningModal = ref(null)
 const modal_edit_item = ref(null)
 const modal_confirm = ref(null)
 
@@ -430,10 +426,6 @@ const handleFiles = async (files) => {
 	if (!file) {
 		return
 	}
-	if (await fileDeclaresAi(file)) {
-		aiImageWarningModal.value?.show()
-		return
-	}
 	resetEdit()
 	editFile.value = file
 
@@ -444,10 +436,6 @@ const handleFiles = async (files) => {
 const replaceEditFile = async (files) => {
 	const file = files[0]
 	if (!file) {
-		return
-	}
-	if (await fileDeclaresAi(file)) {
-		aiImageWarningModal.value?.show()
 		return
 	}
 	editFile.value = file

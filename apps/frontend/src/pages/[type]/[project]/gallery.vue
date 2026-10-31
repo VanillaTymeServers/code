@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<AiImageWarningModal ref="aiImageWarningModal" />
 		<Modal
 			v-if="currentMember"
 			ref="modal_edit_item"
@@ -75,7 +74,7 @@
 				<label for="gallery-image-featured">
 					<span class="label__title">Banner image</span>
 					<span class="label__description">
-						You can feature one image on your project to be used as a banner image.
+						You can feature one image on your shop to be used as a banner image.
 					</span>
 				</label>
 				<Button
@@ -224,7 +223,7 @@
 			<p class="ml-2">
 				No images in gallery. Visit
 				<NuxtLink to="settings/gallery">
-					<span class="font-medium text-green hover:underline">project settings</span> to
+					<span class="font-medium text-green hover:underline">shop settings</span> to
 				</NuxtLink>
 				upload images.
 			</p>
@@ -261,10 +260,8 @@ import {
 	useFormatDateTime,
 } from '@modrinth/ui'
 
-import AiImageWarningModal from '~/components/ui/AiImageWarningModal.vue'
 import ValidationMessage from '~/components/ValidationMessage.vue'
 import { useProjectNagMessages } from '~/composables/project-nag-validation'
-import { fileDeclaresAi } from '~/helpers/c2pa'
 import { isPermission } from '~/utils/permissions.ts'
 
 const formatDate = useFormatDateTime({
@@ -282,7 +279,6 @@ const {
 } = injectProjectPageContext()
 
 // Template refs
-const aiImageWarningModal = useTemplateRef('aiImageWarningModal')
 const modalEditItem = useTemplateRef('modal_edit_item')
 const modalConfirm = useTemplateRef('modal_confirm')
 const galleryViewer = useTemplateRef('galleryViewer')
@@ -290,7 +286,8 @@ const galleryViewer = useTemplateRef('galleryViewer')
 // SEO
 const title = computed(() => `${project.value.title} - Gallery`)
 const description = computed(
-	() => `View ${project.value.gallery?.length ?? 0} images of ${project.value.title} on Modrinth.`,
+	() =>
+		`View ${project.value.gallery?.length ?? 0} images of ${project.value.title} on Vanilla Tyme.`,
 )
 
 useSeoMeta({
@@ -371,10 +368,6 @@ async function handleFiles(files: File[]) {
 	if (!file) {
 		return
 	}
-	if (await fileDeclaresAi(file)) {
-		aiImageWarningModal.value?.show()
-		return
-	}
 	resetEdit()
 	editFile.value = file
 
@@ -385,10 +378,6 @@ async function handleFiles(files: File[]) {
 async function replaceEditFile(files: File[]) {
 	const file = files[0]
 	if (!file) {
-		return
-	}
-	if (await fileDeclaresAi(file)) {
-		aiImageWarningModal.value?.show()
 		return
 	}
 	editFile.value = file

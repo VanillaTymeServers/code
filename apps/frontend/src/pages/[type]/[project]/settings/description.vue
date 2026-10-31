@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<AiImageWarningModal ref="aiImageWarningModal" />
 		<ConfirmLeaveModal ref="confirmLeaveModal" />
 		<div class="universal-card">
 			<div class="markdown-disclaimer">
@@ -54,14 +53,12 @@ import {
 	useVIntl,
 } from '@modrinth/ui'
 import { isAdmin, TeamMemberPermission } from '@modrinth/utils'
-import { computed, useTemplateRef } from 'vue'
+import { computed } from 'vue'
 
-import AiImageWarningModal from '~/components/ui/AiImageWarningModal.vue'
 import ValidationMessage from '~/components/ValidationMessage.vue'
 import { useImageUpload } from '~/composables/image-upload.ts'
 import { useProjectNagMessages } from '~/composables/project-nag-validation'
 import { useProjectSaveValidation } from '~/composables/project-save-validation'
-import { fileDeclaresAi } from '~/helpers/c2pa'
 
 const { projectV2: project, currentMember, patchProjectV3 } = injectProjectPageContext()
 const { addNotification } = injectNotificationManager()
@@ -71,7 +68,7 @@ const messages = defineMessages({
 	intro: {
 		id: 'project.settings.description.intro',
 		defaultMessage:
-			'You can type an extended description of your project here. The description must clearly and honestly describe the purpose and function of the project. See section 2.1 of the <rules>Content Rules</rules> for the full requirements.',
+			'You can type an extended description of your shop here. The description must clearly and honestly describe the purpose and function of the shop. See section 2.1 of the <rules>Content Rules</rules> for the full requirements.',
 	},
 	updated: { id: 'project.settings.description.updated', defaultMessage: 'Description updated' },
 	updatedText: {
@@ -79,7 +76,6 @@ const messages = defineMessages({
 		defaultMessage: 'Your description has been updated.',
 	},
 })
-const aiImageWarningModal = useTemplateRef('aiImageWarningModal')
 
 useProjectSettingsHeadTitle(commonProjectSettingsMessages.description)
 
@@ -132,10 +128,6 @@ async function save() {
 }
 
 async function onUploadHandler(file: File) {
-	if (await fileDeclaresAi(file)) {
-		aiImageWarningModal.value?.show()
-		return
-	}
 	const response = await useImageUpload(file, {
 		context: 'project',
 		projectID: project.value.id,
