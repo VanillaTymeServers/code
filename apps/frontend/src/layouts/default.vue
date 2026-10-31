@@ -323,7 +323,7 @@
 						},
 					]"
 				>
-					<ModrinthIcon aria-hidden="true" />
+					<ShieldUserIcon aria-hidden="true" />
 					<DropdownIcon aria-hidden="true" class="h-5 w-5 text-secondary" />
 				</TeleportOverflowMenu>
 				<TeleportOverflowMenu
@@ -642,7 +642,6 @@ import {
 	LogOutIcon,
 	MailIcon,
 	MapArrowDownIcon,
-	ModrinthIcon,
 	MoonIcon,
 	OrganizationIcon,
 	OrganizationPlusIcon,
@@ -654,6 +653,7 @@ import {
 	ServerSearchIcon,
 	SettingsIcon,
 	ShieldAlertIcon,
+	ShieldUserIcon,
 	ShoppingBasketIcon,
 	StoreIcon,
 	SunIcon,

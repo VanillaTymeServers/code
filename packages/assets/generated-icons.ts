@@ -285,6 +285,7 @@ import _ShieldIcon from './icons/shield.svg?component'
 import _ShieldAlertIcon from './icons/shield-alert.svg?component'
 import _ShieldBanIcon from './icons/shield-ban.svg?component'
 import _ShieldCheckIcon from './icons/shield-check.svg?component'
+import _ShieldUserIcon from './icons/shield-user.svg?component'
 import _ShirtIcon from './icons/shirt.svg?component'
 import _ShoppingBasketIcon from './icons/shopping-basket.svg?component'
 import _ShoppingCartIcon from './icons/shopping-cart.svg?component'
@@ -790,6 +791,7 @@ export const ShieldIcon = _ShieldIcon
 export const ShieldAlertIcon = _ShieldAlertIcon
 export const ShieldBanIcon = _ShieldBanIcon
 export const ShieldCheckIcon = _ShieldCheckIcon
+export const ShieldUserIcon = _ShieldUserIcon
 export const ShirtIcon = _ShirtIcon
 export const ShoppingBasketIcon = _ShoppingBasketIcon
 export const ShoppingCartIcon = _ShoppingCartIcon
