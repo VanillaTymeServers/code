@@ -83,9 +83,8 @@
 					:aria-label="formatMessage(messages.modrinthHomePage)"
 					class="group hover:brightness-[--hover-brightness] focus-visible:brightness-[--hover-brightness]"
 				>
-					<img
-						:src="TextLogo"
-						alt="Text Logo"
+					<TextLogo
+						aria-hidden="true"
 						class="h-7 w-auto text-contrast transition-transform group-active:scale-[0.98]"
 					/>
 				</NuxtLink>
@@ -123,6 +122,13 @@
 							to: '/vote',
 						},
 						{
+							id: 'live-map',
+							label: formatMessage(navMenuMessages.liveMap),
+							type: 'link',
+							href: LIVE_MAP_URL,
+							target: '_blank',
+						},
+						{
 							id: 'maps',
 							label: formatMessage(navMenuMessages.mapDownloads),
 							type: 'link',
@@ -151,8 +157,12 @@
 						<VoteIcon aria-hidden="true" />
 						{{ formatMessage(navMenuMessages.vote) }}
 					</template>
+					<template #live-map>
+						<EarthSearchIcon aria-hidden="true" />
+						{{ formatMessage(navMenuMessages.liveMap) }}
+					</template>
 					<template #maps>
-						<MapIcon aria-hidden="true" />
+						<MapArrowDownIcon aria-hidden="true" />
 						{{ formatMessage(navMenuMessages.mapDownloads) }}
 					</template>
 				</TeleportOverflowMenu>
@@ -481,10 +491,6 @@
 							<LibraryIcon class="icon" />
 							{{ formatMessage(commonMessages.collectionsLabel) }}
 						</ButtonLink>
-						<ButtonLink class="!h-auto !whitespace-normal" to="/hosting/manage">
-							<ServerIcon class="icon" />
-							{{ formatMessage(commonMessages.serversLabel) }}
-						</ButtonLink>
 						<ButtonLink
 							v-if="auth.user.role === 'moderator' || auth.user.role === 'admin'"
 							class="!h-auto !whitespace-normal"
@@ -614,7 +620,6 @@
 <script setup>
 import {
 	AffiliateIcon,
-	ArrowBigUpDashIcon,
 	ArrowLeftRightIcon,
 	BellIcon,
 	BookOpenIcon,
@@ -623,8 +628,8 @@ import {
 	ChartIcon,
 	CollectionPlusIcon,
 	CompassIcon,
-	CurrencyIcon,
 	DropdownIcon,
+	EarthSearchIcon,
 	FileSearchCornerIcon,
 	GavelIcon,
 	GlobeIcon,
@@ -636,7 +641,7 @@ import {
 	LogInIcon,
 	LogOutIcon,
 	MailIcon,
-	MapIcon,
+	MapArrowDownIcon,
 	ModrinthIcon,
 	MoonIcon,
 	OrganizationIcon,
@@ -647,7 +652,6 @@ import {
 	SearchIcon,
 	ServerIcon,
 	ServerSearchIcon,
-	ServerStackIcon,
 	SettingsIcon,
 	ShieldAlertIcon,
 	ShoppingBasketIcon,
@@ -679,11 +683,11 @@ import {
 	UserRoleIcon,
 	useVIntl,
 } from '@modrinth/ui'
-import { isAdmin, isStaff, UserBadge } from '@modrinth/utils'
+import { isAdmin, isStaff } from '@modrinth/utils'
 import { useQuery } from '@tanstack/vue-query'
 
 import { getTaxThreshold } from '@/providers/creator-withdraw.ts'
-import TextLogo from '~/assets/images/logo_text.webp'
+import TextLogo from '~/components/brand/TextLogo.vue'
 import BatchCreditModal from '~/components/ui/admin/BatchCreditModal.vue'
 import GeneratedStateErrorsBanner from '~/components/ui/banner/GeneratedStateErrorsBanner.vue'
 import PreviewBanner from '~/components/ui/banner/PreviewBanner.vue'
@@ -705,10 +709,11 @@ import {
 	useStoredAccounts,
 } from '~/composables/accounts.ts'
 import { getSignInRouteObj } from '~/composables/auth.ts'
+import { fetchCurrentSeasonShops } from '~/composables/queries/season'
 import { logout } from '~/composables/user.js'
 import { errors as generatedStateErrors, taxComplianceThresholds } from '~/generated/state.json'
+import { LIVE_MAP_URL } from '~/helpers/homepage'
 import { provideCurrentProjectId } from '~/providers/current-project.ts'
-import { hasActiveMidas } from '~/utils/user-membership.ts'
 
 const country = useUserCountry()
 
@@ -845,6 +850,10 @@ const navMenuMessages = defineMessages({
 		id: 'layout.nav.vote',
 		defaultMessage: 'Vote',
 	},
+	liveMap: {
+		id: 'layout.nav.live-map',
+		defaultMessage: 'Live map',
+	},
 	mapDownloads: {
 		id: 'layout.nav.map-downloads',
 		defaultMessage: 'Map downloads',
@@ -944,10 +953,6 @@ const messages = defineMessages({
 		id: 'layout.nav.saved-projects',
 		defaultMessage: 'Saved projects',
 	},
-	upgradeToModrinthPlus: {
-		id: 'layout.nav.upgrade-to-modrinth-plus',
-		defaultMessage: 'Upgrade to Modrinth+',
-	},
 	projects: {
 		id: 'layout.nav.projects',
 		defaultMessage: 'My shops',
@@ -963,10 +968,6 @@ const messages = defineMessages({
 	activeReports: {
 		id: 'layout.nav.active-reports',
 		defaultMessage: 'Active reports',
-	},
-	myServers: {
-		id: 'layout.nav.my-servers',
-		defaultMessage: 'My servers',
 	},
 	switchAccount: {
 		id: 'layout.nav.switch-account',
@@ -1012,7 +1013,7 @@ useSeoMeta({
 				'Vanilla Tyme SMP is a Minecraft server that is focused on providing a vanilla experience with a few quality of life plugins.',
 		}),
 	publisher: 'Vanilla Tyme SMP',
-	themeColor: '#1bd96a',
+	themeColor: '#5b8cff',
 	colorScheme: 'dark light',
 
 	// OpenGraph
@@ -1048,6 +1049,11 @@ const navRoutes = computed(() => [
 	{
 		label: formatMessage(navMenuMessages.vote),
 		href: '/vote',
+	},
+	{
+		label: formatMessage(navMenuMessages.liveMap),
+		href: LIVE_MAP_URL,
+		external: true,
 	},
 	{
 		label: formatMessage(navMenuMessages.mapDownloads),
@@ -1232,7 +1238,6 @@ const isRussia = computed(() => country.value === 'ru')
 
 const rCount = ref(0)
 
-const randomProjects = ref([])
 const disableRandomProjects = ref(false)
 
 const disableRandomProjectsForRoute = computed(
@@ -1249,21 +1254,23 @@ async function onKeyDown(event) {
 
 	if (event.key === 'r') {
 		rCount.value++
-
-		if (randomProjects.value.length < 3) {
-			randomProjects.value = await client.labrinth.projects_v2.getRandom(50).catch((err) => {
-				console.error(err)
-				return []
-			})
-		}
 	}
 
 	if (rCount.value >= 40) {
 		rCount.value = 0
-		const randomProject = randomProjects.value[0]
-		await router.push(`/project/${randomProject.slug}`)
-		randomProjects.value.splice(0, 1)
+		await goToRandomShop()
 	}
+}
+
+async function goToRandomShop() {
+	const shops = await fetchCurrentSeasonShops(client, { limit: 100 }).catch((err) => {
+		console.error(err)
+		return []
+	})
+	if (shops.length === 0) return
+
+	const shop = shops[Math.floor(Math.random() * shops.length)]
+	await router.push(`/shop/${shop.slug ?? shop.project_id}`)
 }
 
 function onKeyUp(event) {
