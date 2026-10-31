@@ -230,7 +230,7 @@ useSeoMeta({
 
 .main-header-strong {
 	font-weight: 600;
-	background-color: #00bd3c;
+	background-color: #5b8cff;
 	background-image: linear-gradient(180deg, #a7d0ff 0%, var(--color-brand) 60%);
 	background-size: 100%;
 	background-clip: text;
