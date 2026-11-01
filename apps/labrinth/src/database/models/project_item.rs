@@ -873,7 +873,7 @@ impl DBProject {
                 let project_rows = sqlx::query!(
                     r#"
                     SELECT m.id id, m.name name, m.summary summary, m.downloads downloads, m.follows follows,
-                    m.icon_url icon_url, m.raw_icon_url raw_icon_url, m.description description, m.published published,
+                    m.icon_url icon_url, m.raw_icon_url raw_icon_url, m.description description, m.published published, m.updated updated,
                     m.approved approved, m.queued, m.status status, m.requested_status requested_status,
                     m.license_url license_url,
                     m.team_id team_id, m.organization_id organization_id, m.license license, m.slug slug, m.moderation_message moderation_message, m.moderation_message_body moderation_message_body,
@@ -960,7 +960,7 @@ impl DBProject {
                                 icon_url: m.icon_url.clone(),
                                 raw_icon_url: m.raw_icon_url.clone(),
                                 published: m.published,
-                                updated: versions.iter().map(|x| x.1).next_back().unwrap_or(m.published),
+                                updated: m.updated,
                                 license_url: m.license_url.clone(),
                                 status: ProjectStatus::from_string(
                                     &m.status,

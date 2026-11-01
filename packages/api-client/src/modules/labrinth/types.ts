@@ -1362,6 +1362,7 @@ export namespace Labrinth {
 				price: InventoryPrice
 				sale_price?: number | null
 				note?: string | null
+				description?: string | null
 				in_stock: boolean
 				popular: boolean
 			}

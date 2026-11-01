@@ -26,6 +26,7 @@ import _ArrowUpZAIcon from './icons/arrow-up-z-a.svg?component'
 import _AsteriskIcon from './icons/asterisk.svg?component'
 import _BadgeCheckIcon from './icons/badge-check.svg?component'
 import _BadgeDollarSignIcon from './icons/badge-dollar-sign.svg?component'
+import _BadgePercentIcon from './icons/badge-percent.svg?component'
 import _AlphaBadge from './icons/badges/alpha.svg?component'
 import _BetaBadge from './icons/badges/beta.svg?component'
 import _Downloads1mBadge from './icons/badges/downloads-1m.svg?component'
@@ -236,6 +237,7 @@ import _OrganizationIcon from './icons/organization.svg?component'
 import _OrganizationPlusIcon from './icons/organization-plus.svg?component'
 import _PackageIcon from './icons/package.svg?component'
 import _PackageClosedIcon from './icons/package-closed.svg?component'
+import _PackageOffIcon from './icons/package-off.svg?component'
 import _PackageOpenIcon from './icons/package-open.svg?component'
 import _PackagePlusIcon from './icons/package-plus.svg?component'
 import _PackageSearchIcon from './icons/package-search.svg?component'
@@ -532,6 +534,7 @@ export const ArrowUpZAIcon = _ArrowUpZAIcon
 export const AsteriskIcon = _AsteriskIcon
 export const BadgeCheckIcon = _BadgeCheckIcon
 export const BadgeDollarSignIcon = _BadgeDollarSignIcon
+export const BadgePercentIcon = _BadgePercentIcon
 export const AlphaBadge = _AlphaBadge
 export const BetaBadge = _BetaBadge
 export const Downloads1mBadge = _Downloads1mBadge
@@ -742,6 +745,7 @@ export const OrganizationIcon = _OrganizationIcon
 export const OrganizationPlusIcon = _OrganizationPlusIcon
 export const PackageIcon = _PackageIcon
 export const PackageClosedIcon = _PackageClosedIcon
+export const PackageOffIcon = _PackageOffIcon
 export const PackageOpenIcon = _PackageOpenIcon
 export const PackagePlusIcon = _PackagePlusIcon
 export const PackageSearchIcon = _PackageSearchIcon

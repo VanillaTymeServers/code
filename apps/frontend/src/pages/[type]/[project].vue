@@ -195,76 +195,6 @@
 								<SettingsIcon />
 								{{ formatMessage(messages.editProject) }}
 							</ButtonLink>
-
-							<div class="hidden sm:contents">
-								<IconButton
-									v-if="!isServerProject && auth.user && currentMember"
-									v-tooltip="formatMessage(commonMessages.downloadButton)"
-									:type="projectHeaderPrimaryColor === 'brand' ? 'colored' : 'base'"
-									:color="projectHeaderPrimaryColor === 'brand' ? 'brand' : undefined"
-									size="xl"
-									:label="formatMessage(commonMessages.downloadButton)"
-									@click="handleProjectHeaderPrimary"
-								>
-									<DownloadIcon />
-								</IconButton>
-								<Button
-									v-else-if="!isServerProject"
-									:type="projectHeaderPrimaryColor === 'brand' ? 'colored' : 'base'"
-									:color="projectHeaderPrimaryColor === 'brand' ? 'brand' : undefined"
-									size="xl"
-									@click="handleProjectHeaderPrimary"
-								>
-									<DownloadIcon />
-									{{ formatMessage(commonMessages.downloadButton) }}
-								</Button>
-								<IconButton
-									v-if="isServerProject && auth.user && currentMember"
-									v-tooltip="formatMessage(commonMessages.playButton)"
-									:type="projectHeaderPrimaryColor === 'brand' ? 'colored' : 'base'"
-									:color="projectHeaderPrimaryColor === 'brand' ? 'brand' : undefined"
-									size="xl"
-									:label="formatMessage(commonMessages.playButton)"
-									@click="handleProjectHeaderPrimary"
-								>
-									<PlayIcon />
-								</IconButton>
-								<Button
-									v-else-if="isServerProject"
-									:type="projectHeaderPrimaryColor === 'brand' ? 'colored' : 'base'"
-									:color="projectHeaderPrimaryColor === 'brand' ? 'brand' : undefined"
-									size="xl"
-									@click="handleProjectHeaderPrimary"
-								>
-									<PlayIcon />
-									{{ formatMessage(commonMessages.playButton) }}
-								</Button>
-							</div>
-
-							<div class="contents sm:hidden">
-								<IconButton
-									v-if="!isServerProject"
-									:type="projectHeaderPrimaryColor === 'brand' ? 'colored' : 'base'"
-									:color="projectHeaderPrimaryColor === 'brand' ? 'brand' : undefined"
-									size="xl"
-									:label="formatMessage(commonMessages.downloadButton)"
-									class="flex sm:hidden"
-									@click="handleProjectHeaderPrimary"
-								>
-									<DownloadIcon />
-								</IconButton>
-								<IconButton
-									v-else
-									:type="projectHeaderPrimaryColor === 'brand' ? 'colored' : 'base'"
-									:color="projectHeaderPrimaryColor === 'brand' ? 'brand' : undefined"
-									size="xl"
-									:label="formatMessage(commonMessages.playButton)"
-									class="flex sm:hidden"
-									@click="handleProjectHeaderPrimary"
-								>
-									<PlayIcon />
-								</IconButton>
-							</div>
 							<ClientOnly>
 								<IconButton
 									v-if="auth.user"
@@ -467,7 +397,6 @@ import {
 	LeftArrowIcon,
 	MoreVerticalIcon,
 	PackageSearchIcon,
-	PlayIcon,
 	ReportIcon,
 	ScaleIcon,
 	ScanEyeIcon,
@@ -611,26 +540,6 @@ const { isStuck: isInstallHeaderStuck } = useStickyObserver(
 )
 
 const baseId = useId()
-
-const serverProject = computed(() => {
-	if (!project.value) {
-		return undefined
-	}
-	return {
-		name: project.value.title,
-		slug: project.value.slug || project.value.id,
-		numPlayers: projectV3.value?.minecraft_java_server?.ping?.data?.players_online,
-		icon: project.value.icon_url,
-		statusOnline: !!projectV3.value?.minecraft_java_server?.ping?.data,
-		region: projectV3.value?.minecraft_server?.region,
-	}
-})
-
-function handlePlayServerProject() {
-	openInAppModal.value?.show({
-		serverProject: serverProject.value,
-	})
-}
 
 const messages = defineMessages({
 	backToAllProjects: {
@@ -1742,10 +1651,6 @@ const settingsBackDestination = computed(() => {
 	}
 })
 
-const projectHeaderPrimaryColor = computed(() =>
-	currentMember.value || route.name === 'type-project-version-version' ? 'standard' : 'brand',
-)
-
 const MRPACK_ARCHIVE_WARNING_START = new Date('2026-08-10T17:00:00.000Z').getTime()
 const MRPACK_ARCHIVE_WARNING_END = new Date('2026-08-13T20:00:00.000Z').getTime()
 const hasModpackArchiveInWarningWindow = computed(() =>
@@ -2000,14 +1905,6 @@ if (!route.name.startsWith('type-project-settings')) {
 }
 
 const onUserCollectProject = useClientTry(userCollectProject)
-
-function handleProjectHeaderPrimary(event) {
-	if (isServerProject.value) {
-		handlePlayServerProject()
-	} else {
-		downloadModal.value?.show(event)
-	}
-}
 
 function followProjectFromHeader() {
 	if (!project.value) return

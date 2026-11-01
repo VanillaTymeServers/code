@@ -1448,6 +1448,13 @@ pub async fn project_edit_internal(
         })?;
     }
 
+    let old_inventory = project_item
+        .inner
+        .components
+        .shop
+        .as_ref()
+        .map(|shop| shop.inventory.clone());
+
     reindex_versions |= update(
         &mut transaction,
         id,
@@ -1479,6 +1486,28 @@ pub async fn project_edit_internal(
     .execute(&mut transaction)
     .await
     .wrap_internal_err("failed to update components")?;
+
+    let inventory_changed = old_inventory
+        != project_item
+            .inner
+            .components
+            .shop
+            .as_ref()
+            .map(|shop| shop.inventory.clone());
+
+    if inventory_changed {
+        sqlx::query!(
+            "
+            UPDATE mods
+            SET updated = NOW()
+            WHERE id = $1
+            ",
+            id as db_ids::DBProjectId,
+        )
+        .execute(&mut transaction)
+        .await
+        .wrap_internal_err("updating shop `updated` time")?;
+    }
 
     let reloaded_project = if validate_for_review {
         validate::ensure_project_is_valid_for_review(

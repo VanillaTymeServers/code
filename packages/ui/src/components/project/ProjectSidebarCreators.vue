@@ -133,7 +133,7 @@ const isEmpty = computed(() => !props.organization && sortedMembers.value.length
 const messages = defineMessages({
 	title: {
 		id: 'project.about.creators.title',
-		defaultMessage: 'Creators',
+		defaultMessage: 'Members',
 	},
 	owner: {
 		id: 'project.about.creators.owner',

@@ -100,8 +100,12 @@ pub struct InventoryEntry {
     pub sale_price: Option<u32>,
     /// Short note shown under the item.
     #[serde(default)]
-    #[validate(length(max = 256))]
+    #[validate(length(max = 100))]
     pub note: Option<String>,
+    /// Longer plain text description shown in the item's popup.
+    #[serde(default)]
+    #[validate(length(max = 1000))]
+    pub description: Option<String>,
     /// Whether the item is currently in stock.
     pub in_stock: bool,
     /// Whether the item is highlighted as popular.

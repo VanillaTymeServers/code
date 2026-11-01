@@ -75,7 +75,7 @@ const messages = defineMessages({
 	},
 	creators: {
 		id: 'dashboard.sidebar.label.creators',
-		defaultMessage: 'Creators',
+		defaultMessage: 'Manage',
 	},
 	projects: {
 		id: 'dashboard.sidebar.label.projects',
