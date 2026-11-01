@@ -3645,7 +3645,7 @@
     "defaultMessage": "Project owner"
   },
   "project.about.creators.title": {
-    "defaultMessage": "Creators"
+    "defaultMessage": "Members"
   },
   "project.about.details.created": {
     "defaultMessage": "Created {date}"

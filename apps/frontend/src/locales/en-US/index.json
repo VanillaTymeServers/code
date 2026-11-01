@@ -1779,7 +1779,7 @@
     "message": "Analytics"
   },
   "dashboard.sidebar.label.creators": {
-    "message": "Creators"
+    "message": "Manage"
   },
   "dashboard.sidebar.label.dashboard": {
     "message": "Dashboard"
@@ -3296,14 +3296,35 @@
   "project.install-context.back-to-discover": {
     "message": "Back to discover"
   },
+  "project.inventory.all-currencies": {
+    "message": "All currencies"
+  },
+  "project.inventory.change-view": {
+    "message": "Change display mode"
+  },
   "project.inventory.empty.description": {
     "message": "This shop hasn't listed anything it sells."
   },
   "project.inventory.empty.heading": {
     "message": "No items yet"
   },
+  "project.inventory.filter.all": {
+    "message": "All"
+  },
+  "project.inventory.filter.on-sale": {
+    "message": "On sale"
+  },
   "project.inventory.for-amount": {
     "message": "for {amount}"
+  },
+  "project.inventory.in-stock": {
+    "message": "In stock"
+  },
+  "project.inventory.no-results.description": {
+    "message": "Try a different search or filter."
+  },
+  "project.inventory.no-results.heading": {
+    "message": "No matching items"
   },
   "project.inventory.out-of-stock": {
     "message": "Out of stock"
@@ -3311,11 +3332,41 @@
   "project.inventory.popular": {
     "message": "Popular"
   },
+  "project.inventory.popup.close": {
+    "message": "Close"
+  },
+  "project.inventory.popup.description": {
+    "message": "Description"
+  },
+  "project.inventory.popup.map-unavailable": {
+    "message": "This season's map is no longer available"
+  },
+  "project.inventory.popup.note": {
+    "message": "Note"
+  },
+  "project.inventory.popup.open-map": {
+    "message": "Open map"
+  },
+  "project.inventory.popup.price": {
+    "message": "Price"
+  },
   "project.inventory.sale": {
     "message": "Sale"
   },
+  "project.inventory.search-placeholder": {
+    "message": "Search items"
+  },
   "project.inventory.seo-title": {
     "message": "{title} - Inventory"
+  },
+  "project.inventory.sort.featured": {
+    "message": "Featured"
+  },
+  "project.inventory.sort.name": {
+    "message": "Name"
+  },
+  "project.inventory.sort.price": {
+    "message": "Price"
   },
   "project.inventory.title": {
     "message": "Inventory"
@@ -3710,11 +3761,14 @@
   "project.settings.inventory.add-button": {
     "message": "Add item"
   },
-  "project.settings.inventory.delete-description": {
-    "message": "It will be removed from your shop’s inventory."
+  "project.settings.inventory.delete-item-description": {
+    "message": "This can't be undone."
   },
-  "project.settings.inventory.delete-title": {
-    "message": "Are you sure you want to delete this item?"
+  "project.settings.inventory.delete-item-title": {
+    "message": "Delete this item?"
+  },
+  "project.settings.inventory.drag-hint": {
+    "message": "Drag to reorder"
   },
   "project.settings.inventory.empty.description": {
     "message": "Add the items your shop sells so players know what to bring."
@@ -3725,11 +3779,35 @@
   "project.settings.inventory.heading": {
     "message": "Inventory"
   },
-  "project.settings.inventory.price-summary": {
-    "message": "{amount} for {price} {currency}"
+  "project.settings.inventory.in-stock": {
+    "message": "In stock"
+  },
+  "project.settings.inventory.item-count": {
+    "message": "{count} of {max} items"
+  },
+  "project.settings.inventory.no-results.description": {
+    "message": "Try a different search."
+  },
+  "project.settings.inventory.no-results.heading": {
+    "message": "No matching items"
+  },
+  "project.settings.inventory.out-of-stock": {
+    "message": "Out of stock"
+  },
+  "project.settings.inventory.popular": {
+    "message": "Popular"
+  },
+  "project.settings.inventory.sale": {
+    "message": "Sale"
+  },
+  "project.settings.inventory.search-placeholder": {
+    "message": "Search your items"
   },
   "project.settings.inventory.title": {
     "message": "Inventory"
+  },
+  "project.settings.inventory.trade-summary": {
+    "message": "{price} {currency} for {amount}"
   },
   "project.settings.license.all-rights": {
     "message": "All Rights Reserved/No License"
@@ -5693,20 +5771,20 @@
   "shop.inventory.modal.add-title": {
     "message": "Add item"
   },
-  "shop.inventory.modal.amount-description": {
-    "message": "How many of the item the buyer gets per trade."
-  },
-  "shop.inventory.modal.amount-label": {
-    "message": "Amount"
+  "shop.inventory.modal.amount-buyer-gets": {
+    "message": "Buyer gets"
   },
   "shop.inventory.modal.currency-placeholder": {
     "message": "Currency item"
   },
-  "shop.inventory.modal.custom-name-label": {
-    "message": "Custom name"
+  "shop.inventory.modal.custom-name-hint": {
+    "message": "Shown instead of the item name"
   },
-  "shop.inventory.modal.custom-name-placeholder": {
-    "message": "Optional, e.g. an anvil-renamed item's name"
+  "shop.inventory.modal.custom-name-label-optional": {
+    "message": "Custom name (optional)"
+  },
+  "shop.inventory.modal.description-label": {
+    "message": "Description (shown when opened)"
   },
   "shop.inventory.modal.edit-title": {
     "message": "Edit item"
@@ -5720,8 +5798,8 @@
   "shop.inventory.modal.item-placeholder": {
     "message": "Search for an item"
   },
-  "shop.inventory.modal.note-label": {
-    "message": "Note"
+  "shop.inventory.modal.note-label-short": {
+    "message": "Note (shown on the list)"
   },
   "shop.inventory.modal.note-placeholder": {
     "message": "Optional, e.g. \"Unbreaking III, Mending\""
@@ -5732,14 +5810,14 @@
   "shop.inventory.modal.price-label": {
     "message": "Price"
   },
+  "shop.inventory.modal.sale-price-hint": {
+    "message": "Leave empty when not on sale"
+  },
   "shop.inventory.modal.sale-price-invalid": {
     "message": "The sale price must be a whole number lower than the normal price."
   },
-  "shop.inventory.modal.sale-price-label": {
-    "message": "Sale price"
-  },
-  "shop.inventory.modal.sale-price-placeholder": {
-    "message": "Optional, leave empty when not on sale"
+  "shop.inventory.modal.sale-price-label-optional": {
+    "message": "Sale price (optional)"
   },
   "shop.item-combobox.type-to-search": {
     "message": "Type to search all {count} items"
