@@ -2,121 +2,125 @@
 	<NewModal
 		ref="modal"
 		:header="formatMessage(editing ? messages.editTitle : messages.addTitle)"
-		max-width="550px"
+		max-width="680px"
+		scrollable
 	>
-		<div class="flex flex-col gap-6">
-			<div class="flex flex-col gap-2">
-				<span class="text-md font-semibold text-contrast">
-					{{ formatMessage(messages.itemLabel) }}
-				</span>
-				<ShopItemCombobox v-model="item" :placeholder="formatMessage(messages.itemPlaceholder)" />
+		<div class="flex flex-col gap-4 pb-5">
+			<div v-if="item && priceItem" class="flex items-center gap-3 rounded-2xl bg-surface-2 p-3">
+				<ShopItemStack :item="item" :amount="amount ?? 1" />
+				<div class="flex min-w-0 flex-1 flex-col">
+					<span class="truncate font-bold text-contrast">
+						{{ customName.trim() || itemName(item) }}
+					</span>
+					<span v-if="note.trim()" class="truncate text-sm text-secondary">{{ note }}</span>
+				</div>
+				<ShopItemStack
+					:item="priceItem"
+					:amount="salePrice ?? priceAmount ?? 1"
+					:original-amount="salePrice ? priceAmount : undefined"
+				/>
 			</div>
 
-			<div class="flex flex-col gap-2">
-				<label for="inventory-custom-name">
-					<span class="text-md font-semibold text-contrast">
+			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+				<div class="flex min-w-0 flex-col gap-2">
+					<span class="font-semibold text-contrast">{{ formatMessage(messages.itemLabel) }}</span>
+					<ShopItemCombobox v-model="item" :placeholder="formatMessage(messages.itemPlaceholder)" />
+				</div>
+				<div class="flex min-w-0 flex-col gap-2">
+					<label for="inventory-custom-name" class="font-semibold text-contrast">
 						{{ formatMessage(messages.customNameLabel) }}
-					</span>
-				</label>
-				<Input
-					id="inventory-custom-name"
-					v-model="customName"
-					:maxlength="64"
-					:placeholder="formatMessage(messages.customNamePlaceholder)"
-					autocomplete="off"
-				/>
-			</div>
-
-			<div class="flex flex-col gap-2">
-				<label for="inventory-amount">
-					<span class="text-md font-semibold text-contrast">
-						{{ formatMessage(messages.amountLabel) }}
-					</span>
-				</label>
-				<Input
-					id="inventory-amount"
-					v-model="amount"
-					type="number"
-					:step="1"
-					:min="1"
-					autocomplete="off"
-				/>
-				<span class="text-secondary">{{ formatMessage(messages.amountDescription) }}</span>
-			</div>
-
-			<div class="flex flex-col gap-2">
-				<label for="inventory-price">
-					<span class="text-md font-semibold text-contrast">
-						{{ formatMessage(messages.priceLabel) }}
-					</span>
-				</label>
-				<div class="flex gap-2">
+					</label>
 					<Input
-						id="inventory-price"
-						v-model="priceAmount"
+						id="inventory-custom-name"
+						v-model="customName"
+						:maxlength="64"
+						:placeholder="formatMessage(messages.customNamePlaceholder)"
+						autocomplete="off"
+					/>
+				</div>
+				<div class="flex min-w-0 flex-col gap-2">
+					<label for="inventory-amount" class="font-semibold text-contrast">
+						{{ formatMessage(messages.amountLabel) }}
+					</label>
+					<Input
+						id="inventory-amount"
+						v-model="amount"
 						type="number"
 						:step="1"
 						:min="1"
-						wrapper-class="w-28 shrink-0"
 						autocomplete="off"
 					/>
-					<ShopItemCombobox
-						v-model="priceItem"
-						:suggested="CURRENCIES"
-						:placeholder="formatMessage(messages.currencyPlaceholder)"
-						class="min-w-0 flex-1"
+				</div>
+				<div class="flex min-w-0 flex-col gap-2">
+					<label for="inventory-price" class="font-semibold text-contrast">
+						{{ formatMessage(messages.priceLabel) }}
+					</label>
+					<div class="flex gap-2">
+						<Input
+							id="inventory-price"
+							v-model="priceAmount"
+							type="number"
+							:step="1"
+							:min="1"
+							wrapper-class="w-24 shrink-0"
+							autocomplete="off"
+						/>
+						<ShopItemCombobox
+							v-model="priceItem"
+							:suggested="CURRENCIES"
+							:placeholder="formatMessage(messages.currencyPlaceholder)"
+							class="min-w-0 flex-1"
+						/>
+					</div>
+				</div>
+				<div class="flex min-w-0 flex-col gap-2">
+					<label for="inventory-sale-price" class="font-semibold text-contrast">
+						{{ formatMessage(messages.salePriceLabel) }}
+					</label>
+					<Input
+						id="inventory-sale-price"
+						v-model="salePrice"
+						type="number"
+						:step="1"
+						:min="1"
+						:placeholder="formatMessage(messages.salePricePlaceholder)"
+						autocomplete="off"
 					/>
+					<span v-if="!saleValid" class="text-sm text-red">
+						{{ formatMessage(messages.salePriceInvalid) }}
+					</span>
+				</div>
+				<div class="flex items-end gap-6 pb-2">
+					<label class="flex items-center gap-2 font-semibold text-contrast">
+						{{ formatMessage(messages.inStockLabel) }}
+						<Toggle v-model="inStock" />
+					</label>
+					<label class="flex items-center gap-2 font-semibold text-contrast">
+						{{ formatMessage(messages.popularLabel) }}
+						<Toggle v-model="popular" />
+					</label>
 				</div>
 			</div>
 
 			<div class="flex flex-col gap-2">
-				<label for="inventory-sale-price">
-					<span class="text-md font-semibold text-contrast">
-						{{ formatMessage(messages.salePriceLabel) }}
-					</span>
-				</label>
-				<Input
-					id="inventory-sale-price"
-					v-model="salePrice"
-					type="number"
-					:step="1"
-					:min="1"
-					:placeholder="formatMessage(messages.salePricePlaceholder)"
-					autocomplete="off"
-				/>
-				<span v-if="!saleValid" class="text-red">{{
-					formatMessage(messages.salePriceInvalid)
-				}}</span>
-			</div>
-
-			<div class="flex flex-col gap-2">
-				<label for="inventory-note">
-					<span class="text-md font-semibold text-contrast">
-						{{ formatMessage(messages.noteLabel) }}
-					</span>
+				<label for="inventory-note" class="font-semibold text-contrast">
+					{{ formatMessage(messages.noteLabel) }}
 				</label>
 				<Input
 					id="inventory-note"
 					v-model="note"
-					:maxlength="256"
+					:maxlength="100"
 					:placeholder="formatMessage(messages.notePlaceholder)"
 					autocomplete="off"
 				/>
+				<span class="text-sm text-secondary">{{ note.length }} / 100</span>
 			</div>
 
-			<div class="flex flex-col gap-3">
-				<div class="flex items-center justify-between gap-4">
-					<label for="inventory-in-stock" class="text-md font-semibold text-contrast">
-						{{ formatMessage(messages.inStockLabel) }}
-					</label>
-					<Toggle id="inventory-in-stock" v-model="inStock" />
-				</div>
-				<div class="flex items-center justify-between gap-4">
-					<label for="inventory-popular" class="text-md font-semibold text-contrast">
-						{{ formatMessage(messages.popularLabel) }}
-					</label>
-					<Toggle id="inventory-popular" v-model="popular" />
-				</div>
+			<div class="flex flex-col gap-2">
+				<span class="font-semibold text-contrast">
+					{{ formatMessage(messages.descriptionLabel) }}
+				</span>
+				<MarkdownEditor v-model="description" :max-length="1000" :max-height="220" />
 			</div>
 
 			<div class="flex justify-end gap-2.5">
@@ -141,12 +145,15 @@ import {
 	commonMessages,
 	defineMessages,
 	Input,
+	MarkdownEditor,
 	NewModal,
 	Toggle,
 	useVIntl,
 } from '@modrinth/ui'
+import { getItemName } from '@vanillatyme/mc-items'
 
 import ShopItemCombobox from '~/components/ui/ShopItemCombobox.vue'
+import ShopItemStack from '~/components/ui/ShopItemStack.vue'
 
 const emit = defineEmits<{
 	save: [entry: Labrinth.Projects.v3.InventoryEntry]
@@ -163,36 +170,42 @@ const messages = defineMessages({
 		defaultMessage: 'Search for an item',
 	},
 	customNameLabel: {
-		id: 'shop.inventory.modal.custom-name-label',
-		defaultMessage: 'Custom name',
+		id: 'shop.inventory.modal.custom-name-label-optional',
+		defaultMessage: 'Custom name (optional)',
 	},
 	customNamePlaceholder: {
-		id: 'shop.inventory.modal.custom-name-placeholder',
-		defaultMessage: "Optional, e.g. an anvil-renamed item's name",
+		id: 'shop.inventory.modal.custom-name-hint',
+		defaultMessage: 'Shown instead of the item name',
 	},
-	amountLabel: { id: 'shop.inventory.modal.amount-label', defaultMessage: 'Amount' },
-	amountDescription: {
-		id: 'shop.inventory.modal.amount-description',
-		defaultMessage: 'How many of the item the buyer gets per trade.',
-	},
+	amountLabel: { id: 'shop.inventory.modal.amount-buyer-gets', defaultMessage: 'Buyer gets' },
 	priceLabel: { id: 'shop.inventory.modal.price-label', defaultMessage: 'Price' },
 	currencyPlaceholder: {
 		id: 'shop.inventory.modal.currency-placeholder',
 		defaultMessage: 'Currency item',
 	},
-	salePriceLabel: { id: 'shop.inventory.modal.sale-price-label', defaultMessage: 'Sale price' },
+	salePriceLabel: {
+		id: 'shop.inventory.modal.sale-price-label-optional',
+		defaultMessage: 'Sale price (optional)',
+	},
 	salePricePlaceholder: {
-		id: 'shop.inventory.modal.sale-price-placeholder',
-		defaultMessage: 'Optional, leave empty when not on sale',
+		id: 'shop.inventory.modal.sale-price-hint',
+		defaultMessage: 'Leave empty when not on sale',
 	},
 	salePriceInvalid: {
 		id: 'shop.inventory.modal.sale-price-invalid',
 		defaultMessage: 'The sale price must be a whole number lower than the normal price.',
 	},
-	noteLabel: { id: 'shop.inventory.modal.note-label', defaultMessage: 'Note' },
+	noteLabel: {
+		id: 'shop.inventory.modal.note-label-short',
+		defaultMessage: 'Note (shown on the list)',
+	},
 	notePlaceholder: {
 		id: 'shop.inventory.modal.note-placeholder',
 		defaultMessage: 'Optional, e.g. "Unbreaking III, Mending"',
+	},
+	descriptionLabel: {
+		id: 'shop.inventory.modal.description-label',
+		defaultMessage: 'Description (shown when opened)',
 	},
 	inStockLabel: { id: 'shop.inventory.modal.in-stock-label', defaultMessage: 'In stock' },
 	popularLabel: { id: 'shop.inventory.modal.popular-label', defaultMessage: 'Popular' },
@@ -210,8 +223,13 @@ const priceItem = ref<string>()
 const priceAmount = ref<number | undefined>(1)
 const salePrice = ref<number | undefined>()
 const note = ref('')
+const description = ref('')
 const inStock = ref(true)
 const popular = ref(false)
+
+function itemName(id: string) {
+	return getItemName(id) ?? id
+}
 
 function isPositiveWhole(value: number | undefined): value is number {
 	return value !== undefined && Number.isInteger(value) && value >= 1
@@ -231,7 +249,8 @@ const canSave = computed(
 		!!priceItem.value &&
 		isPositiveWhole(amount.value) &&
 		isPositiveWhole(priceAmount.value) &&
-		saleValid.value,
+		saleValid.value &&
+		description.value.length <= 1000,
 )
 
 function show(entry?: Labrinth.Projects.v3.InventoryEntry, event?: MouseEvent) {
@@ -243,6 +262,7 @@ function show(entry?: Labrinth.Projects.v3.InventoryEntry, event?: MouseEvent) {
 	priceAmount.value = entry?.price.amount ?? 1
 	salePrice.value = entry?.sale_price ?? undefined
 	note.value = entry?.note ?? ''
+	description.value = entry?.description ?? ''
 	inStock.value = entry?.in_stock ?? true
 	popular.value = entry?.popular ?? false
 	modal.value?.show(event)
@@ -265,6 +285,7 @@ function save() {
 		price: { item: currency, amount: price },
 		sale_price: salePrice.value ?? null,
 		note: note.value.trim() || null,
+		description: description.value.trim() || null,
 		in_stock: inStock.value,
 		popular: popular.value,
 	})
