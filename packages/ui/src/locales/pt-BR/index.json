@@ -3269,9 +3269,6 @@
   "profile.button.analytics": {
     "defaultMessage": "Ver estatísticas do usuário"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Gerenciar cobrança do usuário"
-  },
   "profile.button.block": {
     "defaultMessage": "Bloquear"
   },
@@ -3293,20 +3290,11 @@
   "profile.button.manage-projects": {
     "defaultMessage": "Gerenciar projetos"
   },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "Remover como afiliado"
-  },
   "profile.button.reset-2fa": {
     "defaultMessage": "Redefinir a autenticação de dois fatores"
   },
   "profile.button.revoke-sessions": {
     "defaultMessage": "Revogar todas as sessões"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "Definir como afiliado"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "Ver instâncias compartilhadas"
   },
   "profile.button.unblock": {
     "defaultMessage": "Desbloquear"
@@ -3392,17 +3380,11 @@
   "profile.force-password-reset.title": {
     "defaultMessage": "Forçar redefinição de senha para {username}"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Afiliado"
-  },
   "profile.label.badges": {
     "defaultMessage": "Emblemas"
   },
   "profile.label.collection": {
     "defaultMessage": "Coleção"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {download} other {downloads}}"
   },
   "profile.label.joined": {
     "defaultMessage": "Entrou"

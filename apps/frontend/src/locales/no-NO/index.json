@@ -728,30 +728,6 @@
   "create.project.visibility-unlisted": {
     "message": "Uoppført"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Opprett tilknytningslenke"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "Ingen tilknytte koder funnet."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Feil ved lasting av tilknytningslenker"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Dine tilknytningslenker"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Dette vil fjerne tilknytningskoden {id} permanent, og alle delte lenker med denne koden vil slutte å virke."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Slett"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Er du sikker på at du vil slette tilknytningslenken ''{title}''?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Søk i tilknytningslenker..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "fra{count} {count, plural, one {projekt} other {projekt}}"
   },
@@ -1412,9 +1388,6 @@
   "layout.action.file-lookup": {
     "message": "Filoppslag"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Hold styr på tilknytte lenker"
-  },
   "layout.action.manage-server-notices": {
     "message": "Hold styr på servervarsler"
   },
@@ -1438,69 +1411,6 @@
   },
   "layout.avatar.alt": {
     "message": "Avataren din"
-  },
-  "layout.banner.account-action": {
-    "message": "Kontohandling påkrevd"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Gå til kontoinnstillinger"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Grunna sikkerhet, så trenger Modrinth at du registrerer deg en email-adresse til kontoen din."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Ignorer alltid"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Denne utplasseringa av brukergrensesnittet til Modrinth kunne ikke generere tilstanden fra API-en. Dette kan være på grunn av et strømbrott eller en error i konfigurasjonen. Ombygg når API-en er tilgjengelig. Errorkoder: {errors}; Nåværende API-URL er: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Ignorer"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Error når det kom til å generer tilstanden fra API-en når den blei bygd."
-  },
-  "layout.banner.preview.title": {
-    "message": "Dette er ei forhandsvisning av distribusjonen til Modrinth-nettsida."
-  },
-  "layout.banner.staging.description": {
-    "message": "Oppsettingsmiljøet er heilt separat fra produksjonsdatabasen til Modrinth. Dette brukes for testing og feilsøking, og det kan også hende at det kjører nyere versjoner under utvikling av Modrinth-backend-en eller grensesnittet enn produktinstansen."
-  },
-  "layout.banner.staging.title": {
-    "message": "Du ser på oppsettingsmiljøet til Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Oppdater faktureringsinformasjon"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Én eller flere abonnement kunne ikke bli fornya. Vær så snill å oppdater betalingsmetoden din for å hindre tap av tilgang!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Faktureringshandling påkrevd."
-  },
-  "layout.banner.tax.action": {
-    "message": "Fullfør skatteskjemet"
-  },
-  "layout.banner.tax.description": {
-    "message": "Du har allerede tatt ut over {threshold} fra Modrinth i år. For å overholde skattereguleringer, så må du fullføre skatteskjemaet. Uttakingene dine er satt på pause til dette skjemaet er sendt inn."
-  },
-  "layout.banner.tax.title": {
-    "message": "Skatteskjema påkrevd"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Ta kontakt med støtte"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Uttakingene dine er midlertidig låst, sia TIN-ene-eller-SSN-ene dine ikke stemmer med IRS-dokummenta. Vær så snill å ta kontakt med støtte for å tilbakestille skatteskjemaet ditt."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Skatteskjema feila"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Send inn bekreftelsesemail-en igjen"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Gunna sikkerhet, så trenger Modrinth at du bekrefter email-adressa assisiert med kontoen din."
   },
   "layout.footer.legal": {
     "message": "Juridisk"
@@ -1967,23 +1877,8 @@
   "project.actions.create-server": {
     "message": "Lag en server"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Lag en server"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Ikke vis igjen"
-  },
   "project.actions.review-project": {
     "message": "Anmeld prosjekt"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting er den letteste måten å spille med vennene dine uten problem!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Startprisen: {price}<small> per måned</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Lag en server"
   },
   "project.collections.create-new": {
     "message": "Lag ny samling"
@@ -2014,24 +1909,6 @@
   },
   "project.download.title": {
     "message": "Last ned {title}"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Vi har nettopp bygd opp igjen Miljø-systemet på Modrinth, som betyr at nye innstillinger er nå tilgjengelige. Du har ikke tillatelse til å endre på disse innstillingene, men vær så snill å fortell et anna medlem av dette prosjektet at miljø-matadata-en må bli bekrefta."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Miljø-metadata-en må bli gjennomgått"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Lær mer om denne endringa"
-  },
-  "project.environment.migration.message": {
-    "message": "Vi har nettopp bygd opp igjen Miljø-systemet på Modrinth, som betyr at nye innstilinger er ny tilgjengelige. Vær så snill å bekreft at metadataen er korrekt."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Gå gjennom miljøinnstillinger"
-  },
-  "project.environment.migration.title": {
-    "message": "Vær så snill å gå gjennom miljø-metadata-en"
   },
   "project.error.loading": {
     "message": "Feil ved lasting av prosjektdata{message}"
@@ -2479,33 +2356,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Synkroniser med server"
-  },
-  "servers.notice.actions": {
-    "message": "Handlinger"
-  },
-  "servers.notice.begins": {
-    "message": "Begynner"
-  },
-  "servers.notice.dismissable": {
-    "message": "Avviselig"
-  },
-  "servers.notice.expires": {
-    "message": "Går ut"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Nivå"
-  },
-  "servers.notice.undismissable": {
-    "message": "Uavviselig"
-  },
-  "servers.notices.create-notice": {
-    "message": "Lag varsel"
-  },
-  "servers.notices.no-notices": {
-    "message": "Ingen varsler"
   },
   "servers.plan.large.description": {
     "message": "Ideelt for 15 - 25 spillere, modpacks eller tung modding."

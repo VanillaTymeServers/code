@@ -1199,30 +1199,6 @@
   "create.project.visibility-unlisted": {
     "message": "不公開"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "建立聯盟連結"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "找不到聯盟代碼。"
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "載入聯盟連結時發生錯誤"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "你的聯盟連結"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "這將永久撤銷聯盟代碼「{id}」，並且任何使用這個代碼的現有連結將不再有效。"
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "撤銷"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "確定要撤銷「{title}」聯盟連結嗎？"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "搜尋聯盟連結..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "來自 {count} 個{count, plural, other {專案}}"
   },
@@ -1994,9 +1970,6 @@
   "layout.action.file-lookup": {
     "message": "檔案查詢"
   },
-  "layout.action.manage-affiliates": {
-    "message": "管理聯盟連結"
-  },
   "layout.action.manage-server-notices": {
     "message": "管理伺服器通知"
   },
@@ -2023,72 +1996,6 @@
   },
   "layout.avatar.alt": {
     "message": "你的顯示圖片"
-  },
-  "layout.banner.account-action": {
-    "message": "帳號需採取行動"
-  },
-  "layout.banner.add-email.button": {
-    "message": "前往帳號設定"
-  },
-  "layout.banner.add-email.description": {
-    "message": "為了安全起見，Modrinth 需要你為帳號註冊電子郵件地址。"
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "一律忽略"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Modrinth 的前端無法從 API 取得資料，導致本次部署失敗。這可能是服務中斷或設定錯誤所致。請在 API 恢復可用時，再重新嘗試。錯誤碼：{errors}；目前的 API 網址是：{url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "忽略"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "建構時無法從 API 取得狀態資料。"
-  },
-  "layout.banner.preview.description": {
-    "message": "如果你是想前往 Modrinth 的官方網站，請前往 {url}。這個預覽部署版本僅供 Modrinth 工作人員測試使用。它是基於 {ref} 建構而成。"
-  },
-  "layout.banner.preview.title": {
-    "message": "這是 Modrinth 網站的預覽部署版本。"
-  },
-  "layout.banner.staging.description": {
-    "message": "預備環境與 Modrinth 的正式資料庫完全獨立。它被用於測試與除錯，因此你執行的 Modrinth 後端或前端，可能是比正式實例還要新的開發中版本。"
-  },
-  "layout.banner.staging.title": {
-    "message": "你正在查看 Modrinth 的預備環境"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "更新帳務資訊"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "一個或多個訂閱續訂失敗了。請更新你的付款方式，以免失去存取權！"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "需進行帳務處理。"
-  },
-  "layout.banner.tax.action": {
-    "message": "填寫稅務表單"
-  },
-  "layout.banner.tax.description": {
-    "message": "你今年已從 Modrinth 提領超過 {threshold}。為符合稅務法規，你需要填寫一份稅務表單。在提交這個表格之前，你的提領將暫停。"
-  },
-  "layout.banner.tax.title": {
-    "message": "需填寫稅務表單"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "聯絡客服"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "由於你的納稅人識別號碼 (TIN) 或社會安全號碼 (SSN) 與美國國稅局 (IRS) 的紀錄不符，你的提領功能已暫時鎖定。請聯絡客服以重設並重新提交你的稅務表單。"
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "稅務表單提交失敗"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "重新傳送驗證電子郵件"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "為了安全起見，Modrinth 需要你驗證與你的帳號連結的電子郵件地址。"
   },
   "layout.footer.based-on-label": {
     "message": "基於"
@@ -2717,12 +2624,6 @@
   "project.actions.create-server": {
     "message": "建立伺服器"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "建立伺服器"
-  },
-  "project.actions.dont-show-again": {
-    "message": "不再顯示"
-  },
   "project.actions.edit-project": {
     "message": "編輯專案"
   },
@@ -2734,15 +2635,6 @@
   },
   "project.actions.review-project": {
     "message": "審查專案"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting 是讓你與朋友輕鬆遊玩的最佳方式！"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "{price} 起<small> / 月</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "建立伺服器"
   },
   "project.actions.view-dependents": {
     "message": "查看相依項"
@@ -2884,24 +2776,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "無法下載檔案"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "我們剛剛對 Modrinth 的執行環境系統進行了全面更新，並提供了新的選項。你沒有權限修改這些設定，請通知專案中的其他成員以確定環境詮釋資料否正確。"
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "環境詮釋資料需要審查"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "深入了解這項變更"
-  },
-  "project.environment.migration.message": {
-    "message": "我們剛剛對 Modrinth 的執行環境系統進行了全面更新，並提供了新的選項。請確定詮釋資料是否正確。"
-  },
-  "project.environment.migration.review-button": {
-    "message": "審查執行環境設定"
-  },
-  "project.environment.migration.title": {
-    "message": "請審查環境詮釋資料"
   },
   "project.error.loading": {
     "message": "載入專案資料時發生錯誤{message}"
@@ -3256,9 +3130,6 @@
   },
   "project.settings.disclosures.upload-version-first.heading": {
     "message": "請先上傳版本再新增揭露資訊"
-  },
-  "project.settings.editing-project": {
-    "message": "正在編輯{projectType}專案"
   },
   "project.settings.general.name.description": {
     "message": "請避免使用前綴、後綴、括弧內容或額外描述，僅填寫專案的實際名稱。"
@@ -4069,33 +3940,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "與伺服器同步"
-  },
-  "servers.notice.actions": {
-    "message": "動作"
-  },
-  "servers.notice.begins": {
-    "message": "開始時間"
-  },
-  "servers.notice.dismissable": {
-    "message": "可關閉"
-  },
-  "servers.notice.expires": {
-    "message": "到期日"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "等級"
-  },
-  "servers.notice.undismissable": {
-    "message": "不可關閉"
-  },
-  "servers.notices.create-notice": {
-    "message": "建立通知"
-  },
-  "servers.notices.no-notices": {
-    "message": "無通知"
   },
   "servers.plan.large.description": {
     "message": "適合 15 到 25 位玩家、大型模組包或重度模組環境。"

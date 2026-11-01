@@ -3185,9 +3185,6 @@
   "profile.button.analytics": {
     "defaultMessage": "Посмотреть аналитику"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Управление платежами"
-  },
   "profile.button.block": {
     "defaultMessage": "Заблокировать"
   },
@@ -3209,20 +3206,11 @@
   "profile.button.manage-projects": {
     "defaultMessage": "Управление проектами"
   },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "Убрать из партнёров"
-  },
   "profile.button.reset-2fa": {
     "defaultMessage": "Сбросить двухфакторную аутентификацию"
   },
   "profile.button.revoke-sessions": {
     "defaultMessage": "Завершить все сеансы"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "Сделать партнёром"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "Посмотреть совместные сборки"
   },
   "profile.button.unblock": {
     "defaultMessage": "Разблокировать"
@@ -3305,17 +3293,11 @@
   "profile.force-password-reset.title": {
     "defaultMessage": "Принудительный сброс пароля для {username}"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Партнёр"
-  },
   "profile.label.badges": {
     "defaultMessage": "Значки"
   },
   "profile.label.collection": {
     "defaultMessage": "Коллекция"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {скачивание} few {скачивания} other {скачиваний}}"
   },
   "profile.label.joined": {
     "defaultMessage": "Регистрация:"

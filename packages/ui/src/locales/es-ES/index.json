@@ -3260,9 +3260,6 @@
   "profile.button.analytics": {
     "defaultMessage": "Ver analíticas del usuario"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Gestionar la facturación de los usuarios"
-  },
   "profile.button.block": {
     "defaultMessage": "Bloquear"
   },
@@ -3277,15 +3274,6 @@
   },
   "profile.button.manage-projects": {
     "defaultMessage": "Gestionar proyectos"
-  },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "Borrar como afiliado"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "Poner como afiliado"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "Ver instancias compartidas"
   },
   "profile.button.unblock": {
     "defaultMessage": "Desbloquear"
@@ -3341,17 +3329,11 @@
   "profile.error.not-found": {
     "defaultMessage": "Usuario no encontrado"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Afiliado"
-  },
   "profile.label.badges": {
     "defaultMessage": "Medallas"
   },
   "profile.label.collection": {
     "defaultMessage": "Colección"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {descarga} other {descargas}}"
   },
   "profile.label.joined": {
     "defaultMessage": "Se unió hace"

@@ -3110,9 +3110,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "Återkalla alla sessioner"
   },
-  "profile.button.shared-instances": {
-    "defaultMessage": "Visa delade instanser"
-  },
   "profile.button.unblock": {
     "defaultMessage": "Avblockera"
   },
@@ -3169,9 +3166,6 @@
   },
   "profile.label.collection": {
     "defaultMessage": "Samling"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {nedladdning} other {nedladdningar}}"
   },
   "profile.label.joined": {
     "defaultMessage": "Gick med"

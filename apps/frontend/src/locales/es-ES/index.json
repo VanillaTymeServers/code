@@ -1199,30 +1199,6 @@
   "create.project.visibility-unlisted": {
     "message": "No listado"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Crear enlace de afiliado"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "No se encontraron códigos de afiliado."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Error al cargar los enlaces de afiliado"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Tus enlaces de afiliado"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Esto revocará permanentemente el código de afiliado `{id}` y cualquier enlace existente con este código que se haya compartido dejará de ser válido."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Revocar"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "¿Estás seguro de que deseas revocar tu enlace de afiliado «{title}»?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Buscar enlaces de afiliado..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "de {count} {count, plural,one {proyecto} other {proyectos}}"
   },
@@ -1988,9 +1964,6 @@
   "layout.action.file-lookup": {
     "message": "Búsqueda de archivos"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Manejar enlaces de afiliados"
-  },
   "layout.action.manage-server-notices": {
     "message": "Gestionar avisos del servidor"
   },
@@ -2017,72 +1990,6 @@
   },
   "layout.avatar.alt": {
     "message": "Tu avatar"
-  },
-  "layout.banner.account-action": {
-    "message": "Acción requerida en la cuenta"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Visita la configuración de la cuenta"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Por motivos de seguridad, Modrinth necesita que registres una dirección de correo electrónico en tu cuenta."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Ignorar siempre"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Esta implementación del frontend de Modrinth no ha podido generar el estado desde la API. Esto puede deberse a una interrupción del servicio o a un error en la configuración. Vuelve a compilar cuando la API esté disponible. Códigos de error: {errors}; La URL actual de la API es: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Ignorar"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Error al generar el estado desde la API durante la compilación."
-  },
-  "layout.banner.preview.description": {
-    "message": "Si deseaba acceder al sitio web oficial de Modrinth, visite {url}. Esta implementación de vista previa es utilizada por el personal de Modrinth con fines de prueba. Fue creada utilizando {ref}."
-  },
-  "layout.banner.preview.title": {
-    "message": "Esta es una vista previa de la implementación del sitio web de Modrinth."
-  },
-  "layout.banner.staging.description": {
-    "message": "El entorno de prueba está completamente separado de la base de datos Modrinth de producción. Se utiliza con fines de prueba y depuración, y puede ejecutar versiones en desarrollo del backend o frontend de Modrinth más recientes que la instancia de producción."
-  },
-  "layout.banner.staging.title": {
-    "message": "Estás viendo el entorno de prueba de Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Actualizar información de facturación"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Una o más suscripciones no se han renovado. ¡Actualiza tu método de pago para evitar perder el acceso!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Se requiere acción de facturación."
-  },
-  "layout.banner.tax.action": {
-    "message": "Rellene el formulario fiscal"
-  },
-  "layout.banner.tax.description": {
-    "message": "Ya has retirado más de {threshold} de Modrinth este año. Para cumplir con las regulaciones fiscales, es necesario que completes un formulario de impuestos. Tus retiros estarán pausados hasta que dicho formulario sea enviado."
-  },
-  "layout.banner.tax.title": {
-    "message": "Se requiere formulario fiscal"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Contacta con soporte"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Tus retiradas están bloqueadas temporalmente porque tu TIN o SSN no coinciden con los registros del IRS. Ponte en contacto con el servicio de asistencia para restablecer y volver a enviar tu formulario fiscal."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Error en el formulario fiscal"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Reenviar verificación de correo electrónico"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Por motivos de seguridad, Modrinth necesita que verifiques la dirección de correo electrónico asociada a tu cuenta."
   },
   "layout.footer.based-on-label": {
     "message": "Basado en"
@@ -2711,12 +2618,6 @@
   "project.actions.create-server": {
     "message": "Crear un servidor"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Crear un servidor"
-  },
-  "project.actions.dont-show-again": {
-    "message": "No mostrar de nuevo"
-  },
   "project.actions.edit-project": {
     "message": "Editar proyecto"
   },
@@ -2728,15 +2629,6 @@
   },
   "project.actions.review-project": {
     "message": "Revisar proyecto"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "¡Modrinth Hosting es la forma más fácil de jugar con tus amigos sin problemas!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "A partir de {price}<small> / mes</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Crear un servidor"
   },
   "project.actions.view-dependents": {
     "message": "Ver dependientes"
@@ -2878,24 +2770,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "No se pudieron descargar los archivos"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Acabamos de renovar el sistema de entornos en Modrinth y ahora hay nuevas opciones disponibles. No tienes permiso para modificar estos ajustes, pero avisa a otro miembro del proyecto de que hay que verificar los metadatos del entorno."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Los metadatos del entorno necesitan ser revisados"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Más información sobre este cambio"
-  },
-  "project.environment.migration.message": {
-    "message": "Acabamos de actualizar el sistema de entornos en Modrinth y ahora hay nuevas opciones disponibles. Por favor, verifique que el metadata sea correcto."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Revisar la configuración del entorno"
-  },
-  "project.environment.migration.title": {
-    "message": "Por favor, revisa los metadatos del entorno"
   },
   "project.error.loading": {
     "message": "Error al cargar los datos del proyecto {message}"
@@ -3250,9 +3124,6 @@
   },
   "project.settings.disclosures.upload-version-first.heading": {
     "message": "Sube versiones antes de añadir divulgaciones"
-  },
-  "project.settings.editing-project": {
-    "message": "Editando un proyecto de {projectType}"
   },
   "project.settings.general.name.description": {
     "message": "Evite prefijos, sufijos, paréntesis o descripciones añadidas; utilice solo el nombre real del proyecto."
@@ -4042,33 +3913,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Sincronizar con el servidor"
-  },
-  "servers.notice.actions": {
-    "message": "Acciones"
-  },
-  "servers.notice.begins": {
-    "message": "Comienza"
-  },
-  "servers.notice.dismissable": {
-    "message": "Descartable"
-  },
-  "servers.notice.expires": {
-    "message": "Caduca"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Nivel"
-  },
-  "servers.notice.undismissable": {
-    "message": "Inadmisible"
-  },
-  "servers.notices.create-notice": {
-    "message": "Crear aviso"
-  },
-  "servers.notices.no-notices": {
-    "message": "Sin avisos"
   },
   "servers.plan.large.description": {
     "message": "Ideal para 15–25 jugadores, paquetes de mods o modding intensivo."

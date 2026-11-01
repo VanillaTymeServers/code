@@ -1277,30 +1277,6 @@
   "create.shop.visibility-description": {
     "message": "The visibility of your shop after it has been approved."
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Create affiliate link"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "No affiliate codes found."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Error loading affiliate links"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Your affiliate links"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "This will permanently revoke the affiliate code `{id}` and any existing links with this code that have been shared will no longer be valid."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Revoke"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Are you sure you want to revoke your ''{title}'' affiliate link?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Search affiliate links..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "from {count} {count, plural, one {project} other {projects}}"
   },
@@ -2396,9 +2372,6 @@
   "layout.action.file-lookup": {
     "message": "File lookup"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Manage affiliate links"
-  },
   "layout.action.manage-server-notices": {
     "message": "Manage server notices"
   },
@@ -2455,39 +2428,6 @@
   },
   "layout.banner.preview.title": {
     "message": "This is a preview deploy of the Modrinth website."
-  },
-  "layout.banner.staging.description": {
-    "message": "The staging environment is completely separate from the production Modrinth database. This is used for testing and debugging purposes, and may be running in-development versions of the Modrinth backend or frontend newer than the production instance."
-  },
-  "layout.banner.staging.title": {
-    "message": "You’re viewing Modrinth’s staging environment"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Update billing info"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "One or more subscriptions failed to renew. Please update your payment method to prevent losing access!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Billing action required."
-  },
-  "layout.banner.tax.action": {
-    "message": "Complete tax form"
-  },
-  "layout.banner.tax.description": {
-    "message": "You've already withdrawn over {threshold} from Modrinth this year. To comply with tax regulations, you need to complete a tax form. Your withdrawals are paused until this form is submitted."
-  },
-  "layout.banner.tax.title": {
-    "message": "Tax form required"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Contact support"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Your withdrawals are temporarily locked because your TIN or SSN didn't match IRS records. Please contact support to reset and resubmit your tax form."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Tax form failed"
   },
   "layout.banner.verify-email.action": {
     "message": "Re-send verification email"
@@ -3188,32 +3128,17 @@
   "project.actions.create-server": {
     "message": "Create a server"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Create a server"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Don't show again"
-  },
   "project.actions.edit-project": {
-    "message": "Edit project"
+    "message": "Edit shop"
   },
   "project.actions.project-page": {
-    "message": "Project page"
+    "message": "Shop page"
   },
   "project.actions.rescan-modpack": {
     "message": "Rescan modpack"
   },
   "project.actions.review-project": {
-    "message": "Review project"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting is the easiest way to play with your friends without hassle!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Starting at {price}<small> / month</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Create a server"
+    "message": "Review shop"
   },
   "project.actions.view-dependents": {
     "message": "View dependents"
@@ -3356,32 +3281,14 @@
   "project.download.zip-failed-title": {
     "message": "Could not download files"
   },
-  "project.environment.migration-no-permission.message": {
-    "message": "We've just overhauled the Environments system on Modrinth and new options are now available. You don't have permission to modify these settings, but please let another member of the project know that the environment metadata needs to be verified."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Environment metadata needs to be reviewed"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Learn more about this change"
-  },
-  "project.environment.migration.message": {
-    "message": "We've just overhauled the Environments system on Modrinth and new options are now available. Please verify that the metadata is correct."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Review environment settings"
-  },
-  "project.environment.migration.title": {
-    "message": "Please review environment metadata"
-  },
   "project.error.loading": {
-    "message": "Error loading project data{message}"
+    "message": "Error loading shop data{message}"
   },
   "project.error.page-not-found": {
     "message": "The page could not be found"
   },
   "project.error.project-not-found": {
-    "message": "Project not found"
+    "message": "Shop not found"
   },
   "project.gallery.title": {
     "message": "Gallery"
@@ -3513,28 +3420,28 @@
     "message": "{count, plural, one {The modpack file can be unzipped.} other {All # modpack files can be unzipped.}}"
   },
   "project.notification.icon-updated.message": {
-    "message": "Your project's icon has been updated."
+    "message": "Your shop's icon has been updated."
   },
   "project.notification.icon-updated.title": {
-    "message": "Project icon updated"
+    "message": "Shop icon updated"
   },
   "project.notification.review-save-failed.description": {
-    "message": "You cannot save edits to your project which result in failing validation."
+    "message": "You cannot save edits to your shop which result in failing validation."
   },
   "project.notification.review-save-failed.title": {
-    "message": "Failed to save project in review"
+    "message": "Failed to save shop in review"
   },
   "project.notification.updated.message": {
-    "message": "Your project has been updated."
+    "message": "Your shop has been updated."
   },
   "project.notification.updated.title": {
-    "message": "Project updated"
+    "message": "Shop updated"
   },
   "project.settings.back-to-all-projects": {
-    "message": "Back to all projects"
+    "message": "Back to all shops"
   },
   "project.settings.back-to-project-page": {
-    "message": "Back to project page"
+    "message": "Back to shop page"
   },
   "project.settings.danger-zone": {
     "message": "Danger zone"
@@ -3753,7 +3660,7 @@
     "message": "Upload versions before adding disclosures"
   },
   "project.settings.editing-project": {
-    "message": "Editing {projectType} project"
+    "message": "Editing shop"
   },
   "project.settings.general.name.description": {
     "message": "Avoid prefixes, suffixes, parentheticals, or added descriptions—just the project's actual name."
@@ -5398,33 +5305,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Sync with server"
-  },
-  "servers.notice.actions": {
-    "message": "Actions"
-  },
-  "servers.notice.begins": {
-    "message": "Begins"
-  },
-  "servers.notice.dismissable": {
-    "message": "Dismissable"
-  },
-  "servers.notice.expires": {
-    "message": "Expires"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Level"
-  },
-  "servers.notice.undismissable": {
-    "message": "Undismissable"
-  },
-  "servers.notices.create-notice": {
-    "message": "Create notice"
-  },
-  "servers.notices.no-notices": {
-    "message": "No notices"
   },
   "servers.plan.large.description": {
     "message": "Ideal for 15–25 players, modpacks, or heavy modding."

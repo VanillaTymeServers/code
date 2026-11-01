@@ -3266,9 +3266,6 @@
   "profile.button.analytics": {
     "defaultMessage": "Kullanıcı analizlerini göster"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Kullanıcı faturasını yönet"
-  },
   "profile.button.block": {
     "defaultMessage": "Engelle"
   },
@@ -3290,20 +3287,11 @@
   "profile.button.manage-projects": {
     "defaultMessage": "Projeleri yönet"
   },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "Ortaklıktan çıkar"
-  },
   "profile.button.reset-2fa": {
     "defaultMessage": "İki Aşamalı Doğrulamayı Sıfırla"
   },
   "profile.button.revoke-sessions": {
     "defaultMessage": "Tüm oturumlardan çık"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "Ortak olarak ayarla"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "Paylaşılan örnekleri görüntüle"
   },
   "profile.button.unblock": {
     "defaultMessage": "Engellemeyi kaldır"
@@ -3389,17 +3377,11 @@
   "profile.force-password-reset.title": {
     "defaultMessage": "{username} için zorla şifre sıfırlama"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Ortaklar"
-  },
   "profile.label.badges": {
     "defaultMessage": "Rozetler"
   },
   "profile.label.collection": {
     "defaultMessage": "Koleksiyon"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {indirme} other {indirme}}"
   },
   "profile.label.joined": {
     "defaultMessage": "Katıldı"

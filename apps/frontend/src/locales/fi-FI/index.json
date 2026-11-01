@@ -629,24 +629,6 @@
   "scopes.reportWrite.description": {
     "message": "Muokkaa raportteja"
   },
-  "servers.notice.actions": {
-    "message": "Toiminnot"
-  },
-  "servers.notice.begins": {
-    "message": "Alkaa"
-  },
-  "servers.notice.expires": {
-    "message": "Vanhenee"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Taso"
-  },
-  "servers.notices.no-notices": {
-    "message": "Ei ilmoituksia"
-  },
   "settings.pats.modal.create.expires.label": {
     "message": "Vanhenee"
   },

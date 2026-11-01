@@ -3260,9 +3260,6 @@
   "profile.button.analytics": {
     "defaultMessage": "Pokaż dane analityczne użytkownika"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Zarządzaj rozliczaniem użytkownika"
-  },
   "profile.button.block": {
     "defaultMessage": "Zablokuj"
   },
@@ -3284,20 +3281,11 @@
   "profile.button.manage-projects": {
     "defaultMessage": "Zarządzaj projektami"
   },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "Usuń jako partnera"
-  },
   "profile.button.reset-2fa": {
     "defaultMessage": "Zresetuj uwierzytelnianie dwuskładnikowe"
   },
   "profile.button.revoke-sessions": {
     "defaultMessage": "Unieważnij wszystkie sesje"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "Ustaw jako partnera"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "Pokaż udostępnione instancje"
   },
   "profile.button.unblock": {
     "defaultMessage": "Odblokuj"
@@ -3383,17 +3371,11 @@
   "profile.force-password-reset.title": {
     "defaultMessage": "Wymuś zresetowanie hasła dla {username}"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Partner"
-  },
   "profile.label.badges": {
     "defaultMessage": "Odznaki"
   },
   "profile.label.collection": {
     "defaultMessage": "Kolekcja"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {pobranie} few {pobrania} other {pobrań}}"
   },
   "profile.label.joined": {
     "defaultMessage": "Dołączył(-a)"

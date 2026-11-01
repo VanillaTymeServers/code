@@ -3254,9 +3254,6 @@
   "profile.button.analytics": {
     "defaultMessage": "Pregled analitike korisnika"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Upravljaj naplatom korisnika"
-  },
   "profile.button.block": {
     "defaultMessage": "Blokiraj"
   },
@@ -3320,17 +3317,11 @@
   "profile.error.not-found": {
     "defaultMessage": "Korisnik nije pronađen"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Partner"
-  },
   "profile.label.badges": {
     "defaultMessage": "Bedževi"
   },
   "profile.label.collection": {
     "defaultMessage": "Kolekcija"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {preuzimanje} other {preuzimanja}}"
   },
   "profile.label.joined": {
     "defaultMessage": "Pridružen"

@@ -3209,9 +3209,6 @@
   "profile.button.analytics": {
     "defaultMessage": "Mostra analitiche utente"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Gestisci fatturato utente"
-  },
   "profile.button.block": {
     "defaultMessage": "Blocca"
   },
@@ -3233,20 +3230,11 @@
   "profile.button.manage-projects": {
     "defaultMessage": "Gestisci progetti"
   },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "Rimuovi da affiliato"
-  },
   "profile.button.reset-2fa": {
     "defaultMessage": "Reimposta 2FA"
   },
   "profile.button.revoke-sessions": {
     "defaultMessage": "Revoca tutte le sessioni"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "Imposta come affiliato"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "Mostra istanze condivise"
   },
   "profile.button.unblock": {
     "defaultMessage": "Sblocca"
@@ -3332,17 +3320,11 @@
   "profile.force-password-reset.title": {
     "defaultMessage": "Forza la reimpostazione della password per {username}"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Affiliato"
-  },
   "profile.label.badges": {
     "defaultMessage": "Medaglie"
   },
   "profile.label.collection": {
     "defaultMessage": "Raccolta"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "download"
   },
   "profile.label.joined": {
     "defaultMessage": "Iscrizione"

@@ -1199,30 +1199,6 @@
   "create.project.visibility-unlisted": {
     "message": "Liste dışı"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Ortaklık bağlantısı oluştur"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "Yönlendirme kodu bulunamadı."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Ortaklık bağlantıları yüklenemedi"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Ortaklık bağlantıların"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Bu işlem `{id}` ortaklık kodunu kalıcı olarak iptal edecek ve bu kodla paylaşılmış mevcut bağlantıların hiçbiri artık geçerli olmayacaktır."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "İptal et"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "''{title}'' ortaklık bağlantınızı iptal etmek istediğinizden emin misiniz?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Ortaklık bağlantılarını ara..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "{count} {count, plural, one {project} other {projects}}'den"
   },
@@ -1994,9 +1970,6 @@
   "layout.action.file-lookup": {
     "message": "Dosya bulma"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Ortaklık linklerini yönet"
-  },
   "layout.action.manage-server-notices": {
     "message": "Sunucu bildirimlerini yönet"
   },
@@ -2023,72 +1996,6 @@
   },
   "layout.avatar.alt": {
     "message": "Avatarınız"
-  },
-  "layout.banner.account-action": {
-    "message": "Kullanıcı eylemi zorunlu"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Hesap ayarlarını ziyaret et"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Güvenlik sebebiyle Modrinth hesabınıza bir e-posta adresi kaydetmeniz gerek."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Her zaman yok say"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Modrinth'in önucunun bu dağıtımı API'den durum oluşturamadı. Bu bir kesintiden veya yapılandırmadaki bir hatadan kaynaklı olabilir. API mevcutken tekrar derleyin. Hata kodları: {errors}; şu anki API adresi: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Yok say"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Derleme esnasında API'den durum oluştururken hata."
-  },
-  "layout.banner.preview.description": {
-    "message": "Eğer resmi Modrinth web sitesine erişmek istiyorsanız, {url} adresini ziyaret edin. Bu önizleme sürümü Modrinth ekibi tarafından test amaçlı kullanılmaktadır. {ref} kullanılarak derlenmiştir."
-  },
-  "layout.banner.preview.title": {
-    "message": "Bu, Modrinth web sitesinin önizleme dağıtımıdır."
-  },
-  "layout.banner.staging.description": {
-    "message": "Hazırlama ortamı, Modrinth yapım veritabanından tamamen ayrıdır. Bu test ve hata ayıklama amaçları için kullanılır ve yapım profilinden daha yeni olan Modrinth'in arka ucunun veya ön ucunun geliştirmekte olan sürümlerini çalıştırıyor olabilir. "
-  },
-  "layout.banner.staging.title": {
-    "message": "Modrinth'in hazırlama ortamını görüntülüyorsunuz"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Fatura bilgisini güncelle"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Bir veya birden fazla abonelikler yenilenemedi. Lütfen erişiminizi kaybetmeyi engellemek için ödeme tercihinizi güncelleyin!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Fatura eylemi zorunlu."
-  },
-  "layout.banner.tax.action": {
-    "message": "Vergi formunu doldurun"
-  },
-  "layout.banner.tax.description": {
-    "message": "Bu yıl Modrinth'ten {threshold} üzerinde çekim yaptınız. Vergi düzenlemelerine uymak için bir vergi formu doldurmanız gerekmektedir. Bu form teslim edilene kadar para çekme işlemleriniz durdurulmuştur."
-  },
-  "layout.banner.tax.title": {
-    "message": "Vergi formu gereklidir"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Destekle iletişime geçin"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Vergi kimlik numaranız (TIN) veya sosyal güvenlik numaranız (SSN) IRS kayıtlarıyla eşleşmediği için para çekme işlemleriniz geçici olarak kilitlenmiştir. Vergi formunuzu sıfırlamak ve yeniden göndermek için lütfen destek ekibiyle iletişime geçin."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Vergi formu başarısız oldu"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Doğrulama e-postasını yeniden gönder"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Güvenlik sebebiyle Modrinth hesabınızın e-posta adresini doğrulamanız gerek."
   },
   "layout.footer.based-on-label": {
     "message": "Kaynak"
@@ -2717,12 +2624,6 @@
   "project.actions.create-server": {
     "message": "Sunucu oluştur"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Sunucu oluştur"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Bir daha gösterme"
-  },
   "project.actions.edit-project": {
     "message": "Projeyi düzenle"
   },
@@ -2734,15 +2635,6 @@
   },
   "project.actions.review-project": {
     "message": "Projeyi incele"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting arkadaşlarınla uğraşsız oynamanın en kolay yolu!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "{price}<small> / ay</small>'dan başlayan fiyatlarla"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Sunucu oluştur"
   },
   "project.actions.view-dependents": {
     "message": "Bağlılıkları görüntüle"
@@ -2884,24 +2776,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "Dosyalar indirilemedi"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Daha yeni Modrinth'in Çevre sistemini yeniledik ve yeni seçenekler mevcut. Bu ayarları değiştirmek için yetkiniz yok ama projenin başka bir üyesine çevre meta verisinin doğrulanması gerektiği haberini verebilirsiniz."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Çevre meta verisi gözden geçirilmesi gerekiyor"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Bu değişiklik hakkında daha fazla öğren"
-  },
-  "project.environment.migration.message": {
-    "message": "Modrinth’te Ortamlar sistemini baştan sona yeniledik ve artık yeni seçenekler mevcut. Lütfen meta verilerin doğru olduğunu doğrulayın."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Ortam ayarlarını incele"
-  },
-  "project.environment.migration.title": {
-    "message": "Lütfen ortam meta verisini inceleyin"
   },
   "project.error.loading": {
     "message": "Proje verisi yüklenirken hata{message}"
@@ -3196,9 +3070,6 @@
   },
   "project.settings.disclosures.upload-version-first.heading": {
     "message": "Uyarı eklemeden önce sürümleri yükleyin"
-  },
-  "project.settings.editing-project": {
-    "message": "{projectType} projesi düzenleniyor"
   },
   "project.settings.general.name.description": {
     "message": "Önek, ek veya açıklayıcılardan kaçının—sadece projenin asıl adı."
@@ -3838,33 +3709,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Sunucuyla eşle"
-  },
-  "servers.notice.actions": {
-    "message": "Eylemler"
-  },
-  "servers.notice.begins": {
-    "message": "Başlıyor"
-  },
-  "servers.notice.dismissable": {
-    "message": "Görmezden Gelinebilir"
-  },
-  "servers.notice.expires": {
-    "message": "Son kullanma tarihi"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Seviye"
-  },
-  "servers.notice.undismissable": {
-    "message": "Görmezden Gelinemez"
-  },
-  "servers.notices.create-notice": {
-    "message": "Bildiri oluştur"
-  },
-  "servers.notices.no-notices": {
-    "message": "Bildiriler yok"
   },
   "servers.plan.large.description": {
     "message": "15–25 oyuncu, mod paketleri veya ağır modlu sunucu için ideal."

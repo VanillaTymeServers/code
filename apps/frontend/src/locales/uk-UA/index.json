@@ -1196,30 +1196,6 @@
   "create.project.visibility-unlisted": {
     "message": "Поза списком"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Створити партнерське посилання"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "Партнерські коди не знайдено."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Помилка під час завантаження партнерських посилань"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Ваші партнерські посилання"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Це незворотно відкличе код партнера «{id}» та будь-які наявні посилання з цим кодом, які було оприлюднено, більше не будуть доступні."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Відкликати"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Справді бажаєте відкликати своє партнерське посилання «{title}»?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Пошук партнерських посилань…"
-  },
   "dashboard.analytics.from-projects": {
     "message": "з {count} {count, plural, one {проєкту} few {проєктів} many {проєктів} other {проєктів}}"
   },
@@ -1991,9 +1967,6 @@
   "layout.action.file-lookup": {
     "message": "Пошук файлів"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Керувати партнерськими посиланнями"
-  },
   "layout.action.manage-server-notices": {
     "message": "Керування сповіщеннями сервера"
   },
@@ -2020,72 +1993,6 @@
   },
   "layout.avatar.alt": {
     "message": "Ваш аватар"
-  },
-  "layout.banner.account-action": {
-    "message": "Необхідні дії щодо облікового запису"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Відвідати налаштування облікового запису"
-  },
-  "layout.banner.add-email.description": {
-    "message": "З міркувань безпеки, Modrinth вимагає, щоб ви зареєстрували адресу електронної пошти у своєму обліковому записі."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Завжди ігнорувати"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Ця установка frontend Modrinth не змогла згенерувати стан з API. Це може бути пов’язано з перебоєм у роботі або помилкою в налаштуваннях. Перебудуйте, коли API буде доступний. Коди помилок: {errors}; Поточна URL-адреса API: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Ігнорувати"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Помилка під час створення стану з API під час побудови."
-  },
-  "layout.banner.preview.description": {
-    "message": "Якщо ви хотіли отримати доступ до офіційного сайту Modrinth, відвідайте {url}. Це розгортання попереднього перегляду використовується персоналом Modrinth для тестування. Воно було створено за допомогою {ref}."
-  },
-  "layout.banner.preview.title": {
-    "message": "Це попередній перегляд розгортки вебсайту Modrinth."
-  },
-  "layout.banner.staging.description": {
-    "message": "Середовище тестування повністю відокремлене від виробничої бази даних Modrinth. Воно використовується для тестування та налагодження та може працювати на версіях backend або frontend Modrinth, що знаходяться в стадії розробки та є новішими за виробничу версію."
-  },
-  "layout.banner.staging.title": {
-    "message": "Ви перебуваєте у середовищі тестування Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Оновити платіжну інформацію"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Одну або кілька передплат не вдалося поновити. Оновіть спосіб оплати, щоб не втратити доступу!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Необхідні дії щодо оплати рахунків."
-  },
-  "layout.banner.tax.action": {
-    "message": "Заповніть податкову форму"
-  },
-  "layout.banner.tax.description": {
-    "message": "Ви вже вивели більше ніж {threshold} з Modrinth цього року. Щоб дотримуватися податкових зобов’язань, ви маєте заповнити податкову форму. Ваші виведення затримані, доки ця форма не буде заповнена."
-  },
-  "layout.banner.tax.title": {
-    "message": "Вимагано податкову форму"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Зв’язатися з підтримкою"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Виведення коштів тимчасово заблоковано, оскільки вказаний TIN або SSN не збігається з IRS. Зверніться до служби підтримки для повторного подання форми."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Податкову форму відхилено"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Повторно надіслати електронний лист для підтвердження"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "З міркувань безпеки, Modrinth вимагає підтвердження адреси електронної пошти, пов’язаної з вашим обліковим записом."
   },
   "layout.footer.based-on-label": {
     "message": "На основі"
@@ -2714,12 +2621,6 @@
   "project.actions.create-server": {
     "message": "Створити сервер"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Створити сервер"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Не показувати знову"
-  },
   "project.actions.edit-project": {
     "message": "Налаштування проєкту"
   },
@@ -2731,15 +2632,6 @@
   },
   "project.actions.review-project": {
     "message": "Переглянути проєкт"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting — це найпростіший спосіб грати з друзями без клопоту!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Починаючи з {price}<small> / місяць</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Створити сервер"
   },
   "project.actions.view-dependents": {
     "message": "Переглянути залежні"
@@ -2881,24 +2773,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "Не вдалося завантажити файли"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Нещодавно ми оновили систему середовищ у Modrinth і тепер вам доступні нові налаштування. Ви не маєте дозволу на їх зміну, але повідомте іншим учасникам проєкту, що метадані середовища потребують підтвердження."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Необхідно переглянути метадані середовища"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Дізнатися більше про цю зміну"
-  },
-  "project.environment.migration.message": {
-    "message": "Нещодавно ми оновили систему середовищ у Modrinth і вам тепер доступні нові налаштування. Відвідайте налаштування проєкту і підтвердьте чи метадані коректні."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Переглянути налаштування середовища"
-  },
-  "project.environment.migration.title": {
-    "message": "Перегляньте метадані середовища"
   },
   "project.error.loading": {
     "message": "Помилка завантаження даних проєкту{message}"
@@ -4060,33 +3934,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Синхронізувати з сервером"
-  },
-  "servers.notice.actions": {
-    "message": "Дії"
-  },
-  "servers.notice.begins": {
-    "message": "Починається"
-  },
-  "servers.notice.dismissable": {
-    "message": "Можна відхилити"
-  },
-  "servers.notice.expires": {
-    "message": "Спливає"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Рівень"
-  },
-  "servers.notice.undismissable": {
-    "message": "Не можна відхилити"
-  },
-  "servers.notices.create-notice": {
-    "message": "Створити примітку"
-  },
-  "servers.notices.no-notices": {
-    "message": "Немає приміток"
   },
   "servers.plan.large.description": {
     "message": "Ідеально підходить для 15–25 гравців, збірок або важких модів."

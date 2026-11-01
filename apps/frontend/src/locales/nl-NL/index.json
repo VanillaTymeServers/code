@@ -1193,30 +1193,6 @@
   "create.project.visibility-unlisted": {
     "message": "Verborgen"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Maak een affiliate-link"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "Er zijn geen affiliatecodes gevonden."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Fout bij het laden van affiliatelinks"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Je partnerlinks"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Hierdoor wordt de affiliatecode `{id}` permanent ingetrokken en zijn alle bestaande links met deze code die zijn gedeeld, niet langer geldig."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Intrekken"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Weet je zeker dat je je affiliate-link ''{title}'' wilt intrekken?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Zoek affiliatelinks..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "van {count} {count, plural, one {project} other {projects}}"
   },
@@ -1988,9 +1964,6 @@
   "layout.action.file-lookup": {
     "message": "Bestand opzoeken"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Beheer partner links"
-  },
   "layout.action.manage-server-notices": {
     "message": "Beheer server mededelingen"
   },
@@ -2017,72 +1990,6 @@
   },
   "layout.avatar.alt": {
     "message": "Jouw avatar"
-  },
-  "layout.banner.account-action": {
-    "message": "Account actie vereist"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Bekijk account instellingen"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Om veiligheidsredenen is het bij Modrinth verplicht om een ​​e-mailadres aan je account te koppelen."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Altijd negeren"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Deze implementatie van de Modrinth frontend is er niet in geslaagd om statusinformatie van de API te genereren. Dit kan te wijten zijn aan een storing of een configuratiefout. Voer een nieuwe build uit wanneer de API weer beschikbaar is. Foutcodes: {errors}; Huidige API URL: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Negeer"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Fout bij het genereren van de status vanuit de API tijdens het bouwen."
-  },
-  "layout.banner.preview.description": {
-    "message": "Als je de officiële website van Modrinth wilde bezoeken, ga dan naar {url}. Deze preview-versie wordt door het Modrinth-team gebruikt voor testdoeleinden. Deze is gebouwd met behulp van {ref}."
-  },
-  "layout.banner.preview.title": {
-    "message": "Dit is een preview-versie van de Modrinth website."
-  },
-  "layout.banner.staging.description": {
-    "message": "De staging omgeving is volledig gescheiden van de productieomgeving van de Modrinth database. Deze wordt gebruikt voor test- en debug doeleinden en kan ontwikkelingsversies van de Modrinth backend of frontend draaien die nieuwer zijn dan de productieomgeving."
-  },
-  "layout.banner.staging.title": {
-    "message": "Je bekijkt de testomgeving van Modrinth."
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Werk factuurgegevens bij"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Een of meer abonnementen zijn niet verlengd. Werk je betaalmethode bij om te voorkomen dat je de toegang verliest!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Factuur actie vereist."
-  },
-  "layout.banner.tax.action": {
-    "message": "Voltooi het belastingformulier"
-  },
-  "layout.banner.tax.description": {
-    "message": "Je hebt al {threshold} uitbetaald gekeregen van modrinth dit jaar. Om in aanmerking te komen met de belasting moet je een formulier invullen. Je uitbetalingen zijn gepuzeerd totdat hij is ingevuld."
-  },
-  "layout.banner.tax.title": {
-    "message": "Belastingformulier vereist"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Neem contact op met support"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Je opnames zijn tijdelijk geblokkeerd omdat je TIN of SSN niet overeenkomt met de gegevens van de IRS. Neem contact op met de klantenservice om je belastingformulier opnieuw in te vullen en in te dienen."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Belastingformulier mislukt"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Herverzend verificatie email"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Om veiligheidsredenen vraagt Modrinth je om het e-mailadres dat aan je account is gekoppeld te bevestigen."
   },
   "layout.footer.based-on-label": {
     "message": "Gebaseerd op"
@@ -2711,12 +2618,6 @@
   "project.actions.create-server": {
     "message": "Creëer een server"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Creëer een server"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Niet opnieuw tonen"
-  },
   "project.actions.edit-project": {
     "message": "Project bewerken"
   },
@@ -2728,15 +2629,6 @@
   },
   "project.actions.review-project": {
     "message": "Beoordeel project"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting is de makkelijkste manier om zonder gedoe met je vrienden te spelen!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Vanaf {price}<small> / maand</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Creëer een server"
   },
   "project.actions.view-dependents": {
     "message": "Afhankelijkheden bekijken"
@@ -2878,24 +2770,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "Bestanden konden niet worden gedownload"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "We hebben het Omgevingssysteem op Modrinth zojuist grondig herzien en er zijn nu nieuwe opties beschikbaar. Jij hebt geen toestemming om deze instellingen te wijzigen, maar laat een ander lid van het project weten dat de metagegevens van de omgeving moeten worden gecontroleerd."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Metagegevens van de omgeving moeten gecontroleerd worden"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Lees meer over deze wijziging."
-  },
-  "project.environment.migration.message": {
-    "message": "We hebben het Omgevingssysteem op Modrinth zojuist grondig herzien en er zijn nu nieuwe opties beschikbaar. Controleer alsjeblieft of de metagegevens correct zijn."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Controleer de omgevingsinstellingen"
-  },
-  "project.environment.migration.title": {
-    "message": "Controleer metagegevens van de omgeving"
   },
   "project.error.loading": {
     "message": "Error tijdens het laden van de projectdata{message}"
@@ -3202,9 +3076,6 @@
   },
   "project.settings.disclosures.upload-version-first.heading": {
     "message": "Versies uploaden voor het toevoegen van onthullingen"
-  },
-  "project.settings.editing-project": {
-    "message": "{projectType} project bewerken"
   },
   "project.settings.general.name.description": {
     "message": "Probeer voorvoegsels, achtervoegsels, tussenvoegsels en omschrijvingen te vermijden, alleen de echte naam."
@@ -3862,33 +3733,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Synchroniseer met de server"
-  },
-  "servers.notice.actions": {
-    "message": "Acties"
-  },
-  "servers.notice.begins": {
-    "message": "Begint"
-  },
-  "servers.notice.dismissable": {
-    "message": "Negeerbaar"
-  },
-  "servers.notice.expires": {
-    "message": "Verloopt"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Niveau"
-  },
-  "servers.notice.undismissable": {
-    "message": "Onnegeerbaar"
-  },
-  "servers.notices.create-notice": {
-    "message": "Maak een melding"
-  },
-  "servers.notices.no-notices": {
-    "message": "Geen meldingen"
   },
   "servers.plan.large.description": {
     "message": "Ideaal voor 15–25 spelers, modpacks of uitgebreide modding."

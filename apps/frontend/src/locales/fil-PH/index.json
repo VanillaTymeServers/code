@@ -413,30 +413,6 @@
   "create.project.visibility-unlisted": {
     "message": "Unlisted"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Lumikha ng affiliate link"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "Walang mahanap na affiliate code."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Bigong ma-load ang mga affiliate link"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Iyong mga affiliate link"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Habam-buhay na babawiin ang affiliate code na `{id}` at ang lahat ng ibinahaging link sa code na ito ay magiging imbalido."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Bawiin"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Sigurado ka ba sa pagbabawi ng iyong affiliate link na \"{title}\"?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Maghanap ng affiliate link..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "galing sa {count} {count, plural, one {proyekto} other {na proyekto}}"
   },
@@ -989,9 +965,6 @@
   "layout.action.file-lookup": {
     "message": "File lookup"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Pamahalaan ang mga affiliate link"
-  },
   "layout.action.manage-server-notices": {
     "message": "Pamahalaan ang mga paunawa ng server"
   },
@@ -1015,66 +988,6 @@
   },
   "layout.avatar.alt": {
     "message": "Iyong avatar"
-  },
-  "layout.banner.account-action": {
-    "message": "Nangangailangan ng account"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Bisitahin ang mga setting sa account"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Dahil sa mga kadahilang pangseguridad, kailangan ng Modrinth na makapag-register ka ng email address sa iyong account."
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Itong pinakalat na frontend ng Modrinth ay bigong makabuo ng estado galing sa API. Maaaring dahil ito sa isang kawalan o kamalian sa kumpigurasyon. Muling magpatayo kapag magagamit na muli ang API. Mga code ng kamalian: {errors}; Ang kasalukuyang URL ng API ay: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Baliwalain"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Error sa pagbubuo ng estado galing sa API habang nagpapatayo."
-  },
-  "layout.banner.preview.title": {
-    "message": "Ito ay isang pinakalat na pasilip ng website ng Modrinth."
-  },
-  "layout.banner.staging.description": {
-    "message": "Buong magkahiwalay ang staging environment sa production Modrinth database. Ginagamit ito sa pagsusuri at pag-debug, at maaaring pinatatakbo sa mga bersiyong in-development ng backend o frontend sa bagong production instance ng Modrinth."
-  },
-  "layout.banner.staging.title": {
-    "message": "Tinitingnan mo ang staging environment ng Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "I-update ang billing info"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Mayroong mga subscription na bigong makapag-renew. Mangyaring i-update ang iyong paraan ng pagbabayad upang maiwasang mawalan ng akses!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Nangangailangan ng billing action."
-  },
-  "layout.banner.tax.action": {
-    "message": "Kinumpletong pormularyo sa buwis"
-  },
-  "layout.banner.tax.description": {
-    "message": "Ikaw ay naka-withdraw ng humigit {threshold} galing sa Modrinth ngayong taon. Upang makasunod sa regulasyon sa buwis, kinakailangang mong kumumpleto ng pormularyo sa buwis. Pinahinto muna ang iyong pag-withdraw hanggang ikaw ay nakapagsumite sa naturang pormularyo."
-  },
-  "layout.banner.tax.title": {
-    "message": "Nangangailangan ng pormularyo sa buwis"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Abutin ang suporta"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Ang iyong pag-withdraw ay pansamantalang pinatigilan dahil hindi tumugma ang iyong TIN o SSN sa talaan ng IRS. Mangyaring abutin ang suporta upang ma-reset at muling sumitehin ang iyong pormularyo sa buwis."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Nabigo sa pormularyo sa buwis"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Muling ipadala ang email ng pagpapatunay"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Dahil sa mga kadahilang pangseguridad, kailangan ng Modrinth na mapatunayan ang email address sa iyong account."
   },
   "layout.footer.legal": {
     "message": "Legal"
@@ -1541,23 +1454,8 @@
   "project.actions.create-server": {
     "message": "Lumikha ng server"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Lumikha ng server"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Huwag ipakita muli"
-  },
   "project.actions.review-project": {
     "message": "Suriin ang proyekto"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Ang Modrinth Hosting ang pinakamadaling paraang makapaglaro sa iyong mga kalaro ng walang kahadlangan!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Nagsisinula sa {price}<small> / buwan</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Lumikha ng server"
   },
   "project.collections.create-new": {
     "message": "Lumikha ng bagong koleksiyon"
@@ -1588,24 +1486,6 @@
   },
   "project.download.title": {
     "message": "I-download ang {title}"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Kakaunlad lang ng aming sistema sa Mga Environment sa Modrinth at magagamit na ngayon ang mga bagong pagpipilian. Wala kang pahintulot na magbago sa mga setting na ito, mangyaring ipaalam sa isa pang miyembro ng proyekto na kailangang mapatunayan ang metadata ng environment."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Kailangang suriin ang metadata ng environment"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Matuto pa ukol sa pagbabagong ito"
-  },
-  "project.environment.migration.message": {
-    "message": "Kakaunlad lang ng aming sistema sa Mga Environment sa Modrinth at magagamit na ngayon ang mga bagong pagpipilian. Mangyaring patunayan na wasto ang metadata."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Suriin ang mga setting sa environment"
-  },
-  "project.environment.migration.title": {
-    "message": "Pakisuri sa metadata sa environment"
   },
   "project.error.loading": {
     "message": "Error sa paglo-load ng datos ng proyekto{message}"
@@ -2008,33 +1888,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "I-sync sa server"
-  },
-  "servers.notice.actions": {
-    "message": "Mga Aksiyon"
-  },
-  "servers.notice.begins": {
-    "message": "Magsisimula"
-  },
-  "servers.notice.dismissable": {
-    "message": "Maaaring maalis"
-  },
-  "servers.notice.expires": {
-    "message": "Mawawalang bisa"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Level"
-  },
-  "servers.notice.undismissable": {
-    "message": "Hindi maaring maalis"
-  },
-  "servers.notices.create-notice": {
-    "message": "Lumikha ng paunawa"
-  },
-  "servers.notices.no-notices": {
-    "message": "Walang paunawa"
   },
   "servers.plan.large.description": {
     "message": "Nakaaangkop sa 15–25 manlalaro, modpack, o mabibigat na modding."

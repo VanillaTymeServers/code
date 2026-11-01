@@ -554,18 +554,6 @@
   "create.project.visibility-unlisted": {
     "message": "Nelistat"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Creează un link de afiliere"
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Revoca"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Ești sigur ca dorești sa ștergi linkul de afiliere {title}?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Cauta linkuri de afiliere..."
-  },
   "dashboard.collections.button.create-new": {
     "message": "Creați nouă"
   },
@@ -796,48 +784,6 @@
   },
   "layout.avatar.alt": {
     "message": "Avatarul tău"
-  },
-  "layout.banner.account-action": {
-    "message": "Acțiunea contului necesară"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Vizitați setările contului"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Din motive de securitate, pe Modrinth este necesar să înregistrezi contul cu o adresă de email."
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Această implementare a interfeței Modrinth a eșuat în generarea stării din API. Acest lucru poate fi cauzat de o întrerupere sau de o eroare de configurare. Reconstruiește atunci când API-ul este disponibil. Coduri de eroare: {errors}; URL-ul curent al API-ului este: {url}"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Eroare la generarea stării din API în timpul construirii."
-  },
-  "layout.banner.staging.description": {
-    "message": "Mediul de stagiu este complet separat de baza de date Modrinth de producție. Acesta este folosit pentru testare și depanare și poate rula versiuni în dezvoltare ale backend-ului sau frontend-ului Modrinth, mai noi decât instanța de producție."
-  },
-  "layout.banner.staging.title": {
-    "message": "Vizualizați mediul de testare Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Actualizează informația facturii"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Unul sau mai multe abonamente a eșuat. Te rog actualizează modul de plată pentru a preveni pierderea accesului!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Acțiunea contului necesară."
-  },
-  "layout.banner.tax.action": {
-    "message": "Completează formularul fiscal"
-  },
-  "layout.banner.tax.title": {
-    "message": "Formular fiscal necesar"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Retrimiteți emailul de verificare"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Din motive de securitate, pe Modrinth este necesar să verifici adresa de email asociată contului."
   },
   "layout.footer.legal": {
     "message": "Informații juridice"
@@ -1073,20 +1019,8 @@
   "project.actions.create-server": {
     "message": "Creează un server"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Creează un server"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Nu afișa din nou"
-  },
   "project.actions.review-project": {
     "message": "Revizuiește proiectul"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Începând de la {price}<small> / lună</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Creează un server"
   },
   "project.collections.create-new": {
     "message": "Creează o colecție nouă"
@@ -1117,21 +1051,6 @@
   },
   "project.download.title": {
     "message": "Descarcă {title}"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Am refăcut sistemul de medii pe Modrinth, iar acum sunt disponibile opțiuni noi. Nu ai permisiunea de a modifica aceste setări, dar te rugăm să informezi un alt membru al proiectului că metadatele mediului trebuie verificate."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Metadatele mediului trebuie revizuite"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Află mai multe despre această schimbare"
-  },
-  "project.environment.migration.review-button": {
-    "message": "Revizuiește setările mediului"
-  },
-  "project.environment.migration.title": {
-    "message": "Te rugăm să revizuiești metadatele mediului"
   },
   "project.error.loading": {
     "message": "Eroare la încărcarea datelor proiectului{message}"
@@ -1507,33 +1426,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Sincronizează cu serverul"
-  },
-  "servers.notice.actions": {
-    "message": "Acțiuni"
-  },
-  "servers.notice.begins": {
-    "message": "Începe"
-  },
-  "servers.notice.dismissable": {
-    "message": "Ignorabil"
-  },
-  "servers.notice.expires": {
-    "message": "Expiră"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Nivel"
-  },
-  "servers.notice.undismissable": {
-    "message": "Permanentă"
-  },
-  "servers.notices.create-notice": {
-    "message": "Creează notificare"
-  },
-  "servers.notices.no-notices": {
-    "message": "Nicio notificare"
   },
   "servers.plan.large.description": {
     "message": "Ideal pentru 15–25 de jucători, pachete de moduri sau moduri complexe."

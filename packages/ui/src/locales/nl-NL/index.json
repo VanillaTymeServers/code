@@ -3248,9 +3248,6 @@
   "profile.button.analytics": {
     "defaultMessage": "Gebruikersstatistieken bekijken"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Gebruikersfacturering beheren"
-  },
   "profile.button.block": {
     "defaultMessage": "Blokkeren"
   },
@@ -3265,15 +3262,6 @@
   },
   "profile.button.manage-projects": {
     "defaultMessage": "Projecten beheren"
-  },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "Als partner verwijderen"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "Als partner instellen"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "Gekoppelde gedeelde instantie"
   },
   "profile.button.unblock": {
     "defaultMessage": "Deblokkeren"
@@ -3326,17 +3314,11 @@
   "profile.error.not-found": {
     "defaultMessage": "Gebruiker niet gevonden"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Partner"
-  },
   "profile.label.badges": {
     "defaultMessage": "Badges"
   },
   "profile.label.collection": {
     "defaultMessage": "Collectie"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {download} other {downloads}}"
   },
   "profile.label.joined": {
     "defaultMessage": "Lid sinds"

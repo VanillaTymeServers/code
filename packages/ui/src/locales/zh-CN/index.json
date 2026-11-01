@@ -3269,9 +3269,6 @@
   "profile.button.analytics": {
     "defaultMessage": "查看用户分析"
   },
-  "profile.button.billing": {
-    "defaultMessage": "管理用户财务"
-  },
   "profile.button.block": {
     "defaultMessage": "屏蔽"
   },
@@ -3293,20 +3290,11 @@
   "profile.button.manage-projects": {
     "defaultMessage": "管理项目"
   },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "解除作为联盟伙伴"
-  },
   "profile.button.reset-2fa": {
     "defaultMessage": "重置双重身份验证"
   },
   "profile.button.revoke-sessions": {
     "defaultMessage": "注销所有会话"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "设置为联盟伙伴"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "查看共享实例"
   },
   "profile.button.unblock": {
     "defaultMessage": "解除屏蔽"
@@ -3392,17 +3380,11 @@
   "profile.force-password-reset.title": {
     "defaultMessage": "强制重置 {username} 的密码"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "联盟"
-  },
   "profile.label.badges": {
     "defaultMessage": "荣誉徽章"
   },
   "profile.label.collection": {
     "defaultMessage": "收藏"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, other {次下载}}"
   },
   "profile.label.joined": {
     "defaultMessage": "加入于"

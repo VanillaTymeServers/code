@@ -320,27 +320,6 @@
   "create.project.visibility-unlisted": {
     "message": "לא מוגדר"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "צור קישור שותפות"
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "שגיאה בטעינת קישורי שותפים"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "קישורי השותפים שלך"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "פעולה זו תבטל לצמיתות את קוד השותף {id}, וכל הקישורים הקיימים שהופצו עם קוד זה לא יהיו תקפים יותר."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "ביטול"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "האם אתה בטוח שברצונך לבטל את קישור השותף \"{title}\"?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "חיפוש קישורי שותפים..."
-  },
   "dashboard.collections.button.create-new": {
     "message": "צור חדש"
   },
@@ -818,9 +797,6 @@
   "layout.action.file-lookup": {
     "message": "חיפוש קבצים"
   },
-  "layout.action.manage-affiliates": {
-    "message": "נהל את קישורי השותפים"
-  },
   "layout.action.manage-server-notices": {
     "message": "ניהול הודעות השרת"
   },
@@ -844,54 +820,6 @@
   },
   "layout.avatar.alt": {
     "message": "אוותר חשבון"
-  },
-  "layout.banner.account-action": {
-    "message": "נדרשת פעולה על החשבון"
-  },
-  "layout.banner.add-email.button": {
-    "message": "בקר הגדרות חשבון"
-  },
-  "layout.banner.add-email.description": {
-    "message": "מטעמי אבטחה, Modrinth דורשת ממך לרשום כתובת אימייל בחשבונך."
-  },
-  "layout.banner.build-fail.description": {
-    "message": "פריסה זו של ממשק ה-Frontend של Modrinth נכשלה ביצירת נתונים מהAPI. ייתכן שהדבר נובע מהשבתה או משגיאה בהגדרות. יש לבצע בנייה מחדש כאשר ה-API יהיה זמין. קודי שגיאה: {errors}; כתובת ה-API הנוכחית היא: {url}"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "שגיאה ביצירת נתונים מהAPI במהלך הבנייה."
-  },
-  "layout.banner.preview.title": {
-    "message": "זוהי פריסת תצוגה מקדימה של אתר Modrinth."
-  },
-  "layout.banner.staging.description": {
-    "message": "סביבת ההפעלה (staging) נפרדת לחלוטין ממסד הנתונים של Modrinth בתקופת הייצור. מסד הנתונים משמש למטרות בדיקה וניפוי שגיאות, וייתכן שהוא מפעיל גרסאות פיתוח של קצה השרת או הקצה הקדמי של Modrinth, חדשות יותר מדגם הייצור."
-  },
-  "layout.banner.staging.title": {
-    "message": "אתה צופה בסביבת הבימוי של Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "עדכן את פרטי החיוב"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "מנוי אחד או יותר לא חודש בהצלחה. נא לעדכן את אמצעי התשלום כדי למנוע אובדן גישה!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "נדרשת פעולה בפרטי החיוב."
-  },
-  "layout.banner.tax.action": {
-    "message": "השלם את טופס המס"
-  },
-  "layout.banner.tax.description": {
-    "message": "משכת כבר מעל {threshold} מ-Modrinth השנה. כדי לעמוד בתקנות המס, עליך למלא טופס מס. משיכות הכספים שלך מושהות עד להגשת הטופס."
-  },
-  "layout.banner.tax.title": {
-    "message": "נדרש טופס מס"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "צור קשר עם התמיכה"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "אפשרות המשיכה שלך ננעלה זמנית מכיוון שמספר ה-TIN או ה-SSN לא תואם לרשומות ה-IRS. יש ליצור קשר עם התמיכה כדי לאפס ולהגיש מחדש את טופס המס."
   },
   "layout.footer.legal": {
     "message": "מידע משפטי"
@@ -1220,23 +1148,8 @@
   "project.actions.create-server": {
     "message": "צור שרת"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "צור שרת"
-  },
-  "project.actions.dont-show-again": {
-    "message": "אל תציג שוב"
-  },
   "project.actions.review-project": {
     "message": "סקירת פרויקט"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting היא הדרך הקלה ביותר לשחק עם חברים בלי כאב ראש!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "החל מ-{price}<small> לחודש</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "צור שרת"
   },
   "project.collections.create-new": {
     "message": "צור אוסף חדש"
@@ -1267,24 +1180,6 @@
   },
   "project.download.title": {
     "message": "הורדת {title}"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "שדרגנו את מערכת הסביבות (Environments) ב-Modrinth ואפשרויות חדשות זמינות כעת. אין לך הרשאות לעדכן את ההגדרות הללו, אך נשמח אם תעדכן חבר פרויקט אחר שיש לאמת את נתוני הסביבה (Metadata)."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "ש לבדוק את נתוני הסביבה"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "למידע נוסף על השינוי"
-  },
-  "project.environment.migration.message": {
-    "message": "שדרגנו את מערכת הסביבות ב-Modrinth ואפשרויות חדשות זמינות כעת. אנא ודאו שנתוני הסביבה נכונים."
-  },
-  "project.environment.migration.review-button": {
-    "message": "בדיקת הגדרות סביבה"
-  },
-  "project.environment.migration.title": {
-    "message": "נא לבדוק את נתוני הסביבה"
   },
   "project.error.loading": {
     "message": "שגיאה בטעינת נתוני הפרויקט: {message}"
@@ -1543,33 +1438,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "סנכרון מול השרת"
-  },
-  "servers.notice.actions": {
-    "message": "פעולות"
-  },
-  "servers.notice.begins": {
-    "message": "מתחיל ב-"
-  },
-  "servers.notice.dismissable": {
-    "message": "ניתן לסגירה"
-  },
-  "servers.notice.expires": {
-    "message": "פג תוקף"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "רמה"
-  },
-  "servers.notice.undismissable": {
-    "message": "לא ניתן לסגירה"
-  },
-  "servers.notices.create-notice": {
-    "message": "יצירת הודעה"
-  },
-  "servers.notices.no-notices": {
-    "message": "אין הודעות"
   },
   "servers.plan.large.description": {
     "message": "אידיאלי עבור 15–25 שחקנים, חבילות מודים (Modpacks) או מודים כבדים."

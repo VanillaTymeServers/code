@@ -905,30 +905,6 @@
   "create.project.visibility-unlisted": {
     "message": "Không công khai"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Tạo link affiliate"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "Không tìm thấy mã liên kết nào."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Lỗi tải link affiliate"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Link affiliate của bạn"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Thao tác này sẽ vĩnh viễn thu hồi mã affiliate `{id}`. Mọi liên kết hiện có sử dụng mã này đã được chia sẻ sẽ không còn hiệu lực."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Thu hồi"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Bạn có chắc chắn muốn thu hồi link affiliate \"{title}\" không?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Tìm kiếm link affiliate..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "từ {count} {count, plural, other {dự án}} khác"
   },
@@ -1637,9 +1613,6 @@
   "layout.action.file-lookup": {
     "message": "Tra cứu tệp"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Quản lý link affiliate"
-  },
   "layout.action.manage-server-notices": {
     "message": "Quản lý thông báo máy chủ"
   },
@@ -1663,72 +1636,6 @@
   },
   "layout.avatar.alt": {
     "message": "Hình đại diện của bạn"
-  },
-  "layout.banner.account-action": {
-    "message": "Cần thao tác với tài khoản"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Truy cập cài đặt tài khoản"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Vì lý do bảo mật, Modrinth yêu cầu bạn đăng ký một địa chỉ email cho tài khoản của mình."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Không hiển thị lại"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Lần triển khai frontend của Modrinth này không thể tạo trạng thái từ API. Nguyên nhân có thể do sự cố hệ thống hoặc lỗi cấu hình. Hãy build lại khi API khả dụng. Mã lỗi: {errors}; URL API hiện tại: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Kệ"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Lỗi tạo trạng thái từ API trong quá trình build."
-  },
-  "layout.banner.preview.description": {
-    "message": "Nếu bạn muốn truy cập trang Modrinth chính thức, truy cập {url}. Trang xem trước này được sử dụng bởi Modrinth cho mục đích thử nghiệm. Được xây qua {ref}."
-  },
-  "layout.banner.preview.title": {
-    "message": "Đây là bản mẫu của trang web Modrinth."
-  },
-  "layout.banner.staging.description": {
-    "message": "Môi trường staging hoàn toàn tách biệt với cơ sở dữ liệu Modrinth đang vận hành chính thức. Môi trường này được dùng cho mục đích thử nghiệm và gỡ lỗi, và có thể đang chạy các phiên bản backend hoặc frontend Modrinth đang phát triển, mới hơn bản production."
-  },
-  "layout.banner.staging.title": {
-    "message": "Bạn đang xem môi trường staging của Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Cập nhật thông tin thanh toán"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Một hoặc nhiều gói đăng ký không thể gia hạn. Vui lòng cập nhật phương thức thanh toán để tránh bị mất quyền truy cập!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Cần thao tác thanh toán."
-  },
-  "layout.banner.tax.action": {
-    "message": "Hoàn thành biểu mẫu thuế"
-  },
-  "layout.banner.tax.description": {
-    "message": "Bạn đã rút hơn {threshold} từ Modrinth trong năm nay. Để tuân thủ các quy định về thuế, bạn cần hoàn thành một biểu mẫu thuế. Việc rút tiền của bạn sẽ bị tạm ngưng cho đến khi biểu mẫu này được nộp."
-  },
-  "layout.banner.tax.title": {
-    "message": "Yêu cầu biểu mẫu thuế"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Liên hệ hỗ trợ"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Việc rút tiền của bạn tạm thời bị khóa do TIN hoặc SSN không khớp với hồ sơ của IRS. Vui lòng liên hệ hỗ trợ để đặt lại và gửi lại biểu mẫu thuế."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Biểu mẫu thuế không hợp lệ"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Gửi lại email xác minh"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Vì lý do bảo mật, Modrinth yêu cầu bạn xác minh địa chỉ email được liên kết với tài khoản của mình."
   },
   "layout.footer.legal": {
     "message": "Pháp lý"
@@ -2195,23 +2102,8 @@
   "project.actions.create-server": {
     "message": "Tạo máy chủ"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Tạo máy chủ"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Không hiển thị lại"
-  },
   "project.actions.review-project": {
     "message": "Xem xét dự án"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting là cách đơn giản nhất để chơi cùng bạn bè mà không gặp rắc rối!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Bắt đầu từ {price}<small> / tháng</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Tạo máy chủ"
   },
   "project.collections.create-new": {
     "message": "Tạo bộ sưu tập mới"
@@ -2242,24 +2134,6 @@
   },
   "project.download.title": {
     "message": "Tải xuống {title}"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Chúng tôi vừa nâng cấp toàn bộ hệ thống Môi trường trên Modrinth và hiện đã có các tùy chọn mới. Bạn không có quyền chỉnh sửa các cài đặt này, nhưng vui lòng thông báo cho một thành viên khác của dự án rằng metadata môi trường cần được xác minh."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Metadata môi trường cần được xem xét"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Tìm hiểu thêm về thay đổi này"
-  },
-  "project.environment.migration.message": {
-    "message": "Chúng tôi vừa nâng cấp toàn bộ hệ thống Môi trường trên Modrinth và hiện đã có các tùy chọn mới. Vui lòng xác minh rằng metadata là chính xác."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Xem lại cài đặt môi trường"
-  },
-  "project.environment.migration.title": {
-    "message": "Vui lòng xem xét metadata môi trường"
   },
   "project.error.loading": {
     "message": "Lỗi khi tải dữ liệu dự án{message}"
@@ -2776,33 +2650,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Đồng bộ với máy chủ"
-  },
-  "servers.notice.actions": {
-    "message": "Hành động"
-  },
-  "servers.notice.begins": {
-    "message": "Bắt đầu"
-  },
-  "servers.notice.dismissable": {
-    "message": "Có thể bỏ qua"
-  },
-  "servers.notice.expires": {
-    "message": "Hết hạn"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Mức độ"
-  },
-  "servers.notice.undismissable": {
-    "message": "Không thể bỏ qua"
-  },
-  "servers.notices.create-notice": {
-    "message": "Tạo thông báo"
-  },
-  "servers.notices.no-notices": {
-    "message": "Không có thông báo"
   },
   "servers.plan.large.description": {
     "message": "Lý tưởng cho 15–25 người chơi, modpack hoặc mod nặng."

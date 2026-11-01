@@ -3278,9 +3278,6 @@
   "profile.button.analytics": {
     "defaultMessage": "View user analytics"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Manage user billing"
-  },
   "profile.button.block": {
     "defaultMessage": "Block"
   },
@@ -3300,22 +3297,13 @@
     "defaultMessage": "Lock account"
   },
   "profile.button.manage-projects": {
-    "defaultMessage": "Manage projects"
-  },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "Remove as affiliate"
+    "defaultMessage": "Manage shops"
   },
   "profile.button.reset-2fa": {
     "defaultMessage": "Reset two-factor authentication"
   },
   "profile.button.revoke-sessions": {
     "defaultMessage": "Revoke all sessions"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "Set as affiliate"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "View shared instances"
   },
   "profile.button.unblock": {
     "defaultMessage": "Unblock"
@@ -3401,17 +3389,11 @@
   "profile.force-password-reset.title": {
     "defaultMessage": "Force password reset for {username}"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Affiliate"
-  },
   "profile.label.badges": {
     "defaultMessage": "Badges"
   },
   "profile.label.collection": {
     "defaultMessage": "Collection"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {download} other {downloads}}"
   },
   "profile.label.joined": {
     "defaultMessage": "Joined"
@@ -3435,10 +3417,10 @@
     "defaultMessage": "Organizations"
   },
   "profile.label.project-count": {
-    "defaultMessage": "{count, plural, one {project} other {projects}}"
+    "defaultMessage": "{count, plural, one {shop} other {shops}}"
   },
   "profile.official-account": {
-    "defaultMessage": "Official Modrinth account"
+    "defaultMessage": "Official Vanilla Tyme account"
   },
   "profile.official-account.bio": {
     "defaultMessage": "The official user account of Vanilla Tyme. Get support at <support-link></support-link> or via email at <email></email>"

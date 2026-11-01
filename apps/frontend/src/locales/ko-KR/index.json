@@ -1199,30 +1199,6 @@
   "create.project.visibility-unlisted": {
     "message": "일부 공개"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "제휴 링크 생성"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "제휴 코드가 없습니다."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "제휴 링크 로드 중 오류 발생"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "내 제휴 링크"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "이 작업을 수행하면 제휴 코드 `{id}`가 영구적으로 삭제되며, 이 코드로 공유된 모든 기존 링크는 더 이상 유효하지 않게 됩니다."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "취소"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "'{title}' 제휴 링크를 정말 삭제하시겠습니까?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "제휴 링크 검색..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "{count} {count, plural, one {프로젝트} other {프로젝트}}로"
   },
@@ -1994,9 +1970,6 @@
   "layout.action.file-lookup": {
     "message": "파일 찾기"
   },
-  "layout.action.manage-affiliates": {
-    "message": "제휴 링크 관리"
-  },
   "layout.action.manage-server-notices": {
     "message": "서버 알림 관리"
   },
@@ -2023,72 +1996,6 @@
   },
   "layout.avatar.alt": {
     "message": "당신의 아바타"
-  },
-  "layout.banner.account-action": {
-    "message": "계정 작업 필요"
-  },
-  "layout.banner.add-email.button": {
-    "message": "계정 설정 방문"
-  },
-  "layout.banner.add-email.description": {
-    "message": "보안상의 이유로 Modrinth 계정에 이메일을 등록해야 합니다."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "항상 무시"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Modrinth 프론트엔드 배포가 API로부터 상태를 생성하지 못했습니다. 이는 서비스 중단 또는 구성 오류 때문일 수 있습니다. API가 사용 가능해지면 재빌드하십시오. 오류 코드: {errors}; 현재 API URL: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "무시"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "빌드 중 API에서 상태 생성 오류가 발생했습니다."
-  },
-  "layout.banner.preview.description": {
-    "message": "공식 Modrinth 웹사이트에 접속하려는 경우, {url}을(를) 방문하세요. 이 미리보기 배포판은 Modrinth 운영진이 테스트 목적으로 사용하며, 이는 {ref} 기반으로 빌드되었습니다."
-  },
-  "layout.banner.preview.title": {
-    "message": "이 웹사이트는 Modrinth의 미리보기입니다."
-  },
-  "layout.banner.staging.description": {
-    "message": "스테이징 환경은 실제 Modrinth 프로덕션 데이터베이스와 완전히 분리되어 있으며, 테스트와 디버깅을 목적으로 사용됩니다. 이 환경에서는 프로덕션 인스턴스보다 최신 버전의 Modrinth 백엔드 또는 프론트엔드의 개발 버전이 실행되고 있을 수 있습니다."
-  },
-  "layout.banner.staging.title": {
-    "message": "현재 Modrinth의 스테이징 환경을 보고 있습니다"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "결제 정보 업데이트"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "하나 이상의 구독 갱신에 실패했습니다. 액세스 권한을 잃지 않도록 결제 수단을 업데이트해 주세요!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "청구 조치가 필요합니다."
-  },
-  "layout.banner.tax.action": {
-    "message": "세금 신고서를 작성 완료하세요"
-  },
-  "layout.banner.tax.description": {
-    "message": "올해 이미 Modrinth에서 {threshold} 이상을 출금했습니다. 세금 규정을 준수하기 위해 세금 신고서를 작성하셔야 합니다. 이 서류가 제출될 때까지 출금이 일시 중단됩니다."
-  },
-  "layout.banner.tax.title": {
-    "message": "세금 신고서 필요"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "지원 문의"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "귀하의 출금이 일시적으로 제한되었습니다. 귀하의 TIN 또는 SSN이 국세청(IRS) 기록과 일치하지 않았기 때문입니다. 세금 신고서를 다시 작성하고 재제출하려면 고객지원팀에 문의해 주십시오."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "세금 신고서 제출 실패"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "인증 이메일 재전송"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "보안상의 이유로 Modrinth 계정에 연결된 이메일 주소를 인증해야 합니다."
   },
   "layout.footer.based-on-label": {
     "message": "에 따라"
@@ -2717,12 +2624,6 @@
   "project.actions.create-server": {
     "message": "서버 만들기"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "서버 만들기"
-  },
-  "project.actions.dont-show-again": {
-    "message": "다시 보지 않기"
-  },
   "project.actions.edit-project": {
     "message": "프로젝트 수정"
   },
@@ -2734,15 +2635,6 @@
   },
   "project.actions.review-project": {
     "message": "프로젝트 검토"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth 호스팅은 친구들과 번거로움 없이 플레이할 수 있는 가장 쉬운 방법입니다!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "{price}<small> / 월</small>부터 시작"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "서버 생성"
   },
   "project.actions.view-dependents": {
     "message": "사용처 보기"
@@ -2884,24 +2776,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "파일 다운로드 실패"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Modrinth의 환경 시스템을 전면 개편하여 새로운 옵션이 추가되었습니다. 해당 설정 변경 권한은 없으나, 환경 메타데이터 검토가 필요함을 프로젝트 다른 구성원에게 알려주시기 바랍니다."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "환경 메타데이터를 검토해야 합니다"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "변경 사항에 대해 자세히 알아보기"
-  },
-  "project.environment.migration.message": {
-    "message": "Modrinth의 환경 시스템을 대대적으로 개편하여 새로운 옵션이 추가되었습니다. 메타데이터가 올바른지 확인해 주시기 바랍니다."
-  },
-  "project.environment.migration.review-button": {
-    "message": "환경 설정 검토"
-  },
-  "project.environment.migration.title": {
-    "message": "환경 메타데이터를 검토해 주세요"
   },
   "project.error.loading": {
     "message": "프로젝트 데이터 불러오기 중 오류 {message}"
@@ -3199,9 +3073,6 @@
   },
   "project.settings.disclosures.upload-version-first.heading": {
     "message": "고지 사항을 추가하기 전에 버전을 업로드하세요"
-  },
-  "project.settings.editing-project": {
-    "message": "{projectType} 프로젝트 수정 중"
   },
   "project.settings.general.name.description": {
     "message": "접두사, 접미사, 괄호 속 설명 또는 추가 설명은 피하세요—프로젝트의 실제 이름만 기재하세요."
@@ -3862,33 +3733,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "서버와 동기화"
-  },
-  "servers.notice.actions": {
-    "message": "활동"
-  },
-  "servers.notice.begins": {
-    "message": "시작"
-  },
-  "servers.notice.dismissable": {
-    "message": "무시 가능"
-  },
-  "servers.notice.expires": {
-    "message": "만료일"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "단계"
-  },
-  "servers.notice.undismissable": {
-    "message": "무시 불가"
-  },
-  "servers.notices.create-notice": {
-    "message": "알림 생성"
-  },
-  "servers.notices.no-notices": {
-    "message": "알림 없음"
   },
   "servers.plan.large.description": {
     "message": "15–25명의 플레이어, 모드팩 또는 무거운 모드에 적합합니다."

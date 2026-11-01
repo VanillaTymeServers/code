@@ -1145,30 +1145,6 @@
   "create.project.visibility-unlisted": {
     "message": "غير مدرج"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "إنشاء رابط عمولة"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "لم يتم العثور على أي أكواد عمولة."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "حدث خطأ أثناء تحميل روابط العمولة"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "روابط العمولة الخاصة بك"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "سيؤدي هذا إلى إلغاء كود العمولة `{id}` نهائيًا، ولن تعود أي روابط موجودة تمت مشاركتها باستخدام هذا الكود صالحة."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "إلغاء"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "هل أنت متأكد من رغبتك في إلغاء رابط العمولة ''{title}'' الخاص بك؟"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "البحث عن روابط العمولة..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "{count, plural, one {من مشروع واحد} two {من مشروعين} few {من # مشاريع} many {من # مشروعًا} other {من # مشروع}}"
   },
@@ -1934,9 +1910,6 @@
   "layout.action.file-lookup": {
     "message": "البحث عن ملف"
   },
-  "layout.action.manage-affiliates": {
-    "message": "إدارة روابط العمولة"
-  },
   "layout.action.manage-server-notices": {
     "message": "إدارة إشعارات الخادم"
   },
@@ -1960,72 +1933,6 @@
   },
   "layout.avatar.alt": {
     "message": "صورتك الرمزية"
-  },
-  "layout.banner.account-action": {
-    "message": "يلزم اتخاذ إجراء بشأن الحساب"
-  },
-  "layout.banner.add-email.button": {
-    "message": "الانتقال إلى إعدادات الحساب"
-  },
-  "layout.banner.add-email.description": {
-    "message": "لأسباب أمنية، يحتاج مودرنث منك تسجيل عنوان بريد إلكتروني في حسابك."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "تجاهل دائمًا"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "فشل هذا الإصدار من واجهة مودرنث في توليد الحالة من واجهة برمجة التطبيقات. قد يكون السبب انقطاع الخدمة أو خطأ في الإعدادات. أعد البناء عندما تكون واجهة البرمجة متاحة. رموز الخطأ: {errors}؛ عنوان واجهة البرمجة الحالي: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "تجاهل"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "حدث خطأ أثناء إنشاء الحالة من واجهة برمجة التطبيقات API عند الإنشاء."
-  },
-  "layout.banner.preview.description": {
-    "message": "إذا كنت تقصد الوصول إلى موقع Modrinth الرسمي، فتفضل بزيارة {url}. تم إعداد هذا الإصدار التجريبي لاستخدامه من قِبل موظفي Modrinth لأغراض الاختبار. وقد تم إنشاؤه باستخدام {ref}."
-  },
-  "layout.banner.preview.title": {
-    "message": "هذا إصدار تجريبي من موقع Modrinth."
-  },
-  "layout.banner.staging.description": {
-    "message": "بيئة الاختبار منفصلة تمامًا عن قاعدة بيانات مودرنث الإنتاجية. تُستخدم هذه البيئة للاختبار وتصحيح الأخطاء، وقد تعمل بإصدارات تطويرية من واجهة مودرنث الأمامية أو الخلفية أحدث من النسخة الإنتاجية."
-  },
-  "layout.banner.staging.title": {
-    "message": "أنت الآن تشاهد بيئة الاختبار الخاصة بمودرنث"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "تحديث معلومات الفوترة"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "تعذّر تجديد اشتراك واحد أو أكثر. يُرجى تحديث طريقة الدفع لتجنب فقدان الوصول!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "يلزم اتخاذ إجراء بشأن الفوترة."
-  },
-  "layout.banner.tax.action": {
-    "message": "إكمال النموذج الضريبي"
-  },
-  "layout.banner.tax.description": {
-    "message": "لقد سحبت بالفعل أكثر من {threshold} من Modrinth هذا العام. للامتثال للوائح الضريبية، يتعين عليك إكمال نموذج ضريبي. تم إيقاف عمليات السحب مؤقتًا حتى يتم تقديم هذا النموذج."
-  },
-  "layout.banner.tax.title": {
-    "message": "يلزم تقديم نموذج ضريبي"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "التواصل مع الدعم"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "تم تعليق عمليات السحب مؤقتًا لأن رقم تعريفك الضريبي TIN أو رقم الضمان الاجتماعي SSN لم يتطابق مع سجلات مصلحة الضرائب الأمريكية IRS. يُرجى التواصل مع الدعم لإعادة تعيين نموذجك الضريبي وإعادة تقديمه."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "فشل النموذج الضريبي"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "إعادة إرسال رسالة التحقق عبر البريد الإلكتروني"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "لأسباب أمنية، يحتاج مودرنث منك التحقق من عنوان البريد الإلكتروني المرتبط بحسابك."
   },
   "layout.footer.based-on-label": {
     "message": "بناءً على"
@@ -2600,12 +2507,6 @@
   "project.actions.create-server": {
     "message": "إنشاء سيرفر"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "إنشاء سيرفر"
-  },
-  "project.actions.dont-show-again": {
-    "message": "لا تُظهر مجدّدًا"
-  },
   "project.actions.edit-project": {
     "message": "تحرير المشروع"
   },
@@ -2614,9 +2515,6 @@
   },
   "project.actions.rescan-modpack": {
     "message": "إعادة مسح مودباك"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "إنشاء سيرفر"
   },
   "project.description.title": {
     "message": "الوصف"
@@ -2662,15 +2560,6 @@
   },
   "project.download.title": {
     "message": "تحميل {title}"
-  },
-  "project.environment.migration.message": {
-    "message": "لقد قمنا بتحديث نظام البيئات في مودرينث، وأصبحت الخيارات الجديدة متاحة الآن. يرجى التأكد من صحة البيانات الوصفية."
-  },
-  "project.environment.migration.review-button": {
-    "message": "مراجعة إعدادات البيئة"
-  },
-  "project.environment.migration.title": {
-    "message": "يرجى مراجعة بيانات تعريف البيئة"
   },
   "project.gallery.title": {
     "message": "مَعْرض"
@@ -2731,9 +2620,6 @@
   },
   "project.settings.disclosures.telemetry.data-label": {
     "message": "ما هي البيانات المجمعة؟"
-  },
-  "project.settings.editing-project": {
-    "message": "تحرير مشروع {projectType}"
   },
   "project.settings.general.name.title": {
     "message": "إسم"

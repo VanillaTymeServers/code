@@ -1199,30 +1199,6 @@
   "create.project.visibility-unlisted": {
     "message": "Nem nyilvános"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Társulati (affiliate) link létrehozása"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "Nem találhatók partnerkódok."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Hiba történt a társulati linkek betöltésében"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "A társulati linkjeid"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Ez vissza fogja vonni a(z) `{id}` számú társulati kódod, és bármely létező linket, ami ehhez a kódhoz van kötve, így a ezek a linkek többé nem lesznek érvényesek."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Visszavonás"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Biztos vagy benne, hogy visszavonod a \"{title}\" társulati linked?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Társulati linkek keresése..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "{count} projektből"
   },
@@ -1985,9 +1961,6 @@
   "layout.action.file-lookup": {
     "message": "Fájl keresés"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Partnerlinkek kezelése"
-  },
   "layout.action.manage-server-notices": {
     "message": "Szerver megjegyzések kezelése"
   },
@@ -2014,72 +1987,6 @@
   },
   "layout.avatar.alt": {
     "message": "Az avatárod"
-  },
-  "layout.banner.account-action": {
-    "message": "Fiók akció szükséges"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Nézd meg fiókbeállításaidat"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Biztonsági okok miatt a Modrinthon kell egy e-mail cím a fiókodhoz."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Mindig mellőzd"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "A Modrinth felhasználói felületének jelenlegi telepítése nem tudta az API-ból lekérni az állapotadatokat. Ennek oka lehet egy szolgáltatáskimaradás vagy konfigurációs hiba. Kérlek próbáld meg újra, amikor az API újra elérhetővé válik. Hibakódok: {errors}; Az API jelenlegi linkje: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Mellőzés"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Hiba történt az API állapotának generálása közben a fordítás során."
-  },
-  "layout.banner.preview.description": {
-    "message": "Ha a Modrinth hivatalos webhelyét szeretnéd elérni, látogass el ide: {url}. Ezt az előzetes verziót a Modrinth munkatársai tesztelési célokra használják. A következő alapján készült: {ref}."
-  },
-  "layout.banner.preview.title": {
-    "message": "Ez a Modrinth weboldal előzetes verziója."
-  },
-  "layout.banner.staging.description": {
-    "message": "Az előkészítési környezet teljesen elkülönül az éles Modrinth-adatbázistól. Tesztelési és hibakeresési célokat szolgál, és a Modrinth háttérrendszerének vagy felhasználói felületének a fejlesztés alatt álló, az éles környezetnél újabb verzióit is futtathatja."
-  },
-  "layout.banner.staging.title": {
-    "message": "A Modrinth színreviteli környezetét nézed"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Számlázási információ frissítése"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Egy vagy több előfizetés megújítása sikertelen. Frissítsd a fizetés módját a hozzáférés elvesztésének elkerülése érdekében!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Számlázási akció szükséges."
-  },
-  "layout.banner.tax.action": {
-    "message": "Adózási űrlap kitöltése"
-  },
-  "layout.banner.tax.description": {
-    "message": "Idén már több mint {threshold} összeget vettél ki a Modrinth-ből. Az adózási szabályozásoknak való megfelelés érdekében ki kell töltened egy adóbevallási űrlapot. A kifizetések a nyomtatvány benyújtásáig szünetelnek."
-  },
-  "layout.banner.tax.title": {
-    "message": "Adózási űrlap szükséges"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Támogatással való kapcsolatba lépés"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "A kifizetéseid ideiglenesen zárolva vannak, mert az adóazonosító számod vagy a társadalombiztosítási számod nem egyezik az adóhatóság (IRS) nyilvántartásában szereplő adatokkal. Kérjük, vedd fel a kapcsolatot az ügyfélszolgálattal az adóbevallásod visszaállításához és újbóli benyújtásához."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Adóbevallási űrlap sikertelen"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Ellenőrző e-mail újraküldése"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Biztonsági okokból a Modrinth megköveteli, hogy igazold a fiókodhoz tartozó e-mail címet."
   },
   "layout.footer.based-on-label": {
     "message": "Alapján"
@@ -2708,12 +2615,6 @@
   "project.actions.create-server": {
     "message": "Hozz létre egy szervert"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Hozz létre egy szervert"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Ne mutasd többször"
-  },
   "project.actions.edit-project": {
     "message": "Projekt szerkesztése"
   },
@@ -2725,15 +2626,6 @@
   },
   "project.actions.review-project": {
     "message": "Tekintsd át a projektet"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "A Modrinth Hosting a legegyszerűbb módja annak, hogy gond nélkül játszhass a barátaiddal!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Kezdőár: {price}<small> / hó</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Hozz létre egy szervert"
   },
   "project.actions.view-dependents": {
     "message": "Függő projektek megtekintése"
@@ -2875,24 +2767,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "A fájlokat nem sikerült letölteni"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Átdolgoztuk a Modrinth Környezetek rendszerét, és új beállítások érhetők el. Nincs jogosultságod módosítani ezeket a beállításokat, de kérlek, jelezd a projekt egy másik tagjának, hogy a környezet metaadatait ellenőrizni kell."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "A környezeti metaadatokat felül kell vizsgálni"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Tudj meg többet erről a változásról"
-  },
-  "project.environment.migration.message": {
-    "message": "Átdolgoztuk a Modrinth Környezetek rendszerét, és új lehetőségek érhetők el. Kérjük, ellenőrizd, hogy a metaadatok helyesek-e."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Környezeti beállítások áttekintése"
-  },
-  "project.environment.migration.title": {
-    "message": "Kérlek tekintsd át a környezeti metaadatokat"
   },
   "project.error.loading": {
     "message": "Hiba a projektadatok {message} betöltése közben"
@@ -4060,33 +3934,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Szinkronizálás a szerverrel"
-  },
-  "servers.notice.actions": {
-    "message": "Műveletek"
-  },
-  "servers.notice.begins": {
-    "message": "Kezdődik"
-  },
-  "servers.notice.dismissable": {
-    "message": "Elutasítható"
-  },
-  "servers.notice.expires": {
-    "message": "Lejár"
-  },
-  "servers.notice.id": {
-    "message": "Azonosító"
-  },
-  "servers.notice.level": {
-    "message": "Szint"
-  },
-  "servers.notice.undismissable": {
-    "message": "Elutasíthatatlan"
-  },
-  "servers.notices.create-notice": {
-    "message": "Értesítés létrehozása"
-  },
-  "servers.notices.no-notices": {
-    "message": "Nincsen értesítés"
   },
   "servers.plan.large.description": {
     "message": "Ideális 15–25 játékos számára, modcsomagokhoz vagy intenzív moddoláshoz."

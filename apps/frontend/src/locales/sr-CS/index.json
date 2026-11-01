@@ -833,42 +833,6 @@
   "layout.avatar.alt": {
     "message": "Tvoj avatar"
   },
-  "layout.banner.account-action": {
-    "message": "Potrebna akcija na nalogu"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Poseti podešavanja naloga"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Iz sigurnosnih razloga, Modrinth traži da registruješ email adresu na svom nalogu."
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Ovo izdanje Modrinth frontend-a nije uspelo da generiše stanje iz API-ja. To može biti zbog prekida rada ili greške u konfiguraciji. Ponovo izgradi kada API bude dostupan. Kodovi grešaka: {errors}; Trenutni API URL je: {url}"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Pregledate testno okruženje Modrintha."
-  },
-  "layout.banner.staging.description": {
-    "message": "Staging okruženje je potpuno odvojeno od produkcione Modrinth baze podataka. Koristi se za testiranje i debagovanje i može pokretati razvojne verzije backend-a ili frontend-a koje su novije od produkcije."
-  },
-  "layout.banner.staging.title": {
-    "message": "Gledaš testno okruženje Modrintha"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Ažuriraj podatke za plaćanje"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Jedna ili više pretplata nije obnovljeno. Molimo ažuriraj način plaćanja kako bi izbegli gubitak pristupa!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Potrebna radnja vezana za naplatu."
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Ponovo pošalji email za verifikaciju"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Iz sigurnosnih razloga, Modrinth zahteva da verifikuješ email adresu povezanu sa svojim nalogom."
-  },
   "layout.footer.legal": {
     "message": "Pravno"
   },
@@ -1056,18 +1020,6 @@
     "message": "Shader"
   },
   "project.actions.create-server": {
-    "message": "Kreiraj server"
-  },
-  "project.actions.create-server-tooltip": {
-    "message": "Kreiraj server"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting je najjednostavniji način da igraš sa prijateljima, bez ikakvih komplikacija!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Počinje od {price}<small> / mesec</small>"
-  },
-  "project.actions.servers-promo.title": {
     "message": "Kreiraj server"
   },
   "project.description.title": {
@@ -1366,33 +1318,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Sinhronizuj sa serverom"
-  },
-  "servers.notice.actions": {
-    "message": "Radnje"
-  },
-  "servers.notice.begins": {
-    "message": "Počinje"
-  },
-  "servers.notice.dismissable": {
-    "message": "Odbacivo"
-  },
-  "servers.notice.expires": {
-    "message": "Ističe"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Nivo"
-  },
-  "servers.notice.undismissable": {
-    "message": "Neodbacivo"
-  },
-  "servers.notices.create-notice": {
-    "message": "Kreiraj obaveštenje"
-  },
-  "servers.notices.no-notices": {
-    "message": "Nema obaveštenja"
   },
   "servers.plan.large.description": {
     "message": "Idealno za 15–25 igrača, modpackove ili intenzivno modovanje."

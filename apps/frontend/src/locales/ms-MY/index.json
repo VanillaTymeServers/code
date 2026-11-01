@@ -860,27 +860,6 @@
   "create.project.visibility-unlisted": {
     "message": "Tidak disenaraikan"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Cipta pautan afiliasi"
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Ralat semasa memuat pautan afiliasi"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Pautan afiliasi anda"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Ini akan membatalkan kod afiliasi `{id}` secara kekal dan sebarang pautan sedia ada dengan kod ini yang telah dikongsi tidak lagi sah."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Batalkan"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Adakah anda pasti mahu membatalkan pautan afiliasi anda yang bernama ''{title}''?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Cari pautan afiliasi..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "daripada {count} {count, plural, other {projek}}"
   },
@@ -1550,9 +1529,6 @@
   "layout.action.file-lookup": {
     "message": "Carian fail"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Urus pautan afiliasi"
-  },
   "layout.action.manage-server-notices": {
     "message": "Urus notis pelayan"
   },
@@ -1579,72 +1555,6 @@
   },
   "layout.avatar.alt": {
     "message": "Avatar anda"
-  },
-  "layout.banner.account-action": {
-    "message": "Tindakan akaun diperlukan"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Kunjungi tetapan akaun"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Atas sebab keselamatan, Modrinth memerlukan anda mendaftarkan alamat e-mel ke akaun anda."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Sentiasa abaikan"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Penggunaan bahagian hadapan Modrinth ini gagal menjana keadaan daripada API. Ini mungkin disebabkan oleh gangguan atau ralat dalam konfigurasi. Bina semula apabila API tersedia. Kod ralat: {errors}; URL API semasa ialah: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Abaikan"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Ralat menjana keadaan daripada API semasa membina."
-  },
-  "layout.banner.preview.description": {
-    "message": "Jika anda bermaksud untuk mengakses laman sesawang rasmi Modrinth, kunjungi {url}. Pralihat pelaksanaan ini digunakan oleh kakitangan Modrinth untuk tujuan pengujian. Ia dibina menggunakan {ref}."
-  },
-  "layout.banner.preview.title": {
-    "message": "Ini ialah pengaturan pralihat laman sesawang Modrinth."
-  },
-  "layout.banner.staging.description": {
-    "message": "Persekitaran pementasan adalah berasingan daripada pangkalan data produksi Modrinth. Ini digunakan untuk tujuan ujian dan penyahpepijatan, dan mungkin menjalankan versi dalam pembangunan bahagian belakang atau hadapan Modrinth yang lebih baharu daripada persekitaran produksi."
-  },
-  "layout.banner.staging.title": {
-    "message": "Anda sedang melihat persekitaran pementasan Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Kemas kini maklumat pengebilan"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Satu atau lebih langganan gagal diperbaharui. Sila kemas kini kaedah pembayaran anda untuk mengelakkan kehilangan akses!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Tindakan pengebilan diperlukan."
-  },
-  "layout.banner.tax.action": {
-    "message": "Lengkapkan borang cukai"
-  },
-  "layout.banner.tax.description": {
-    "message": "Anda telah mengeluarkan lebih {threshold} daripada Modrinth tahun ini. Untuk mematuhi peraturan cukai, anda perlu melengkapkan borang cukai. Pengeluaran anda dijeda sehingga borang ini diserahkan."
-  },
-  "layout.banner.tax.title": {
-    "message": "Borang cukai diperlukan"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Hubungi sokongan"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Pengeluaran anda telah dikunci buat sementara waktu kerana TIN atau SSN anda tidak sepadan dengan rekod IRS. Sila hubungi sokongan untuk menetapkan semula dan menghantar semula borang cukai anda."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Borang cukai gagal"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Hantar semula e-mel pengesahan"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Atas sebab keselamatan, Modrinth memerlukan anda mengesahkan alamat e-mel yang dikaitkan dengan akaun anda."
   },
   "layout.footer.legal": {
     "message": "Undang-undang"
@@ -2156,23 +2066,8 @@
   "project.actions.create-server": {
     "message": "Cipta pelayan"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Cipta pelayan"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Jangan tunjukkan lagi"
-  },
   "project.actions.review-project": {
     "message": "Semak projek"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting ialah cara paling mudah untuk bermain dengan rakan anda tanpa perlu bersusah payah!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Bermula pada harga {price}<small> / bulan</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Cipta sebuah pelayan"
   },
   "project.collections.create-new": {
     "message": "Cipta koleksi baharu"
@@ -2206,24 +2101,6 @@
   },
   "project.download.title": {
     "message": "Muat turun {title}"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Kami baru sahaja merombak sistem Persekitaran pada Modrinth dan pilihan baharu kini tersedia. Anda tidak mempunyai kebenaran untuk mengubah suai tetapan ini, tetapi sila maklumkan ahli projek yang lain bahawa metadata persekitaran perlu disahkan."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Metadata persekitaran perlu disemak"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Ketahui lebih lanjut tentang perubahan ini"
-  },
-  "project.environment.migration.message": {
-    "message": "Kami baru sahaja merombak sistem Persekitaran pada Modrinth dan pilihan baharu kini tersedia. Sila sahkan bahawa metadata adalah betul."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Semak tetapan persekitaran"
-  },
-  "project.environment.migration.title": {
-    "message": "Sila semak metadata persekitaran"
   },
   "project.error.loading": {
     "message": "Ralat semasa memuat data projek{message}"
@@ -2779,33 +2656,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Selaraskan dengan pelayan"
-  },
-  "servers.notice.actions": {
-    "message": "Tindakan"
-  },
-  "servers.notice.begins": {
-    "message": "Bermula"
-  },
-  "servers.notice.dismissable": {
-    "message": "Boleh diketepikan"
-  },
-  "servers.notice.expires": {
-    "message": "Tamat tempoh"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Tahap"
-  },
-  "servers.notice.undismissable": {
-    "message": "Tidak boleh diketepikan"
-  },
-  "servers.notices.create-notice": {
-    "message": "Notis penciptaan"
-  },
-  "servers.notices.no-notices": {
-    "message": "Tiada notis"
   },
   "servers.plan.large.description": {
     "message": "Sesuai untuk 15–25 pemain, pek mod atau pengubahsuaian yang berat."

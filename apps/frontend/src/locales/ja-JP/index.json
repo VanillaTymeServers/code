@@ -1193,30 +1193,6 @@
   "create.project.visibility-unlisted": {
     "message": "限定公開"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "アフィリエイトリンクを作成"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "アフィリエイトコードが見つかりませんでした。"
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "アフィリエイトリンクの読み込みエラー"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "アフィリエイトリンク"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "アフィリエイト コード `{id}` は永久に取り消され、このコードを使用して共有されている既存のリンクは無効になります。"
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "取り消す"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "「{title}」のアフィリエイトリンクを本当に解除しますか？"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "アフィリエイトリンクを検索…"
-  },
   "dashboard.analytics.from-projects": {
     "message": "{count} 件のプロジェクトから"
   },
@@ -1928,9 +1904,6 @@
   "layout.action.file-lookup": {
     "message": "ファイル検索"
   },
-  "layout.action.manage-affiliates": {
-    "message": "アフィリエイトリンクを管理"
-  },
   "layout.action.manage-server-notices": {
     "message": "サーバー通知を管理"
   },
@@ -1954,66 +1927,6 @@
   },
   "layout.avatar.alt": {
     "message": "あなたのアバター"
-  },
-  "layout.banner.account-action": {
-    "message": "アカウント操作が必要"
-  },
-  "layout.banner.add-email.button": {
-    "message": "アカウント設定にアクセス"
-  },
-  "layout.banner.add-email.description": {
-    "message": "セキュリティ上の理由から、Modrinthではアカウントにメールアドレスを登録する必要があります。"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Modrinthのフロントエンドのデプロイで、APIからのステート生成に失敗しました。APIの障害、または設定エラーの可能性があります。APIが利用可能になったら再ビルドしてください。エラーコード: {errors}; 現在のAPI URL: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "無視"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "ビルド時にAPIからステートを生成できませんでした。"
-  },
-  "layout.banner.preview.title": {
-    "message": "これはModrinthウェブサイトのプレビューデプロイです。"
-  },
-  "layout.banner.staging.description": {
-    "message": "ステージング環境は、本番のModrinthデータベースとは完全に分離されています。これはテストやデバッグ目的で使用され、本番環境よりも新しい、開発中のModrinthバックエンドやフロントエンドのバージョンで動作している可能性があります。"
-  },
-  "layout.banner.staging.title": {
-    "message": "Modrinthのステージング環境を表示しています"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "請求の情報を更新"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "1つ以上のサブスクリプションの更新に失敗しました。アクセスを失わないよう、お支払い方法を更新してください！"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "お支払い手続きが必要です。"
-  },
-  "layout.banner.tax.action": {
-    "message": "納税申告書を記入"
-  },
-  "layout.banner.tax.description": {
-    "message": "Modrinthからの今年の引き出し額は、すでに{threshold}を超えています。税法を遵守するため、税務フォームを提出いただく必要があります。このフォームが提出されるまで、引き出しは一時停止されます。"
-  },
-  "layout.banner.tax.title": {
-    "message": "納税申告書が必要"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "サポートに連絡"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "お客様の納税者番号または社会保障番号が米国内国歳入庁の記録と一致しなかったため、一時的に出金が制限されています。サポートにご連絡いただき、税務フォームをリセットして再提出してください。"
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "税務申告書にエラーが発生しました"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "認証メールを再送信"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "セキュリティ上の理由により、Modrinthではアカウントに関連付けられたメールアドレスの確認が必要です。"
   },
   "layout.footer.legal": {
     "message": "法的情報"
@@ -2531,12 +2444,6 @@
   "project.actions.create-server": {
     "message": "サーバーを作成"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "サーバーを作成"
-  },
-  "project.actions.dont-show-again": {
-    "message": "再度表示しない"
-  },
   "project.actions.edit-project": {
     "message": "プロジェクトを編集"
   },
@@ -2548,15 +2455,6 @@
   },
   "project.actions.review-project": {
     "message": "プロジェクトを評価"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hostingは手間を掛けず、簡単に友達と遊べます！"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "{price}<small> / 月</small>から"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "サーバーを作成"
   },
   "project.actions.view-dependents": {
     "message": "依存関係を表示"
@@ -2632,24 +2530,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "ダウンロードに失敗しました"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Modrinthの環境システムを全面的に見直し、新たなオプションが利用可能になりました。これらの設定を変更する権限はありませんが、環境メタデータの検証が必要であることをプロジェクトの他のメンバーにお知らせください。"
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "環境メタデータの確認が必要です"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "この変更について詳しく見る"
-  },
-  "project.environment.migration.message": {
-    "message": "Modrinthの環境システムを全面的に見直し、新たなオプションが利用可能になりました。メタデータが正しいことをご確認ください。"
-  },
-  "project.environment.migration.review-button": {
-    "message": "環境設定を確認する"
-  },
-  "project.environment.migration.title": {
-    "message": "環境メタデータを確認してください"
   },
   "project.error.loading": {
     "message": "プロジェクトデータの読み込み中にエラーが発生しました {message}"
@@ -3187,33 +3067,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "サーバーと同期"
-  },
-  "servers.notice.actions": {
-    "message": "アクション"
-  },
-  "servers.notice.begins": {
-    "message": "開始"
-  },
-  "servers.notice.dismissable": {
-    "message": "無視可能"
-  },
-  "servers.notice.expires": {
-    "message": "有効期限"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "レベル"
-  },
-  "servers.notice.undismissable": {
-    "message": "無視不可能"
-  },
-  "servers.notices.create-notice": {
-    "message": "お知らせを作成する"
-  },
-  "servers.notices.no-notices": {
-    "message": "お知らせはありません"
   },
   "servers.plan.large.description": {
     "message": "15〜25人のプレイヤー、Modパック、または大規模なMod導入に最適です。"

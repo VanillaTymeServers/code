@@ -1193,30 +1193,6 @@
   "create.project.visibility-unlisted": {
     "message": "Скрыт"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Создать ссылку"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "Партнёрские коды не найдены."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Ошибка загрузки партнёрских ссылок"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Партнёрские ссылки"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Партнёрский код `{id}` будет удалён навсегда, и все связанные с ним ссылки станут недействительными."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Удалить"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Вы точно хотите удалить партнёрскую ссылку «{title}»?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Поиск ссылок..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "с {count, plural, one {# проекта} other {# проектов}}"
   },
@@ -1988,9 +1964,6 @@
   "layout.action.file-lookup": {
     "message": "Поиск файла"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Партнёрские ссылки"
-  },
   "layout.action.manage-server-notices": {
     "message": "Оповещения серверов"
   },
@@ -2017,72 +1990,6 @@
   },
   "layout.avatar.alt": {
     "message": "Ваш аватар"
-  },
-  "layout.banner.account-action": {
-    "message": "Требуются действия с аккаунтом"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Открыть настройки аккаунта"
-  },
-  "layout.banner.add-email.description": {
-    "message": "В целях безопасности Modrinth просит привязать почту к аккаунту."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Всегда игнорировать"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "При развёртывании фронтенда Modrinth не удалось сгенерировать состояние от API. Причиной может быть временный сбой или неверная настройка. Пересоберите проект, когда API станет доступен. Коды ошибок: {errors}. Текущий адрес API: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Игнорировать"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Ошибка генерации состояния от API во время сборки."
-  },
-  "layout.banner.preview.description": {
-    "message": "Официальный сайт Modrinth доступен по адресу {url}. Текущая предварительная версия предназначена для тестирования командой Modrinth и собрана из {ref}."
-  },
-  "layout.banner.preview.title": {
-    "message": "Это предварительная версия сайта Modrinth."
-  },
-  "layout.banner.staging.description": {
-    "message": "Тестовая среда полностью отделена от основной базы данных Modrinth и нужна для тестирования и отладки. Фронтенд и бэкенд здесь могут содержать изменения, которые ещё не вышли на основном сайте."
-  },
-  "layout.banner.staging.title": {
-    "message": "Вы находитесь в тестовой среде Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Обновить платёжные данные"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Не удалось продлить одну или несколько подписок. Обновите способ оплаты, чтобы сохранить доступ."
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Проблема с оплатой."
-  },
-  "layout.banner.tax.action": {
-    "message": "Заполнить налоговую форму"
-  },
-  "layout.banner.tax.description": {
-    "message": "В этом году вы вывели уже более {threshold} из Modrinth. Для соблюдения налогового законодательства нужно заполнить налоговую форму. Вывод средств приостановлен до подачи этой формы."
-  },
-  "layout.banner.tax.title": {
-    "message": "Требуется налоговая форма"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Связаться с поддержкой"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Вывод средств временно заблокирован: указанный TIN или SSN не совпал с данными IRS. Свяжитесь с поддержкой для повторной отправки формы."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Налоговая форма отклонена"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Повторить отправку письма"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "В целях безопасности Modrinth просит подтвердить почту, привязанную к аккаунту."
   },
   "layout.footer.based-on-label": {
     "message": "На основе"
@@ -2708,12 +2615,6 @@
   "project.actions.create-server": {
     "message": "Создать сервер"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Создать сервер"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Больше не показывать"
-  },
   "project.actions.edit-project": {
     "message": "Настроить проект"
   },
@@ -2725,15 +2626,6 @@
   },
   "project.actions.review-project": {
     "message": "Проверить проект"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting — самый простой способ играть с друзьями без лишних хлопот!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "От {price}<small> в месяц</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Создайте сервер"
   },
   "project.actions.view-dependents": {
     "message": "Посмотреть зависимое"
@@ -2875,24 +2767,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "Не удалось скачать файлы"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "На Modrinth изменилась система сред и появились новые варианты. У вас нет доступа к среде — сообщите другому участнику о необходимости проверки метаданных."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Необходимо проверить метаданные среды"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Подробнее об этом изменении..."
-  },
-  "project.environment.migration.message": {
-    "message": "На Modrinth изменилась система сред и появились новые варианты. Убедитесь в верности метаданных."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Проверить настройки среды"
-  },
-  "project.environment.migration.title": {
-    "message": "Проверьте метаданные среды"
   },
   "project.error.loading": {
     "message": "Ошибка загрузки данных проекта{message}"
@@ -3247,9 +3121,6 @@
   },
   "project.settings.disclosures.upload-version-first.heading": {
     "message": "Загрузите версии перед настройкой маркировки"
-  },
-  "project.settings.editing-project": {
-    "message": "Редактирование проекта {projectType}"
   },
   "project.settings.general.name.description": {
     "message": "Не используйте лишние приписки, скобки и описания — введите только название проекта."
@@ -4045,33 +3916,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Использовать с сервера"
-  },
-  "servers.notice.actions": {
-    "message": "Действия"
-  },
-  "servers.notice.begins": {
-    "message": "Начинается"
-  },
-  "servers.notice.dismissable": {
-    "message": "Закрываемое"
-  },
-  "servers.notice.expires": {
-    "message": "Истекает"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Уровень"
-  },
-  "servers.notice.undismissable": {
-    "message": "Незакрываемое"
-  },
-  "servers.notices.create-notice": {
-    "message": "Создать оповещение"
-  },
-  "servers.notices.no-notices": {
-    "message": "Нет оповещений"
   },
   "servers.plan.large.description": {
     "message": "Для 15–25 игроков, сборок и тяжёлых модов."

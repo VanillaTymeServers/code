@@ -1199,30 +1199,6 @@
   "create.project.visibility-unlisted": {
     "message": "未列出"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "创建推广链接"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "未找到推广代码。"
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "加载推广链接时出错"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "你的推广链接"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "这将永久撤销关联代码 `{id}`，任何分享的此代码链接将不再有效。"
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "撤销"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "你确定要撤销你的 ''{title}'' 推广链接吗？"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "搜索推广链接……"
-  },
   "dashboard.analytics.from-projects": {
     "message": "来自 {count} {count, plural, other {个项目}}"
   },
@@ -1994,9 +1970,6 @@
   "layout.action.file-lookup": {
     "message": "文件查询"
   },
-  "layout.action.manage-affiliates": {
-    "message": "管理推广链接"
-  },
   "layout.action.manage-server-notices": {
     "message": "管理服务器通知"
   },
@@ -2023,72 +1996,6 @@
   },
   "layout.avatar.alt": {
     "message": "你的头像"
-  },
-  "layout.banner.account-action": {
-    "message": "需要进行账户操作"
-  },
-  "layout.banner.add-email.button": {
-    "message": "访问账户设置"
-  },
-  "layout.banner.add-email.description": {
-    "message": "为确保账户安全，Modrinth 需要你为账户关联一个电子邮箱地址。"
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "总是忽略"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "当前 Modrinth 前端部署实例不能从 API 生成状态。这可能是由于 API 不可用或配置错误。请在 API 可用时重新构建。\n错误码：{errors}；当前 API URL 为 {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "忽略"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "构建期间从 API 生成状态时发生错误。"
-  },
-  "layout.banner.preview.description": {
-    "message": "如果你打算访问 Modrinth 官方网站，请访问 {url}。此预览部署仅用于 Modrinth 员工的测试目的，其构建基于 {ref}。"
-  },
-  "layout.banner.preview.title": {
-    "message": "这是 Modrinth 网站的预览部署版本。"
-  },
-  "layout.banner.staging.description": {
-    "message": "测试环境与 Modrinth 在生产环境所用数据库是完全分离的。本站用于测试和调试，且可能正运行着比生产环境更新的 Modrinth 前端或后端的开发版。"
-  },
-  "layout.banner.staging.title": {
-    "message": "你正在查看的是 Modrinth 测试环境"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "更新财务信息"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "一个或多个订阅未能续费。请更新你的付款信息，以免失去访问权限！"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "需要进行财务操作。"
-  },
-  "layout.banner.tax.action": {
-    "message": "填写税务表格"
-  },
-  "layout.banner.tax.description": {
-    "message": "你今年在 Modrinth 的提现金额已超过 {threshold}。为遵守税务规定，你需要填写一份税务申报表。在提交该表格前，你的提现操作将暂时冻结。"
-  },
-  "layout.banner.tax.title": {
-    "message": "需要填写税务表格"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "联系客服"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "由于你的纳税人识别号或社会安全号码与美国国税局记录不符，你的提现被暂时锁定。请联系客服重置并重新提交你的税表。"
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "税务表格上报失败"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "重新发送验证邮件"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "为确保账户安全，Modrinth 需要你验证与账户关联的电子邮箱地址。"
   },
   "layout.footer.based-on-label": {
     "message": "基于"
@@ -2717,12 +2624,6 @@
   "project.actions.create-server": {
     "message": "创建服务器"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "创建服务器"
-  },
-  "project.actions.dont-show-again": {
-    "message": "不再显示"
-  },
   "project.actions.edit-project": {
     "message": "编辑项目"
   },
@@ -2734,15 +2635,6 @@
   },
   "project.actions.review-project": {
     "message": "审核项目"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting，让你轻松和朋友联机，毫无烦恼！"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "起步价{price}<small> / 每月</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "创建服务器"
   },
   "project.actions.view-dependents": {
     "message": "查看依赖项"
@@ -2884,24 +2776,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "无法下载文件"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "我们最近升级了 Modrinth 的运行环境系统，引入了一些新选项。你没有权限修改这些设置，请通知项目其他成员核实运行环境元数据。"
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "运行环境元数据需要复核"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "了解更多关于此更改的内容"
-  },
-  "project.environment.migration.message": {
-    "message": "我们最近升级了 Modrinth 的运行环境系统，引入了一些新选项。请验证元数据是否正确。"
-  },
-  "project.environment.migration.review-button": {
-    "message": "复核运行环境设置"
-  },
-  "project.environment.migration.title": {
-    "message": "请复核运行环境元数据"
   },
   "project.error.loading": {
     "message": "加载项目数据时出错 {message}"
@@ -3256,9 +3130,6 @@
   },
   "project.settings.disclosures.upload-version-first.heading": {
     "message": "在添加披露前上传版本"
-  },
-  "project.settings.editing-project": {
-    "message": "编辑 {projectType} 项目"
   },
   "project.settings.general.name.description": {
     "message": "请勿添加前缀、后缀、括号内容或附加说明——仅填写项目实际名称。"
@@ -4069,33 +3940,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "跟随服务器"
-  },
-  "servers.notice.actions": {
-    "message": "操作"
-  },
-  "servers.notice.begins": {
-    "message": "开始时间"
-  },
-  "servers.notice.dismissable": {
-    "message": "可隐藏"
-  },
-  "servers.notice.expires": {
-    "message": "过期时间"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "级别"
-  },
-  "servers.notice.undismissable": {
-    "message": "不可隐藏"
-  },
-  "servers.notices.create-notice": {
-    "message": "创建告示"
-  },
-  "servers.notices.no-notices": {
-    "message": "没有告示"
   },
   "servers.plan.large.description": {
     "message": "适合 15–25 名玩家使用，加整合包或重度添加模组。"

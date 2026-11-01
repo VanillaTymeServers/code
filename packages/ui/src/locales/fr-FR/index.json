@@ -3251,9 +3251,6 @@
   "profile.button.analytics": {
     "defaultMessage": "Voir les statistiques de l'utilisateur"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Gérer la facturation de l’utilisateur"
-  },
   "profile.button.block": {
     "defaultMessage": "Bloquer"
   },
@@ -3268,15 +3265,6 @@
   },
   "profile.button.manage-projects": {
     "defaultMessage": "Gérer les projets"
-  },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "Retirer l'affiliation"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "Se mettre comme affilié"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "Voir les instances partagées"
   },
   "profile.button.unblock": {
     "defaultMessage": "Débloquer"
@@ -3335,17 +3323,11 @@
   "profile.force-password-reset.email-label": {
     "defaultMessage": "Adresse email du compte"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Affilié"
-  },
   "profile.label.badges": {
     "defaultMessage": "Badges"
   },
   "profile.label.collection": {
     "defaultMessage": "Collection"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {téléchargement} other {téléchargements}}"
   },
   "profile.label.joined": {
     "defaultMessage": "Rejoint"

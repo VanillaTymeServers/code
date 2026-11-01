@@ -1148,30 +1148,6 @@
   "create.project.visibility-unlisted": {
     "message": "Olistad"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Skapa affiliatelänk"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "Inga affiliatekoder hittades."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Fel vid laddning av affiliatelänk"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Dina affiliatelänkar"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Detta kommer att återkalla affiliatekoden \"{id}\" permanent och alla existerande länkar med denna kod kommer inte att funka."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Återkalla"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Är du säker på att du vill återkalla din affiliatelänk \"{title}\"?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Sök affiliatelänkar..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "från {count} {count, plural, one {projekt} other {projekt}}"
   },
@@ -1880,9 +1856,6 @@
   "layout.action.file-lookup": {
     "message": "Sök efter fil"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Hantera affiliatelänk"
-  },
   "layout.action.manage-server-notices": {
     "message": "Hantera servernotiser"
   },
@@ -1906,66 +1879,6 @@
   },
   "layout.avatar.alt": {
     "message": "Din avatar"
-  },
-  "layout.banner.account-action": {
-    "message": "Kontoåtgärd krävs"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Besök kontoinställningar"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Modrinth kräver att du registrerar en e-postadress till ditt konto av säkerhetsskäl."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Ignorera alltid"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Den här distributionen av Modrinths front-end kunde inte generera status från API:et. Det här kan bero på ett driftavbrott eller ett fel i konfigurationen. Bygg om när API:et är tillgängligt. Felkoder: {errors}; nuvarande API-URL är: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Ignorera"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Fel inträffade vid generering av status från API vid kompilering."
-  },
-  "layout.banner.preview.description": {
-    "message": "Om du menade att besöka den officiella Modrinth webbplatsen, besök {url}. Den här förhandsgranskningen används av Modrinths personal för testsyften. Den byggdes med {ref}."
-  },
-  "layout.banner.preview.title": {
-    "message": "Det här är en förhandsgranskning av Modrinth webbplatsen."
-  },
-  "layout.banner.staging.description": {
-    "message": "Staging-miljön är helt separat från Modrinths databas. Detta används för test och felsökning och kan köra experimentella versioner av Modrinth som inte släppts än."
-  },
-  "layout.banner.staging.title": {
-    "message": "Du använder Modrinths staging-miljö"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Uppdatera faktureringsinfo"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "En eller flera prenumerationer misslyckades att förnyas. Vänligen uppdatera din betalningsmetod för att undvika att förlora åtkomst!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Betalning krävs."
-  },
-  "layout.banner.tax.action": {
-    "message": "Slutfärdiga skattedeklaration"
-  },
-  "layout.banner.tax.title": {
-    "message": "Skatteformulär krävs"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Kontakta support"
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Skatteblanketten avvisades"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Skicka nytt bekräftelsemejl"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Modrinth kräver att du verifierar din e-postadress associerat med ditt konto av säkerhetsskäl."
   },
   "layout.footer.based-on-label": {
     "message": "Baserat på"
@@ -2459,12 +2372,6 @@
   "project.actions.create-server": {
     "message": "Skapa en server"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Skapa en server"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Visa inte igen"
-  },
   "project.actions.edit-project": {
     "message": "Ända projekt"
   },
@@ -2476,15 +2383,6 @@
   },
   "project.actions.review-project": {
     "message": "Granska projekt"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting är det lättaste sättet att spela med dina vänner utan svårigheter!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Börjar vid {price}<small> / månad</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Skapa en server"
   },
   "project.actions.view-modpacks": {
     "message": "Visa modpaket"
@@ -2590,24 +2488,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "Kunde inte ladda ner filer"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Vi har förbättrat miljösystemet på Modrinth och nya inställningar är tillgängliga. Du har inte behörighet att ändra dessa inställningar, men meddela en annan medlem i projektet att miljömetadatan måste verifieras."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Miljömetadata måste verifieras"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Läs mer om den här ändringen"
-  },
-  "project.environment.migration.message": {
-    "message": "Vi har förbättrat miljösystemet på Modrinth och nya inställningar finns nu tillgängliga. Vänligen titta till ditt projekts inställningar och verifiera att metadatan stämmer."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Verifiera miljöinställningar"
-  },
-  "project.environment.migration.title": {
-    "message": "Vänligen verifiera miljömetadata"
   },
   "project.error.loading": {
     "message": "Fel vid inläsning av projektdata{message}"
@@ -2851,9 +2731,6 @@
   },
   "project.settings.disclosures.upload-version-first.heading": {
     "message": "Ladda upp versioner innan du lägger till upplysningar"
-  },
-  "project.settings.editing-project": {
-    "message": "Ändrar {projectType}projekt"
   },
   "project.settings.general.name.description": {
     "message": "Undvik prefix, suffix, parenteser och beskrivningar — endast projektets riktiga namn."
@@ -3484,24 +3361,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Synkronisera med server"
-  },
-  "servers.notice.actions": {
-    "message": "Åtgärder"
-  },
-  "servers.notice.begins": {
-    "message": "Börjar"
-  },
-  "servers.notice.expires": {
-    "message": "Går ut"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Nivå"
-  },
-  "servers.notices.no-notices": {
-    "message": "Inga notiser"
   },
   "servers.plan.large.description": {
     "message": "Perfekt för 15–25 spelare, modpaket, eller tungt moddande."

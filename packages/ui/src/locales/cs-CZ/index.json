@@ -2978,9 +2978,6 @@
   "profile.label.badges": {
     "defaultMessage": "Odznaky"
   },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, one {stažení} other {stažení}}"
-  },
   "profile.label.joined": {
     "defaultMessage": "Připojen/a"
   },

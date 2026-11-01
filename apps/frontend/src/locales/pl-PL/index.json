@@ -1196,30 +1196,6 @@
   "create.project.visibility-unlisted": {
     "message": "Niewymieniony"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Utwórz link afiliacyjny"
-  },
-  "dashboard.affiliate-links.empty.no-codes": {
-    "message": "Nie znaleziono żadnych kodów afiliacyjnych."
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Błąd podczas ładowania linków afiliacyjnych"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Twoje linki afiliacyjne"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Unieważni to nieodwołalnie kod afiliacyjny `{id}`. Wszystkie udostępnione linki używające tego kodu zostaną unieważnione."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Unieważnij"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Czy na pewno chcesz unieważnić link afiliacyjny \"{title}\"?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Szukaj linku afiliacyjnego..."
-  },
   "dashboard.analytics.from-projects": {
     "message": "z {count} {count, plural, one {projektu} other {projektów}}"
   },
@@ -1988,9 +1964,6 @@
   "layout.action.file-lookup": {
     "message": "Wyszukiwarka plików"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Zarządzaj linkami afiliacyjnymi"
-  },
   "layout.action.manage-server-notices": {
     "message": "Zarządzaj ogłoszeniami serwera"
   },
@@ -2017,72 +1990,6 @@
   },
   "layout.avatar.alt": {
     "message": "Twój awatar"
-  },
-  "layout.banner.account-action": {
-    "message": "Wymagana akcja na koncie"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Odwiedź ustawienia konta"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Dla bezpieczeństwa, Modrinth musi zweryfikować e-maila powiązanego z twoim kontem."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Zawsze ignoruj"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Wdrożenie interfejsu użytkownika Modrinth nie udało się wygenerować stanu z API. Może to wynikać z awarii lub błędu w konfiguracji. Odbuduj, gdy API będzie dostępne. Kody błędów: {errors}; Aktualny adres URL interfejsu API to: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Ignoruj"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Błąd podczas generowania stanu z API przy kompilacji."
-  },
-  "layout.banner.preview.description": {
-    "message": "Jeśli chciałeś/aś wejść na oficjalną stronę Modrinth, odwiedź {url}. To wydanie poglądowe jest używane przez administrację Modrinth do testów. Zostało utworzone z {ref}."
-  },
-  "layout.banner.preview.title": {
-    "message": "To jest wydanie poglądowe strony Modrinth."
-  },
-  "layout.banner.staging.description": {
-    "message": "Środowisko testowe jest całkowicie oddzielone od produkcyjnej bazy danych Modrinth. Służy ono do testowania i debugowania i może działać w wersjach rozwojowych lub interfejsu użytkownika Modrinth, które są nowsze niż instancja produkcyjna."
-  },
-  "layout.banner.staging.title": {
-    "message": "Przeglądasz środowisko testowe Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Zaktualizuj informacje płatności"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Nie udało się odnowić jednej lub więcej subskrypcji. Proszę zaktualizować informację płatności, żeby nie stracić dostępu!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Wymagana akcja w sprawie płatności."
-  },
-  "layout.banner.tax.action": {
-    "message": "Wypełnij formularz podatkowy"
-  },
-  "layout.banner.tax.description": {
-    "message": "Wypłaciłeś/aś ponad {threshold} z Modrinth w tym roku. Aby spełnić wymogi podatkowe, musisz wypełnić formularz podatkowy. Twoje wypłaty są spauzowane, aż nie wypełnisz formularza podatkowego."
-  },
-  "layout.banner.tax.title": {
-    "message": "Wymagany jest formularz podatkowy"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Skontaktuj się z obsługą"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Twoje wypłaty są tymczasowo zablokowane, ponieważ Twój TIN lub SSN nie pasował do zapisów IRS. Skontaktuj się z obsługą, by resetować i ponownie wysłać Twój formularz podatkowy."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Formularz podatkowy został odrzucony"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Wyślij ponownie e-mail weryfikacyjny"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Dla bezpieczeństwa, Modrinth musi zweryfikować e-maila powiązanego z twoim kontem."
   },
   "layout.footer.based-on-label": {
     "message": "Na podstawie"
@@ -2708,12 +2615,6 @@
   "project.actions.create-server": {
     "message": "Utwórz serwer"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Utwórz serwer"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Nie pokazuj ponownie"
-  },
   "project.actions.edit-project": {
     "message": "Edytuj projekt"
   },
@@ -2725,15 +2626,6 @@
   },
   "project.actions.review-project": {
     "message": "Przegląd projektu"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting to najprostszy sposób na zabawę z przyjaciółmi bez żadnych kłopotów!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Od {price}<small> / miesięcznie</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Utwórz serwer"
   },
   "project.actions.view-dependents": {
     "message": "Pokaż zależne"
@@ -2875,24 +2767,6 @@
   },
   "project.download.zip-failed-title": {
     "message": "Nie udało się pobrać plików"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Właśnie odnowiliśmy system środowisk na Modrinth i nowe opcje są teraz dostępne. Nie masz uprawnień, aby modyfikować te ustawienia, ale daj znać innemu członkowi projektu, że metadane środowisk muszą zostać zweryfikowane."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Metadane środowiska muszą być sprawdzone"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Dowiedz się więcej o tej zmianie"
-  },
-  "project.environment.migration.message": {
-    "message": "Właśnie zmodernizowaliśmy system środowisk w Modrinth i nowe opcje są teraz dostępne. Prosimy o przejście do ustawień projektu i sprawdzenie poprawności metadanych."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Sprawdź ustawienia środowiska"
-  },
-  "project.environment.migration.title": {
-    "message": "Sprawdź metadane środowiska"
   },
   "project.error.loading": {
     "message": "Błąd podczas ładowania danych projektu{message}"
@@ -3247,9 +3121,6 @@
   },
   "project.settings.disclosures.upload-version-first.heading": {
     "message": "Prześlij wersje przed dodaniem ujawnień"
-  },
-  "project.settings.editing-project": {
-    "message": "Edytowanie projektu: {projectType}"
   },
   "project.settings.general.name.description": {
     "message": "Unikaj przedrostków, przyrostków, wtrąceń lub dodatkowych opisów — używaj tylko rzeczywistej nazwy projektu."
@@ -4060,33 +3931,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Synchronizuj z serwerem"
-  },
-  "servers.notice.actions": {
-    "message": "Akcje"
-  },
-  "servers.notice.begins": {
-    "message": "Rozpoczyna się"
-  },
-  "servers.notice.dismissable": {
-    "message": "Możliwość odrzucenia"
-  },
-  "servers.notice.expires": {
-    "message": "Wygasa"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Poziom"
-  },
-  "servers.notice.undismissable": {
-    "message": "Nieodwołalne"
-  },
-  "servers.notices.create-notice": {
-    "message": "Utwórz powiadomienie"
-  },
-  "servers.notices.no-notices": {
-    "message": "Brak powiadomień"
   },
   "servers.plan.large.description": {
     "message": "Idealny dla 15–25 graczy, paczek modów lub dużej ilości modów."

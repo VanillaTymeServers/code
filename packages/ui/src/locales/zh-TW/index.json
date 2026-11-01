@@ -3269,9 +3269,6 @@
   "profile.button.analytics": {
     "defaultMessage": "檢視使用者數據分析"
   },
-  "profile.button.billing": {
-    "defaultMessage": "管理使用者帳務"
-  },
   "profile.button.block": {
     "defaultMessage": "封鎖"
   },
@@ -3293,20 +3290,11 @@
   "profile.button.manage-projects": {
     "defaultMessage": "管理專案"
   },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "移除聯盟行銷夥伴資格"
-  },
   "profile.button.reset-2fa": {
     "defaultMessage": "重設雙重驗證"
   },
   "profile.button.revoke-sessions": {
     "defaultMessage": "撤銷所有工作階段"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "設為聯盟行銷夥伴"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "查看共用實例"
   },
   "profile.button.unblock": {
     "defaultMessage": "解除封鎖"
@@ -3392,17 +3380,11 @@
   "profile.force-password-reset.title": {
     "defaultMessage": "強制重設 {username} 的密碼"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "聯盟行銷"
-  },
   "profile.label.badges": {
     "defaultMessage": "徽章"
   },
   "profile.label.collection": {
     "defaultMessage": "收藏"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "{count, plural, other {次下載}}"
   },
   "profile.label.joined": {
     "defaultMessage": "加入時間："

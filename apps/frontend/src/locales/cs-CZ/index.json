@@ -974,24 +974,6 @@
   "create.project.visibility-unlisted": {
     "message": "Neveřejné"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Vytvořit partnerský odkaz"
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Error při načítáni partnerských odkazů"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Vaše partnerské odkazy"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Tímto trvale zrušíte partnerský kód {id} a všechny již sdílené odkazy s tímto kódem přestanou být platné."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Odvolat"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Jste si jistý, že chcete zrušit svůj partnerský odkaz „{title}“?"
-  },
   "dashboard.analytics.from-projects": {
     "message": "{count, plural, one {z # projektu} few {ze # projektů} other {z # projektů}}"
   },
@@ -1475,51 +1457,6 @@
   "layout.avatar.alt": {
     "message": "Váš avatar"
   },
-  "layout.banner.account-action": {
-    "message": "Požadovaná akce účtu"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Navštívit nastavení účtu"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Z bezpečnostních důvodu, Modrinth potřebuje aby jste si zaregistrovaly e-mail adresu k vašemu účtu."
-  },
-  "layout.banner.build-fail.always-ignore": {
-    "message": "Vždy ignorovat"
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Nepodařilo se generovat stav z API v této sestavě frontendu Modrinthu. Může to být kvůli výpadku nebo chybě v konfiguraci. Vygenerujte novou sestavu jakmile bude API dostupné. Chybové kódy: {errors}; Aktuální adresa API: {url}"
-  },
-  "layout.banner.build-fail.ignore": {
-    "message": "Ignorovat"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Chyba generování stavu z API při sestavování."
-  },
-  "layout.banner.staging.description": {
-    "message": "Vývojové prostředí je oddělené od produkční databáze Modrinthu. Používá se pro testování a odstraňování chyb, a může spouštět právě vyvíjené verze backendu nebo frontendu Modrinthu, které jsou novější než produkční instance."
-  },
-  "layout.banner.staging.title": {
-    "message": "Sledujete vývojové prostředí Modrinthu"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Aktualizuje fakturační informace"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Obnovení jednoho nebo více předplatných se nezdařilo. Aktualizujte prosím svou platební metodu, abyste neztratili přístup!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Požadována fakturační akce."
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Kontaktovat podporu"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Znovu poslat ověřovací e-mail"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Z bezpečnostních důvodů potřebuje Modrinth ověření e-mailové adresy spojené s vaším účtem."
-  },
   "layout.footer.legal": {
     "message": "Právní info"
   },
@@ -1811,20 +1748,8 @@
   "project.actions.create-server": {
     "message": "Vytvořit server"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Vytvořit server"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Znovu nezobrazovat"
-  },
   "project.actions.review-project": {
     "message": "Zkontrolovat projekt"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting je nejjednodušší způsob, jak hrát s přáteli bez starostí!"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Vytvořit server"
   },
   "project.collections.create-new": {
     "message": "Vytvořit novou kolekci"
@@ -2221,27 +2146,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Synchronizovat se serverem"
-  },
-  "servers.notice.actions": {
-    "message": "Akce"
-  },
-  "servers.notice.begins": {
-    "message": "Začíná"
-  },
-  "servers.notice.dismissable": {
-    "message": "Zavíratelné"
-  },
-  "servers.notice.expires": {
-    "message": "Platnost do"
-  },
-  "servers.notice.id": {
-    "message": "ID"
-  },
-  "servers.notice.level": {
-    "message": "Úroveň"
-  },
-  "servers.notice.undismissable": {
-    "message": "Neuzavíratelné"
   },
   "servers.plan.large.description": {
     "message": "Ideální pro 15–25 hráčů, modpacky nebo náročné modování."

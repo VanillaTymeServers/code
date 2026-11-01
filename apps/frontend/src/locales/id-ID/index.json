@@ -533,27 +533,6 @@
   "create.project.visibility-unlisted": {
     "message": "Tidak terdaftar"
   },
-  "dashboard.affiliate-links.create.button": {
-    "message": "Buat tautan afiliasi"
-  },
-  "dashboard.affiliate-links.error.title": {
-    "message": "Gagal memuat tautan afiliasi"
-  },
-  "dashboard.affiliate-links.header": {
-    "message": "Tautan afiliasi Anda"
-  },
-  "dashboard.affiliate-links.revoke-confirm.body": {
-    "message": "Ini akan mencabut kode afiliasi `{id}` secara permanen dan semua tautan yang telah ada dengan kode ini yang telah dibagikan akan menjadi tidak sah."
-  },
-  "dashboard.affiliate-links.revoke-confirm.button": {
-    "message": "Cabut"
-  },
-  "dashboard.affiliate-links.revoke-confirm.title": {
-    "message": "Apakah Anda yakin ingin mencabut tautan afiliasi Anda yang bernama \"{title}\"?"
-  },
-  "dashboard.affiliate-links.search": {
-    "message": "Cari tautan afiliasi..."
-  },
   "dashboard.collections.button.create-new": {
     "message": "Buat baru"
   },
@@ -1055,9 +1034,6 @@
   "layout.action.file-lookup": {
     "message": "Pencarian berkas"
   },
-  "layout.action.manage-affiliates": {
-    "message": "Kelola tautan afiliasi"
-  },
   "layout.action.manage-server-notices": {
     "message": "Kelola pemberitahuan server"
   },
@@ -1081,63 +1057,6 @@
   },
   "layout.avatar.alt": {
     "message": "Avatar Anda"
-  },
-  "layout.banner.account-action": {
-    "message": "Tindakan akun diperlukan"
-  },
-  "layout.banner.add-email.button": {
-    "message": "Kunjungi pengaturan akun"
-  },
-  "layout.banner.add-email.description": {
-    "message": "Demi alasan keamanan, Modrinth mengharuskan Anda untuk mendaftarkan alamat sur-el ke akun Anda."
-  },
-  "layout.banner.build-fail.description": {
-    "message": "Penyebaran bagian depan Modrinth ini gagal menghasilkan keadaan dari API. Hal ini mungkin disebabkan oleh gangguan atau kesalahan konfigurasi. Bangun ulang saat API tersedia. Kode kesalahan: {errors}; URL API saat ini adalah: {url}"
-  },
-  "layout.banner.build-fail.title": {
-    "message": "Terjadi kesalahan saat menghasilkan keadaan dari API saat membangun."
-  },
-  "layout.banner.preview.title": {
-    "message": "Ini adalah penerapan pratinjau dari situs web Modrinth."
-  },
-  "layout.banner.staging.description": {
-    "message": "Lingkungan pementasan sepenuhnya terpisah dari basis data Modrinth produksi. Lingkungan ini digunakan untuk tujuan pengujian dan pengawakutuan, dan mungkin menjalankan versi pengembangan dari bagian belakang atau depan Modrinth yang lebih baru daripada instans produksi."
-  },
-  "layout.banner.staging.title": {
-    "message": "Anda sedang melihat lingkungan pementasan Modrinth"
-  },
-  "layout.banner.subscription-payment-failed.button": {
-    "message": "Perbarui informasi penagihan"
-  },
-  "layout.banner.subscription-payment-failed.description": {
-    "message": "Satu atau lebih langganan gagal diperpanjang. Mohon perbarui metode pembayaran Anda untuk mencegah kehilangan akses!"
-  },
-  "layout.banner.subscription-payment-failed.title": {
-    "message": "Tindakan penagihan diperlukan."
-  },
-  "layout.banner.tax.action": {
-    "message": "Lengkapi formulir pajak"
-  },
-  "layout.banner.tax.description": {
-    "message": "Anda telah menarik lebih dari {threshold} dari Modrinth tahun ini. Untuk mematuhi peraturan perpajakan, Anda harus melengkapi formulir pajak. Penarikan dana Anda dihentikan sementara hingga formulir diajukan."
-  },
-  "layout.banner.tax.title": {
-    "message": "Formulir pajak diperlukan"
-  },
-  "layout.banner.tin-mismatch.action": {
-    "message": "Hubungi dukungan"
-  },
-  "layout.banner.tin-mismatch.description": {
-    "message": "Penarikan dana Anda terkunci sementara karena TIN atau SSN Anda tidak sesuai dengan catatan IRS. Mohon hubungi dukungan untuk mengatur dan mengajukan ulang formulir pajak Anda."
-  },
-  "layout.banner.tin-mismatch.title": {
-    "message": "Formulir pajak gagal"
-  },
-  "layout.banner.verify-email.action": {
-    "message": "Kirim ulang sur-el verifikasi"
-  },
-  "layout.banner.verify-email.description": {
-    "message": "Demi alasan keamanan, Modrinth mengharuskan Anda untuk memverifikasi alamat sur-el yang terkait dengan akun Anda."
   },
   "layout.footer.legal": {
     "message": "Kehukuman"
@@ -1598,23 +1517,8 @@
   "project.actions.create-server": {
     "message": "Buat server"
   },
-  "project.actions.create-server-tooltip": {
-    "message": "Buat server"
-  },
-  "project.actions.dont-show-again": {
-    "message": "Jangan tampilkan lagi"
-  },
   "project.actions.review-project": {
     "message": "Tinjau proyek"
-  },
-  "project.actions.servers-promo.description": {
-    "message": "Modrinth Hosting adalah cara termudah untuk bermain bersama teman Anda tanpa repot!"
-  },
-  "project.actions.servers-promo.pricing": {
-    "message": "Mulai dari {price}<small> / bulan</small>"
-  },
-  "project.actions.servers-promo.title": {
-    "message": "Buat server"
   },
   "project.collections.create-new": {
     "message": "Buat koleksi baru"
@@ -1645,24 +1549,6 @@
   },
   "project.download.title": {
     "message": "Unduh {title}"
-  },
-  "project.environment.migration-no-permission.message": {
-    "message": "Kami baru saja merombak sistem Lingkingan pada Modrinth dan pilihan baru kini tersedia. Anda tidak memiliki izin untuk mengubah pengaturan ini, tetapi mohon beri tahu anggota proyek lain bahwa metadata lingkungan perlu diverifikasi."
-  },
-  "project.environment.migration-no-permission.title": {
-    "message": "Metadata lingkungan perlu ditinjau"
-  },
-  "project.environment.migration.learn-more": {
-    "message": "Pelajari lebih lanjut tentang perubahan ini"
-  },
-  "project.environment.migration.message": {
-    "message": "Kami baru saja merombak sistem Lingkingan pada Modrinth dan pilihan baru kini tersedia. Mohon pastikan metadata sudah benar."
-  },
-  "project.environment.migration.review-button": {
-    "message": "Tinjau pengaturan lingkungan"
-  },
-  "project.environment.migration.title": {
-    "message": "Mohon tinjau metadata lingkungan"
   },
   "project.error.loading": {
     "message": "Gagal memuat data proyek{message}"
@@ -2062,33 +1948,6 @@
   },
   "search.filter.locked.server.sync": {
     "message": "Sinkronkan dengan server"
-  },
-  "servers.notice.actions": {
-    "message": "Tindakan"
-  },
-  "servers.notice.begins": {
-    "message": "Akan dimulai"
-  },
-  "servers.notice.dismissable": {
-    "message": "Dapat diabaikan"
-  },
-  "servers.notice.expires": {
-    "message": "Kedaluwarsa dalam"
-  },
-  "servers.notice.id": {
-    "message": "Pengenal"
-  },
-  "servers.notice.level": {
-    "message": "Tingkat"
-  },
-  "servers.notice.undismissable": {
-    "message": "Tidak dapat diabaikan"
-  },
-  "servers.notices.create-notice": {
-    "message": "Pemberitahuan pembuatan"
-  },
-  "servers.notices.no-notices": {
-    "message": "Tidak ada pemberitahuan"
   },
   "servers.plan.large.description": {
     "message": "Cocok untuk 15—25 pemain, paket mod, atau yang penggunakan mod berat."

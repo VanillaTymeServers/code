@@ -3251,9 +3251,6 @@
   "profile.button.analytics": {
     "defaultMessage": "Felhasználói statisztikák megtekintése"
   },
-  "profile.button.billing": {
-    "defaultMessage": "Felhasználói számlázás kezelése"
-  },
   "profile.button.block": {
     "defaultMessage": "Letiltás"
   },
@@ -3275,20 +3272,11 @@
   "profile.button.manage-projects": {
     "defaultMessage": "Projektek kezelése"
   },
-  "profile.button.remove-affiliate": {
-    "defaultMessage": "Partner eltávolítása"
-  },
   "profile.button.reset-2fa": {
     "defaultMessage": "Kétlépcsős azonosítás alaphelyzetbeállítása"
   },
   "profile.button.revoke-sessions": {
     "defaultMessage": "Minden munkamenet megszakítása"
-  },
-  "profile.button.set-affiliate": {
-    "defaultMessage": "Partnerként beállítás"
-  },
-  "profile.button.shared-instances": {
-    "defaultMessage": "Megosztott példányok megtekintése"
   },
   "profile.button.unblock": {
     "defaultMessage": "Letiltás feloldása"
@@ -3374,17 +3362,11 @@
   "profile.force-password-reset.title": {
     "defaultMessage": "{username} jelszavának alaphelyzetbeállításának erőltetése"
   },
-  "profile.label.affiliate": {
-    "defaultMessage": "Partner"
-  },
   "profile.label.badges": {
     "defaultMessage": "Jelvények"
   },
   "profile.label.collection": {
     "defaultMessage": "Gyűjtemény"
-  },
-  "profile.label.download-count": {
-    "defaultMessage": "letöltés"
   },
   "profile.label.joined": {
     "defaultMessage": "Csatlakozott"
