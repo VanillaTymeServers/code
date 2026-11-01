@@ -3293,9 +3293,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "Tüm oturumlardan çık"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Engellemeyi kaldır"
-  },
   "profile.button.unlock": {
     "defaultMessage": "Hesabın kilidini aç"
   },

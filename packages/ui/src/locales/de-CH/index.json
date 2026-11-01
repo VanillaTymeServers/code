@@ -3296,9 +3296,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "Alle Sitzungen widerrufen"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Freigeben"
-  },
   "profile.button.unlock": {
     "defaultMessage": "Konto entsperren"
   },

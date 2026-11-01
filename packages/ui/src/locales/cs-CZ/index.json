@@ -2933,9 +2933,6 @@
   "profile.button.manage-projects": {
     "defaultMessage": "Spravovat projekty"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Odblokovat"
-  },
   "profile.collection.projects-count": {
     "defaultMessage": "{count, plural, one {# projekt} few {# projekty} other {# projektů}}"
   },

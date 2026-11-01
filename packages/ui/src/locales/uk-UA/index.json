@@ -3248,9 +3248,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "Завершити всі сеанси"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Розблокувати"
-  },
   "profile.button.unlock": {
     "defaultMessage": "Відкрити обліковий запис"
   },

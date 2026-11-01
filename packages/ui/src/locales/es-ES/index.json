@@ -3275,9 +3275,6 @@
   "profile.button.manage-projects": {
     "defaultMessage": "Gestionar proyectos"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Desbloquear"
-  },
   "profile.button.unlock": {
     "defaultMessage": "Desbloquear cuenta"
   },

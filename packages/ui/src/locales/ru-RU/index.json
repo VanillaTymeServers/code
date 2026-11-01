@@ -3212,9 +3212,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "Завершить все сеансы"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Разблокировать"
-  },
   "profile.button.unlock": {
     "defaultMessage": "Открыть доступ"
   },

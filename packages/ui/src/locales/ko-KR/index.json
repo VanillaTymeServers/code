@@ -3155,9 +3155,6 @@
   "profile.button.manage-projects": {
     "defaultMessage": "프로젝트 관리"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "차단 해제"
-  },
   "profile.collection.projects-count": {
     "defaultMessage": "{count, plural, one {프로젝트 #개} other {프로젝트 #개}}"
   },

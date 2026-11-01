@@ -3110,9 +3110,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "Återkalla alla sessioner"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Avblockera"
-  },
   "profile.button.unlock": {
     "defaultMessage": "Lås upp konto"
   },

@@ -3242,9 +3242,6 @@
   "profile.button.manage-projects": {
     "defaultMessage": "プロジェクトを管理"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "ブロック解除"
-  },
   "profile.details.error.github-popup-blocked": {
     "defaultMessage": "Modrinth でのポップアップを許可してから、もう一度お試しください。"
   },

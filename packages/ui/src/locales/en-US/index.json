@@ -3305,9 +3305,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "Revoke all sessions"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Unblock"
-  },
   "profile.button.unlock": {
     "defaultMessage": "Unlock account"
   },

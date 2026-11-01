@@ -3278,9 +3278,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "Minden munkamenet megszakítása"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Letiltás feloldása"
-  },
   "profile.button.unlock": {
     "defaultMessage": "Fiók feloldása"
   },

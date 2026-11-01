@@ -3266,9 +3266,6 @@
   "profile.button.manage-projects": {
     "defaultMessage": "Gérer les projets"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Débloquer"
-  },
   "profile.collection.projects-count": {
     "defaultMessage": "{count, plural,one {# projet} other {# projets}}"
   },

@@ -83,7 +83,6 @@
 import type { Labrinth } from '@modrinth/api-client'
 import {
 	BadgeCheckIcon,
-	BanIcon,
 	BoxIcon,
 	CalendarIcon,
 	ChartIcon,
@@ -117,14 +116,6 @@ const messages = defineMessages({
 	analyticsButton: {
 		id: 'profile.button.analytics',
 		defaultMessage: 'View user analytics',
-	},
-	blockButton: {
-		id: 'profile.button.block',
-		defaultMessage: 'Block',
-	},
-	unblockButton: {
-		id: 'profile.button.unblock',
-		defaultMessage: 'Unblock',
 	},
 	infoButton: {
 		id: 'profile.button.info',
@@ -238,14 +229,6 @@ const moreActions = computed<ButtonMenuOption[]>(() => [
 		label: formatMessage(commonMessages.reportButton),
 		icon: ReportIcon,
 		action: () => emit('report'),
-		tone: 'red',
-		shown: props.authUser?.id !== props.user.id,
-	},
-	{
-		id: 'block',
-		label: formatMessage(props.isBlocked ? messages.unblockButton : messages.blockButton),
-		icon: BanIcon,
-		action: () => emit('block'),
 		tone: 'red',
 		shown: props.authUser?.id !== props.user.id,
 	},

@@ -3236,9 +3236,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "Revoca tutte le sessioni"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Sblocca"
-  },
   "profile.button.unlock": {
     "defaultMessage": "Sblocca account"
   },

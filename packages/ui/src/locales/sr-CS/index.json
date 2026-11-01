@@ -3269,9 +3269,6 @@
   "profile.button.manage-projects": {
     "defaultMessage": "Upravljaj projektima"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "Deblokiraj"
-  },
   "profile.collection.projects-count": {
     "defaultMessage": "{count, plural, one {# projekat} few {# projekta} other {# projekata}}"
   },

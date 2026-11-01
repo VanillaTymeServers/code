@@ -3296,9 +3296,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "撤銷所有工作階段"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "解除封鎖"
-  },
   "profile.button.unlock": {
     "defaultMessage": "解除鎖定帳號"
   },

@@ -3296,9 +3296,6 @@
   "profile.button.revoke-sessions": {
     "defaultMessage": "注销所有会话"
   },
-  "profile.button.unblock": {
-    "defaultMessage": "解除屏蔽"
-  },
   "profile.button.unlock": {
     "defaultMessage": "解锁账户"
   },
