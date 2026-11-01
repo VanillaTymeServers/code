@@ -13,15 +13,15 @@
 			</div>
 		</template>
 		<div class="flex flex-col gap-4">
-			<Admonition type="warning" header="Beware of scams">
-				Do not transfer organizations to buyers. This is a common scam and against our TOS. If you
-				encounter a buyer, please
+			<Admonition type="warning" header="Only transfer to someone you trust">
+				Once you transfer this organization, you can't get it back on your own. If someone is
+				pressuring you to hand it over,
 				<a
-					href="https://support.modrinth.com"
+					href="https://discord.vanillatymeservers.com"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="underline"
-					>contact support</a
+					>contact us on Discord</a
 				>.
 			</Admonition>
 			<div
@@ -45,7 +45,7 @@
 			</div>
 			<ul class="m-0 flex flex-col gap-1 pl-6 text-secondary">
 				<li>You will immediately lose owner access to this organization</li>
-				<li>The new owner can modify or delete the organization and all its projects</li>
+				<li>The new owner can modify or delete the organization at any time</li>
 				<li>This action cannot be undone</li>
 			</ul>
 			<div>

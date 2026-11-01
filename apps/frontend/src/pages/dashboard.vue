@@ -32,12 +32,6 @@
 						label: formatMessage(messages.analytics),
 						icon: ChartIcon,
 					},
-					{
-						link: '/dashboard/affiliate-links',
-						label: formatMessage(commonMessages.affiliateLinksButton),
-						icon: AffiliateIcon,
-						shown: !!isAffiliate,
-					},
 				]"
 			/>
 		</div>
@@ -47,9 +41,7 @@
 	</div>
 </template>
 <script setup lang="ts">
-import type { Labrinth } from '@modrinth/api-client'
 import {
-	AffiliateIcon,
 	BellIcon as NotificationsIcon,
 	ChartIcon,
 	DashboardIcon,
@@ -59,15 +51,8 @@ import {
 	ReportIcon,
 } from '@modrinth/assets'
 import { commonMessages, defineMessages, useVIntl } from '@modrinth/ui'
-import { UserBadge } from '@modrinth/utils'
 
 import NavStack from '~/components/ui/NavStack.vue'
-
-const auth = (await useAuth()) as Ref<{ user: Labrinth.Users.v3.User | null }>
-
-const isAffiliate = computed(() => {
-	return auth.value.user && auth.value.user.badges & UserBadge.AFFILIATE
-})
 
 const { formatMessage } = useVIntl()
 

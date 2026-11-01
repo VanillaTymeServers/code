@@ -22,42 +22,7 @@
 						},
 						{
 							type: 'heading',
-							label: 'Hosting',
-							shown: admin,
-						},
-						{
-							link: '/admin/servers/lookup',
-							label: 'Server lookup',
-							icon: ServerSearchIcon,
-							shown: admin,
-						},
-						{
-							link: '/admin/servers/notices',
-							label: 'Server notices',
-							icon: IssuesIcon,
-							shown: admin,
-						},
-						{
-							link: '/admin/servers/transfers',
-							label: 'Server transfers',
-							icon: TransferIcon,
-							shown: admin,
-						},
-						{
-							link: '/admin/servers/locks',
-							label: 'Server locks',
-							icon: LockIcon,
-							shown: admin,
-						},
-						{
-							type: 'heading',
 							label: 'Management',
-							shown: admin,
-						},
-						{
-							link: '/admin/affiliates',
-							label: 'Affiliate links',
-							icon: AffiliateIcon,
 							shown: admin,
 						},
 						{
@@ -86,15 +51,10 @@
 </template>
 <script setup lang="ts">
 import {
-	AffiliateIcon,
 	BookOpenIcon,
 	ChartIcon,
 	FileSearchCornerIcon,
-	IssuesIcon,
-	LockIcon,
 	MailIcon,
-	ServerSearchIcon,
-	TransferIcon,
 	UserSearchIcon,
 } from '@modrinth/assets'
 import { NormalPage } from '@modrinth/ui'

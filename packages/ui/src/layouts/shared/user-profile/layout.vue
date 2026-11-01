@@ -228,24 +228,18 @@
 					:edit-profile-link="editProfileLink"
 					:is-modrinth-user="isModrinthUser"
 					:is-official-account="isOfficialAccount"
-					:show-affiliate-badge="isAdminViewing && isAffiliate"
-					:is-affiliate="isAffiliate"
 					:is-self="isSelf"
 					:is-admin="isAdminViewing"
 					:is-staff="isStaffViewing"
 					:show-staff-actions="variant === 'web'"
 					:is-blocked="isBlocked"
 					:projects-count="projects.length"
-					:downloads="sumDownloads"
 					@manage-projects="openPath('/dashboard/projects')"
 					@report="reportProfile"
 					@block="handleBlockAction"
 					@copy-id="copyId"
 					@copy-permalink="copyPermalink"
-					@open-billing="openPath(`/admin/billing/${user.id}`)"
-					@toggle-affiliate="toggleAffiliate"
 					@open-info="openUserDetails"
-					@open-shared-instances="openPath(`/admin/shared-instances/${user.id}`)"
 					@open-analytics="
 						openPath(`/dashboard/analytics?user=${encodeURIComponent(user.username)}`)
 					"
@@ -932,7 +926,6 @@ function canSeeProjectStatus(project: Labrinth.Projects.v3.Project) {
 }
 
 const canSeeCollectionStatus = computed(() => isSelf.value || isStaffViewing.value)
-const isAffiliate = computed(() => Boolean((user.value?.badges ?? 0) & UserBadge.AFFILIATE))
 const hasMidas = computed(
 	() => Boolean((user.value?.badges ?? 0) & UserBadge.MIDAS) || hasActivePride26Midas(user.value),
 )
@@ -1220,13 +1213,5 @@ async function confirmRevokeSessions(): Promise<void> {
 	} finally {
 		isRevokingSessions.value = false
 	}
-}
-
-async function toggleAffiliate(): Promise<void> {
-	if (!user.value) return
-	await userProfile.patchUser(user.value.id, {
-		badges: user.value.badges ^ UserBadge.AFFILIATE,
-	})
-	await queryClient.invalidateQueries({ queryKey: ['user', props.userId] })
 }
 </script>

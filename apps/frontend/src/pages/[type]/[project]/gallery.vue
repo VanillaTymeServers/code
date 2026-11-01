@@ -29,7 +29,7 @@
 								? previewImage
 								: filteredGallery[editIndex]?.url
 									? filteredGallery[editIndex].url
-									: 'https://cdn.modrinth.com/placeholder-banner.svg'
+									: 'https://cdn.vanillatyme.com/placeholders/placeholder-banner.svg'
 						"
 						alt="gallery-preview"
 					/>
@@ -167,7 +167,11 @@
 			<div v-for="(item, index) in filteredGallery" :key="index" class="card gallery-item">
 				<a class="gallery-thumbnail" @click="expandImage(index)">
 					<FullImage
-						:src="item.url ? item.url : 'https://cdn.modrinth.com/placeholder-banner.svg'"
+						:src="
+							item.url
+								? item.url
+								: 'https://cdn.vanillatyme.com/placeholders/placeholder-banner.svg'
+						"
 						:raw-src="item.raw_url"
 						:alt="item.title ? item.title : 'gallery-image'"
 					/>
@@ -337,7 +341,7 @@ const canSaveGalleryFields = computed(() => true)
 const galleryViewerItems = computed(() =>
 	filteredGallery.value.map((image) => ({
 		id: image.url,
-		src: image.raw_url ?? 'https://cdn.modrinth.com/placeholder-banner.svg',
+		src: image.raw_url ?? 'https://cdn.vanillatyme.com/placeholders/placeholder-banner.svg',
 		alt: image.title || 'Gallery image',
 		title: image.title,
 		description: image.description,

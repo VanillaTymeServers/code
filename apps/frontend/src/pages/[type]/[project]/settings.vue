@@ -112,7 +112,7 @@ const navItems = computed(() => {
 			label: formatMessage(messages.shop),
 			icon: StoreIcon,
 		},
-		{
+		!isShopProject.value && {
 			link: `/${base}/settings/disclosures`,
 			label: formatMessage(commonProjectSettingsMessages.disclosures),
 			icon: IssuesIcon,

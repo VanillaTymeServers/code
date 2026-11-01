@@ -22,7 +22,7 @@ const preloadedFonts = [
 	'inter/Inter-Bold.woff2',
 ]
 
-const PROD_MODRINTH_URL = 'https://modrinth.com'
+const PROD_MODRINTH_URL = 'https://vanillatyme.com'
 const STAGING_MODRINTH_URL = 'https://staging.modrinth.com'
 
 export default defineNuxtConfig({
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
 				...preloadedFonts.map((font): object => {
 					return {
 						rel: 'preload',
-						href: `https://cdn.modrinth.com/fonts/${font}?v=3.19`,
+						href: `https://cdn.vanillatyme.com/fonts/${font}?v=3.19`,
 						as: 'font',
 						type: 'font/woff2',
 						crossorigin: 'anonymous',

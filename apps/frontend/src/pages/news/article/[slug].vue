@@ -160,7 +160,7 @@ onMounted(() => {
 						to="/organization/modrinth"
 						class="inline-flex items-center gap-1 font-semibold hover:underline hover:brightness-[--hover-brightness]"
 					>
-						<Avatar src="https://cdn.modrinth.com/modrinth-icon-96.webp" size="24px" />
+						<Avatar src="https://cdn.vanillatyme.com/placeholders/scoop.png" size="24px" />
 						Modrinth Team
 					</nuxt-link>
 				</template>

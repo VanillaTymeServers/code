@@ -29,7 +29,7 @@
 				:title="project.name"
 				:icon-url="project.icon_url"
 				:date-updated="project.updated"
-				:downloads="project.downloads"
+				:shop="project.shop"
 				:summary="project.summary"
 				:tags="getProjectCardTags(project)"
 				:all-tags="getProjectCardAllTags(project)"

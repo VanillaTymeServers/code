@@ -11,7 +11,7 @@
 			/>
 		</template>
 
-		<template v-if="isOfficialAccount || showAffiliateBadge || user.lock" #badges>
+		<template v-if="isOfficialAccount || user.lock" #badges>
 			<PageHeaderBadgeItem
 				v-if="isOfficialAccount"
 				:icon="BadgeCheckIcon"
@@ -20,13 +20,6 @@
 				class="border-brand-highlight bg-brand-highlight !text-brand"
 			>
 				{{ formatMessage(messages.officialAccount) }}
-			</PageHeaderBadgeItem>
-			<PageHeaderBadgeItem
-				v-if="showAffiliateBadge"
-				:icon="AffiliateIcon"
-				class="border-brand-highlight bg-brand-highlight text-brand"
-			>
-				{{ formatMessage(messages.affiliateLabel) }}
 			</PageHeaderBadgeItem>
 			<PageHeaderBadgeItem
 				v-if="user.lock"
@@ -48,12 +41,6 @@
 					:icon="BoxIcon"
 					:value="projectsCount"
 					:label="formatMessage(messages.profileProjectCountLabel, { count: projectsCount })"
-				/>
-				<PageHeaderMetadataNumberItem
-					:icon="DownloadIcon"
-					:value="downloads"
-					:label="formatMessage(messages.profileDownloadCountLabel, { count: downloads })"
-					:tooltip="downloadsTooltip"
 				/>
 				<PageHeaderMetadataTimeItem
 					:icon="CalendarIcon"
@@ -95,16 +82,12 @@
 <script setup lang="ts">
 import type { Labrinth } from '@modrinth/api-client'
 import {
-	AffiliateIcon,
 	BadgeCheckIcon,
 	BanIcon,
-	BoxesIcon,
 	BoxIcon,
 	CalendarIcon,
 	ChartIcon,
 	ClipboardCopyIcon,
-	CurrencyIcon,
-	DownloadIcon,
 	EditIcon,
 	InfoIcon,
 	KeyIcon,
@@ -126,22 +109,14 @@ import PageHeaderMetadataNumberItem from '#ui/components/base/page-header/metada
 import PageHeaderMetadataTimeItem from '#ui/components/base/page-header/metadata/page-header-metadata-time-item.vue'
 import PageHeaderActions from '#ui/components/base/page-header/page-header-actions.vue'
 import PageHeaderBadgeItem from '#ui/components/base/page-header/page-header-badge-item.vue'
-import { defineMessages, useFormatDateTime, useFormatNumber, useVIntl } from '#ui/composables'
+import { defineMessages, useFormatDateTime, useVIntl } from '#ui/composables'
 import type { AuthUser } from '#ui/providers/auth'
 import { commonMessages } from '#ui/utils'
 
 const messages = defineMessages({
-	affiliateLabel: {
-		id: 'profile.label.affiliate',
-		defaultMessage: 'Affiliate',
-	},
 	analyticsButton: {
 		id: 'profile.button.analytics',
 		defaultMessage: 'View user analytics',
-	},
-	billingButton: {
-		id: 'profile.button.billing',
-		defaultMessage: 'Manage user billing',
 	},
 	blockButton: {
 		id: 'profile.button.block',
@@ -155,13 +130,9 @@ const messages = defineMessages({
 		id: 'profile.button.info',
 		defaultMessage: 'View user details',
 	},
-	sharedInstancesButton: {
-		id: 'profile.button.shared-instances',
-		defaultMessage: 'View shared instances',
-	},
 	officialAccount: {
 		id: 'profile.official-account',
-		defaultMessage: 'Official Modrinth account',
+		defaultMessage: 'Official Vanilla Tyme account',
 	},
 	profileJoinedLabel: {
 		id: 'profile.label.joined',
@@ -169,23 +140,11 @@ const messages = defineMessages({
 	},
 	profileProjectCountLabel: {
 		id: 'profile.label.project-count',
-		defaultMessage: '{count, plural, one {project} other {projects}}',
-	},
-	profileDownloadCountLabel: {
-		id: 'profile.label.download-count',
-		defaultMessage: '{count, plural, one {download} other {downloads}}',
+		defaultMessage: '{count, plural, one {shop} other {shops}}',
 	},
 	profileManageProjectsButton: {
 		id: 'profile.button.manage-projects',
-		defaultMessage: 'Manage projects',
-	},
-	removeAffiliateButton: {
-		id: 'profile.button.remove-affiliate',
-		defaultMessage: 'Remove as affiliate',
-	},
-	setAffiliateButton: {
-		id: 'profile.button.set-affiliate',
-		defaultMessage: 'Set as affiliate',
+		defaultMessage: 'Manage shops',
 	},
 	lockedLabel: {
 		id: 'profile.label.locked',
@@ -221,15 +180,12 @@ const props = withDefaults(
 		editProfileLink?: string | (() => void)
 		isModrinthUser?: boolean
 		isOfficialAccount?: boolean
-		showAffiliateBadge?: boolean
-		isAffiliate?: boolean
 		isSelf?: boolean
 		isAdmin?: boolean
 		isStaff?: boolean
 		showStaffActions?: boolean
 		isBlocked?: boolean
 		projectsCount?: number
-		downloads?: number
 	}>(),
 	{
 		summary: null,
@@ -237,15 +193,12 @@ const props = withDefaults(
 		editProfileLink: '/settings/profile',
 		isModrinthUser: false,
 		isOfficialAccount: false,
-		showAffiliateBadge: false,
-		isAffiliate: false,
 		isSelf: false,
 		isAdmin: false,
 		isStaff: false,
 		showStaffActions: false,
 		isBlocked: false,
 		projectsCount: 0,
-		downloads: 0,
 	},
 )
 
@@ -255,10 +208,7 @@ const emit = defineEmits<{
 	block: []
 	copyId: []
 	copyPermalink: []
-	openBilling: []
-	toggleAffiliate: []
 	openInfo: []
-	openSharedInstances: []
 	openAnalytics: []
 	editUser: []
 	toggleLock: []
@@ -268,12 +218,10 @@ const emit = defineEmits<{
 }>()
 
 const { formatMessage } = useVIntl()
-const formatNumber = useFormatNumber()
 const formatDateTime = useFormatDateTime({
 	timeStyle: 'short',
 	dateStyle: 'long',
 })
-const downloadsTooltip = computed(() => formatNumber(props.downloads))
 const joinedTooltip = computed(() => formatDateTime(props.user.created))
 
 const moreActions = computed<ButtonMenuOption[]>(() => [
@@ -314,25 +262,6 @@ const moreActions = computed<ButtonMenuOption[]>(() => [
 		action: () => emit('copyPermalink'),
 	},
 	{ type: 'divider', shown: props.showStaffActions && (props.isAdmin || props.isStaff) },
-	{
-		id: 'open-billing',
-		label: formatMessage(messages.billingButton),
-		icon: CurrencyIcon,
-		action: () => emit('openBilling'),
-		tone: 'orange',
-		shown: props.showStaffActions && props.isStaff,
-	},
-	{
-		id: 'toggle-affiliate',
-		label: props.isAffiliate
-			? formatMessage(messages.removeAffiliateButton)
-			: formatMessage(messages.setAffiliateButton),
-		icon: AffiliateIcon,
-		action: () => emit('toggleAffiliate'),
-		shown: props.showStaffActions && props.isAdmin,
-		remainOpen: true,
-		tone: props.isAffiliate ? 'red' : 'orange',
-	},
 	{
 		id: 'open-info',
 		label: formatMessage(messages.infoButton),
@@ -376,14 +305,6 @@ const moreActions = computed<ButtonMenuOption[]>(() => [
 			props.isAdmin &&
 			props.user.role === 'developer' &&
 			Boolean(props.user.has_totp),
-	},
-	{
-		id: 'open-shared-instances',
-		label: formatMessage(messages.sharedInstancesButton),
-		icon: BoxesIcon,
-		action: () => emit('openSharedInstances'),
-		tone: 'orange',
-		shown: props.showStaffActions && props.isStaff,
 	},
 	{
 		id: 'open-analytics',

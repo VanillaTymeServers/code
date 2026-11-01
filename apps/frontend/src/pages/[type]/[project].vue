@@ -265,77 +265,6 @@
 									<PlayIcon />
 								</IconButton>
 							</div>
-
-							<Tooltip
-								v-if="
-									showProjectHeaderCreateServerAction && flags.showProjectPageCreateServersTooltip
-								"
-								theme="dismissable-prompt"
-								class="inline-flex"
-								open
-								placement="bottom-start"
-							>
-								<ButtonLink
-									v-tooltip="formatMessage(messages.createServerTooltip)"
-									size="xl"
-									:to="projectHeaderCreateServerTo"
-									:aria-label="formatMessage(messages.serversPromoTitle)"
-									class="!w-12 !rounded-full !px-0"
-									@click="dismissProjectHeaderCreateServerPrompt"
-								>
-									<ServerPlusIcon />
-								</ButtonLink>
-								<template #popper>
-									<div class="grid max-w-[18rem] gap-2">
-										<div class="flex items-center justify-between gap-4">
-											<div class="flex items-center gap-2">
-												<h3 class="m-0 text-base font-bold text-contrast">
-													{{ formatMessage(messages.serversPromoTitle) }}
-												</h3>
-												<span
-													class="rounded-full bg-brand-highlight px-2 py-0.5 text-xs font-bold text-brand"
-												>
-													{{ formatMessage(commonMessages.newBadge) }}
-												</span>
-											</div>
-											<IconButton
-												v-tooltip="formatMessage(messages.dontShowAgain)"
-												class="!size-6"
-												size="xs"
-												:label="formatMessage(messages.dontShowAgain)"
-												@click="dismissProjectHeaderCreateServerPrompt"
-											>
-												<XIcon aria-hidden="true" />
-											</IconButton>
-										</div>
-										<p class="m-0 text-sm font-medium leading-tight text-secondary">
-											{{ formatMessage(messages.serversPromoDescription) }}
-										</p>
-										<p class="m-0 text-sm font-semibold text-contrast">
-											<IntlFormatted
-												:message-id="messages.serversPromoPricing"
-												:values="{ price: formatPrice(500, 'USD', true) }"
-											>
-												<template #small="{ children }">
-													<small><component :is="() => children" /></small>
-												</template>
-											</IntlFormatted>
-										</p>
-									</div>
-								</template>
-							</Tooltip>
-							<ButtonLink
-								v-else-if="showProjectHeaderCreateServerAction"
-								v-tooltip="formatMessage(messages.createServerTooltip)"
-								size="xl"
-								:to="projectHeaderCreateServerTo"
-								:aria-label="formatMessage(messages.serversPromoTitle)"
-								class="!w-12 !rounded-full !px-0"
-								@click="dismissProjectHeaderCreateServerPrompt"
-							>
-								<ServerPlusIcon />
-							</ButtonLink>
-
 							<ClientOnly>
 								<IconButton
 									v-if="auth.user"
@@ -444,47 +373,6 @@
 							</Button>
 						</template>
 					</Admonition>
-					<Admonition
-						v-if="
-							currentMember &&
-							projectV3?.side_types_migration_review_status === 'pending' &&
-							projectV3?.environment?.length === 1 &&
-							projectV3?.environment[0] !== 'unknown'
-						"
-						type="warning"
-						:header="
-							formatMessage(
-								hasEditDetailsPermission
-									? messages.environmentMigrationTitle
-									: messages.environmentMigrationNoPermissionTitle,
-							)
-						"
-						class="mt-3"
-					>
-						{{
-							formatMessage(
-								hasEditDetailsPermission
-									? messages.environmentMigrationMessage
-									: messages.environmentMigrationNoPermissionMessage,
-							)
-						}}
-						<nuxt-link
-							to="/news/article/new-environments"
-							target="_blank"
-							class="mt-1 block w-fit font-semibold text-orange hover:underline"
-						>
-							{{ formatMessage(messages.environmentMigrationLink) }}
-						</nuxt-link>
-						<Button
-							v-if="hasEditDetailsPermission"
-							type="colored"
-							color="orange"
-							class="mt-3 w-fit"
-							@click="() => projectEnvironmentModal.show()"
-						>
-							<SettingsIcon /> {{ formatMessage(messages.reviewEnvironmentSettings) }}
-						</Button>
-					</Admonition>
 					<ArchivedProjectBanner
 						v-if="isArchived"
 						:title="project.title"
@@ -564,10 +452,6 @@
 				@toggle-collapsed="collapsedModerationChecklist = !collapsedModerationChecklist"
 			/>
 		</ClientOnly>
-
-		<template v-if="hasEditDetailsPermission">
-			<ProjectEnvironmentModal ref="projectEnvironmentModal" />
-		</template>
 	</template>
 </template>
 
@@ -588,9 +472,7 @@ import {
 	ScaleIcon,
 	ScanEyeIcon,
 	SearchIcon,
-	ServerPlusIcon,
 	SettingsIcon,
-	XIcon,
 } from '@modrinth/assets'
 import { getMarginTarget, moderationSettings } from '@modrinth/moderation'
 import {
@@ -608,7 +490,6 @@ import {
 	IconButton,
 	injectModrinthClient,
 	injectNotificationManager,
-	IntlFormatted,
 	NavTabs,
 	OpenInAppModal,
 	PageHeader,
@@ -617,7 +498,6 @@ import {
 	PageHeaderMetadataItem,
 	PROJECT_DEP_MARKER_QUERY,
 	ProjectBackgroundGradient,
-	ProjectEnvironmentModal,
 	ProjectPageHeader,
 	ProjectSidebarCompatibility,
 	ProjectSidebarCreators,
@@ -628,9 +508,7 @@ import {
 	provideProjectPageContext,
 	SelectedProjectsFloatingBar,
 	TeleportOverflowMenu,
-	Tooltip,
 	useDebugLogger,
-	useFormatPrice,
 	useRelativeTime,
 	useStickyObserver,
 	useVIntl,
@@ -651,7 +529,6 @@ import ProjectMemberHeader from '~/components/ui/ProjectMemberHeader.vue'
 import ShopArchivedBanner from '~/components/ui/ShopArchivedBanner.vue'
 import ShopSidebarInfo from '~/components/ui/ShopSidebarInfo.vue'
 import { getSignInRouteObj } from '~/composables/auth.ts'
-import { saveFeatureFlags } from '~/composables/featureFlags.ts'
 import { useProjectLinkValidation } from '~/composables/link-network-validation'
 import {
 	canSubmitProjectForReview,
@@ -716,7 +593,6 @@ const cosmetics = useCosmetics()
 const formatRelativeTime = useRelativeTime()
 
 const { formatMessage } = useVIntl()
-const formatPrice = useFormatPrice()
 
 const debug = useDebugLogger('DownloadModal')
 
@@ -733,8 +609,6 @@ const { isStuck: isInstallHeaderStuck } = useStickyObserver(
 	stickyInstallHeaderRef,
 	'ProjectInstallHeader',
 )
-
-const projectEnvironmentModal = useTemplateRef('projectEnvironmentModal')
 
 const baseId = useId()
 
@@ -761,7 +635,7 @@ function handlePlayServerProject() {
 const messages = defineMessages({
 	backToAllProjects: {
 		id: 'project.settings.back-to-all-projects',
-		defaultMessage: 'Back to all projects',
+		defaultMessage: 'Back to all shops',
 	},
 	backToDiscover: {
 		id: 'project.install-context.back-to-discover',
@@ -769,7 +643,7 @@ const messages = defineMessages({
 	},
 	backToProjectPage: {
 		id: 'project.settings.back-to-project-page',
-		defaultMessage: 'Back to project page',
+		defaultMessage: 'Back to shop page',
 	},
 	changelogTab: {
 		id: 'project.navigation.changelog',
@@ -777,10 +651,6 @@ const messages = defineMessages({
 	},
 	createServer: {
 		id: 'project.actions.create-server',
-		defaultMessage: 'Create a server',
-	},
-	createServerTooltip: {
-		id: 'project.actions.create-server-tooltip',
 		defaultMessage: 'Create a server',
 	},
 	createNewCollection: {
@@ -791,39 +661,13 @@ const messages = defineMessages({
 		id: 'project.description.title',
 		defaultMessage: 'Description',
 	},
-	dontShowAgain: {
-		id: 'project.actions.dont-show-again',
-		defaultMessage: "Don't show again",
-	},
 	editProject: {
 		id: 'project.actions.edit-project',
-		defaultMessage: 'Edit project',
+		defaultMessage: 'Edit shop',
 	},
 	errorLoadingProject: {
 		id: 'project.error.loading',
-		defaultMessage: 'Error loading project data{message}',
-	},
-	environmentMigrationMessage: {
-		id: 'project.environment.migration.message',
-		defaultMessage:
-			"We've just overhauled the Environments system on Modrinth and new options are now available. Please verify that the metadata is correct.",
-	},
-	environmentMigrationTitle: {
-		id: 'project.environment.migration.title',
-		defaultMessage: 'Please review environment metadata',
-	},
-	environmentMigrationNoPermissionMessage: {
-		id: 'project.environment.migration-no-permission.message',
-		defaultMessage:
-			"We've just overhauled the Environments system on Modrinth and new options are now available. You don't have permission to modify these settings, but please let another member of the project know that the environment metadata needs to be verified.",
-	},
-	environmentMigrationNoPermissionTitle: {
-		id: 'project.environment.migration-no-permission.title',
-		defaultMessage: 'Environment metadata needs to be reviewed',
-	},
-	environmentMigrationLink: {
-		id: 'project.environment.migration.learn-more',
-		defaultMessage: 'Learn more about this change',
+		defaultMessage: 'Error loading shop data{message}',
 	},
 	galleryTab: {
 		id: 'project.gallery.title',
@@ -847,43 +691,39 @@ const messages = defineMessages({
 	},
 	projectIconUpdated: {
 		id: 'project.notification.icon-updated.title',
-		defaultMessage: 'Project icon updated',
+		defaultMessage: 'Shop icon updated',
 	},
 	projectIconUpdatedMessage: {
 		id: 'project.notification.icon-updated.message',
-		defaultMessage: "Your project's icon has been updated.",
+		defaultMessage: "Your shop's icon has been updated.",
 	},
 	projectNotFound: {
 		id: 'project.error.project-not-found',
-		defaultMessage: 'Project not found',
+		defaultMessage: 'Shop not found',
 	},
 	projectUpdated: {
 		id: 'project.notification.updated.title',
-		defaultMessage: 'Project updated',
+		defaultMessage: 'Shop updated',
 	},
 	projectUpdatedMessage: {
 		id: 'project.notification.updated.message',
-		defaultMessage: 'Your project has been updated.',
+		defaultMessage: 'Your shop has been updated.',
 	},
 	projectReviewSaveFailed: {
 		id: 'project.notification.review-save-failed.title',
-		defaultMessage: 'Failed to save project in review',
+		defaultMessage: 'Failed to save shop in review',
 	},
 	projectReviewSaveFailedDescription: {
 		id: 'project.notification.review-save-failed.description',
-		defaultMessage: 'You cannot save edits to your project which result in failing validation.',
-	},
-	reviewEnvironmentSettings: {
-		id: 'project.environment.migration.review-button',
-		defaultMessage: 'Review environment settings',
+		defaultMessage: 'You cannot save edits to your shop which result in failing validation.',
 	},
 	projectPage: {
 		id: 'project.actions.project-page',
-		defaultMessage: 'Project page',
+		defaultMessage: 'Shop page',
 	},
 	reviewProject: {
 		id: 'project.actions.review-project',
-		defaultMessage: 'Review project',
+		defaultMessage: 'Review shop',
 	},
 	viewDependents: {
 		id: 'project.actions.view-dependents',
@@ -930,25 +770,13 @@ const messages = defineMessages({
 		id: 'project.modpack-archive-warning.description',
 		defaultMessage: 'Importing this .mrpack might be broken.',
 	},
-	serversPromoDescription: {
-		id: 'project.actions.servers-promo.description',
-		defaultMessage: 'Modrinth Hosting is the easiest way to play with your friends without hassle!',
-	},
-	serversPromoPricing: {
-		id: 'project.actions.servers-promo.pricing',
-		defaultMessage: 'Starting at {price}<small> / month</small>',
-	},
-	serversPromoTitle: {
-		id: 'project.actions.servers-promo.title',
-		defaultMessage: 'Create a server',
-	},
 	versionsTab: {
 		id: 'project.versions.title',
 		defaultMessage: 'Versions',
 	},
 	editingProject: {
 		id: 'project.settings.editing-project',
-		defaultMessage: 'Editing {projectType} project',
+		defaultMessage: 'Editing shop',
 	},
 })
 
@@ -1828,11 +1656,6 @@ async function refreshProjectValidation() {
 
 const canAccessSettings = computed(() => !!currentMember.value?.accepted)
 
-const hasEditDetailsPermission = computed(() => {
-	const EDIT_DETAILS = 1 << 2
-	return (currentMember.value?.permissions & EDIT_DETAILS) === EDIT_DETAILS
-})
-
 watch(
 	[isSettings, allMembers, canAccessSettings],
 	() => {
@@ -1879,11 +1702,6 @@ const description = computed(() => {
 	return `${project.value.description} - ${project.value.title}${byLine} on Vanilla Tyme`
 })
 
-const canCreateServerFrom = computed(() => {
-	if (!project.value) return false
-	return project.value.project_type === 'modpack' && project.value.server_side !== 'unsupported'
-})
-
 const projectSearchUrl = computed(
 	() => `/discover/${isServerProject.value ? 'servers' : `${project.value?.project_type}s`}`,
 )
@@ -1926,12 +1744,6 @@ const settingsBackDestination = computed(() => {
 
 const projectHeaderPrimaryColor = computed(() =>
 	currentMember.value || route.name === 'type-project-version-version' ? 'standard' : 'brand',
-)
-const showProjectHeaderCreateServerAction = computed(
-	() => canCreateServerFrom.value && flags.value.showProjectPageQuickServerButton,
-)
-const projectHeaderCreateServerTo = computed(() =>
-	project.value ? `/hosting?project=${project.value.id}#plan` : '/hosting',
 )
 
 const MRPACK_ARCHIVE_WARNING_START = new Date('2026-08-10T17:00:00.000Z').getTime()
@@ -2174,8 +1986,9 @@ if (!route.name.startsWith('type-project-settings')) {
 		ogDescription: () => project.value?.description ?? PROJECT_NOT_FOUND_DESCRIPTION,
 		ogImage: () =>
 			project.value
-				? (project.value?.icon_url ?? 'https://cdn.modrinth.com/placeholder-square.png')
-				: 'https://cdn.modrinth.com/not-found.png',
+				? (project.value?.icon_url ??
+					'https://cdn.vanillatyme.com/placeholders/placeholder-square.png')
+				: 'https://cdn.vanillatyme.com/placeholders/not-found.png',
 		ogUrl: createCanonicalUrl,
 		robots: () => (project.value?.status === 'approved' ? 'all' : 'noindex'),
 	})
@@ -2194,11 +2007,6 @@ function handleProjectHeaderPrimary(event) {
 	} else {
 		downloadModal.value?.show(event)
 	}
-}
-
-function dismissProjectHeaderCreateServerPrompt() {
-	flags.value.showProjectPageCreateServersTooltip = false
-	saveFeatureFlags()
 }
 
 function followProjectFromHeader() {

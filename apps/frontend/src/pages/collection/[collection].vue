@@ -555,7 +555,7 @@ const followingCollection = computed(() =>
 	isFollowingCollection.value
 		? {
 				id: 'following',
-				icon_url: 'https://cdn.modrinth.com/follow-collection.png',
+				icon_url: 'https://cdn.vanillatyme.com/placeholders/follow-collection.png',
 				name: formatMessage(commonMessages.followedProjectsLabel),
 				description: formatMessage(messages.followingCollectionDescription),
 				status: 'private',
@@ -733,7 +733,7 @@ watch(
 				}),
 				ogTitle: formatMessage(messages.collectionTitle, { name: col.name }),
 				ogDescription: col.description,
-				ogImage: col.icon_url ?? 'https://cdn.modrinth.com/placeholder-square.png',
+				ogImage: col.icon_url ?? 'https://cdn.vanillatyme.com/placeholders/placeholder-square.png',
 				ogUrl: canonicalUrl,
 				robots: col.status === 'listed' && hasPublicProjects ? 'all' : 'noindex',
 			})

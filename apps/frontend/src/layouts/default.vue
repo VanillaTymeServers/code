@@ -40,9 +40,6 @@
 				</div>
 			</div>
 		</div>
-		<RussiaBanner v-if="flags.showAllBanners || isRussia" />
-		<TaxIdMismatchBanner v-if="flags.showAllBanners || showTinMismatchBanner" />
-		<TaxComplianceBanner v-if="flags.showAllBanners || showTaxComplianceBanner" />
 		<VerifyEmailBanner
 			v-if="
 				flags.showAllBanners ||
@@ -50,22 +47,9 @@
 			"
 			:has-email="!!auth?.user?.email"
 		/>
-		<SubscriptionPaymentFailedBanner
-			v-if="
-				flags.showAllBanners ||
-				(user.subscriptions.some((x) => x.status === 'payment-failed') &&
-					route.path !== '/settings/billing')
-			"
-		/>
 		<PreviewBanner
 			v-if="
 				flags.showAllBanners || (config.public.buildEnv === 'production' && config.public.preview)
-			"
-		/>
-		<StagingBanner
-			v-if="
-				flags.showAllBanners ||
-				config.public.apiBaseUrl.startsWith('https://staging-api.modrinth.com')
 			"
 		/>
 		<GeneratedStateErrorsBanner
@@ -73,7 +57,6 @@
 			:api-url="config.public.apiBaseUrl"
 		/>
 
-		<ViewOnModrinthBanner />
 		<header
 			class="desktop-only relative z-[5] mx-auto grid max-w-[1280px] grid-cols-[1fr_auto] items-center gap-2 px-6 py-4 lg:grid-cols-[auto_1fr_auto]"
 		>
@@ -253,49 +236,6 @@
 						},
 						{
 							type: 'divider',
-							shown: isAdmin(auth.user),
-						},
-						{
-							id: 'servers-lookup',
-							label: 'Server lookup',
-							icon: ServerSearchIcon,
-							type: 'link',
-							to: '/admin/servers/lookup',
-							shown: isAdmin(auth.user),
-						},
-						{
-							id: 'servers-notices',
-							label: 'Server notices',
-							icon: IssuesIcon,
-							type: 'link',
-							to: '/admin/servers/notices',
-							shown: isAdmin(auth.user),
-						},
-						{
-							id: 'servers-transfers',
-							label: 'Server transfers',
-							icon: TransferIcon,
-							type: 'link',
-							to: '/admin/servers/transfers',
-							shown: isAdmin(auth.user),
-						},
-						{
-							id: 'servers-nodes',
-							label: 'Credit server nodes',
-							icon: ServerIcon,
-							action: (event) => $refs.modal_batch_credit.show(event),
-							shown: isAdmin(auth.user),
-						},
-						{
-							type: 'divider',
-							shown: isAdmin(auth.user),
-						},
-						{
-							id: 'affiliates',
-							label: 'Affiliate links',
-							icon: AffiliateIcon,
-							type: 'link',
-							to: '/admin/affiliates',
 							shown: isAdmin(auth.user),
 						},
 						{
@@ -611,7 +551,6 @@
 			<ProjectCreateModal v-if="auth.user" ref="modal_creation" />
 			<CollectionCreateModal ref="modal_collection_creation" />
 			<OrganizationCreateModal ref="modal_organization_creation" />
-			<BatchCreditModal v-if="auth.user && isAdmin(auth.user)" ref="modal_batch_credit" />
 			<slot id="main" />
 		</main>
 		<ModrinthFooter />
@@ -619,7 +558,6 @@
 </template>
 <script setup>
 import {
-	AffiliateIcon,
 	ArrowLeftRightIcon,
 	BellIcon,
 	BookOpenIcon,
@@ -636,7 +574,6 @@ import {
 	HamburgerIcon,
 	HashIcon,
 	HomeIcon,
-	IssuesIcon,
 	LibraryIcon,
 	LogInIcon,
 	LogOutIcon,
@@ -649,8 +586,6 @@ import {
 	ReportIcon,
 	ScaleIcon,
 	SearchIcon,
-	ServerIcon,
-	ServerSearchIcon,
 	SettingsIcon,
 	ShieldAlertIcon,
 	ShieldUserIcon,
@@ -658,7 +593,6 @@ import {
 	StoreIcon,
 	SunIcon,
 	ToggleRightIcon,
-	TransferIcon,
 	UserIcon,
 	UserSearchIcon,
 	VoteIcon,
@@ -670,34 +604,21 @@ import {
 	ButtonLink,
 	commonMessages,
 	commonSettingsMessages,
-	createHostingIntercomIdentityKey,
 	defineMessages,
 	injectModrinthClient,
 	injectNotificationManager,
-	injectPageContext,
 	injectUserPreferences,
-	providePageContext,
 	TeleportOverflowMenu,
 	TooltipDirective,
-	useHostingIntercom,
 	UserRoleIcon,
 	useVIntl,
 } from '@modrinth/ui'
 import { isAdmin, isStaff } from '@modrinth/utils'
-import { useQuery } from '@tanstack/vue-query'
 
-import { getTaxThreshold } from '@/providers/creator-withdraw.ts'
 import TextLogo from '~/components/brand/TextLogo.vue'
-import BatchCreditModal from '~/components/ui/admin/BatchCreditModal.vue'
 import GeneratedStateErrorsBanner from '~/components/ui/banner/GeneratedStateErrorsBanner.vue'
 import PreviewBanner from '~/components/ui/banner/PreviewBanner.vue'
-import RussiaBanner from '~/components/ui/banner/RussiaBanner.vue'
-import StagingBanner from '~/components/ui/banner/StagingBanner.vue'
-import SubscriptionPaymentFailedBanner from '~/components/ui/banner/SubscriptionPaymentFailedBanner.vue'
-import TaxComplianceBanner from '~/components/ui/banner/TaxComplianceBanner.vue'
-import TaxIdMismatchBanner from '~/components/ui/banner/TaxIdMismatchBanner.vue'
 import VerifyEmailBanner from '~/components/ui/banner/VerifyEmailBanner.vue'
-import ViewOnModrinthBanner from '~/components/ui/banner/ViewOnModrinthBanner.vue'
 import CollectionCreateModal from '~/components/ui/create/CollectionCreateModal.vue'
 import OrganizationCreateModal from '~/components/ui/create/OrganizationCreateModal.vue'
 import ProjectCreateModal from '~/components/ui/create/ProjectCreateModal.vue'
@@ -711,18 +632,18 @@ import {
 import { getSignInRouteObj } from '~/composables/auth.ts'
 import { fetchCurrentSeasonShops } from '~/composables/queries/season'
 import { logout } from '~/composables/user.js'
-import { errors as generatedStateErrors, taxComplianceThresholds } from '~/generated/state.json'
+import { errors as generatedStateErrors } from '~/generated/state.json'
 import { LIVE_MAP_URL } from '~/helpers/homepage'
 import { provideCurrentProjectId } from '~/providers/current-project.ts'
 
-const country = useUserCountry()
+const PRIDE_MONTH = 5
+const showPrideBackdrop = computed(() => new Date().getMonth() === PRIDE_MONTH)
 
 const { formatMessage } = useVIntl()
 const { addNotification } = injectNotificationManager()
 const { updatePreferences } = injectUserPreferences()
 
 const auth = await useAuth()
-const user = await useUser()
 
 const cosmetics = useCosmetics()
 const flags = useFeatureFlags()
@@ -734,79 +655,9 @@ const signInRouteObj = computed(() => getSignInRouteObj(route))
 const storedAccounts = useStoredAccounts()
 const link = config.public.siteUrl + route.path.replace(/\/+$/, '')
 const client = injectModrinthClient()
-const pageContext = injectPageContext()
-const hostingIntercomActive = computed(() => route.path.startsWith('/hosting') && !!auth.value.user)
-const hostingIntercomServerId = computed(() => {
-	const rawId = route.params.id
-	return Array.isArray(rawId) ? rawId[0] : rawId
-})
-const hostingIntercom = useHostingIntercom({
-	enabled: hostingIntercomActive,
-	appId: computed(() => config.public.intercomAppId),
-	fetchToken: fetchIntercomToken,
-	identityKey: computed(() =>
-		createHostingIntercomIdentityKey(auth.value.user, hostingIntercomServerId.value),
-	),
-})
-
-providePageContext({
-	...pageContext,
-	intercomBubble: hostingIntercom.intercomBubble,
-})
-
-const { data: payoutBalance } = useQuery({
-	queryKey: ['payout', 'balance'],
-	queryFn: () => client.labrinth.payout_v3.getBalance(),
-	enabled: computed(() => !!auth.value.user),
-})
-
-const showTaxComplianceBanner = computed(() => {
-	if (flags.value.testTaxForm && auth.value.user) return true
-	const bal = payoutBalance.value
-	if (!bal) return false
-	const threshold = getTaxThreshold(taxComplianceThresholds)
-	const thresholdMet = (bal.withdrawn_ytd ?? 0) >= threshold
-	const status = bal.form_completion_status ?? 'unknown'
-	const isComplete = status === 'complete'
-	const isTinMismatch = status === 'tin-mismatch'
-	return !!auth.value.user && thresholdMet && !isComplete && !isTinMismatch
-})
-
-const showTinMismatchBanner = computed(() => {
-	const bal = payoutBalance.value
-	if (!bal) return false
-	const status = bal.form_completion_status ?? 'unknown'
-	return !!auth.value.user && status === 'tin-mismatch'
-})
-
-const PRIDE_COLLECTION_ID = 'M4c3ITvd'
-const PRIDE_ARTICLE_SLUGS = ['pride-campaign-2025', 'pride-campaign-2026', 'proud-of-you-2026']
-
-const { data: prideCollection } = useQuery({
-	queryKey: computed(() => ['collection', PRIDE_COLLECTION_ID]),
-	queryFn: () => client.labrinth.collections.get(PRIDE_COLLECTION_ID),
-})
-
-const prideProjectIds = computed(() => new Set(prideCollection.value?.projects ?? []))
 
 const currentProjectId = ref()
 provideCurrentProjectId(currentProjectId)
-
-const showPrideBackdrop = computed(() => {
-	if (PRIDE_ARTICLE_SLUGS.includes(route.params.slug)) {
-		return true
-	}
-	if (route.params.collection === PRIDE_COLLECTION_ID) {
-		return true
-	}
-	return !!currentProjectId.value && prideProjectIds.value.has(currentProjectId.value)
-})
-
-async function fetchIntercomToken() {
-	return $fetch('/api/intercom/messenger-jwt', {
-		query: hostingIntercomServerId.value ? { server_id: hostingIntercomServerId.value } : {},
-	})
-}
 
 function requireVerifiedEmail(action) {
 	if (!auth.value.user?.email_verified) {
@@ -925,10 +776,6 @@ const messages = defineMessages({
 		id: 'layout.action.manage-server-notices',
 		defaultMessage: 'Manage server notices',
 	},
-	manageAffiliates: {
-		id: 'layout.action.manage-affiliates',
-		defaultMessage: 'Manage affiliate links',
-	},
 	analyticsEvents: {
 		id: 'layout.action.analytics-events',
 		defaultMessage: 'Analytics events',
@@ -1026,7 +873,7 @@ useSeoMeta({
 				'Vanilla Tyme SMP is a Minecraft server that is focused on providing a vanilla experience with a few quality of life plugins.',
 		}),
 	ogType: 'website',
-	ogImage: 'https://cdn.modrinth.com/modrinth-new.png',
+	ogImage: 'https://cdn.vanillatyme.com/placeholders/scoop.png',
 	ogUrl: link,
 
 	// Twitter
@@ -1233,8 +1080,6 @@ const isDiscovering = computed(
 const isDiscoveringSubpage = computed(
 	() => route.name && route.name.startsWith('type-project') && !route.query.sid,
 )
-
-const isRussia = computed(() => country.value === 'ru')
 
 const rCount = ref(0)
 

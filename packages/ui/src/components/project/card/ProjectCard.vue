@@ -21,7 +21,7 @@
 				/>
 				<img
 					v-else
-					src="https://cdn.modrinth.com/landing-new/landing.webp"
+					src="https://cdn.vanillatyme.com/placeholders/shop-banner.webp"
 					alt=""
 					class="absolute w-full h-full inset-0 object-cover object-center placeholder-banner scale-[200%]"
 				/>

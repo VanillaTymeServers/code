@@ -8,7 +8,7 @@ pub(super) fn validate(
     disclosures: Option<&[ProjectDisclosure]>,
 ) -> Vec<ProjectNag> {
     let mut nags = Vec::new();
-    if disclosures.is_some_and(|disclosures| disclosures.is_empty()) {
+    if disclosures.is_some_and(|disclosures| disclosures.is_empty()) && !project.project_types.iter().any(|t| t == "shop") {
         let (project_type, _) =
             LegacyProject::get_project_type(&project.project_types);
         nags.push(
