@@ -28,8 +28,7 @@
 			<span class="label">
 				<span class="label__title">Invite a member</span>
 				<span class="label__description">
-					Enter the Modrinth username of the person you'd like to invite to be a member of this
-					project.
+					Enter the username of the person you'd like to invite to be a member of this shop.
 				</span>
 			</span>
 			<div class="input-group">
@@ -53,20 +52,18 @@
 			</div>
 			<div class="adjacent-input">
 				<span class="label">
-					<span class="label__title">Leave project</span>
-					<span class="label__description"> Remove yourself as a member of this project. </span>
+					<span class="label__title">Leave shop</span>
+					<span class="label__description"> Remove yourself as a member of this shop. </span>
 				</span>
 				<Button
 					type="colored"
 					color="red"
 					:disabled="currentMember?.is_owner"
-					:title="
-						currentMember?.is_owner ? 'You cannot leave the project if you are the owner!' : ''
-					"
+					:title="currentMember?.is_owner ? 'You cannot leave the shop if you are the owner!' : ''"
 					@click="leaveProject()"
 				>
 					<UserXIcon />
-					Leave project
+					Leave shop
 				</Button>
 			</div>
 		</Card>
@@ -82,7 +79,7 @@
 					<div class="text">
 						<nuxt-link :to="'/user/' + member.user.username" class="name">
 							<p>{{ member.name }}</p>
-							<CrownIcon v-if="member.is_owner" v-tooltip="'Project owner'" />
+							<CrownIcon v-if="member.is_owner" v-tooltip="'Shop owner'" />
 						</nuxt-link>
 						<p>{{ member.role }}</p>
 					</div>
@@ -108,7 +105,7 @@
 					<label :for="`member-${allTeamMembers[index].user.username}-role`" class="w-fit">
 						<span class="label__title">Role</span>
 						<span class="label__description">
-							The title of the role that this member plays for this project.
+							The title of the role that this member plays for this shop.
 						</span>
 					</label>
 					<Input
@@ -117,48 +114,11 @@
 						:disabled="(currentMember?.permissions & EDIT_MEMBER) !== EDIT_MEMBER"
 					/>
 				</div>
-				<div class="adjacent-input">
-					<label
-						:for="`member-${allTeamMembers[index].user.username}-monetization-weight`"
-						class="w-fit"
-					>
-						<span class="label__title">Monetization weight</span>
-						<span class="label__description">
-							Relative to all other members' monetization weights, this determines what portion of
-							this project's revenue goes to this member.
-						</span>
-					</label>
-					<Input
-						:id="`member-${allTeamMembers[index].user.username}-monetization-weight`"
-						v-model="allTeamMembers[index].payouts_split"
-						type="number"
-						:disabled="(currentMember?.permissions & EDIT_MEMBER) !== EDIT_MEMBER"
-					/>
-				</div>
 				<template v-if="!member.is_owner">
 					<span class="label">
 						<span class="label__title">Permissions</span>
 					</span>
 					<div v-if="allTeamMembers[index]" class="permissions">
-						<Checkbox
-							:model-value="(member?.permissions & UPLOAD_VERSION) === UPLOAD_VERSION"
-							:disabled="
-								(currentMember?.permissions & EDIT_MEMBER) !== EDIT_MEMBER ||
-								(currentMember?.permissions & UPLOAD_VERSION) !== UPLOAD_VERSION
-							"
-							:label="isServerProject ? 'Update content' : 'Upload version'"
-							@update:model-value="allTeamMembers[index].permissions ^= UPLOAD_VERSION"
-						/>
-						<Checkbox
-							v-if="!isServerProject"
-							:model-value="(member?.permissions & DELETE_VERSION) === DELETE_VERSION"
-							:disabled="
-								(currentMember?.permissions & EDIT_MEMBER) !== EDIT_MEMBER ||
-								(currentMember?.permissions & DELETE_VERSION) !== DELETE_VERSION
-							"
-							label="Delete version"
-							@update:model-value="allTeamMembers[index].permissions ^= DELETE_VERSION"
-						/>
 						<Checkbox
 							:model-value="(member?.permissions & EDIT_DETAILS) === EDIT_DETAILS"
 							:disabled="
@@ -207,7 +167,7 @@
 								(currentMember?.permissions & EDIT_MEMBER) !== EDIT_MEMBER ||
 								(currentMember?.permissions & DELETE_PROJECT) !== DELETE_PROJECT
 							"
-							label="Delete project"
+							label="Delete shop"
 							@update:model-value="allTeamMembers[index].permissions ^= DELETE_PROJECT"
 						/>
 						<Checkbox
@@ -218,15 +178,6 @@
 							"
 							label="View analytics"
 							@update:model-value="allTeamMembers[index].permissions ^= VIEW_ANALYTICS"
-						/>
-						<Checkbox
-							:model-value="(member?.permissions & VIEW_PAYOUTS) === VIEW_PAYOUTS"
-							:disabled="
-								(currentMember?.permissions & EDIT_MEMBER) !== EDIT_MEMBER ||
-								(currentMember?.permissions & VIEW_PAYOUTS) !== VIEW_PAYOUTS
-							"
-							label="View revenue"
-							@update:model-value="allTeamMembers[index].permissions ^= VIEW_PAYOUTS"
 						/>
 					</div>
 				</template>
@@ -367,8 +318,8 @@
 					<label :for="`member-${allOrgMembers[index].user.username}-override-perms`" class="w-fit">
 						<span class="label__title">Override values</span>
 						<span class="label__description">
-							Override organization default values and assign custom permissions, roles, and
-							monetization weights to this user on the project.
+							Override organization default values and assign custom permissions and roles to this
+							user on the shop.
 						</span>
 					</label>
 					<Toggle
@@ -381,7 +332,7 @@
 					<label :for="`member-${allOrgMembers[index].user.username}-role`" class="w-fit">
 						<span class="label__title">Role</span>
 						<span class="label__description">
-							The title of the role that this member plays for this project.
+							The title of the role that this member plays for this shop.
 						</span>
 					</label>
 					<Input
@@ -393,53 +344,11 @@
 						"
 					/>
 				</div>
-				<div class="adjacent-input">
-					<label
-						:for="`member-${allOrgMembers[index].user.username}-monetization-weight`"
-						class="w-fit"
-					>
-						<span class="label__title">Monetization weight</span>
-						<span class="label__description">
-							Relative to all other members' monetization weights, this determines what portion of
-							this project's revenue goes to this member.
-						</span>
-					</label>
-					<Input
-						:id="`member-${allOrgMembers[index].user.username}-monetization-weight`"
-						v-model="allOrgMembers[index].payouts_split"
-						type="number"
-						:disabled="
-							(currentMember?.permissions & EDIT_MEMBER) !== EDIT_MEMBER ||
-							!allOrgMembers[index].override
-						"
-					/>
-				</div>
 				<template v-if="!member.is_owner">
 					<span class="label">
 						<span class="label__title">Permissions</span>
 					</span>
 					<div class="permissions">
-						<Checkbox
-							:model-value="(member?.permissions & UPLOAD_VERSION) === UPLOAD_VERSION"
-							:disabled="
-								(currentMember?.permissions & EDIT_MEMBER) !== EDIT_MEMBER ||
-								(currentMember?.permissions & UPLOAD_VERSION) !== UPLOAD_VERSION ||
-								!allOrgMembers[index].override
-							"
-							:label="isServerProject ? 'Update content' : 'Upload version'"
-							@update:model-value="allOrgMembers[index].permissions ^= UPLOAD_VERSION"
-						/>
-						<Checkbox
-							v-if="!isServerProject"
-							:model-value="(member?.permissions & DELETE_VERSION) === DELETE_VERSION"
-							:disabled="
-								(currentMember?.permissions & EDIT_MEMBER) !== EDIT_MEMBER ||
-								(currentMember?.permissions & DELETE_VERSION) !== DELETE_VERSION ||
-								!allOrgMembers[index].override
-							"
-							label="Delete version"
-							@update:model-value="allOrgMembers[index].permissions ^= DELETE_VERSION"
-						/>
 						<Checkbox
 							:model-value="(member?.permissions & EDIT_DETAILS) === EDIT_DETAILS"
 							:disabled="
@@ -496,7 +405,7 @@
 								(currentMember?.permissions & DELETE_PROJECT) !== DELETE_PROJECT ||
 								!allOrgMembers[index].override
 							"
-							label="Delete project"
+							label="Delete shop"
 							@update:model-value="allOrgMembers[index].permissions ^= DELETE_PROJECT"
 						/>
 						<Checkbox
@@ -508,16 +417,6 @@
 							"
 							label="View analytics"
 							@update:model-value="allOrgMembers[index].permissions ^= VIEW_ANALYTICS"
-						/>
-						<Checkbox
-							:model-value="(member?.permissions & VIEW_PAYOUTS) === VIEW_PAYOUTS"
-							:disabled="
-								(currentMember?.permissions & EDIT_MEMBER) !== EDIT_MEMBER ||
-								(currentMember?.permissions & VIEW_PAYOUTS) !== VIEW_PAYOUTS ||
-								!allOrgMembers[index].override
-							"
-							label="View revenue"
-							@update:model-value="allOrgMembers[index].permissions ^= VIEW_PAYOUTS"
 						/>
 					</div>
 				</template>
@@ -601,7 +500,6 @@ const {
 
 useProjectSettingsHeadTitle(commonProjectSettingsMessages.members)
 
-const isServerProject = computed(() => projectV3.value?.minecraft_server != null)
 const isShopProject = computed(() => projectV3.value?.shop != null)
 
 const auth = await useAuth()
@@ -661,8 +559,6 @@ const selectedOrganization = computed(() =>
 	(organizations.value ?? []).find((org) => org.id === selectedOrganizationId.value),
 )
 
-const UPLOAD_VERSION = 1 << 0
-const DELETE_VERSION = 1 << 1
 const EDIT_DETAILS = 1 << 2
 const EDIT_BODY = 1 << 3
 const MANAGE_INVITES = 1 << 4
@@ -670,7 +566,6 @@ const REMOVE_MEMBER = 1 << 5
 const EDIT_MEMBER = 1 << 6
 const DELETE_PROJECT = 1 << 7
 const VIEW_ANALYTICS = 1 << 8
-const VIEW_PAYOUTS = 1 << 9
 
 const onAddToOrg = useClientTry(async () => {
 	if (!selectedOrganizationId.value) return
@@ -682,8 +577,8 @@ const onAddToOrg = useClientTry(async () => {
 	await updateMembers()
 
 	addNotification({
-		title: 'Project transferred',
-		text: 'Your project has been transferred to the organization.',
+		title: 'Shop transferred',
+		text: 'Your shop has been transferred to the organization.',
 		type: 'success',
 	})
 })
@@ -700,8 +595,8 @@ const onRemoveFromOrg = useClientTry(async () => {
 	await updateMembers()
 
 	addNotification({
-		title: 'Project removed',
-		text: 'Your project has been removed from the organization.',
+		title: 'Shop removed',
+		text: 'Your shop has been removed from the organization.',
 		type: 'success',
 	})
 })
@@ -743,7 +638,7 @@ const removeTeamMember = async (index) => {
 		await updateMembers()
 		addNotification({
 			title: 'Member removed',
-			text: "Your project's member has been removed.",
+			text: "Your shop's member has been removed.",
 			type: 'success',
 		})
 	} catch (err) {
@@ -780,7 +675,7 @@ const updateTeamMember = async (index) => {
 		await updateMembers()
 		addNotification({
 			title: 'Member(s) updated',
-			text: "Your project's member(s) has been updated.",
+			text: "Your shop's member(s) has been updated.",
 			type: 'success',
 		})
 	} catch (err) {
@@ -831,7 +726,7 @@ const transferOwnership = async (index) => {
 		})
 		addNotification({
 			title: 'Member ownership transferred',
-			text: `${allTeamMembers.value[index].user.username} is now the owner of the project.`,
+			text: `${allTeamMembers.value[index].user.username} is now the owner of the shop.`,
 			type: 'success',
 		})
 		await updateMembers()
@@ -876,7 +771,7 @@ async function updateOrgMember(index) {
 		await updateMembers()
 		addNotification({
 			title: 'Member(s) updated',
-			text: "Your project's member(s) has been updated.",
+			text: "Your shop's member(s) has been updated.",
 			type: 'success',
 		})
 	} catch (err) {

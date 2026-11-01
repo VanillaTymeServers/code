@@ -8,22 +8,16 @@ import StyledEmail from '../shared/StyledEmail.vue'
 	<StyledEmail
 		title="New moderation message"
 		:manual-links="[
-			{ link: 'https://modrinth.com/legal/rules', label: 'Community Guidelines' },
+			{ link: 'https://vanillatyme.com/legal/rules', label: 'Community Guidelines' },
 			{
-				link: 'https://modrinth.com/project/{project.id}/moderation',
-				label: 'Your project\'s moderation thread',
+				link: 'https://vanillatyme.com/shop/{project.id}/moderation',
+				label: 'Your shop\'s moderation thread',
 			},
-			{ link: 'https://support.modrinth.com', label: 'Support Portal' },
+			{ link: 'https://discord.vanillatymeservers.com', label: 'Discord' },
 		]"
 	>
 		<Section class="mb-4 mt-2">
-			<Img
-				src="{project.icon_url}"
-				alt="project icon"
-				width="64"
-				height="64"
-				class="block h-auto"
-			/>
+			<Img src="{project.icon_url}" alt="shop icon" width="64" height="64" class="block h-auto" />
 		</Section>
 		<Heading as="h1" class="mb-2 text-2xl font-bold"
 			>New message from moderators on {project.name}</Heading
@@ -32,9 +26,9 @@ import StyledEmail from '../shared/StyledEmail.vue'
 		<Text class="text-base">Hi <span class="no-auto-link">{user.name}</span>,</Text>
 
 		<Text class="text-base">
-			Modrinth's moderation team has left a message on your project,
+			Vanilla Tyme's moderation team has left a message on your shop,
 			<VLink
-				href="https://modrinth.com/project/{project.id}/moderation"
+				href="https://vanillatyme.com/shop/{project.id}/moderation"
 				class="text-green underline"
 				>{project.name}</VLink
 			>.
@@ -44,15 +38,14 @@ import StyledEmail from '../shared/StyledEmail.vue'
 			<Text class="m-0 text-base">
 				Please
 				<VLink
-					href="https://modrinth.com/project/{project.id}/moderation"
+					href="https://vanillatyme.com/shop/{project.id}/moderation"
 					class="text-green underline"
 					>sign in to view the message</VLink
 				>
-				and reply if requested. It's important to address feedback from the moderation team
-				promptly.
+				and reply if requested. It's important to address feedback from the staff team promptly.
 			</Text>
 		</Section>
 
-		<Text class="text-base">Thank you for publishing on Modrinth!</Text>
+		<Text class="text-base">Thank you for publishing on Vanilla Tyme!</Text>
 	</StyledEmail>
 </template>

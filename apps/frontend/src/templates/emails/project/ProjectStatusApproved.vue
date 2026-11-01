@@ -6,50 +6,51 @@ import StyledEmail from '../shared/StyledEmail.vue'
 
 <template>
 	<StyledEmail
-		title="Your project, {project.name}, has been approved 🎉"
+		title="Your shop, {project.name}, has been approved 🎉"
 		:manual-links="[
-			{ link: 'https://modrinth.com/project/{project.id}', label: 'Project page' },
-			{ link: 'https://modrinth.com/legal/rules', label: 'Community Guidelines' },
-			{ link: 'https://support.modrinth.com', label: 'Support Portal' },
+			{ link: 'https://vanillatyme.com/shop/{project.id}', label: 'Shop page' },
+			{ link: 'https://vanillatyme.com/legal/rules', label: 'Content Rules' },
+			{ link: 'https://discord.vanillatymeservers.com', label: 'Discord' },
 		]"
 	>
 		<Section class="mb-4 mt-2">
 			<Img
 				src="{project.icon_url}"
-				alt="project icon"
+				alt="shop icon"
 				width="64"
 				height="64"
 				class="block h-auto rounded-lg"
 			/>
 		</Section>
 		<Heading as="h1" class="mb-2 text-2xl font-bold"
-			>Your project, {project.name}, has been approved 🎉</Heading
+			>Your shop, {project.name}, has been approved 🎉</Heading
 		>
 
 		<Text class="text-base">Congratulations <span class="no-auto-link">{user.name}</span>,</Text>
 
 		<Text class="text-base">
-			Your project
-			<VLink href="https://modrinth.com/project/{project.id}" class="text-green underline"
+			Your shop
+			<VLink href="https://vanillatyme.com/shop/{project.id}" class="text-green underline"
 				>{project.name}</VLink
 			>
-			has been <b>approved</b> by the moderation team!
+			has been <b>approved</b> by the staff team!
 		</Text>
 
 		<Button
-			href="https://modrinth.com/project/{project.id}"
+			href="https://vanillatyme.com/shop/{project.id}"
 			target="_blank"
 			class="text-accentContrast inline-block rounded-[12px] bg-brand pb-3 pl-4 pr-4 pt-3 text-[14px] font-bold"
 		>
-			View project
+			View shop
 		</Button>
 
 		<Text class="text-base">
 			If you have questions or believe something isn't correct, you can reach out via the
-			<VLink href="https://support.modrinth.com" class="text-green underline">Support Portal</VLink
+			<VLink href="https://discord.vanillatymeservers.com" class="text-green underline"
+				>Discord</VLink
 			>.
 		</Text>
 
-		<Text class="text-base">Thank you for sharing your work with the Modrinth community!</Text>
+		<Text class="text-base">Thank you for sharing your work with the Vanilla Tyme community!</Text>
 	</StyledEmail>
 </template>

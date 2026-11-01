@@ -7,7 +7,7 @@ import StyledEmail from '../shared/StyledEmail.vue'
 <template>
 	<StyledEmail
 		title="A new personal access token has been created"
-		:manual-links="[{ link: 'https://support.modrinth.com', label: 'Support Portal' }]"
+		:manual-links="[{ link: 'https://discord.vanillatymeservers.com', label: 'Discord' }]"
 	>
 		<Heading as="h1" class="mb-2 text-2xl font-bold">
 			A new personal access token has been created
@@ -19,7 +19,8 @@ import StyledEmail from '../shared/StyledEmail.vue'
 		</Text>
 		<Text class="text-muted text-base">
 			If you did not create this token, please contact us immediately through our
-			<VLink href="https://support.modrinth.com" class="text-green underline">Support Portal</VLink
+			<VLink href="https://discord.vanillatymeservers.com" class="text-green underline"
+				>Discord</VLink
 			>.
 		</Text>
 	</StyledEmail>

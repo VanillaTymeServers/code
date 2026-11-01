@@ -7,18 +7,19 @@ import StyledEmail from '../shared/StyledEmail.vue'
 <template>
 	<StyledEmail
 		title="New sign-in method added"
-		:manual-links="[{ link: 'https://support.modrinth.com', label: 'Support Portal' }]"
+		:manual-links="[{ link: 'https://discord.vanillatymeservers.com', label: 'Discord' }]"
 	>
 		<Heading as="h1" class="mb-2 text-2xl font-bold"> New sign-in method added </Heading>
 
 		<Text class="text-muted text-base">Hi <span class="no-auto-link">{user.name}</span>,</Text>
 		<Text class="text-muted text-base">
 			Your {authprovider.name} account has been connected and you can now use it to sign in to your
-			Modrinth account.
+			Vanilla Tyme account.
 		</Text>
 		<Text class="text-muted text-base">
 			If you did not make this change, please contact us immediately through our
-			<VLink href="https://support.modrinth.com" class="text-green underline">Support Portal</VLink
+			<VLink href="https://discord.vanillatymeservers.com" class="text-green underline"
+				>Discord</VLink
 			>.
 		</Text>
 	</StyledEmail>

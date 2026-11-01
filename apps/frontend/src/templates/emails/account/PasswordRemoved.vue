@@ -7,19 +7,20 @@ import StyledEmail from '../shared/StyledEmail.vue'
 <template>
 	<StyledEmail
 		title="Your password has been removed"
-		:manual-links="[{ link: 'https://support.modrinth.com', label: 'Support Portal' }]"
+		:manual-links="[{ link: 'https://discord.vanillatymeservers.com', label: 'Discord' }]"
 	>
 		<Heading as="h1" class="mb-2 text-2xl font-bold"> Your password has been removed </Heading>
 
 		<Text class="text-muted text-base">Hi <span class="no-auto-link">{user.name}</span>,</Text>
 		<Text class="text-muted text-base">
 			At your request, your password has been removed from your account. You must now use a linked
-			authentication provider (such as your {passremoved.provider} account) to log into your
-			Modrinth account.</Text
+			authentication provider (such as your {passremoved.provider} account) to log into your Vanilla
+			Tyme account.</Text
 		>
 		<Text class="text-muted text-base">
 			If you did not make this change, please contact us immediately through our
-			<VLink href="https://support.modrinth.com" class="text-green underline">Support Portal</VLink
+			<VLink href="https://discord.vanillatymeservers.com" class="text-green underline"
+				>Discord</VLink
 			>.
 		</Text>
 	</StyledEmail>
