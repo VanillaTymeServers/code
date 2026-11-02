@@ -74,7 +74,28 @@
 						</span>
 					</div>
 				</div>
-
+				<div v-if="selectedEntry.contents?.length" class="flex flex-col gap-1">
+					<span class="text-sm text-secondary">{{ formatMessage(messages.contentsLabel) }}</span>
+					<div class="grid grid-cols-9 gap-1">
+						<div
+							v-for="slot in 27"
+							:key="slot"
+							class="relative flex aspect-square items-center justify-center rounded border border-solid border-surface-4 bg-surface-2"
+						>
+							<template v-if="stackAt(selectedEntry, slot)">
+								<img
+									v-tooltip="itemName(stackAt(selectedEntry, slot)?.item ?? '')"
+									:src="itemIcon(stackAt(selectedEntry, slot)?.item ?? '')"
+									:alt="itemName(stackAt(selectedEntry, slot)?.item ?? '')"
+									class="size-6 object-contain [image-rendering:pixelated]"
+								/>
+								<span class="absolute bottom-0 right-0.5 text-[10px] font-bold text-contrast">
+									{{ stackAt(selectedEntry, slot)?.amount }}
+								</span>
+							</template>
+						</div>
+					</div>
+				</div>
 				<div v-if="selectedEntry.note" class="flex flex-col gap-1">
 					<span class="text-sm text-secondary">{{ formatMessage(messages.noteLabel) }}</span>
 					<p class="m-0 break-words text-contrast">{{ selectedEntry.note }}</p>
@@ -157,6 +178,9 @@
 					<span class="ml-1 flex min-w-0 flex-1 flex-col">
 						<span class="truncate font-bold text-contrast">{{ displayName(entry) }}</span>
 						<span v-if="entry.note" class="truncate text-sm text-secondary">{{ entry.note }}</span>
+						<span v-if="entry.contents?.length" class="truncate text-sm text-secondary">
+							{{ formatMessage(messages.containsItems, { count: entry.contents.length }) }}
+						</span>
 					</span>
 					<span v-if="!entry.in_stock" class="shrink-0 text-sm text-secondary">
 						{{ formatMessage(messages.outOfStock) }}
@@ -288,6 +312,14 @@ const messages = defineMessages({
 	closeLabel: {
 		id: 'project.inventory.popup.close',
 		defaultMessage: 'Close',
+	},
+	contentsLabel: {
+		id: 'project.inventory.popup.contents',
+		defaultMessage: 'Contents',
+	},
+	containsItems: {
+		id: 'project.inventory.contains-items',
+		defaultMessage: 'Contains {count, plural, one {# item} other {# items}}',
 	},
 	noteLabel: {
 		id: 'project.inventory.popup.note',
@@ -425,9 +457,11 @@ const visibleItems = computed(() => {
 			if (currency.value !== 'all' && entry.price.item !== currency.value) return false
 			return (
 				!query ||
-				[displayName(entry), itemName(entry.item)].some((name) =>
-					name.toLowerCase().includes(query),
-				)
+				[
+					displayName(entry),
+					itemName(entry.item),
+					...(entry.contents ?? []).map((slot) => itemName(slot.item)),
+				].some((name) => name.toLowerCase().includes(query))
 			)
 		})
 		.sort((a, b) => {
@@ -453,6 +487,10 @@ function itemName(id: string) {
 
 function itemIcon(id: string) {
 	return `/items/${toItemId(id)}.png`
+}
+
+function stackAt(entry: InventoryEntry, slot: number) {
+	return entry.contents?.find((stack) => stack.slot === slot - 1)
 }
 
 function displayName(entry: InventoryEntry) {

@@ -4,6 +4,7 @@
 		:header="formatMessage(editing ? messages.editTitle : messages.addTitle)"
 		max-width="680px"
 		scrollable
+		:before-hide="confirmClose"
 	>
 		<div class="flex flex-col gap-4 pb-5">
 			<div v-if="item && priceItem" class="flex items-center gap-3 rounded-2xl bg-surface-2 p-3">
@@ -115,7 +116,37 @@
 				/>
 				<span class="text-sm text-secondary">{{ note.length }} / 100</span>
 			</div>
-
+			<div v-if="isContainer" class="flex flex-col gap-2">
+				<div class="flex items-center justify-between gap-2">
+					<span class="font-semibold text-contrast">
+						{{ formatMessage(messages.contentsLabel) }}
+						<span class="text-sm font-normal text-secondary">
+							{{ formatMessage(messages.contentsUsed, { count: contents.length }) }}
+						</span>
+					</span>
+					<Button type="outlined" @click="(event) => contentsModal?.show(contents, event)">
+						{{ formatMessage(messages.editContents) }}
+					</Button>
+				</div>
+				<div class="grid grid-cols-9 gap-1">
+					<div
+						v-for="slot in 27"
+						:key="slot"
+						class="relative flex aspect-square items-center justify-center rounded border border-solid border-surface-4 bg-surface-2"
+					>
+						<template v-if="contents.find((stack) => stack.slot === slot - 1)">
+							<img
+								:src="`/items/${toItemId(contents.find((stack) => stack.slot === slot - 1)?.item ?? '')}.png`"
+								alt=""
+								class="size-3/4 object-contain [image-rendering:pixelated]"
+							/>
+							<span class="absolute bottom-0 right-0.5 text-xs font-bold text-contrast">
+								{{ contents.find((stack) => stack.slot === slot - 1)?.amount }}
+							</span>
+						</template>
+					</div>
+				</div>
+			</div>
 			<div class="flex flex-col gap-2">
 				<span class="font-semibold text-contrast">
 					{{ formatMessage(messages.descriptionLabel) }}
@@ -124,7 +155,7 @@
 			</div>
 
 			<div class="flex justify-end gap-2.5">
-				<Button type="outlined" @click="modal?.hide()">
+				<Button type="outlined" @click="closeWithoutWarning">
 					<XIcon aria-hidden="true" />
 					{{ formatMessage(commonMessages.cancelButton) }}
 				</Button>
@@ -135,6 +166,14 @@
 			</div>
 		</div>
 	</NewModal>
+	<ShopContentsModal ref="contentsModal" @save="contents = $event" />
+	<ConfirmModal
+		ref="discardModal"
+		:title="formatMessage(messages.discardTitle)"
+		:description="formatMessage(messages.discardDescription)"
+		:proceed-label="formatMessage(messages.discardButton)"
+		@proceed="closeWithoutWarning"
+	/>
 </template>
 
 <script setup lang="ts">
@@ -143,6 +182,7 @@ import { SaveIcon, XIcon } from '@modrinth/assets'
 import {
 	Button,
 	commonMessages,
+	ConfirmModal,
 	defineMessages,
 	Input,
 	MarkdownEditor,
@@ -150,9 +190,10 @@ import {
 	Toggle,
 	useVIntl,
 } from '@modrinth/ui'
-import { getItemName } from '@vanillatyme/mc-items'
+import { getItemName, toItemId } from '@vanillatyme/mc-items'
 
 import ShopItemCombobox from '~/components/ui/ShopItemCombobox.vue'
+import ShopContentsModal from '~/components/ui/ShopContentsModal.vue'
 import ShopItemStack from '~/components/ui/ShopItemStack.vue'
 
 const emit = defineEmits<{
@@ -195,6 +236,12 @@ const messages = defineMessages({
 		id: 'shop.inventory.modal.sale-price-invalid',
 		defaultMessage: 'The sale price must be a whole number lower than the normal price.',
 	},
+	contentsLabel: { id: 'shop.inventory.modal.contents-label', defaultMessage: 'Contents' },
+	contentsUsed: {
+		id: 'shop.inventory.modal.contents-used',
+		defaultMessage: '{count} / 27 slots used',
+	},
+	editContents: { id: 'shop.inventory.modal.edit-contents', defaultMessage: 'Edit contents' },
 	noteLabel: {
 		id: 'shop.inventory.modal.note-label-short',
 		defaultMessage: 'Note (shown on the list)',
@@ -209,6 +256,15 @@ const messages = defineMessages({
 	},
 	inStockLabel: { id: 'shop.inventory.modal.in-stock-label', defaultMessage: 'In stock' },
 	popularLabel: { id: 'shop.inventory.modal.popular-label', defaultMessage: 'Popular' },
+	discardTitle: {
+		id: 'shop.inventory.modal.discard-title',
+		defaultMessage: 'Discard your changes?',
+	},
+	discardDescription: {
+		id: 'shop.inventory.modal.discard-description',
+		defaultMessage: 'Your changes to this item will be lost.',
+	},
+	discardButton: { id: 'shop.inventory.modal.discard-button', defaultMessage: 'Discard' },
 })
 
 const CURRENCIES = ['diamond', 'diamond_block', 'emerald', 'emerald_block', 'netherite_ingot']
@@ -224,8 +280,47 @@ const priceAmount = ref<number | undefined>(1)
 const salePrice = ref<number | undefined>()
 const note = ref('')
 const description = ref('')
+const contents = ref<Labrinth.Projects.v3.InventoryContent[]>([])
+const contentsModal = ref<InstanceType<typeof ShopContentsModal>>()
+
+const isContainer = computed(() => item.value?.endsWith('shulker_box') ?? false)
+
 const inStock = ref(true)
 const popular = ref(false)
+
+const discardModal = ref<InstanceType<typeof ConfirmModal>>()
+const savedState = ref('')
+let skipWarning = false
+
+function currentState() {
+	return JSON.stringify([
+		item.value,
+		customName.value,
+		amount.value,
+		priceItem.value,
+		priceAmount.value,
+		salePrice.value,
+		note.value,
+		description.value,
+		contents.value,
+		inStock.value,
+		popular.value,
+	])
+}
+
+function confirmClose() {
+	if (skipWarning || currentState() === savedState.value) {
+		skipWarning = false
+		return true
+	}
+	discardModal.value?.show()
+	return false
+}
+
+function closeWithoutWarning() {
+	skipWarning = true
+	modal.value?.hide()
+}
 
 function itemName(id: string) {
 	return getItemName(id) ?? id
@@ -263,8 +358,10 @@ function show(entry?: Labrinth.Projects.v3.InventoryEntry, event?: MouseEvent) {
 	salePrice.value = entry?.sale_price ?? undefined
 	note.value = entry?.note ?? ''
 	description.value = entry?.description ?? ''
+	contents.value = entry?.contents ?? []
 	inStock.value = entry?.in_stock ?? true
 	popular.value = entry?.popular ?? false
+	savedState.value = currentState()
 	modal.value?.show(event)
 }
 
@@ -286,10 +383,11 @@ function save() {
 		sale_price: salePrice.value ?? null,
 		note: note.value.trim() || null,
 		description: description.value.trim() || null,
+		contents: isContainer.value ? contents.value : [],
 		in_stock: inStock.value,
 		popular: popular.value,
 	})
-	modal.value?.hide()
+	closeWithoutWarning()
 }
 
 defineExpose({ show })

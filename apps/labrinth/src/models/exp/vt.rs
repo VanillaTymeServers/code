@@ -69,6 +69,29 @@ pub struct InventoryPrice {
     pub amount: u32,
 }
 
+/// One stack inside a container listed in a shop's inventory.
+#[derive(
+    Debug,
+    Clone,
+    PartialEq,
+    Eq,
+    Serialize,
+    Deserialize,
+    Validate,
+    utoipa::ToSchema,
+)]
+pub struct InventoryContent {
+    /// Position of this stack in the container, from 0 to 26.
+    #[validate(range(max = 26))]
+    pub slot: u8,
+    /// ID of the item in this slot, e.g. `torch`.
+    #[validate(length(min = 1, max = 64))]
+    pub item: String,
+    /// How many of the item are in this slot.
+    #[validate(range(min = 1, max = 64))]
+    pub amount: u32,
+}
+
 /// One item listed in a shop's inventory.
 #[derive(
     Debug,
@@ -106,6 +129,10 @@ pub struct InventoryEntry {
     #[serde(default)]
     #[validate(length(max = 1000))]
     pub description: Option<String>,
+    /// Items inside a container, with one entry per slot.
+    #[serde(default)]
+    #[validate(length(max = 27), nested)]
+    pub contents: Vec<InventoryContent>,
     /// Whether the item is currently in stock.
     pub in_stock: bool,
     /// Whether the item is highlighted as popular.

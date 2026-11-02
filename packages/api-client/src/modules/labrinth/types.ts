@@ -1355,6 +1355,13 @@ export namespace Labrinth {
 				amount: number
 			}
 
+			export interface InventoryContent {
+				item: string
+				amount: number
+				slot: number
+			}
+
+
 			export interface InventoryEntry {
 				item: string
 				custom_name?: string | null
@@ -1363,6 +1370,7 @@ export namespace Labrinth {
 				sale_price?: number | null
 				note?: string | null
 				description?: string | null
+				contents?: InventoryContent[]
 				in_stock: boolean
 				popular: boolean
 			}

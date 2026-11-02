@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<ConfirmLeaveModal ref="confirmLeaveModal" />
 		<ShopInventoryEntryModal ref="entryModal" @save="saveEntry" />
 		<ConfirmModal
 			ref="deleteModal"
@@ -134,6 +135,14 @@
 				/>
 			</div>
 		</section>
+
+		<UnsavedChangesPopup
+			:original="{ inventory: savedInventory }"
+			:modified="{ inventory }"
+			:saving="saving"
+			@reset="resetChanges"
+			@save="saveChanges"
+		/>
 	</div>
 </template>
 
@@ -143,6 +152,7 @@ import { EditIcon, GripVerticalIcon, PlusIcon, SearchIcon, TrashIcon } from '@mo
 import {
 	Button,
 	commonMessages,
+	ConfirmLeaveModal,
 	ConfirmModal,
 	defineMessages,
 	EmptyState,
@@ -150,6 +160,8 @@ import {
 	injectProjectPageContext,
 	Input,
 	Toggle,
+	UnsavedChangesPopup,
+	usePageLeaveSafety,
 	useVIntl,
 } from '@modrinth/ui'
 import { isAdmin } from '@modrinth/utils'
@@ -207,8 +219,8 @@ const messages = defineMessages({
 		defaultMessage: 'Delete this item?',
 	},
 	deleteDescription: {
-		id: 'project.settings.inventory.delete-item-description',
-		defaultMessage: "This can't be undone.",
+		id: 'project.settings.inventory.delete-on-save-description',
+		defaultMessage: 'It will be removed when you save your changes.',
 	},
 })
 
@@ -217,7 +229,15 @@ useProjectSettingsHeadTitle(messages.title)
 const entryModal = ref<InstanceType<typeof ShopInventoryEntryModal>>()
 const deleteModal = ref<InstanceType<typeof ConfirmModal>>()
 
-const inventory = computed(() => projectV3.value?.shop?.inventory ?? [])
+const savedInventory = computed(() => projectV3.value?.shop?.inventory ?? [])
+const inventory = ref<InventoryEntry[]>([...savedInventory.value])
+watch(savedInventory, (saved) => {
+	inventory.value = [...saved]
+})
+const hasChanges = computed(
+	() => JSON.stringify(inventory.value) !== JSON.stringify(savedInventory.value),
+)
+const { confirmLeaveModal } = usePageLeaveSafety(hasChanges)
 const editingIndex = ref(-1)
 const deletingIndex = ref(-1)
 const dragIndex = ref(-1)
@@ -277,11 +297,15 @@ function confirmDelete(index: number, event?: MouseEvent) {
 	deleteModal.value?.show(event)
 }
 
-async function saveInventory(newInventory: InventoryEntry[]) {
+function resetChanges() {
+	inventory.value = [...savedInventory.value]
+}
+
+async function saveChanges() {
 	if (saving.value) return
 	saving.value = true
 	try {
-		await patchProjectV3({ shop: { inventory: newInventory } }, false, true)
+		await patchProjectV3({ shop: { inventory: inventory.value } }, false, true)
 	} catch {
 		// patchProjectV3 already shows an error notification
 	} finally {
@@ -296,18 +320,16 @@ function saveEntry(entry: InventoryEntry) {
 	} else {
 		newInventory[editingIndex.value] = entry
 	}
-	saveInventory(newInventory)
+	inventory.value = newInventory
 }
 
 function deleteEntry() {
-	saveInventory(inventory.value.filter((_, index) => index !== deletingIndex.value))
+	inventory.value = inventory.value.filter((_, index) => index !== deletingIndex.value)
 }
 
 function setInStock(index: number, inStock: boolean) {
-	saveInventory(
-		inventory.value.map((entry, entryIndex) =>
-			entryIndex === index ? { ...entry, in_stock: inStock } : entry,
-		),
+	inventory.value = inventory.value.map((entry, entryIndex) =>
+		entryIndex === index ? { ...entry, in_stock: inStock } : entry,
 	)
 }
 
@@ -334,6 +356,6 @@ function moveEntry() {
 	const newInventory = [...inventory.value]
 	const [moved] = newInventory.splice(from, 1)
 	newInventory.splice(target, 0, moved)
-	saveInventory(newInventory)
+	inventory.value = newInventory
 }
 </script>

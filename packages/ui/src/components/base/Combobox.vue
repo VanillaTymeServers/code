@@ -40,8 +40,10 @@
 			>
 				<template v-if="showChevron" #trailing>
 					<ChevronLeftIcon
-						class="pointer-events-none size-5 text-secondary transition-transform duration-150"
+						class="size-5 cursor-pointer text-secondary transition-transform duration-150"
 						:class="isOpen ? (openDirection === 'down' ? 'rotate-90' : '-rotate-90') : '-rotate-90'"
+						@mousedown.prevent
+						@click.stop="handleChevronClick"
 					/>
 				</template>
 			</Input>
@@ -796,6 +798,16 @@ function handleTriggerClick(event: MouseEvent) {
 	} else {
 		openDropdown()
 	}
+}
+
+function handleChevronClick() {
+	if (isOpen.value) {
+		closeDropdown(false)
+		;(document.activeElement as HTMLElement | null)?.blur()
+		return
+	}
+	openDropdown()
+	searchTriggerRef.value?.focus()
 }
 
 function handleOptionClick(option: ComboboxOption<T>, index: number) {
