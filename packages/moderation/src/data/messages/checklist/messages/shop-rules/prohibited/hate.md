@@ -1,0 +1,1 @@
+- hate speech, slurs, or content that attacks people for who they are

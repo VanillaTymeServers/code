@@ -1,3 +1,4 @@
+import { injectProjectPageContext } from '@modrinth/ui'
 import type { Ref } from 'vue'
 
 import type { NodeState, StageNode } from '../types/node'
@@ -13,6 +14,14 @@ import usePostApprovalStage from './stages/post-approval'
 import useReReviewStage from './stages/re-review'
 import useReuploadsStage from './stages/reupload'
 import useRulesStage from './stages/rules'
+import useShopCategoriesStage from './stages/shop-categories'
+import useShopDescriptionStage from './stages/shop-description'
+import useShopGalleryStage from './stages/shop-gallery'
+import useShopInGameStage from './stages/shop-in-game'
+import useShopInventoryStage from './stages/shop-inventory'
+import useShopNameStage from './stages/shop-name'
+import useShopRulesStage from './stages/shop-rules'
+import useShopSummaryStage from './stages/shop-summary'
 import useStatusAlertsStage from './stages/status-alerts'
 import useSummaryStage from './stages/summary'
 import useTitleSlugStage from './stages/title-slug'
@@ -22,6 +31,23 @@ import useVersionsStage from './stages/versions'
 export function useStages(
 	globalState: Ref<Record<string, Record<string, NodeState>>>,
 ): StageNode[] {
+	const { projectV3 } = injectProjectPageContext()
+	if (projectV3.value?.shop) {
+		const shopStages: StageNode[] = [
+			usePostApprovalStage(),
+			useReReviewStage(),
+			useShopNameStage(),
+			useShopSummaryStage(),
+			useShopDescriptionStage(),
+			useShopGalleryStage(),
+			useShopCategoriesStage(),
+			useShopInventoryStage(),
+			useShopInGameStage(),
+			useShopRulesStage(),
+		]
+		return [...shopStages, useStatusAlertsStage(shopStages, globalState)]
+	}
+
 	const mainStages: StageNode[] = [
 		usePostApprovalStage(),
 		useUndefinedProjectStage(),

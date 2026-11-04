@@ -15,7 +15,7 @@ export default function () {
 	const resolutionsMsg = inaccurateMsg.concat(md('checklist/messages/tags/resolutions-misused'))
 
 	return stage('tags', 'Tags')
-		.hint("Are the project's tags accurate?")
+		.hint("Are the shop's categories accurate?")
 		.guidance(
 			'https://www.notion.so/2e15ee711bf080e4a41df61bbab49892#2e15ee711bf0802f96aafc0397a9f6d3',
 		)

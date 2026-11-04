@@ -1,0 +1,1 @@
+- graphic violence, gore, or content that promotes self-harm

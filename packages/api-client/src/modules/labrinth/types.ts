@@ -1361,7 +1361,6 @@ export namespace Labrinth {
 				slot: number
 			}
 
-
 			export interface InventoryEntry {
 				item: string
 				custom_name?: string | null

@@ -192,8 +192,8 @@ import {
 } from '@modrinth/ui'
 import { getItemName, toItemId } from '@vanillatyme/mc-items'
 
-import ShopItemCombobox from '~/components/ui/ShopItemCombobox.vue'
 import ShopContentsModal from '~/components/ui/ShopContentsModal.vue'
+import ShopItemCombobox from '~/components/ui/ShopItemCombobox.vue'
 import ShopItemStack from '~/components/ui/ShopItemStack.vue'
 
 const emit = defineEmits<{

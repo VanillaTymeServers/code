@@ -8,7 +8,7 @@ export default function () {
 	const { projectV3: project } = injectProjectPageContext()
 
 	return stage('summary', 'Summary')
-		.hint("Is the project's summary sufficient?")
+		.hint("Is the shop's summary sufficient?")
 		.guidance(
 			'https://www.notion.so/2e15ee711bf080e4a41df61bbab49892#2e15ee711bf080bfb5e5c7c6211c693b',
 		)

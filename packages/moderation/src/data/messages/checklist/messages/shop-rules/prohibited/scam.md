@@ -1,0 +1,1 @@
+- spam, scams, phishing, or links to malware or suspicious downloads

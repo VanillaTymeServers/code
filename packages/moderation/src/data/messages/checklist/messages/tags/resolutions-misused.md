@@ -1,4 +1,4 @@
-Currently, your pack has multiple Resolutions selected, in most cases, this will misrepresent your project.  
+Currently, your pack has multiple Resolutions selected, in most cases, this will misrepresent your shop.  
 For a brief rundown of how this works:  
 Vanilla Minecraft textures like blocks and items have a width and height of 16 pixels.  
 This means that packs with textures the same size as the default are considered 16x.  

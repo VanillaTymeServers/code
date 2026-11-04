@@ -71,6 +71,7 @@ export default function (
 					),
 
 				toggle('private-use', 'Private use')
+					.shown(computed(() => !project.value.shop))
 					.suggestedStatus('flagged')
 					.priority(Priorities.alerts)
 					.rawMessage(async (state) => {
@@ -121,12 +122,16 @@ export default function (
 					)
 					.message(),
 
-				toggle('account-issues', 'Account issues').suggestedStatus('rejected').message(),
+				toggle('account-issues', 'Account issues')
+					.shown(computed(() => !project.value.shop))
+					.suggestedStatus('rejected')
+					.message(),
 
 				toggle('demonetized', 'Demonetized')
 					.shown(
 						computed(
 							() =>
+								!project.value.shop &&
 								project.value.monetization_status === 'force-demonetized' &&
 								!project.value.project_types.includes('modpack') &&
 								!project.value.minecraft_server,
@@ -139,6 +144,7 @@ export default function (
 					.shown(
 						computed(
 							() =>
+								!project.value.shop &&
 								project.value.monetization_status === 'force-demonetized' &&
 								project.value.project_types.includes('modpack') &&
 								!project.value.minecraft_server,

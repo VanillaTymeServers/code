@@ -1,3 +1,3 @@
 What is your server about? What features does it have? Why would a user want to join?
 
-Check out descriptions like [Flatnet](https://modrinth.com/server/flatnet) or [Cobblemon Islands](https://modrinth.com/server/cobblemon-islands-server) for inspiration when creating a quality and informative description.
+A good shop description says what you sell, roughly what things cost, and anything players should know before visiting.

@@ -32,10 +32,11 @@ export default function () {
 					.priority(Priorities.tempLast)
 					.children(
 						//TODO: chyz this shouldn't need to be provided by moderator
-						text('status').title('What status is the project being set to?').required(),
+						text('status').title('What status is the shop being set to?').required(),
 					),
 
 				toggle('metadata-issue', 'Incorrect metadata')
+					.shown(computed(() => !project.value.shop))
 					.suggestedStatus('approved')
 					.message()
 					.children(

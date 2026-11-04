@@ -116,70 +116,53 @@ export function requiresEnvironmentInfo(projectTypes): boolean {
 export function flattenStaticVariables(): Record<string, string> {
 	const vars: Record<string, string> = {}
 
-	vars[`RULES`] = `[Modrinth's Content Rules](https://modrinth.com/legal/rules)`
-	vars[`R1`] =
-		`Per section 1 of [Modrinth's Content Rules](https://modrinth.com/legal/rules#prohibited-content)`
+	vars[`RULES`] = `[Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
+	vars[`R1`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	const rule1subs = 12
 	for (let n = 1; n <= rule1subs; n++) {
-		vars[`R1.${n}`] =
-			`Per section 1.${n} of [Modrinth's Content Rules](https://modrinth.com/legal/rules#prohibited-content)`
+		vars[`R1.${n}`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	}
-	vars[`R2`] =
-		`Per section 2 of [Modrinth's Content Rules](https://modrinth.com/legal/rules#clear-and-honest-function)`
-	vars[`R2.1`] =
-		`Per section 2.1 of [Modrinth's Content Rules](https://modrinth.com/legal/rules#general-expectations)`
+	vars[`R2`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
+	vars[`R2.1`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	const rule2sub1subs = 3
 	for (let n = 1; n <= rule2sub1subs; n++) {
 		const l = String.fromCharCode(96 + n)
-		vars[`R2.1${l}`] =
-			`Per section 2.1${l} of [Modrinth's Content Rules](https://modrinth.com/legal/rules#general-expectations)`
+		vars[`R2.1${l}`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	}
-	vars[`R2.2`] =
-		`Per section 2.2 of [Modrinth's Content Rules](https://modrinth.com/legal/rules#accessibility)`
-	vars[`R3`] =
-		`Per section 3 of [Modrinth's Content Rules](https://modrinth.com/legal/rules#cheats-and-hacks)`
+	vars[`R2.2`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
+	vars[`R3`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	const rule3subs = 3
 	for (let n = 1; n <= rule3subs; n++) {
-		vars[`R3.${n}`] =
-			`Per section 3.${n} of [Modrinth's Content Rules](https://modrinth.com/legal/rules#cheats-and-hacks)`
+		vars[`R3.${n}`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	}
 	const rule3sub3subs = 6
 	for (let n = 1; n <= rule3sub3subs; n++) {
 		const l = String.fromCharCode(96 + n)
-		vars[`R3.3${l}`] =
-			`Per section 3.3${l} of [Modrinth's Content Rules](https://modrinth.com/legal/rules#cheats-and-hacks)`
+		vars[`R3.3${l}`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	}
-	vars[`R4`] =
-		`Per section 4 of [Modrinth's Content Rules](https://modrinth.com/legal/rules#copyright-and-legality-of-content)`
-	vars[`R5`] =
-		`Per section 5 of [Modrinth's Content Rules](https://modrinth.com/legal/rules#miscellaneous)`
+	vars[`R4`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
+	vars[`R5`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	const rule5subs = 9
 	for (let n = 1; n <= rule5subs; n++) {
-		vars[`R5.${n}`] =
-			`Per section 5.${n} of [Modrinth's Content Rules](https://modrinth.com/legal/rules#miscellaneous)`
+		vars[`R5.${n}`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	}
-	vars[`R6`] =
-		`Per section 6 of [Modrinth's Content Rules](https://modrinth.com/legal/rules#generative-ai)`
-	vars[`R6.1`] =
-		`Per section 6.1 of [Modrinth's Content Rules](https://modrinth.com/legal/rules#disclosure-of-ai-generated-content)`
+	vars[`R6`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
+	vars[`R6.1`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	const rule6sub1subs = 2
 	for (let n = 1; n <= rule6sub1subs; n++) {
 		const l = String.fromCharCode(96 + n)
-		vars[`R6.1${l}`] =
-			`Per section 6.1${l} of [Modrinth's Content Rules](https://modrinth.com/legal/rules#disclosure-of-ai-generated-content)`
+		vars[`R6.1${l}`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	}
-	vars[`R6.2`] =
-		`Per section 6.2 of [Modrinth's Content Rules](https://modrinth.com/legal/rules#prohibited-usage-of-ai)`
+	vars[`R6.2`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	const rule6sub2subs = 4
 	for (let n = 1; n <= rule6sub2subs; n++) {
 		const l = String.fromCharCode(96 + n)
-		vars[`R6.2${l}`] =
-			`Per section 6.2${l} of [Modrinth's Content Rules](https://modrinth.com/legal/rules#prohibited-usage-of-ai)`
+		vars[`R6.2${l}`] = `Per [Vanilla Tyme's Content Rules](https://vanillatyme.com/legal/rules)`
 	}
-	vars[`TOS`] = `[Terms of Use](https://modrinth.com/legal/terms)`
-	vars[`COPYRIGHT_POLICY`] = `[Copyright Policy](https://modrinth.com/legal/copyright)`
+	vars[`TOS`] = `[Terms of Use](https://vanillatyme.com/legal/terms)`
+	vars[`COPYRIGHT_POLICY`] = `[Copyright Policy](https://vanillatyme.com/legal/copyright)`
 	vars[`SUPPORT`] =
-		`please visit the [Modrinth Help Center](https://support.modrinth.com/) and click the blue bubble to contact support.`
+		`please reach out to staff on our [Discord](https://discord.vanillatymeservers.com).`
 	vars[`MODPACK_PERMISSIONS_GUIDE`] =
 		`our guide to [Obtaining Modpack Permissions](https://support.modrinth.com/en/articles/8797527)`
 	vars[`MODPACKS_ON_MODRINTH`] =
@@ -294,53 +277,53 @@ export function flattenProjectVariables(
 	})
 
 	// Navigation related variables
-	vars[`PROJECT_PERMANENT_LINK`] = `https://modrinth.com/project/${project.id}`
-	vars[`PROJECT_SETTINGS_LINK`] = `https://modrinth.com/project/${project.id}/settings`
-	vars[`PROJECT_SETTINGS_FLINK`] = `[Settings](https://modrinth.com/project/${project.id}/settings)`
-	vars[`PROJECT_ICON_FLINK`] = `[Icon](https://modrinth.com/project/${project.id}/settings)`
-	vars[`PROJECT_TITLE_FLINK`] = `[Name](https://modrinth.com/project/${project.id}/settings)`
-	vars[`PROJECT_SLUG_FLINK`] = `[URL](https://modrinth.com/project/${project.id}/settings)`
-	vars[`PROJECT_SUMMARY_FLINK`] = `[Summary](https://modrinth.com/project/${project.id}/settings)`
+	vars[`PROJECT_PERMANENT_LINK`] = `https://vanillatyme.com/shop/${project.id}`
+	vars[`PROJECT_SETTINGS_LINK`] = `https://vanillatyme.com/shop/${project.id}/settings`
+	vars[`PROJECT_SETTINGS_FLINK`] = `[Settings](https://vanillatyme.com/shop/${project.id}/settings)`
+	vars[`PROJECT_ICON_FLINK`] = `[Icon](https://vanillatyme.com/shop/${project.id}/settings)`
+	vars[`PROJECT_TITLE_FLINK`] = `[Name](https://vanillatyme.com/shop/${project.id}/settings)`
+	vars[`PROJECT_SLUG_FLINK`] = `[URL](https://vanillatyme.com/shop/${project.id}/settings)`
+	vars[`PROJECT_SUMMARY_FLINK`] = `[Summary](https://vanillatyme.com/shop/${project.id}/settings)`
 	vars[`PROJECT_ENVIRONMENT_FLINK`] =
-		`[Environment Information](https://modrinth.com/project/${project.id}/settings/environment)` // Depreciated
-	vars[`PROJECT_TAGS_LINK`] = `https://modrinth.com/project/${project.id}/settings/tags`
-	vars[`PROJECT_TAGS_FLINK`] = `[Tags](https://modrinth.com/project/${project.id}/settings/tags)`
+		`[Environment Information](https://vanillatyme.com/shop/${project.id}/settings/environment)` // Depreciated
+	vars[`PROJECT_TAGS_LINK`] = `https://vanillatyme.com/shop/${project.id}/settings/tags`
+	vars[`PROJECT_TAGS_FLINK`] = `[Tags](https://vanillatyme.com/shop/${project.id}/settings/tags)`
 	vars[`PROJECT_DESCRIPTION_LINK`] =
-		`https://modrinth.com/project/${project.id}/settings/description`
+		`https://vanillatyme.com/shop/${project.id}/settings/description`
 	vars[`PROJECT_DESCRIPTION_FLINK`] =
-		`[Description](https://modrinth.com/project/${project.id}/settings/description)`
-	vars[`PROJECT_LICENSE_LINK`] = `https://modrinth.com/project/${project.id}/settings/license`
+		`[Description](https://vanillatyme.com/shop/${project.id}/settings/description)`
+	vars[`PROJECT_LICENSE_LINK`] = `https://vanillatyme.com/shop/${project.id}/settings/license`
 	vars[`PROJECT_LICENSE_FLINK`] =
-		`[License](https://modrinth.com/project/${project.id}/settings/license)`
-	vars[`PROJECT_LINKS_LINK`] = `https://modrinth.com/project/${project.id}/settings/links`
+		`[License](https://vanillatyme.com/shop/${project.id}/settings/license)`
+	vars[`PROJECT_LINKS_LINK`] = `https://vanillatyme.com/shop/${project.id}/settings/links`
 	vars[`PROJECT_LINKS_FLINK`] =
-		`[External Links](https://modrinth.com/project/${project.id}/settings/links)`
-	vars[`PROJECT_GALLERY_LINK`] = `https://modrinth.com/project/${project.id}/gallery`
+		`[External Links](https://vanillatyme.com/shop/${project.id}/settings/links)`
+	vars[`PROJECT_GALLERY_LINK`] = `https://vanillatyme.com/shop/${project.id}/gallery`
 	vars[`PROJECT_GALLERY_FLINK`] =
-		`[Gallery](https://modrinth.com/project/${project.id}/settings/gallery)`
-	vars[`PROJECT_VERSIONS_LINK`] = `https://modrinth.com/project/${project.id}/versions`
+		`[Gallery](https://vanillatyme.com/shop/${project.id}/settings/gallery)`
+	vars[`PROJECT_VERSIONS_LINK`] = `https://vanillatyme.com/shop/${project.id}/versions`
 	vars[`PROJECT_VERSIONS_FLINK`] =
-		`[Versions](https://modrinth.com/project/${project.id}/settings/versions)`
-	vars[`PROJECT_MODERATION_LINK`] = `https://modrinth.com/project/${project.id}/moderation`
+		`[Versions](https://vanillatyme.com/shop/${project.id}/settings/versions)`
+	vars[`PROJECT_MODERATION_LINK`] = `https://vanillatyme.com/shop/${project.id}/moderation`
 	vars[`PROJECT_MODERATION_FLINK`] =
-		`[moderation tab](https://modrinth.com/project/${project.id}/moderation)`
-	vars[`PROJECT_SERVER_SETTINGS`] = `https://modrinth.com/project/${project.id}/settings/server`
+		`[moderation tab](https://vanillatyme.com/shop/${project.id}/moderation)`
+	vars[`PROJECT_SERVER_SETTINGS`] = `https://vanillatyme.com/shop/${project.id}/settings/server`
 	vars[`PROJECT_SERVER_SETTINGS_FLINK`] =
-		`[Server Settings](https://modrinth.com/project/${project.id}/settings/server)`
-	vars[`PROJECT_LANGUAGE_SETTINGS`] = `https://modrinth.com/project/${project.id}/settings/server`
+		`[Server Settings](https://vanillatyme.com/shop/${project.id}/settings/server)`
+	vars[`PROJECT_LANGUAGE_SETTINGS`] = `https://vanillatyme.com/shop/${project.id}/settings/server`
 	vars[`PROJECT_LANGUAGE_SETTINGS_FLINK`] =
-		`[Language Settings](https://modrinth.com/project/${project.id}/settings/server)`
+		`[Language Settings](https://vanillatyme.com/shop/${project.id}/settings/server)`
 	vars[`PROJECT_PERMISSIONS_LINK`] =
-		`https://modrinth.com/project/${project.id}/settings/permissions`
+		`https://vanillatyme.com/shop/${project.id}/settings/permissions`
 	vars[`PROJECT_PERMISSIONS_FLINK`] =
-		`[Permissions settings](https://modrinth.com/project/${project.id}/settings/permissions)`
-	vars[`PROJECT_MONETIZATION_SETTINGS_LINK`] = `https://modrinth.com/project/${project.id}/settings`
+		`[Permissions settings](https://vanillatyme.com/shop/${project.id}/settings/permissions)`
+	vars[`PROJECT_MONETIZATION_SETTINGS_LINK`] = `https://vanillatyme.com/shop/${project.id}/settings`
 	vars[`PROJECT_MONETIZATION_SETTINGS_FLINK`] =
-		`[Monetization settings](https://modrinth.com/project/${project.id}/settings)`
+		`[Monetization settings](https://vanillatyme.com/shop/${project.id}/settings)`
 	vars[`PROJECT_CONTENT_DISCLOSURES_LINK`] =
-		`https://modrinth.com/project/${project.id}/settings/disclosures`
+		`https://vanillatyme.com/shop/${project.id}/settings/disclosures`
 	vars[`PROJECT_CONTENT_DISCLOSURES_FLINK`] =
-		`[Content Disclosures](https://modrinth.com/project/${project.id}/settings/disclosures)`
+		`[Content Disclosures](https://vanillatyme.com/shop/${project.id}/settings/disclosures)`
 
 	return vars
 }

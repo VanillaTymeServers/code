@@ -1,3 +1,3 @@
-In accordance with the above notice, this project will be temporarily %STATUS%.
+In accordance with the above notice, this shop will be temporarily %STATUS%.
 
-We ask that you resubmit this project once all moderation concerns have been addressed.
+We ask that you resubmit this shop once all moderation concerns have been addressed.

@@ -1,0 +1,1 @@
+- anything illegal, or anything that encourages illegal activity
