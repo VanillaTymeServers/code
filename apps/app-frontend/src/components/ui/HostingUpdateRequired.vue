@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DownloadIcon, ExcitedRinthbot, RefreshCwIcon, ServerStackIcon } from '@modrinth/assets'
+import { DownloadIcon, RefreshCwIcon, ServerStackIcon } from '@modrinth/assets'
 import { Button, commonMessages, defineMessages, useVIntl } from '@modrinth/ui'
 import { computed } from 'vue'
 
@@ -71,11 +71,6 @@ async function handleUpdateClick() {
 <template>
 	<div class="box-border flex min-h-full items-center justify-center p-4">
 		<div class="relative mx-auto w-full max-w-xl pt-28">
-			<img
-				:src="ExcitedRinthbot"
-				:alt="formatMessage(messages.excitedRinthbotAlt)"
-				class="absolute right-8 top-0 h-28 w-auto md:right-20"
-			/>
 			<div class="relative flex flex-col gap-5 rounded-lg bg-bg-raised p-7 shadow-lg">
 				<div
 					class="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-green-500 to-transparent opacity-40"

@@ -36,7 +36,6 @@ import { useTimeoutFn } from '@vueuse/core'
 import { computed, h, markRaw, ref, watch } from 'vue'
 import type { LocationQueryRaw } from 'vue-router'
 
-import LogoAnimated from '~/components/brand/LogoAnimated.vue'
 import { projectQueryOptions, warmProjectCheckCaches } from '~/composables/queries/project'
 import { seasonQueryOptions } from '~/composables/queries/season'
 import { versionQueryOptions } from '~/composables/queries/version'
@@ -603,7 +602,6 @@ provideBrowseManager({
 		providedBy: formatMessage(messages.providedByServer),
 		gameVersionShaderMessage: formatMessage(messages.gameVersionShaderMessage),
 	},
-	loadingComponent: LogoAnimated,
 })
 
 const stickyInstallHeaderRef = ref<HTMLElement | null>(null)

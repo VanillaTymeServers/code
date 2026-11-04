@@ -45,39 +45,20 @@ export function resolveFaviconEnvironment(
 	return null
 }
 
-function getFaviconHrefs(variant: FaviconVariant, environment: FaviconEnvironment | null) {
-	if (!environment) {
-		return {
-			...PRODUCTION_FAVICON_HREFS[variant],
-			type: 'image/png',
-			sizes: '32x32',
-		}
-	}
-
-	if (variant === 'settings') {
-		return {
-			light: `/dev-favicons/favicon-${environment}-light-settings.svg`,
-			dark: `/dev-favicons/favicon-${environment}-settings.svg`,
-			type: 'image/svg+xml',
-			sizes: 'any',
-		}
-	}
-
-	const href = `/dev-favicons/favicon-${environment}.svg`
+function getFaviconHrefs(variant: FaviconVariant) {
 	return {
-		light: href,
-		dark: href,
-		type: 'image/svg+xml',
-		sizes: 'any',
+		...PRODUCTION_FAVICON_HREFS[variant],
+		type: 'image/png',
+		sizes: '32x32',
 	}
 }
 
 export function getFaviconHeadLinks(
 	variant: FaviconVariant = 'default',
-	environment: FaviconEnvironment | null = null,
+	_environment: FaviconEnvironment | null = null,
 ) {
-	const icons = getFaviconHrefs(variant, environment)
-	const appleTouchIcons = getFaviconHrefs(variant, null)
+	const icons = getFaviconHrefs(variant)
+	const appleTouchIcons = getFaviconHrefs(variant)
 	const hrefByMedia = {
 		'(prefers-color-scheme:no-preference)': icons.light,
 		'(prefers-color-scheme:light)': icons.light,

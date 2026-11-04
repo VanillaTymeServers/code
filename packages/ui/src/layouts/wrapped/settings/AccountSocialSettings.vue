@@ -8,7 +8,7 @@
 	>
 		<template #illustration>
 			<div class="relative mb-4 h-[200px]">
-				<img :src="ThinkingRinthbot" alt="" class="h-full w-auto object-contain" />
+				<LogInIcon class="h-full w-auto text-secondary" aria-hidden="true" />
 				<div
 					class="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-bg-raised to-transparent"
 				/>
@@ -206,7 +206,7 @@
 <script setup lang="ts">
 // TODO this will be moved in with the rest of the xplat settings.
 import type { Labrinth } from '@modrinth/api-client'
-import { LogInIcon, SpinnerIcon, ThinkingRinthbot } from '@modrinth/assets'
+import { LogInIcon, SpinnerIcon } from '@modrinth/assets'
 import { useQuery, useQueryClient } from '@tanstack/vue-query'
 import { computed, ref, watch } from 'vue'
 

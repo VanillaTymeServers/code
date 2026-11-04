@@ -5,13 +5,13 @@ import {
 	LanguagesIcon,
 	LightBulbIcon,
 	MicrochipIcon,
-	ModrinthIcon,
 	PaintbrushIcon,
 	RefreshCwIcon,
 	Settings2Icon,
 	ShieldIcon,
 	ToggleRightIcon,
 	UserIcon,
+	InfoIcon,
 } from '@modrinth/assets'
 import {
 	commonMessages,
@@ -373,7 +373,7 @@ const messages = defineMessages({
 						}"
 						@click="devModeCount"
 					>
-						<ModrinthIcon aria-hidden="true" class="w-6 h-6" />
+						<InfoIcon aria-hidden="true" class="w-6 h-6" />
 					</button>
 					<div v-if="appInfo" class="max-w-[200px]">
 						<p class="m-0">

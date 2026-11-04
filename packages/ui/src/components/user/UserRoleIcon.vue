@@ -1,5 +1,5 @@
 <template>
-	<ModrinthIcon
+	<ShieldUserIcon
 		v-if="role === 'admin'"
 		v-tooltip="formatMessage(messages.modrinthTeamLabel)"
 		role="img"
@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import type { Labrinth } from '@modrinth/api-client'
-import { ModrinthIcon, ScaleIcon } from '@modrinth/assets'
+import { ScaleIcon, ShieldUserIcon } from '@modrinth/assets'
 
 import { defineMessages, useVIntl } from '#ui/composables/i18n'
 
@@ -27,8 +27,8 @@ const { formatMessage } = useVIntl()
 
 const messages = defineMessages({
 	modrinthTeamLabel: {
-		id: 'user.role.modrinth-team',
-		defaultMessage: 'Modrinth Team',
+		id: 'user.role.staff',
+		defaultMessage: 'Vanilla Tyme Staff',
 	},
 	moderatorLabel: {
 		id: 'user.role.moderator',
