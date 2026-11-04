@@ -1643,9 +1643,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "مشرف"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "فريق مودرنث"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "قيد الانتظار"
   },

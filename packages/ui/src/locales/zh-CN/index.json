@@ -3119,9 +3119,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "管理员"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Modrinth 团队"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "待确认"
   },
@@ -7027,9 +7024,6 @@
   },
   "user.role.moderator": {
     "defaultMessage": "内容审核员"
-  },
-  "user.role.modrinth-team": {
-    "defaultMessage": "Modtinth 团队"
   },
   "version.content.name": {
     "defaultMessage": "名称"

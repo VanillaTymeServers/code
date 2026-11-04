@@ -3077,9 +3077,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "モデレーター"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Modrinth チーム"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "保留中"
   },

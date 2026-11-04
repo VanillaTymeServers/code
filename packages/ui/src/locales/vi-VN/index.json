@@ -2288,9 +2288,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "Kiểm duyệt viên"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Đội Ngũ Modrinth"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "Đang chờ"
   },

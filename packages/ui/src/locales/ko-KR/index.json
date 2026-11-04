@@ -2990,9 +2990,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "관리자"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Modrinth 팀"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "대기중"
   },

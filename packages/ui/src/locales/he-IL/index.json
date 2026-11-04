@@ -677,9 +677,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "מפקח"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "צוות Modrinth"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "בהמתנה"
   },

@@ -1172,9 +1172,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "Moderador"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Equipa do Modrinth"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "Pendente"
   },

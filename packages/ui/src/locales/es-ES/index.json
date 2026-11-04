@@ -3110,9 +3110,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "Moderador"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Equipo de Modrinth"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "Pendiente"
   },
@@ -6919,9 +6916,6 @@
   },
   "user.role.moderator": {
     "defaultMessage": "Moderador de contenido"
-  },
-  "user.role.modrinth-team": {
-    "defaultMessage": "Equipo de modrinth"
   },
   "version.content.name": {
     "defaultMessage": "Nombre"

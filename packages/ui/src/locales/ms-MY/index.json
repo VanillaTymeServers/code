@@ -2243,9 +2243,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "Penyederhana"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Pasukan Modrinth"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "Menunggu"
   },

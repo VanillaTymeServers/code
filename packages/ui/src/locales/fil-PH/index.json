@@ -1067,9 +1067,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "Moderator"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Koponan ng Modrinth"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "Nakabinbin"
   },

@@ -3116,9 +3116,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "Moderatör"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Modrinth Ekibi"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "Beklemede"
   },
@@ -6874,9 +6871,6 @@
   },
   "user.role.moderator": {
     "defaultMessage": "İçerik Moderatörü"
-  },
-  "user.role.modrinth-team": {
-    "defaultMessage": "Modrinth Ekibi"
   },
   "version.content.name": {
     "defaultMessage": "İsim"

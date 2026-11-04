@@ -1472,9 +1472,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "Moderator"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Tim Modrinth"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "Menunggu"
   },

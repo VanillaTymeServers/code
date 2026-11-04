@@ -3119,9 +3119,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "管理員"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Modrinth 團隊"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "待處理"
   },
@@ -7027,9 +7024,6 @@
   },
   "user.role.moderator": {
     "defaultMessage": "內容管理員"
-  },
-  "user.role.modrinth-team": {
-    "defaultMessage": "Modrinth 團隊"
   },
   "version.content.name": {
     "defaultMessage": "名稱"

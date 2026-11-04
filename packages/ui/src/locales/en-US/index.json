@@ -3128,9 +3128,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "Moderator"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Modrinth Team"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "Pending"
   },
@@ -3151,6 +3148,9 @@
   },
   "omorphia.component.badge.label.scheduled": {
     "defaultMessage": "Scheduled"
+  },
+  "omorphia.component.badge.label.staff": {
+    "defaultMessage": "Vanilla Tyme Staff"
   },
   "omorphia.component.badge.label.under-review": {
     "defaultMessage": "Under review"
@@ -7241,8 +7241,8 @@
   "user.role.moderator": {
     "defaultMessage": "Content Moderator"
   },
-  "user.role.modrinth-team": {
-    "defaultMessage": "Modrinth Team"
+  "user.role.staff": {
+    "defaultMessage": "Vanilla Tyme Staff"
   },
   "version.content.name": {
     "defaultMessage": "Name"

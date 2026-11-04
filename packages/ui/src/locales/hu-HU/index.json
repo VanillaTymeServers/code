@@ -3101,9 +3101,6 @@
   "omorphia.component.badge.label.moderator": {
     "defaultMessage": "Moderátor"
   },
-  "omorphia.component.badge.label.modrinth-team": {
-    "defaultMessage": "Modrinth Csapat"
-  },
   "omorphia.component.badge.label.pending": {
     "defaultMessage": "Függőben"
   },
@@ -7009,9 +7006,6 @@
   },
   "user.role.moderator": {
     "defaultMessage": "Tartalommoderátor"
-  },
-  "user.role.modrinth-team": {
-    "defaultMessage": "Modrinth Csapattag"
   },
   "version.content.name": {
     "defaultMessage": "Név"
