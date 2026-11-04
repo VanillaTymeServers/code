@@ -3302,6 +3302,9 @@
   "project.inventory.change-view": {
     "message": "Change display mode"
   },
+  "project.inventory.contains-items": {
+    "message": "Contains {count, plural, one {# item} other {# items}}"
+  },
   "project.inventory.empty.description": {
     "message": "This shop hasn't listed anything it sells."
   },
@@ -3334,6 +3337,9 @@
   },
   "project.inventory.popup.close": {
     "message": "Close"
+  },
+  "project.inventory.popup.contents": {
+    "message": "Contents"
   },
   "project.inventory.popup.description": {
     "message": "Description"
@@ -3761,11 +3767,11 @@
   "project.settings.inventory.add-button": {
     "message": "Add item"
   },
-  "project.settings.inventory.delete-item-description": {
-    "message": "This can't be undone."
-  },
   "project.settings.inventory.delete-item-title": {
     "message": "Delete this item?"
+  },
+  "project.settings.inventory.delete-on-save-description": {
+    "message": "It will be removed when you save your changes."
   },
   "project.settings.inventory.drag-hint": {
     "message": "Drag to reorder"
@@ -5768,11 +5774,44 @@
   "shop.archived.header": {
     "message": "{title} is from Season {season}"
   },
+  "shop.inventory.contents.clear-slot": {
+    "message": "Clear slot"
+  },
+  "shop.inventory.contents.discard-button": {
+    "message": "Discard"
+  },
+  "shop.inventory.contents.discard-description": {
+    "message": "Your changes to these contents will be lost."
+  },
+  "shop.inventory.contents.discard-title": {
+    "message": "Discard your changes?"
+  },
+  "shop.inventory.contents.done": {
+    "message": "Done"
+  },
+  "shop.inventory.contents.fill-box": {
+    "message": "Fill box"
+  },
+  "shop.inventory.contents.item-placeholder": {
+    "message": "Search for an item"
+  },
+  "shop.inventory.contents.slot": {
+    "message": "Slot {slot}"
+  },
+  "shop.inventory.contents.title": {
+    "message": "Edit contents"
+  },
   "shop.inventory.modal.add-title": {
     "message": "Add item"
   },
   "shop.inventory.modal.amount-buyer-gets": {
     "message": "Buyer gets"
+  },
+  "shop.inventory.modal.contents-label": {
+    "message": "Contents"
+  },
+  "shop.inventory.modal.contents-used": {
+    "message": "{count} / 27 slots used"
   },
   "shop.inventory.modal.currency-placeholder": {
     "message": "Currency item"
@@ -5785,6 +5824,18 @@
   },
   "shop.inventory.modal.description-label": {
     "message": "Description (shown when opened)"
+  },
+  "shop.inventory.modal.discard-button": {
+    "message": "Discard"
+  },
+  "shop.inventory.modal.discard-description": {
+    "message": "Your changes to this item will be lost."
+  },
+  "shop.inventory.modal.discard-title": {
+    "message": "Discard your changes?"
+  },
+  "shop.inventory.modal.edit-contents": {
+    "message": "Edit contents"
   },
   "shop.inventory.modal.edit-title": {
     "message": "Edit item"
