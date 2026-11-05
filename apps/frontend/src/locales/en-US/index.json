@@ -2151,7 +2151,7 @@
     "message": "The spawn area on Vanilla Tyme"
   },
   "home.hero.spawn-caption-season": {
-    "message": "Spawn · Season {season}"
+    "message": "Spawn · Season {season} preview"
   },
   "home.hero.status-offline": {
     "message": "Offline"

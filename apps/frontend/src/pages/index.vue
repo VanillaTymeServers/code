@@ -550,7 +550,7 @@ const messages = defineMessages({
 	},
 	spawnCaption: {
 		id: 'home.hero.spawn-caption-season',
-		defaultMessage: 'Spawn · Season {season}',
+		defaultMessage: 'Spawn · Season {season} preview',
 	},
 	whyEyebrow: {
 		id: 'home.why.eyebrow',

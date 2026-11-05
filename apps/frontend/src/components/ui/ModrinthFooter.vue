@@ -315,7 +315,7 @@ function developerModeIncrement() {
 					target="_blank"
 					:to="`https://github.com/${config.public.owner}/code/commit/${config.public.hash}`"
 				>
-					{{ config.public.hash }}
+					{{ config.public.hash.slice(0, 7) }}
 				</AutoLink>
 			</p>
 			<div

@@ -1,10 +1,19 @@
 import serverSidedVue from '@vitejs/plugin-vue'
+import { execSync } from 'child_process'
 import fs from 'fs/promises'
 import { defineNuxtConfig } from 'nuxt/config'
 import { fileURLToPath } from 'url'
 import svgLoader from 'vite-svg-loader'
 
 import { GenericModrinthClient, type Labrinth } from '../../packages/api-client/src/index.ts'
+
+function getGitHash() {
+	try {
+		return execSync('git rev-parse HEAD').toString().trim()
+	} catch {
+		return 'unknown'
+	}
+}
 
 const STAGING_API_URL = 'https://staging-api.modrinth.com/v2/'
 const STAGING_SHARED_INSTANCES_API_URL = 'https://staging-shared-instances.modrinth.com'
@@ -216,7 +225,7 @@ export default defineNuxtConfig({
 				process.env.CF_PAGES_COMMIT_SHA ||
 				// @ts-ignore
 				globalThis.CF_PAGES_COMMIT_SHA ||
-				'unknown',
+				getGitHash(),
 
 			stripePublishableKey:
 				process.env.STRIPE_PUBLISHABLE_KEY ||
