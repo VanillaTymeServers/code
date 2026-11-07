@@ -4,10 +4,10 @@
 			<div v-if="expandedMap" class="expanded-map-modal" @click="closeMap">
 				<div class="content">
 					<img
-						v-if="expandedMap.thumbnail"
+						v-if="thumbnails[expandedMap.id]"
 						class="image"
 						:class="{ 'zoomed-in': zoomedIn }"
-						:src="expandedMap.thumbnail"
+						:src="thumbnails[expandedMap.id]"
 						:alt="formatMessage(expandedMap.name)"
 						@click.stop
 					/>
@@ -20,9 +20,9 @@
 								<XIcon aria-hidden="true" />
 							</IconButton>
 							<IconButton
-								v-if="expandedMap.thumbnail"
+								v-if="thumbnails[expandedMap.id]"
 								:label="formatMessage(messages.openInNewTabButton)"
-								@click="openInNewTab(expandedMap.thumbnail)"
+								@click="openInNewTab(thumbnails[expandedMap.id])"
 							>
 								<ExternalIcon aria-hidden="true" />
 							</IconButton>
@@ -72,8 +72,8 @@
 						class="flex flex-col overflow-hidden rounded-2xl bg-bg-raised"
 					>
 						<img
-							v-if="map.thumbnail"
-							:src="map.thumbnail"
+							v-if="thumbnails[map.id]"
+							:src="thumbnails[map.id]"
 							:alt="formatMessage(map.name)"
 							loading="lazy"
 							class="aspect-video w-full cursor-pointer object-cover"
@@ -88,7 +88,7 @@
 						<div class="flex flex-1 flex-col gap-4 p-4">
 							<h2 class="m-0 text-xl font-bold text-contrast">{{ formatMessage(map.name) }}</h2>
 							<div class="mt-auto flex gap-2">
-								<Button v-if="map.thumbnail" @click="openMap(map)">
+								<Button v-if="thumbnails[map.id]" @click="openMap(map)">
 									<EyeIcon aria-hidden="true" />
 									{{ formatMessage(messages.viewButton) }}
 								</Button>
@@ -192,6 +192,7 @@ const messages = defineMessages({
 	mapSeason7: { id: 'downloads.map.vt7', defaultMessage: 'Season 7' },
 	mapSeason8: { id: 'downloads.map.vt8', defaultMessage: 'Season 8' },
 	mapSeason9: { id: 'downloads.map.vt9', defaultMessage: 'Season 9' },
+	mapSeason10: { id: 'downloads.map.vt10', defaultMessage: 'Season 10' },
 	mapCreativePlots: { id: 'downloads.map.plots1', defaultMessage: 'Creative Plots' },
 	mapSemiSeason1: { id: 'downloads.map.svt1', defaultMessage: 'Semi-Vanilla Season 1' },
 	mapSemiSeason2: { id: 'downloads.map.svt2', defaultMessage: 'Semi-Vanilla Season 2' },
@@ -205,90 +206,85 @@ useSeoMeta({
 })
 
 const CDN = 'https://cdn.vanillatyme.com/maps'
+const THUMBNAIL_EXTENSIONS = ['webp', 'png', 'jpg']
 
 const maps = [
 	{
 		id: 'vt1',
 		name: messages.mapSeason1,
 		server: 'vt',
-		thumbnail: `${CDN}/vt1/thumbnail.jpg`,
 		downloadUrl: 'https://drive.google.com/file/d/1vNyY84ew2idTiNix2p4KW8ZgkzTo3EkF/view',
 	},
 	{
 		id: 'vt3',
 		name: messages.mapSeason3,
 		server: 'vt',
-		thumbnail: `${CDN}/vt3/thumbnail.png`,
 		downloadUrl: 'https://drive.google.com/file/d/1SPUhREr8H0xohDhAySpnfd9pr54dpelT/view',
 	},
 	{
 		id: 'vt4',
 		name: messages.mapSeason4,
 		server: 'vt',
-		thumbnail: `${CDN}/vt4/thumbnail.png`,
 		downloadUrl: 'https://drive.google.com/file/d/1lqVAdVV_raZTSqDzjGGfzI4_Rgub0beC/view',
 	},
 	{
 		id: 'vt5',
 		name: messages.mapSeason5,
 		server: 'vt',
-		thumbnail: 'https://s3.us-east-1.amazonaws.com/cdn.vanillatyme.com/maps/vt5/thumbnail.png',
 		downloadUrl: 'https://drive.google.com/file/d/1DPhrjaIs5NM1dmicNJWmjXAdovdCKkUE/view',
 	},
 	{
 		id: 'vt6',
 		name: messages.mapSeason6,
 		server: 'vt',
-		thumbnail: `${CDN}/vt6/thumbnail.png`,
 		downloadUrl: 'https://drive.google.com/file/d/1bZ2zjc8Q-B35lyzRiZY6U8Fmi2J5K9sL/view',
 	},
 	{
 		id: 'vt7',
 		name: messages.mapSeason7,
 		server: 'vt',
-		thumbnail: 'https://s3.us-east-1.amazonaws.com/cdn.vanillatyme.com/maps/vt7/thumbnail.png',
 		downloadUrl: 'https://drive.google.com/file/d/1DVJvaBaOsgzQKf2HhpnzAE-VqGNAwb70/view',
 	},
 	{
 		id: 'vt8',
 		name: messages.mapSeason8,
 		server: 'vt',
-		thumbnail: `${CDN}/vt8/thumbnail.png`,
 		downloadUrl: 'https://drive.google.com/file/d/1Q5i7RxVTuSMqQpida6wJNf7FZGmN_OyT/view',
 	},
 	{
 		id: 'vt9',
 		name: messages.mapSeason9,
 		server: 'vt',
-		thumbnail: `${CDN}/vt9/thumbnail.png`,
 		downloadUrl: 'https://drive.google.com/file/d/1z-WRUv9zrZDC5N2UN6WLSSDWGiMZk01m/view',
+	},
+	{
+		id: 'vt10',
+		name: messages.mapSeason10,
+		server: 'vt',
+		downloadUrl: 'https://drive.google.com/file/d/1D9Qg79mGRFmg10kFAJdIV3UDGa-zGRU9/view',
 	},
 	{
 		id: 'plots1',
 		name: messages.mapCreativePlots,
 		server: 'plots',
-		thumbnail: `${CDN}/plots1/thumbnail.png`,
 		downloadUrl: 'https://drive.google.com/file/d/1gqfG5TiNokLQgVR6FapoECMbi5nE1zzR/view',
 	},
 	{
 		id: 'svt1',
 		name: messages.mapSemiSeason1,
 		server: 'svt',
-		thumbnail: undefined,
 		downloadUrl: 'https://drive.google.com/file/d/1l__L1Flgi1pIDXC0PQbTiQH3QR3n9cWn/view',
 	},
 	{
 		id: 'svt2',
 		name: messages.mapSemiSeason2,
 		server: 'svt',
-		thumbnail: undefined,
 		downloadUrl: 'https://drive.google.com/file/d/1aWoBs94aEdVKILhHCUFEpSNhX29CWI2Y/view',
 	},
 ] satisfies {
 	id: string
 	name: (typeof messages)[keyof typeof messages]
 	server: MapServer
-	thumbnail: string | undefined
 	downloadUrl: string
 }[]
 const selectedFilters = ref<FilterValue[]>([])
@@ -334,6 +330,34 @@ const filteredMaps = computed(() => {
 		: maps.filter((map) => activeServers.includes(map.server))
 })
 type WorldMap = (typeof maps)[number]
+
+/** Thumbnail URL per map id, filled in once the browser finds which format exists on the CDN. */
+const thumbnails = ref<Record<string, string>>({})
+
+function imageExists(url: string): Promise<boolean> {
+	return new Promise((resolve) => {
+		const image = new Image()
+		image.onload = () => resolve(true)
+		image.onerror = () => resolve(false)
+		image.src = url
+	})
+}
+
+async function findThumbnail(id: string) {
+	for (const extension of THUMBNAIL_EXTENSIONS) {
+		const url = `${CDN}/${id}/thumbnail.${extension}`
+		if (await imageExists(url)) {
+			thumbnails.value[id] = url
+			return
+		}
+	}
+}
+
+onMounted(() => {
+	for (const map of maps) {
+		findThumbnail(map.id)
+	}
+})
 
 const expandedMap = ref<WorldMap | null>(null)
 const zoomedIn = ref(false)
