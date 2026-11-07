@@ -72,6 +72,7 @@ import _BugIcon from './icons/bug.svg?component'
 import _CalendarIcon from './icons/calendar.svg?component'
 import _CalendarArrowDownIcon from './icons/calendar-arrow-down.svg?component'
 import _CardIcon from './icons/card.svg?component'
+import _CastleIcon from './icons/castle.svg?component'
 import _ChartIcon from './icons/chart.svg?component'
 import _ChartAreaIcon from './icons/chart-area.svg?component'
 import _ChartColumnBigIcon from './icons/chart-column-big.svg?component'
@@ -186,6 +187,7 @@ import _LanguagesIcon from './icons/languages.svg?component'
 import _LayersIcon from './icons/layers.svg?component'
 import _LayoutGridIcon from './icons/layout-grid.svg?component'
 import _LayoutTemplateIcon from './icons/layout-template.svg?component'
+import _LeafIcon from './icons/leaf.svg?component'
 import _LeftArrowIcon from './icons/left-arrow.svg?component'
 import _LibraryIcon from './icons/library.svg?component'
 import _LightBulbIcon from './icons/light-bulb.svg?component'
@@ -225,6 +227,7 @@ import _MonitorSmartphoneIcon from './icons/monitor-smartphone.svg?component'
 import _MoonIcon from './icons/moon.svg?component'
 import _MoreHorizontalIcon from './icons/more-horizontal.svg?component'
 import _MoreVerticalIcon from './icons/more-vertical.svg?component'
+import _MountainIcon from './icons/mountain.svg?component'
 import _MousePointer2Icon from './icons/mouse-pointer-2.svg?component'
 import _MoveIcon from './icons/move.svg?component'
 import _MoveUpRightIcon from './icons/move-up-right.svg?component'
@@ -283,6 +286,7 @@ import _ServerStackIcon from './icons/server-stack.svg?component'
 import _SettingsIcon from './icons/settings.svg?component'
 import _Settings2Icon from './icons/settings-2.svg?component'
 import _ShareIcon from './icons/share.svg?component'
+import _ShellIcon from './icons/shell.svg?component'
 import _ShieldIcon from './icons/shield.svg?component'
 import _ShieldAlertIcon from './icons/shield-alert.svg?component'
 import _ShieldBanIcon from './icons/shield-ban.svg?component'
@@ -296,11 +300,13 @@ import _SignalIcon from './icons/signal.svg?component'
 import _SignatureIcon from './icons/signature.svg?component'
 import _SkullIcon from './icons/skull.svg?component'
 import _SlashIcon from './icons/slash.svg?component'
+import _SnowflakeIcon from './icons/snowflake.svg?component'
 import _SortAscIcon from './icons/sort-asc.svg?component'
 import _SortDescIcon from './icons/sort-desc.svg?component'
 import _SparklesIcon from './icons/sparkles.svg?component'
 import _SpinnerIcon from './icons/spinner.svg?component'
 import _SplitIcon from './icons/split.svg?component'
+import _SproutIcon from './icons/sprout.svg?component'
 import _SquareIcon from './icons/square.svg?component'
 import _SquareCheckIcon from './icons/square-check.svg?component'
 import _SquarePlusIcon from './icons/square-plus.svg?component'
@@ -476,6 +482,7 @@ import _TransferIcon from './icons/transfer.svg?component'
 import _TrashIcon from './icons/trash.svg?component'
 import _TrashExclamationIcon from './icons/trash-exclamation.svg?component'
 import _TreePalmIcon from './icons/tree-palm.svg?component'
+import _TreesIcon from './icons/trees.svg?component'
 import _TrendingDownIcon from './icons/trending-down.svg?component'
 import _TrendingUpIcon from './icons/trending-up.svg?component'
 import _TriangleAlertIcon from './icons/triangle-alert.svg?component'
@@ -580,6 +587,7 @@ export const BugIcon = _BugIcon
 export const CalendarIcon = _CalendarIcon
 export const CalendarArrowDownIcon = _CalendarArrowDownIcon
 export const CardIcon = _CardIcon
+export const CastleIcon = _CastleIcon
 export const ChartIcon = _ChartIcon
 export const ChartAreaIcon = _ChartAreaIcon
 export const ChartColumnBigIcon = _ChartColumnBigIcon
@@ -694,6 +702,7 @@ export const LanguagesIcon = _LanguagesIcon
 export const LayersIcon = _LayersIcon
 export const LayoutGridIcon = _LayoutGridIcon
 export const LayoutTemplateIcon = _LayoutTemplateIcon
+export const LeafIcon = _LeafIcon
 export const LeftArrowIcon = _LeftArrowIcon
 export const LibraryIcon = _LibraryIcon
 export const LightBulbIcon = _LightBulbIcon
@@ -733,6 +742,7 @@ export const MonitorSmartphoneIcon = _MonitorSmartphoneIcon
 export const MoonIcon = _MoonIcon
 export const MoreHorizontalIcon = _MoreHorizontalIcon
 export const MoreVerticalIcon = _MoreVerticalIcon
+export const MountainIcon = _MountainIcon
 export const MousePointer2Icon = _MousePointer2Icon
 export const MoveIcon = _MoveIcon
 export const MoveUpRightIcon = _MoveUpRightIcon
@@ -791,6 +801,7 @@ export const ServerStackIcon = _ServerStackIcon
 export const SettingsIcon = _SettingsIcon
 export const Settings2Icon = _Settings2Icon
 export const ShareIcon = _ShareIcon
+export const ShellIcon = _ShellIcon
 export const ShieldIcon = _ShieldIcon
 export const ShieldAlertIcon = _ShieldAlertIcon
 export const ShieldBanIcon = _ShieldBanIcon
@@ -804,11 +815,13 @@ export const SignalIcon = _SignalIcon
 export const SignatureIcon = _SignatureIcon
 export const SkullIcon = _SkullIcon
 export const SlashIcon = _SlashIcon
+export const SnowflakeIcon = _SnowflakeIcon
 export const SortAscIcon = _SortAscIcon
 export const SortDescIcon = _SortDescIcon
 export const SparklesIcon = _SparklesIcon
 export const SpinnerIcon = _SpinnerIcon
 export const SplitIcon = _SplitIcon
+export const SproutIcon = _SproutIcon
 export const SquareIcon = _SquareIcon
 export const SquareCheckIcon = _SquareCheckIcon
 export const SquarePlusIcon = _SquarePlusIcon
@@ -984,6 +997,7 @@ export const TransferIcon = _TransferIcon
 export const TrashIcon = _TrashIcon
 export const TrashExclamationIcon = _TrashExclamationIcon
 export const TreePalmIcon = _TreePalmIcon
+export const TreesIcon = _TreesIcon
 export const TrendingDownIcon = _TrendingDownIcon
 export const TrendingUpIcon = _TrendingUpIcon
 export const TriangleAlertIcon = _TriangleAlertIcon
@@ -1021,86 +1035,87 @@ export const ZapIcon = _ZapIcon
 export const ZoomInIcon = _ZoomInIcon
 export const ZoomOutIcon = _ZoomOutIcon
 
+
 export const categoryIconMap: Record<string, IconComponent> = {
-	adventure: TagCategoryAdventureIcon,
-	atmosphere: TagCategoryAtmosphereIcon,
-	audio: TagCategoryAudioIcon,
-	backpack: TagCategoryBackpackIcon,
-	badge: TagCategoryBadgeIcon,
+	'adventure': TagCategoryAdventureIcon,
+	'atmosphere': TagCategoryAtmosphereIcon,
+	'audio': TagCategoryAudioIcon,
+	'backpack': TagCategoryBackpackIcon,
+	'badge': TagCategoryBadgeIcon,
 	'badge-check': TagCategoryBadgeCheckIcon,
 	'bed-double': TagCategoryBedDoubleIcon,
-	blocks: TagCategoryBlocksIcon,
-	bloom: TagCategoryBloomIcon,
+	'blocks': TagCategoryBlocksIcon,
+	'bloom': TagCategoryBloomIcon,
 	'building-2': TagCategoryBuilding2Icon,
-	camera: TagCategoryCameraIcon,
-	cartoon: TagCategoryCartoonIcon,
-	castle: TagCategoryCastleIcon,
-	challenging: TagCategoryChallengingIcon,
-	clapperboard: TagCategoryClapperboardIcon,
-	cloud: TagCategoryCloudIcon,
+	'camera': TagCategoryCameraIcon,
+	'cartoon': TagCategoryCartoonIcon,
+	'castle': TagCategoryCastleIcon,
+	'challenging': TagCategoryChallengingIcon,
+	'clapperboard': TagCategoryClapperboardIcon,
+	'cloud': TagCategoryCloudIcon,
 	'colored-lighting': TagCategoryColoredLightingIcon,
-	combat: TagCategoryCombatIcon,
-	compass: TagCategoryCompassIcon,
+	'combat': TagCategoryCombatIcon,
+	'compass': TagCategoryCompassIcon,
 	'core-shaders': TagCategoryCoreShadersIcon,
-	crown: TagCategoryCrownIcon,
-	cursed: TagCategoryCursedIcon,
-	decoration: TagCategoryDecorationIcon,
-	dices: TagCategoryDicesIcon,
-	economy: TagCategoryEconomyIcon,
-	entities: TagCategoryEntitiesIcon,
-	environment: TagCategoryEnvironmentIcon,
-	equipment: TagCategoryEquipmentIcon,
-	fantasy: TagCategoryFantasyIcon,
-	film: TagCategoryFilmIcon,
-	flag: TagCategoryFlagIcon,
-	foliage: TagCategoryFoliageIcon,
-	fonts: TagCategoryFontsIcon,
-	food: TagCategoryFoodIcon,
-	footprints: TagCategoryFootprintsIcon,
+	'crown': TagCategoryCrownIcon,
+	'cursed': TagCategoryCursedIcon,
+	'decoration': TagCategoryDecorationIcon,
+	'dices': TagCategoryDicesIcon,
+	'economy': TagCategoryEconomyIcon,
+	'entities': TagCategoryEntitiesIcon,
+	'environment': TagCategoryEnvironmentIcon,
+	'equipment': TagCategoryEquipmentIcon,
+	'fantasy': TagCategoryFantasyIcon,
+	'film': TagCategoryFilmIcon,
+	'flag': TagCategoryFlagIcon,
+	'foliage': TagCategoryFoliageIcon,
+	'fonts': TagCategoryFontsIcon,
+	'food': TagCategoryFoodIcon,
+	'footprints': TagCategoryFootprintsIcon,
 	'game-mechanics': TagCategoryGameMechanicsIcon,
 	'gamepad-2': TagCategoryGamepad2Icon,
-	gauge: TagCategoryGaugeIcon,
-	globe: TagCategoryGlobeIcon,
+	'gauge': TagCategoryGaugeIcon,
+	'globe': TagCategoryGlobeIcon,
 	'grid-3x3': TagCategoryGrid3x3Icon,
-	gui: TagCategoryGuiIcon,
-	handshake: TagCategoryHandshakeIcon,
+	'gui': TagCategoryGuiIcon,
+	'handshake': TagCategoryHandshakeIcon,
 	'heart-crack': TagCategoryHeartCrackIcon,
 	'heart-pulse': TagCategoryHeartPulseIcon,
-	high: TagCategoryHighIcon,
-	house: TagCategoryHouseIcon,
-	items: TagCategoryItemsIcon,
+	'high': TagCategoryHighIcon,
+	'house': TagCategoryHouseIcon,
+	'items': TagCategoryItemsIcon,
 	'kitchen-sink': TagCategoryKitchenSinkIcon,
-	library: TagCategoryLibraryIcon,
-	lightweight: TagCategoryLightweightIcon,
-	locale: TagCategoryLocaleIcon,
-	lock: TagCategoryLockIcon,
-	low: TagCategoryLowIcon,
-	magic: TagCategoryMagicIcon,
-	management: TagCategoryManagementIcon,
+	'library': TagCategoryLibraryIcon,
+	'lightweight': TagCategoryLightweightIcon,
+	'locale': TagCategoryLocaleIcon,
+	'lock': TagCategoryLockIcon,
+	'low': TagCategoryLowIcon,
+	'magic': TagCategoryMagicIcon,
+	'management': TagCategoryManagementIcon,
 	'map-pinned': TagCategoryMapPinnedIcon,
-	medium: TagCategoryMediumIcon,
-	minigame: TagCategoryMinigameIcon,
-	mobs: TagCategoryMobsIcon,
-	modded: TagCategoryModdedIcon,
-	models: TagCategoryModelsIcon,
-	multiplayer: TagCategoryMultiplayerIcon,
-	network: TagCategoryNetworkIcon,
-	optimization: TagCategoryOptimizationIcon,
-	palette: TagCategoryPaletteIcon,
+	'medium': TagCategoryMediumIcon,
+	'minigame': TagCategoryMinigameIcon,
+	'mobs': TagCategoryMobsIcon,
+	'modded': TagCategoryModdedIcon,
+	'models': TagCategoryModelsIcon,
+	'multiplayer': TagCategoryMultiplayerIcon,
+	'network': TagCategoryNetworkIcon,
+	'optimization': TagCategoryOptimizationIcon,
+	'palette': TagCategoryPaletteIcon,
 	'path-tracing': TagCategoryPathTracingIcon,
 	'paw-print': TagCategoryPawPrintIcon,
-	pbr: TagCategoryPbrIcon,
-	pickaxe: TagCategoryPickaxeIcon,
-	potato: TagCategoryPotatoIcon,
-	quests: TagCategoryQuestsIcon,
-	realistic: TagCategoryRealisticIcon,
-	reflections: TagCategoryReflectionsIcon,
+	'pbr': TagCategoryPbrIcon,
+	'pickaxe': TagCategoryPickaxeIcon,
+	'potato': TagCategoryPotatoIcon,
+	'quests': TagCategoryQuestsIcon,
+	'realistic': TagCategoryRealisticIcon,
+	'reflections': TagCategoryReflectionsIcon,
 	'refresh-ccw': TagCategoryRefreshCcwIcon,
-	screenshot: TagCategoryScreenshotIcon,
+	'screenshot': TagCategoryScreenshotIcon,
 	'scroll-text': TagCategoryScrollTextIcon,
 	'semi-realistic': TagCategorySemiRealisticIcon,
-	shadows: TagCategoryShadowsIcon,
-	shield: TagCategoryShieldIcon,
+	'shadows': TagCategoryShadowsIcon,
+	'shield': TagCategoryShieldIcon,
 	'shop-animals': TagCategoryShopAnimalsIcon,
 	'shop-armor': TagCategoryShopArmorIcon,
 	'shop-blocks': TagCategoryShopBlocksIcon,
@@ -1119,60 +1134,60 @@ export const categoryIconMap: Record<string, IconComponent> = {
 	'shop-tools': TagCategoryShopToolsIcon,
 	'shop-weapons': TagCategoryShopWeaponsIcon,
 	'shop-wood': TagCategoryShopWoodIcon,
-	simplistic: TagCategorySimplisticIcon,
-	skull: TagCategorySkullIcon,
-	social: TagCategorySocialIcon,
-	square: TagCategorySquareIcon,
-	storage: TagCategoryStorageIcon,
-	sword: TagCategorySwordIcon,
-	swords: TagCategorySwordsIcon,
-	target: TagCategoryTargetIcon,
-	technology: TagCategoryTechnologyIcon,
-	terminal: TagCategoryTerminalIcon,
-	theater: TagCategoryTheaterIcon,
-	themed: TagCategoryThemedIcon,
-	transportation: TagCategoryTransportationIcon,
+	'simplistic': TagCategorySimplisticIcon,
+	'skull': TagCategorySkullIcon,
+	'social': TagCategorySocialIcon,
+	'square': TagCategorySquareIcon,
+	'storage': TagCategoryStorageIcon,
+	'sword': TagCategorySwordIcon,
+	'swords': TagCategorySwordsIcon,
+	'target': TagCategoryTargetIcon,
+	'technology': TagCategoryTechnologyIcon,
+	'terminal': TagCategoryTerminalIcon,
+	'theater': TagCategoryTheaterIcon,
+	'themed': TagCategoryThemedIcon,
+	'transportation': TagCategoryTransportationIcon,
 	'tree-pine': TagCategoryTreePineIcon,
-	trophy: TagCategoryTrophyIcon,
-	tweaks: TagCategoryTweaksIcon,
-	users: TagCategoryUsersIcon,
-	utility: TagCategoryUtilityIcon,
+	'trophy': TagCategoryTrophyIcon,
+	'tweaks': TagCategoryTweaksIcon,
+	'users': TagCategoryUsersIcon,
+	'utility': TagCategoryUtilityIcon,
 	'vanilla-like': TagCategoryVanillaLikeIcon,
 	'wand-sparkles': TagCategoryWandSparklesIcon,
 	'wifi-off': TagCategoryWifiOffIcon,
-	worldgen: TagCategoryWorldgenIcon,
-	zap: TagCategoryZapIcon,
+	'worldgen': TagCategoryWorldgenIcon,
+	'zap': TagCategoryZapIcon,
 }
 
 export const loaderIconMap: Record<string, IconComponent> = {
-	babric: TagLoaderBabricIcon,
+	'babric': TagLoaderBabricIcon,
 	'bta-babric': TagLoaderBtaBabricIcon,
-	bukkit: TagLoaderBukkitIcon,
-	bungeecord: TagLoaderBungeecordIcon,
-	canvas: TagLoaderCanvasIcon,
-	datapack: TagLoaderDatapackIcon,
-	fabric: TagLoaderFabricIcon,
-	folia: TagLoaderFoliaIcon,
-	forge: TagLoaderForgeIcon,
-	geyser: TagLoaderGeyserIcon,
-	iris: TagLoaderIrisIcon,
+	'bukkit': TagLoaderBukkitIcon,
+	'bungeecord': TagLoaderBungeecordIcon,
+	'canvas': TagLoaderCanvasIcon,
+	'datapack': TagLoaderDatapackIcon,
+	'fabric': TagLoaderFabricIcon,
+	'folia': TagLoaderFoliaIcon,
+	'forge': TagLoaderForgeIcon,
+	'geyser': TagLoaderGeyserIcon,
+	'iris': TagLoaderIrisIcon,
 	'java-agent': TagLoaderJavaAgentIcon,
 	'legacy-fabric': TagLoaderLegacyFabricIcon,
-	liteloader: TagLoaderLiteloaderIcon,
-	minecraft: TagLoaderMinecraftIcon,
-	modloader: TagLoaderModloaderIcon,
-	mrpack: TagLoaderMrpackIcon,
-	neoforge: TagLoaderNeoforgeIcon,
-	nilloader: TagLoaderNilloaderIcon,
-	optifine: TagLoaderOptifineIcon,
-	ornithe: TagLoaderOrnitheIcon,
-	paper: TagLoaderPaperIcon,
-	purpur: TagLoaderPurpurIcon,
-	quilt: TagLoaderQuiltIcon,
-	rift: TagLoaderRiftIcon,
-	spigot: TagLoaderSpigotIcon,
-	sponge: TagLoaderSpongeIcon,
-	vanilla: TagLoaderVanillaIcon,
-	velocity: TagLoaderVelocityIcon,
-	waterfall: TagLoaderWaterfallIcon,
+	'liteloader': TagLoaderLiteloaderIcon,
+	'minecraft': TagLoaderMinecraftIcon,
+	'modloader': TagLoaderModloaderIcon,
+	'mrpack': TagLoaderMrpackIcon,
+	'neoforge': TagLoaderNeoforgeIcon,
+	'nilloader': TagLoaderNilloaderIcon,
+	'optifine': TagLoaderOptifineIcon,
+	'ornithe': TagLoaderOrnitheIcon,
+	'paper': TagLoaderPaperIcon,
+	'purpur': TagLoaderPurpurIcon,
+	'quilt': TagLoaderQuiltIcon,
+	'rift': TagLoaderRiftIcon,
+	'spigot': TagLoaderSpigotIcon,
+	'sponge': TagLoaderSpongeIcon,
+	'vanilla': TagLoaderVanillaIcon,
+	'velocity': TagLoaderVelocityIcon,
+	'waterfall': TagLoaderWaterfallIcon,
 }

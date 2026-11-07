@@ -105,6 +105,12 @@
 							to: '/vote',
 						},
 						{
+							id: 'public-areas',
+							label: formatMessage(navMenuMessages.publicAreas),
+							type: 'link',
+							to: '/public-areas',
+						},
+						{
 							id: 'live-map',
 							label: formatMessage(navMenuMessages.liveMap),
 							type: 'link',
@@ -120,7 +126,10 @@
 					]"
 					:class="[
 						'!w-auto !rounded-xl !px-2.5',
-						route.name?.startsWith('rules') || route.name === 'vote' || route.name === 'downloads'
+						route.name?.startsWith('rules') ||
+						route.name === 'vote' ||
+						route.name === 'downloads' ||
+						route.name === 'public-areas'
 							? '!bg-[var(--color-button-bg-selected)] !text-[var(--color-button-text-selected)] [&>svg]:!text-[var(--color-button-text-selected)]'
 							: '',
 					]"
@@ -139,6 +148,10 @@
 					<template #vote>
 						<VoteIcon aria-hidden="true" />
 						{{ formatMessage(navMenuMessages.vote) }}
+					</template>
+					<template #public-areas>
+						<MapPinIcon aria-hidden="true" />
+						{{ formatMessage(navMenuMessages.publicAreas) }}
 					</template>
 					<template #live-map>
 						<EarthSearchIcon aria-hidden="true" />
@@ -579,6 +592,7 @@ import {
 	LogOutIcon,
 	MailIcon,
 	MapArrowDownIcon,
+	MapPinIcon,
 	MoonIcon,
 	OrganizationIcon,
 	OrganizationPlusIcon,
@@ -700,6 +714,10 @@ const navMenuMessages = defineMessages({
 	vote: {
 		id: 'layout.nav.vote',
 		defaultMessage: 'Vote',
+	},
+	publicAreas: {
+		id: 'layout.nav.public-areas',
+		defaultMessage: 'Public areas',
 	},
 	liveMap: {
 		id: 'layout.nav.live-map',
@@ -896,6 +914,10 @@ const navRoutes = computed(() => [
 	{
 		label: formatMessage(navMenuMessages.vote),
 		href: '/vote',
+	},
+	{
+		label: formatMessage(navMenuMessages.publicAreas),
+		href: '/public-areas',
 	},
 	{
 		label: formatMessage(navMenuMessages.liveMap),
