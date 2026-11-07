@@ -2561,6 +2561,9 @@
   "layout.nav.projects": {
     "message": "My shops"
   },
+  "layout.nav.public-areas": {
+    "message": "Public areas"
+  },
   "layout.nav.remove-account": {
     "message": "Remove account"
   },
@@ -4261,6 +4264,129 @@
   },
   "project.versions.withheld-versions-warning.title": {
     "message": "{count, plural, one {Version {version_name}} other {Versions}} withheld due to unknown embedded content"
+  },
+  "public-areas.area.coral-reef": {
+    "message": "Coral reef"
+  },
+  "public-areas.area.desert-mesa": {
+    "message": "Desert and mesa"
+  },
+  "public-areas.area.ice-spikes": {
+    "message": "Ice spikes and frozen river"
+  },
+  "public-areas.area.mangrove-swamp": {
+    "message": "Mangrove and swamp"
+  },
+  "public-areas.area.mushroom-island": {
+    "message": "Mushroom island"
+  },
+  "public-areas.area.pale-garden": {
+    "message": "Pale garden"
+  },
+  "public-areas.area.stronghold": {
+    "message": "Stronghold"
+  },
+  "public-areas.card.hub-direction": {
+    "message": "{direction, select, north {North} south {South} east {East} west {West} other {}} {distance}"
+  },
+  "public-areas.card.nether-hub": {
+    "message": "Nether hub"
+  },
+  "public-areas.card.overworld": {
+    "message": "Overworld"
+  },
+  "public-areas.card.portal-coming-soon": {
+    "message": "Portal coming soon"
+  },
+  "public-areas.card.view-on-map": {
+    "message": "View on map"
+  },
+  "public-areas.getting-there.description": {
+    "message": "From the nether hub, follow the listed main tunnel that many blocks and take the portal up."
+  },
+  "public-areas.getting-there.title": {
+    "message": "Getting there"
+  },
+  "public-areas.hero.open-map": {
+    "message": "Open the map"
+  },
+  "public-areas.hero.read-rules": {
+    "message": "Read the rules"
+  },
+  "public-areas.hero.subtitle": {
+    "message": "Biomes claimed for everyone to gather resources from."
+  },
+  "public-areas.hero.title-line-1": {
+    "message": "Public areas"
+  },
+  "public-areas.hero.title-line-2": {
+    "message": "Season {season}"
+  },
+  "public-areas.resource.cactus": {
+    "message": "Cactus"
+  },
+  "public-areas.resource.coral": {
+    "message": "Coral"
+  },
+  "public-areas.resource.creaking-heart": {
+    "message": "Creaking heart"
+  },
+  "public-areas.resource.end-portal": {
+    "message": "End portal"
+  },
+  "public-areas.resource.frogs": {
+    "message": "Frogs"
+  },
+  "public-areas.resource.ice": {
+    "message": "Ice"
+  },
+  "public-areas.resource.kelp": {
+    "message": "Kelp"
+  },
+  "public-areas.resource.mangrove-wood": {
+    "message": "Mangrove wood"
+  },
+  "public-areas.resource.mooshrooms": {
+    "message": "Mooshrooms"
+  },
+  "public-areas.resource.mud": {
+    "message": "Mud"
+  },
+  "public-areas.resource.mushroom-blocks": {
+    "message": "Mushroom blocks"
+  },
+  "public-areas.resource.mycelium": {
+    "message": "Mycelium"
+  },
+  "public-areas.resource.packed-ice": {
+    "message": "Packed ice"
+  },
+  "public-areas.resource.pale-moss": {
+    "message": "Pale moss"
+  },
+  "public-areas.resource.pale-oak-wood": {
+    "message": "Pale oak wood"
+  },
+  "public-areas.resource.red-sand": {
+    "message": "Red sand"
+  },
+  "public-areas.resource.sand": {
+    "message": "Sand"
+  },
+  "public-areas.resource.sea-pickles": {
+    "message": "Sea pickles"
+  },
+  "public-areas.resource.snow": {
+    "message": "Snow"
+  },
+  "public-areas.resource.terracotta": {
+    "message": "Terracotta"
+  },
+  "public-areas.seo.description": {
+    "message": "Biomes claimed for every Vanilla Tyme player to gather resources from."
+  },
+  "public-areas.seo.title": {
+    "message": "Public areas - Vanilla Tyme SMP"
   },
   "report.already-reported": {
     "message": "You've already reported {title}"
