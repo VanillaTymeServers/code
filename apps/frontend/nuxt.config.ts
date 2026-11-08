@@ -347,6 +347,10 @@ function getNoExternals() {
 		return process.env.NITRO_NO_EXTERNALS === 'true'
 	}
 
+	if (process.env.NITRO_PRESET?.startsWith('node')) {
+		return false
+	}
+
 	// bundling every dependency breaks the dev server, so only do it for real builds
 	return isProduction()
 }
