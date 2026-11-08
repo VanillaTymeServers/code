@@ -271,7 +271,7 @@ export default defineNuxtConfig({
 			plugins: [serverSidedVue()],
 			external: ['cloudflare:workers'],
 		},
-		preset: 'cloudflare_module',
+		preset: getNitroPreset(),
 		noExternals: getNoExternals(),
 		cloudflare: {
 			nodeCompat: true,
@@ -342,12 +342,17 @@ function isProduction() {
 	return process.env.NODE_ENV === 'production'
 }
 
+/** The site runs as a Node server on the VPS, so that is the default build target. */
+function getNitroPreset() {
+	return process.env.NITRO_PRESET ?? 'node_cluster'
+}
+
 function getNoExternals() {
 	if (process.env.NITRO_NO_EXTERNALS !== undefined) {
 		return process.env.NITRO_NO_EXTERNALS === 'true'
 	}
 
-	if (process.env.NITRO_PRESET?.startsWith('node')) {
+	if (getNitroPreset().startsWith('node')) {
 		return false
 	}
 
