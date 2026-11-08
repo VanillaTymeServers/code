@@ -330,10 +330,6 @@ const messages = defineMessages({
 		id: 'vote.links.site.minelist',
 		defaultMessage: 'Minelist',
 	},
-	siteOfficialServerList: {
-		id: 'vote.links.site.official-server-list',
-		defaultMessage: 'Official Server List',
-	},
 	sitePlanetMinecraft: {
 		id: 'vote.links.site.planet-minecraft',
 		defaultMessage: 'Planet Minecraft',
@@ -620,11 +616,6 @@ const voteSites = [
 		id: 'minelist',
 		label: messages.siteMinelist,
 		url: 'https://minelist.net/vote/2329',
-	},
-	{
-		id: 'official-server-list',
-		label: messages.siteOfficialServerList,
-		url: 'https://findmcserver.com/server/dRjaj6rGmO',
 	},
 	{
 		id: 'planet-minecraft',
