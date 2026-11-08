@@ -6074,6 +6074,12 @@
   "store.package.added.title": {
     "message": "Added to cart"
   },
+  "store.package.amount-hint": {
+    "message": "Minimum {price}"
+  },
+  "store.package.amount-label": {
+    "message": "Amount you would like to pay"
+  },
   "store.package.back": {
     "message": "Back to store"
   },
@@ -6097,6 +6103,9 @@
   },
   "store.package.one-time-or-recurring": {
     "message": "{count, plural, one {One-time or every {unit}} other {One-time or every # {unit}s}}"
+  },
+  "store.package.price-from": {
+    "message": "From {price}"
   },
   "store.package.purchase-type": {
     "message": "Purchase type"

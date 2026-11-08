@@ -11,6 +11,7 @@ export type AddToBasketInput = {
 	giftTo?: string
 	type: 'single' | 'subscription'
 	username?: string
+	price?: number
 }
 
 /**
@@ -60,7 +61,7 @@ export const useStoreBasket = () => {
 	}
 
 	const addMutation = useMutation({
-		mutationFn: async ({ packageIdent, type, username, giftTo }: AddToBasketInput) => {
+		mutationFn: async ({ packageIdent, type, username, giftTo, price }: AddToBasketInput) => {
 			let ident = basketIdent.value
 			if (!ident) {
 				if (!username) throw new Error('a minecraft username is needed to start a basket')
@@ -76,6 +77,7 @@ export const useStoreBasket = () => {
 				quantity: 1,
 				type,
 				target_username: giftTo,
+				variable_data: price === undefined ? undefined : { price },
 			})
 		},
 		onSuccess: setBasket,

@@ -233,6 +233,7 @@ export namespace Tebex {
 			target_username?: string
 			target_username_id?: string
 			dynamic?: boolean
+			variable_data?: Record<string, unknown>
 		}
 	}
 }

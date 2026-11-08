@@ -15,8 +15,28 @@
 				<div class="flex flex-col gap-1">
 					<h1 class="m-0 text-3xl font-bold text-contrast">{{ pkg.name }}</h1>
 					<span class="text-2xl font-bold text-brand">{{
-						price(pkg.total_price, pkg.currency)
+						isPayWhatYouWant
+							? formatMessage(messages.priceFrom, { price: price(pkg.total_price, pkg.currency) })
+							: price(pkg.total_price, pkg.currency)
 					}}</span>
+				</div>
+				<div v-if="isPayWhatYouWant" class="flex flex-col gap-2">
+					<label class="font-semibold text-contrast" for="store-amount">
+						{{ formatMessage(messages.amountLabel) }}
+					</label>
+					<Input
+						id="store-amount"
+						v-model="customPrice"
+						type="number"
+						inputmode="decimal"
+						:min="pkg.base_price"
+						:step="0.01"
+						:error="!isCustomPriceValid"
+						wrapper-class="w-full max-w-xs"
+					/>
+					<span class="text-sm text-secondary">
+						{{ formatMessage(messages.amountHint, { price: price(pkg.base_price, pkg.currency) }) }}
+					</span>
 				</div>
 				<div v-if="pkg.type === 'both' && pkg.expiry_period" class="flex flex-col gap-2">
 					<span class="font-semibold text-contrast">{{
@@ -158,6 +178,22 @@ const purchaseType = ref<'single' | 'subscription'>('single')
 const username = ref('')
 const isGift = ref(false)
 const giftUsername = ref('')
+const typedPrice = ref<string | number | undefined | null>(null)
+/** The amount box starts at the package's minimum until the buyer types their own amount. */
+const customPrice = computed({
+	get: () => (typedPrice.value === null ? pkg.value?.base_price : typedPrice.value),
+	set: (value) => {
+		typedPrice.value = value
+	},
+})
+
+const isPayWhatYouWant = computed(() => !!pkg.value && PAY_WHAT_YOU_WANT_PACKAGES.has(pkg.value.id))
+const chosenPrice = computed(() => Math.round(Number(customPrice.value) * 100) / 100)
+const isCustomPriceValid = computed(
+	() =>
+		!isPayWhatYouWant.value ||
+		(Number.isFinite(chosenPrice.value) && chosenPrice.value >= (pkg.value?.base_price ?? 0)),
+)
 
 const buyerUsername = computed(() => auth.value.user?.username ?? username.value.trim())
 const canGift = computed(() => !!webstore.value?.supports_gifting && !pkg.value?.disable_gifting)
@@ -166,6 +202,7 @@ const inBasket = computed(
 )
 const canAdd = computed(
 	() =>
+		isCustomPriceValid.value &&
 		(!!basket.value || MINECRAFT_USERNAME.test(buyerUsername.value)) &&
 		(!isGift.value || MINECRAFT_USERNAME.test(giftUsername.value.trim())),
 )
@@ -239,6 +276,18 @@ const messages = defineMessages({
 		id: 'store.package.gift-username-placeholder',
 		defaultMessage: "Recipient's Minecraft username",
 	},
+	priceFrom: {
+		id: 'store.package.price-from',
+		defaultMessage: 'From {price}',
+	},
+	amountLabel: {
+		id: 'store.package.amount-label',
+		defaultMessage: 'Amount you would like to pay',
+	},
+	amountHint: {
+		id: 'store.package.amount-hint',
+		defaultMessage: 'Minimum {price}',
+	},
 })
 
 function formatPurchaseType(type: 'single' | 'subscription') {
@@ -260,6 +309,7 @@ function addToBasket() {
 			type,
 			username: buyerUsername.value,
 			giftTo: isGift.value ? giftUsername.value.trim() : undefined,
+			price: isPayWhatYouWant.value ? chosenPrice.value : undefined,
 		},
 		{
 			onSuccess: () =>

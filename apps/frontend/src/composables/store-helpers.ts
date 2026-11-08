@@ -12,3 +12,6 @@ export const useStorePrice = () => {
 
 /** Cleans HTML written in the Tebex control panel before it is rendered. */
 export const sanitizeStoreHtml = (html: string) => configuredXss.process(html)
+
+/** Packages set to "pay what you want" in Tebex. Their price is the minimum the buyer can pay. */
+export const PAY_WHAT_YOU_WANT_PACKAGES = new Set([3697513])
