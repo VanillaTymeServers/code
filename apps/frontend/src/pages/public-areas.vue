@@ -324,7 +324,7 @@ const areas: PublicArea[] = [
 		name: messages.mangroveSwamp,
 		icon: TreesIcon,
 		resources: [messages.resourceMangroveWood, messages.resourceMud, messages.resourceFrogs],
-		x: 200,
+		x: 2000,
 		y: 64,
 		z: -2140,
 		hub: null,
