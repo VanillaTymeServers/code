@@ -1,3 +1,11 @@
 {
-	"articles": []
+	"articles": [
+		{
+			"title": "Season 11 Nether Tunnel Design Competition",
+			"summary": "Design the nether tunnels for Season 11. The community votes, and the winning design gets built into all four of our main tunnels.",
+			"thumbnail": "https://vanillatyme.com/news/article/nether-tunnel-design-competition/thumbnail.webp",
+			"date": "2026-11-10T17:00:00.000Z",
+			"link": "https://vanillatyme.com/news/article/nether-tunnel-design-competition"
+		}
+	]
 }
