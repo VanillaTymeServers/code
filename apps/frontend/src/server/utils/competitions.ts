@@ -13,6 +13,7 @@ interface CompetitionRow extends RowDataPacket {
 	category: string | null
 	criteria: string | null
 	mystery: number
+	started_at: number | null
 	ended_at: number
 	updated_at: number | null
 }
@@ -28,7 +29,7 @@ interface ResultRow extends RowDataPacket {
 export interface CompetitionResult {
 	place: number
 	username: string
-	/** Null for weeks imported from the old spreadsheet, which only recorded names. */
+	/** Null for a scoreboard name that isn't a known player. */
 	uuid: string | null
 	score: number
 }
@@ -43,6 +44,11 @@ export interface Competition {
 	mystery: boolean
 	/** Epoch millis. For the live week, when it will end (0 when there's no end time). */
 	endedAt: number
+	/**
+	 * True for every week imported from the old spreadsheet (everything before Season 11), which only
+	 * recorded the top 3. Tyme saves a start time with every week it records, and the import has none.
+	 */
+	onlyPodium: boolean
 	results: CompetitionResult[]
 }
 
@@ -115,7 +121,7 @@ async function queryCompetitions(
 			params.push(where.season)
 		}
 		return db.query<CompetitionRow[]>(
-			`SELECT id, season, title, category, criteria, mystery, ended_at,
+			`SELECT id, season, title, category, criteria, mystery, started_at, ended_at,
 				${withLiveColumns ? 'updated_at' : 'NULL AS updated_at'}
 			FROM ${COMPETITIONS_TABLE}
 			${conditions.length ? `WHERE ${conditions.join(' AND ')}` : ''}
@@ -165,6 +171,7 @@ async function queryCompetitions(
 		criteria: row.criteria,
 		mystery: !!row.mystery,
 		endedAt: Number(row.ended_at),
+		onlyPodium: row.started_at === null,
 		updatedAt: Number(row.updated_at ?? 0),
 		results: byCompetition.get(row.id) ?? [],
 	}))

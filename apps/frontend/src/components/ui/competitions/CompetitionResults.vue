@@ -34,7 +34,7 @@
 				<span class="results-score">{{ scoreFormat.format(result.score) }}</span>
 			</li>
 		</ol>
-		<p v-if="onlyPodium" class="results-note">
+		<p v-if="competition.onlyPodium" class="results-note">
 			{{ formatMessage(messages.onlyPodium) }}
 		</p>
 	</div>
@@ -67,13 +67,6 @@ const podium = computed(() => {
 		height: heights[place - 1],
 	}))
 })
-
-/** Weeks imported from the old spreadsheet only recorded the top 3. */
-const onlyPodium = computed(
-	() =>
-		props.competition.results.length <= 3 &&
-		props.competition.results.every((result) => result.uuid === null),
-)
 
 const messages = defineMessages({
 	skinAlt: {
