@@ -8,21 +8,3 @@ export const SEASON = {
 	number: 11,
 	startsAt: '2026-11-07T17:00:00Z',
 }
-
-export interface HomepageCompetition {
-	theme: string
-	/** ISO date. The competition stops showing as live once this has passed. */
-	endsAt: string
-}
-
-export interface HomepagePodium {
-	first: string
-	second: string
-	third: string
-}
-
-/** Set to `null` when no competition is running. */
-export const CURRENT_COMPETITION: HomepageCompetition | null = null
-
-/** Minecraft usernames from the last competition. The podium shows `???` while this is `null`. */
-export const LAST_PODIUM: HomepagePodium | null = null

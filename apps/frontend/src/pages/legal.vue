@@ -12,6 +12,7 @@
 					{ type: 'heading', label: 'Server' },
 					{ link: '/rules', label: 'Server Rules', icon: GavelIcon },
 					{ link: '/rules/market', label: 'Market Rules', icon: StoreIcon },
+					{ link: '/rules/competitions', label: 'Competition Rules', icon: CrownIcon },
 					{ link: '/rules/discord', label: 'Discord Guidelines', icon: DiscordIcon },
 				]"
 			/>
@@ -24,6 +25,7 @@
 
 <script setup>
 import {
+	CrownIcon,
 	DiscordIcon,
 	GavelIcon,
 	HeartHandshakeIcon,

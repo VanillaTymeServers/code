@@ -34,6 +34,10 @@
 							href: '/rules/market',
 						},
 						{
+							label: formatMessage(messages.competitionsTab),
+							href: '/rules/competitions',
+						},
+						{
 							label: formatMessage(messages.discordTab),
 							href: '/rules/discord',
 						},
@@ -58,7 +62,13 @@
 </template>
 
 <script lang="ts" setup>
-import { ChevronDownIcon, ChevronUpIcon, StoreIcon, TriangleAlertIcon } from '@modrinth/assets'
+import {
+	CalendarIcon,
+	ChevronDownIcon,
+	ChevronUpIcon,
+	StoreIcon,
+	TriangleAlertIcon,
+} from '@modrinth/assets'
 import { Button, defineMessages, NavTabs, useVIntl } from '@modrinth/ui'
 
 const { formatMessage } = useVIntl()
@@ -72,6 +82,10 @@ const messages = defineMessages({
 	marketTab: {
 		id: 'rules.tab.market',
 		defaultMessage: 'Market',
+	},
+	competitionsTab: {
+		id: 'rules.tab.competitions',
+		defaultMessage: 'Competitions',
 	},
 	discordTab: {
 		id: 'rules.tab.discord',
@@ -122,6 +136,23 @@ const messages = defineMessages({
 		id: 'rules.hero.market.badge',
 		defaultMessage: 'Season 11',
 	},
+	competitionsHeroPre: {
+		id: 'rules.hero.competitions.pre',
+		defaultMessage: 'Competition',
+	},
+	competitionsHeroAccent: {
+		id: 'rules.hero.competitions.accent',
+		defaultMessage: 'Rules',
+	},
+	competitionsHeroSubtitle: {
+		id: 'rules.hero.competitions.subtitle',
+		defaultMessage:
+			'Weekly competitions give every player a fair chance at prize boxes, trophies, and the Champ tag.',
+	},
+	competitionsHeroBadge: {
+		id: 'rules.hero.competitions.badge',
+		defaultMessage: 'Farms are allowed every other week. Check the announcement.',
+	},
 	discordHeroPre: {
 		id: 'rules.hero.discord.pre',
 		defaultMessage: 'Discord',
@@ -165,6 +196,16 @@ const heroes = {
 			text: messages.marketHeroBadge,
 			variant: 'brand',
 			icon: StoreIcon,
+		},
+	},
+	'rules-competitions': {
+		pre: messages.competitionsHeroPre,
+		accent: messages.competitionsHeroAccent,
+		subtitle: messages.competitionsHeroSubtitle,
+		badge: {
+			text: messages.competitionsHeroBadge,
+			variant: 'brand',
+			icon: CalendarIcon,
 		},
 	},
 	'rules-discord': {

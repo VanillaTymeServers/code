@@ -168,9 +168,22 @@
 						</div>
 						<div v-if="competition" class="flex min-w-0 flex-col">
 							<span class="eyebrow-muted">{{ formatMessage(messages.thisWeek) }}</span>
-							<span class="text-lg font-bold text-contrast">{{ competition.theme }}</span>
-							<span class="text-sm">
+							<span class="text-lg font-bold text-contrast">{{ competition.title }}</span>
+							<span v-if="competitionEndDate" class="text-sm">
 								{{ formatMessage(messages.competitionEnds, { date: competitionEndDate }) }}
+							</span>
+							<span v-if="competitionLeader" class="flex items-center gap-2 text-sm">
+								<PlayerHead
+									:player="competitionLeader.uuid ?? competitionLeader.username"
+									:size="16"
+									aria-hidden="true"
+								/>
+								{{
+									formatMessage(messages.competitionLeader, {
+										player: competitionLeader.username,
+										score: competitionLeader.score,
+									})
+								}}
 							</span>
 						</div>
 						<div v-else class="flex min-w-0 flex-col">
@@ -180,6 +193,10 @@
 							<span class="text-sm">{{ formatMessage(messages.noCompetitionHint) }}</span>
 						</div>
 					</div>
+					<ButtonLink type="colored-text" color="brand" to="/competitions" class="self-start">
+						{{ formatMessage(competition ? messages.liveStandings : messages.allResults) }}
+						<RightArrowIcon aria-hidden="true" />
+					</ButtonLink>
 				</div>
 
 				<div
@@ -282,13 +299,13 @@
 						<div v-if="topVoters?.length" class="mt-auto flex flex-col items-center gap-2">
 							<span class="eyebrow-muted">{{ formatMessage(messages.topVoters) }}</span>
 							<div class="flex gap-2">
-								<img
+								<PlayerHead
 									v-for="voter in topVoters"
 									:key="voter.uuid"
 									v-tooltip="`${voter.username} • ${voter.monthly}`"
-									:src="`https://minotar.net/helm/${voter.username}/96.png`"
+									:player="voter.uuid"
 									:alt="voter.username"
-									class="size-10 rounded-lg [image-rendering:pixelated]"
+									:size="40"
 								/>
 							</div>
 						</div>
@@ -396,20 +413,13 @@ import { useQuery } from '@tanstack/vue-query'
 
 import mapPreviewImage from '~/assets/images/home/map-preview.webp'
 import spawnImage from '~/assets/images/home/spawn.webp'
+import PlayerHead from '~/components/ui/PlayerHead.vue'
 import { fetchCurrentSeasonShops } from '~/composables/queries/season'
 import { storeQueryOptions } from '~/composables/queries/store'
-import {
-	CURRENT_COMPETITION,
-	DISCORD_URL,
-	type HomepageCompetition,
-	type HomepagePodium,
-	LAST_PODIUM,
-	LIVE_MAP_URL,
-	SEASON,
-	SERVER_ADDRESS,
-} from '~/helpers/homepage'
+import { DISCORD_URL, LIVE_MAP_URL, SEASON, SERVER_ADDRESS } from '~/helpers/homepage'
 import type { ServerStatus } from '~/server/routes/api/server-status.get'
 import type { VoteLeaderboardEntry } from '~/server/routes/api/votes.get'
+import type { Competition, LiveCompetition } from '~/server/utils/competitions'
 
 const { formatMessage } = useVIntl()
 const client = injectModrinthClient()
@@ -428,20 +438,39 @@ const monthDay = new Intl.DateTimeFormat('en-US', {
 })
 const seasonDate = monthDay.format(new Date(SEASON.startsAt))
 
-const liveCompetition = CURRENT_COMPETITION as HomepageCompetition | null
-const competition = computed(() =>
-	liveCompetition && Date.parse(liveCompetition.endsAt) > now.value ? liveCompetition : null,
-)
+const { data: competition } = useQuery({
+	queryKey: ['competitions-live'],
+	queryFn: () => $fetch<LiveCompetition | null>('/api/competitions/live'),
+	refetchInterval: 60_000,
+	retry: false,
+})
 const competitionEndDate = computed(() =>
-	competition.value ? monthDay.format(new Date(competition.value.endsAt)) : '',
+	competition.value?.endedAt ? monthDay.format(new Date(competition.value.endedAt)) : '',
+)
+const competitionLeader = computed(
+	() => competition.value?.results.find((result) => result.place === 1) ?? null,
 )
 
-const lastPodium = LAST_PODIUM as HomepagePodium | null
-const podium = [
-	{ place: 2, player: lastPodium?.second ?? null, skinHeight: '170px' },
-	{ place: 1, player: lastPodium?.first ?? null, skinHeight: '200px' },
-	{ place: 3, player: lastPodium?.third ?? null, skinHeight: '160px' },
-]
+const { data: lastCompetition } = useQuery({
+	queryKey: ['home-last-competition'],
+	queryFn: () => $fetch<Competition | null>('/api/competitions/latest'),
+	retry: false,
+})
+
+const lastPodium = computed(() =>
+	lastCompetition.value?.results.length ? lastCompetition.value : null,
+)
+const podium = computed(() =>
+	[
+		{ place: 2, skinHeight: '170px' },
+		{ place: 1, skinHeight: '200px' },
+		{ place: 3, skinHeight: '160px' },
+	].map((step) => ({
+		...step,
+		player:
+			lastPodium.value?.results.find((result) => result.place === step.place)?.username ?? null,
+	})),
+)
 
 const { data: status } = useQuery({
 	queryKey: ['server-status'],
@@ -670,7 +699,19 @@ const messages = defineMessages({
 	},
 	lastPodium: {
 		id: 'home.competition.last-podium',
-		defaultMessage: "Last week's podium",
+		defaultMessage: "Last competition's podium",
+	},
+	allResults: {
+		id: 'home.competition.all-results',
+		defaultMessage: 'See all results',
+	},
+	liveStandings: {
+		id: 'home.competition.live-standings',
+		defaultMessage: 'See live standings',
+	},
+	competitionLeader: {
+		id: 'home.competition.leader',
+		defaultMessage: '{player} leads with {score}',
 	},
 	nextPodium: {
 		id: 'home.competition.next-podium',

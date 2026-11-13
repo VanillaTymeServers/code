@@ -24,7 +24,11 @@
 			<div v-else-if="module.type === 'top_customer'" class="card flex-card flex flex-col gap-3">
 				<h2 class="m-0 text-lg">{{ module.data.header }}</h2>
 				<div class="flex items-center gap-3">
-					<Avatar :src="module.data.avatar_url" :alt="module.data.username" size="40px" no-shadow />
+					<PlayerHead
+						:player="module.data.username_id || module.data.username"
+						:alt="module.data.username"
+						:size="40"
+					/>
 					<span class="font-semibold text-contrast">{{ module.data.username }}</span>
 				</div>
 			</div>
@@ -35,7 +39,11 @@
 					:key="index"
 					class="flex items-center gap-3"
 				>
-					<Avatar :src="payment.avatar_url" :alt="payment.username" size="32px" no-shadow />
+					<PlayerHead
+						:player="payment.username_id || payment.username"
+						:alt="payment.username"
+						:size="32"
+					/>
 					<div class="flex min-w-0 flex-col leading-tight">
 						<span class="truncate font-semibold text-contrast">{{ payment.username }}</span>
 						<span class="truncate text-sm text-secondary">
@@ -63,7 +71,6 @@
 
 <script setup lang="ts">
 import {
-	Avatar,
 	defineMessages,
 	injectModrinthClient,
 	ProgressBar,
@@ -73,6 +80,7 @@ import {
 } from '@modrinth/ui'
 import { useQuery } from '@tanstack/vue-query'
 
+import PlayerHead from '~/components/ui/PlayerHead.vue'
 import StorePackageCard from '~/components/ui/store/StorePackageCard.vue'
 import { storeQueryOptions } from '~/composables/queries/store'
 

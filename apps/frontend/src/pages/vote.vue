@@ -200,13 +200,7 @@
 					</div>
 					<div v-for="vote in leaderboard ?? []" :key="vote.uuid" class="leaderboard-row">
 						<div>
-							<Avatar
-								:src="`https://minotar.net/helm/${vote.uuid}`"
-								:alt="vote.username"
-								aria-hidden="true"
-								size="32px"
-								no-shadow
-							/>
+							<PlayerHead :player="vote.uuid" :size="32" aria-hidden="true" />
 						</div>
 						<div>{{ vote.username }}</div>
 						<div class="max-md:hidden">{{ vote.daily }}</div>
@@ -258,7 +252,6 @@ import {
 	ZapIcon,
 } from '@modrinth/assets'
 import {
-	Avatar,
 	Button,
 	ButtonLink,
 	Combobox,
@@ -271,6 +264,7 @@ import {
 import { useQuery } from '@tanstack/vue-query'
 import { refDebounced } from '@vueuse/core'
 
+import PlayerHead from '~/components/ui/PlayerHead.vue'
 import type { VoteLeaderboardEntry } from '~/server/routes/api/votes.get'
 
 type SortOrder = 'today' | 'week' | 'month' | 'season' | 'all'

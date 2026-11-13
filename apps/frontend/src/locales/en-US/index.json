@@ -902,6 +902,63 @@
   "collection.title": {
     "message": "{name} - Collection"
   },
+  "competitions.earlier-weeks": {
+    "message": "Earlier weeks"
+  },
+  "competitions.empty.description": {
+    "message": "Results show up here as soon as a week's competition ends."
+  },
+  "competitions.empty.title": {
+    "message": "No results yet"
+  },
+  "competitions.ended-on": {
+    "message": "Ended {date}"
+  },
+  "competitions.hero.accent": {
+    "message": "Competitions"
+  },
+  "competitions.hero.pre": {
+    "message": "Weekly"
+  },
+  "competitions.hero.rules-button": {
+    "message": "Competition rules"
+  },
+  "competitions.hero.subtitle": {
+    "message": "Every week, every winner. See how everyone placed, season by season."
+  },
+  "competitions.latest": {
+    "message": "Latest results"
+  },
+  "competitions.live.ends-in": {
+    "message": "Ends {time}"
+  },
+  "competitions.live.eyebrow": {
+    "message": "Live this week"
+  },
+  "competitions.live.note": {
+    "message": "Standings update every minute. Last updated {time}."
+  },
+  "competitions.live.players": {
+    "message": "{count, plural, one {# player} other {# players}}"
+  },
+  "competitions.mystery": {
+    "message": "Mystery"
+  },
+  "competitions.results.only-podium": {
+    "message": "Only the top 3 were recorded for this week."
+  },
+  "competitions.results.skin-alt": {
+    "message": "{player}'s skin"
+  },
+  "competitions.season-label": {
+    "message": "Season {number}"
+  },
+  "competitions.seo.description": {
+    "message": "Results from every Vanilla Tyme weekly competition: the podium and how every player placed."
+  },
+  "competitions.seo.title": {
+    "message": "Weekly Competitions"
+  },
   "conversation-thread.action.add-private-note": {
     "message": "Add private note"
   },
@@ -2096,6 +2153,9 @@
   "error.user.404.title": {
     "message": "User not found"
   },
+  "home.competition.all-results": {
+    "message": "See all results"
+  },
   "home.competition.description": {
     "message": "Every week players go head-to-head for glory and bragging rights. Building contests, community events, and more — there's always something going on."
   },
@@ -2109,7 +2169,13 @@
     "message": "Something to compete for every week"
   },
   "home.competition.last-podium": {
-    "message": "Last week's podium"
+    "message": "Last competition's podium"
+  },
+  "home.competition.leader": {
+    "message": "{player} leads with {score}"
+  },
+  "home.competition.live-standings": {
+    "message": "See live standings"
   },
   "home.competition.next-podium": {
     "message": "Next week's winners"
@@ -4454,6 +4520,120 @@
   "report.submit": {
     "message": "Submit report"
   },
+  "rules.competitions.crafting.no-auto-crafters": {
+    "message": "Auto crafters can't be used, even on weeks when farms are allowed."
+  },
+  "rules.competitions.crafting.no-uncrafting": {
+    "message": "No uncrafting and re-crafting. For example, blocks can't be broken back into ingots and crafted into blocks again."
+  },
+  "rules.competitions.crafting.subtitle": {
+    "message": "Craft it once, and craft it by hand"
+  },
+  "rules.competitions.crafting.table-or-inventory": {
+    "message": "Items must be crafted at a crafting table or in your inventory grid."
+  },
+  "rules.competitions.crafting.title": {
+    "message": "Crafting"
+  },
+  "rules.competitions.cta.description": {
+    "message": "Check each week's announcement for the category and whether farms are allowed. Questions? Open a ticket in our Discord."
+  },
+  "rules.competitions.cta.title": {
+    "message": "Ready to compete?"
+  },
+  "rules.competitions.fair-play.no-match-fixing": {
+    "message": "No match fixing, collusion, bribing, or fixing the outcome of the competition."
+  },
+  "rules.competitions.fair-play.no-spying": {
+    "message": "No spying on fellow players."
+  },
+  "rules.competitions.fair-play.no-stored-materials": {
+    "message": "You can't use materials you gathered or stored before the competition."
+  },
+  "rules.competitions.fair-play.no-trading": {
+    "message": "You can't buy, trade, or get materials for free from others."
+  },
+  "rules.competitions.fair-play.no-villager-trading": {
+    "message": "No villager trading."
+  },
+  "rules.competitions.fair-play.own-resources": {
+    "message": "All resources must be gathered by you during the current competition."
+  },
+  "rules.competitions.fair-play.subtitle": {
+    "message": "Everyone starts from scratch"
+  },
+  "rules.competitions.fair-play.title": {
+    "message": "Fair Play"
+  },
+  "rules.competitions.farms.every-other-week": {
+    "message": "Auto farms and mob farms are allowed <strong>every other week</strong>. Always read that week's competition announcement to check whether farms are allowed. On weeks they're not, the rules below apply."
+  },
+  "rules.competitions.farms.no-auto-farms": {
+    "message": "No auto farms."
+  },
+  "rules.competitions.farms.no-mob-farms": {
+    "message": "No mob farms."
+  },
+  "rules.competitions.farms.no-redstone": {
+    "message": "Players can't use redstone, redstone components, or water streams."
+  },
+  "rules.competitions.farms.no-spawners": {
+    "message": "Spawners and player-built farms are prohibited."
+  },
+  "rules.competitions.farms.subtitle": {
+    "message": "Allowed every other week"
+  },
+  "rules.competitions.farms.title": {
+    "message": "Farms and Redstone"
+  },
+  "rules.competitions.intro": {
+    "message": "Our weekly competitions are here to keep Vanilla Tyme fun for everyone, with a fair chance and a level playing field. These rules apply on top of all of our <main-rules-link>main server rules</main-rules-link>."
+  },
+  "rules.competitions.mining.no-replacing": {
+    "message": "Placing and re-mining blocks isn't allowed. This includes blocks you bought or got from prize boxes."
+  },
+  "rules.competitions.mining.subtitle": {
+    "message": "Every block has to be dug up fresh"
+  },
+  "rules.competitions.mining.title": {
+    "message": "Mining"
+  },
+  "rules.competitions.nitty-gritty.amendments": {
+    "message": "Staff may change these rules for specific competition categories at any time."
+  },
+  "rules.competitions.nitty-gritty.disqualification": {
+    "message": "Breaking any rule gets you disqualified from that week's competition. If you get a DQ tag, you can't take part in the current week's or next week's competition."
+  },
+  "rules.competitions.nitty-gritty.report-mistakes": {
+    "message": "Report any mistakes or loopholes to staff with a support ticket in Discord. If you own up to breaking a rule, staff are more likely to adjust your score than disqualify you."
+  },
+  "rules.competitions.nitty-gritty.subtitle": {
+    "message": "Disqualifications and loopholes"
+  },
+  "rules.competitions.nitty-gritty.title": {
+    "message": "The Nitty Gritty"
+  },
+  "rules.competitions.winning.champ-cooldown": {
+    "message": "While you have the Champ tag, you can't place in the top 3 again until it expires."
+  },
+  "rules.competitions.winning.champ-days": {
+    "message": "days with the Champ tag"
+  },
+  "rules.competitions.winning.champ-tag": {
+    "message": "The player in 1st place gets the in-game \"Champ\" tag for 30 days."
+  },
+  "rules.competitions.winning.prize-boxes": {
+    "message": "prize boxes each week"
+  },
+  "rules.competitions.winning.subtitle": {
+    "message": "Prize boxes, trophies, and the Champ tag"
+  },
+  "rules.competitions.winning.title": {
+    "message": "Winning the Competition"
+  },
+  "rules.competitions.winning.top-three": {
+    "message": "The top 3 players on the scoreboard each week win a prize box, which includes a trophy."
+  },
   "rules.cta.open-ticket": {
     "message": "Open a ticket"
   },
@@ -4642,6 +4822,18 @@
   },
   "rules.discord.spam.title": {
     "message": "Spam & Abuse"
+  },
+  "rules.hero.competitions.accent": {
+    "message": "Rules"
+  },
+  "rules.hero.competitions.badge": {
+    "message": "Farms are allowed every other week. Check the announcement."
+  },
+  "rules.hero.competitions.pre": {
+    "message": "Competition"
+  },
+  "rules.hero.competitions.subtitle": {
+    "message": "Weekly competitions give every player a fair chance at prize boxes, trophies, and the Champ tag."
   },
   "rules.hero.discord.accent": {
     "message": "Guidelines"
@@ -5209,6 +5401,9 @@
   },
   "rules.on-this-page": {
     "message": "On this page"
+  },
+  "rules.tab.competitions": {
+    "message": "Competitions"
   },
   "rules.tab.discord": {
     "message": "Discord"
